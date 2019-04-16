@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
     s.frameworks       = 'Foundation', 'CoreBluetooth', 'CoreGraphics'
 
     s.vendored_frameworks = 'FitCloudDFUKit/FitCloudDFUKit.framework'
-    s.resource = 'FitCloudDFUKit/FitCloudKit.bundle'
+    s.resource = 'FitCloudDFUKit/FitCloudDFUKit.bundle'
 
     s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
