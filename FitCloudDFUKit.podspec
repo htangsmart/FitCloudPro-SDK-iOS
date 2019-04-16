@@ -20,6 +20,8 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = 'FitCloudDFUKit/FitCloudDFUKit.framework'
     s.resource = 'FitCloudDFUKit/FitCloudDFUKit.bundle'
 
+    s.swift_version = '5.0'
+
     s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
 
