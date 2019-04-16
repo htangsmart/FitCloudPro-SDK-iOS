@@ -1,0 +1,67 @@
+//
+//  FitCloudAllConfigObject.h
+//  FitCloudKit
+//
+//  Created by pcjbird on 2018/5/27.
+//  Copyright © 2018年 Zero Status. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudFirmwareVersionObject.h>
+#import <FitCloudKit/FitCloudMNDefines.h>
+#import <FitCloudKit/FitCloudHTMObject.h>
+#import <FitCloudKit/FitCloudLSRObject.h>
+#import <FitCloudKit/FitCloudDRObject.h>
+#import <FitCloudKit/FitCloudBPRObject.h>
+#import <FitCloudKit/FitCloudWWUObject.h>
+
+/**
+ * @brief 手环所有配置信息（用于手环绑定时一次性获取）
+ */
+@interface FitCloudAllConfigObject : NSObject<NSCoding>
+
+/**
+ * @brief 手环软硬件版本信息
+ */
+@property(nonatomic, strong)FitCloudFirmwareVersionObject* firmware;
+
+/**
+ * @brief 消息通知设置
+ */
+@property(nonatomic, assign)FITCLOUDMN mnSetting;
+
+/**
+ * @brief 手环表盘所有功能项显示状态设置
+ */
+@property(nonatomic, assign)FITCLOUDSCREENDISPLAY sdSetting;
+
+/**
+ * @brief 手环偏好
+ */
+@property(nonatomic, assign)FITCLOUDPREFER prefer;
+
+/**
+ * @brief 健康定时监测设置
+ */
+@property(nonatomic, strong)FitCloudHTMObject* htmSetting;
+
+/**
+ * @brief 久坐提醒设置
+ */
+@property(nonatomic, strong)FitCloudLSRObject* lsrSetting;
+
+/**
+ * @brief 喝水提醒设置
+ */
+@property(nonatomic, strong)FitCloudDRObject* drSetting;
+
+/**
+ * @brief 血压参考范围及私人模式开关设置
+ */
+@property(nonatomic, strong)FitCloudBPRObject* bprSetting;
+
+/**
+ * @brief 抬腕唤醒设置
+ */
+@property(nonatomic, strong)FitCloudWWUObject* wwuSetting;
+@end
