@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
     s.description      = <<-DESC
     和唐公司手环SDK。
     DESC
-    s.homepage         = "https://github.com/htangsmart/FitCloudPro-SDK-iOS/FitCloudKit"
+    s.homepage         = "https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/{s.version}/FitCloudKit"
     s.license          = 'MIT'
     s.author           = {"pcjbird" => "pcjbird@hotmail.com"}
     s.source           = {:git => "https://github.com/htangsmart/FitCloudPro-SDK-iOS.git", :tag => s.version.to_s}
