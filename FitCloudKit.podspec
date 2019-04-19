@@ -5,14 +5,14 @@ Pod::Spec.new do |s|
     s.description      = <<-DESC
     和唐公司手环SDK。
     DESC
-    s.homepage         = "https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/{s.version}/FitCloudKit"
+    s.homepage         = "https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/#{s.version}/FitCloudKit"
     s.license          = 'MIT'
     s.author           = {"pcjbird" => "pcjbird@hotmail.com"}
     s.source           = {:git => "https://github.com/htangsmart/FitCloudPro-SDK-iOS.git", :tag => s.version.to_s}
     s.social_media_url = 'http://www.hetangsmart.com'
     s.requires_arc     = true
-    s.documentation_url = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/{s.version}/FitCloudKit/README.md'
-    s.screenshot       = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/{s.version}/FitCloudKit/logo.png'
+    s.documentation_url = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/#{s.version}/FitCloudKit/README.md'
+    s.screenshot       = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/#{s.version}/FitCloudKit/logo.png'
 
     s.platform         = :ios, '8.0'
     s.frameworks       = 'Foundation', 'CoreBluetooth', 'CoreGraphics'
