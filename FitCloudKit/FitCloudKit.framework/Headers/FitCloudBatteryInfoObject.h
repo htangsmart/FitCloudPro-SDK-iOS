@@ -1,5 +1,5 @@
 //
-//  FitCloudPowerInfoObject.h
+//  FitCloudBatteryInfoObject.h
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/5/27.
@@ -20,7 +20,7 @@ typedef NS_ENUM(Byte, BATTERYSTATE)
 /**
  * @brief 手环电量以及充电状态信息
  */
-@interface FitCloudPowerInfoObject : NSObject
+@interface FitCloudBatteryInfoObject : NSObject
 
 /**
  * @brief 手环充电状态
@@ -30,10 +30,10 @@ typedef NS_ENUM(Byte, BATTERYSTATE)
 /**
  * @brief 电量格数
  */
-@property(nonatomic, assign) UInt8 powerValue;
+@property(nonatomic, assign) UInt8 value;
 
 /**
  * @brief 电量百分比  范围：0～100
  */
-@property(nonatomic, assign) UInt8 powerPercent;
+@property(nonatomic, assign) UInt8 percent;
 @end

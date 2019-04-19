@@ -53,14 +53,24 @@ extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY;
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCONNECT_NOTIFY;
 
 /**
- * @brief 开始绑定用户对象通知 object => @(UserId)
+ * @brief 开始绑定用户通知 object => @(UserId)
  */
 extern NSString *const FITCLOUDEVENT_BINDUSEROBJECT_BEGIN_NOTIFY;
 
 /**
- * @brief 用户对象绑定结果通知 object => @(UserId) userInfo=>{@"result":@(YES/NO), @"error" : error}
+ * @brief 绑定用户结果通知 object => @(UserId) userInfo=>{@"result":@(YES/NO), @"error" : error}
  */
 extern NSString *const FITCLOUDEVENT_BINDUSEROBJECT_RESULT_NOTIFY;
+
+/**
+ * @brief 开始解绑用户通知 object => @(UserId)
+ */
+extern NSString *const FITCLOUDEVENT_UNBINDUSEROBJECT_BEGIN_NOTIFY;
+
+/**
+ * @brief 解绑用户结果通知 object => @(UserId) userInfo=>{@"result":@(YES/NO), @"error" : error}
+ */
+extern NSString *const FITCLOUDEVENT_UNBINDUSEROBJECT_RESULT_NOTIFY;
 
 /**
  * @brief 开始登录用户对象通知 object => @(UserId)
@@ -88,9 +98,9 @@ extern NSString *const FITCLOUDEVENT_GETALLCONFIG_RESULT_NOTIFY;
 extern NSString *const FITCLOUDEVENT_INITIALIZE_RESULT_NOTIFY;
 
 /**
- * @brief 手环电量信息通知 userInfo=>FitCloudPowerInfoObject
+ * @brief 手环电量信息通知 userInfo=>FitCloudBatteryInfoObject
  */
-extern NSString *const FTICLOUDEVENT_POWERINFO_NOTIFY;
+extern NSString *const FTICLOUDEVENT_BATTERYINFO_NOTIFY;
 
 /**
  * @brief 闹钟列表变化通知 userInfo=>NSArray<FitCloudAlarmObject *>

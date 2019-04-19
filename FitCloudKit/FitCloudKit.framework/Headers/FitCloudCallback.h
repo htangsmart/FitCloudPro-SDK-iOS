@@ -13,7 +13,7 @@
 #import <FitCloudKit/FitCloudAlarmObject.h>
 #import <FitCloudKit/FitCloudFirmwareVersionObject.h>
 #import <FitCloudKit/FitCloudMNDefines.h>
-#import <FitCloudKit/FitCloudPowerInfoObject.h>
+#import <FitCloudKit/FitCloudBatteryInfoObject.h>
 #import <FitCloudKit/FitCloudHTMObject.h>
 #import <FitCloudKit/FitCloudLSRObject.h>
 #import <FitCloudKit/FitCloudDRObject.h>
@@ -94,10 +94,10 @@ typedef void (^FitCloudPreferResultBlock)(BOOL succeed, FITCLOUDPREFER prefer, N
 /**
  *@brief FitCloud 获取手环电量和充电状态调用结果回调
  *@param succeed 是否成功
- *@param power 手环电量和充电状态信息
+ *@param batteryInfo 手环电量和充电状态信息
  *@param error 错误信息
  */
-typedef void (^FitCloudPowerInfoResultBlock)(BOOL succeed, FitCloudPowerInfoObject* power, NSError* error);
+typedef void (^FitCloudBatteryInfoResultBlock)(BOOL succeed, FitCloudBatteryInfoObject* batteryInfo, NSError* error);
 
 /**
  *@brief FitCloud 获取健康定时监测设置调用结果回调
@@ -190,6 +190,7 @@ typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, FitClo
  *@brief FitCloudKit 回调协议
  */
 @protocol FitCloudCallback<NSObject>
+
 @optional
 
 /**

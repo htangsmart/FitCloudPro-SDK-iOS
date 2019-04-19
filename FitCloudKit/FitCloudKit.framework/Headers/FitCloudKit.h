@@ -19,28 +19,9 @@
 #import <FitCloudKit/FitCloudCallback.h>
 #import <FitCloudKit/FitCloudOption.h>
 #import <FitCloudKit/FitCloudKitConnectRecord.h>
-/**
- * @brief FitCloud蓝牙设备状态
- */
-typedef NS_ENUM(NSInteger, FitCloudBluetoothState) {
-    FitCloudBluetoothStateUnknown = 0,
-    FitCloudBluetoothStateResetting,
-    FitCloudBluetoothStateUnsupported,
-    FitCloudBluetoothStateUnauthorized,
-    FitCloudBluetoothStatePoweredOff,
-    FitCloudBluetoothStatePoweredOn,
-};
 
-/**
- * @brief FitCloud蓝牙设备绑定状态
- */
-typedef NS_ENUM(NSInteger, FitCloudBindStatus)
-{
-    FitCloudBindStatus_None = 0,
-    FitCloudBindStatus_Binding = 1,
-    FitCloudBindStatus_Success = 2,
-    FitCloudBindStatus_Failure = 3,
-};
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @brief FitCloud健康手环iOS框架
@@ -103,11 +84,11 @@ typedef NS_ENUM(NSInteger, FitCloudBindStatus)
  */
 +(NSArray<FitCloudPeripheral *>*_Nonnull)peripherals;
 
-#pragma mark 蓝牙设备状态
+#pragma mark 蓝牙中心设备(Central)状态
 /**
- * @brief 蓝牙设备状态
+ * @brief 蓝牙中心设备(Central)状态
  */
-+(FitCloudBluetoothState) state;
++(FITCLOUDBLECENTRALSTATE) bleState;
 
 #pragma mark 蓝牙是否已连接
 /**
@@ -121,29 +102,29 @@ typedef NS_ENUM(NSInteger, FitCloudBindStatus)
  */
 +(BOOL) connecting;
 
-#pragma mark 设备是否准备好了(是否可以执行命令)
+#pragma mark 蓝牙外部设备是否初始化/准备完毕(是否可以执行与蓝牙外设的相关操作)
 /**
- * @brief 设备是否准备好了(是否可以执行命令)
+ * @brief 蓝牙外部设备是否初始化/准备完毕(是否可以执行与蓝牙外设的相关操作)
  */
 +(BOOL) deviceReady;
 
-#pragma mark 用户数据是否准备好了(是否已经绑定/登录、获取完手环配置并设定用户资料等)
+#pragma mark 蓝牙外部设备是否初始化/准备完毕且当前处于空闲状态(是否可以执行与蓝牙外设的相关操作)
 /**
- * @brief 用户数据是否准备好了(是否已经绑定/登录、获取完手环配置并设定用户资料等)
- */
-+(BOOL) userDataReady;
-
-#pragma mark 设备是否空闲(是否可以执行命令)
-/**
- * @brief 设备是否空闲(是否可以执行命令)
+ * @brief 蓝牙外部设备是否初始化/准备完毕且当前处于空闲状态(是否可以执行与蓝牙外设的相关操作)
  */
 +(BOOL) deviceIdle;
 
-#pragma mark 绑定状态
+#pragma mark 当前是否允许手动同步运动健康数据
 /**
- * @brief 绑定状态
+ * @brief 当前是否允许手动同步运动健康数据
  */
-+(FitCloudBindStatus) bindStatus;
++(BOOL) canSyncData;
+
+#pragma mark 用户绑定状态
+/**
+ * @brief 用户绑定状态
+ */
++(FITCLOUDUSERBINDSTATUS) userBindStatus;
 
 #pragma mark 手环Mac地址
 /**
@@ -162,7 +143,7 @@ typedef NS_ENUM(NSInteger, FitCloudBindStatus)
 /**
  * @brief 手环当前电量信息
  */
-+(FitCloudPowerInfoObject*_Nullable) powerInfo;
++(FitCloudBatteryInfoObject*_Nullable) batteryInfo;
 
 #pragma mark 手环闹钟列表
 /**
@@ -325,7 +306,13 @@ typedef NS_ENUM(NSInteger, FitCloudBindStatus)
  * @brief 获取手环电量以及充电状态信息
  * @param block 结果回调
  */
-+(void)getFitCloudPowerInfoWithBlock:(FitCloudPowerInfoResultBlock _Nullable )block;
++(void)getBatteryInfoWithBlock:(FitCloudBatteryInfoResultBlock _Nullable )block;
+
+#pragma mark 如果空闲则请求更新手环电量信息
+/**
+ * @brief 如果空闲则请求更新手环电量信息
+ */
++(void) requestUpdateBatteryInfoIfIdle;
 
 #pragma mark 健康定时监测设置
 /**
@@ -424,13 +411,6 @@ typedef NS_ENUM(NSInteger, FitCloudBindStatus)
  */
 +(void)findBraceletWithBlock:(FitCloudResultBlock _Nullable )block;
 
-#pragma mark 请求手环Mac地址
-/**
- * @brief 请求手环Mac地址
- * @param block 结果回调
- */
-+(void)getHealthHandRingMacAddrWithBlock:(FitCloudObjectResultBlock _Nullable )block;
-
 #pragma mark 一键恢复出厂设置
 /**
  * @brief 一键恢复出厂设置
@@ -469,16 +449,18 @@ typedef NS_ENUM(NSInteger, FitCloudBindStatus)
 /**
  * @brief 绑定用户
  * @param userId 用户Id
+ * @param bAbort 如果已经存在绑定用户是否终止，当为FALSE时，自动先解绑并绑定新的用户
  * @param block 结果回调
  */
-+(void)bindUserObject:(NSInteger)userId block:(FitCloudResultBlock _Nullable )block;
++(void)bindUserObject:(NSInteger)userId abortIfExist:(BOOL)bAbort block:(FitCloudResultBlock _Nullable )block;
 
 #pragma mark 用户解绑
 /**
  * @brief 用户解绑
+ * @param shouldDisconnectIfSuccess 解绑成功后是否需要自动断开连接
  * @param block 结果回调
  */
-+(void)unbindUserObjectWithBlock:(FitCloudResultBlock _Nullable )block;
++(void)unbindUserObject:(BOOL) shouldDisconnectIfSuccess block:(FitCloudResultBlock _Nullable )block;
 
 @end
 
@@ -525,3 +507,6 @@ typedef NS_ENUM(NSInteger, FitCloudBindStatus)
  */
 +(void)notifyAppCameraState:(APPCAMERASTATE)state withBlock:(FitCloudResultBlock _Nullable )block;
 @end
+
+
+NS_ASSUME_NONNULL_END
