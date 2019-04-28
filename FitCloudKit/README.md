@@ -303,6 +303,3 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 
 戴工 / iOS Developer
 
-QQ: 87453080
-
-Mobile: +86(0)15962112469
