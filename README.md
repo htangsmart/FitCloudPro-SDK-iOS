@@ -1,6 +1,8 @@
 # FitCloudPro-SDK-iOS
 ### iOS framework for FitCloudPro Smart Bracelet, which is responsible for the communication with bracelet and the upgrade of bracelet firmware. FitCloudPro 智能手环的iOS框架，负责与手环设备通信与固件升级等功能的封装。
 
+
+![logo](https://github.com/htangsmart/FitCloudPro-SDK-iOS/raw/master/FitCloudKit/logo.png)
 ## FitCloudKit
 [![Pod Version](http://img.shields.io/cocoapods/v/FitCloudKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudKit/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/FitCloudKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudKit/)
@@ -12,6 +14,7 @@
   * [中文文档](FitCloudKit/README.md)
   * [英文文档](FitCloudKit/README_EN.md)
 
+![logo](https://github.com/htangsmart/FitCloudPro-SDK-iOS/raw/master/FitCloudDFUKit/logo.png)
 ## FitCloudDFUKit
 [![Pod Version](http://img.shields.io/cocoapods/v/FitCloudDFUKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudDFUKit/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/FitCloudDFUKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudDFUKit/)
