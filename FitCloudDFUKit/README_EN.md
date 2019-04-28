@@ -1,10 +1,10 @@
 # FitCloudDFUKit iOS Development Guide
 
 ## Summary
-* What is FitCloudKit? 
-  
-  >###### iOS framework for FitCloud Smart Bracelet, which is responsible for the upgrade of bracelet firmware. 
-         
+* What is FitCloudKit?
+
+  >###### iOS framework for FitCloud Smart Bracelet, which is responsible for the upgrade of bracelet firmware.
+
 * Scope
 
   ```
@@ -12,18 +12,18 @@
   ```
 
 * Compatibility
-  
+
   ###### 1. iOS 8.0 and Above；
-  
+
   ###### 2. armv7/i386/x86_64/arm64 Instruction Set；
-  
+
   ###### 3. Bitcode；
-  
- 
+
+
 ## Features
- 
+
 1. Device firmware upgrade for bracelet (excluding firmware upgrade for air and remote download);
- 
+
 ## Releases
 
 V1.0.0 Build201905010001
@@ -155,7 +155,7 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 
 >Q: Which chipmaker firmware updates are supported now?
 >
->A: The SDK integrates ` Realtek ` and ` Nordic ` manufacturers firmware upgrade procedure, but because at present all bracelet actually USES only ` Realtek ` chip, therefore in the process of actual use, you can only use the ` Realtek ` chip firmware upgrade.
+>A: The SDK integrates ` Realtek ` and ` Nordic ` manufacturers firmware upgrade procedure, but because at present all bracelet actually uses only ` Realtek ` chip, therefore in the process of actual use, you can only use the ` Realtek ` chip firmware upgrade.
 
 ## Technical Support
 
@@ -166,6 +166,3 @@ Dai / iOS Developer
 QQ: 87453080
 
 Mobile: +86(0)15962112469
-
-
-
