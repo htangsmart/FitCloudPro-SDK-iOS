@@ -39,18 +39,18 @@ NS_ASSUME_NONNULL_BEGIN
 +(instancetype _Nonnull)initWithOption:(FitCloudOption* _Nullable)option callback:(id<FitCloudCallback> _Nullable)callback;
 
 /**
- * @brief 扫描外部设备
+ * @brief 扫描手环设备
  */
 +(void)scanPeripherals;
 
 /**
- * @brief 停止扫描外部设备
+ * @brief 停止扫描手环设备
  */
 +(void)stopScan;
 
 /**
- * @brief 连接外部设备
- * @param peripheral 外部设备
+ * @brief 连接手环设备
+ * @param peripheral 手环设备
  */
 +(void)connect:(CBPeripheral * _Nonnull )peripheral;
 
@@ -444,6 +444,14 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief 是否已经绑定
  */
 +(BOOL) alreadyBound;
+
+#pragma mark 检查用户是否已经绑定
+/**
+ * @brief 检查用户是否已经绑定
+ * @param userId 用户Id
+ * @return YES 已经绑定 NO 未绑定
+ */
++(BOOL) isUserAlreadyBound:(NSInteger)userId;
 
 #pragma mark 绑定用户
 /**

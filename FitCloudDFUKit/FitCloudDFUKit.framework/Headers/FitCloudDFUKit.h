@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDDFUCHIPVENDOR)
 
 /**
  * @brief 升级进度回调
- * @param progress 升级进度百分比(0~1)
+ * @param progress 升级进度百分比(0~100)
  * @param index 当前镜像索引
  */
 -(void) OnDFUProgress:(CGFloat)progress imageIndex:(NSInteger)index;
@@ -66,7 +66,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDDFUCHIPVENDOR)
 -(void) OnDFUFinishWithSpeed:(CGFloat)speed;
 
 /**
- *@brief 记录日志数据
+ *@brief 日志信息回调
  *@param message 日志信息
  *@param level 日志等级
  */
