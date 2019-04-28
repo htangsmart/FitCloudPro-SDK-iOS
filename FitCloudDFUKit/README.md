@@ -1,1 +1,172 @@
-# FitCloudDFUKit
+# 和唐智能手环固件升级（FitCloudDFUKit）iOS开发指南
+
+## 简介 / Summary
+* 什么是和唐智能手环固件升级 SDK ?
+
+  >###### 和唐智能手环固件升级 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件负责手环固件升级等功能的封装，旨在方便合作伙伴定制自己的智能手环应用。       
+
+
+* 适用范围
+
+  ```
+  需要个性化定制自己的 iOS 智能手环 APP 的合作伙伴。
+  ```
+
+* 兼容性
+
+  ###### 1. iOS 8.0及以上操作系统；
+
+  ###### 2. 支持armv7/i386/x86_64/arm64指令集；
+
+  ###### 3. 支持Bitcode；
+
+
+## 特性 / Features
+
+1. 手环固件升级(不包括空中升级远程下载固件的部分)；
+
+
+## 版本 / Releases
+
+版本V1.0.0 Build201905010001
+
+```
+  发布日期：2019年05月01日
+  功能更新：
+  1、 首次发布SDK版本。
+```
+
+## 获取 APPID 和 APPKEY
+
+目前尚未开放 APPID 和 APPKEY，暂时无需申请。
+
+## 安装 / Installation
+
+方法一：`FitCloudDFUKit` 支持通过 CocoaPods 安装. 您只需要在您的 Podfile 文件中简单地加上下面这行:
+
+```
+pod 'FitCloudDFUKit'
+```
+
+方法二：从 Github 上下载 `FitCloudDFUKit`，手动集成到您的项目中。
+
+1. FitCloudDFUKit SDK开发包含：
+
+  * FitCloudDFUKit.framework   静态库，智能手环固件升级开发套件核心framework
+
+  * FitCloudDFUKit.bundle     智能手环固件升级开发套件核心资源包
+
+2. 将framework添加到项目中;
+3. 将bundle资源包添加到项目中;
+4. 添加其他系统依赖库支持：
+
+    * CoreGraphics.framework
+
+    * CoreBluetooth.framework
+
+
+## 设置隐私权限
+在项目的`Info.plist`中设置以下隐私权限使用描述，实际描述内容各项目自行设置
+
+![蓝牙隐私权限](media/privacy_bluetooth.png)
+
+
+## 引用头文件
+
+```objc
+#import <FitCloudDFUKit/FitCloudDFUKit.h>
+```
+
+## 初始化SDK
+
+```objc
+[FitCloudDFUKit setDebugMode:YES];
+[FitCloudDFUKit setDelegate:self];
+```
+
+## 实现 FitCloudDFUDelegate 代理
+
+```objc
+/**
+ * @brief 成功启动DFU回调
+ */
+-(void) OnStartDFUSuccess
+{
+    NSLog(@"成功进入DFU模式, 请勿退出当前界面...");
+}
+
+/**
+ * @brief 启动DFU失败
+ * @param error 错误信息
+ */
+-(void) OnStartDFUFailureWithError:(NSError*)error
+{
+    NSString *msg = APP_GET_ERROR_MSG(error);
+    NSLog(@"固件升级失败，%@...", msg);
+}
+
+/**
+ * @brief 升级进度回调
+ * @param progress 升级进度百分比(0~100)
+ * @param index 当前镜像索引
+ */
+-(void) OnDFUProgress:(CGFloat)progress imageIndex:(NSInteger)index
+{
+    NSLog(@"当前固件升级进度：%2ld%%", (long)roundf(progress));
+}
+
+/**
+ * @brief 意外终止回调
+ * @param error 错误信息
+ */
+-(void) OnAbortWithError:(NSError*)error
+{
+    NSString *msg = APP_GET_ERROR_MSG(error);
+    NSLog(@"固件升级终止，%@...", msg);
+}
+
+/**
+ * @brief 升级完成回调
+ * @param speed 速度
+ */
+-(void) OnDFUFinishWithSpeed:(CGFloat)speed
+{
+    NSLog(@"固件升级成功...");
+}
+
+
+/**
+ *@brief 日志信息回调
+ *@param message 日志信息
+ *@param level 日志等级
+ */
+-(void) OnLogMessage:(NSString*)message level:(FCDFUKLogLevel)level
+{
+    //您可以根据实际需要处理日志逻辑
+}
+```
+
+## 启动固件升级
+
+```objc
+FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor];
+```
+
+
+
+## FAQ
+
+>Q: 现在支持哪些芯片厂商的固件升级？
+>
+>A: SDK 已经集成了 `Realtek` 和 `Nordic` 厂商的固件升级程序，但由于目前所有手环其实只使用了 `Realtek` 的芯片，因此在实际使用过程中，您目前只会使用到 `Realtek` 芯片的固件升级。
+
+## 技术支持
+
+和唐智能
+
+戴工 / iOS Developer
+
+QQ: 87453080
+
+Mobile: +86(0)15962112469

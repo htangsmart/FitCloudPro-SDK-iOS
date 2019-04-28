@@ -67,12 +67,12 @@ Method 2: download from making ` FitCloudKit `, manual integrated into your proj
 1. FitCloudKit SDK includes:
     * FitCloudKit. Framework  
       static library, smart bracelet development kit core framework
-    * fitcloudkit.bundle   
+    * FitCloudKit.bundle   
       smart bracelet development kit core resource package
 
 2. Add the framework to the project;
 
-3. Add the bundle resource bundle to the project;
+3. Add the resource bundle to the project;
 
 4. Add support for other system dependency libraries:
 
@@ -280,7 +280,7 @@ see detail comments in `<FitCloudKit/FitCloudKit.h>` header file.
 ## FAQ
 
 >Q: How to determine whether the current bracelet supports specific hardware functions, for example, how to determine whether it is a bracelet with ecg function?
-
+>
 >A: You can get the current functions supported by the bracelet according to the information provided by the firmware, such as: whether the bracelet has heart rate/blood oxygen/blood pressure/breathing frequency/weather forecast/ecg/whether it supports sports mode/whether it supports WeChat sports/whether it needs to use the new firmware upgrade platform/whether it supports dynamic heart rate, etc.
 >
 >Take the ecg function as an example, the code is as follows:
@@ -293,7 +293,7 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 <!-- more -->
 
 >Q: When bind the user information, the bluetooth pairing request pops up. Must the user choose to pair with the bracelet?
-
+>
 >A: It is not required in theory, howerver, if you choose not to pair, the bracelet's message alert function (e.g. QQ/ WeChat /Facebook/Twitter, etc.) will not work properly.
 
 ## Technical Support
