@@ -302,6 +302,3 @@ Hetang Smart.
 
 Dai / iOS Developer
 
-QQ: 87453080
-
-Mobile: +86(0)15962112469
