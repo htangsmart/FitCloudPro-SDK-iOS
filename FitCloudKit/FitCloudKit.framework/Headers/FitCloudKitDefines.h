@@ -164,6 +164,24 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE)
     FITCLOUDLANGUAGE_PORTUGUESE = 0x07,               //葡萄牙语
     FITCLOUDLANGUAGE_FRENCH = 0x08,                   //法语
     FITCLOUDLANGUAGE_JAPANESE = 0x09,                 //日语
+    FITCLOUDLANGUAGE_ARABIC = 0x0a,                   //阿拉伯语言
+    FITCLOUDLANGUAGE_DUTCH = 0x0b,                    //荷兰语
+    FITCLOUDLANGUAGE_ITALIAN = 0x0c,                  //意大利语
+    FITCLOUDLANGUAGE_BENGALI = 0x0d,                  //孟加拉语
+    FITCLOUDLANGUAGE_CROATIAN = 0xe,                  //克罗地亚语
+    FITCLOUDLANGUAGE_CZECH = 0x0f,                    //捷克语
+    FITCLOUDLANGUAGE_DANISH = 0x10,                   //丹麦语
+    FITCLOUDLANGUAGE_GREEK  = 0x11,                   //希腊语
+    FITCLOUDLANGUAGE_HEBREW = 0x12,                   //希伯来语(以色列)
+    FITCLOUDLANGUAGE_HINDI = 0x13,                    //印度语
+    FITCLOUDLANGUAGE_HUN = 0x14,                      //匈牙利语
+    FITCLOUDLANGUAGE_INDONESIAN = 0x15,               //印度尼西亚语
+    FITCLOUDLANGUAGE_KOREAN = 0x16,                   //韩语(朝鲜语)
+    FITCLOUDLANGUAGE_MALAY = 0x17,                    //马来语
+    FITCLOUDLANGUAGE_PERSIAN = 0x18,                  //波斯语
+    FITCLOUDLANGUAGE_POLISH = 0x19,                   //波兰语
+    FITCLOUDLANGUAGE_RUMANIAN = 0x1a,                 //罗马尼亚语
+    
 };
 
 #pragma mark - 闹钟相关
