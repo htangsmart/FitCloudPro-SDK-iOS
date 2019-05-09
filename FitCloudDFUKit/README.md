@@ -1,8 +1,8 @@
 # 和唐智能手环固件升级（FitCloudDFUKit）iOS开发指南
 
 ## 简介 / Summary
-* 什么是和唐智能手环固件升级 SDK ?
-
+* 什么是和唐智能手环固件升级 SDK ? 
+  
   >###### 和唐智能手环固件升级 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件负责手环固件升级等功能的封装，旨在方便合作伙伴定制自己的智能手环应用。       
 
 
@@ -13,19 +13,19 @@
   ```
 
 * 兼容性
-
+  
   ###### 1. iOS 8.0及以上操作系统；
-
+  
   ###### 2. 支持armv7/i386/x86_64/arm64指令集；
-
+  
   ###### 3. 支持Bitcode；
-
-
+  
+ 
 ## 特性 / Features
-
+ 
 1. 手环固件升级(不包括空中升级远程下载固件的部分)；
 
-
+ 
 ## 版本 / Releases
 
 版本V1.0.0 Build201905010001
@@ -51,20 +51,20 @@ pod 'FitCloudDFUKit'
 方法二：从 Github 上下载 `FitCloudDFUKit`，手动集成到您的项目中。
 
 1. FitCloudDFUKit SDK开发包含：
-
+  
   * FitCloudDFUKit.framework   静态库，智能手环固件升级开发套件核心framework
-
+  
   * FitCloudDFUKit.bundle     智能手环固件升级开发套件核心资源包
-
+  
 2. 将framework添加到项目中;
 3. 将bundle资源包添加到项目中;
 4. 添加其他系统依赖库支持：
 
     * CoreGraphics.framework
-
+    
     * CoreBluetooth.framework
 
-
+ 
 ## 设置隐私权限
 在项目的`Info.plist`中设置以下隐私权限使用描述，实际描述内容各项目自行设置
 
@@ -166,3 +166,7 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 和唐智能
 
 戴工 / iOS Developer
+
+
+
+
