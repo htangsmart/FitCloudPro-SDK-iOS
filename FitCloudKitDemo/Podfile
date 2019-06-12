@@ -12,4 +12,5 @@ target 'FitCloudKitDemo' do
 
   # Pods for FitCloudKitDemo
   pod 'FitCloudKit'
+  pod 'QuickTraceiOSLogger'
   end

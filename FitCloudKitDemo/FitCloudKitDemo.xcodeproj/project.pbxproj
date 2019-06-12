@@ -15,6 +15,7 @@
 		89A438BD22B0D19900555B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A438BB22B0D19900555B98 /* LaunchScreen.storyboard */; };
 		89A438C022B0D19900555B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438BF22B0D19900555B98 /* main.m */; };
 		89A438C822B0DA9500555B98 /* AppDelegate+FitCloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438C722B0DA9500555B98 /* AppDelegate+FitCloudKit.m */; };
+		89A438CC22B0ED3800555B98 /* AppDelegate+LoggerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438CB22B0ED3800555B98 /* AppDelegate+LoggerService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		89A438C622B0DA9500555B98 /* AppDelegate+FitCloudKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+FitCloudKit.h"; sourceTree = "<group>"; };
 		89A438C722B0DA9500555B98 /* AppDelegate+FitCloudKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+FitCloudKit.m"; sourceTree = "<group>"; };
 		89A438C922B0DB6000555B98 /* FitCloudKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitCloudKitDemo-Prefix.pch"; sourceTree = "<group>"; };
+		89A438CA22B0ED3800555B98 /* AppDelegate+LoggerService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LoggerService.h"; sourceTree = "<group>"; };
+		89A438CB22B0ED3800555B98 /* AppDelegate+LoggerService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LoggerService.m"; sourceTree = "<group>"; };
 		A1577722496F42A93B414DFF /* libPods-FitCloudKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitCloudKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,6 +74,8 @@
 			children = (
 				89A438B022B0D19700555B98 /* AppDelegate.h */,
 				89A438B122B0D19700555B98 /* AppDelegate.m */,
+				89A438CA22B0ED3800555B98 /* AppDelegate+LoggerService.h */,
+				89A438CB22B0ED3800555B98 /* AppDelegate+LoggerService.m */,
 				89A438C622B0DA9500555B98 /* AppDelegate+FitCloudKit.h */,
 				89A438C722B0DA9500555B98 /* AppDelegate+FitCloudKit.m */,
 				89A438B322B0D19700555B98 /* ViewController.h */,
@@ -219,6 +224,7 @@
 				89A438B522B0D19700555B98 /* ViewController.m in Sources */,
 				89A438C822B0DA9500555B98 /* AppDelegate+FitCloudKit.m in Sources */,
 				89A438C022B0D19900555B98 /* main.m in Sources */,
+				89A438CC22B0ED3800555B98 /* AppDelegate+LoggerService.m in Sources */,
 				89A438B222B0D19700555B98 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
