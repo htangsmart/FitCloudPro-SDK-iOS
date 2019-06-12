@@ -97,6 +97,9 @@ pod 'FitCloudKit'
 
 ![蓝牙隐私权限](media/privacy_bluetooth.png)
 
+## 设置蓝牙后台模式
+![设置蓝牙后台模式](media/bluetooth_backgroundmode.png)
+
 
 ## 引用头文件
 

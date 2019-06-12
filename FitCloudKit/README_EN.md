@@ -97,6 +97,9 @@ In the project `Info.Plist` set the following privacy permissions using descript
 
 ![Bluetooth Privacy Permission](media/privacy_bluetooth_en.png)
 
+## Bluetooth Background Mode
+![Bluetooth Background Mode](media/bluetooth_backgroundmode.png)
+
 
 ## Import Header File
 
