@@ -170,6 +170,7 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE)
     FITCLOUDLANGUAGE_BENGALI = 0x0d,                  //孟加拉语
     FITCLOUDLANGUAGE_CROATIAN = 0xe,                  //克罗地亚语
     FITCLOUDLANGUAGE_CZECH = 0x0f,                    //捷克语
+    
     FITCLOUDLANGUAGE_DANISH = 0x10,                   //丹麦语
     FITCLOUDLANGUAGE_GREEK  = 0x11,                   //希腊语
     FITCLOUDLANGUAGE_HEBREW = 0x12,                   //希伯来语(以色列)
@@ -181,6 +182,53 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE)
     FITCLOUDLANGUAGE_PERSIAN = 0x18,                  //波斯语
     FITCLOUDLANGUAGE_POLISH = 0x19,                   //波兰语
     FITCLOUDLANGUAGE_RUMANIAN = 0x1a,                 //罗马尼亚语
+    FITCLOUDLANGUAGE_SERB = 0x1b,                     //塞尔维亚语
+    FITCLOUDLANGUAGE_SWEDISH = 0x1c,                  //瑞典语
+    FITCLOUDLANGUAGE_THAI = 0x1d,                     //泰语
+    FITCLOUDLANGUAGE_TURKISH = 0x1e,                  //土耳其语
+    FITCLOUDLANGUAGE_URDU = 0x1f,                     //乌尔都语
+
+    FITCLOUDLANGUAGE_VIETNAMESE = 0x20,               //越南语
+    FITCLOUDLANGUAGE_CATALAN = 0x21,                  //加泰隆语(西班牙)
+    FITCLOUDLANGUAGE_LATVIAN = 0x22,                  //拉脱维亚语
+    FITCLOUDLANGUAGE_LITHUANIAN = 0x23,               //立陶宛语
+    FITCLOUDLANGUAGE_NORWEGIAN = 0x24,                //挪威语
+    FITCLOUDLANGUAGE_SLOVAK = 0x25,                   //斯洛伐克语
+    FITCLOUDLANGUAGE_SLOVENIAN = 0x26,                //斯洛文尼亚语
+    FITCLOUDLANGUAGE_BULGARIAN = 0x27,                //保加利亚语
+    FITCLOUDLANGUAGE_UKRAINIAN = 0x28,                //乌克兰语
+    FITCLOUDLANGUAGE_FILIPINO = 0x29,                 //菲律宾语
+    FITCLOUDLANGUAGE_FINNISH = 0x2a,                  //芬兰语
+    FITCLOUDLANGUAGE_SOUTHAFRICAN = 0x2b,             //南非语
+    FITCLOUDLANGUAGE_ROMANSH = 0x2c,                  //罗曼什语(瑞士)
+    FITCLOUDLANGUAGE_BURMESE = 0x2d,                  //缅甸语
+    FITCLOUDLANGUAGE_CAMBODIAN = 0x2e,                //柬埔寨语
+    FITCLOUDLANGUAGE_AMHARIC = 0x2f,                  //阿姆哈拉语
+ 
+    FITCLOUDLANGUAGE_BELARUSIAN = 0x30,               //白俄罗斯语
+    FITCLOUDLANGUAGE_ESTONIAN = 0x31,                 //爱沙尼亚语
+    FITCLOUDLANGUAGE_SWAHILI = 0x32,                  //斯瓦希里语(坦桑尼亚)
+    FITCLOUDLANGUAGE_ZULU = 0x33,                     //祖鲁语(南非)
+    FITCLOUDLANGUAGE_AZERBAIJANI = 0x34,              //阿塞拜疆语
+    FITCLOUDLANGUAGE_ARMENIAN = 0x35,                 //亚美尼亚语(亚美尼亚)
+    FITCLOUDLANGUAGE_GEORGIAN = 0x36,                 //格鲁吉亚语(格鲁吉亚)
+    FITCLOUDLANGUAGE_LAO = 0x37,                      //老挝语(老挝)
+    FITCLOUDLANGUAGE_MONGOLIAN = 0x38,                //蒙古语
+    FITCLOUDLANGUAGE_NEPALI = 0x39,                   //尼泊尔语
+    FITCLOUDLANGUAGE_KAZAKH = 0x3a,                   //哈萨克语
+    FITCLOUDLANGUAGE_GALICIAN = 0x3b,                 //加利西亚语
+    FITCLOUDLANGUAGE_ICELANDIC = 0x3c,                //冰岛语
+    FITCLOUDLANGUAGE_KANNADA = 0x3d,                  //坎纳达语
+    FITCLOUDLANGUAGE_KYRGYZ = 0x3e,                   //吉尔吉斯语
+    FITCLOUDLANGUAGE_MALAYALAM = 0x3f,                //马拉亚拉姆语
+
+    FITCLOUDLANGUAGE_MARATHI = 0x40,                  //马拉提语/马拉地语
+    FITCLOUDLANGUAGE_TAMIL = 0x41,                    //泰米尔语
+    FITCLOUDLANGUAGE_MACEDONIAN = 0x42,               //马其顿语
+    FITCLOUDLANGUAGE_TELUGU = 0x43,                   //泰卢固语
+    FITCLOUDLANGUAGE_UZBEK = 0x44,                    //乌兹别克语
+    FITCLOUDLANGUAGE_BASQUE = 0x45,                   //巴斯克语
+    FITCLOUDLANGUAGE_BERBER = 0x46,                   //僧加罗语(斯里兰卡)
     
 };
 

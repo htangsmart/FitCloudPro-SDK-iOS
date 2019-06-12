@@ -1,10 +1,10 @@
 # FitCloudKit iOS Development Guide
 
 ## Summary
-* What is FitCloudKit? 
-  
-  >###### iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. 
-         
+* What is FitCloudKit?
+
+  >###### iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet.
+
 * Scope
 
   ```
@@ -12,16 +12,16 @@
   ```
 
 * Compatibility
-  
+
   ###### 1. iOS 8.0 and Above；
-  
+
   ###### 2. armv7/i386/x86_64/arm64 Instruction Set；
-  
+
   ###### 3. Bitcode；
-  
- 
+
+
 ## Features
- 
+
 1. Initialize/scan/connect the bracelet;
 
 2. Obtain/set related functions and display of the bracelet;
@@ -39,8 +39,17 @@
 8. Restart/shutdown of the bracelet;
 
 9. Safety check before entering DFU mode (ensure the bracelet has sufficient power);
- 
+
 ## Releases
+
+V1.0.4 Build201906110001
+
+```
+  Release Date：2019-06-11
+  Features：
+  1、 More languages are supported for the bracelet.
+  2、 Fix some problems of synchronization.
+```
 
 V1.0.0 Build201905010001
 
@@ -80,8 +89,8 @@ Method 2: download from making ` FitCloudKit `, manual integrated into your proj
     * CoreBluetooth framework
 5. add `-ObjC` link flag
    add`-ObjC` link flag at `Other Linker Flags` in `Build Settings` as following:
-   
-   
+
+
    ![ObjC Other Link Flag](media/build_settings.png)
 ## Privacy Permissions
 In the project `Info.Plist` set the following privacy permissions using description, the actual describe the content depends on your business.
@@ -305,6 +314,3 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 Hetang Smart.
 
 Dai / iOS Developer
-
-
-

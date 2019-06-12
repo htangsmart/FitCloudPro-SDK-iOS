@@ -1,8 +1,8 @@
 # 和唐智能手环（FitCloudKit）iOS开发指南
 
 ## 简介 / Summary
-* 什么是和唐智能手环 SDK ? 
-  
+* 什么是和唐智能手环 SDK ?
+
   >###### 和唐智能手环 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件负责与手环设备通信等功能的封装，旨在方便合作伙伴定制自己的智能手环应用。       
 
 
@@ -13,16 +13,16 @@
   ```
 
 * 兼容性
-  
+
   ###### 1. iOS 8.0及以上操作系统；
-  
+
   ###### 2. 支持armv7/i386/x86_64/arm64指令集；
-  
+
   ###### 3. 支持Bitcode；
-  
- 
+
+
 ## 特性 / Features
- 
+
 1. 初始化/扫描/连接手环；
 
 2. 获取/设置手环相关功能及显示；
@@ -40,8 +40,17 @@
 8. 手环重启/关机；
 
 9. 进入 DFU 模式前安全检查(保证手环有充足的电量)；
- 
+
 ## 版本 / Releases
+
+版本V1.0.4 Build201906110001
+
+```
+  发布日期：2019年06月11日
+  功能更新：
+  1、 支持手环设置更多语言。
+  2、 修复了手环同步的一些问题。
+```
 
 版本V1.0.0 Build201905010001
 
@@ -66,23 +75,23 @@ pod 'FitCloudKit'
 方法二：从 Github 上下载 `FitCloudKit`，手动集成到您的项目中。
 
 1. FitCloudKit SDK开发包含：
-  
+
   * FitCloudKit.framework   静态库，智能手环开发套件核心framework
-  
+
   * FitCloudKit.bundle     智能手环开发套件核心资源包
-  
+
 2. 将framework添加到项目中;
 3. 将bundle资源包添加到项目中;
 4. 添加其他系统依赖库支持：
 
     * CoreGraphics.framework
-    
+
     * CoreBluetooth.framework
 5. 添加 `-ObjC` 链接标志
    在项目的 `Build Settings` 的 `Other Linker Flags` 中添加 `-ObjC` 链接标志，如下图所示：
-   
+
    ![ObjC Other Link Flag](media/build_settings.png)
- 
+
 ## 设置隐私权限
 在项目的`Info.plist`中设置以下隐私权限使用描述，实际描述内容各项目自行设置
 
@@ -305,8 +314,3 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 和唐智能
 
 戴工 / iOS Developer
-
-
-
-
-
