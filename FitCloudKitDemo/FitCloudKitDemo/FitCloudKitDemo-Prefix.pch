@@ -1,0 +1,16 @@
+//
+//  FitCloudKitDemo-Prefix.pch
+//  FitCloudKitDemo
+//
+//  Created by pcjbird on 2019/6/12.
+//  Copyright © 2019 HetangSmart. All rights reserved.
+//
+
+#ifndef FitCloudKitDemo_Prefix_pch
+#define FitCloudKitDemo_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <FitCloudKit/FitCloudKit.h>
+
+#endif /* FitCloudKitDemo_Prefix_pch */

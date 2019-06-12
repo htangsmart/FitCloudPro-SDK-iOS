@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7217CE3FFC6FFDF025355DC3 /* libPods-FitCloudKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1577722496F42A93B414DFF /* libPods-FitCloudKitDemo.a */; };
+		89A438B222B0D19700555B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B122B0D19700555B98 /* AppDelegate.m */; };
+		89A438B522B0D19700555B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B422B0D19700555B98 /* ViewController.m */; };
+		89A438B822B0D19700555B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A438B622B0D19700555B98 /* Main.storyboard */; };
+		89A438BA22B0D19900555B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A438B922B0D19900555B98 /* Assets.xcassets */; };
+		89A438BD22B0D19900555B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A438BB22B0D19900555B98 /* LaunchScreen.storyboard */; };
+		89A438C022B0D19900555B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438BF22B0D19900555B98 /* main.m */; };
+		89A438C822B0DA9500555B98 /* AppDelegate+FitCloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438C722B0DA9500555B98 /* AppDelegate+FitCloudKit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1511A057B1CD59EA0B4E8EED /* Pods-FitCloudKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudKitDemo.release.xcconfig"; path = "Target Support Files/Pods-FitCloudKitDemo/Pods-FitCloudKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4674C6148BD9C164A509FD6C /* Pods-FitCloudKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-FitCloudKitDemo/Pods-FitCloudKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		89A438AD22B0D19700555B98 /* FitCloudKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89A438B022B0D19700555B98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		89A438B122B0D19700555B98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		89A438B322B0D19700555B98 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		89A438B422B0D19700555B98 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		89A438B722B0D19700555B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89A438B922B0D19900555B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89A438BC22B0D19900555B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89A438BE22B0D19900555B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89A438BF22B0D19900555B98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		89A438C622B0DA9500555B98 /* AppDelegate+FitCloudKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+FitCloudKit.h"; sourceTree = "<group>"; };
+		89A438C722B0DA9500555B98 /* AppDelegate+FitCloudKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+FitCloudKit.m"; sourceTree = "<group>"; };
+		89A438C922B0DB6000555B98 /* FitCloudKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitCloudKitDemo-Prefix.pch"; sourceTree = "<group>"; };
+		A1577722496F42A93B414DFF /* libPods-FitCloudKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitCloudKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89A438AA22B0D19700555B98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7217CE3FFC6FFDF025355DC3 /* libPods-FitCloudKitDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89A438A422B0D19700555B98 = {
+			isa = PBXGroup;
+			children = (
+				89A438AF22B0D19700555B98 /* FitCloudKitDemo */,
+				89A438AE22B0D19700555B98 /* Products */,
+				C7BF5B98C5B523186DAD65CF /* Pods */,
+				C0A1B400DE21B28CD8FDE60B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		89A438AE22B0D19700555B98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89A438AD22B0D19700555B98 /* FitCloudKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89A438AF22B0D19700555B98 /* FitCloudKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				89A438B022B0D19700555B98 /* AppDelegate.h */,
+				89A438B122B0D19700555B98 /* AppDelegate.m */,
+				89A438C622B0DA9500555B98 /* AppDelegate+FitCloudKit.h */,
+				89A438C722B0DA9500555B98 /* AppDelegate+FitCloudKit.m */,
+				89A438B322B0D19700555B98 /* ViewController.h */,
+				89A438B422B0D19700555B98 /* ViewController.m */,
+				89A438B622B0D19700555B98 /* Main.storyboard */,
+				89A438B922B0D19900555B98 /* Assets.xcassets */,
+				89A438BB22B0D19900555B98 /* LaunchScreen.storyboard */,
+				89A438BE22B0D19900555B98 /* Info.plist */,
+				89A438BF22B0D19900555B98 /* main.m */,
+				89A438C922B0DB6000555B98 /* FitCloudKitDemo-Prefix.pch */,
+			);
+			path = FitCloudKitDemo;
+			sourceTree = "<group>";
+		};
+		C0A1B400DE21B28CD8FDE60B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1577722496F42A93B414DFF /* libPods-FitCloudKitDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7BF5B98C5B523186DAD65CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4674C6148BD9C164A509FD6C /* Pods-FitCloudKitDemo.debug.xcconfig */,
+				1511A057B1CD59EA0B4E8EED /* Pods-FitCloudKitDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89A438AC22B0D19700555B98 /* FitCloudKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89A438C322B0D19900555B98 /* Build configuration list for PBXNativeTarget "FitCloudKitDemo" */;
+			buildPhases = (
+				89D2579D62CC5EF4DD70C0BB /* [CP] Check Pods Manifest.lock */,
+				89A438A922B0D19700555B98 /* Sources */,
+				89A438AA22B0D19700555B98 /* Frameworks */,
+				89A438AB22B0D19700555B98 /* Resources */,
+				9C8224D039CDEBB40E1AEF86 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitCloudKitDemo;
+			productName = FitCloudKitDemo;
+			productReference = 89A438AD22B0D19700555B98 /* FitCloudKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89A438A522B0D19700555B98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = HetangSmart;
+				TargetAttributes = {
+					89A438AC22B0D19700555B98 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 89A438A822B0D19700555B98 /* Build configuration list for PBXProject "FitCloudKitDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89A438A422B0D19700555B98;
+			productRefGroup = 89A438AE22B0D19700555B98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89A438AC22B0D19700555B98 /* FitCloudKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89A438AB22B0D19700555B98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A438BD22B0D19900555B98 /* LaunchScreen.storyboard in Resources */,
+				89A438BA22B0D19900555B98 /* Assets.xcassets in Resources */,
+				89A438B822B0D19700555B98 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89D2579D62CC5EF4DD70C0BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitCloudKitDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C8224D039CDEBB40E1AEF86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudKitDemo/Pods-FitCloudKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudKitDemo/Pods-FitCloudKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitCloudKitDemo/Pods-FitCloudKitDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89A438A922B0D19700555B98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A438B522B0D19700555B98 /* ViewController.m in Sources */,
+				89A438C822B0DA9500555B98 /* AppDelegate+FitCloudKit.m in Sources */,
+				89A438C022B0D19900555B98 /* main.m in Sources */,
+				89A438B222B0D19700555B98 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		89A438B622B0D19700555B98 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89A438B722B0D19700555B98 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89A438BB22B0D19900555B98 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89A438BC22B0D19900555B98 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89A438C122B0D19900555B98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		89A438C222B0D19900555B98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89A438C422B0D19900555B98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4674C6148BD9C164A509FD6C /* Pods-FitCloudKitDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 598DKVYR2H;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FitCloudKitDemo/FitCloudKitDemo-Prefix.pch";
+				INFOPLIST_FILE = FitCloudKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89A438C522B0D19900555B98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1511A057B1CD59EA0B4E8EED /* Pods-FitCloudKitDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 598DKVYR2H;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FitCloudKitDemo/FitCloudKitDemo-Prefix.pch";
+				INFOPLIST_FILE = FitCloudKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89A438A822B0D19700555B98 /* Build configuration list for PBXProject "FitCloudKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89A438C122B0D19900555B98 /* Debug */,
+				89A438C222B0D19900555B98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89A438C322B0D19900555B98 /* Build configuration list for PBXNativeTarget "FitCloudKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89A438C422B0D19900555B98 /* Debug */,
+				89A438C522B0D19900555B98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89A438A522B0D19700555B98 /* Project object */;
+}
