@@ -42,6 +42,22 @@
 
 ## Releases
 
+V1.0.6 Build201906270001
+
+```
+  Release Date：2019-06-27
+  Features：
+  1、 Add mac address for peripheral when scanned.
+```
+
+V1.0.5 Build201906250001
+
+```
+  Release Date：2019-06-25
+  Features：
+  1、 You can set more daily sports goal now.
+```
+
 V1.0.4 Build201906110001
 
 ```

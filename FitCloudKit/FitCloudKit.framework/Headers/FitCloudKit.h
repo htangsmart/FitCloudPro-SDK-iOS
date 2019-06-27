@@ -8,6 +8,12 @@
 //  框架名称:FitCloudKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手环的iOS框架，负责与手环设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2019-06-27  Version:1.0.6 Build:201906270001
+//                            1.扫描到的外部设备新增mac地址数据
+//
+//     pcjbird    2019-06-25  Version:1.0.5 Build:201906250001
+//                            1.修改支持设置运动目标
+//
 //     pcjbird    2019-05-17  Version:1.0.4 Build:201905170001
 //                            1.增加手环支持的语种
 //
@@ -243,14 +249,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void)setUserProfile:(FitCloudUserProfileObject *_Nonnull)profile block:(FitCloudResultBlock _Nullable )block;
 
-#pragma mark 设定每日计步目标步数
+#pragma mark 设定每日运动目标
 
 /**
- * @brief 设定每日计步目标步数
- * @param stepcount 步数
+ * @brief 设定每日运动目标
+ * @param stepcount 步数目标, 单位：步数
+ * @param distance 距离目标, 单位：厘米(cm)
+ * @param calory 卡路里, 单位：小卡(cal)
  * @param block 结果回调
  */
-+(void)setDailyStepCountGoal:(UInt32) stepcount block:(FitCloudResultBlock _Nullable )block;
++(void)setDailyGoalWithStepCount:(UInt32) stepcount distance:(UInt32)distance calory:(UInt32)calory block:(FitCloudResultBlock _Nullable )block;
 
 #pragma mark 获取手环软硬件版本信息
 /**

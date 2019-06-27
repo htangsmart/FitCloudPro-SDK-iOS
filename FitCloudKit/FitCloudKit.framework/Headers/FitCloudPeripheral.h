@@ -35,6 +35,11 @@
 @property(nonatomic, strong)NSNumber *RSSI;
 
 /**
+ * @brief mac地址
+ */
+@property(nonatomic, strong, readonly) NSString* macAddr;
+
+/**
  * @brief 是否已经跟系统配对
  */
 @property(nonatomic, assign) BOOL  paired;
