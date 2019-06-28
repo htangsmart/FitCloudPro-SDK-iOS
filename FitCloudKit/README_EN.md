@@ -42,6 +42,14 @@
 
 ## Releases
 
+V1.0.7 Build201906280001
+
+```
+  Release Date：2019-06-28
+  Features：
+  1、 Fix some problems with retrieving notification remind configuration.
+```
+
 V1.0.6 Build201906270001
 
 ```
