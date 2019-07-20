@@ -49,6 +49,7 @@ V1.0.8 Build201907200001
   Features：
   1、 Fixed an issue failed to synchronize system time for the iPhone calendar settings to be a buddhist or Japanese calendar.
   2、 Optimize the reconnection mechanism with bracelet.
+```
 
 V1.0.7 Build201906280001
 
