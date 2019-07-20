@@ -8,6 +8,10 @@
 //  框架名称:FitCloudKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手环的iOS框架，负责与手环设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2019-07-20  Version:1.0.8 Build:201907200001
+//                            1.修正iPhone日历设置成佛教日历或者日本日历的时候导致手环同步时间失败的问题
+//                            2.优化手环回连机制
+//
 //     pcjbird    2019-06-28  Version:1.0.7 Build:201906280001
 //                            1.修正无法获取消息通知设置的一些问题
 //
