@@ -42,6 +42,14 @@
 
 ## Releases
 
+V1.0.9 Build201907210001
+
+```
+  Release Date：2019-07-21
+  Features：
+  1、 SDK version query support.
+```
+
 V1.0.8 Build201907200001
 
 ```
