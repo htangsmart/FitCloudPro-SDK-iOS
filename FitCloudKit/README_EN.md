@@ -42,6 +42,14 @@
 
 ## Releases
 
+V1.1.0 Build201908120001
+
+```
+  Release Date：2019-08-12
+  Features：
+  1、 Background bluetooth data synchronization support.
+```
+
 V1.0.9 Build201907210001
 
 ```
@@ -212,6 +220,14 @@ self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
 -(void)OnTakePhotoCtrl
 {
     //the App can implement photo take logic here
+}
+
+/**
+ *@brief The bracelet notify the app it is alive. 
+ */
+-(void) OnBraceletAlive
+{
+    //the App can actively synchronize the movement health data of the bracelet to achieve the function of background synchronization data. Please add it according to the specific project needs. Note that frequent synchronization data in the background may affect the power consumption of the bracelet device.
 }
 
 /**

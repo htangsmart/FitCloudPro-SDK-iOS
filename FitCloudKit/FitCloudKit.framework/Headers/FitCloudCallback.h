@@ -228,6 +228,11 @@ typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, FitClo
 -(void)OnTakePhotoCtrl;
 
 /**
+ *@brief 收到手环的活跃通知(当前手环与手机连接还活跃着)
+ */
+-(void) OnBraceletAlive;
+
+/**
  *@brief 记录日志数据
  *@param message 日志信息
  *@param level 日志等级

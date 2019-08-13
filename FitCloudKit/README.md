@@ -43,6 +43,14 @@
 
 ## 版本 / Releases
 
+版本V1.1.0 Build201908120001
+
+```
+  发布日期：2019年08月12日
+  功能更新：
+  1、 支持后台蓝牙数据同步功能
+```
+
 版本V1.0.9 Build201907210001
 
 ```
@@ -212,6 +220,14 @@ self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
 -(void)OnTakePhotoCtrl
 {
     //App 可以在此实现拍照逻辑
+}
+
+/**
+ *@brief 收到手环的活跃通知(当前手环与手机连接还活跃着)
+ */
+-(void) OnBraceletAlive
+{
+    //App 可以主动同步手环的运动健康数据以达到后台同步数据的功能，请根据具体项目需要添加，注意后台定期同步数据可能影响手环设备的功耗
 }
 
 /**
