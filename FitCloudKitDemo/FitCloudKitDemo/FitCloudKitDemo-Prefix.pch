@@ -20,7 +20,12 @@
 //日志
 #define APP_LOG_STRING(format, ...) [NSString stringWithFormat:@"[🏃‍♀️%@] %s (line %d) " format, APP_NAME, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__]
 
+#define RGB(r, g, b)                        [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:1.f]
+
 #import <QuickTraceiOSLogger/QuickTraceiOSLogger.h>
 #import <FitCloudKit/FitCloudKit.h>
+#import <YYCategories/YYCategories.h>
+#import "LocalizedLabel.h"
+#import "LocalizedButton.h"
 
 #endif /* FitCloudKitDemo_Prefix_pch */

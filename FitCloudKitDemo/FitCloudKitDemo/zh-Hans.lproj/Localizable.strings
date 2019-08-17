@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  FitCloudKitDemo
+
+  Created by pcjbird on 2019/8/17.
+  Copyright © 2019 HetangSmart. All rights reserved.
+*/
+
+"Back" = " 返回";
+
+"Search Device" = "搜索设备";
+
+"Discovered Devices" = "设备列表";
+"Click to connect and bind the smart watch" = "点击连接设备";
+
+"SYSTEM PAIRED" = "系统已配对";
+"CONNECTED" = "已连接";
+"DISCONNECTED" = "未连接";

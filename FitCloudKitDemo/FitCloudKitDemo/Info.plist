@@ -36,12 +36,11 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>FitCloudKitDemo将使用您的蓝牙外设权限用于与手环设备配对</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>FitCloudKitDemo需要获得相册创建权限用于保存摇一摇拍照照片等</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>FitCloudKitDemo需要获得相册权限用于设置您的头像信息等</string>
 </dict>
 </plist>

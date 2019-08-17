@@ -16,6 +16,15 @@
 		89A438C022B0D19900555B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438BF22B0D19900555B98 /* main.m */; };
 		89A438C822B0DA9500555B98 /* AppDelegate+FitCloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438C722B0DA9500555B98 /* AppDelegate+FitCloudKit.m */; };
 		89A438CC22B0ED3800555B98 /* AppDelegate+LoggerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438CB22B0ED3800555B98 /* AppDelegate+LoggerService.m */; };
+		89C5154123083707000BD54C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89C5154323083707000BD54C /* Localizable.strings */; };
+		89C515442308370B000BD54C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89C515462308370B000BD54C /* InfoPlist.strings */; };
+		89C5155023083B22000BD54C /* LocalizedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5154C23083B22000BD54C /* LocalizedLabel.m */; };
+		89C5155123083B22000BD54C /* LocalizedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5154E23083B22000BD54C /* LocalizedButton.m */; };
+		89C51554230840B2000BD54C /* DeviceSearchListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C51553230840B2000BD54C /* DeviceSearchListController.m */; };
+		89C515572308499D000BD54C /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C515562308499D000BD54C /* DeviceCell.m */; };
+		89C5155A2308579F000BD54C /* DeviceBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C515592308579F000BD54C /* DeviceBindingController.m */; };
+		89C5156023085958000BD54C /* MoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5155D23085958000BD54C /* MoView.m */; };
+		89C5156123085958000BD54C /* MoCurveLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5155E23085958000BD54C /* MoCurveLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +45,24 @@
 		89A438C922B0DB6000555B98 /* FitCloudKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitCloudKitDemo-Prefix.pch"; sourceTree = "<group>"; };
 		89A438CA22B0ED3800555B98 /* AppDelegate+LoggerService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LoggerService.h"; sourceTree = "<group>"; };
 		89A438CB22B0ED3800555B98 /* AppDelegate+LoggerService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LoggerService.m"; sourceTree = "<group>"; };
+		89C5154223083707000BD54C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		89C515452308370B000BD54C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		89C515472308371F000BD54C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		89C515482308371F000BD54C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		89C5154B23083B22000BD54C /* LocalizedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedLabel.h; sourceTree = "<group>"; };
+		89C5154C23083B22000BD54C /* LocalizedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedLabel.m; sourceTree = "<group>"; };
+		89C5154E23083B22000BD54C /* LocalizedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedButton.m; sourceTree = "<group>"; };
+		89C5154F23083B22000BD54C /* LocalizedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedButton.h; sourceTree = "<group>"; };
+		89C51552230840B2000BD54C /* DeviceSearchListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceSearchListController.h; sourceTree = "<group>"; };
+		89C51553230840B2000BD54C /* DeviceSearchListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceSearchListController.m; sourceTree = "<group>"; };
+		89C515552308499D000BD54C /* DeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
+		89C515562308499D000BD54C /* DeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
+		89C515582308579F000BD54C /* DeviceBindingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceBindingController.h; sourceTree = "<group>"; };
+		89C515592308579F000BD54C /* DeviceBindingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceBindingController.m; sourceTree = "<group>"; };
+		89C5155C23085958000BD54C /* MoCurveLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoCurveLayer.h; sourceTree = "<group>"; };
+		89C5155D23085958000BD54C /* MoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoView.m; sourceTree = "<group>"; };
+		89C5155E23085958000BD54C /* MoCurveLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoCurveLayer.m; sourceTree = "<group>"; };
+		89C5155F23085958000BD54C /* MoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoView.h; sourceTree = "<group>"; };
 		A1577722496F42A93B414DFF /* libPods-FitCloudKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitCloudKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,6 +99,7 @@
 		89A438AF22B0D19700555B98 /* FitCloudKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				89C5154923083B22000BD54C /* Vendors */,
 				89A438B022B0D19700555B98 /* AppDelegate.h */,
 				89A438B122B0D19700555B98 /* AppDelegate.m */,
 				89A438CA22B0ED3800555B98 /* AppDelegate+LoggerService.h */,
@@ -80,14 +108,61 @@
 				89A438C722B0DA9500555B98 /* AppDelegate+FitCloudKit.m */,
 				89A438B322B0D19700555B98 /* ViewController.h */,
 				89A438B422B0D19700555B98 /* ViewController.m */,
+				89C51552230840B2000BD54C /* DeviceSearchListController.h */,
+				89C51553230840B2000BD54C /* DeviceSearchListController.m */,
+				89C515582308579F000BD54C /* DeviceBindingController.h */,
+				89C515592308579F000BD54C /* DeviceBindingController.m */,
+				89C515552308499D000BD54C /* DeviceCell.h */,
+				89C515562308499D000BD54C /* DeviceCell.m */,
 				89A438B622B0D19700555B98 /* Main.storyboard */,
 				89A438B922B0D19900555B98 /* Assets.xcassets */,
 				89A438BB22B0D19900555B98 /* LaunchScreen.storyboard */,
 				89A438BE22B0D19900555B98 /* Info.plist */,
 				89A438BF22B0D19900555B98 /* main.m */,
+				89C515462308370B000BD54C /* InfoPlist.strings */,
+				89C5154323083707000BD54C /* Localizable.strings */,
 				89A438C922B0DB6000555B98 /* FitCloudKitDemo-Prefix.pch */,
 			);
 			path = FitCloudKitDemo;
+			sourceTree = "<group>";
+		};
+		89C5154923083B22000BD54C /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				89C5155B23085958000BD54C /* MoLoading */,
+				89C5154A23083B22000BD54C /* LocalizedLabel */,
+				89C5154D23083B22000BD54C /* LocalizedButton */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		89C5154A23083B22000BD54C /* LocalizedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				89C5154B23083B22000BD54C /* LocalizedLabel.h */,
+				89C5154C23083B22000BD54C /* LocalizedLabel.m */,
+			);
+			path = LocalizedLabel;
+			sourceTree = "<group>";
+		};
+		89C5154D23083B22000BD54C /* LocalizedButton */ = {
+			isa = PBXGroup;
+			children = (
+				89C5154F23083B22000BD54C /* LocalizedButton.h */,
+				89C5154E23083B22000BD54C /* LocalizedButton.m */,
+			);
+			path = LocalizedButton;
+			sourceTree = "<group>";
+		};
+		89C5155B23085958000BD54C /* MoLoading */ = {
+			isa = PBXGroup;
+			children = (
+				89C5155C23085958000BD54C /* MoCurveLayer.h */,
+				89C5155E23085958000BD54C /* MoCurveLayer.m */,
+				89C5155F23085958000BD54C /* MoView.h */,
+				89C5155D23085958000BD54C /* MoView.m */,
+			);
+			path = MoLoading;
 			sourceTree = "<group>";
 		};
 		C0A1B400DE21B28CD8FDE60B /* Frameworks */ = {
@@ -155,6 +230,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 89A438A422B0D19700555B98;
 			productRefGroup = 89A438AE22B0D19700555B98 /* Products */;
@@ -172,8 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				89A438BD22B0D19900555B98 /* LaunchScreen.storyboard in Resources */,
+				89C5154123083707000BD54C /* Localizable.strings in Resources */,
 				89A438BA22B0D19900555B98 /* Assets.xcassets in Resources */,
 				89A438B822B0D19700555B98 /* Main.storyboard in Resources */,
+				89C515442308370B000BD54C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,9 +306,16 @@
 			files = (
 				89A438B522B0D19700555B98 /* ViewController.m in Sources */,
 				89A438C822B0DA9500555B98 /* AppDelegate+FitCloudKit.m in Sources */,
+				89C5155023083B22000BD54C /* LocalizedLabel.m in Sources */,
 				89A438C022B0D19900555B98 /* main.m in Sources */,
 				89A438CC22B0ED3800555B98 /* AppDelegate+LoggerService.m in Sources */,
+				89C5155A2308579F000BD54C /* DeviceBindingController.m in Sources */,
+				89C51554230840B2000BD54C /* DeviceSearchListController.m in Sources */,
+				89C515572308499D000BD54C /* DeviceCell.m in Sources */,
 				89A438B222B0D19700555B98 /* AppDelegate.m in Sources */,
+				89C5156023085958000BD54C /* MoView.m in Sources */,
+				89C5155123083B22000BD54C /* LocalizedButton.m in Sources */,
+				89C5156123085958000BD54C /* MoCurveLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +338,24 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		89C5154323083707000BD54C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89C5154223083707000BD54C /* en */,
+				89C515482308371F000BD54C /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		89C515462308370B000BD54C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89C515452308370B000BD54C /* en */,
+				89C515472308371F000BD54C /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -260,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -319,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -374,7 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 598DKVYR2H;
+				DEVELOPMENT_TEAM = QN839WA57K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FitCloudKitDemo/FitCloudKitDemo-Prefix.pch";
 				INFOPLIST_FILE = FitCloudKitDemo/Info.plist;
@@ -384,7 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -394,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 598DKVYR2H;
+				DEVELOPMENT_TEAM = QN839WA57K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FitCloudKitDemo/FitCloudKitDemo-Prefix.pch";
 				INFOPLIST_FILE = FitCloudKitDemo/Info.plist;
@@ -404,7 +509,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  FitCloudKitDemo
+
+  Created by pcjbird on 2019/8/17.
+  Copyright © 2019 HetangSmart. All rights reserved.
+*/
+"CFBundleDisplayName" = "FitCloudKitDemo";
+
+"NSBluetoothPeripheralUsageDescription" = "The FitCloudKitDemo will use your bluetooth peripheral rights to pair with the bracelet device";
+"NSPhotoLibraryAddUsageDescription" = "FitCloudKitDemo needs to get album creation permission to save shake photos, photos, etc";
+"NSPhotoLibraryUsageDescription" = "FitCloudKitDemo needs to get album permissions to set your profile picture information, etc";

@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  FitCloudKitDemo
+
+  Created by pcjbird on 2019/8/17.
+  Copyright © 2019 HetangSmart. All rights reserved.
+*/
+"CFBundleDisplayName" = "FitCloudKitDemo";
+
+"NSBluetoothPeripheralUsageDescription" = "FitCloudKitDemo将使用您的蓝牙外设权限用于与手环设备配对";
+"NSPhotoLibraryAddUsageDescription" = "FitCloudKitDemo需要获得相册创建权限用于保存摇一摇拍照照片等";
+"NSPhotoLibraryUsageDescription" = "FitCloudKitDemo需要获得相册权限用于设置您的头像信息等";
