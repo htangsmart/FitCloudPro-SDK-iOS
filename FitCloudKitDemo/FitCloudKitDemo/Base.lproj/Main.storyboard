@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2X-mv-7pZ">
-                                <rect key="frame" x="128.5" y="423" width="157" height="50"/>
+                                <rect key="frame" x="128.5" y="712" width="157" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RYc-tx-XHA"/>
                                 </constraints>
@@ -43,17 +43,76 @@
                                     <segue destination="6m7-y6-8gr" kind="show" id="EVi-VJ-di8"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smart-watch" translatesAutoresizingMaskIntoConstraints="NO" id="hkD-M9-FTP">
+                                <rect key="frame" x="107" y="164" width="200" height="200"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjb-ji-SAP">
+                                <rect key="frame" x="137" y="389" width="140" height="25"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3Q0-D4-U01">
+                                <rect key="frame" x="188.5" y="439" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W5-EA-lxa">
+                                <rect key="frame" x="144" y="494" width="126" height="19"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4f-a3-gPv">
+                                <rect key="frame" x="122.5" y="538" width="169" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tsN-j7-3tN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                <state key="normal" title="Connect Device">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="OnConnectDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txS-61-SpR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="h2X-mv-7pZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0H7-7U-3ah"/>
+                            <constraint firstItem="4W5-EA-lxa" firstAttribute="top" secondItem="3Q0-D4-U01" secondAttribute="bottom" constant="18" id="H4c-7f-d5c"/>
+                            <constraint firstItem="3Q0-D4-U01" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LGO-ZA-uML"/>
+                            <constraint firstItem="hkD-M9-FTP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="MUN-0i-6Gw"/>
+                            <constraint firstItem="hkD-M9-FTP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S3I-dL-ZEd"/>
+                            <constraint firstItem="3Q0-D4-U01" firstAttribute="top" secondItem="wjb-ji-SAP" secondAttribute="bottom" constant="25" id="SoF-9E-LIm"/>
+                            <constraint firstItem="c4f-a3-gPv" firstAttribute="top" secondItem="4W5-EA-lxa" secondAttribute="bottom" constant="25" id="e8E-hB-D0w"/>
+                            <constraint firstItem="4W5-EA-lxa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f77-28-O1R"/>
+                            <constraint firstItem="c4f-a3-gPv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kXW-GH-fSS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h2X-mv-7pZ" secondAttribute="bottom" constant="100" id="o6H-ej-Q8p"/>
                             <constraint firstItem="h2X-mv-7pZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qz1-gv-Cg2"/>
+                            <constraint firstItem="wjb-ji-SAP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ufu-eQ-lpB"/>
+                            <constraint firstItem="wjb-ji-SAP" firstAttribute="top" secondItem="hkD-M9-FTP" secondAttribute="bottom" constant="25" id="wO9-35-Hz4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="m2m-kc-B5s"/>
                     <connections>
+                        <outlet property="btnConnectDevice" destination="c4f-a3-gPv" id="3r9-c7-3nJ"/>
                         <outlet property="btnSearch" destination="h2X-mv-7pZ" id="1Cf-Hj-5Du"/>
+                        <outlet property="connectStatus" destination="4W5-EA-lxa" id="wLD-yU-es5"/>
+                        <outlet property="deviceName" destination="wjb-ji-SAP" id="8eK-0i-5Hc"/>
+                        <outlet property="imageSmartWatch" destination="hkD-M9-FTP" id="Yv2-Z5-YLx"/>
+                        <outlet property="indicator" destination="3Q0-D4-U01" id="Ntl-U7-bvI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -310,6 +369,7 @@
     </scenes>
     <resources>
         <image name="back" width="12" height="22"/>
+        <image name="smart-watch" width="200" height="200"/>
         <image name="绑定手环_319" width="1080" height="900"/>
     </resources>
 </document>
