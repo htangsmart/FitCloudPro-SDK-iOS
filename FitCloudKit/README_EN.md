@@ -42,6 +42,14 @@
 
 ## Releases
 
+V1.1.2 Build201908190002
+
+```
+  Release Date：2019-08-19
+  Features：
+  1、 Fixed problem with notification moment when bluetooth connection begin.  
+```
+
 V1.1.1 Build201908190001
 
 ```
