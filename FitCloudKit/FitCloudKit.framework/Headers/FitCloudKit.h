@@ -8,6 +8,11 @@
 //  框架名称:FitCloudKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手环的iOS框架，负责与手环设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2019-08-19  Version:1.1.1 Build:201908190001
+//                            1.修正手环解绑没有清除上一次绑定手环的Mac地址的问题
+//                            2.新增绑定/登录成功后需要完成一些基础准备同步操作的开始与结束通知
+//                            3.修正SDK初始化选项shouldAutoConnect不起作用的问题
+//
 //     pcjbird    2019-08-12  Version:1.1.0 Build:201908120001
 //                            1.支持后台蓝牙数据同步功能
 //

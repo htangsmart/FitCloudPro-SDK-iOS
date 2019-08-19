@@ -48,7 +48,7 @@ extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECTED_NOTIFY;
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY;
 
 /**
- * @brief 外设(手环)断开链接通知 object=>CBPeripheral userInfo=>@{@"error" : error}
+ * @brief 外设(手环)断开连接通知 object=>CBPeripheral userInfo=>@{@"error" : error}
  */
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCONNECT_NOTIFY;
 
@@ -96,6 +96,16 @@ extern NSString *const FITCLOUDEVENT_GETALLCONFIG_RESULT_NOTIFY;
  * @brief 绑定<登录>初始化(绑定<登录>/获取所有手环配置 必要流程)结果通知 userInfo=>{@"result":@(YES/NO), @"error" : error}
  */
 extern NSString *const FITCLOUDEVENT_INITIALIZE_RESULT_NOTIFY;
+
+/**
+ * @brief 绑定<登录>初始化成功后手环开始完成一些准备同步操作开始通知
+ */
+extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_BEGIN_NOTIFY;
+
+/**
+ * @brief 绑定<登录>初始化成功后手环开始完成一些准备同步操作结束通知
+ */
+extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_END_NOTIFY;
 
 /**
  * @brief 手环电量信息通知 userInfo=>FitCloudBatteryInfoObject

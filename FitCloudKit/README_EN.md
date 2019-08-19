@@ -42,6 +42,16 @@
 
 ## Releases
 
+V1.1.1 Build201908190001
+
+```
+  Release Date：2019-08-19
+  Features：
+  1、 Fixed the problem that the last binding Mac address of the bracelet was not cleared when the bracelet was unbound.
+  2、 Add begin/end notification for prepare sync work when bind or login bracelet succeed.
+  3、 Fix the problem that shouldAutoConnect attribute does not work for the SDK initialization option.  
+```
+
 V1.1.0 Build201908120001
 
 ```

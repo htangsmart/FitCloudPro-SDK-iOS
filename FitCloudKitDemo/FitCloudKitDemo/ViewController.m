@@ -15,11 +15,15 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (weak, nonatomic) IBOutlet UILabel *connectStatus;
 @property (weak, nonatomic) IBOutlet UIButton *btnConnectDevice;
+@property (weak, nonatomic) IBOutlet UIButton *btnRemoveDevice;
+@property (weak, nonatomic) IBOutlet UIButton *btnMoreDemo;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *btnSearch;
 
 - (IBAction)OnConnectDevice:(id)sender;
+- (IBAction)OnRemoveDevice:(id)sender;
+- (IBAction)OnMoreDemo:(id)sender;
 @end
 
 @implementation ViewController
@@ -54,6 +58,8 @@
          self.indicator.hidden = self.connectStatus.hidden = FALSE;
          [self.indicator startAnimating];
          self.btnConnectDevice.hidden = TRUE;
+         self.btnRemoveDevice.hidden = TRUE;
+         self.btnMoreDemo.hidden = TRUE;
      }
 }
 
@@ -73,7 +79,7 @@
 {
     if(![FitCloudKit lastConnectPeripheral])
     {
-        self.imageSmartWatch.hidden = self.deviceName.hidden = self.indicator.hidden = self.connectStatus.hidden = self.btnConnectDevice.hidden = TRUE;
+        self.imageSmartWatch.hidden = self.deviceName.hidden = self.indicator.hidden = self.connectStatus.hidden = self.btnConnectDevice.hidden = self.btnRemoveDevice.hidden = self.btnMoreDemo.hidden = TRUE;
         self.btnSearch.hidden = FALSE;
     }
     else
@@ -109,5 +115,11 @@
     [self.indicator startAnimating];
     self.btnConnectDevice.hidden = TRUE;
     [FitCloudKit tryConnect:[[FitCloudKit historyPeripherals] lastObject]];
+}
+
+- (IBAction)OnRemoveDevice:(id)sender {
+}
+
+- (IBAction)OnMoreDemo:(id)sender {
 }
 @end
