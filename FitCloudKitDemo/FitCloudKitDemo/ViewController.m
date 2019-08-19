@@ -111,7 +111,6 @@
 -(void)OnPeripherialConnectFailureNotification:(NSNotification*)notification
 {
     if(self.indicator.isAnimating)[self.indicator stopAnimating];
-    //self.connectStatus.hidden = TRUE;
     self.btnConnectDevice.hidden = FALSE;
     self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
     self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
