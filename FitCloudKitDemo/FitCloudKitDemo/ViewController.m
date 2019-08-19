@@ -53,26 +53,74 @@
         [self updateControlVisible];
     }
     
+    [self registerNotificationObsever];
+    
      if([FitCloudKit lastConnectPeripheral])
      {
-         self.indicator.hidden = self.connectStatus.hidden = FALSE;
-         [self.indicator startAnimating];
-         self.btnConnectDevice.hidden = TRUE;
-         self.btnRemoveDevice.hidden = TRUE;
-         self.btnMoreDemo.hidden = TRUE;
+         self.deviceName.text = [FitCloudKit lastConnectPeripheral].name;
+         if([FitCloudKit connecting])
+         {
+             self.indicator.hidden = self.connectStatus.hidden = FALSE;
+             if(!self.indicator.isAnimating)[self.indicator startAnimating];
+             self.btnConnectDevice.hidden = TRUE;
+             self.btnRemoveDevice.hidden = TRUE;
+             self.btnMoreDemo.hidden = TRUE;
+             self.connectStatus.text = NSLocalizedString(@"Connecting...", nil);
+             self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
+         }
+         
      }
 }
 
 -(void) registerNotificationObsever
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripheralConnectingNotification:) name:FITCLOUDEVENT_PERIPHERAL_CONNECTING_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripheralConnectedNotification:) name:FITCLOUDEVENT_PERIPHERAL_CONNECTED_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripheralDisconnectedNotification:) name:FITCLOUDEVENT_PERIPHERAL_DISCONNECT_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripherialConnectFailureNotification:) name:FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPrepareSyncWorkEndNotification:) name:FITCLOUDEVENT_PREPARESYNCWORK_END_NOTIFY object:nil];
+}
+
+-(void)OnPeripheralConnectingNotification:(NSNotification *) notification
+{
+    self.indicator.hidden = self.connectStatus.hidden = FALSE;
+    if(!self.indicator.isAnimating)[self.indicator startAnimating];
+    self.btnConnectDevice.hidden = TRUE;
+    self.btnRemoveDevice.hidden = TRUE;
+    self.btnMoreDemo.hidden = TRUE;
+    self.connectStatus.text = NSLocalizedString(@"Connecting...", nil);
+    self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
+}
+
+-(void)OnPeripheralConnectedNotification:(NSNotification *) notification
+{
+    if(self.indicator.isAnimating)[self.indicator stopAnimating];
+    self.connectStatus.text = NSLocalizedString(@"Connected", nil);
+    self.connectStatus.textColor = RGB(0x00, 0xB2, 0x00);
+    self.btnConnectDevice.hidden = TRUE;
+}
+
+-(void)OnPeripheralDisconnectedNotification:(NSNotification *) notification
+{
+    if(self.indicator.isAnimating)[self.indicator stopAnimating];
+    self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
+    self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
+    self.btnConnectDevice.hidden = FALSE;
 }
 
 -(void)OnPeripherialConnectFailureNotification:(NSNotification*)notification
 {
-    [self.indicator stopAnimating];
-    self.connectStatus.hidden = TRUE;
+    if(self.indicator.isAnimating)[self.indicator stopAnimating];
+    //self.connectStatus.hidden = TRUE;
     self.btnConnectDevice.hidden = FALSE;
+    self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
+    self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
+}
+
+-(void)OnPrepareSyncWorkEndNotification:(NSNotification *) notification
+{
+    self.btnRemoveDevice.hidden = FALSE;
+    self.btnMoreDemo.hidden = FALSE;
 }
 
 -(void) updateControlVisible
