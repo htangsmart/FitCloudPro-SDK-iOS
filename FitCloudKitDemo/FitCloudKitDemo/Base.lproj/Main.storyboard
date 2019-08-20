@@ -298,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="1216" y="100"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Demo List Controller-->
         <scene sceneID="BsJ-dY-jMP">
             <objects>
-                <tableViewController id="k4P-gd-nrk" sceneMemberID="viewController">
+                <tableViewController id="k4P-gd-nrk" customClass="DemoListController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="otN-CQ-S72">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -327,6 +327,9 @@
                                     <state key="normal" title="Back" image="back">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="OnGoBack:" destination="k4P-gd-nrk" eventType="touchUpInside" id="VWC-GW-7tC"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

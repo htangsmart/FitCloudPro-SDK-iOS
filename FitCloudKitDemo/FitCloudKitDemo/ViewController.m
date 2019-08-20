@@ -51,6 +51,14 @@
     }
     
     {
+        [self.btnRemoveDevice setTitle:NSLocalizedString(@"Remove Device", nil) forState:UIControlStateNormal];
+    }
+    
+    {
+        [self.btnMoreDemo setTitle:NSLocalizedString(@"More Demo >", nil) forState:UIControlStateNormal];
+    }
+    
+    {
         [self updateControlVisible];
     }
     

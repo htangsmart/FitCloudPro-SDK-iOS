@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7217CE3FFC6FFDF025355DC3 /* libPods-FitCloudKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1577722496F42A93B414DFF /* libPods-FitCloudKitDemo.a */; };
+		8902EA55230C2B97003FF418 /* DemoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8902EA54230C2B97003FF418 /* DemoListController.m */; };
 		89A438B222B0D19700555B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B122B0D19700555B98 /* AppDelegate.m */; };
 		89A438B522B0D19700555B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B422B0D19700555B98 /* ViewController.m */; };
 		89A438B822B0D19700555B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A438B622B0D19700555B98 /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		1511A057B1CD59EA0B4E8EED /* Pods-FitCloudKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudKitDemo.release.xcconfig"; path = "Target Support Files/Pods-FitCloudKitDemo/Pods-FitCloudKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4674C6148BD9C164A509FD6C /* Pods-FitCloudKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-FitCloudKitDemo/Pods-FitCloudKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8902EA53230C2B97003FF418 /* DemoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoListController.h; sourceTree = "<group>"; };
+		8902EA54230C2B97003FF418 /* DemoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoListController.m; sourceTree = "<group>"; };
 		89A438AD22B0D19700555B98 /* FitCloudKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A438B022B0D19700555B98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		89A438B122B0D19700555B98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				89C51553230840B2000BD54C /* DeviceSearchListController.m */,
 				89C515582308579F000BD54C /* DeviceBindingController.h */,
 				89C515592308579F000BD54C /* DeviceBindingController.m */,
+				8902EA53230C2B97003FF418 /* DemoListController.h */,
+				8902EA54230C2B97003FF418 /* DemoListController.m */,
 				89C515552308499D000BD54C /* DeviceCell.h */,
 				89C515562308499D000BD54C /* DeviceCell.m */,
 				89A438B622B0D19700555B98 /* Main.storyboard */,
@@ -315,6 +320,7 @@
 				89A438B222B0D19700555B98 /* AppDelegate.m in Sources */,
 				89C5156023085958000BD54C /* MoView.m in Sources */,
 				89C5155123083B22000BD54C /* LocalizedButton.m in Sources */,
+				8902EA55230C2B97003FF418 /* DemoListController.m in Sources */,
 				89C5156123085958000BD54C /* MoCurveLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
