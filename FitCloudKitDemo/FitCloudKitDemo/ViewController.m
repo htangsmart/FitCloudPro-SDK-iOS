@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnConnectDevice;
 @property (weak, nonatomic) IBOutlet UIButton *btnRemoveDevice;
 @property (weak, nonatomic) IBOutlet UIButton *btnMoreDemo;
+@property (weak, nonatomic) IBOutlet UILabel *progressTip;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *btnSearch;
@@ -78,6 +79,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripheralConnectedNotification:) name:FITCLOUDEVENT_PERIPHERAL_CONNECTED_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripheralDisconnectedNotification:) name:FITCLOUDEVENT_PERIPHERAL_DISCONNECT_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripherialConnectFailureNotification:) name:FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY object:nil];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudLoginUserObjectBegin:) name:FITCLOUDEVENT_LOGINUSEROBJECT_BEGIN_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudLoginUserObjectResult:) name:FITCLOUDEVENT_LOGINUSEROBJECT_RESULT_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudGetAllConfigBegin:) name:FITCLOUDEVENT_GETALLCONFIG_BEGIN_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudGetAllConfigResult:) name:FITCLOUDEVENT_GETALLCONFIG_RESULT_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPrepareSyncWorkBeginNotification:) name:FITCLOUDEVENT_PREPARESYNCWORK_BEGIN_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPrepareSyncWorkEndNotification:) name:FITCLOUDEVENT_PREPARESYNCWORK_END_NOTIFY object:nil];
 }
 
@@ -98,6 +106,9 @@
     self.connectStatus.text = NSLocalizedString(@"Connected", nil);
     self.connectStatus.textColor = RGB(0x00, 0xB2, 0x00);
     self.btnConnectDevice.hidden = TRUE;
+    self.imageSmartWatch.hidden = self.deviceName.hidden = FALSE;
+    self.btnSearch.hidden = TRUE;
+    
 }
 
 -(void)OnPeripheralDisconnectedNotification:(NSNotification *) notification
@@ -105,7 +116,9 @@
     if(self.indicator.isAnimating)[self.indicator stopAnimating];
     self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
     self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
-    self.btnConnectDevice.hidden = FALSE;
+    if([FitCloudKit lastConnectPeripheral])self.btnConnectDevice.hidden = FALSE;
+    self.btnRemoveDevice.hidden = YES;
+    self.btnMoreDemo.hidden = YES;
 }
 
 -(void)OnPeripherialConnectFailureNotification:(NSNotification*)notification
@@ -116,10 +129,58 @@
     self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
 }
 
+-(void)OnFitCloudLoginUserObjectBegin:(NSNotification *)notification
+{
+    self.progressTip.text = NSLocalizedString(@"Logging On User Object", nil);
+}
+
+-(void)OnFitCloudLoginUserObjectResult:(NSNotification *)notification
+{
+    BOOL result = NO;
+    NSDictionary *userInfo = notification.userInfo;
+    if([userInfo isKindOfClass:[NSDictionary class]])
+    {
+        result = [userInfo boolValueForKey:@"result" default:NO];
+    }
+    self.progressTip.text = result ? NSLocalizedString(@"Login User Object Success", nil) : NSLocalizedString(@"Login User Object Failure", nil);
+    
+}
+
+-(void)OnFitCloudGetAllConfigBegin:(NSNotification *)notification
+{
+    self.progressTip.text = NSLocalizedString(@"Getting Smart Watch All Config", nil);
+}
+
+-(void)OnFitCloudGetAllConfigResult:(NSNotification *)notification
+{
+    BOOL result = NO;
+    NSDictionary *userInfo = notification.userInfo;
+    if([userInfo isKindOfClass:[NSDictionary class]])
+    {
+        result = [userInfo boolValueForKey:@"result" default:NO];
+    }
+    self.progressTip.text = result ? NSLocalizedString(@"Get Smart Watch All Config Success", nil) : NSLocalizedString(@"Get Smart Watch All Config Failure", nil);
+}
+
+-(void)OnPrepareSyncWorkBeginNotification:(NSNotification *) notification
+{
+    self.progressTip.text = NSLocalizedString(@"Preparing Work for Smart Watch", nil);
+}
+
 -(void)OnPrepareSyncWorkEndNotification:(NSNotification *) notification
 {
     self.btnRemoveDevice.hidden = FALSE;
     self.btnMoreDemo.hidden = FALSE;
+    self.progressTip.text = NSLocalizedString(@"Prepare Work for Smart Watch Finished.", nil);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:1.5f animations:^{
+            self.progressTip.alpha = 0;
+        } completion:^(BOOL finished) {
+            self.progressTip.text = @"";
+            self.progressTip.alpha = 1;
+        }];
+        
+    });
 }
 
 -(void) updateControlVisible
@@ -165,6 +226,14 @@
 }
 
 - (IBAction)OnRemoveDevice:(id)sender {
+    __weak typeof(self) weakSelf = self;
+    [FitCloudKit unbindUserObject:YES block:^(BOOL succeed, NSError *error) {
+        FitCloudKitConnectRecord *record = [[FitCloudKit historyPeripherals] lastObject];
+        [FitCloudKit removePeripheralHistoryWithUUID:record.uuid.UUIDString];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf updateControlVisible];
+        });
+    }];
 }
 
 - (IBAction)OnMoreDemo:(id)sender {

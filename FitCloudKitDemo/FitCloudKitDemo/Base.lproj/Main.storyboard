@@ -119,9 +119,16 @@
                                     <action selector="OnRemoveDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vN4-Nw-xK9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXw-5x-UbC">
+                                <rect key="frame" x="207" y="447" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yXw-5x-UbC" firstAttribute="top" secondItem="wjb-ji-SAP" secondAttribute="bottom" constant="33" id="5q6-j6-MNW"/>
                             <constraint firstItem="jEz-96-ssT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5sE-P2-dGi"/>
                             <constraint firstItem="jEz-96-ssT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7GA-pm-evq"/>
                             <constraint firstItem="ayu-Sc-w4U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="847-3T-GSZ"/>
@@ -131,6 +138,7 @@
                             <constraint firstItem="hkD-M9-FTP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="MUN-0i-6Gw"/>
                             <constraint firstItem="hkD-M9-FTP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S3I-dL-ZEd"/>
                             <constraint firstItem="3Q0-D4-U01" firstAttribute="top" secondItem="wjb-ji-SAP" secondAttribute="bottom" constant="25" id="SoF-9E-LIm"/>
+                            <constraint firstItem="yXw-5x-UbC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Waq-BD-Es8"/>
                             <constraint firstItem="c4f-a3-gPv" firstAttribute="top" secondItem="4W5-EA-lxa" secondAttribute="bottom" constant="25" id="e8E-hB-D0w"/>
                             <constraint firstItem="4W5-EA-lxa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f77-28-O1R"/>
                             <constraint firstItem="c4f-a3-gPv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kXW-GH-fSS"/>
@@ -151,6 +159,7 @@
                         <outlet property="deviceName" destination="wjb-ji-SAP" id="8eK-0i-5Hc"/>
                         <outlet property="imageSmartWatch" destination="hkD-M9-FTP" id="Yv2-Z5-YLx"/>
                         <outlet property="indicator" destination="3Q0-D4-U01" id="Ntl-U7-bvI"/>
+                        <outlet property="progressTip" destination="yXw-5x-UbC" id="ld3-rb-YKL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
