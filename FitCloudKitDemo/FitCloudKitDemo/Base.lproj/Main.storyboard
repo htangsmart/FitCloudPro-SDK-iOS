@@ -126,6 +126,12 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkq-gE-RQu">
+                                <rect key="frame" x="207" y="424" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -140,10 +146,12 @@
                             <constraint firstItem="hkD-M9-FTP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S3I-dL-ZEd"/>
                             <constraint firstItem="3Q0-D4-U01" firstAttribute="top" secondItem="wjb-ji-SAP" secondAttribute="bottom" constant="25" id="SoF-9E-LIm"/>
                             <constraint firstItem="yXw-5x-UbC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Waq-BD-Es8"/>
+                            <constraint firstItem="xkq-gE-RQu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XDq-Me-edH"/>
                             <constraint firstItem="c4f-a3-gPv" firstAttribute="top" secondItem="4W5-EA-lxa" secondAttribute="bottom" constant="25" id="e8E-hB-D0w"/>
                             <constraint firstItem="4W5-EA-lxa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f77-28-O1R"/>
                             <constraint firstItem="c4f-a3-gPv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kXW-GH-fSS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h2X-mv-7pZ" secondAttribute="bottom" constant="100" id="o6H-ej-Q8p"/>
+                            <constraint firstItem="xkq-gE-RQu" firstAttribute="top" secondItem="wjb-ji-SAP" secondAttribute="bottom" constant="10" id="oac-8D-VUh"/>
                             <constraint firstItem="h2X-mv-7pZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qz1-gv-Cg2"/>
                             <constraint firstItem="wjb-ji-SAP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ufu-eQ-lpB"/>
                             <constraint firstItem="wjb-ji-SAP" firstAttribute="top" secondItem="hkD-M9-FTP" secondAttribute="bottom" constant="25" id="wO9-35-Hz4"/>
@@ -161,6 +169,7 @@
                         <outlet property="imageSmartWatch" destination="hkD-M9-FTP" id="Yv2-Z5-YLx"/>
                         <outlet property="indicator" destination="3Q0-D4-U01" id="Ntl-U7-bvI"/>
                         <outlet property="progressTip" destination="yXw-5x-UbC" id="ld3-rb-YKL"/>
+                        <outlet property="soc" destination="xkq-gE-RQu" id="Wr1-Hx-BUz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

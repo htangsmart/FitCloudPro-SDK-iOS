@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnMoreDemo;
 @property (weak, nonatomic) IBOutlet UILabel *progressTip;
 
+@property (weak, nonatomic) IBOutlet UILabel *soc;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnSearch;
 
@@ -88,7 +89,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripheralDisconnectedNotification:) name:FITCLOUDEVENT_PERIPHERAL_DISCONNECT_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripherialConnectFailureNotification:) name:FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY object:nil];
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnBatteryInfoNotification:) name:FTICLOUDEVENT_BATTERYINFO_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudLoginUserObjectBegin:) name:FITCLOUDEVENT_LOGINUSEROBJECT_BEGIN_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudLoginUserObjectResult:) name:FITCLOUDEVENT_LOGINUSEROBJECT_RESULT_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudGetAllConfigBegin:) name:FITCLOUDEVENT_GETALLCONFIG_BEGIN_NOTIFY object:nil];
@@ -127,6 +128,7 @@
     if([FitCloudKit lastConnectPeripheral])self.btnConnectDevice.hidden = FALSE;
     self.btnRemoveDevice.hidden = YES;
     self.btnMoreDemo.hidden = YES;
+    self.soc.text = @"";
 }
 
 -(void)OnPeripherialConnectFailureNotification:(NSNotification*)notification
@@ -135,6 +137,17 @@
     self.btnConnectDevice.hidden = FALSE;
     self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
     self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
+}
+
+-(void)OnBatteryInfoNotification:(NSNotification*)notification
+{
+    FitCloudBatteryInfoObject *batteryInfo = notification.object;
+    if([batteryInfo isKindOfClass:[FitCloudBatteryInfoObject class]])
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+             self.soc.text = [NSString stringWithFormat:NSLocalizedString(@"SOC: %@%%", nil), @(batteryInfo.percent)];
+        });
+    }
 }
 
 -(void)OnFitCloudLoginUserObjectBegin:(NSNotification *)notification
