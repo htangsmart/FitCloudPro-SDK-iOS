@@ -29,6 +29,10 @@
     {
         [self manualSyncData];
     }
+    else if(indexPath.row == 2)
+    {
+        
+    }
 }
 
 -(void) fetchSportsDataToday

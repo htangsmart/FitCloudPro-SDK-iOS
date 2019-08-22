@@ -26,6 +26,7 @@
 		89C5155A2308579F000BD54C /* DeviceBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C515592308579F000BD54C /* DeviceBindingController.m */; };
 		89C5156023085958000BD54C /* MoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5155D23085958000BD54C /* MoView.m */; };
 		89C5156123085958000BD54C /* MoCurveLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5155E23085958000BD54C /* MoCurveLayer.m */; };
+		89EA5159230ED2A200EDC1F0 /* MessageReminderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EA5158230ED2A200EDC1F0 /* MessageReminderController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,8 @@
 		89C5155D23085958000BD54C /* MoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoView.m; sourceTree = "<group>"; };
 		89C5155E23085958000BD54C /* MoCurveLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoCurveLayer.m; sourceTree = "<group>"; };
 		89C5155F23085958000BD54C /* MoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoView.h; sourceTree = "<group>"; };
+		89EA5157230ED2A200EDC1F0 /* MessageReminderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageReminderController.h; sourceTree = "<group>"; };
+		89EA5158230ED2A200EDC1F0 /* MessageReminderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageReminderController.m; sourceTree = "<group>"; };
 		A1577722496F42A93B414DFF /* libPods-FitCloudKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitCloudKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +120,8 @@
 				89C515592308579F000BD54C /* DeviceBindingController.m */,
 				8902EA53230C2B97003FF418 /* DemoListController.h */,
 				8902EA54230C2B97003FF418 /* DemoListController.m */,
+				89EA5157230ED2A200EDC1F0 /* MessageReminderController.h */,
+				89EA5158230ED2A200EDC1F0 /* MessageReminderController.m */,
 				89C515552308499D000BD54C /* DeviceCell.h */,
 				89C515562308499D000BD54C /* DeviceCell.m */,
 				89A438B622B0D19700555B98 /* Main.storyboard */,
@@ -314,6 +319,7 @@
 				89C5155023083B22000BD54C /* LocalizedLabel.m in Sources */,
 				89A438C022B0D19900555B98 /* main.m in Sources */,
 				89A438CC22B0ED3800555B98 /* AppDelegate+LoggerService.m in Sources */,
+				89EA5159230ED2A200EDC1F0 /* MessageReminderController.m in Sources */,
 				89C5155A2308579F000BD54C /* DeviceBindingController.m in Sources */,
 				89C51554230840B2000BD54C /* DeviceSearchListController.m in Sources */,
 				89C515572308499D000BD54C /* DeviceCell.m in Sources */,

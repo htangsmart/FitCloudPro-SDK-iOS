@@ -58,3 +58,11 @@
 "Manual Sync Data" = "手动同步";
 "Message Reminder" = "消息提醒";
 
+"Whether Support Mail Reminder" = "手环是否支持邮件提醒";
+"Wheather Support TelegramAndViber Reminder" = "手环是否支持Telegram和Viber提醒";
+"Whether Call Reminder Enabled" = "来电提醒是否开启";
+"Enabled Call Reminder" = "开启来电提醒";
+"Disable Call Reminder" = "关闭来电提醒";
+"Enable Call & SMS Reminder at the same time" = "同时开启来电和短信提醒";
+"Disable Call & SMS Reminder at the same time" = "同时关闭来电和短信提醒";
+
