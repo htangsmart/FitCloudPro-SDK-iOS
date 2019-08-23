@@ -25,6 +25,7 @@
 #import <QuickTraceiOSLogger/QuickTraceiOSLogger.h>
 #import <FitCloudKit/FitCloudKit.h>
 #import <YYCategories/YYCategories.h>
+#import <Toast/Toast.h>
 #import "LocalizedLabel.h"
 #import "LocalizedButton.h"
 

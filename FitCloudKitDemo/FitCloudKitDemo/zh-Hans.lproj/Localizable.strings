@@ -53,6 +53,7 @@
 
 "Demos" = "示例";
 "Click to run the demo" = "点击运行示例";
+"View the results in the console." = "请在控制台查看结果。";
 
 "Get Sports Data Today" = "获取今日运动数据";
 "Manual Sync Data" = "手动同步";
