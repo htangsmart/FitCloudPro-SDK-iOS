@@ -7,6 +7,7 @@
 //
 
 #import "DemoListController.h"
+#define ConsoleResultToastTip(v) [v makeToast:NSLocalizedString(@"View the results in the console.", nil) duration:3.0f position:CSToastPositionTop]
 
 @interface DemoListController ()
 
@@ -43,7 +44,9 @@
         {
             NSString * log = APP_LOG_STRING(@"\n今日运动数据：\n步数：%@\n距离：%@\n卡路里：%@\n深睡：%@\n浅睡：%@\n平均心率：%@", @(dataObject.steps), @(dataObject.distance), @(dataObject.calory), @(dataObject.deepSleepMinutes),@(dataObject.shallowSleepMinutes),@(dataObject.averageHeartRate));
             XLOG_INFO(@"%@", log);
-            [weakSelf.view makeToast:NSLocalizedString(@"View the results in the console.", nil)];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                ConsoleResultToastTip(weakSelf.view);
+            });
         }
         
     }];
@@ -55,7 +58,9 @@
     [FitCloudKit manualSyncDataWithProgress:^(CGFloat progress, NSString *tip) {
         XLOG_INFO(@"%@", APP_LOG_STRING(@"同步进度：%.0f%%, %@",progress*100.0f, tip));
     } block:^(BOOL succeed, NSArray<FitCloudManualSyncRecordObject*> *records, NSError *error) {
-        [weakSelf.view makeToast:NSLocalizedString(@"View the results in the console.", nil)];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            ConsoleResultToastTip(weakSelf.view);
+        });
         BOOL hasRecords = [records isKindOfClass:[NSArray class]] && [records count] > 0;
         if(succeed && hasRecords)
         {

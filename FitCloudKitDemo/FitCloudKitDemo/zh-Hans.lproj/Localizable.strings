@@ -58,6 +58,12 @@
 "Get Sports Data Today" = "获取今日运动数据";
 "Manual Sync Data" = "手动同步";
 "Message Reminder" = "消息提醒";
+"Alarm" = "闹钟";
+"Sedentary Remind" = "久坐提醒";
+"Drink Remind" = "喝水提醒";
+"Wrist Wake Up" = "抬腕唤醒";
+"Health Monitor Settings" = "健康监控设置";
+"Screen Display" = "屏幕显示";
 
 "Whether Support Mail Reminder" = "手环是否支持邮件提醒";
 "Wheather Support TelegramAndViber Reminder" = "手环是否支持Telegram和Viber提醒";
@@ -66,4 +72,11 @@
 "Disable Call Reminder" = "关闭来电提醒";
 "Enable Call & SMS Reminder at the same time" = "同时开启来电和短信提醒";
 "Disable Call & SMS Reminder at the same time" = "同时关闭来电和短信提醒";
+
+"Op success." = "操作成功。";
+"Op failure." = "操作失败。";
+
+"Alarm List" = "闹钟列表";
+"Add Alarm" = "添加闹钟";
+"Edit Alarm" = "编辑闹钟";
 
