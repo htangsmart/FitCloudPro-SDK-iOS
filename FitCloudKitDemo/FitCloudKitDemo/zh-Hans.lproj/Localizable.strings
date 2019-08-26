@@ -80,3 +80,6 @@
 "Add Alarm" = "添加闹钟";
 "Edit Alarm" = "编辑闹钟";
 
+"Fetch Wrist Wake Up Settings" = "获取抬腕唤醒设置";
+"Do Wrist Wake Up Settings" = "设置抬腕唤醒";
+

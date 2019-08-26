@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7217CE3FFC6FFDF025355DC3 /* libPods-FitCloudKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1577722496F42A93B414DFF /* libPods-FitCloudKitDemo.a */; };
 		8902EA55230C2B97003FF418 /* DemoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8902EA54230C2B97003FF418 /* DemoListController.m */; };
+		892ADC8D2313FB6B00934A08 /* WristWakeUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 892ADC8C2313FB6B00934A08 /* WristWakeUpController.m */; };
 		8975895F231169FE0005C1A2 /* AlarmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8975895E231169FE0005C1A2 /* AlarmController.m */; };
 		89A438B222B0D19700555B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B122B0D19700555B98 /* AppDelegate.m */; };
 		89A438B522B0D19700555B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B422B0D19700555B98 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 		4674C6148BD9C164A509FD6C /* Pods-FitCloudKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-FitCloudKitDemo/Pods-FitCloudKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8902EA53230C2B97003FF418 /* DemoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoListController.h; sourceTree = "<group>"; };
 		8902EA54230C2B97003FF418 /* DemoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoListController.m; sourceTree = "<group>"; };
+		892ADC8B2313FB6B00934A08 /* WristWakeUpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WristWakeUpController.h; sourceTree = "<group>"; };
+		892ADC8C2313FB6B00934A08 /* WristWakeUpController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WristWakeUpController.m; sourceTree = "<group>"; };
 		8975895D231169FE0005C1A2 /* AlarmController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmController.h; sourceTree = "<group>"; };
 		8975895E231169FE0005C1A2 /* AlarmController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmController.m; sourceTree = "<group>"; };
 		89A438AD22B0D19700555B98 /* FitCloudKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +130,8 @@
 				89EA5158230ED2A200EDC1F0 /* MessageReminderController.m */,
 				8975895D231169FE0005C1A2 /* AlarmController.h */,
 				8975895E231169FE0005C1A2 /* AlarmController.m */,
+				892ADC8B2313FB6B00934A08 /* WristWakeUpController.h */,
+				892ADC8C2313FB6B00934A08 /* WristWakeUpController.m */,
 				89C515552308499D000BD54C /* DeviceCell.h */,
 				89C515562308499D000BD54C /* DeviceCell.m */,
 				89A438B622B0D19700555B98 /* Main.storyboard */,
@@ -331,6 +336,7 @@
 				89C515572308499D000BD54C /* DeviceCell.m in Sources */,
 				89A438B222B0D19700555B98 /* AppDelegate.m in Sources */,
 				89C5156023085958000BD54C /* MoView.m in Sources */,
+				892ADC8D2313FB6B00934A08 /* WristWakeUpController.m in Sources */,
 				89C5155123083B22000BD54C /* LocalizedButton.m in Sources */,
 				8902EA55230C2B97003FF418 /* DemoListController.m in Sources */,
 				89C5156123085958000BD54C /* MoCurveLayer.m in Sources */,
@@ -497,7 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QN839WA57K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FitCloudKitDemo/FitCloudKitDemo-Prefix.pch";
 				INFOPLIST_FILE = FitCloudKitDemo/Info.plist;
@@ -517,7 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QN839WA57K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FitCloudKitDemo/FitCloudKitDemo-Prefix.pch";
 				INFOPLIST_FILE = FitCloudKitDemo/Info.plist;
