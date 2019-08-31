@@ -1,20 +1,23 @@
 //
-//  WristWakeUpController.m
+//  SedentaryRemindController.m
 //  FitCloudKitDemo
 //
-//  Created by pcjbird on 2019/8/26.
+//  Created by pcjbird on 2019/8/31.
 //  Copyright © 2019 HetangSmart. All rights reserved.
 //
 
-#import "WristWakeUpController.h"
+#import "SedentaryRemindController.h"
+
 #define ConsoleResultToastTip(v) [v makeToast:NSLocalizedString(@"View the results in the console.", nil) duration:3.0f position:CSToastPositionTop]
 #define OpResultToastTip(v, success) [v makeToast:success ? NSLocalizedString(@"Op success.", nil) : NSLocalizedString(@"Op failure.", nil) duration:3.0f position:CSToastPositionTop]
 
-@interface WristWakeUpController ()
+@interface SedentaryRemindController ()
+
 - (IBAction)OnGoBack:(id)sender;
+
 @end
 
-@implementation WristWakeUpController
+@implementation SedentaryRemindController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,8 +33,8 @@
 {
     if(indexPath.row == 0)
     {
-        [FitCloudKit getWristWakeUpSettingWithBlock:^(BOOL succeed, FitCloudWWUObject *wwuSetting, NSError *error) {
-            XLOG_INFO(@"Wrist Wake Up Settings:\nisOn:%@\nbegin:%@\nend:%@", @(wwuSetting.on), @(wwuSetting.begin), @(wwuSetting.end));
+        [FitCloudKit getSedentaryRemindSettingWithBlock:^(BOOL succeed, FitCloudLSRObject *lsrSetting, NSError *error) {
+            XLOG_INFO(@"Sedentary Remind Settings:\nisOn:%@\noffWhenLunchBreak:%@\nbegin:%@\nend:%@", @(lsrSetting.on), @(lsrSetting.offWhenLunchBreak), @(lsrSetting.begin), @(lsrSetting.end));
             dispatch_async(dispatch_get_main_queue(), ^{
                 ConsoleResultToastTip(self.view);
             });
@@ -39,11 +42,12 @@
     }
     else if(indexPath.row == 1)
     {
-        FitCloudWWUObject *settings = [FitCloudWWUObject new];
+        FitCloudLSRObject *settings = [FitCloudLSRObject new];
         settings.on = true;
+        settings.offWhenLunchBreak = true;
         settings.begin = 60*9;
         settings.begin = 60*20;
-        [FitCloudKit setWristWakeUp:settings block:^(BOOL succeed, NSError *error) {
+        [FitCloudKit setSedentaryRemind:settings block:^(BOOL succeed, NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 OpResultToastTip(self.view, succeed);
             });

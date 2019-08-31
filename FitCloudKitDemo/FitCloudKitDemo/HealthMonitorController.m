@@ -1,20 +1,20 @@
 //
-//  WristWakeUpController.m
+//  HealthMonitorController.m
 //  FitCloudKitDemo
 //
-//  Created by pcjbird on 2019/8/26.
+//  Created by pcjbird on 2019/8/31.
 //  Copyright © 2019 HetangSmart. All rights reserved.
 //
 
-#import "WristWakeUpController.h"
+#import "HealthMonitorController.h"
 #define ConsoleResultToastTip(v) [v makeToast:NSLocalizedString(@"View the results in the console.", nil) duration:3.0f position:CSToastPositionTop]
 #define OpResultToastTip(v, success) [v makeToast:success ? NSLocalizedString(@"Op success.", nil) : NSLocalizedString(@"Op failure.", nil) duration:3.0f position:CSToastPositionTop]
 
-@interface WristWakeUpController ()
+@interface HealthMonitorController ()
 - (IBAction)OnGoBack:(id)sender;
 @end
 
-@implementation WristWakeUpController
+@implementation HealthMonitorController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,8 +30,8 @@
 {
     if(indexPath.row == 0)
     {
-        [FitCloudKit getWristWakeUpSettingWithBlock:^(BOOL succeed, FitCloudWWUObject *wwuSetting, NSError *error) {
-            XLOG_INFO(@"Wrist Wake Up Settings:\nisOn:%@\nbegin:%@\nend:%@", @(wwuSetting.on), @(wwuSetting.begin), @(wwuSetting.end));
+        [FitCloudKit getHealthTimingMonitorSettingWithBlock:^(BOOL succeed, FitCloudHTMObject *htmSetting, NSError *error) {
+            XLOG_INFO(@"Health Monitor Settings:\nisOn:%@\nbegin:%@\nend:%@", @(htmSetting.on), @(htmSetting.begin), @(htmSetting.end));
             dispatch_async(dispatch_get_main_queue(), ^{
                 ConsoleResultToastTip(self.view);
             });
@@ -39,11 +39,11 @@
     }
     else if(indexPath.row == 1)
     {
-        FitCloudWWUObject *settings = [FitCloudWWUObject new];
+        FitCloudHTMObject *settings = [FitCloudHTMObject new];
         settings.on = true;
         settings.begin = 60*9;
         settings.begin = 60*20;
-        [FitCloudKit setWristWakeUp:settings block:^(BOOL succeed, NSError *error) {
+        [FitCloudKit setHealthTimingMonitor:settings block:^(BOOL succeed, NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 OpResultToastTip(self.view, succeed);
             });
@@ -52,16 +52,17 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)OnGoBack:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 @end
