@@ -98,3 +98,7 @@
 "Enable Steps Item Dispay" = "开启步数功能显示";
 "Disable Steps Item Display" = "关闭步数功能显示";
 
+"Realtime Measurement" = "实时测量";
+"Start Heart Rate Realtime Measurement" = "启动心率实时测量";
+"One Click to Start All Measurement" = "一键测量";
+"Stop the Measurement" = "停止测量";
