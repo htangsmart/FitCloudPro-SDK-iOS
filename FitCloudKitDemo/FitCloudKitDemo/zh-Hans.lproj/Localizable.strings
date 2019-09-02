@@ -64,6 +64,10 @@
 "Wrist Wake Up" = "抬腕唤醒";
 "Health Monitor Settings" = "健康监控设置";
 "Screen Display" = "屏幕显示";
+"Health Measurement" = "健康测量";
+"Daily Goal Settings" = "每日目标设置";
+"Unit Prefer Settings" = "单位偏好设置";
+"User Profile Settings" = "用户资料设置";
 
 "Whether Support Mail Reminder" = "手环是否支持邮件提醒";
 "Wheather Support TelegramAndViber Reminder" = "手环是否支持Telegram和Viber提醒";
@@ -102,3 +106,5 @@
 "Start Heart Rate Realtime Measurement" = "启动心率实时测量";
 "One Click to Start All Measurement" = "一键测量";
 "Stop the Measurement" = "停止测量";
+
+"Set Daily Goal" = "设置每日目标";

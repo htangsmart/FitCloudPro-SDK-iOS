@@ -15,6 +15,7 @@
 		891FA8DF231AB3D20097E996 /* ScreenDispayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891FA8DE231AB3D20097E996 /* ScreenDispayController.m */; };
 		892ADC8D2313FB6B00934A08 /* WristWakeUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 892ADC8C2313FB6B00934A08 /* WristWakeUpController.m */; };
 		893B4499231D54870057EC21 /* RealtimeMeasureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893B4498231D54870057EC21 /* RealtimeMeasureController.m */; };
+		893B449C231D5C260057EC21 /* DailyGoalSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893B449B231D5C260057EC21 /* DailyGoalSettingController.m */; };
 		8975895F231169FE0005C1A2 /* AlarmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8975895E231169FE0005C1A2 /* AlarmController.m */; };
 		89A438B222B0D19700555B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B122B0D19700555B98 /* AppDelegate.m */; };
 		89A438B522B0D19700555B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B422B0D19700555B98 /* ViewController.m */; };
@@ -53,6 +54,8 @@
 		892ADC8C2313FB6B00934A08 /* WristWakeUpController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WristWakeUpController.m; sourceTree = "<group>"; };
 		893B4497231D54870057EC21 /* RealtimeMeasureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealtimeMeasureController.h; sourceTree = "<group>"; };
 		893B4498231D54870057EC21 /* RealtimeMeasureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealtimeMeasureController.m; sourceTree = "<group>"; };
+		893B449A231D5C260057EC21 /* DailyGoalSettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyGoalSettingController.h; sourceTree = "<group>"; };
+		893B449B231D5C260057EC21 /* DailyGoalSettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyGoalSettingController.m; sourceTree = "<group>"; };
 		8975895D231169FE0005C1A2 /* AlarmController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmController.h; sourceTree = "<group>"; };
 		8975895E231169FE0005C1A2 /* AlarmController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmController.m; sourceTree = "<group>"; };
 		89A438AD22B0D19700555B98 /* FitCloudKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +160,8 @@
 				891FA8DE231AB3D20097E996 /* ScreenDispayController.m */,
 				893B4497231D54870057EC21 /* RealtimeMeasureController.h */,
 				893B4498231D54870057EC21 /* RealtimeMeasureController.m */,
+				893B449A231D5C260057EC21 /* DailyGoalSettingController.h */,
+				893B449B231D5C260057EC21 /* DailyGoalSettingController.m */,
 				89C515552308499D000BD54C /* DeviceCell.h */,
 				89C515562308499D000BD54C /* DeviceCell.m */,
 				89A438B622B0D19700555B98 /* Main.storyboard */,
@@ -358,6 +363,7 @@
 				89A438CC22B0ED3800555B98 /* AppDelegate+LoggerService.m in Sources */,
 				89EA5159230ED2A200EDC1F0 /* MessageReminderController.m in Sources */,
 				891FA8D9231AAAA20097E996 /* DrinkRemindController.m in Sources */,
+				893B449C231D5C260057EC21 /* DailyGoalSettingController.m in Sources */,
 				8975895F231169FE0005C1A2 /* AlarmController.m in Sources */,
 				89C5155A2308579F000BD54C /* DeviceBindingController.m in Sources */,
 				89C51554230840B2000BD54C /* DeviceSearchListController.m in Sources */,
