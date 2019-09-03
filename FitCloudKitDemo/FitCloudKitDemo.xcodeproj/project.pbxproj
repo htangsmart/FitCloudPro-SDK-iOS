@@ -18,6 +18,7 @@
 		893B449C231D5C260057EC21 /* DailyGoalSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893B449B231D5C260057EC21 /* DailyGoalSettingController.m */; };
 		8975895F231169FE0005C1A2 /* AlarmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8975895E231169FE0005C1A2 /* AlarmController.m */; };
 		898ADEB0231E941200342172 /* UnitPreferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898ADEAF231E941200342172 /* UnitPreferController.m */; };
+		898ADEB3231EB43C00342172 /* UserProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898ADEB2231EB43C00342172 /* UserProfileController.m */; };
 		89A438B222B0D19700555B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B122B0D19700555B98 /* AppDelegate.m */; };
 		89A438B522B0D19700555B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B422B0D19700555B98 /* ViewController.m */; };
 		89A438B822B0D19700555B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A438B622B0D19700555B98 /* Main.storyboard */; };
@@ -61,6 +62,8 @@
 		8975895E231169FE0005C1A2 /* AlarmController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmController.m; sourceTree = "<group>"; };
 		898ADEAE231E941200342172 /* UnitPreferController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitPreferController.h; sourceTree = "<group>"; };
 		898ADEAF231E941200342172 /* UnitPreferController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitPreferController.m; sourceTree = "<group>"; };
+		898ADEB1231EB43C00342172 /* UserProfileController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProfileController.h; sourceTree = "<group>"; };
+		898ADEB2231EB43C00342172 /* UserProfileController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserProfileController.m; sourceTree = "<group>"; };
 		89A438AD22B0D19700555B98 /* FitCloudKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A438B022B0D19700555B98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		89A438B122B0D19700555B98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				893B449B231D5C260057EC21 /* DailyGoalSettingController.m */,
 				898ADEAE231E941200342172 /* UnitPreferController.h */,
 				898ADEAF231E941200342172 /* UnitPreferController.m */,
+				898ADEB1231EB43C00342172 /* UserProfileController.h */,
+				898ADEB2231EB43C00342172 /* UserProfileController.m */,
 				89C515552308499D000BD54C /* DeviceCell.h */,
 				89C515562308499D000BD54C /* DeviceCell.m */,
 				89A438B622B0D19700555B98 /* Main.storyboard */,
@@ -373,6 +378,7 @@
 				8975895F231169FE0005C1A2 /* AlarmController.m in Sources */,
 				89C5155A2308579F000BD54C /* DeviceBindingController.m in Sources */,
 				89C51554230840B2000BD54C /* DeviceSearchListController.m in Sources */,
+				898ADEB3231EB43C00342172 /* UserProfileController.m in Sources */,
 				89C515572308499D000BD54C /* DeviceCell.m in Sources */,
 				89A438B222B0D19700555B98 /* AppDelegate.m in Sources */,
 				89C5156023085958000BD54C /* MoView.m in Sources */,
