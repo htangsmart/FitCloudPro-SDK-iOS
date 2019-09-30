@@ -55,6 +55,18 @@
  */
 @property(nonatomic, assign) UInt16 steps;
 
+/**
+ * @brief 距离，单位(cm)
+ * @note 该字段只有当距离&卡路里新算法时有效
+ */
+@property(nonatomic, assign) UInt16 distance;
+
+/**
+ * @brief 卡路里，单位(小卡 cal)
+ * @note 该字段只有当距离&卡路里新算法时有效
+ */
+@property(nonatomic, assign) UInt16 calory;
+
 @end
 
 

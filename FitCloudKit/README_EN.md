@@ -42,6 +42,21 @@
 
 ## Releases
 
+V1.1.3-beta.9 Build201909300001
+
+```
+  Release Date：2019-09-30
+  Features：
+  1. New distance-calorie algorithm into the step-counting data.
+  2. Obtain the last binding time of the user support.
+  3. Settings of heart rate /blood pressure alarm value support.
+  4. Add Snapchat message reminder.
+  5. Device scanning removes device name filtering.
+  6. Real-time ecg measurement can be abort by bracelet now.
+  7. Obtain watch face ui information support now.
+  8. Improve SDK stability.
+```
+
 V1.1.2 Build201908190002
 
 ```

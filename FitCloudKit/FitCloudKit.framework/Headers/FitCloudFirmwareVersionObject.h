@@ -64,4 +64,24 @@
  */
 @property(nonatomic, assign) BOOL allowShowTelegramAndViberReminder;
 
+/**
+ * @brief 距离卡路里是否使用新算法
+ */
+@property(nonatomic, assign) BOOL newAlgorithmWithDistanceCalories;
+
+/**
+ * @brief 是否显示心率预警选项
+ */
+@property(nonatomic, assign) BOOL allowHRAlarm;
+
+/**
+ * @brief 是否显示血压预警选项
+ */
+@property(nonatomic, assign) BOOL allowBPAlarm;
+
+/**
+ * @brief 是否显示新增的消息提醒(Twitter/LinkedIn/Messenger/Instagram/Snapchat/Skype)
+ */
+@property(nonatomic, assign) BOOL allowShowAdditionalReminder;
+
 @end

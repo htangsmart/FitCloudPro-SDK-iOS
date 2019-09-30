@@ -8,6 +8,16 @@
 //  框架名称:FitCloudKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手环的iOS框架，负责与手环设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2019-09-30  Version:1.1.3-beta.9 Build:201909300001
+//                            1.计步数据引入距离&卡路里新算法
+//                            2.新增获取用户最后绑定时间
+//                            3.新增心率报警/血压报警设置
+//                            4.新增Snapchat消息提醒选项
+//                            5.设备扫描取消设备名称过滤
+//                            6.心电实时测量新增手环主动结束逻辑
+//                            7.新增获取表盘UI信息接口
+//                            8.提升SDK稳定性
+//
 //     pcjbird    2019-08-19  Version:1.1.2 Build:201908190002
 //                            1.修正蓝牙连接开始的通知时刻问题
 //
@@ -433,6 +443,43 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void)getBloodPressureReferSettingWithBlock:(FitCloudBloodPressureReferResultBlock _Nullable )block;
 
+#pragma mark 心率报警设置
+/**
+ * @brief 心率报警设置
+ * @param hrAlarmSetting 心率报警设置
+ * @param block 结果回调
+ */
++(void)setHRAlarm:(FitCloudHRAlarmObject* _Nonnull)hrAlarmSetting block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取心率报警设置
+/**
+ * @brief 获取心率报警设置
+ * @param block 结果回调
+ */
++(void)getHRAlarmSettingWithBlock:(FitCloudHRAlarmResultBlock _Nullable)block;
+
+#pragma mark 血压报警设置
+/**
+ * @brief 血压报警设置
+ * @param bpAlarmSetting 血压报警设置
+ * @param block 结果回调
+ */
++(void)setBPAlarm:(FitCloudBPAlarmObject* _Nonnull)bpAlarmSetting block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取血压报警设置
+/**
+ * @brief 获取血压报警设置
+ * @param block 结果回调
+ */
++(void)getBPAlarmSettingWithBlock:(FitCloudBPAlarmResultBlock _Nullable)block;
+
+#pragma mark 获取表盘UI信息
+/**
+* @brief 获取表盘UI信息
+* @param block 结果回调
+*/
++(void)getFaceUIInformationWithBlock:(FitCloudFaceUIInfoResultBlock _Nullable)block;
+
 
 #pragma mark APP主动点击退出睡眠
 /**
@@ -505,6 +552,13 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void)bindUserObject:(NSInteger)userId abortIfExist:(BOOL)bAbort block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 最后绑定时间
+/**
+ * @brief 最后绑定时间
+ * @return 绑定时间
+ */
++(nullable NSDate*) lastBindDate;
 
 #pragma mark 用户解绑
 /**

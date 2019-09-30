@@ -8,6 +8,9 @@
 //  框架名称:FitCloudDFUKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet Device Firmware Upgrade, which is responsible for the upgrade of bracelet firmware. FitCloud智能手环固件升级的iOS框架，负责手环固件升级等功能的封装。
 //  修改记录:
+//     pcjbird    2019-09-30  Version:1.0.3 Build:201909300001
+//                            1.支持UI文件升级
+//
 //     pcjbird    2019-04-04  Version:1.0.0 Build:201904040001
 //                            1.首次发布SDK版本
 //
@@ -79,6 +82,20 @@ typedef NS_ENUM(NSInteger, FITCLOUDDFUCHIPVENDOR)
  */
 @interface FitCloudDFUKit : NSObject
 
+#pragma mark 版本信息
+
+/**
+ * @brief SDK版本号
+ */
++(NSString*) sdkVersion;
+
+/**
+ * @brief SDK Build 版本号
+ */
++(NSString*) sdkBuild;
+
+#pragma mark 公共方法
+
 /**
  * @brief 设置是否为调试模式,默认为NO
  */
@@ -95,8 +112,9 @@ typedef NS_ENUM(NSInteger, FITCLOUDDFUCHIPVENDOR)
  * @param peripheral 固件升级的蓝牙外设
  * @param firmware 新版本固件文件路径,注意是 file path, 不是 file url
  * @param chipVendor 芯片供应商
+ * @param isUI 是否为UI文件
  */
-+(void) startWithPeripheral:(CBPeripheral *) peripheral firmware:(NSString*)firmware chipVendor:(FITCLOUDDFUCHIPVENDOR)chipVendor;
++(void) startWithPeripheral:(CBPeripheral *) peripheral firmware:(NSString*)firmware chipVendor:(FITCLOUDDFUCHIPVENDOR)chipVendor isUI:(BOOL)isUI;
 
 @end
 

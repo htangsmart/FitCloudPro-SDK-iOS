@@ -26,6 +26,14 @@
  
 ## Releases
 
+V1.0.3 Build201909300001
+
+```
+  Release Date：2019-09-30
+  Features：
+  1、 Watch face ui upgrade support now.
+```
+
 V1.0.0 Build201905010001
 
 ```
