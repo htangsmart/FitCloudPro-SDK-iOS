@@ -43,6 +43,24 @@
 
 ## 版本 / Releases
 
+版本V1.1.3 Build201910160001
+
+```
+  发布日期：2019年10月16日
+  功能更新：
+  1.计步数据引入距离&卡路里新算法
+  2.新增获取用户最后绑定时间
+  3.新增心率报警/血压报警设置
+  4.新增Snapchat消息提醒选项
+  5.设备扫描取消设备名称过滤
+  6.心电实时测量新增手环主动结束逻辑
+  7.新增获取表盘UI信息接口
+  8.新增获取手环广播数据缓存,因此现在您可以获取到曾经连接过的手环的Mac地址
+  9.新增蓝牙名称变更通知，新增蓝牙RSSI变更通知
+  10.提升SDK稳定性
+  11.避免歧义，+(NSArray<FitCloudPeripheral *>*_Nonnull)peripherals 修改为  +(NSArray<FitCloudPeripheral *>*_Nonnull)discoveredPeripherals
+```
+
 版本V1.1.3-beta.9 Build201909300001
 
 ```

@@ -26,6 +26,14 @@
  
 ## Releases
 
+V1.0.4 Build201910160001
+
+```
+  Release Date：2019-10-16
+  Features：
+  1、 Fix crash bug with iOS13.
+```
+
 V1.0.3 Build201909300001
 
 ```

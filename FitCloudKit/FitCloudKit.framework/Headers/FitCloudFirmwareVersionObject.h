@@ -84,4 +84,9 @@
  */
 @property(nonatomic, assign) BOOL allowShowAdditionalReminder;
 
+/**
+* @brief 是否支持表盘升级
+*/
+@property(nonatomic, assign) BOOL allowWatchFaceUpgrade;
+
 @end

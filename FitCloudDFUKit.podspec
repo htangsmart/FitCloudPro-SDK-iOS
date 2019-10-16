@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "FitCloudDFUKit"
-    s.version          = "1.1.3-beta.9"
+    s.version          = "1.1.3"
     s.summary          = "iOS framework for FitCloud Smart Bracelet Device Firmware Upgrade, which is responsible for the upgrade of bracelet firmware. FitCloud智能手环固件升级的iOS框架，负责手环固件升级等功能的封装。"
     s.description      = <<-DESC
     和唐公司手环固件升级SDK。

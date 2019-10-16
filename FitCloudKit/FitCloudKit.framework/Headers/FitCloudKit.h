@@ -8,7 +8,7 @@
 //  框架名称:FitCloudKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手环的iOS框架，负责与手环设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2019-09-30  Version:1.1.3-beta.9 Build:201909300001
+//     pcjbird    2019-10-16  Version:1.1.3 Build:201910160001
 //                            1.计步数据引入距离&卡路里新算法
 //                            2.新增获取用户最后绑定时间
 //                            3.新增心率报警/血压报警设置
@@ -16,7 +16,10 @@
 //                            5.设备扫描取消设备名称过滤
 //                            6.心电实时测量新增手环主动结束逻辑
 //                            7.新增获取表盘UI信息接口
-//                            8.提升SDK稳定性
+//                            8.新增获取手环广播数据缓存
+//                            9.新增蓝牙名称变更通知，新增蓝牙RSSI变更通知
+//                            10.提升SDK稳定性
+//                            11.避免歧义，+(NSArray<FitCloudPeripheral *>*_Nonnull)peripherals 修改为  +(NSArray<FitCloudPeripheral *>*_Nonnull)discoveredPeripherals
 //
 //     pcjbird    2019-08-19  Version:1.1.2 Build:201908190002
 //                            1.修正蓝牙连接开始的通知时刻问题
@@ -130,11 +133,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void) requestShowBluetoothPowerAlert;
 
-#pragma mark 外设(手环)列表
+#pragma mark 扫描到的外设(手环)列表
 /**
- * @brief 外设(手环)列表
+ * @brief 扫描到的外设(手环)列表
  */
-+(NSArray<FitCloudPeripheral *>*_Nonnull)peripherals;
++(NSArray<FitCloudPeripheral *>*_Nonnull)discoveredPeripherals;
 
 #pragma mark 蓝牙中心设备(Central)状态
 /**

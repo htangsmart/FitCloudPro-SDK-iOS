@@ -16,27 +16,18 @@
 /**
  * @brief UI文件编号
 */
-@property(nonatomic, readonly) UInt8 uiFileNo;
+@property(nonatomic, readonly) UInt16 uiFileNo;
 
 /**
  * @brief UI版本序号
 */
-@property(nonatomic, readonly) UInt8 uiFileVersionSeqNo;
-
-/**
- * @brief preserved
- */
-@property(nonatomic, readonly) UInt8 totalFaceCount;
+@property(nonatomic, readonly) UInt16 uiFileVersionSeqNo;
 
 /**
  * @brief 当前首页序号
 */
-@property(nonatomic, readonly) UInt8 activeFaceIndex;
+@property(nonatomic, readonly) UInt16 activeFaceIndex;
 
-/**
- * @brief preserved
-*/
-@property(nonatomic, readonly) UInt8 upgradeSupportFaceCount;
 
 @end
 

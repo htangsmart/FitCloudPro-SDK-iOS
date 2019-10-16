@@ -53,6 +53,16 @@ extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY;
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCONNECT_NOTIFY;
 
 /**
+ * @brief 外设(手环)更新名称通知 object=>CBPeripheral
+ */
+extern NSString *const FITCLOUDEVENT_PERIPHERAL_DIDUPDATENAME_NOTIFIY;
+
+/**
+ * @brief 外设(手环)更新RSSI通知 object=>CBPeripheral userInfo=>@{@"RSSI":rssi, @"error" : error}
+ */
+extern NSString *const FITCLOUDEVENT_PERIPHERAL_DIDUPDATERSSI_NOTIFIY;
+
+/**
  * @brief 开始绑定用户通知 object => @(UserId)
  */
 extern NSString *const FITCLOUDEVENT_BINDUSEROBJECT_BEGIN_NOTIFY;

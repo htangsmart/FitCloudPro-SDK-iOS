@@ -42,6 +42,24 @@
 
 ## Releases
 
+V1.1.3 Build201910160001
+
+```
+  Release Date：2019-10-16
+  Features：
+  1. New distance-calorie algorithm into the step-counting data.
+  2. Obtain the last binding time of the user support.
+  3. Settings of heart rate /blood pressure alarm value support.
+  4. Add Snapchat message reminder.
+  5. Device scanning removes device name filtering.
+  6. Real-time ecg measurement can be abort by bracelet now.
+  7. Obtain watch face ui information support now.
+  8. Add peripheral broadcast data cache, as a result, you may retrieve mac addr if you once connect the peripheral.
+  9. Add notify for peripheral name and rssi change.
+  10. Improve SDK stability.
+  11. Avoid ambiguity, rename function '+(NSArray<FitCloudPeripheral *>*_Nonnull)peripherals' to '+(NSArray<FitCloudPeripheral *>*_Nonnull)discoveredPeripherals'.
+```
+
 V1.1.3-beta.9 Build201909300001
 
 ```
