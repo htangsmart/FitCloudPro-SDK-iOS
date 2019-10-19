@@ -26,6 +26,14 @@
  
 ## Releases
 
+V1.0.5 Build201910180001
+
+```
+  Release Date：2019-10-18
+  Features：
+  1、 Fix issue that some time enter silent mode failure in watch face upgrade progress.
+```
+
 V1.0.4 Build201910160001
 
 ```
