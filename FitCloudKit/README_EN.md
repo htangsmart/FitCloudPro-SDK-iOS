@@ -42,6 +42,15 @@
 
 ## Releases
 
+V1.1.4 Build201910240001
+
+```
+  Release Date：2019-10-24
+  Features：
+  1. Real-time measurement moment modification accurate to seconds
+  2. Correct synchronization data moment so that the current synchronization time cannot be exceeded
+```
+
 V1.1.3 Build201910160001
 
 ```
