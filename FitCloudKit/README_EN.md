@@ -42,6 +42,14 @@
 
 ## Releases
 
+V1.1.5 Build201911130001
+
+```
+  Release Date：2019-11-13
+  Features：
+  1. Do Not Disturb Mode support. (only available for some of the smart watches @see allowDNDMode)
+```
+
 V1.1.4 Build201910240001
 
 ```

@@ -8,6 +8,9 @@
 //  框架名称:FitCloudKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手环的iOS框架，负责与手环设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2019-11-13  Version:1.1.5 Build:201911130001
+//                            1.新增勿扰模式(仅部分手环支持 @see allowDNDMode)
+//
 //     pcjbird    2019-10-24  Version:1.1.4 Build:201910240001
 //                            1.实时测量moment修改精确到秒
 //                            2.修正同步数据moment使得不会超过当前同步时间
@@ -479,6 +482,21 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void)getBPAlarmSettingWithBlock:(FitCloudBPAlarmResultBlock _Nullable)block;
+
+#pragma mark 勿扰模式设置
+/**
+ * @brief 勿扰模式设置
+ * @param dndSetting 勿扰模式设置
+ * @param block 结果回调
+ */
++(void)setDND:(FitCloudDNDSetting* _Nonnull)dndSetting block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取勿扰模式设置
+/**
+ * @brief 获取勿扰模式设置
+ * @param block 结果回调
+ */
++(void)getDNDSettingWithBlock:(FitCloudDNDSettingResultBlock _Nullable)block;
 
 #pragma mark 获取表盘UI信息
 /**

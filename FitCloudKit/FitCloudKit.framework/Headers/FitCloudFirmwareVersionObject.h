@@ -85,8 +85,13 @@
 @property(nonatomic, assign) BOOL allowShowAdditionalReminder;
 
 /**
-* @brief 是否支持表盘升级
+ * @brief 是否支持表盘升级
 */
 @property(nonatomic, assign) BOOL allowWatchFaceUpgrade;
+
+/**
+ * @brief 是否支持勿扰模式(Do Not Disturb Mode)
+*/
+@property(nonatomic, assign) BOOL allowDNDMode;
 
 @end

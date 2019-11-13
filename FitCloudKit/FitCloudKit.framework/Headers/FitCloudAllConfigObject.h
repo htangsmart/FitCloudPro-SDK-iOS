@@ -16,6 +16,7 @@
 #import <FitCloudKit/FitCloudWWUObject.h>
 #import <FitCloudKit/FitCloudHRAlarmObject.h>
 #import <FitCloudKit/FitCloudBPAlarmObject.h>
+#import <FitCloudKit/FitCloudDNDSetting.h>
 
 /**
  * @brief 手环所有配置信息（用于手环绑定时一次性获取）
@@ -71,10 +72,15 @@
  * @brief 心率预警设置
  */
 @property(nonatomic, strong)FitCloudHRAlarmObject* hrAlarmSetting;
-    
+
 /**
- * @brief 心率预警设置
+ * @brief 血压预警设置
  */
 @property(nonatomic, strong)FitCloudBPAlarmObject* bpAlarmSetting;
+    
+/**
+ * @brief 勿扰模式设置
+ */
+@property(nonatomic, strong)FitCloudDNDSetting* dndSetting;
 
 @end

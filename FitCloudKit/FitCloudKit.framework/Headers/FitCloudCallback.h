@@ -22,6 +22,7 @@
 #import <FitCloudKit/FitCloudHRAlarmObject.h>
 #import <FitCloudKit/FitCloudBPAlarmObject.h>
 #import <FitCloudKit/FitCloudAllConfigObject.h>
+#import <FitCloudKit/FitCloudDNDSetting.h>
 #import <FitCloudKit/FitCloudWeatherObject.h>
 #import <FitCloudKit/FitCloudECGDefines.h>
 #import <FitCloudKit/FitCloudUserProfileObject.h>
@@ -165,6 +166,14 @@ typedef void (^FitCloudBPAlarmResultBlock)(BOOL succeed, FitCloudBPAlarmObject* 
  *@param error 错误信息
  */
 typedef void (^FitCloudAllConfigWhenBindResultBlock)(BOOL succeed, FitCloudAllConfigObject* config, NSError* error);
+
+/**
+ *@brief FitCloud 获取勿扰模式设置信息调用结果回调
+ *@param succeed 是否成功
+ *@param dndSetting  勿扰模式设置信息
+ *@param error 错误信息
+ */
+typedef void (^FitCloudDNDSettingResultBlock)(BOOL succeed, FitCloudDNDSetting* dndSetting, NSError* error);
 
 /**
  *@brief FitCloud 手环向APP请求天气信息结果回调
