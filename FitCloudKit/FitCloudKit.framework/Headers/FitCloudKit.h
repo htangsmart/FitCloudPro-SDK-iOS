@@ -8,6 +8,17 @@
 //  框架名称:FitCloudKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手环的iOS框架，负责与手环设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2019-11-21  Version:1.1.6 Build:201911210001
+//                            1.修正表盘UI信息接口无法正确响应的问题
+//                            2.解绑用户后取消当前手环连接记录的自动重连
+//                            3.优化手环连接初始化过程，防止意外重连
+//                            4.调整手环硬件相关信息为只读
+//                            5.绑定用户的UserId由整型修改成字符串型
+//                            6.新增获取手环最后一次健康测量数据(心率/血氧/血压)，仅部分手环支持，@see allowRetrieveLatestMeasurementData
+//                            7.修改进入和退出固件升级模式方法，现在您在首次固件升级之前以及所有固件升级操作完成之后分别手动调用进入固件升级模式和退出固件升级模式，同时适用于普通固件升级与表盘推送
+//                            8.新增DFU模式回连成功通知，这通常用于等待表盘推送/普通固件升级之后手环重启的场景
+//                            9.提升SDK稳定性
+//
 //     pcjbird    2019-11-13  Version:1.1.5 Build:201911130001
 //                            1.新增勿扰模式(仅部分手环支持 @see allowDNDMode)
 //
@@ -244,18 +255,40 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface FitCloudKit (Upgrade)
 
+#pragma mark 当前是否为DFU模式
+/**
+ * @brief 当前是否为DFU模式
+ * @return 是否为DFU模式
+*/
++(BOOL)  isCurrentDFUMode;
+
+#pragma mark dfu外设
+/**
+ * @brief dfu外设，仅仅当处于dfu模式，且处于连接状态时有效
+ * @return dfu外设
+*/
++(CBPeripheral*)  dfuPeripheral;
+
+#pragma mark 芯片提供商
+/**
+ * @brief 当前芯片提供商
+ * @return 当前芯片提供商
+*/
++(FITCLOUDCHIPVENDOR)  chipVendor;
+
 #pragma mark 准备进入固件升级模式
 /**
  * @brief 准备进入固件升级模式
  * @param block 结果回调
  */
-+(void)prepareDFUWithBlock:(FitCloudDFUPrepareResultBlock _Nullable )block;
++(void)enterDFUModeWithBlock:(FitCloudEnterDFUModeResultBlock _Nullable )block;
 
-#pragma mark 取消固件升级Pending模式
+#pragma mark 退出固件升级模式
 /**
- * @brief 取消固件升级Pending模式
+ * @brief 退出固件升级模式
+ * @param block 结果回调
  */
-+(void)cancelDFUPendingMode;
++(void)exitDFUModeWithBlock:(FitCloudExitDFUModeResultBlock _Nullable )block;
 
 @end
 
@@ -567,7 +600,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param userId 用户Id
  * @return YES 已经绑定 NO 未绑定
  */
-+(BOOL) isUserAlreadyBound:(NSInteger)userId;
++(BOOL) isUserAlreadyBound:(NSString*)userId;
 
 #pragma mark 绑定用户
 /**
@@ -576,7 +609,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param bAbort 如果已经存在绑定用户是否终止，当为FALSE时，自动先解绑并绑定新的用户
  * @param block 结果回调
  */
-+(void)bindUserObject:(NSInteger)userId abortIfExist:(BOOL)bAbort block:(FitCloudResultBlock _Nullable )block;
++(void)bindUserObject:(NSString*)userId abortIfExist:(BOOL)bAbort block:(FitCloudResultBlock _Nullable )block;
 
 #pragma mark 最后绑定时间
 /**
@@ -599,6 +632,13 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief FitCloudKit Sports Module
  */
 @interface FitCloudKit (Sports)
+
+#pragma mark 请求最新的健康测量数据
+/**
+ * @brief 请求最新的健康测量数据
+ * @param block 结果回调
+ */
++(void) requestLatestHealthMeasurementDataWithBlock:(FitCloudLatestHealthMeasurementDataResultBlock _Nullable )block;
 
 #pragma mark 请求当天运动健康数据信息
 /**

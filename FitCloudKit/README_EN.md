@@ -42,6 +42,22 @@
 
 ## Releases
 
+V1.1.6 Build201911210001
+
+```
+  Release Date：2019-11-21
+  Features：
+  1. Correct the problem that the UI information interface of the watchface does not respond correctly.
+  2. After unbinding the user object, cancel the automatic reconnection of the current Bracelet connection record.
+  3. Optimize the initialization process of bracelet connection to prevent accidental reconnection.
+  4. Adjust the information related to the bracelet firmware to read-only.
+  5. The userid of the bound user is changed from integer type to string type.
+  6. Add method to obtain the lastest health measurement data (bpm / SpO2 / BP), which is only supported by some of the bracelets, @ see allowRetrieveLatestMeasurementData
+  7. Modify the method of entering and exiting the DFU mode. Now you should manually invoke entering and exiting the DFU mode before the first DFU also after all the DFU operations completed. It is also applicable to common DFU and watchface push.
+  8. Add reconnection notification in DFU Mode, which is usually used in the scenario of waiting for the bracelet to restart after the watchface push / common DFU.
+  9. Improve SDK stability
+```
+
 V1.1.5 Build201911130001
 
 ```

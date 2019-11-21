@@ -29,7 +29,7 @@
 #import <FitCloudKit/FitCloudHealthSportsObject.h>
 #import <FitCloudKit/FitCloudPeripheral.h>
 #import <FitCloudKit/FitCloudFaceUIInfo.h>
-
+#import <FitCloudKit/FitCloudLatestHealthMeasurementDataObject.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -47,13 +47,20 @@ typedef void (^FitCloudResultBlock)(BOOL succeed, NSError* error);
 typedef void (^FitCloudObjectResultBlock)(BOOL succeed, id val, NSError* error);
 
 /**
- *@brief FitCloud准备进入DFU模式结果回调
- *@param allowDFU 是否允许进入DFU
+ *@brief FitCloud进入DFU模式结果回调
+ *@param succeed 是否成功进入DFU
  *@param dfuPeripheral dfu蓝牙外设
  *@param chipVendor  蓝牙外设芯片供应商
  *@param error 错误信息
  */
-typedef void (^FitCloudDFUPrepareResultBlock)(BOOL allowDFU, CBPeripheral* dfuPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError* error);
+typedef void (^FitCloudEnterDFUModeResultBlock)(BOOL succeed, CBPeripheral* dfuPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError* error);
+
+/**
+ *@brief FitCloud退出DFU模式结果回调
+ *@param succeed 是否成功进入DFU
+ *@param error 错误信息
+ */
+typedef void (^FitCloudExitDFUModeResultBlock)(BOOL succeed, NSError* error);
 
 /**
  *@brief FitCloud 获取闹钟列表调用结果回调
@@ -205,7 +212,7 @@ typedef void (^FitCloudDataManualSyncProgress)(CGFloat progress, NSString* tip);
  *@param records 记录集合
  *@param error 错误信息
  */
-typedef void (^FitCloudDataManualSyncResultBlock)(BOOL succeed, NSInteger userId, NSArray<FitCloudManualSyncRecordObject*>*records, NSError* error);
+typedef void (^FitCloudDataManualSyncResultBlock)(BOOL succeed, NSString* userId, NSArray<FitCloudManualSyncRecordObject*>*records, NSError* error);
 
 /**
  *@brief FitCloud 请求当日运动健康数据调用结果回调
@@ -214,7 +221,7 @@ typedef void (^FitCloudDataManualSyncResultBlock)(BOOL succeed, NSInteger userId
  *@param dataObject 当日运动健康数据
  *@param error 错误信息
  */
-typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, NSInteger userId, FitCloudDailyHealthAndSportsDataObject* dataObject, NSError* error);
+typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, NSString* userId, FitCloudDailyHealthAndSportsDataObject* dataObject, NSError* error);
 
 /**
  * @brief FitCloud 请求表盘UI信息结果回调
@@ -223,6 +230,14 @@ typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, NSInte
  * @param error 错误信息
  */
 typedef void (^FitCloudFaceUIInfoResultBlock)(BOOL succeed, FitCloudFaceUIInfo* faceUI, NSError* error);
+
+/**
+ * @brief FitCloud 请求最新的测量数据结果回调
+ * @param succeed 是否成功
+ * @param dataObject 最新的测量数据
+ * @param error 错误信息
+ */
+typedef void (^FitCloudLatestHealthMeasurementDataResultBlock)(BOOL succeed, FitCloudLatestHealthMeasurementDataObject* dataObject, NSError* error);
 
 /**
  *@brief FitCloudKit 回调协议

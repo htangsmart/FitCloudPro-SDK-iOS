@@ -43,6 +43,11 @@ extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECTING_NOTIFY;
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECTED_NOTIFY;
 
 /**
+ * @brief 外设(手环)DFU模式回连成功通知 object=>CBPeripheral
+ */
+extern NSString *const FITCLOUDEVENT_PERIPHERAL_RECONNECTEDWITHDFUMODE_NOTIFY;
+
+/**
  * @brief 外设(手环)连接失败通知 object=>CBPeripheral userInfo=>@{@"error" : error}
  */
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY;

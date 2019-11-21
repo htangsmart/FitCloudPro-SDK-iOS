@@ -26,6 +26,15 @@
  
 ## Releases
 
+V1.0.6 Build201911210001
+
+```
+  Release Date：2019-11-21
+  Features：
+  1、 Support the DFU of peripheral devices in non connected state.
+  2、 Improve the reliability of the DFU process.
+```
+
 V1.0.5 Build201910180001
 
 ```

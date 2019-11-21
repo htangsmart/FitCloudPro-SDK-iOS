@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
-* @brief 勿扰模式设置（Do Not Disturb Mode Setting）
+ * @brief 勿扰模式设置（Do Not Disturb Mode Setting）
 */
 @interface FitCloudDNDSetting : NSObject<NSCoding>
 
