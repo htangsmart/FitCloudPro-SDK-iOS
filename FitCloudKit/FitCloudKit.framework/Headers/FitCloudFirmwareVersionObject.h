@@ -104,4 +104,14 @@
 */
 @property(nonatomic, readonly) BOOL allowTP;
 
+/**
+ * @brief 是否使用新的睡眠数据格式
+*/
+@property(nonatomic, readonly) BOOL newSleepDataFormat;
+
+/**
+ * @brief 是否为假心电
+*/
+@property(nonatomic, readonly) BOOL isFakeECG;
+
 @end

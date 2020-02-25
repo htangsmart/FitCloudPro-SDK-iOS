@@ -68,6 +68,11 @@ extern NSString *const FITCLOUDEVENT_PERIPHERAL_DIDUPDATENAME_NOTIFIY;
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DIDUPDATERSSI_NOTIFIY;
 
 /**
+* @brief 外设(手环)写特征准备就绪通知 object=>CBPeripheral
+*/
+extern NSString *const FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY;
+
+/**
  * @brief 开始绑定用户通知 object => @(UserId)
  */
 extern NSString *const FITCLOUDEVENT_BINDUSEROBJECT_BEGIN_NOTIFY;
@@ -96,6 +101,11 @@ extern NSString *const FITCLOUDEVENT_LOGINUSEROBJECT_BEGIN_NOTIFY;
  * @brief 用户对象登录结果通知 object => @(UserId) userInfo=>{@"result":@(YES/NO), @"error" : error}
  */
 extern NSString *const FITCLOUDEVENT_LOGINUSEROBJECT_RESULT_NOTIFY;
+
+/**
+* @brief 手环被其他手机绑定或者已被解绑通知(maybe bound by different userid)
+*/
+extern NSString *const FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY;
 
 /**
  * @brief 开始获取手环所有配置通知
@@ -146,5 +156,10 @@ extern NSString *const FITCLOUDEVENT_ECG_START_FAILURE_NOTIFY;
  * @brief 心电检测结束通知
  */
 extern NSString *const FITCLOUDEVENT_ECG_STOP_NOTIFY;
+
+/**
+ * @brief 手表端人为更改配置（例如：抬腕唤醒开关，通知开关等）通知
+ */
+extern NSString *const FITCLOUDEVENT_WATCHCONFIG_REMOTE_MANUAL_CHANGED_NOTIFY;
 
 #endif /* FitCloudEvent_h */

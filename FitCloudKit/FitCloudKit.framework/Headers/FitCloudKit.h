@@ -6,21 +6,35 @@
 //  Copyright © 2018年 Zero Status. All rights reserved.
 //
 //  框架名称:FitCloudKit.framework
-//  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手环的iOS框架，负责与手环设备通信等功能的封装。
+//  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手表的iOS框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2020-02-25  Version:1.1.7 Build:202002250001
+//                            1.新增斯洛伐克语
+//                            2.修正手表返回的睡眠数据睡眠质量可能为非法值的情况
+//                            3.取消自动解绑逻辑,新增手表被其他手机终端绑定或已经被解绑通知 @see FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY
+//                            4.所有回调以及通知均改成在 Gloal Queue 中调用，如果要在回调或者通知中更新UI，请务必切换到主队列(Main Queue)
+//                            5.外部调用 disconnect 将不会自动回连
+//                            6.新增 FITCLOUDUSERBINDSTATUS_KICKEDOUT 用户绑定状态
+//                            7.新增 FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY 通知
+//                            8.新增支持新的睡眠格式 @see newSleepDataFormat
+//                            9.日志信息支持查看较大数据包的完整数据
+//                            10.手表端主动更改了开关设置(例如：抬腕唤醒开关，通知开关等)会适时更新到App端 @see FITCLOUDEVENT_WATCHCONFIG_REMOTE_MANUAL_CHANGED_NOTIFY
+//                            11.表盘信息获取方法修改
+//                            12.其他一些改进
+//
 //     pcjbird    2019-11-21  Version:1.1.6 Build:201911210001
 //                            1.修正表盘UI信息接口无法正确响应的问题
-//                            2.解绑用户后取消当前手环连接记录的自动重连
-//                            3.优化手环连接初始化过程，防止意外重连
-//                            4.调整手环硬件相关信息为只读
+//                            2.解绑用户后取消当前手表连接记录的自动重连
+//                            3.优化手表连接初始化过程，防止意外重连
+//                            4.调整手表硬件相关信息为只读
 //                            5.绑定用户的UserId由整型修改成字符串型
-//                            6.新增获取手环最后一次健康测量数据(心率/血氧/血压)，仅部分手环支持，@see allowRetrieveLatestMeasurementData
+//                            6.新增获取手表最后一次健康测量数据(心率/血氧/血压)，仅部分手表支持，@see allowRetrieveLatestMeasurementData
 //                            7.修改进入和退出固件升级模式方法，现在您在首次固件升级之前以及所有固件升级操作完成之后分别手动调用进入固件升级模式和退出固件升级模式，同时适用于普通固件升级与表盘推送
-//                            8.新增DFU模式回连成功通知，这通常用于等待表盘推送/普通固件升级之后手环重启的场景
+//                            8.新增DFU模式回连成功通知，这通常用于等待表盘推送/普通固件升级之后手表重启的场景
 //                            9.提升SDK稳定性
 //
 //     pcjbird    2019-11-13  Version:1.1.5 Build:201911130001
-//                            1.新增勿扰模式(仅部分手环支持 @see allowDNDMode)
+//                            1.新增勿扰模式(仅部分手表支持 @see allowDNDMode)
 //
 //     pcjbird    2019-10-24  Version:1.1.4 Build:201910240001
 //                            1.实时测量moment修改精确到秒
@@ -32,9 +46,9 @@
 //                            3.新增心率报警/血压报警设置
 //                            4.新增Snapchat消息提醒选项
 //                            5.设备扫描取消设备名称过滤
-//                            6.心电实时测量新增手环主动结束逻辑
+//                            6.心电实时测量新增手表主动结束逻辑
 //                            7.新增获取表盘UI信息接口
-//                            8.新增获取手环广播数据缓存
+//                            8.新增获取手表广播数据缓存
 //                            9.新增蓝牙名称变更通知，新增蓝牙RSSI变更通知
 //                            10.提升SDK稳定性
 //                            11.避免歧义，+(NSArray<FitCloudPeripheral *>*_Nonnull)peripherals 修改为  +(NSArray<FitCloudPeripheral *>*_Nonnull)discoveredPeripherals
@@ -43,7 +57,7 @@
 //                            1.修正蓝牙连接开始的通知时刻问题
 //
 //     pcjbird    2019-08-19  Version:1.1.1 Build:201908190001
-//                            1.修正手环解绑没有清除上一次绑定手环的Mac地址的问题
+//                            1.修正手表解绑没有清除上一次绑定手表的Mac地址的问题
 //                            2.新增绑定/登录成功后需要完成一些基础准备同步操作的开始与结束通知
 //                            3.修正SDK初始化选项shouldAutoConnect不起作用的问题
 //
@@ -54,8 +68,8 @@
 //                            1.支持获取当前SDK版本信息
 //
 //     pcjbird    2019-07-20  Version:1.0.8 Build:201907200001
-//                            1.修正iPhone日历设置成佛教日历或者日本日历的时候导致手环同步时间失败的问题
-//                            2.优化手环回连机制
+//                            1.修正iPhone日历设置成佛教日历或者日本日历的时候导致手表同步时间失败的问题
+//                            2.优化手表回连机制
 //
 //     pcjbird    2019-06-28  Version:1.0.7 Build:201906280001
 //                            1.修正无法获取消息通知设置的一些问题
@@ -67,7 +81,7 @@
 //                            1.修改支持设置运动目标
 //
 //     pcjbird    2019-05-17  Version:1.0.4 Build:201905170001
-//                            1.增加手环支持的语种
+//                            1.增加手表支持的语种
 //
 //     pcjbird    2019-05-01  Version:1.0.3 Build:201905010001
 //                            1.首次发布SDK版本
@@ -85,7 +99,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * @brief FitCloud健康手环iOS框架
+ * @brief FitCloud健康手表iOS框架
  */
 @interface FitCloudKit : NSObject
 
@@ -107,23 +121,23 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * @brief 初始化
  * @param option 选项, 传nil则使用默认选项
- * @param callback 回调类，主要用于接受处理手环的请求命令或事件
+ * @param callback 回调类，主要用于接受处理手表的请求命令或事件
  */
 +(instancetype _Nonnull)initWithOption:(FitCloudOption* _Nullable)option callback:(id<FitCloudCallback> _Nullable)callback;
 
 /**
- * @brief 扫描手环设备
+ * @brief 扫描手表设备
  */
 +(void)scanPeripherals;
 
 /**
- * @brief 停止扫描手环设备
+ * @brief 停止扫描手表设备
  */
 +(void)stopScan;
 
 /**
- * @brief 连接手环设备
- * @param peripheral 手环设备
+ * @brief 连接手表设备
+ * @param peripheral 手表设备
  */
 +(void)connect:(CBPeripheral * _Nonnull )peripheral;
 
@@ -151,9 +165,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void) requestShowBluetoothPowerAlert;
 
-#pragma mark 扫描到的外设(手环)列表
+#pragma mark 扫描到的外设(手表)列表
 /**
- * @brief 扫描到的外设(手环)列表
+ * @brief 扫描到的外设(手表)列表
  */
 +(NSArray<FitCloudPeripheral *>*_Nonnull)discoveredPeripherals;
 
@@ -199,52 +213,52 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(FITCLOUDUSERBINDSTATUS) userBindStatus;
 
-#pragma mark 手环Mac地址
+#pragma mark 手表Mac地址
 /**
- * @brief 手环Mac地址
+ * @brief 手表Mac地址
  */
 +(NSString*_Nullable) macAddr;
 
-#pragma mark 手环当前所有配置信息
+#pragma mark 手表当前所有配置信息
 /**
- * @brief 手环当前所有配置信息
+ * @brief 手表当前所有配置信息
  */
 +(FitCloudAllConfigObject*_Nullable) allConfig;
 
 
-#pragma mark 手环当前电量信息
+#pragma mark 手表当前电量信息
 /**
- * @brief 手环当前电量信息
+ * @brief 手表当前电量信息
  */
 +(FitCloudBatteryInfoObject*_Nullable) batteryInfo;
 
-#pragma mark 手环闹钟列表
+#pragma mark 手表闹钟列表
 /**
- * @brief 手环闹钟列表
+ * @brief 手表闹钟列表
  */
 +(NSArray<FitCloudAlarmObject*>*_Nullable) alarmlist;
 
-#pragma mark 最后连接的手环信息
+#pragma mark 最后连接的手表信息
 /**
- * @brief 最后连接的手环信息
+ * @brief 最后连接的手表信息
  */
 +(FitCloudKitConnectRecord*_Nullable) lastConnectPeripheral;
 
-#pragma mark 手环连接历史
+#pragma mark 手表连接历史
 /**
- * @brief 手环连接历史
+ * @brief 手表连接历史
  */
 +(NSArray<FitCloudKitConnectRecord*>*_Nonnull) historyPeripherals;
 
-#pragma mark 删除手环连接历史
+#pragma mark 删除手表连接历史
 /**
- * @brief 删除手环连接历史
+ * @brief 删除手表连接历史
  */
 +(void)removePeripheralHistoryWithUUID:(NSString*_Nonnull) uuid;
 
-#pragma mark 清除手环连接历史
+#pragma mark 清除手表连接历史
 /**
- * @brief 清除手环连接历史
+ * @brief 清除手表连接历史
  */
 +(void)clearPeripheralHistory;
 
@@ -299,7 +313,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 同步系统时间
 /**
- * @brief 同步系统时间（将手环的时间同步成跟手机的系统时间一致）
+ * @brief 同步系统时间（将手表的时间同步成跟手机的系统时间一致）
  * @param block 同步结果回调
  */
 +(void)syncSystemTimeWithBlock:(FitCloudResultBlock _Nullable )block;
@@ -314,7 +328,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 设置闹钟列表
 /**
- * @brief 设置闹钟（将手机上的闹钟列表同步到手环）
+ * @brief 设置闹钟（将手机上的闹钟列表同步到手表）
  * @param alarms 闹钟列表
  * @param block 结果回调
  */
@@ -322,7 +336,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 获取闹钟列表
 /**
- * @brief 获取闹钟列表（获取手环上的闹钟列表）
+ * @brief 获取闹钟列表（获取手表上的闹钟列表）
  * @param block 结果回调
  */
 +(void)getAlarmsWithBlock:(FitCloudAlarmsResultBlock _Nullable )block;
@@ -346,9 +360,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void)setDailyGoalWithStepCount:(UInt32) stepcount distance:(UInt32)distance calory:(UInt32)calory block:(FitCloudResultBlock _Nullable )block;
 
-#pragma mark 获取手环软硬件版本信息
+#pragma mark 获取手表软硬件版本信息
 /**
- * @brief 获取手环软硬件版本信息
+ * @brief 获取手表软硬件版本信息
  * @param block 结果回调
  */
 +(void)getFirmwareVersionWithBlock:(FitCloudFirmwareVersionResultBlock _Nullable )block;
@@ -368,46 +382,46 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void)getMessageNotificationSettingWithBlock:(FitCloudMNSettingResultBlock _Nullable )block;
 
-#pragma mark 设置手环表盘所有功能项显示状态
+#pragma mark 设置手表表盘所有功能项显示状态
 /**
- * @brief 设置手环表盘所有功能项显示状态
- * @param display 手环表盘所有功能项显示状态信息
+ * @brief 设置手表表盘所有功能项显示状态
+ * @param display 手表表盘所有功能项显示状态信息
  * @param block 结果回调
  */
 +(void)setScreenDisplay:(FITCLOUDSCREENDISPLAY)display block:(FitCloudResultBlock _Nullable )block;
 
-#pragma mark 获取手环表盘所有功能项显示状态
+#pragma mark 获取手表表盘所有功能项显示状态
 /**
- * @brief 获取手环表盘所有功能项显示状态
+ * @brief 获取手表表盘所有功能项显示状态
  * @param block 结果回调
  */
 +(void)getScreenDisplaySettingWithBlock:(FitCloudSDSettingResultBlock _Nullable )block;
 
-#pragma mark 设置手环偏好
+#pragma mark 设置手表偏好
 /**
- * @brief 设置手环偏好
- * @param prefer 手环偏好
+ * @brief 设置手表偏好
+ * @param prefer 手表偏好
  * @param block 结果回调
  */
 +(void)setFitCloudPrefer:(FITCLOUDPREFER)prefer block:(FitCloudResultBlock _Nullable )block;
 
-#pragma mark 获取手环偏好设置
+#pragma mark 获取手表偏好设置
 /**
- * @brief 获取手环偏好设置
+ * @brief 获取手表偏好设置
  * @param block 结果回调
  */
 +(void)getFitCloudPreferWithBlock:(FitCloudPreferResultBlock _Nullable )block;
 
-#pragma mark 获取手环电量以及充电状态信息
+#pragma mark 获取手表电量以及充电状态信息
 /**
- * @brief 获取手环电量以及充电状态信息
+ * @brief 获取手表电量以及充电状态信息
  * @param block 结果回调
  */
 +(void)getBatteryInfoWithBlock:(FitCloudBatteryInfoResultBlock _Nullable )block;
 
-#pragma mark 如果空闲则请求更新手环电量信息
+#pragma mark 如果空闲则请求更新手表电量信息
 /**
- * @brief 如果空闲则请求更新手环电量信息
+ * @brief 如果空闲则请求更新手表电量信息
  */
 +(void) requestUpdateBatteryInfoIfIdle;
 
@@ -536,7 +550,7 @@ NS_ASSUME_NONNULL_BEGIN
 * @brief 获取表盘UI信息
 * @param block 结果回调
 */
-+(void)getFaceUIInformationWithBlock:(FitCloudFaceUIInfoResultBlock _Nullable)block;
++(void)getWatchfaceUIInformationWithBlock:(FitCloudWatchfaceUIInfoResultBlock _Nullable)block;
 
 
 #pragma mark APP主动点击退出睡眠
@@ -548,14 +562,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 同步系统语言
 /**
-* @brief 同步系统语言（将手环的时间同步成跟手机的系统语言一致）
+* @brief 同步系统语言（将手表的时间同步成跟手机的系统语言一致）
 * @param block 同步结果回调
 */
 +(void)syncSystemLanguageWithBlock:(FitCloudResultBlock _Nullable )block;
 
-#pragma mark 查找手环 (查找成功则手环会震动或发出提醒声)
+#pragma mark 查找手表 (查找成功则手表会震动或发出提醒声)
 /**
- * @brief 查找手环 (查找成功则手环会震动或发出提醒声)
+ * @brief 查找手表 (查找成功则手表会震动或发出提醒声)
  * @param block 结果回调
  */
 +(void)findBraceletWithBlock:(FitCloudResultBlock _Nullable )block;
@@ -567,16 +581,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void)restoreAsFactorySettingsWithBlock:(FitCloudResultBlock _Nullable )block;
 
-#pragma mark 手环关机
+#pragma mark 手表关机
 /**
- * @brief 手环关机
+ * @brief 手表关机
  * @param block 结果回调
  */
 +(void)turnOffWithBlock:(FitCloudResultBlock _Nullable )block;
 
-#pragma mark 重启手环
+#pragma mark 重启手表
 /**
- * @brief 重启手环
+ * @brief 重启手表
  * @param block 结果回调
  */
 +(void)rebootWithBlock:(FitCloudResultBlock _Nullable )block;
@@ -670,9 +684,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface FitCloudKit (RemoteCtrl)
 
-#pragma mark APP通知手环当前APP的相机状态（前台/后台）
+#pragma mark APP通知手表当前APP的相机状态（前台/后台）
 /**
- * @brief APP通知手环当前APP的相机状态（前台/后台）
+ * @brief APP通知手表当前APP的相机状态（前台/后台）
  * @param state APP相机状态（前台/后台）
  * @param block 结果回调
  */

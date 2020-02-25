@@ -28,7 +28,7 @@
 #import <FitCloudKit/FitCloudUserProfileObject.h>
 #import <FitCloudKit/FitCloudHealthSportsObject.h>
 #import <FitCloudKit/FitCloudPeripheral.h>
-#import <FitCloudKit/FitCloudFaceUIInfo.h>
+#import <FitCloudKit/FitCloudWatchfaceUIInfo.h>
 #import <FitCloudKit/FitCloudLatestHealthMeasurementDataObject.h>
 
 /**
@@ -229,7 +229,7 @@ typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, NSStri
  * @param faceUI 表盘UI信息
  * @param error 错误信息
  */
-typedef void (^FitCloudFaceUIInfoResultBlock)(BOOL succeed, FitCloudFaceUIInfo* faceUI, NSError* error);
+typedef void (^FitCloudWatchfaceUIInfoResultBlock)(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error);
 
 /**
  * @brief FitCloud 请求最新的测量数据结果回调
