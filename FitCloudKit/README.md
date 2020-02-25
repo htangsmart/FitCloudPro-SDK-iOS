@@ -43,6 +43,25 @@
 
 ## 版本 / Releases
 
+版本V1.1.7 Build202002250001
+
+```
+  发布日期：2020年02月25日
+  功能更新：
+  1.新增斯洛伐克语
+  2.修正手表返回的睡眠数据睡眠质量可能为非法值的情况
+  3.取消自动解绑逻辑,新增手表被其他手机终端绑定或已经被解绑通知 @see FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY
+  4.所有回调以及通知均改成在 Gloal Queue 中调用，如果要在回调或者通知中更新UI，请务必切换到主队列(Main Queue)
+  5.外部调用 disconnect 将不会自动回连
+  6.新增 FITCLOUDUSERBINDSTATUS_KICKEDOUT 用户绑定状态
+  7.新增 FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY 通知
+  8.新增支持新的睡眠格式 @see newSleepDataFormat
+  9.日志信息支持查看较大数据包的完整数据
+  10.手表端主动更改了开关设置(例如：抬腕唤醒开关，通知开关等)会适时更新到App端 @see FITCLOUDEVENT_WATCHCONFIG_REMOTE_MANUAL_CHANGED_NOTIFY
+  11.表盘信息获取方法修改
+  12.其他一些改进
+```
+
 版本V1.1.6 Build201911210001
 
 ```

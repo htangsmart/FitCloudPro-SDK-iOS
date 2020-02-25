@@ -40,7 +40,27 @@
 
 9. Safety check before entering DFU mode (ensure the bracelet has sufficient power);
 
+
 ## Releases
+
+V1.1.7 Build202002250001
+
+```
+  Release Date：2020-02-25
+  Features：
+  1. New language Slovak supported for the smart watch.
+  2. Correct the sleep quality data returned by the smart watch which may be illegal.
+  3. Cancel automatic unbinding from the smart watch, and add new notification of bound by other mobile phone or the smart watch already unbinded, @see FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY.
+  4. All blocks or callbacks now are changed to be invoked at Global Queue. If you'd like to update UI at the blocks or callbacks, make sure to switch to the main queue (Main Queue).
+  5. The smart watch disconnect invoked by the app now will not automatically reconnect back.
+  6. Add new user bind status FITCLOUDUSERBINDSTATUS_KICKEDOUT.
+  7. Add new notification of FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY.
+  8. Add new sleep data format, @see newSleepDataFormat.
+  9. Log data information improvment.
+  10.Add new notification of FITCLOUDEVENT_WATCHCONFIG_REMOTE_MANUAL_CHANGED_NOTIFY.
+  11.The smart watch dial info retrieve invoke method changed now.
+  12.Other improvements.
+```
 
 V1.1.6 Build201911210001
 

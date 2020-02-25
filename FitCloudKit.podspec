@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
     s.name             = "FitCloudKit"
     s.version          = "1.1.7"
-    s.summary          = "和唐公司手环SDK。"
+    s.summary          = "和唐公司智能手表SDK。"
     s.description      = <<-DESC
-    iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手环的iOS框架，负责与手环设备通信等功能的封装。
+    iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手表的iOS框架，负责与手环设备通信等功能的封装。
     DESC
     s.homepage         = "https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/#{s.version}/FitCloudKit"
     s.license          = 'MIT'
