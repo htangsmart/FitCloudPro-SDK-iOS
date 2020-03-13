@@ -27,6 +27,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR)
     FITCLOUDKITERROR_BADCMDPACKET = 20003,                  //非法的命令数据包，或格式不正确
     FITCLOUDKITERROR_CMDEXECTIMEOUT = 20004,                //发送给手环的命令执行超时
     FITCLOUDKITERROR_CMDCALLBACKINVALID = 20005,            //手环命令响应格式不正确
+    FITCLOUDKITERROR_UNKNOWNDISCONNECTWHENCMDEXEC = 20006,  //准备执行手表命令时，发现手表意外已经断开连接
     FITCLOUDKITERROR_NOTCONNECTED = 20020,                  //尚未连接到手环设备
     FITCLOUDKITERROR_BADWRITECHARACTERISTIC = 20021,        //错误的Characteristic(写)
     FITCLOUDKITERROR_COMMUNICATIONNOTREADY = 20022,         //手环初始化尚未完成，尚不能发送通信命令
