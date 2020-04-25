@@ -30,6 +30,7 @@
 #import <FitCloudKit/FitCloudPeripheral.h>
 #import <FitCloudKit/FitCloudWatchfaceUIInfo.h>
 #import <FitCloudKit/FitCloudLatestHealthMeasurementDataObject.h>
+#import <FitCloudKit/FitCloudContactObject.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -69,6 +70,15 @@ typedef void (^FitCloudExitDFUModeResultBlock)(BOOL succeed, NSError* error);
  *@param error 错误信息
  */
 typedef void (^FitCloudAlarmsResultBlock)(BOOL succeed, NSArray<FitCloudAlarmObject*>*list, NSError* error);
+
+
+/**
+ *@brief FitCloud 获取常用联系人列表调用结果回调
+ *@param succeed 是否成功
+ *@param list 常用联系人列表
+ *@param error 错误信息
+ */
+typedef void (^FitCloudFavContactsResultBlock)(BOOL succeed, NSArray<FitCloudContactObject*>*list, NSError* error);
 
 /**
  *@brief FitCloud 获取手环软硬件版本信息调用结果回调

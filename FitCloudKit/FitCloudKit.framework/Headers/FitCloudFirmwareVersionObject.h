@@ -114,4 +114,9 @@
 */
 @property(nonatomic, readonly) BOOL isFakeECG;
 
+/**
+ * @brief 是否支持常用联系人
+*/
+@property(nonatomic, readonly) BOOL allowFavContacts;
+
 @end

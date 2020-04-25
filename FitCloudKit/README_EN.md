@@ -456,6 +456,12 @@ see detail comments in `<FitCloudKit/FitCloudKit.h>` header file.
 
 ## FAQ
 
+>Q: What is the FitCloudKit main invoke process？
+>
+>A: As the following:
+
+![invoke help en](media/invoke_help_en.png)
+
 >Q: How to determine whether the current bracelet supports specific hardware functions, for example, how to determine whether it is a bracelet with ecg function?
 >
 >A: You can get the current functions supported by the bracelet according to the information provided by the firmware, such as: whether the bracelet has heart rate/blood oxygen/blood pressure/breathing frequency/weather forecast/ecg/whether it supports sports mode/whether it supports WeChat sports/whether it needs to use the new firmware upgrade platform/whether it supports dynamic heart rate, etc.

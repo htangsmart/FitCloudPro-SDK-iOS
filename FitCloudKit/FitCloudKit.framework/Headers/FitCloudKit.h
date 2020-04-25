@@ -8,12 +8,16 @@
 //  框架名称:FitCloudKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手表的iOS框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2020-03-14  Version:1.1.8 Build:202003140002
+//     pcjbird    2020-04-25  Version:1.1.8 Build:202004250001
 //                            1.修正解绑有可能出现未断开连接的问题
 //                            2.修正在自动登录过程中手表断开连接有可能导致提示手表被其他手机终端绑定或已经被解绑的问题
 //                            3.修正当命令执行超时的情况下会丢掉下一条待执行的命令的问题
 //                            4.修正同步数据量较大的健康数据时可能导致超时的问题
 //                            5.解绑后清除电量信息
+//                            6.支持常用联系人，仅部分手表支持
+//                            7.手表运动模式新增椭圆机/瑜伽/乒乓球/跳绳等运动
+//                            8.修正心电启动失败时逻辑处理不正确的问题
+//                            9.修正连接手表超时不执行连接超时逻辑的问题
 //
 //     pcjbird    2020-02-25  Version:1.1.7 Build:202002250001
 //                            1.新增斯洛伐克语
@@ -245,6 +249,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(NSArray<FitCloudAlarmObject*>*_Nullable) alarmlist;
 
+#pragma mark 手表常用联系人列表
+/**
+ * @brief 手表常用联系人列表
+ */
++(NSArray<FitCloudContactObject*>*_Nullable) favoriteContacts;
+
 #pragma mark 最后连接的手表信息
 /**
  * @brief 最后连接的手表信息
@@ -347,6 +357,21 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void)getAlarmsWithBlock:(FitCloudAlarmsResultBlock _Nullable )block;
+
+#pragma mark 设置常用联系人
+/**
+* @brief 设置常用联系人（将手机上的常用联系人列表同步到手表）
+* @param contacts 常用联系人列表
+* @param block 结果回调
+*/
++(void) setFavContacts:(NSArray<FitCloudContactObject*>*_Nullable)contacts block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取常用联系人
+/**
+* @brief 获取常用联系人列表（获取手表上的常用联系人列表）
+* @param block 结果回调
+*/
++(void) getFavContactsWithBlock:(FitCloudFavContactsResultBlock _Nullable)block;
 
 #pragma  mark 设置User Profile
 /**

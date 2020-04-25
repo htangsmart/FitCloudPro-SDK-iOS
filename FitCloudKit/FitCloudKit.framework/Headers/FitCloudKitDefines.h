@@ -50,6 +50,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR)
     FITCLOUDKITERROR_DFUNOTALLOWFORBATTERYLOW = 60001,       //当前不允许进入DFU模式，手环电量过低
     FITCLOUDKITERROR_ALREADYINDFUMODE = 60002,               //当前已经是DFU模式
     FITCLOUDKITERROR_NOTDFUMODE = 60003,                     //当前不是DFU模式
+    FITCLOUDKITERROR_FAVCONTACTSREACHMAX = 70001,            //常用联系人数量达到最大值，最多支持设定10个常用联系人
+    FITCLOUDKITERROR_FAVCONTACTSNOTSUPPORT = 70002,          //当前手表不支持常用联系人
 };
 
 #pragma mark - 日志等级
@@ -337,6 +339,22 @@ typedef NS_ENUM(UInt16, FITCLOUDSPORTSTYPE)
     FITCLOUDSPORTSTYPE_FOOTBALL_BRACELETAPP = 0x22,                  //足球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
     FITCLOUDSPORTSTYPE_FOOTBALL_APPONLY = 0x23,                      //足球 APP单独
     FITCLOUDSPORTSTYPE_FOOTBALL_APPBRACELET = 0x24,                  //足球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_ELLIPTICALMACHINE_BRACELETONLY = 0x25,        //椭圆机 手环单独
+    FITCLOUDSPORTSTYPE_ELLIPTICALMACHINE_BRACELETAPP = 0x26,         //椭圆机 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_ELLIPTICALMACHINE_APPONLY = 0x27,             //椭圆机 APP单独
+    FITCLOUDSPORTSTYPE_ELLIPTICALMACHINE_APPBRACELET = 0x28,         //椭圆机 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_YOGA_BRACELETONLY = 0x29,                     //瑜伽 手环单独
+    FITCLOUDSPORTSTYPE_YOGA_BRACELETAPP = 0x2a,                      //瑜伽 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_YOGA_APPONLY = 0x2b,                          //瑜伽 APP单独
+    FITCLOUDSPORTSTYPE_YOGA_APPBRACELET = 0x2c,                      //瑜伽 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_PINGPONG_BRACELETONLY = 0x2d,                 //乒乓球 手环单独
+    FITCLOUDSPORTSTYPE_PINGPONG_BRACELETAPP = 0x2e,                  //乒乓球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_PINGPONG_APPONLY = 0x2f,                      //乒乓球 APP单独
+    FITCLOUDSPORTSTYPE_PINGPONG_APPBRACELET = 0x30,                  //乒乓球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_ROPESKIPPING_BRACELETONLY = 0x31,             //跳绳 手环单独
+    FITCLOUDSPORTSTYPE_ROPESKIPPING_BRACELETAPP = 0x32,              //跳绳 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_ROPESKIPPING_APPONLY = 0x33,                  //跳绳 APP单独
+    FITCLOUDSPORTSTYPE_ROPESKIPPING_APPBRACELET = 0x34,              //跳绳 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
 };
 
 #pragma mark - APP相机控制相关
