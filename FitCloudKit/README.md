@@ -457,7 +457,7 @@ param.maxMeasuringMinutes = 1;
 
 >Q: FitCloudKit 主干调用流程是什么？
 >
->A: 如下图所示
+>A: 如下图所示：
 
 ![invoke help cn](media/invoke_help_cn.png)
 
