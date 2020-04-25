@@ -3,12 +3,12 @@
 ## Summary
 * What is FitCloudKit?
 
-  >###### iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet.
+  >###### iOS framework for FitCloud Smartwatch, which is responsible for the communication with watch.
 
 * Scope
 
   ```
-  Partners who need to customize their own iOS smart bracelet APP.
+  Partners who need to customize their own iOS smartwatch APP.
   ```
 
 * Compatibility
@@ -22,9 +22,9 @@
 
 ## Features
 
-1. Initialize/scan/connect the bracelet;
+1. Initialize/scan/connect the watch;
 
-2. Obtain/set related functions and display of the bracelet;
+2. Obtain/set related functions and display of the watch;
 
 3. Synchronize exercise health data to APP;
 
@@ -32,13 +32,13 @@
 
 5. Synchronize weather information;
 
-6. Find bracelet /iOS device;
+6. Find the smartwatch /iOS device;
 
 7. One-click restore factory Settings;
 
-8. Restart/shutdown of the bracelet;
+8. Restart/shutdown of the smartwatch;
 
-9. Safety check before entering DFU mode (ensure the bracelet has sufficient power);
+9. Safety check before entering DFU mode (ensure the smartwatch has sufficient power);
 
 
 ## Releases
