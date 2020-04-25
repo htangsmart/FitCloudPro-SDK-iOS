@@ -43,6 +43,22 @@
 
 ## Releases
 
+V1.1.8 Build202004250001
+
+```
+  Release Date：2020-04-25
+  Features：
+  1. Fix the problem that may not be disconnected when unpaired the smart watch.
+  2. Correct the problem that the watch disconnection may cause the prompt that the watch is paired by other mobile device or already unpaired.
+  3. Fix the problem that the next command to be executed will be lost when the command is executed overtime.
+  4. Fix the timeout problem with large amount of synchronous data.
+  5. Clear the cache battery level of the smart watch after unpaired.
+  6. Favorite contacts support, only for some of the watches.
+  7. Add elliptical machine / Yoga / table tennis / rope skipping and other sports in watch sports mode.
+  8. Correct the problem of incorrect logic processing when the ECG fails to start.
+  9. Fixed the problem of not executing the connection timeout logic when connecting the watch.
+```
+
 V1.1.7 Build202002250001
 
 ```
