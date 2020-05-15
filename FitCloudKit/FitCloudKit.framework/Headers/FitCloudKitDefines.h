@@ -116,6 +116,7 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE)
     FITCLOUDHARDWARE_WECHATSPORTS = 1 << 7,           //微信运动
     FITCLOUDHARDWARE_8762C = 1 << 8,                  //8762C新平台，升级时使用新平台升级库
     FITCLOUDHARDWARE_SHOULDSAVEHEARTRATEWHENSPORTSMODE = 1 << 9,      //运动模式保存心率数据，1.运动模式的数据item中增加心率，长度会变化，时间间隔也变化，具体看协议文档 2.App上要增加心率曲线
+    FITCLOUDHARDWARE_BODYTEMPERATURE = 1 << 10,       //体温
 };
 
 #pragma mark - 手环显示

@@ -43,6 +43,14 @@
 
 ## Releases
 
+V1.1.9 Build202005150001
+
+```
+  Release Date：2020-05-15
+  Features：
+  1. Body temperature measurement, only for some watches.
+```
+
 V1.1.8 Build202004250001
 
 ```

@@ -34,7 +34,7 @@ typedef NS_OPTIONS(UInt32, FITCLOUDMN)
     FITCLOUDMN_VIBER = 1 << 16,                 //VIBER通知
     FITCLOUDMN_CALENDAR = 1 << 17,              //日历消息通知
     FITCLOUDMN_SNAPCHAT = 1 << 18,              //SNAPCHAT通知
-    FITCLOUDMN_OTHER = 1 << 31,                 //其他APP通知
+    FITCLOUDMN_OTHER = ((UInt32)1) << 31,       //其他APP通知
 };
 
 #endif /* FitCloudMNDefines_h */

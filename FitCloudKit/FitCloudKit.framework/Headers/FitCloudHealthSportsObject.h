@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 #import "FitCloudKitDefines.h"
 
 #pragma mark - 手环手动同步对象基类
@@ -194,7 +195,7 @@
 #pragma mark - 呼吸频率
 
 /**
- * @brief 手环呼吸频率(Breathe Rate)数据记录
+ * @brief 手环呼吸频率(Breathe Rate)数据条目
  */
 @interface FitCloudBRItemObject : FitCloudManualSyncItemObject
 
@@ -209,6 +210,33 @@
  * @brief 手环呼吸频率(Breathe Rate)数据记录
  */
 @interface FitCloudBRRecordObject : FitCloudManualSyncRecordObject<FitCloudBRItemObject*>
+
+
+@end
+
+#pragma mark - 体温
+
+/**
+ * @brief 手表体温(Body Temperature)数据条目
+ */
+@interface FitCloudBTItemObject : FitCloudManualSyncItemObject
+
+/**
+ * @brief 腕温，单位：摄氏度
+ */
+@property(nonatomic, assign) CGFloat  wrist;
+
+/**
+ * @brief 体温，单位：摄氏度
+ */
+@property(nonatomic, assign) CGFloat  body;
+
+@end
+
+/**
+ * @brief 手表体温(Body Temperature)数据记录
+ */
+@interface FitCloudBTRecordObject : FitCloudManualSyncRecordObject<FitCloudBTItemObject*>
 
 
 @end
@@ -277,6 +305,7 @@ typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM)
     FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODPRESSURE = 1 << 2,          //血压
     FITCLOUDREALTIMEMHEALTHEASUREITEM_BREATHERATE = 1 << 3,            //呼吸频率
     FITCLOUDREALTIMEMHEALTHEASUREITEM_ECG = 1 << 4,                    //心电
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_BODYTEMPERATURE = 1 << 5,        //体温
 };
 
 /**
@@ -335,6 +364,21 @@ typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM)
  * @brief 呼吸频率
  */
 @property(nonatomic, assign) UInt8  breatheRate;
+
+/**
+ * @brief 体温测量状态  0:正常状态，数据正常返回中； 1:测量结束，正常结束时间结束； 2:测量结束，未佩戴手表；3:测量结束，体温过高；4:测量结束，体温过低；
+ */
+@property(nonatomic, assign) UInt8  temperatureFlag;
+
+/**
+ * @brief 腕温，单位：摄氏度
+ */
+@property(nonatomic, assign) CGFloat  wrist;
+
+/**
+ * @brief 体温，单位：摄氏度
+ */
+@property(nonatomic, assign) CGFloat  body;
 
 @end
 
