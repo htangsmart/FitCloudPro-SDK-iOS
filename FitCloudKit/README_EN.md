@@ -3,7 +3,7 @@
 ## Summary
 * What is FitCloudKit?
 
-  >###### iOS framework for FitCloud Smartwatch, which is responsible for the communication with watch.
+  >###### iOS framework for FitCloud smartwatch, which is responsible for the communication with watch.
 
 * Scope
 
