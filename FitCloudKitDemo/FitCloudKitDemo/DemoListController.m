@@ -39,7 +39,7 @@
 -(void) fetchSportsDataToday
 {
     __weak typeof(self) weakSelf = self;
-    [FitCloudKit requestHealthAndSportsDataTodayWithBlock:^(BOOL succeed, FitCloudDailyHealthAndSportsDataObject *dataObject, NSError *error) {
+    [FitCloudKit requestHealthAndSportsDataTodayWithBlock:^(BOOL succeed, NSString* userId, FitCloudDailyHealthAndSportsDataObject *dataObject, NSError *error) {
         if([dataObject isKindOfClass:[FitCloudDailyHealthAndSportsDataObject class]])
         {
             NSString * log = APP_LOG_STRING(@"\n今日运动数据：\n步数：%@\n距离：%@\n卡路里：%@\n深睡：%@\n浅睡：%@\n平均心率：%@", @(dataObject.steps), @(dataObject.distance), @(dataObject.calory), @(dataObject.deepSleepMinutes),@(dataObject.shallowSleepMinutes),@(dataObject.averageHeartRate));
@@ -57,7 +57,7 @@
     __weak typeof(self) weakSelf = self;
     [FitCloudKit manualSyncDataWithProgress:^(CGFloat progress, NSString *tip) {
         XLOG_INFO(@"%@", APP_LOG_STRING(@"同步进度：%.0f%%, %@",progress*100.0f, tip));
-    } block:^(BOOL succeed, NSArray<FitCloudManualSyncRecordObject*> *records, NSError *error) {
+    } block:^(BOOL succeed, NSString* userId, NSArray<FitCloudManualSyncRecordObject*> *records, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             ConsoleResultToastTip(weakSelf.view);
         });

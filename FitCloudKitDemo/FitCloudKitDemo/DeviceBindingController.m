@@ -9,7 +9,7 @@
 #import "DeviceBindingController.h"
 #import "MoView.h"
 
-#define USER_ID 10000
+#define USER_ID @"10000"
 
 @interface DeviceBindingController ()
 
