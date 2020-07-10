@@ -16,3 +16,10 @@
   * [英文文档(English Doc)](FitCloudDFUKit/README_EN.md)
 
 
+# 3. FitCloudWatchfaceKit
+#### iOS framework help you creating customized watchface for fitcloud smart watch easily. FitCloud 智能手表自定义表盘创建框架， 旨在帮助您轻松创建属于您自己的表盘文件。
+[![Pod Version](http://img.shields.io/cocoapods/v/FitCloudWatchfaceKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudWatchfaceKit/)
+[![Pod Platform](http://img.shields.io/cocoapods/p/FitCloudWatchfaceKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudWatchfaceKit/)
+
+  * [中文文档(Chinese Doc)](FitCloudWatchfaceKit/README.md)
+  * [英文文档(English Doc)](FitCloudWatchfaceKit/README_EN.md)
