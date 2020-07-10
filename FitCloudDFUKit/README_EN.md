@@ -26,6 +26,22 @@
  
 ## Releases
 
+V2.0.0 Build202007100001
+
+```
+  Release Date：2020-07-10
+  Features：
+  1、 Fixed Traditional Chinese translation.
+```
+
+V1.0.7 Build201911220001
+
+```
+  Release Date：2019-11-22
+  Features：
+  1、 Slovak added.
+```
+
 V1.0.6 Build201911210001
 
 ```

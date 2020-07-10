@@ -14,18 +14,18 @@
  */
 typedef NS_ENUM(NSInteger, FITCLOUDDFUERRORCODE)
 {
-    FITCLOUDDFUERRORCODE_UNKNOWN = 4000,                       //未知错误
-    FITCLOUDDFUERRORCODE_BADPERIPHERAL = 4001,                 //非法的蓝牙外设
-    FITCLOUDDFUERRORCODE_PERIPHERALNOTCONNECTED = 4002,         //蓝牙外设未连接
-    FITCLOUDDFUERRORCODE_BADFIRMWARE = 4003,                   //非法的固件文件
-    FITCLOUDDFUERRORCODE_FIRMWAREFILENOTEXIST = 4004,          //固件文件不存在
-    FITCLOUDDFUERRORCODE_SUITABLEPROVIDERNOTFOUND = 4005,      //未能找到合适的升级程序提供者
-    FITCLOUDDFUERRORCODE_ERRORDEVICEINFO = 4006,               //DFU启动失败，错误的设备信息
-    FITCLOUDDFUERRORCODE_BADIMAGE = 4007,                      //DFU启动失败，镜像错误
-    FITCLOUDDFUERRORCODE_DFUMODEPERIPHERALNOTFOUND = 4008,     //升级失败，未能找到DFU模式的蓝牙外设
-    FITCLOUDDFUERRORCODE_BLUETOOTHPOWEROFF = 4009,             //升级失败，蓝牙设备已关闭
-    FITCLOUDDFUERRORCODE_NOTSUPPORT = 4010,                    //模拟器下不支持固件升级操作
-    FITCLOUDDFUERRORCODE_DISCONNECTED = 4011,                  //升级失败，蓝牙连接断开
+    FITCLOUDDFUERRORCODE_UNKNOWN = 4000,                                //未知错误
+    FITCLOUDDFUERRORCODE_BADPERIPHERAL = 4001,                          //非法的蓝牙外设
+    FITCLOUDDFUERRORCODE_PERIPHERALNOTCONNECTED = 4002,                 //蓝牙外设未连接
+    FITCLOUDDFUERRORCODE_BADFIRMWARE = 4003,                            //非法的固件文件
+    FITCLOUDDFUERRORCODE_FIRMWAREFILENOTEXIST = 4004,                   //固件文件不存在
+    FITCLOUDDFUERRORCODE_SUITABLEPROVIDERNOTFOUND = 4005,               //未能找到合适的升级程序提供者
+    FITCLOUDDFUERRORCODE_ERRORDEVICEINFO = 4006,                        //DFU启动失败，错误的设备信息
+    FITCLOUDDFUERRORCODE_BADIMAGE = 4007,                               //DFU启动失败，镜像错误
+    FITCLOUDDFUERRORCODE_DFUMODEPERIPHERALNOTFOUND = 4008,              //升级失败，未能找到DFU模式的蓝牙外设
+    FITCLOUDDFUERRORCODE_BLUETOOTHPOWEROFF = 4009,                      //升级失败，蓝牙设备已关闭
+    FITCLOUDDFUERRORCODE_NOTSUPPORT = 4010,                             //模拟器下不支持固件升级操作
+    FITCLOUDDFUERRORCODE_DISCONNECTED = 4011,                           //升级失败，蓝牙连接断开
 };
 
 #define FITCLOUDDFUERRORDOMAIN @"FITCLOUDDFUERRORDOMAIN"
