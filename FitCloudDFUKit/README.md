@@ -1,4 +1,4 @@
-# 和唐智能手环固件升级（FitCloudDFUKit）iOS开发指南
+# 和唐智能手表固件升级（FitCloudDFUKit）iOS开发指南
 
 ## 简介 / Summary
 * 什么是和唐智能手环固件升级 SDK ? 
