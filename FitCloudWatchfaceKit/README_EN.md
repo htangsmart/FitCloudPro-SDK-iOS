@@ -27,6 +27,14 @@
 
 ## Releases
 
+V1.0.0 Build202007160001
+
+```
+  Release Date：2020-07-16
+  Features：
+  1、 Auto clip bkimage & preview image.
+```
+
 V1.0.0 Build202007100001
 
 ```
