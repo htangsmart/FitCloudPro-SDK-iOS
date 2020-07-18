@@ -26,7 +26,7 @@
  
 ## Releases
 
-V2.0.0 Build202007100001
+V1.1.8 Build202007100001
 
 ```
   Release Date：2020-07-10
