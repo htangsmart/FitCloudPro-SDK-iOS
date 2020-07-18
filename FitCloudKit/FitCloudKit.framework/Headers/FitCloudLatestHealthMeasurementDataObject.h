@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 /**
  * @brief 手环最新的测量数据
@@ -32,6 +33,17 @@
  *@brief 收缩压
  */
 @property(nonatomic, readonly) UInt8 systolic;
+
+
+/**
+ * @brief 腕温，单位：摄氏度
+ */
+@property(nonatomic, readonly) CGFloat  wrist;
+
+/**
+ * @brief 体温，单位：摄氏度
+ */
+@property(nonatomic, readonly) CGFloat  body;
 
 @end
 

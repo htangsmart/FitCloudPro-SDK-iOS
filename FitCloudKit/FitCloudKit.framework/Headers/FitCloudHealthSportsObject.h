@@ -264,7 +264,7 @@
 @property(nonatomic, assign) UInt16 steps;
 
 /**
- * @brief 距离
+ * @brief 距离(米)
  */
 @property(nonatomic, assign) UInt16 distance;
 

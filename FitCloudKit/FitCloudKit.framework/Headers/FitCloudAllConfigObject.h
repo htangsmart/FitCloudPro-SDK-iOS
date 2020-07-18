@@ -17,6 +17,8 @@
 #import <FitCloudKit/FitCloudHRAlarmObject.h>
 #import <FitCloudKit/FitCloudBPAlarmObject.h>
 #import <FitCloudKit/FitCloudDNDSetting.h>
+#import <FitCloudKit/FitCloudWomenHealthSetting.h>
+#import <FitCloudKit/FitCloudPRObject.h>
 
 /**
  * @brief 手环所有配置信息（用于手环绑定时一次性获取）
@@ -82,5 +84,16 @@
  * @brief 勿扰模式设置
  */
 @property(nonatomic, strong)FitCloudDNDSetting* dndSetting;
+
+/**
+ * @brief 女性设置
+ */
+@property(nonatomic, strong)FitCloudWomenHealthSetting* womenHealthSetting;
+
+
+/**
+ * @brief 防护提醒设置
+ */
+@property(nonatomic, strong)FitCloudPRObject* prSetting;
 
 @end

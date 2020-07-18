@@ -8,6 +8,19 @@
 //  框架名称:FitCloudKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手表的iOS框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2020-07-18  Version:1.2.0 Build:202007180001
+//                            1.支持手表通知APP退出拍照模式
+//                            2.新增女性健康功能
+//                            3.新增防护提醒功能
+//                            4.修正匈牙利语不能同步到手环的问题
+//                            5.新增设置广播数据自定义字段 key1，华盛达专用
+//                            6.修正设置用户资料时年龄不正确的问题
+//                            7.新增获取当天睡眠调试数据
+//                            8.修正年龄设置不正确的问题
+//                            9.最新的健康测量数据新增体温数据(需要手表支持体温)
+//                            10.新增新的表盘尺寸的相关注释说明
+//                            11.支持设置SDK定义的所有本地化语言至手表
+//
 //     pcjbird    2020-05-15  Version:1.1.9 Build:202005150001
 //                            1.支持体温测量，仅部分手表支持
 //
@@ -23,7 +36,7 @@
 //                            9.修正连接手表超时不执行连接超时逻辑的问题
 //
 //     pcjbird    2020-02-25  Version:1.1.7 Build:202002250001
-//                            1.新增斯洛伐克语
+//                            1.新增斯洛伐克语/匈牙利语
 //                            2.修正手表返回的睡眠数据睡眠质量可能为非法值的情况
 //                            3.取消自动解绑逻辑,新增手表被其他手机终端绑定或已经被解绑通知 @see FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY
 //                            4.所有回调以及通知均改成在 Gloal Queue 中调用，如果要在回调或者通知中更新UI，请务必切换到主队列(Main Queue)
@@ -505,6 +518,22 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void)getDrinkRemindSettingWithBlock:(FitCloudDrinkRemindResultBlock _Nullable )block;
 
+
+#pragma mark 防护提醒设置
+/**
+ * @brief 防护提醒设置
+ * @param prSetting 防护提醒设置
+ * @param block 结果回调
+ */
++(void)setProtectionRemind:(FitCloudPRObject*_Nonnull)prSetting block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取防护提醒设置
+/**
+ * @brief 获取防护提醒设置
+ * @param block 结果回调
+ */
++(void)getProtectionRemindSettingWithBlock:(FitCloudProtectionRemindResultBlock _Nullable )block;
+
 #pragma mark 抬腕唤醒设置
 /**
  * @brief 抬腕唤醒设置
@@ -580,12 +609,36 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void)getDNDSettingWithBlock:(FitCloudDNDSettingResultBlock _Nullable)block;
 
+#pragma mark 获取手表UI信息
+/**
+ * @brief 获取手表UI信息
+ * @param block 结果回调
+*/
++(void)getWatchUIInformationWithBlock:(FitCloudWatchUIInfoResultBlock _Nullable)block;
+
+
 #pragma mark 获取表盘UI信息
 /**
-* @brief 获取表盘UI信息
-* @param block 结果回调
+ * @brief 获取表盘UI信息
+ * @param block 结果回调
 */
 +(void)getWatchfaceUIInformationWithBlock:(FitCloudWatchfaceUIInfoResultBlock _Nullable)block;
+
+
+#pragma mark 女性健康设置
+/**
+ * @brief 女性健康设置
+ * @param whSetting 女性健康设置信息
+ * @param block 结果回调
+ */
++(void)setWomenHealthConfig:(FitCloudWomenHealthSetting*_Nonnull)whSetting block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取女性健康设置
+/**
+ * @brief 获取女性健康设置
+ * @param block 结果回调
+ */
++(void)getWomenHealthSettingWithBlock:(FitCloudWomenHealthSettingResultBlock _Nullable )block;
 
 
 #pragma mark APP主动点击退出睡眠
@@ -630,6 +683,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void)rebootWithBlock:(FitCloudResultBlock _Nullable )block;
 
+#pragma mark 设置广播数据自定义字段 key1
+/**
+ * @brief 设置广播数据自定义字段 key1
+ * @param keyData 自定义字段的key，注意keyData必须为6个字节，且需要自己管理字节序，SDK会将设置的值直接发送给手表
+ * @param block 结果回调
+ */
++(void)setCustomBroadcastKey:(NSData*) keyData withBlock:(FitCloudResultBlock _Nullable )block;
 @end
 
 /**
@@ -711,6 +771,13 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void)manualSyncDataWithProgress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block;
+
+#pragma mark 请求当天睡眠调试数据
+/**
+ * @brief 请求当天睡眠调试数据
+ * @param block 结果回调，代表请求是否成功，不代表数据返回成功
+*/
++(void)requestSleepDebugDataWithBlock:(FitCloudResultBlock _Nullable )block;
 
 @end
 

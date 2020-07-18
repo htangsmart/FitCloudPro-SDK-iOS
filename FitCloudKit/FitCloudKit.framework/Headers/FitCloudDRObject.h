@@ -11,7 +11,7 @@
 /**
  * @brief 喝水提醒设置（Drink Remind）
  */
-@interface FitCloudDRObject : NSObject<NSObject>
+@interface FitCloudDRObject : NSObject<NSCoding>
 
 /**
  * @brief 是否开启

@@ -119,4 +119,8 @@
 */
 @property(nonatomic, readonly) BOOL allowFavContacts;
 
+/**
+ * @brief 是否支持防护提醒
+*/
+@property(nonatomic, readonly) BOOL allowProtectionReminder;
 @end

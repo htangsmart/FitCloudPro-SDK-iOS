@@ -17,6 +17,7 @@
 #import <FitCloudKit/FitCloudHTMObject.h>
 #import <FitCloudKit/FitCloudLSRObject.h>
 #import <FitCloudKit/FitCloudDRObject.h>
+#import <FitCloudKit/FitCloudPRObject.h>
 #import <FitCloudKit/FitCloudWWUObject.h>
 #import <FitCloudKit/FitCloudBPRObject.h>
 #import <FitCloudKit/FitCloudHRAlarmObject.h>
@@ -28,9 +29,12 @@
 #import <FitCloudKit/FitCloudUserProfileObject.h>
 #import <FitCloudKit/FitCloudHealthSportsObject.h>
 #import <FitCloudKit/FitCloudPeripheral.h>
+#import <FitCloudKit/FitCloudWatchUIInfo.h>
 #import <FitCloudKit/FitCloudWatchfaceUIInfo.h>
 #import <FitCloudKit/FitCloudLatestHealthMeasurementDataObject.h>
 #import <FitCloudKit/FitCloudContactObject.h>
+#import <FitCloudKit/FitCloudWomenHealthSetting.h>
+#import <FitCLoudKit/FitCloudSleepDebugData.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -145,6 +149,14 @@ typedef void (^FitCloudLongSitRemindResultBlock)(BOOL succeed, FitCloudLSRObject
 typedef void (^FitCloudDrinkRemindResultBlock)(BOOL succeed, FitCloudDRObject* drSetting, NSError* error);
 
 /**
+ *@brief FitCloud 获取防护提醒设置调用结果回调
+ *@param succeed 是否成功
+ *@param prSetting 防护提醒设置
+ *@param error 错误信息
+ */
+typedef void (^FitCloudProtectionRemindResultBlock)(BOOL succeed, FitCloudPRObject* prSetting, NSError* error);
+
+/**
  *@brief FitCloud 获取抬腕唤醒设置调用结果回调
  *@param succeed 是否成功
  *@param wwuSetting 抬腕唤醒设置
@@ -193,6 +205,14 @@ typedef void (^FitCloudAllConfigWhenBindResultBlock)(BOOL succeed, FitCloudAllCo
 typedef void (^FitCloudDNDSettingResultBlock)(BOOL succeed, FitCloudDNDSetting* dndSetting, NSError* error);
 
 /**
+ *@brief FitCloud 获取女性健康设置信息调用结果回调
+ *@param succeed 是否成功
+ *@param whSetting  女性健康设置信息
+ *@param error 错误信息
+ */
+typedef void (^FitCloudWomenHealthSettingResultBlock)(BOOL succeed, FitCloudWomenHealthSetting* whSetting, NSError* error);
+
+/**
  *@brief FitCloud 手环向APP请求天气信息结果回调
  *@param succeed 是否成功
  *@param weather 天气信息回调
@@ -232,6 +252,14 @@ typedef void (^FitCloudDataManualSyncResultBlock)(BOOL succeed, NSString* userId
  *@param error 错误信息
  */
 typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, NSString* userId, FitCloudDailyHealthAndSportsDataObject* dataObject, NSError* error);
+
+/**
+ * @brief FitCloud 请求手表UI信息结果回调
+ * @param succeed 是否成功
+ * @param watchUI 手表UI信息
+ * @param error 错误信息
+ */
+typedef void (^FitCloudWatchUIInfoResultBlock)(BOOL succeed, FitCloudWatchUIInfo* watchUI, NSError* error);
 
 /**
  * @brief FitCloud 请求表盘UI信息结果回调
@@ -291,9 +319,19 @@ typedef void (^FitCloudLatestHealthMeasurementDataResultBlock)(BOOL succeed, Fit
 -(void)OnTakePhotoCtrl;
 
 /**
+ *@brief 手表通知App退出拍照
+*/
+-(void)OnExitCamera;
+
+/**
  *@brief 收到手环的活跃通知(当前手环与手机连接还活跃着)
  */
 -(void) OnBraceletAlive;
+
+/**
+ * @brief 睡眠调试数据
+ */
+-(void) OnSleepDebugData:(FitCloudSleepDebugData*)sleepDebugData;
 
 /**
  *@brief 记录日志数据

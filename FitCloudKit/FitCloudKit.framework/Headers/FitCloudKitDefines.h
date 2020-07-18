@@ -34,6 +34,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR)
     FITCLOUDKITERROR_ANCSNOTAUTHORIZED = 20023,             //ANCS未授权，仅iOS13之后可用
     FITCLOUDKITERROR_DEVICENOTSUPPORT = 20024,              //手环不支持该功能
     FITCLOUDKITERROR_DEVICEDISCONNECTED = 20025,            //手表断开连接
+    FITCLOUDKITERROR_WRONGPARAM = 20026,                    //参数错误
     FITCLOUDKITERROR_USEROBJECTALREADYBOUND = 30001,         //手环已经绑定用户，请先解绑
     FITCLOUDKITERROR_USEROBJECTSHOULDBINDFIRST = 30002,      //需要先绑定用户
     FITCLOUDKITERROR_DATASYNCREPEATREQUEST = 40001,          //当前正在同步历史运动健康数据，请勿重复请求
@@ -117,6 +118,7 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE)
     FITCLOUDHARDWARE_8762C = 1 << 8,                  //8762C新平台，升级时使用新平台升级库
     FITCLOUDHARDWARE_SHOULDSAVEHEARTRATEWHENSPORTSMODE = 1 << 9,      //运动模式保存心率数据，1.运动模式的数据item中增加心率，长度会变化，时间间隔也变化，具体看协议文档 2.App上要增加心率曲线
     FITCLOUDHARDWARE_BODYTEMPERATURE = 1 << 10,       //体温
+    FITCLOUDHARDWARE_WOMENHEALTH = 1 << 11,           //女性健康
 };
 
 #pragma mark - 手环显示
@@ -228,9 +230,9 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE)
     FITCLOUDLANGUAGE_KAZAKH = 0x3a,                   //哈萨克语
     FITCLOUDLANGUAGE_GALICIAN = 0x3b,                 //加利西亚语
     FITCLOUDLANGUAGE_ICELANDIC = 0x3c,                //冰岛语
-    FITCLOUDLANGUAGE_KANNADA = 0x3d,                  //坎纳达语
+    FITCLOUDLANGUAGE_KANNADA = 0x3d,                  //卡纳达语
     FITCLOUDLANGUAGE_KYRGYZ = 0x3e,                   //吉尔吉斯语
-    FITCLOUDLANGUAGE_MALAYALAM = 0x3f,                //马拉亚拉姆语
+    FITCLOUDLANGUAGE_MALAYALAM = 0x3f,                //马拉雅拉姆语
 
     FITCLOUDLANGUAGE_MARATHI = 0x40,                  //马拉提语/马拉地语
     FITCLOUDLANGUAGE_TAMIL = 0x41,                    //泰米尔语
@@ -238,7 +240,7 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE)
     FITCLOUDLANGUAGE_TELUGU = 0x43,                   //泰卢固语
     FITCLOUDLANGUAGE_UZBEK = 0x44,                    //乌兹别克语
     FITCLOUDLANGUAGE_BASQUE = 0x45,                   //巴斯克语
-    FITCLOUDLANGUAGE_BERBER = 0x46,                   //僧加罗语(斯里兰卡)
+    FITCLOUDLANGUAGE_BERBER = 0x46,                   //僧伽罗语(斯里兰卡)
     
 };
 
@@ -367,6 +369,27 @@ typedef NS_ENUM(Byte, APPCAMERASTATE)
 {
     APPCAMERASTATE_FOREGROUND = 0x00,                   //前台
     APPCAMERASTATE_BACKGROUND = 0x01,                   //后台
+};
+
+
+#pragma mark - 女性健康
+
+/**
+ * @brief 女性健康模式
+*/
+typedef NS_ENUM (Byte, WOMENHEALTHMODE)
+{
+    WOMENHEALTHMODE_OFF = 0x00,                 //关闭
+    WOMENHEALTHMODE_MENSES = 0x01,              //经期模式
+    WOMENHEALTHMODE_PREGNANCY_PREPARE = 0x02,   //备孕模式
+    WOMENHEALTHMODE_PREGNANCY = 0x03,           //怀孕模式
+};
+
+// 怀孕期提醒方式
+typedef NS_ENUM(Byte, PREGNANCYREMINDTYPE)
+{
+    PREGNANCYREMINDTYPE_PREGNANTDAYS = 0,   //已怀孕天数
+    PREGNANCYREMINDTYPE_DAYSBEFOREEDC = 1,  //距离预产期天数
 };
 
 #endif /* FitCloudKitDefines_h */

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
-* @brief FitCloud 表盘UI信息
+ * @brief FitCloud 表盘UI信息
 */
 @interface FitCloudWatchfaceUIInfo : NSObject
 
@@ -40,6 +40,8 @@
  *       2: 320*320方
  *       3: 360*360圆
  *       4: 320*385方
+ *       5.320*360方
+ *       6.240*284方
 */
 @property(nonatomic, readonly) UInt8 screenSolution;
 

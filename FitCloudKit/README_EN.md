@@ -43,6 +43,24 @@
 
 ## Releases
 
+V1.2.0 Build202007180001
+
+```
+  Release Date：2020-07-18
+  Features：
+  1. The smart watch can now notify app to quit the photo taking mode.
+  2. Add women health settings.
+  3. Add virus protection reminder settings.
+  4. Fixed the Hungarian language synchronize problem.
+  5. User-defined broadcast field key1 for our business partner Huashengda.
+  6. Fixed incorrect age problem for setting user profile.
+  7. Sleep debugging data support.
+  8. Fix age setting problems.
+  9. Add body temperature data for latest health measurement data.  (the watch should support body temperature)
+  10. New watchface screensolution.
+  11. Support synchronize all localized languages defined by SDK to the smart watch.
+```
+
 V1.1.9 Build202005150001
 
 ```
