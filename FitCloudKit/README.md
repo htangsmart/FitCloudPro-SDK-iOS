@@ -3,7 +3,7 @@
 ## 简介 / Summary
 * 什么是和唐智能手表 SDK ?
 
-  >###### 和唐智能手表 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件负责与手环设备通信等功能的封装，旨在方便合作伙伴定制自己的智能手环应用。       
+  >###### 和唐智能手表 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件负责与手表设备通信等功能的封装，旨在方便合作伙伴定制自己的智能手表应用。       
 
 
 * 适用范围
@@ -51,7 +51,7 @@
   1.支持手表通知APP退出拍照模式
   2.新增女性健康功能
   3.新增防护提醒功能
-  4.修正匈牙利语不能同步到手环的问题
+  4.修正匈牙利语不能同步到手表的问题
   5.新增设置广播数据自定义字段 key1，华盛达专用
   6.修正设置用户资料时年龄不正确的问题
   7.新增获取当天睡眠调试数据
@@ -110,13 +110,13 @@
   发布日期：2019年11月21日
   功能更新：
   1.修正表盘UI信息接口无法正确响应的问题
-  2.解绑用户后取消当前手环连接记录的自动重连
-  3.优化手环连接初始化过程，防止意外重连
-  4.调整手环硬件相关信息为只读
+  2.解绑用户后取消当前手表连接记录的自动重连
+  3.优化手表连接初始化过程，防止意外重连
+  4.调整手表硬件相关信息为只读
   5.绑定用户的UserId由整型修改成字符串型
-  6.新增获取手环最后一次健康测量数据(心率/血氧/血压)，仅部分手环支持，@see allowRetrieveLatestMeasurementData
+  6.新增获取手表最后一次健康测量数据(心率/血氧/血压)，仅部分手表支持，@see allowRetrieveLatestMeasurementData
   7.修改进入和退出固件升级模式方法，现在您在首次固件升级之前以及所有固件升级操作完成之后分别手动调用进入固件升级模式和退出固件升级模式，同时适用于普通固件升级与表盘推送
-  8.新增DFU模式回连成功通知，这通常用于等待表盘推送/普通固件升级之后手环重启的场景
+  8.新增DFU模式回连成功通知，这通常用于等待表盘推送/普通固件升级之后手表重启的场景
   9.提升SDK稳定性
 ```
 
@@ -125,7 +125,7 @@
 ```
   发布日期：2019年11月13日
   功能更新：
-  1.新增勿扰模式(仅部分手环支持 @see allowDNDMode)
+  1.新增勿扰模式(仅部分手表支持 @see allowDNDMode)
 ```
 
 版本V1.1.4 Build201910240001
@@ -147,9 +147,9 @@
   3.新增心率报警/血压报警设置
   4.新增Snapchat消息提醒选项
   5.设备扫描取消设备名称过滤
-  6.心电实时测量新增手环主动结束逻辑
+  6.心电实时测量新增手表主动结束逻辑
   7.新增获取表盘UI信息接口
-  8.新增获取手环广播数据缓存,因此现在您可以获取到曾经连接过的手环的Mac地址
+  8.新增获取手表广播数据缓存,因此现在您可以获取到曾经连接过的手表的Mac地址
   9.新增蓝牙名称变更通知，新增蓝牙RSSI变更通知
   10.提升SDK稳定性
   11.避免歧义，+(NSArray<FitCloudPeripheral *>*_Nonnull)peripherals 修改为  +(NSArray<FitCloudPeripheral *>*_Nonnull)discoveredPeripherals
@@ -165,7 +165,7 @@
   3.新增心率报警/血压报警设置
   4.新增Snapchat消息提醒选项
   5.设备扫描取消设备名称过滤
-  6.心电实时测量新增手环主动结束逻辑
+  6.心电实时测量新增手表主动结束逻辑
   7.新增获取表盘UI信息接口
   8.提升SDK稳定性
 ```
@@ -183,7 +183,7 @@
 ```
   发布日期：2019年08月19日
   功能更新：
-  1.修正手环解绑没有清除上一次绑定手环的Mac地址的问题
+  1.修正手表解绑没有清除上一次绑定手表的Mac地址的问题
   2.新增绑定/登录成功后需要完成一些基础准备同步操作的开始与结束通知
   3.修正SDK初始化选项shouldAutoConnect不起作用的问题
 ```
@@ -209,8 +209,8 @@
 ```
   发布日期：2019年07月20日
   功能更新：
-  1、 修正iPhone日历设置成佛教日历或者日本日历的时候导致手环同步时间失败的问题
-  2、 优化手环回连机制
+  1、 修正iPhone日历设置成佛教日历或者日本日历的时候导致手表同步时间失败的问题
+  2、 优化手表回连机制
 ```
 
 版本V1.0.7 Build201906280001
@@ -242,8 +242,8 @@
 ```
   发布日期：2019年06月11日
   功能更新：
-  1、 支持手环设置更多语言。
-  2、 修复了手环同步的一些问题。
+  1、 支持手表设置更多语言。
+  2、 修复了手表同步的一些问题。
 ```
 
 版本V1.0.0 Build201905010001
@@ -270,9 +270,9 @@ pod 'FitCloudKit'
 
 1. FitCloudKit SDK开发包含：
 
-  * FitCloudKit.framework   静态库，智能手环开发套件核心framework
+  * FitCloudKit.framework   静态库，智能手表开发套件核心framework
 
-  * FitCloudKit.bundle     智能手环开发套件核心资源包
+  * FitCloudKit.bundle     智能手表开发套件核心资源包
 
 2. 将framework添加到项目中;
 3. 将bundle资源包添加到项目中;
@@ -314,7 +314,7 @@ self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
 
 ```objc
 /**
- *@brief 手环请求查找手机
+ *@brief 手表请求查找手机
  */
 -(void) OnFindiPhoneEvent
 {
@@ -322,13 +322,13 @@ self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
 }
 
 /**
- *@brief 手环请求天气信息
+ *@brief 手表请求天气信息
  *@param block 天气信息回调
  */
 -(void) OnRequestWeatherWithCallback:(FitCloudWeatherCallbackBlock)block
 {
-    //手环请求天气信息，您需要自行获取天气信息并回调给手环SDK，
-    //但目前该方法基本不会回调（手环没有实现该逻辑），目前需要自行同步天气给手环。
+    //手表请求天气信息，您需要自行获取天气信息并回调给手表SDK，
+    //但目前该方法基本不会回调（手表没有实现该逻辑），目前需要自行同步天气给手表。
     //@see syncWeather:block:
 }
 
@@ -338,7 +338,7 @@ self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
  */
 -(void) OnRealTimeHealthMeasuringData:(NSArray<FitCloudRealTimeHealthMeasuringResultObject*>*)records
 {
-    //根据实际业务逻辑响应手环实时测量数据
+    //根据实际业务逻辑响应手表实时测量数据
 }
 
 /**
@@ -348,7 +348,7 @@ self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
  */
 -(void)OnRealTimeECGData:(NSArray<NSNumber *> *)ecgDataArray interval:(NSInteger)interval
 {
-    //根据实际业务逻辑响应手环心电实时测量数据
+    //根据实际业务逻辑响应手表心电实时测量数据
 }
 
 /**
@@ -360,7 +360,7 @@ self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
 }
 
 /**
- *@brief 手环控制手机拍照
+ *@brief 手表控制手机拍照
  */
 -(void)OnTakePhotoCtrl
 {
@@ -368,11 +368,11 @@ self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
 }
 
 /**
- *@brief 收到手环的活跃通知(当前手环与手机连接还活跃着)
+ *@brief 收到手表的活跃通知(当前手表与手机连接还活跃着)
  */
 -(void) OnBraceletAlive
 {
-    //App 可以主动同步手环的运动健康数据以达到后台同步数据的功能，请根据具体项目需要添加，注意后台定期同步数据可能影响手环设备的功耗
+    //App 可以主动同步手表的运动健康数据以达到后台同步数据的功能，请根据具体项目需要添加，注意后台定期同步数据可能影响手表设备的功耗
 }
 
 /**
@@ -406,7 +406,7 @@ if(bleState != FITCLOUDBLECENTRALSTATE_POWEREDON)
 }
 ```
 
-## 扫描手环
+## 扫描手表
 
 ```objc
 
@@ -418,7 +418,7 @@ if(bleState != FITCLOUDBLECENTRALSTATE_POWEREDON)
 [FitCloudKit scanPeripherals];
 ```
 
-## 连接手环
+## 连接手表
 
 ```objc
 //监听连接相关事件通知
@@ -448,7 +448,7 @@ NSInteger userId = 1000;
 ## 解绑用户
 
 ```objc
-//开始解绑，解绑成功后是否需要自动断开手环连接
+//开始解绑，解绑成功后是否需要自动断开手表连接
 [FitCloudKit unbindUserObject:YES block:^(BOOL succeed, NSError *error) {
 }];
 ```
@@ -503,9 +503,9 @@ param.maxMeasuringMinutes = 1;
 
 ![invoke help cn](media/invoke_help_cn.png)
 
->Q: 如何判断当前手环是否支持特定的硬件功能，例如：怎么判断是否是具有心电功能的手环？
+>Q: 如何判断当前手表是否支持特定的硬件功能，例如：怎么判断是否是具有心电功能的手表？
 >
->A: 您可以根据固件提供的信息获取当前手环所支持的功能，例如：该手环是否具有心率/血氧/血压/呼吸频率/天气预报/心电/是否支持运动模式/是否支持微信运动/是否需要使用新的固件升级平台/是否支持动态心率等。
+>A: 您可以根据固件提供的信息获取当前手表所支持的功能，例如：该手表是否具有心率/血氧/血压/呼吸频率/天气预报/心电/是否支持运动模式/是否支持微信运动/是否需要使用新的固件升级平台/是否支持动态心率等。
 >
 >以心电功能为例，代码如下：
 
@@ -516,9 +516,9 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 
 <!-- more -->
 
->Q: 绑定用户过程中，弹出蓝牙配对请求弹窗，用户是否必须选择与手环进行配对？
+>Q: 绑定用户过程中，弹出蓝牙配对请求弹窗，用户是否必须选择与手表进行配对？
 >
->A: 理论上不是必须的，但是如果选择不配对的话，手环的消息提醒功能(如QQ/微信/Facebook/Twitter等)将不能正常工作。
+>A: 理论上不是必须的，但是如果选择不配对的话，手表的消息提醒功能(如QQ/微信/Facebook/Twitter等)将不能正常工作。
 
 ## 技术支持
 
