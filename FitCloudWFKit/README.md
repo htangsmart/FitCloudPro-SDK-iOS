@@ -1,4 +1,4 @@
-# 和唐智能手表自定义表盘（FitCloudwatchfaceKit）iOS开发指南
+# 和唐智能手表自定义表盘（FitCloudWFKit）iOS开发指南
 
 ## 简介 / Summary
 * 什么是和唐智能手表自定义表盘 SDK ?
@@ -26,6 +26,14 @@
 1. 根据模版Bin文件生成新的自定义表盘Bin文件；
 
 ## 版本 / Releases
+
+版本V1.0.2 Build202007180001
+
+```
+  发布日期：2020年07月18日
+  功能更新：
+  1、 rename to FitCloudWFKit。
+```
 
 版本V1.0.1 Build202007160001
 

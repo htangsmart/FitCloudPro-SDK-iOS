@@ -1,0 +1,6 @@
+framework module FitCloudWFKit {
+  umbrella header "FitCloudWFKit.h"
+
+  export *
+  module * { export * }
+}

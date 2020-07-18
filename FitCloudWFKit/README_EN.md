@@ -1,4 +1,4 @@
-# FitCloudWatchfaceKit iOS Development Guide
+# FitCloudWFKit iOS Development Guide
 
 ## Summary
 * What is FitCloudWatchfaceKit?
@@ -27,7 +27,15 @@
 
 ## Releases
 
-V1.0.0 Build202007160001
+V1.0.2 Build202007180001
+
+```
+  Release Date：2020-07-18
+  Features：
+  1、 rename to FitCloudWFKit.
+```
+
+V1.0.1 Build202007160001
 
 ```
   Release Date：2020-07-16

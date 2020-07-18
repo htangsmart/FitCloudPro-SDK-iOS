@@ -1,13 +1,16 @@
 //
-//  FitCloudWatchfaceKit.h
-//  FitCloudWatchfaceKit
+//  FitCloudWFKit.h
+//  FitCloudWFKit
 //
 //  Created by pcjbird on 7/10/20.
 //  Copyright © 2020 Zero Status. All rights reserved.
 //
-//  框架名称:FitCloudWatchfaceKit.framework
+//  框架名称:FitCloudWFKit.framework
 //  框架功能:iOS framework help you creating customized watchface for fitcloud smart watch easily. FitCloud 智能手表自定义表盘创建框架， 旨在帮助您轻松创建属于您自己的表盘文件。
 //  修改记录:
+//     pcjbird    2020-07-18  Version:1.0.2 Build:201907180001
+//                            1.rename to FitCloudWFKit
+//
 //     pcjbird    2020-07-16  Version:1.0.1 Build:201907160001
 //                            1.自动裁剪背景图/预览图
 //
@@ -18,15 +21,15 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
-#import <FitCloudWatchfaceKit/FCWKErrorCode.h>
+#import <FitCloudWFKit/FCWKErrorCode.h>
 
-//! Project version number for FitCloudWatchfaceKit.
-FOUNDATION_EXPORT double FitCloudWatchfaceKitVersionNumber;
+//! Project version number for FitCloudWFKit.
+FOUNDATION_EXPORT double FitCloudWFKitVersionNumber;
 
 //! Project version string for FitCloudWatchfaceKit.
-FOUNDATION_EXPORT const unsigned char FitCloudWatchfaceKitVersionString[];
+FOUNDATION_EXPORT const unsigned char FitCloudWFKitVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <FitCloudWatchfaceKit/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <FitCloudWFKit/PublicHeader.h>
 
 /**
  * @brief 日志等级
@@ -84,7 +87,7 @@ typedef void(^FitCloudWatchfaceCreateResultBlock)(BOOL success, NSString* _Nulla
 /**
  * @brief 表盘生成框架
  */
-@interface FitCloudWatchfaceKit : NSObject
+@interface FitCloudWFKit : NSObject
 
 /**
  * @brief 根据模版Bin文件生成新的自定义表盘Bin文件

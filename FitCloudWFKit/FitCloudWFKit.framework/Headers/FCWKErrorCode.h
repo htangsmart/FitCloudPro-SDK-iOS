@@ -1,6 +1,6 @@
 //
 //  FCWKErrorCode.h
-//  FitCloudWatchfaceKit
+//  FitCloudWFKit
 //
 //  Created by pcjbird on 7/10/20.
 //  Copyright © 2020 Zero Status. All rights reserved.

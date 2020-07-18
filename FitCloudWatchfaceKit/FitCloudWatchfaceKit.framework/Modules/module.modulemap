@@ -1,6 +1,0 @@
-framework module FitCloudWatchfaceKit {
-  umbrella header "FitCloudWatchfaceKit.h"
-
-  export *
-  module * { export * }
-}
