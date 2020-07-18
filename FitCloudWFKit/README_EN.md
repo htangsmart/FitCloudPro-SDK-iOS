@@ -1,7 +1,7 @@
 # FitCloudWFKit iOS Development Guide
 
 ## Summary
-* What is FitCloudWatchfaceKit?
+* What is FitCloudWFKit?
 
   >###### iOS framework help you creating customized watchface for fitcloud smart watch easily.
 
@@ -57,18 +57,18 @@ Currently, APPID and APPKEY have not been opened, so there is no need to apply f
 
 ## Installation
 
-Method 1：`FitCloudWatchfaceKit` is available through CocoaPods. To install it, simply add the following line to your Podfile:
+Method 1：`FitCloudWFKit` is available through CocoaPods. To install it, simply add the following line to your Podfile:
 
 ```
-pod 'FitCloudWatchfaceKit'
+pod 'FitCloudWFKit'
 ```
 
-Method 2: download from making ` FitCloudWatchfaceKit `, manual integrated into your project.
+Method 2: download from making ` FitCloudWFKit `, manual integrated into your project.
 
-1. FitCloudWatchfaceKit SDK includes:
-    * FitCloudWatchfaceKit. Framework  
+1. FitCloudWFKit SDK includes:
+    * FitCloudWFKit. Framework  
       static library, smart bracelet development kit core framework
-    * FitCloudWatchfaceKit.bundle   
+    * FitCloudWFKit.bundle   
       smart bracelet development kit core resource package
 
 2. Add the framework to the project;
@@ -91,7 +91,7 @@ Method 2: download from making ` FitCloudWatchfaceKit `, manual integrated into 
 ## Import Header File
 
 ```objc
-#import <FitCloudWatchfaceKit/FitCloudWatchfaceKit.h>
+#import <FitCloudWFKit/FitCloudWFKit.h>
 ```
 
 ## Create the watchface
@@ -99,7 +99,7 @@ Method 2: download from making ` FitCloudWatchfaceKit `, manual integrated into 
 ```objc
 NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEFAULT_20200618142928_MP-cc0c13932ab8ca2f89301678993cfdeb" ofType:@"bin"];
 
-[FitCloudWatchfaceKit createWithTemplateBin:templateBinPath bkImage:resolvedBKImage preview:resolvedPreviewImage dtPosition:_watchfaceStyle.dtPosition progress:^(CGFloat progress, NSString * _Nullable message) {
+[FitCloudWFKit createWithTemplateBin:templateBinPath bkImage:resolvedBKImage preview:resolvedPreviewImage dtPosition:_watchfaceStyle.dtPosition progress:^(CGFloat progress, NSString * _Nullable message) {
     XLOG_INFO(@"progress:%@%%, tip:%@", [NumberFormatUtil roundString:@(progress*100) withMaximumFractionDigits:1], message);
     
 } logging:^(FCWKLOGLEVEL level, NSString * _Nullable message) {
@@ -132,7 +132,7 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
 
 ## Other Settings and Operations
 
-see detail comments in `<FitCloudWatchfaceKit/FitCloudWatchfaceKit.h>` header file.
+see detail comments in `<FitCloudWFKit/FitCloudWFKit.h>` header file.
 
 ## FAQ
 

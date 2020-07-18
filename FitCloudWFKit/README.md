@@ -57,19 +57,19 @@
 
 ## 安装 / Installation
 
-方法一：`FitCloudWatchfaceKit` 支持通过 CocoaPods 安装. 您只需要在您的 Podfile 文件中简单地加上下面这行:
+方法一：`FitCloudWFKit` 支持通过 CocoaPods 安装. 您只需要在您的 Podfile 文件中简单地加上下面这行:
 
 ```
-pod 'FitCloudWatchfaceKit'
+pod 'FitCloudWFKit'
 ```
 
-方法二：从 Github 上下载 `FitCloudWatchfaceKit`，手动集成到您的项目中。
+方法二：从 Github 上下载 `FitCloudWFKit`，手动集成到您的项目中。
 
-1. FitCloudWatchfaceKit SDK开发包含：
+1. FitCloudWFKit SDK开发包含：
 
-  * FitCloudWatchfaceKit.framework   静态库，智能手表开发套件核心framework
+  * FitCloudWFKit.framework   静态库，智能手表开发套件核心framework
 
-  * FitCloudWatchfaceKit.bundle     智能手环开发套件核心资源包
+  * FitCloudWFKit.bundle     智能手环开发套件核心资源包
 
 2. 将framework添加到项目中;
 3. 将bundle资源包添加到项目中;
@@ -91,7 +91,7 @@ pod 'FitCloudWatchfaceKit'
 ## 引用头文件
 
 ```objc
-#import <FitCloudWatchfaceKit/FitCloudWatchfaceKit.h>
+#import <FitCloudWFKit/FitCloudWFKit.h>
 ```
 
 ## 生成自定义表盘
@@ -99,7 +99,7 @@ pod 'FitCloudWatchfaceKit'
 ```objc
 NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEFAULT_20200618142928_MP-cc0c13932ab8ca2f89301678993cfdeb" ofType:@"bin"];
 
-[FitCloudWatchfaceKit createWithTemplateBin:templateBinPath bkImage:resolvedBKImage preview:resolvedPreviewImage dtPosition:_watchfaceStyle.dtPosition progress:^(CGFloat progress, NSString * _Nullable message) {
+[FitCloudWFKit createWithTemplateBin:templateBinPath bkImage:resolvedBKImage preview:resolvedPreviewImage dtPosition:_watchfaceStyle.dtPosition progress:^(CGFloat progress, NSString * _Nullable message) {
     XLOG_INFO(@"progress:%@%%, tip:%@", [NumberFormatUtil roundString:@(progress*100) withMaximumFractionDigits:1], message);
     
 } logging:^(FCWKLOGLEVEL level, NSString * _Nullable message) {
@@ -132,7 +132,7 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
 
 ## 其他设置和操作
 
-参看`<FitCloudWatchfaceKit/FitCloudWatchfaceKit.h>`头文件中详细注释说明。
+参看`<FitCloudWFKit/FitCloudWFKit.h>`头文件中详细注释说明。
 
 ## FAQ
 
