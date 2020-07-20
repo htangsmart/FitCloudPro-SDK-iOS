@@ -39,6 +39,11 @@
 @property(nonatomic, assign) BOOL    shouldAutoConnect;
 
 /**
+* @brief 是否强制使用系统的本地化设置，这将影响同步给手表的语言设置， 默认否
+*/
+@property(nonatomic, assign) BOOL    forceToSystemLocale;
+
+/**
  * @brief 默认选项
  */
 + (instancetype)defaultOption;
