@@ -30,4 +30,4 @@
 
 ### 🚀如何提出您的问题 / how to submit your issue
 
-	* [问题提问模版(issue template)](issue_template.pdf)
+   * [问题提问模版(issue template)](issue_template.pdf)
