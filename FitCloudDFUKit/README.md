@@ -213,11 +213,13 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 <!-- more -->
 
 >Q: 普通固件升级与UI升级有什么不同？
+>
 >A: 通常没有界面的固件升级称之为普通固件升级，涉及界面升级则为UI升级，当然推送表盘属于UI升级。
 
 <!-- more -->
 
 >Q: 固件升级或者表盘推送的主要流程是什么？
+>
 >A: 通常第一步您需要调用:
 
 ```objc
