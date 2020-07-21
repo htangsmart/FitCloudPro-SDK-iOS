@@ -228,6 +228,7 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 ```
 
 >来检查手表的电量，并获得升级的 dfuPeripheral，如果失败，我想你不应该继续接下来的流程。
+>
 >第二步调用开始固件升级命令，isUI 参数代表不同类型的升级。YES，UI升级或表盘推送；NO，普通固件升级。
 
 ```objc
