@@ -500,15 +500,17 @@ param.maxMeasuringMinutes = 1;
 >Q: FitCloudKit 主干调用流程是什么？
 >
 >A: 如下图所示：
-
+>
 ![invoke help cn](media/invoke_help_cn.png)
+
+<!-- more -->
 
 >Q: 如何判断当前手表是否支持特定的硬件功能，例如：怎么判断是否是具有心电功能的手表？
 >
 >A: 您可以根据固件提供的信息获取当前手表所支持的功能，例如：该手表是否具有心率/血氧/血压/呼吸频率/天气预报/心电/是否支持运动模式/是否支持微信运动/是否需要使用新的固件升级平台/是否支持动态心率等。
 >
 >以心电功能为例，代码如下：
-
+>
 ```objc
 FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];   
 BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.hardwareSupported & FITCLOUDHARDWARE_ECG));
@@ -525,3 +527,5 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 和唐智能
 
 戴工 / iOS Developer
+
+

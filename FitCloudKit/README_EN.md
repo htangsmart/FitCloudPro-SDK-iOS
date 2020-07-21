@@ -501,15 +501,17 @@ see detail comments in `<FitCloudKit/FitCloudKit.h>` header file.
 >Q: What is the FitCloudKit main invoke process？
 >
 >A: As the following:
-
+>
 ![invoke help en](media/invoke_help_en.png)
+
+<!-- more -->
 
 >Q: How to determine whether the current bracelet supports specific hardware functions, for example, how to determine whether it is a bracelet with ecg function?
 >
 >A: You can get the current functions supported by the bracelet according to the information provided by the firmware, such as: whether the bracelet has heart rate/blood oxygen/blood pressure/breathing frequency/weather forecast/ecg/whether it supports sports mode/whether it supports WeChat sports/whether it needs to use the new firmware upgrade platform/whether it supports dynamic heart rate, etc.
 >
 >Take the ecg function as an example, the code is as follows:
-
+>
 ```objc
 FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];   
 BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.hardwareSupported & FITCLOUDHARDWARE_ECG));
@@ -521,8 +523,55 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 >
 >A: It is not required in theory, howerver, if you choose not to pair, the bracelet's message alert function (e.g. QQ/ WeChat /Facebook/Twitter, etc.) will not work properly.
 
+<!-- more -->
+
+>Q: Where is the part of getting data from self server?
+>
+>A: Our sdk has no communication with any server, you have to do that as yourself. Once you got data from the sdk, you may save it to your own server as you can. Our sdk always offline, we do nothing with that.
+
+<!-- more -->
+
+>Q: How to get sport data yesterday?
+>
+>A: You can get sport data by synchronize data from the smart watch with our SDK, once you synchronzied data you should save it to db by your self, or you can upload it to your server, then you can query it later. However, if you have not synchronized the data from the smart watch, you should invoke the code as follows to sychronized it:
+>
+```objc
+[FitCloudKit manualSyncDataWithProgress:^(CGFloat progress, NSString *tip) { 
+    NSLog(@"Sync Progress:%.0f%%, %@",progress*100.0f, tip);
+} block:^(BOOL succeed, NSArray<FitCloudManualSyncRecordObject*> *records, NSError *error) {
+    //Synchronization Result
+}];
+```
+>
+>Of course, you should invoke the code when the sdk is ready.
+
+<!-- more -->
+
+>Q: How to get the state of every notification?
+>
+>A: You can invoke the following code to get the state of notification provided by the sdk, note that ‘FITCLOUDMN’ is NS_OPTION struct. I think you know how to use that.
+>
+```objc
+[FitCloudKit getMessageNotificationSettingWithBlock:^(BOOL succeed, FITCLOUDMN mnSetting, NSError* error){
+}];
+```
+
+<!-- more -->
+
+>Q: How to get the current daily goal?
+>
+>A: We have not provide the api to retrieve the current daily goal, usually, the daily goal is set by the app, most of the time you may manage it by yourself at the app side. However, the following is the method to set the daily goal.
+>
+```objc
+[FitCloudKit setDailyGoalWithStepCount:8000 distance:8*1000*100 calory:100*1000 block:^(BOOL succeed, NSError* error){
+}];
+```
+
+
 ## Technical Support
 
 Hetang Smart.
 
 Dai / iOS Developer
+
+
