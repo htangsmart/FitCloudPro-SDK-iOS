@@ -200,11 +200,85 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 [FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor isUI:NO];
 ```
 
+## Normal DFU / UI DFU / Watchface DFU
+
+**Step 1**
+
+Check the battery level of the watch and get the dfuPeripheral. If it fails, I don’t think you should continue the next process.
+
+```objc
+[FitCloudKit enterDFUModeWithBlock:^(BOOL succeed, CBPeripheral *dfuPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError *error) {
+}
+```
+
+**Step 2**
+
+Start the dfu, the isUI parameters means different types of dfu. YES: UI DFU or Watchface DFU; NO: Normal DFU.
+
+```objc
+FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor isUI:YES];
+```
+
+Process the delegate and log callback information. When the upgrade succeeds or fails, you need to observe the reconnection notification in DFU mode, like this:
+
+```objc
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnReconnectWithDFUMode:) name:FITCLOUDEVENT_PERIPHERAL_RECONNECTEDWITHDFUMODE_NOTIFY object:nil];
+}
+
+-(void)OnReconnectWithDFUMode:(NSNotification*)notification
+{
+    NSLog(@"%@", APP_LOG_STRING(@"The watch restarted successfully, the dfu perform %@ this time.", _lastDFUSucceed ? @"succeed" : @"failure"));
+}
+```
+
+**Step 3**
+
+When you decide not to continue with the firmware upgrade or plan to exit the DFU mode, you need to invoke the following method to return to the normal mode. Of course, the watch will be disconnected and reconnected.
+
+```objc
+[FitCloudKit exitDFUModeWithBlock:nil];
+```
+
+## Parameters required for docking to obtain our watch face server
+
+If you are our business customers who allowed to connect our watchface server, you may need to obtain some parameters from the SDK and pass it to our server. Of course, to obtain this capability, you need to contact our business manager.
+
+* hardwareInfo
+
+```objc
+FitCloudAllConfigObject *allConfig = [FitCloudKit allConfig];
+FitCloudFirmwareVersionObject* firmware = allconfig.firmware;
+NSString* hardwareInfo = [firmware description];
+```
+
+* lcd
+
+```objc
+FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
+    NSInteger lcd = faceUI.screenSolution;
+}];
+```
+
+* toolVersion
+
+```objc
+FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
+    NSString* toolVersion = faceUI.toolVersion;
+}];
+```
+
 ## FAQ
 
 >Q: Which chipmaker firmware updates are supported now?
 >
 >A: The SDK integrates ` Realtek ` and ` Nordic ` manufacturers firmware upgrade procedure, but because at present all bracelet actually uses only ` Realtek ` chip, therefore in the process of actual use, you can only use the ` Realtek ` chip firmware upgrade.
+
+<!-- more -->
+
+>Q: What is the difference between normal DFU and UI DFU?
+>
+>A: Usually, DFU without user interface named normal DFU, and DFU with user interface is UI DFU. Of course, watchface DFU is UI DFU.
 
 ## Technical Support
 
