@@ -197,7 +197,7 @@ In the project `Info.Plist` set the following privacy permissions using descript
 
 ```objc
 FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
-[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor];
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor isUI:NO];
 ```
 
 ## FAQ

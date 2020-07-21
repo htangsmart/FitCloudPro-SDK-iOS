@@ -199,7 +199,7 @@ pod 'FitCloudDFUKit'
 
 ```objc
 FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
-[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor];
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor isUI:NO];
 ```
 
 
@@ -209,6 +209,47 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 >Q: 现在支持哪些芯片厂商的固件升级？
 >
 >A: SDK 已经集成了 `Realtek` 和 `Nordic` 厂商的固件升级程序，但由于目前所有手环其实只使用了 `Realtek` 的芯片，因此在实际使用过程中，您目前只会使用到 `Realtek` 芯片的固件升级。
+
+<!-- more -->
+
+>Q: 普通固件升级与UI升级有什么不同？
+>A: 通常没有界面的固件升级称之为普通固件升级，涉及界面升级则为UI升级，当然推送表盘属于UI升级。
+
+<!-- more -->
+
+>Q: 固件升级或者表盘推送的主要流程是什么？
+>A: 通常第一步您需要调用:
+
+```objc
+[FitCloudKit enterDFUModeWithBlock:^(BOOL succeed, CBPeripheral *dfuPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError *error) {
+}
+```
+
+>来检查手表的电量，并获得升级的 dfuPeripheral，如果失败，我想你不应该继续接下来的流程。
+>第二步调用开始固件升级命令，isUI 参数代表不同类型的升级。
+
+```objc
+FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor isUI:NO];
+```
+>之后处理delegate与日志回调信息。当升级成功或失败，您需要监听DFU模式下的回连通知，就像这样：
+
+```objc
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnReconnectWithDFUMode:) name:FITCLOUDEVENT_PERIPHERAL_RECONNECTEDWITHDFUMODE_NOTIFY object:nil];
+}
+
+-(void)OnReconnectWithDFUMode:(NSNotification*)notification
+{
+    NSLog(@"%@", APP_LOG_STRING(@"手环重启成功，此次表盘推送%@。", _lastDFUSucceed ? @"成功" : @"失败"));
+}
+```
+
+> 当您决定不再接着固件升级或者打算退出升级模式时，您需要调用以下方法，回到正常模式，当然此时会重新连接手表。
+
+```objc
+[FitCloudKit exitDFUModeWithBlock:nil];
+```
+
 
 ## 技术支持
 
