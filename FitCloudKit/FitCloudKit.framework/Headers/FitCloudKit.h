@@ -8,7 +8,7 @@
 //  框架名称:FitCloudKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet, which is responsible for the communication with bracelet. FitCloud智能手表的iOS框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2020-07-30  Version:1.2.1 Build:202007300001
+//     pcjbird    2020-07-31  Version:1.2.1 Build:202007310001
 //                            1.FitCloudOption 支持 forceToSystemLocale 选项，当改选项设置为 TRUE 时，将向手表同步 iOS 系统的语言设置，否则向手表同步当前 APP 的语言设置，默认为 FALSE。
 //                              @note: 由于系统限制，当你手动修改了APP的语言，则该选项也会无效。
 //                            2.修正睡眠调试数据不正确响应的问题
