@@ -33,4 +33,10 @@
  */
 @property(nonatomic, assign) UInt16 end;
 
+/**
+ * @brief 提醒间隔，单位：分钟，该字段仅当标志位 allowSetLSRInterval 为 YES时有效
+ * @see allowSetLSRInterval @ FitCloudFirmwareVersionObject
+*/
+@property(nonatomic, assign) UInt16 interval;
+
 @end

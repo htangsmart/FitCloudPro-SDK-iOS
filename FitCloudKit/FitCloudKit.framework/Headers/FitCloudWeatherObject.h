@@ -28,6 +28,25 @@ typedef NS_ENUM(Byte, WEATHERTYPE)
     WEATHERTYPE_UNKNOWN = 0xff,                 //未知天气
 };
 
+@interface FitCloudWeatherForecast: NSObject
+
+/**
+ * @brief 最低温度
+ */
+@property(nonatomic, assign)SInt8 min;
+
+/**
+ * @brief 最高温度
+ */
+@property(nonatomic, assign)SInt8 max;
+
+/**
+ * @brief 天气类型
+ */
+@property(nonatomic, assign)WEATHERTYPE weathertype;
+
+@end
+
 /**
  * @brief 天气信息
  */
@@ -54,9 +73,14 @@ typedef NS_ENUM(Byte, WEATHERTYPE)
 @property(nonatomic, assign)WEATHERTYPE weathertype;
 
 /**
- * @brief 城市名称
+ * @brief 城市名称，最多支持64个字节，超过会被截取
  */
 @property(nonatomic, strong)NSString* city;
 
+/**
+ * @brief 天气预报，最多支持15天，该字段仅当标志位 allowWeatherForecast 为 YES时有效
+ * @see allowWeatherForecast @ FitCloudFirmwareVersionObject
+*/
+@property(nonatomic, strong) NSArray<FitCloudWeatherForecast*>* forecast;
 
 @end

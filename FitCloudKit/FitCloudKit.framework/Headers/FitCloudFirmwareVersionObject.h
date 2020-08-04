@@ -123,4 +123,19 @@
  * @brief 是否支持防护提醒
 */
 @property(nonatomic, readonly) BOOL allowProtectionReminder;
+
+/**
+ * @brief 是否支持设置健康监测间隔时间，指手表定时自动监测健康数据，并非单次实时监测
+*/
+@property(nonatomic, readonly) BOOL allowSetHealthMonitorInterval;
+
+/**
+ * @brief 是否支持设置久坐提醒间隔时间
+*/
+@property(nonatomic, readonly) BOOL allowSetLSRInterval;
+
+/**
+ * @brief 是否支持天气预报
+*/
+@property(nonatomic, readonly) BOOL allowWeatherForecast;
 @end

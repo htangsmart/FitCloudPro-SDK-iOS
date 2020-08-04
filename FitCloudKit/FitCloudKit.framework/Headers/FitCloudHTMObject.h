@@ -28,4 +28,10 @@
  */
 @property(nonatomic, assign) UInt16 end;
 
+/**
+ * @brief 监测间隔，单位：分钟，该字段仅当标志位 allowSetHealthMonitorInterval 为 YES时有效
+ * @see allowSetHealthMonitorInterval @ FitCloudFirmwareVersionObject
+*/
+@property(nonatomic, assign) UInt16 interval;
+
 @end
