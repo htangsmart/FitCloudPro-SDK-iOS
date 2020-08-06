@@ -78,7 +78,13 @@ typedef NS_ENUM(Byte, WEATHERTYPE)
 @property(nonatomic, strong)NSString* city;
 
 /**
- * @brief 天气预报，最多支持15天，该字段仅当标志位 allowWeatherForecast 为 YES时有效
+ * @brief 天气更新时间，该字段仅当标志位 allowWeatherForecast 为 YES时有效
+ * @see allowWeatherForecast @ FitCloudFirmwareVersionObject
+ */
+@property(nonatomic, strong)NSDate* updateDate;
+
+/**
+ * @brief 天气预报，最多支持14天，该字段仅当标志位 allowWeatherForecast 为 YES时有效
  * @see allowWeatherForecast @ FitCloudFirmwareVersionObject
 */
 @property(nonatomic, strong) NSArray<FitCloudWeatherForecast*>* forecast;
