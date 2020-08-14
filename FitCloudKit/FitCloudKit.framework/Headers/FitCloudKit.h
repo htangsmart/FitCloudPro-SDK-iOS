@@ -9,8 +9,8 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2020-08-12  Version:1.2.1 Build:202008120002
-//                            1.FitCloudOption 支持 forceToSystemLocale 选项，当改选项设置为 TRUE 时，将向手表同步 iOS 系统的语言设置，否则向手表同步当前 APP 的语言设置，默认为 FALSE。
+//     pcjbird    2020-08-14  Version:1.2.1 Build:202008140001
+//                            1.FitCloudOption 支持 preferSystemLocale 选项，当改选项设置为 TRUE 时，将向手表同步 iOS 系统的语言设置，否则向手表同步当前 APP 的语言设置，默认为 FALSE。
 //                              @note: 由于系统限制，当你手动修改了APP的语言，则该选项也会无效。
 //                            2.修正睡眠调试数据不正确响应的问题
 //                            3.支持设置健康监测间隔，需要手表支持，@see allowSetHealthMonitorInterval
@@ -19,6 +19,7 @@
 //                            6.新增天气更新时间，调整天气预报最大支持天数为14天
 //                            7.修正健康监测间隔/久坐提醒间隔设置不正确的问题
 //                            8.修正手表标志位解析不正确的问题
+//                            9.新增阿尔巴尼亚语
 //
 //     pcjbird    2020-07-18  Version:1.2.0 Build:202007180001
 //                            1.支持手表通知APP退出拍照模式

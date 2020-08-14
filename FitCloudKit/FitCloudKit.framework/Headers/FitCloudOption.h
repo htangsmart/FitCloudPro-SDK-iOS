@@ -39,10 +39,10 @@
 @property(nonatomic, assign) BOOL    shouldAutoConnect;
 
 /**
- * @brief 是否强制使用系统的本地化设置，这将影响同步给手表的语言设置， 默认否
- * @note: 由于系统限制，当你手动修改了APP的语言，则该选项也会无效。
+ * @brief 是否优先使用系统的本地化语言设置，这将影响同步给手表的语言设置， 默认否
+ * @note: 当您手动修改了APP的语言设置时，由于系统限制，无法优先系统的本地化语言设置。
 */
-@property(nonatomic, assign) BOOL    forceToSystemLocale;
+@property(nonatomic, assign) BOOL    preferSystemLocale;
 
 /**
  * @brief 默认选项

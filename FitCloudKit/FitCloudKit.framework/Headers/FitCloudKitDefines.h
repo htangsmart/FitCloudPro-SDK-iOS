@@ -241,6 +241,7 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE)
     FITCLOUDLANGUAGE_UZBEK = 0x44,                    //乌兹别克语
     FITCLOUDLANGUAGE_BASQUE = 0x45,                   //巴斯克语
     FITCLOUDLANGUAGE_BERBER = 0x46,                   //僧伽罗语(斯里兰卡)
+    FITCLOUDLANGUAGE_ALBANIAN = 0x47,                 //阿尔巴尼亚语
     
 };
 
