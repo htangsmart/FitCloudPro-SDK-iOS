@@ -8,13 +8,16 @@
 //  框架名称:FitCloudWFKit.framework
 //  框架功能:iOS framework help you creating customized watchface for fitcloud smart watch easily. FitCloud 智能手表自定义表盘创建框架， 旨在帮助您轻松创建属于您自己的表盘文件。
 //  修改记录:
-//     pcjbird    2020-07-18  Version:1.0.2 Build:201907180001
+//     pcjbird    2020-08-14  Version:1.0.3 Build:202008140001
+//                            1.新增克罗地亚语/阿尔巴尼亚语
+//
+//     pcjbird    2020-07-18  Version:1.0.2 Build:202007180001
 //                            1.rename to FitCloudWFKit
 //
-//     pcjbird    2020-07-16  Version:1.0.1 Build:201907160001
+//     pcjbird    2020-07-16  Version:1.0.1 Build:202007160001
 //                            1.自动裁剪背景图/预览图
 //
-//     pcjbird    2020-07-10  Version:1.0.0 Build:201907100001
+//     pcjbird    2020-07-10  Version:1.0.0 Build:202007100001
 //                            1.首次发布SDK版本
 //
 
@@ -26,7 +29,7 @@
 //! Project version number for FitCloudWFKit.
 FOUNDATION_EXPORT double FitCloudWFKitVersionNumber;
 
-//! Project version string for FitCloudWatchfaceKit.
+//! Project version string for FitCloudWFKit.
 FOUNDATION_EXPORT const unsigned char FitCloudWFKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <FitCloudWFKit/PublicHeader.h>

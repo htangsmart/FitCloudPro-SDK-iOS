@@ -27,6 +27,14 @@
 
 ## Releases
 
+V1.0.3 Build202008140001
+
+```
+  Release Date：2020-08-14
+  Features：
+  1、 Croatian/Albanian added.
+```
+
 V1.0.2 Build202007180001
 
 ```
