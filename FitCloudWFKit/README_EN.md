@@ -27,6 +27,14 @@
 
 ## Releases
 
+V1.0.4 Build202008210001
+
+```
+  Release Date：2020-08-21
+  Features：
+  1、 Allow to set cornerRadius for bkImage for the watchface, and the preview will be automatically scaled.
+```
+
 V1.0.3 Build202008140001
 
 ```

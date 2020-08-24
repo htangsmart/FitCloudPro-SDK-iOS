@@ -8,6 +8,9 @@
 //  框架名称:FitCloudWFKit.framework
 //  框架功能:iOS framework help you creating customized watchface for fitcloud smart watch easily. FitCloud 智能手表自定义表盘创建框架， 旨在帮助您轻松创建属于您自己的表盘文件。
 //  修改记录:
+//     pcjbird    2020-08-21  Version:1.0.4 Build:202008210001
+//                            1.支持设置圆角，缩略图的圆角会根据背景圆角大小按比例自动缩放
+//
 //     pcjbird    2020-08-14  Version:1.0.3 Build:202008140001
 //                            1.新增克罗地亚语/阿尔巴尼亚语
 //
@@ -96,12 +99,13 @@ typedef void(^FitCloudWatchfaceCreateResultBlock)(BOOL success, NSString* _Nulla
  * @brief 根据模版Bin文件生成新的自定义表盘Bin文件
  * @param templateBin 模版Bin文件路径
  * @param bkImage 背景图
+ * @param bkCornerRadius 背景图圆角大小
  * @param preview 预览图
  * @param dtPosition 表盘日期时间在表盘上的位置
  * @param progress 进度
  * @param logging 日志
  * @param completion 结果回调
 */
-+(void) createWithTemplateBin:(NSString*_Nonnull)templateBin bkImage:(UIImage*_Nonnull)bkImage preview:(UIImage*_Nonnull)preview dtPosition:(FITCLOUDWATCHFACEDTPOSITION)dtPosition progress:(FitCloudWatchfaceCreatingProgress  _Nullable)progress logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging completion:(FitCloudWatchfaceCreateResultBlock _Nullable)completion;
++(void) createWithTemplateBin:(NSString*_Nonnull)templateBin bkImage:(UIImage*_Nonnull)bkImage bkCornerRadius:(CGFloat)bkCornerRadius preview:(UIImage*_Nonnull)preview dtPosition:(FITCLOUDWATCHFACEDTPOSITION)dtPosition progress:(FitCloudWatchfaceCreatingProgress  _Nullable)progress logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging completion:(FitCloudWatchfaceCreateResultBlock _Nullable)completion;
 
 @end
