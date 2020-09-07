@@ -46,7 +46,7 @@
         settings.on = true;
         settings.offWhenLunchBreak = true;
         settings.begin = 60*9;
-        settings.begin = 60*20;
+        settings.end = 60*20;
         [FitCloudKit setSedentaryRemind:settings block:^(BOOL succeed, NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 OpResultToastTip(self.view, succeed);
