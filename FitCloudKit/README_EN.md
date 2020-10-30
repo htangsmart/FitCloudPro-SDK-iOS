@@ -43,6 +43,26 @@
 
 ## Releases
 
+V1.2.1 Build202010300001
+
+```
+  Release Date：2020-10-30
+  Features：
+  1. preferSystemLocale option support for FitCloudOption, When the option is set to true, the language settings of IOS system will be synchronized with the watch. Otherwise, the current app language settings will be synchronized with the watch. The default is false.
+    @note: Due to system limitations, if you manually change the language of the app, this option will also be invalid.
+  2. Fixed incorrect response of sleep debug data.
+  3. Interval set for auto health monitor support, only for some of the watches, @see allowSetHealthMonitorInterval
+  4. Interval set for long sit reminder support, only for some of the watches, @see allowSetLSRInterval
+  5. Add weather forecast, only for some of the watches, @see allowWeatherForecast
+  6. The latest weather update date added, and adjust weather forecast days to 14 days.
+  7. Fix problem of interval set for auto health monitor/long sit reminder.
+  8. Fix some hardware flags parser problem.
+  9. Albanian added.
+  10. Turkish / Ukrainian added.
+  11. Fixed the problem of korean language sync with the watch.
+  12. Patch: when allowShowAdditionalReminder flag set to be true，allowShowMailReminder/allowShowTelegramAndViberReminder will be forced to be set as true.
+```
+
 V1.2.0 Build202007180001
 
 ```

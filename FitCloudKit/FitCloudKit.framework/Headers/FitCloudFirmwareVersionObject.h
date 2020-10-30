@@ -81,6 +81,7 @@
 
 /**
  * @brief 是否显示新增的消息提醒(Twitter/LinkedIn/Messenger/Instagram/Snapchat/Skype)
+ * @note 补丁：当该标志位为true时，allowShowMailReminder/allowShowTelegramAndViberReminder强制为true
  */
 @property(nonatomic, readonly) BOOL allowShowAdditionalReminder;
 
