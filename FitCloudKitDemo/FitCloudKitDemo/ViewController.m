@@ -100,107 +100,128 @@
 
 -(void)OnPeripheralConnectingNotification:(NSNotification *) notification
 {
-    self.indicator.hidden = self.connectStatus.hidden = FALSE;
-    if(!self.indicator.isAnimating)[self.indicator startAnimating];
-    self.btnConnectDevice.hidden = TRUE;
-    self.btnRemoveDevice.hidden = TRUE;
-    self.btnMoreDemo.hidden = TRUE;
-    self.connectStatus.text = NSLocalizedString(@"Connecting...", nil);
-    self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.indicator.hidden = self.connectStatus.hidden = FALSE;
+        if(!self.indicator.isAnimating)[self.indicator startAnimating];
+        self.btnConnectDevice.hidden = TRUE;
+        self.btnRemoveDevice.hidden = TRUE;
+        self.btnMoreDemo.hidden = TRUE;
+        self.connectStatus.text = NSLocalizedString(@"Connecting...", nil);
+        self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
+    });
 }
 
 -(void)OnPeripheralConnectedNotification:(NSNotification *) notification
 {
-    if(self.indicator.isAnimating)[self.indicator stopAnimating];
-    self.connectStatus.text = NSLocalizedString(@"Connected", nil);
-    self.connectStatus.textColor = RGB(0x00, 0xB2, 0x00);
-    self.btnConnectDevice.hidden = TRUE;
-    self.imageSmartWatch.hidden = self.deviceName.hidden = FALSE;
-    self.btnSearch.hidden = TRUE;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if(self.indicator.isAnimating)[self.indicator stopAnimating];
+        self.connectStatus.text = NSLocalizedString(@"Connected", nil);
+        self.connectStatus.textColor = RGB(0x00, 0xB2, 0x00);
+        self.btnConnectDevice.hidden = TRUE;
+        self.imageSmartWatch.hidden = self.deviceName.hidden = FALSE;
+        self.btnSearch.hidden = TRUE;
+    });
     
 }
 
 -(void)OnPeripheralDisconnectedNotification:(NSNotification *) notification
 {
-    if(self.indicator.isAnimating)[self.indicator stopAnimating];
-    self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
-    self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
-    if([FitCloudKit lastConnectPeripheral])self.btnConnectDevice.hidden = FALSE;
-    self.btnRemoveDevice.hidden = YES;
-    self.btnMoreDemo.hidden = YES;
-    self.soc.text = @"";
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if(self.indicator.isAnimating)[self.indicator stopAnimating];
+        self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
+        self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
+        if([FitCloudKit lastConnectPeripheral])self.btnConnectDevice.hidden = FALSE;
+        self.btnRemoveDevice.hidden = YES;
+        self.btnMoreDemo.hidden = YES;
+        self.soc.text = @"";
+    });
 }
 
 -(void)OnPeripherialConnectFailureNotification:(NSNotification*)notification
 {
-    if(self.indicator.isAnimating)[self.indicator stopAnimating];
-    self.btnConnectDevice.hidden = FALSE;
-    self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
-    self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if(self.indicator.isAnimating)[self.indicator stopAnimating];
+        self.btnConnectDevice.hidden = FALSE;
+        self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
+        self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
+    });
 }
 
 -(void)OnBatteryInfoNotification:(NSNotification*)notification
 {
-    FitCloudBatteryInfoObject *batteryInfo = notification.object;
-    if([batteryInfo isKindOfClass:[FitCloudBatteryInfoObject class]])
-    {
-        dispatch_async(dispatch_get_main_queue(), ^{
-             self.soc.text = [NSString stringWithFormat:NSLocalizedString(@"SOC: %@%%", nil), @(batteryInfo.percent)];
-        });
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        FitCloudBatteryInfoObject *batteryInfo = notification.object;
+        if([batteryInfo isKindOfClass:[FitCloudBatteryInfoObject class]])
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                 self.soc.text = [NSString stringWithFormat:NSLocalizedString(@"SOC: %@%%", nil), @(batteryInfo.percent)];
+            });
+        }
+    });
 }
 
 -(void)OnFitCloudLoginUserObjectBegin:(NSNotification *)notification
 {
-    self.progressTip.text = NSLocalizedString(@"Logging On User Object", nil);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.progressTip.text = NSLocalizedString(@"Logging On User Object", nil);
+    });
 }
 
 -(void)OnFitCloudLoginUserObjectResult:(NSNotification *)notification
 {
-    BOOL result = NO;
-    NSDictionary *userInfo = notification.userInfo;
-    if([userInfo isKindOfClass:[NSDictionary class]])
-    {
-        result = [userInfo boolValueForKey:@"result" default:NO];
-    }
-    self.progressTip.text = result ? NSLocalizedString(@"Login User Object Success", nil) : NSLocalizedString(@"Login User Object Failure", nil);
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BOOL result = NO;
+        NSDictionary *userInfo = notification.userInfo;
+        if([userInfo isKindOfClass:[NSDictionary class]])
+        {
+            result = [userInfo boolValueForKey:@"result" default:NO];
+        }
+        self.progressTip.text = result ? NSLocalizedString(@"Login User Object Success", nil) : NSLocalizedString(@"Login User Object Failure", nil);
+    });
 }
 
 -(void)OnFitCloudGetAllConfigBegin:(NSNotification *)notification
 {
-    self.progressTip.text = NSLocalizedString(@"Getting Smart Watch All Config", nil);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.progressTip.text = NSLocalizedString(@"Getting Smart Watch All Config", nil);
+    });
 }
 
 -(void)OnFitCloudGetAllConfigResult:(NSNotification *)notification
 {
-    BOOL result = NO;
-    NSDictionary *userInfo = notification.userInfo;
-    if([userInfo isKindOfClass:[NSDictionary class]])
-    {
-        result = [userInfo boolValueForKey:@"result" default:NO];
-    }
-    self.progressTip.text = result ? NSLocalizedString(@"Get Smart Watch All Config Success", nil) : NSLocalizedString(@"Get Smart Watch All Config Failure", nil);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BOOL result = NO;
+        NSDictionary *userInfo = notification.userInfo;
+        if([userInfo isKindOfClass:[NSDictionary class]])
+        {
+            result = [userInfo boolValueForKey:@"result" default:NO];
+        }
+        self.progressTip.text = result ? NSLocalizedString(@"Get Smart Watch All Config Success", nil) : NSLocalizedString(@"Get Smart Watch All Config Failure", nil);
+    });
 }
 
 -(void)OnPrepareSyncWorkBeginNotification:(NSNotification *) notification
 {
-    self.progressTip.text = NSLocalizedString(@"Preparing Work for Smart Watch", nil);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.progressTip.text = NSLocalizedString(@"Preparing Work for Smart Watch", nil);
+    });
 }
 
 -(void)OnPrepareSyncWorkEndNotification:(NSNotification *) notification
 {
-    self.btnRemoveDevice.hidden = FALSE;
-    self.btnMoreDemo.hidden = FALSE;
-    self.progressTip.text = NSLocalizedString(@"Prepare Work for Smart Watch Finished.", nil);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [UIView animateWithDuration:1.5f animations:^{
-            self.progressTip.alpha = 0;
-        } completion:^(BOOL finished) {
-            self.progressTip.text = @"";
-            self.progressTip.alpha = 1;
-        }];
-        
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.btnRemoveDevice.hidden = FALSE;
+        self.btnMoreDemo.hidden = FALSE;
+        self.progressTip.text = NSLocalizedString(@"Prepare Work for Smart Watch Finished.", nil);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [UIView animateWithDuration:1.5f animations:^{
+                self.progressTip.alpha = 0;
+            } completion:^(BOOL finished) {
+                self.progressTip.text = @"";
+                self.progressTip.alpha = 1;
+            }];
+            
+        });
     });
 }
 
