@@ -71,32 +71,36 @@
 
 -(void) OnPeripheralDiscoveredNotification:(NSNotification*)notification
 {
-    if([notification.object isKindOfClass:[FitCloudPeripheral class]])
-    {
-        [self.peripherals addObject:notification.object];
-        [self.tableView reloadData];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if([notification.object isKindOfClass:[FitCloudPeripheral class]])
+        {
+            [self.peripherals addObject:notification.object];
+            [self.tableView reloadData];
+        }
+    });
 }
 
 -(void) OnPeripheralDiscoveredUpdatedNotification:(NSNotification*)notification
 {
-    if([notification.object isKindOfClass:[FitCloudPeripheral class]])
-    {
-        FitCloudPeripheral *fcPeripheral = notification.object;
-        __weak typeof(self) weakSelf = self;
-        [self.peripherals enumerateObjectsUsingBlock:^(FitCloudPeripheral * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if(fcPeripheral == obj)
-            {
-                [weakSelf.tableView beginUpdates];
-                NSMutableArray<NSIndexPath*>*array = [NSMutableArray<NSIndexPath*> array];
-                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
-                [array addObject:indexPath];
-                [weakSelf.tableView reloadRowsAtIndexPaths:array withRowAnimation:UITableViewRowAnimationAutomatic];
-                [weakSelf.tableView endUpdates];
-                *stop = YES;
-            }
-        }];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if([notification.object isKindOfClass:[FitCloudPeripheral class]])
+        {
+            FitCloudPeripheral *fcPeripheral = notification.object;
+            __weak typeof(self) weakSelf = self;
+            [self.peripherals enumerateObjectsUsingBlock:^(FitCloudPeripheral * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if(fcPeripheral == obj)
+                {
+                    [weakSelf.tableView beginUpdates];
+                    NSMutableArray<NSIndexPath*>*array = [NSMutableArray<NSIndexPath*> array];
+                    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
+                    [array addObject:indexPath];
+                    [weakSelf.tableView reloadRowsAtIndexPaths:array withRowAnimation:UITableViewRowAnimationAutomatic];
+                    [weakSelf.tableView endUpdates];
+                    *stop = YES;
+                }
+            }];
+        }
+    });
 }
 
 -(void) OnPeripheralScanStopNotification:(NSNotification*)notification
@@ -109,9 +113,11 @@
 
 -(void) OnPeripheralConnectedNotification:(NSNotification*)notification
 {
-    DeviceBindingController* bindingVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DeviceBindingController"];
-    [self.navigationController presentViewController:bindingVC animated:NO completion:nil];
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        DeviceBindingController* bindingVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DeviceBindingController"];
+        [self.navigationController presentViewController:bindingVC animated:NO completion:nil];
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    });
 }
 
 -(void) OnPeripheralConnectFailureNotification:(NSNotification *)notification

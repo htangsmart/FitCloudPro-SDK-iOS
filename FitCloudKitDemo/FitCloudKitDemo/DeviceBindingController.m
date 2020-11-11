@@ -110,100 +110,110 @@
 
 -(void)OnFitCloudBindUserObjectBegin:(NSNotification *)notification
 {
-    self.tipProgressLabel.text = NSLocalizedString(@"Binding User Object", nil);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.tipProgressLabel.text = NSLocalizedString(@"Binding User Object", nil);
+    });
 }
 
 -(void)OnFitCloudBindUserObjectResult:(NSNotification *)notification
 {
-    BOOL result = NO;
-    NSDictionary *userInfo = notification.userInfo;
-    if([userInfo isKindOfClass:[NSDictionary class]])
-    {
-        result = [userInfo boolValueForKey:@"result" default:NO];
-    }
-    self.tipProgressLabel.text = result ? NSLocalizedString(@"Bind User Object Success", nil) : NSLocalizedString(@"Bind User Object Failure", nil);
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BOOL result = NO;
+        NSDictionary *userInfo = notification.userInfo;
+        if([userInfo isKindOfClass:[NSDictionary class]])
+        {
+            result = [userInfo boolValueForKey:@"result" default:NO];
+        }
+        self.tipProgressLabel.text = result ? NSLocalizedString(@"Bind User Object Success", nil) : NSLocalizedString(@"Bind User Object Failure", nil);
+    });
 }
 
 -(void)OnFitCloudGetAllConfigBegin:(NSNotification *)notification
 {
-    self.tipProgressLabel.text = NSLocalizedString(@"Getting Smart Watch All Config", nil);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.tipProgressLabel.text = NSLocalizedString(@"Getting Smart Watch All Config", nil);
+    });
 }
 
 -(void)OnFitCloudGetAllConfigResult:(NSNotification *)notification
 {
-    BOOL result = NO;
-    NSDictionary *userInfo = notification.userInfo;
-    if([userInfo isKindOfClass:[NSDictionary class]])
-    {
-        result = [userInfo boolValueForKey:@"result" default:NO];
-    }
-    self.tipProgressLabel.text = result ? NSLocalizedString(@"Get Smart Watch All Config Success", nil) : NSLocalizedString(@"Get Smart Watch All Config Failure", nil);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BOOL result = NO;
+        NSDictionary *userInfo = notification.userInfo;
+        if([userInfo isKindOfClass:[NSDictionary class]])
+        {
+            result = [userInfo boolValueForKey:@"result" default:NO];
+        }
+        self.tipProgressLabel.text = result ? NSLocalizedString(@"Get Smart Watch All Config Success", nil) : NSLocalizedString(@"Get Smart Watch All Config Failure", nil);
+    });
 }
 
 -(void)OnFitCloudInitializeResult:(NSNotification *)notification
 {
-    NSDictionary *userInfo = notification.userInfo;
-    if([userInfo isKindOfClass:[NSDictionary class]])
-    {
-        BOOL result = [userInfo boolValueForKey:@"result" default:NO];
-        self.bBindSuccess = result;
-        NSError * error = [userInfo objectForKey:@"error"];
-        if([error isKindOfClass:[NSError class]] && error.code == FITCLOUDKITERROR_USEROBJECTALREADYBOUND)
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSDictionary *userInfo = notification.userInfo;
+        if([userInfo isKindOfClass:[NSDictionary class]])
         {
-            self.bShouldUnBindFirst = YES;
-        }
-        [self.btnEnjoy setTitle:result ? NSLocalizedString(@"Enjoy Now", nil) : (self.bShouldUnBindFirst ? NSLocalizedString(@"Unbind And Retry", nil) : NSLocalizedString(@"Retry", nil)) forState:UIControlStateNormal];
-        [self.view layoutIfNeeded];
-        __weak typeof (self) weakSelf = self;
-        [UIView animateWithDuration:0.45 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            
-            __strong typeof(weakSelf) strongSelf = weakSelf;
-            if (!strongSelf) return;
-            if(result)
+            BOOL result = [userInfo boolValueForKey:@"result" default:NO];
+            self.bBindSuccess = result;
+            NSError * error = [userInfo objectForKey:@"error"];
+            if([error isKindOfClass:[NSError class]] && error.code == FITCLOUDKITERROR_USEROBJECTALREADYBOUND)
             {
-                strongSelf.titleLabel.text = NSLocalizedString(@"Smart Watch Bind Success", nil);
-                strongSelf.subTitleLabel.text = NSLocalizedString(@"Your Smart Watch Complete Bind...", nil);
+                self.bShouldUnBindFirst = YES;
             }
-            else
-            {
-                strongSelf.titleLabel.text = NSLocalizedString(@"Smart Watch Bind Failure", nil);
-                strongSelf.subTitleLabel.text = NSLocalizedString(@"Your Smart Watch Complete Failed to Bind...", nil);
-            }
-            strongSelf.bindingImageView.hidden = YES;
-            strongSelf.resultView.alpha = 0.8f;
-            [strongSelf.resultView startLoading];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.btnEnjoy setTitle:result ? NSLocalizedString(@"Enjoy Now", nil) : (self.bShouldUnBindFirst ? NSLocalizedString(@"Unbind And Retry", nil) : NSLocalizedString(@"Retry", nil)) forState:UIControlStateNormal];
+            [self.view layoutIfNeeded];
+            __weak typeof (self) weakSelf = self;
+            [UIView animateWithDuration:0.45 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                
+                __strong typeof(weakSelf) strongSelf = weakSelf;
+                if (!strongSelf) return;
                 if(result)
                 {
-                    [strongSelf.resultView success:^{
-                        strongSelf.btnEnjoy.hidden = NO;
-                        strongSelf.btnEnjoy.alpha = 1.0f;
-                        self.tipProgressLabel.text = @"";
-                        strongSelf.btnTryLater.hidden = YES;
-                        strongSelf.btnTryLater.alpha = 0.0f;
-                        [strongSelf.view layoutIfNeeded];
-                    }];
+                    strongSelf.titleLabel.text = NSLocalizedString(@"Smart Watch Bind Success", nil);
+                    strongSelf.subTitleLabel.text = NSLocalizedString(@"Your Smart Watch Complete Bind...", nil);
                 }
                 else
                 {
-                    [strongSelf.resultView error:^{
-                        strongSelf.btnEnjoy.hidden = NO;
-                        strongSelf.btnEnjoy.alpha = 1.0f;
-                        self.tipProgressLabel.text = @"";
-                        strongSelf.btnTryLater.hidden = NO;
-                        strongSelf.btnTryLater.alpha = 1.0f;
-                        [strongSelf.view layoutIfNeeded];
-                    }];
+                    strongSelf.titleLabel.text = NSLocalizedString(@"Smart Watch Bind Failure", nil);
+                    strongSelf.subTitleLabel.text = NSLocalizedString(@"Your Smart Watch Complete Failed to Bind...", nil);
                 }
-            });
-            
-            [strongSelf.view layoutIfNeeded];
-            
-        }completion:^(BOOL finished) {
-            
-        }];
-    }
+                strongSelf.bindingImageView.hidden = YES;
+                strongSelf.resultView.alpha = 0.8f;
+                [strongSelf.resultView startLoading];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    if(result)
+                    {
+                        [strongSelf.resultView success:^{
+                            strongSelf.btnEnjoy.hidden = NO;
+                            strongSelf.btnEnjoy.alpha = 1.0f;
+                            self.tipProgressLabel.text = @"";
+                            strongSelf.btnTryLater.hidden = YES;
+                            strongSelf.btnTryLater.alpha = 0.0f;
+                            [strongSelf.view layoutIfNeeded];
+                        }];
+                    }
+                    else
+                    {
+                        [strongSelf.resultView error:^{
+                            strongSelf.btnEnjoy.hidden = NO;
+                            strongSelf.btnEnjoy.alpha = 1.0f;
+                            self.tipProgressLabel.text = @"";
+                            strongSelf.btnTryLater.hidden = NO;
+                            strongSelf.btnTryLater.alpha = 1.0f;
+                            [strongSelf.view layoutIfNeeded];
+                        }];
+                    }
+                });
+                
+                [strongSelf.view layoutIfNeeded];
+                
+            }completion:^(BOOL finished) {
+                
+            }];
+        }
+    });
+    
 }
 
 -(void) beginAnimation
