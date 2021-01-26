@@ -3,7 +3,7 @@
 ## Summary
 * What is FitCloudWFKit?
 
-  >###### iOS framework help you creating customized watchface for fitcloud smart watch easily.
+  >###### iOS framework help you creating watchface for fitcloud smart watch easily.
 
 * Scope
 
@@ -23,6 +23,7 @@
 ## Features
 
 1. Create customized watchface bin file base the template one;
+2. Modify watchface push index.
 
 
 ## Releases
