@@ -19,8 +19,8 @@
 
 
 # 3. FitCloudWFKit
-#### FitCloudPro 智能手表自定义表盘创建框架， 旨在帮助您轻松创建属于您自己的表盘文件。
-#### iOS framework help you creating customized watchface for fitcloudpro smart watch easily. 
+#### FitCloudPro 智能手表表盘创建辅助框架， 旨在帮助您轻松创建属于您自己的表盘文件。
+#### iOS framework help you creating watchface for fitcloudpro smart watch easily. 
 [![Pod Version](http://img.shields.io/cocoapods/v/FitCloudWFKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudWFKit/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/FitCloudWFKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudWFKit/)
 
