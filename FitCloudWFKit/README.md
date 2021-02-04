@@ -28,6 +28,30 @@
 
 ## 版本 / Releases
 
+版本V1.0.7 Build202102020001
+
+```
+  发布日期：2021年02月02日
+  功能更新：
+  1、 自定义表盘增加文件大小信息的日志打印。
+``
+
+版本V1.0.6 Build202101280002
+
+```
+  发布日期：2021年01月28日
+  功能更新：
+  1、 新增修改表盘的推送位置。
+```
+
+版本V1.0.5 Build202009280001
+
+```
+  发布日期：2020年09月28日
+  功能更新：
+  1、 新增土耳其语/乌克兰语。
+```
+
 版本V1.0.4 Build202008210001
 
 ```
@@ -141,6 +165,37 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
     else
     {
         XLOG_ERROR(@"create watchface failure with error: %@", error.localizedDescription);
+        
+    }
+}];
+```
+
+## 修改表盘推送位置
+```objc
+NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEFAULT_20200618142928_MP-cc0c13932ab8ca2f89301678993cfdeb" ofType:@"bin"];
+
+[FitCloudWFKit modifyWatchfaceBinPushIndexTo:1 fromTemplateBin:templateBinPath logging:^(FCWKLOGLEVEL level, NSString * _Nullable message) {
+    message = [[message stringByReplacingOccurrencesOfString:@"<" withString:@"["] stringByReplacingOccurrencesOfString:@">" withString:@"]"];
+    if(level == FCWKLOGLEVEL_INFO)
+    {
+        XLOG_INFO(@"%@", message);
+    }
+    else if(level == FCWKLOGLEVEL_WARNING)
+    {
+        XLOG_WARNING(@"%@", message);
+    }
+    else if(level == FCWKLOGLEVEL_ERROR)
+    {
+        XLOG_ERROR(@"%@", message);
+    }
+} completion:^(BOOL success, NSString* _Nullable resultBinPath, NSError* _Nullable error) {
+    if(success)
+    {
+        XLOG_INFO(@"modify push index success, bin file: %@", resultBinPath);
+    }
+    else
+    {
+        XLOG_ERROR(@"modify push index failure with error: %@", error.localizedDescription);
         
     }
 }];

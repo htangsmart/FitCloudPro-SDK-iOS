@@ -28,6 +28,30 @@
 
 ## Releases
 
+V1.0.7 Build202102020001
+
+```
+  Release Date：2021-02-02
+  Features：
+  1、 Add file size log to trace creating personalized watchface.
+``
+
+V1.0.6 Build202101280002
+
+```
+  Release Date：2021-01-28
+  Features：
+  1、 Change watchface push position/index support.
+```
+
+V1.0.5 Build202009280001
+
+```
+  Release Date：2020-09-28
+  Features：
+  1、 Turkish/Ukrainian added.
+```
+
 V1.0.4 Build202008210001
 
 ```
@@ -141,6 +165,37 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
     else
     {
         XLOG_ERROR(@"create watchface failure with error: %@", error.localizedDescription);
+        
+    }
+}];
+```
+
+## Change the push index of the watchface
+```objc
+NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEFAULT_20200618142928_MP-cc0c13932ab8ca2f89301678993cfdeb" ofType:@"bin"];
+
+[FitCloudWFKit modifyWatchfaceBinPushIndexTo:1 fromTemplateBin:templateBinPath logging:^(FCWKLOGLEVEL level, NSString * _Nullable message) {
+    message = [[message stringByReplacingOccurrencesOfString:@"<" withString:@"["] stringByReplacingOccurrencesOfString:@">" withString:@"]"];
+    if(level == FCWKLOGLEVEL_INFO)
+    {
+        XLOG_INFO(@"%@", message);
+    }
+    else if(level == FCWKLOGLEVEL_WARNING)
+    {
+        XLOG_WARNING(@"%@", message);
+    }
+    else if(level == FCWKLOGLEVEL_ERROR)
+    {
+        XLOG_ERROR(@"%@", message);
+    }
+} completion:^(BOOL success, NSString* _Nullable resultBinPath, NSError* _Nullable error) {
+    if(success)
+    {
+        XLOG_INFO(@"modify push index success, bin file: %@", resultBinPath);
+    }
+    else
+    {
+        XLOG_ERROR(@"modify push index failure with error: %@", error.localizedDescription);
         
     }
 }];

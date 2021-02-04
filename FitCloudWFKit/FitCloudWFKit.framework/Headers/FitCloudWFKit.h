@@ -6,10 +6,16 @@
 //  Copyright © 2020 Zero Status. All rights reserved.
 //
 //  框架名称:FitCloudWFKit.framework
-//  框架功能:iOS framework help you creating customized watchface for fitcloud smart watch easily. FitCloud 智能手表自定义表盘创建框架， 旨在帮助您轻松创建属于您自己的表盘文件。
+//  框架功能:iOS framework help you creating watchface with fitcloud smart watch easily. FitCloud 智能手表表盘创建辅助框架，旨在帮助您轻松创建属于您自己的表盘文件。
 //  修改记录:
+//     pcjbird    2021-02-02  Version:1.0.7 Build:202102020001
+//                            1.自定义表盘增加文件大小信息的日志打印
+//
+//     pcjbird    2021-01-28  Version:1.0.6 Build:202101280002
+//                            1.新增修改表盘的推送位置
+//
 //     pcjbird    2020-09-28  Version:1.0.5 Build:202009280001
-//                            1.新增土耳其语
+//                            1.新增土耳其语/乌克兰语
 //
 //     pcjbird    2020-08-21  Version:1.0.4 Build:202008210001
 //                            1.支持设置圆角，缩略图的圆角会根据背景圆角大小按比例自动缩放
@@ -92,9 +98,17 @@ typedef void (^FitCloudWatchfaceLoggingMessage)(FCWKLOGLEVEL level, NSString* _N
 */
 typedef void(^FitCloudWatchfaceCreateResultBlock)(BOOL success, NSString* _Nullable resultBinPath, UIImage* _Nullable resultBkImage, UIImage* _Nullable resultPreview, NSError* _Nullable error);
 
+/**
+ *@brief 表盘推送位置修改结果
+ *@param success 是否生成成功
+ *@param resultBinPath 生成的表盘Bin文件路径
+ *@param error 错误
+*/
+typedef void(^FitCloudWatchfacePushIndexModifyResultBlock)(BOOL success, NSString* _Nullable resultBinPath, NSError* _Nullable error);
+
 
 /**
- * @brief 表盘生成框架
+ * @brief 表盘生成辅助框架
  */
 @interface FitCloudWFKit : NSObject
 
@@ -110,5 +124,14 @@ typedef void(^FitCloudWatchfaceCreateResultBlock)(BOOL success, NSString* _Nulla
  * @param completion 结果回调
 */
 +(void) createWithTemplateBin:(NSString*_Nonnull)templateBin bkImage:(UIImage*_Nonnull)bkImage bkCornerRadius:(CGFloat)bkCornerRadius preview:(UIImage*_Nonnull)preview dtPosition:(FITCLOUDWATCHFACEDTPOSITION)dtPosition progress:(FitCloudWatchfaceCreatingProgress  _Nullable)progress logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging completion:(FitCloudWatchfaceCreateResultBlock _Nullable)completion;
+
+/**
+ * @brief 根据模版Bin文件修改表盘的推送位置，生成新的表盘Bin文件
+ * @param pushIndex 推送索引，取值范围 1～8
+ * @param templateBin 模版Bin文件路径
+ * @param logging 日志
+ * @param completion 结果回调
+*/
++(void) modifyWatchfaceBinPushIndexTo:(NSInteger)pushIndex fromTemplateBin:(NSString*_Nonnull)templateBin logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging completion:(FitCloudWatchfacePushIndexModifyResultBlock _Nullable)completion;
 
 @end

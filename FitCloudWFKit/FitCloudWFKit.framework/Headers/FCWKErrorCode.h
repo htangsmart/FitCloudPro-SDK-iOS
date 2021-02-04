@@ -24,6 +24,8 @@ typedef NS_ENUM(NSInteger, FCWKERRORCODE)
     FCWKERRORCODE_BKIMAGERESIZEFAILURE = 2006,                   //表盘背景图大小调整失败
     FCWKERRORCODE_PREVIEWRESIZEFAILURE = 2007,                   //表盘预览图大小调整失败
     FCWKERRORCODE_COMMONEXCEPTION = 2008,                        //生成表盘时发生异常
+    FCWKERRORCODE_BADPUSHINDEX = 3001,                           //错误的表盘推送位置(索引)
+    FCWKERRORCODE_TEMPLATEBINFILEBADSIZE = 3002,                 //表盘模版bin文件长度不正确
 };
 
 #define FCWKERRORDOMAIN @"FCWKERRORDOMAIN"
