@@ -26,6 +26,9 @@ typedef NS_ENUM(NSInteger, FITCLOUDDFUERRORCODE)
     FITCLOUDDFUERRORCODE_BLUETOOTHPOWEROFF = 4009,                      //升级失败，蓝牙设备已关闭
     FITCLOUDDFUERRORCODE_NOTSUPPORT = 4010,                             //模拟器下不支持固件升级操作
     FITCLOUDDFUERRORCODE_DISCONNECTED = 4011,                           //升级失败，蓝牙连接断开
+    FITCLOUDDFUERRORCODE_LOWBATTERYLEVEL = 4012,                        //升级失败，电量低，电量低于30%
+    FITCLOUDDFUERRORCODE_SILENTMODENOTSUPPORT = 4013,                   //升级失败，手表当前不支持静默模式升级
+    FITCLOUDDFUERRORCODE_CANNOTENTEROTAMODE = 4014,                     //升级失败，普通升级无法进入OTA模式
 };
 
 #define FITCLOUDDFUERRORDOMAIN @"FITCLOUDDFUERRORDOMAIN"

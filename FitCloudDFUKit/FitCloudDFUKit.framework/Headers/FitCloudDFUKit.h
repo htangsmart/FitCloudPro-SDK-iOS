@@ -8,8 +8,11 @@
 //  框架名称:FitCloudDFUKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet Device Firmware Upgrade, which is responsible for the upgrade of bracelet firmware. FitCloud智能手环固件升级的iOS框架，负责手环固件升级等功能的封装。
 //  修改记录:
+//     pcjbird    2021-02-04  Version:1.2.1 Build:202102040001
+//                            1.升级Realtek固件升级程序，支持8762D平台
+//
 //     pcjbird    2020-09-28  Version:1.2.0 Build:202009280001
-//                            1.新增土耳其语
+//                            1.新增土耳其语/乌克兰语
 //
 //     pcjbird    2020-08-14  Version:1.1.9 Build:202008140001
 //                            1.新增克罗地亚语/阿尔巴尼亚语
@@ -74,9 +77,10 @@ typedef NS_ENUM(NSInteger, FITCLOUDDFUCHIPVENDOR)
 /**
  * @brief 升级进度回调
  * @param progress 升级进度百分比(0~100)
- * @param index 当前镜像索引
+ * @param index 当前镜像索引，下标从0开始
+ * @param total 所有镜像数量
  */
--(void) OnDFUProgress:(CGFloat)progress imageIndex:(NSInteger)index;
+-(void) OnDFUProgress:(CGFloat)progress imageIndex:(NSInteger)index total:(NSInteger)total;
 
 /**
  * @brief 意外终止回调
@@ -86,7 +90,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDDFUCHIPVENDOR)
 
 /**
  * @brief 升级完成回调
- * @param speed 速度
+ * @param speed 速度, 单位：kB/s
  */
 -(void) OnDFUFinishWithSpeed:(CGFloat)speed;
 
@@ -134,9 +138,9 @@ typedef NS_ENUM(NSInteger, FITCLOUDDFUCHIPVENDOR)
  * @param peripheral 固件升级的蓝牙外设
  * @param firmware 新版本固件文件路径,注意是 file path, 不是 file url
  * @param chipVendor 芯片供应商
- * @param isUI 是否为UI文件
+ * @param silentMode 是否为静默模式，普通固件升级使用非静默模式，UI升级/表盘升级使用静默模式
  */
-+(void) startWithPeripheral:(CBPeripheral *) peripheral firmware:(NSString*)firmware chipVendor:(FITCLOUDDFUCHIPVENDOR)chipVendor isUI:(BOOL)isUI;
++(void) startWithPeripheral:(CBPeripheral *) peripheral firmware:(NSString*)firmware chipVendor:(FITCLOUDDFUCHIPVENDOR)chipVendor silentMode:(BOOL)silentMode;
 
 @end
 
