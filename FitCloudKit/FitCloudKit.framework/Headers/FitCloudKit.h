@@ -9,6 +9,19 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2021-02-02  Version:1.2.2 Build:202102020001
+//                            1.新增天气推送开关，仅部分手表支持
+//                            2.新增通知手表App定位服务状态
+//                            3.新增洗手提醒功能
+//                            4.表盘尺寸支持240*280方
+//                            5.数据解析异常处理，条目过大，直接丢弃，不再解析数据
+//                            6.新增设置锁屏密码，仅部分手表支持
+//                            7.新增设置日程提醒，仅部分手表支持
+//                            8.新增Hike和YouTube通知提醒，仅部分手表支持
+//                            9.表盘尺寸支持348*442方
+//                            10.多表盘推送信息获取支持
+//                            11.新增运动类型定义
+//
 //     pcjbird    2020-10-30  Version:1.2.1 Build:202010300001
 //                            1.FitCloudOption 支持 preferSystemLocale 选项，当改选项设置为 TRUE 时，将向手表同步 iOS 系统的语言设置，否则向手表同步当前 APP 的语言设置，默认为 FALSE。
 //                              @note: 由于系统限制，当你手动修改了APP的语言，则该选项也会无效。
@@ -281,6 +294,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(NSArray<FitCloudAlarmObject*>*_Nullable) alarmlist;
 
+#pragma mark 手表日程列表
+/**
+ * @brief 手表日程列表
+ */
++(NSArray<FitCloudScheduleObject*>*_Nullable) schedulelist;
+
 #pragma mark 手表常用联系人列表
 /**
  * @brief 手表常用联系人列表
@@ -389,6 +408,21 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void)getAlarmsWithBlock:(FitCloudAlarmsResultBlock _Nullable )block;
+
+#pragma mark 设置日程列表
+/**
+ * @brief 设置日程（将手机上的日程列表同步到手表）
+ * @param schedules 日程列表
+ * @param block 结果回调
+ */
++(void)setSchedules:(NSArray<FitCloudScheduleObject*>*_Nullable)schedules block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取日程列表
+/**
+ * @brief 获取日程列表（获取手表上的日程列表）
+ * @param block 结果回调
+ */
++(void)getSchedulesWithBlock:(FitCloudSchedulesResultBlock _Nullable )block;
 
 #pragma mark 设置常用联系人
 /**
@@ -550,6 +584,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void)getProtectionRemindSettingWithBlock:(FitCloudProtectionRemindResultBlock _Nullable )block;
 
+#pragma mark 洗手提醒设置
+/**
+ * @brief 洗手提醒设置
+ * @param hwrSetting 洗手提醒设置
+ * @param block 结果回调
+ */
++(void)setHandWashRemind:(FitCloudHandWashRemindObject*_Nonnull)hwrSetting block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取洗手提醒设置
+/**
+ * @brief 获取洗手提醒设置
+ * @param block 结果回调
+ */
++(void)getHandWashRemindSettingWithBlock:(FitCloudHandWashRemindResultBlock _Nullable )block;
+
 #pragma mark 抬腕唤醒设置
 /**
  * @brief 抬腕唤醒设置
@@ -657,6 +706,15 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)getWomenHealthSettingWithBlock:(FitCloudWomenHealthSettingResultBlock _Nullable )block;
 
 
+#pragma mark 锁屏设置
+/**
+ * @brief 锁屏设置
+ * @param lockScreenSetting 锁屏设置
+ * @param block 结果回调
+ */
++(void)setLockScreenSetting:(FitCloudLockScreenSetting* _Nonnull)lockScreenSetting block:(FitCloudResultBlock _Nullable)block;
+
+
 #pragma mark APP主动点击退出睡眠
 /**
  * @brief APP主动点击退出睡眠
@@ -706,6 +764,14 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void)setCustomBroadcastKey:(NSData*) keyData withBlock:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark APP通知手表当前APP的定位服务状态
+/**
+ * @brief APP通知手表当前APP的定位服务状态
+ * @param state APP定位服务状态
+ * @param block 结果回调
+ */
++(void)notifyAppLocServiceState:(APPLOCATIONSERVICESTATE)state withBlock:(FitCloudResultBlock _Nullable )block;
 @end
 
 /**
@@ -811,5 +877,20 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)notifyAppCameraState:(APPCAMERASTATE)state withBlock:(FitCloudResultBlock _Nullable )block;
 @end
 
+/**
+ * @brief FitCloudKit Dump Module
+ */
+@interface FitCloudKit (Dump)
+
+#pragma mark 发送Alexa结果
+/**
+ * @brief 发送Alexa结果
+ * @param text 结果
+ * @param error 错误码
+ * @param block 结果回调
+ */
++(void)sendAlexaResult:(NSString*)text with:(ALEXAINVOKEERROR)error withBlock:(FitCloudResultBlock _Nullable )block;
+
+@end
 
 NS_ASSUME_NONNULL_END

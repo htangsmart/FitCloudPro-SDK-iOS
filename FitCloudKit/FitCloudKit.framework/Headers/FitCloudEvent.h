@@ -143,6 +143,11 @@ extern NSString *const FTICLOUDEVENT_BATTERYINFO_NOTIFY;
 extern NSString *const FITCLOUDEVENT_ALARMLIST_CHANGED_NOTIFY;
 
 /**
+ * @brief 日程列表变化通知 userInfo=>NSArray<FitCloudScheduleObject *>
+ */
+extern NSString *const FITCLOUDEVENT_SCHEDULELIST_CHANGED_NOTIFY;
+
+/**
  * @brief 常用联系人列表变化通知 userInfo=>NSArray<FitCloudContactObject *>
  */
 extern NSString *const FITCLOUDEVENT_FAVCONTACTS_CHANGED_NOTIFY;

@@ -34,7 +34,10 @@
 #import <FitCloudKit/FitCloudLatestHealthMeasurementDataObject.h>
 #import <FitCloudKit/FitCloudContactObject.h>
 #import <FitCloudKit/FitCloudWomenHealthSetting.h>
-#import <FitCLoudKit/FitCloudSleepDebugData.h>
+#import <FitCloudKit/FitCloudSleepDebugData.h>
+#import <FitCloudKit/FitCloudHandWashRemindObject.h>
+#import <FitCloudKit/FitCloudLockScreenSetting.h>
+#import <FitCloudKit/FitCloudScheduleObject.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -74,6 +77,14 @@ typedef void (^FitCloudExitDFUModeResultBlock)(BOOL succeed, NSError* error);
  *@param error 错误信息
  */
 typedef void (^FitCloudAlarmsResultBlock)(BOOL succeed, NSArray<FitCloudAlarmObject*>*list, NSError* error);
+
+/**
+ *@brief FitCloud 获取日程列表调用结果回调
+ *@param succeed 是否成功
+ *@param list 日程列表
+ *@param error 错误信息
+ */
+typedef void (^FitCloudSchedulesResultBlock)(BOOL succeed, NSArray<FitCloudScheduleObject*>*list, NSError* error);
 
 
 /**
@@ -155,6 +166,14 @@ typedef void (^FitCloudDrinkRemindResultBlock)(BOOL succeed, FitCloudDRObject* d
  *@param error 错误信息
  */
 typedef void (^FitCloudProtectionRemindResultBlock)(BOOL succeed, FitCloudPRObject* prSetting, NSError* error);
+
+/**
+ *@brief FitCloud 获取洗手提醒设置调用结果回调
+ *@param succeed 是否成功
+ *@param hwrSetting 洗手提醒设置
+ *@param error 错误信息
+ */
+typedef void (^FitCloudHandWashRemindResultBlock)(BOOL succeed, FitCloudHandWashRemindObject* hwrSetting, NSError* error);
 
 /**
  *@brief FitCloud 获取抬腕唤醒设置调用结果回调
@@ -278,6 +297,20 @@ typedef void (^FitCloudWatchfaceUIInfoResultBlock)(BOOL succeed, FitCloudWatchfa
 typedef void (^FitCloudLatestHealthMeasurementDataResultBlock)(BOOL succeed, FitCloudLatestHealthMeasurementDataObject* dataObject, NSError* error);
 
 /**
+ * @brief FitCloud Alexa语音开始请求回调
+ * @param result 回调结果
+ */
+typedef void (^FitCloudAlexaVoiceStartRequestCompletion)(ALEXAINVOKEERROR result);
+
+
+/**
+ * @brief FitCloud Alexa语音亚马逊处理回调
+ * @param result 回调结果
+ * @param text 文本回调
+ */
+typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSString* text);
+
+/**
  *@brief FitCloudKit 回调协议
  */
 @protocol FitCloudCallback<NSObject>
@@ -327,6 +360,42 @@ typedef void (^FitCloudLatestHealthMeasurementDataResultBlock)(BOOL succeed, Fit
  *@brief 收到手环的活跃通知(当前手环与手机连接还活跃着)
  */
 -(void) OnBraceletAlive;
+
+/**
+ *@brief 通知App收到Alexa语音开始请求
+ *@param completion 结果回调
+ */
+-(void) OnAlexaVoiceStartRequestWithCompletion:(FitCloudAlexaVoiceStartRequestCompletion)completion;
+
+/**
+ *@brief Alexa请求的原始语音数据
+ *@param rawData 原始数据
+ */
+-(void) OnAlexaVoiceRawPartialData:(NSData*)rawData;
+
+/**
+ *@brief Alexa语音原始数据传输完成
+ *@param length 长度
+ *@param crc crc
+ */
+-(void) OnAlexaVoiceFinish:(NSInteger)length crc:(NSInteger) crc;
+
+/**
+ *@brief Alexa语音原始数据校验错误
+ *@param error 校验错误
+ */
+-(void) OnAlexaVoiceCheckWithError:(ALEXACHECKERROR)error;
+
+/**
+ *@brief Alexa语音数据接收完毕，开始解码
+ */
+-(void) OnAlexaVoiceDecodeBegin;
+
+/**
+ *@brief Alexa请求的语音数据，该数据已经经过解码
+ *@param voiceData 语音数据
+ */
+-(void) OnAlexaVoiceDecodedWithData:(NSData*)voiceData;
 
 /**
  * @brief 睡眠调试数据

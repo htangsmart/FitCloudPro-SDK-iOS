@@ -139,4 +139,40 @@
  * @brief 是否支持天气预报
 */
 @property(nonatomic, readonly) BOOL allowWeatherForecast;
+
+/**
+ * @brief 是否支持洗手提醒
+*/
+@property(nonatomic, readonly) BOOL allowHandWashReminder;
+
+/**
+ * @brief 是否支持将天气推送开关的状态状态同步给手表，当该标志位为true时，app可以将当前天气推送开关的状态同步给手表
+*/
+@property(nonatomic, readonly) BOOL allowWeatherPushSwitchStatusSync;
+
+/**
+ * @brief 是否支持锁屏密码
+ */
+@property(nonatomic, readonly) BOOL allowLockScreenPassword;
+
+/**
+ * @brief 是否需要定制查找iPhone的响铃
+ */
+@property(nonatomic, readonly) BOOL shouldCustomFindiPhoneRing;
+
+/**
+ * @brief 是否支持日程提醒
+ */
+@property(nonatomic, readonly) BOOL allowScheduleReminder;
+
+/**
+ * @brief 是否支持Hike&Youtube提醒
+ */
+@property(nonatomic, readonly) BOOL allowHikeAndYoutubeReminder;
+
+/**
+ * @brief 是否支持多表盘推送
+ */
+@property(nonatomic, readonly) BOOL allowMultiWatchfacePush;
+
 @end

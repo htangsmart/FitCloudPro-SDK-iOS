@@ -19,6 +19,7 @@
 #import <FitCloudKit/FitCloudDNDSetting.h>
 #import <FitCloudKit/FitCloudWomenHealthSetting.h>
 #import <FitCloudKit/FitCloudPRObject.h>
+#import <FitCloudKit/FitCloudHandWashRemindObject.h>
 
 /**
  * @brief 手环所有配置信息（用于手环绑定时一次性获取）
@@ -95,5 +96,10 @@
  * @brief 防护提醒设置
  */
 @property(nonatomic, strong)FitCloudPRObject* prSetting;
+
+/**
+ * @brief 洗手提醒设置
+ */
+@property(nonatomic, strong)FitCloudHandWashRemindObject* hwrSetting;
 
 @end

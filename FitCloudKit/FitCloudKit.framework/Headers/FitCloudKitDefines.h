@@ -158,6 +158,7 @@ typedef NS_OPTIONS(UInt16, FITCLOUDPREFER)
     FITCLOUDPREFER_SHOWAS12HOURS = 1 << 2,          //显示12小时制  0->24小时制  1->12小时制
     FITCLOUDPREFER_IMPERIALUNIT = 1 << 3,           //英制  0公制 1英制
     FITCLOUDPREFER_FAHRENHEIT = 1 << 4,             //华氏度 0摄氏度 1华氏度
+    FITCLOUDPREFER_WEATHERPUSH = 1 << 5,            //开启天气推送  0关 1开
 };
 
 #pragma mark - 手环语言
@@ -262,6 +263,42 @@ typedef NS_OPTIONS(Byte, FITCLOUDALARMCYCLE)
     FITCLOUDALARMCYCLE_SUN = 1 << 6,     //周日(循环)
 };
 
+#pragma mark - 日程相关
+
+/**
+ * @brief 日程定义
+ */
+typedef NS_OPTIONS(Byte, FITCLOUDSCHEDULE)
+{
+    FITCLOUDSCHEDULE_DRINK = 0,             //喝水
+    FITCLOUDSCHEDULE_ALARM = 1,             //闹钟
+    FITCLOUDSCHEDULE_SEDENTARY = 2,         //久坐
+    FITCLOUDSCHEDULE_TEETHBRUSH = 3,        //刷牙
+    FITCLOUDSCHEDULE_BREAKFAST = 4,         //早餐
+    FITCLOUDSCHEDULE_HOMEWORK = 5,          //家庭作业
+    FITCLOUDSCHEDULE_LUNCH = 6,             //午餐
+    FITCLOUDSCHEDULE_SPORTS = 7,            //运动
+    FITCLOUDSCHEDULE_GETUP = 8,             //起床
+    FITCLOUDSCHEDULE_GOTOBED = 9,           //睡觉
+    FITCLOUDSCHEDULE_GOTOSCHOOL = 10,       //上学
+    FITCLOUDSCHEDULE_GOHOME = 11,           //回家
+};
+
+/**
+ * @brief 日程周期定义
+ */
+typedef NS_OPTIONS(Byte, FITCLOUDSCHEDULECYCLE)
+{
+    FITCLOUDSCHEDULECYCLE_NONE = 0,         //不循环，仅当天有效
+    FITCLOUDSCHEDULECYCLE_MON = 1,          //周一(循环)
+    FITCLOUDSCHEDULECYCLE_TUE = 1 << 1,     //周二(循环)
+    FITCLOUDSCHEDULECYCLE_WED = 1 << 2,     //周三(循环)
+    FITCLOUDSCHEDULECYCLE_THUR = 1 << 3,    //周四(循环)
+    FITCLOUDSCHEDULECYCLE_FRI = 1 << 4,     //周五(循环)
+    FITCLOUDSCHEDULECYCLE_SAT = 1 << 5,     //周六(循环)
+    FITCLOUDSCHEDULECYCLE_SUN = 1 << 6,     //周日(循环)
+};
+
 #pragma mark - 用户相关
 
 /**
@@ -359,6 +396,18 @@ typedef NS_ENUM(UInt16, FITCLOUDSPORTSTYPE)
     FITCLOUDSPORTSTYPE_ROPESKIPPING_BRACELETAPP = 0x32,              //跳绳 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
     FITCLOUDSPORTSTYPE_ROPESKIPPING_APPONLY = 0x33,                  //跳绳 APP单独
     FITCLOUDSPORTSTYPE_ROPESKIPPING_APPBRACELET = 0x34,              //跳绳 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_ROWINGMACHINE_BRACELETONLY = 0x35,            //划船器 手环单独
+    FITCLOUDSPORTSTYPE_ROWINGMACHINE_BRACELETAPP = 0x36,             //划船器 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_ROWINGMACHINE_APPONLY = 0x37,                 //划船器 APP单独
+    FITCLOUDSPORTSTYPE_ROWINGMACHINE_APPBRACELET = 0x38,             //划船器 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_LAZYBIKE_BRACELETONLY = 0x39,                 //懒人车 手环单独
+    FITCLOUDSPORTSTYPE_LAZYBIKE_BRACELETAPP = 0x3A,                  //懒人车 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_LAZYBIKE_APPONLY = 0x3B,                      //懒人车 APP单独
+    FITCLOUDSPORTSTYPE_LAZYBIKE_APPBRACELET = 0x3C,                  //懒人车 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_FITNESSBIKE_BRACELETONLY = 0x3D,              //健身车 手环单独
+    FITCLOUDSPORTSTYPE_FITNESSBIKE_BRACELETAPP = 0x3E,               //健身车 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_FITNESSBIKE_APPONLY = 0x3F,                   //健身车 APP单独
+    FITCLOUDSPORTSTYPE_FITNESSBIKE_APPBRACELET = 0x40,               //健身车 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
 };
 
 #pragma mark - APP相机控制相关
@@ -391,6 +440,66 @@ typedef NS_ENUM(Byte, PREGNANCYREMINDTYPE)
 {
     PREGNANCYREMINDTYPE_PREGNANTDAYS = 0,   //已怀孕天数
     PREGNANCYREMINDTYPE_DAYSBEFOREEDC = 1,  //距离预产期天数
+};
+
+
+#pragma mark - App定位服务相关
+typedef NS_ENUM(Byte, APPLOCATIONSERVICESTATE)
+{
+    APPLOCATIONSERVICESTATE_AVAILABLE = 0x00,    //正常
+    APPLOCATIONSERVICESTATE_RESTRICTED = 0x01,   //APP定位权限受限
+    APPLOCATIONSERVICESTATE_DISABLEDWITHIOS = 0x02, //手机定位功能未开启
+};
+
+#pragma mark - Alexa
+
+/**
+ * @brief Alexa校验错误
+*/
+typedef NS_ENUM(Byte, ALEXACHECKERROR)
+{
+    ALEXACHECKERROR_VOICEIDNOTMATCH = 0x00,             //VoiceId不匹配
+    ALEXACHECKERROR_BADLENGTH = 0x01,                   //长度校验失败
+    ALEXACHECKERROR_CRC = 0x02,                         //CRC校验失败
+   
+};
+
+/**
+ * @brief Alexa调用错误
+*/
+typedef NS_ENUM(Byte, ALEXAINVOKEERROR)
+{
+    ALEXAINVOKEERROR_SUCCESS = 0x00,                   //成功
+    ALEXAINVOKEERROR_REGIONNOTSUPPORT = 0x01,          //该国家或者语言不支持Alexa
+    ALEXAINVOKEERROR_NETWORKOFFLINE = 0x02,            //无网络
+    ALEXAINVOKEERROR_NOTAUTHED = 0x03,                 //未授权
+    ALEXAINVOKEERROR_APPNOTIMPLEMENTED = 0xFE,         //APP不支持
+    ALEXAINVOKEERROR_UNKOWN = 0xFF,                    //未知错误
+};
+
+/**
+ * @brief Alexa结果类型
+*/
+typedef NS_ENUM(Byte, ALEXARESULTTYPE)
+{
+    ALEXARESULTTYPE_TEXT = 0x00,                        //普通文本
+    ALEXARESULTTYPE_DIRECTIVE = 0x01,                   //指令
+};
+
+#pragma mark - 表盘相关
+
+/**
+ * @brief 表盘Item标志
+*/
+typedef NS_ENUM(Byte, WATCHFACEITEMFLAG)
+{
+    WATCHFACEITEMFLAG_BUILTIN = 0x00,                               //当前表盘编号位置为内置，不可推送的
+    WATCHFACEITEMFLAG_ALLOWPUSH = 0x10,                             //当前表盘编号位置可推送表盘，可根据表盘编号获取缩略图显示
+    WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE1 = 0x20,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式1
+    WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE2 = 0x21,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式2
+    WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE3 = 0x22,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式3
+    WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE4 = 0x23,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式4
+    WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE5 = 0x24,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式5
 };
 
 #endif /* FitCloudKitDefines_h */

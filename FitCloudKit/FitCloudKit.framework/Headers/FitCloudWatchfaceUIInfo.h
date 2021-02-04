@@ -7,6 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudKitDefines.h>
+
+/**
+ * @brief FitCloud 表盘 Item
+ */
+@interface FitCloudWatchfaceItem : NSObject
+
+/**
+ * @brief 标志
+ */
+@property(nonatomic, readonly) WATCHFACEITEMFLAG flag;
+
+/**
+ * @brief 编号
+ */
+@property(nonatomic, readonly) UInt16 watchfaceIndex;
+
+/**
+ * @brief 版本
+ */
+@property(nonatomic, readonly) UInt16 watchfaceVersion;
+
+@end
 
 /**
  * @brief FitCloud 表盘UI信息
@@ -42,6 +65,8 @@
  *       4: 320*385方
  *       5.320*360方
  *       6.240*284方
+ *       7.240*280方
+ *       8.348*442方
 */
 @property(nonatomic, readonly) UInt8 screenSolution;
 
@@ -50,6 +75,11 @@
 */
 @property(nonatomic, readonly, strong) NSString* toolVersion;
 
+/**
+ * @brief 表盘列表
+ * @Note 仅当 allowWatchFaceUpgrade 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
+*/
+@property(nonatomic, readonly, strong) NSArray<FitCloudWatchfaceItem*>*items;
 
 @end
 
