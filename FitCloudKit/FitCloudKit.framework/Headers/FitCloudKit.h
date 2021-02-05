@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2021-02-02  Version:1.2.2 Build:202102020001
+//     pcjbird    2021-02-05  Version:1.2.2 Build:202102050001
 //                            1.新增天气推送开关，仅部分手表支持
 //                            2.新增通知手表App定位服务状态
 //                            3.新增洗手提醒功能

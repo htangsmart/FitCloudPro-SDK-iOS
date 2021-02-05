@@ -408,6 +408,22 @@ typedef NS_ENUM(UInt16, FITCLOUDSPORTSTYPE)
     FITCLOUDSPORTSTYPE_FITNESSBIKE_BRACELETAPP = 0x3E,               //健身车 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
     FITCLOUDSPORTSTYPE_FITNESSBIKE_APPONLY = 0x3F,                   //健身车 APP单独
     FITCLOUDSPORTSTYPE_FITNESSBIKE_APPBRACELET = 0x40,               //健身车 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_FITNESS_BRACELETONLY = 0x41,                  //健身 手环单独
+    FITCLOUDSPORTSTYPE_FITNESS_BRACELETAPP = 0x42,                   //健身 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_FITNESS_APPONLY = 0x43,                       //健身 APP单独
+    FITCLOUDSPORTSTYPE_FITNESS_APPBRACELET = 0x44,                   //健身 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_TENNIS_BRACELETONLY = 0x45,                   //网球 手环单独
+    FITCLOUDSPORTSTYPE_TENNIS_BRACELETAPP = 0x46,                    //网球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_TENNIS_APPONLY = 0x47,                        //网球 APP单独
+    FITCLOUDSPORTSTYPE_TENNIS_APPBRACELET = 0x48,                    //网球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_BASEBALL_BRACELETONLY = 0x49,                 //棒球 手环单独
+    FITCLOUDSPORTSTYPE_BASEBALL_BRACELETAPP = 0x4a,                  //棒球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_BASEBALL_APPONLY = 0x4b,                      //棒球 APP单独
+    FITCLOUDSPORTSTYPE_BASEBALL_APPBRACELET = 0x4c,                  //棒球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_RUGBY_BRACELETONLY = 0x4d,                    //橄榄球 手环单独
+    FITCLOUDSPORTSTYPE_RUGBY_BRACELETAPP = 0x4e,                     //橄榄球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_RUGBY_APPONLY = 0x4f,                         //橄榄球 APP单独
+    FITCLOUDSPORTSTYPE_RUGBY_APPBRACELET = 0x50,                     //橄榄球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
 };
 
 #pragma mark - APP相机控制相关

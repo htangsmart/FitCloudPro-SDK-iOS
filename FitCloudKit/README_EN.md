@@ -43,6 +43,24 @@
 
 ## Releases
 
+V1.2.2 Build202102050001
+
+```
+  Release Date：2021-02-05
+  Features：
+  1. Weather push switch added, only for some of the watches.
+  2. App location service state notify to the watch added.
+  3. Hand washing reminder added.
+  4. New watchface size 240 * 280 square support.
+  5. Synchronization data parsing exception process, we will drop the data illegal.
+  6. Lock screen password support, only for some of the watches.
+  7. Schedule reminder added, only for some of the watches.
+  8. Hike & Youtube notification support, only for some of the watches.
+  9. New watchface size 348 * 442 square support.
+  10. Specifies the watchface push position/index support, you can retrieve the related information from FitCloudKit.
+  11. New definitions of sports type.
+```
+
 V1.2.1 Build202010300001
 
 ```
