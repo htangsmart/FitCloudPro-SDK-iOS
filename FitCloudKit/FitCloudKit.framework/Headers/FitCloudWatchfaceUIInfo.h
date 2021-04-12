@@ -10,6 +10,20 @@
 #import <FitCloudKit/FitCloudKitDefines.h>
 
 /**
+ * @brief 表盘模块
+ */
+@interface FitCloudWatchfaceModule : NSObject
+
+/**
+ * @brief 模块样式
+ */
+@property(nonatomic, readonly) WATCHFACEMODULESTYLE moduleStyle;
+
++(FitCloudWatchfaceModule*) moduleWithStyle:(WATCHFACEMODULESTYLE)moduleStyle;
+
+@end
+
+/**
  * @brief FitCloud 表盘 Item
  */
 @interface FitCloudWatchfaceItem : NSObject
@@ -29,6 +43,11 @@
  */
 @property(nonatomic, readonly) UInt16 watchfaceVersion;
 
+/**
+ * @brief 所有模块(组件)
+ * @Note 仅当 allowWatchfaceModular 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
+ */
+@property(nonatomic, strong, readonly) NSArray<FitCloudWatchfaceModule*>* modules;
 @end
 
 /**
@@ -67,6 +86,10 @@
  *       6.240*284方
  *       7.240*280方
  *       8.348*442方
+ *       9.280*240方
+ *       10.200*320方
+ *       11.368*448方
+ *       12.320*390方
 */
 @property(nonatomic, readonly) UInt8 screenSolution;
 

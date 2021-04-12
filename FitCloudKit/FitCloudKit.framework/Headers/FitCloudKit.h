@@ -9,6 +9,19 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2021-04-12  Version:1.2.3 Build:202104120001
+//                            1.新增压力测量，仅部分手表支持
+//                            2.修正日程设置指令的问题
+//                            3.修正锁屏密码设置指令的问题
+//                            4.表盘尺寸支持280*240方/200*320方/368*448方/320*390方
+//                            5.新增表盘模块化(组件化)支持
+//                            6.新增压力指数测量
+//                            7.修正日程获取指令的问题
+//                            8.支持自定义设定手表语言
+//                              @note: 如果你希望SDK初始化时就设定好，@see watchPreferLang for FitCloudOption
+//                                     如果你系统在APP运行中动态改变手表语言设定请调用setSmartWatchLanguage:completion:
+//                                     此外，原先的syncSystemLanguageWithBlock也会受到影响，也就是说如果你自定义设定了手表语言，原先的syncSystemLanguageWithBlock也会同步自定义的手表语言设定
+//
 //     pcjbird    2021-02-05  Version:1.2.2 Build:202102050001
 //                            1.新增天气推送开关，仅部分手表支持
 //                            2.新增通知手表App定位服务状态
@@ -150,6 +163,9 @@
 #import <FitCloudKit/FitCloudCallback.h>
 #import <FitCloudKit/FitCloudOption.h>
 #import <FitCloudKit/FitCloudKitConnectRecord.h>
+#import <FitCloudKit/SmartWatchOperation.h>
+#import <FitCloudKit/SmartWatchOperation+Private.h>
+#import <FitCloudKit/SmartWatchBackgroundOperationQueue.h>
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -689,6 +705,15 @@ NS_ASSUME_NONNULL_BEGIN
 */
 +(void)getWatchfaceUIInformationWithBlock:(FitCloudWatchfaceUIInfoResultBlock _Nullable)block;
 
+#pragma mark 设置表盘模块化信息
+/**
+ * @brief 设置表盘模块化信息
+ * @param position 表盘位置，有效值0～10
+ * @param modules 模块化信息
+ * @param block 结果回调
+*/
++(void)setWatchfacePostion:(NSInteger) position modules:(NSArray<FitCloudWatchfaceModule*>*)modules completion:(FitCloudResultBlock _Nullable)block;
+
 
 #pragma mark 女性健康设置
 /**
@@ -724,10 +749,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 同步系统语言
 /**
-* @brief 同步系统语言（将手表的时间同步成跟手机的系统语言一致）
-* @param block 同步结果回调
+ * @brief 同步系统语言（将手表的时间同步成跟手机的系统语言一致）
+ * @note  如果你自定义设定了手表语言将同步您的设定
+ * @param block 同步结果回调
 */
 +(void)syncSystemLanguageWithBlock:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 自定义设置手表语言
+/**
+ * @brief 自定义设置手表语言
+ * @param lang 语言
+ * @param block 结果回调
+*/
++(void)setSmartWatchLanguage:(FITCLOUDLANGUAGE)lang completion:(FitCloudResultBlock _Nullable )block;
 
 #pragma mark 查找手表 (查找成功则手表会震动或发出提醒声)
 /**

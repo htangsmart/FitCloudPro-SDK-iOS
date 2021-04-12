@@ -175,4 +175,9 @@
  */
 @property(nonatomic, readonly) BOOL allowMultiWatchfacePush;
 
+/**
+ * @brief 是否支持表盘模块化
+ */
+@property(nonatomic, readonly) BOOL allowWatchfaceModular;
+
 @end
