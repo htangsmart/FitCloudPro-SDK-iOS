@@ -26,6 +26,22 @@
  
 ## Releases
 
+V1.2.1 Build202102250001
+
+```
+  Release Date：2021-02-25
+  Features：
+  1、Upgrade the Realtek firmware upgrade program to support the 8762D platform.
+```
+
+V1.2.0 Build202009280001
+
+```
+  Release Date：2020-09-28
+  Features：
+  1、Turkish/Ukrainian added.
+```
+
 V1.1.9 Build202008140001
 
 ```
