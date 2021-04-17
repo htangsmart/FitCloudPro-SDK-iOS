@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2021-04-12  Version:1.2.3 Build:202104120001
+//     pcjbird    2021-04-17  Version:1.2.3 Build:202104170001
 //                            1.新增压力测量，仅部分手表支持
 //                            2.修正日程设置指令的问题
 //                            3.修正锁屏密码设置指令的问题
@@ -20,7 +20,9 @@
 //                            8.支持自定义设定手表语言
 //                              @note: 如果你希望SDK初始化时就设定好，@see watchPreferLang for FitCloudOption
 //                                     如果你系统在APP运行中动态改变手表语言设定请调用setSmartWatchLanguage:completion:
-//                                     此外，原先的syncSystemLanguageWithBlock也会受到影响，也就是说如果你自定义设定了手表语言，原先的syncSystemLanguageWithBlock也会同步自定义的手表语言设定
+//                                     此外，原先的syncSystemLanguageWithBlock也会受到影响，也就是说如果你自定义设定了手表语言，
+//                                     原先的syncSystemLanguageWithBlock也会同步自定义的手表语言设定
+//                            9. 新增设置是否允许手表设置日程，仅当时手表支持日程功能时有效
 //
 //     pcjbird    2021-02-05  Version:1.2.2 Build:202102050001
 //                            1.新增天气推送开关，仅部分手表支持
@@ -425,6 +427,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void)getAlarmsWithBlock:(FitCloudAlarmsResultBlock _Nullable )block;
 
+#pragma mark 设置是否允许手表设置日程
+/**
+ * @brief 设置是否允许手表设置日程
+ * @param allow 是否允许手表设置日程
+ * @param block 结果回调
+ */
++(void)setAllowWatchScheduleSettings:(BOOL)allow completion:(FitCloudResultBlock _Nullable )block;
+
 #pragma mark 设置日程列表
 /**
  * @brief 设置日程（将手机上的日程列表同步到手表）
@@ -708,11 +718,11 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark 设置表盘模块化信息
 /**
  * @brief 设置表盘模块化信息
- * @param position 表盘位置，有效值0～10
- * @param modules 模块化信息
+ * @param position 表盘位置，有效值0～10，调用该接口会切换表盘到该位置
+ * @param modules 模块化信息，如果为nil，则只是切表盘，否则同时修改组件
  * @param block 结果回调
 */
-+(void)setWatchfacePostion:(NSInteger) position modules:(NSArray<FitCloudWatchfaceModule*>*)modules completion:(FitCloudResultBlock _Nullable)block;
++(void)setWatchfacePostion:(NSInteger) position modules:(NSArray<FitCloudWatchfaceModule*>* _Nullable)modules completion:(FitCloudResultBlock _Nullable)block;
 
 
 #pragma mark 女性健康设置
