@@ -181,9 +181,10 @@ pod 'FitCloudDFUKit'
 /**
  * @brief 升级进度回调
  * @param progress 升级进度百分比(0~100)
- * @param index 当前镜像索引
+ * @param index 当前镜像索引，下标从0开始
+ * @param total 所有镜像数量
  */
--(void) OnDFUProgress:(CGFloat)progress imageIndex:(NSInteger)index
+-(void) OnDFUProgress:(CGFloat)progress imageIndex:(NSInteger)index total:(NSInteger)total
 {
     NSLog(@"当前固件升级进度：%2ld%%", (long)roundf(progress));
 }

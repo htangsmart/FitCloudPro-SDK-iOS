@@ -180,8 +180,9 @@ In the project `Info.Plist` set the following privacy permissions using descript
  * @brief callback of DFU progress
  * @param progress percent of the progress(0~100)
  * @param index firmware image index
+ * @param total total firmware image count
  */
--(void) OnDFUProgress:(CGFloat)progress imageIndex:(NSInteger)index
+-(void) OnDFUProgress:(CGFloat)progress imageIndex:(NSInteger)index total:(NSInteger)total
 {
     NSLog(@"Current progress：%2ld%%", (long)roundf(progress));
 }
