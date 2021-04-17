@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudKitDefines.h>
 
 /**
  * @brief FitCloudKit选项
@@ -37,6 +38,11 @@
  * @brief 是否应该自动扫描连接， 默认否
  */
 @property(nonatomic, assign) BOOL    shouldAutoConnect;
+
+/**
+ * @brief 手表语言偏好，默认：FITCLOUDLANGUAGE_NOTSET
+ */
+@property(nonatomic, assign) FITCLOUDLANGUAGE watchPreferLang;
 
 /**
  * @brief 是否优先使用系统的本地化语言设置，这将影响同步给手表的语言设置， 默认否

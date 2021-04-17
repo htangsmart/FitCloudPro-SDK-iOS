@@ -241,6 +241,29 @@
 
 @end
 
+#pragma mark - 压力
+
+/**
+ * @brief 压力指数(Stress Index)数据条目
+ */
+@interface FitCloudStressIndexItemObject : FitCloudManualSyncItemObject
+
+/**
+ * @brief 压力指数
+ */
+@property(nonatomic, assign) UInt8  stressIndex;
+
+
+@end
+
+/**
+ * @brief 手表压力指数(Stress Index)数据记录
+ */
+@interface FitCloudStressIndexRecordObject : FitCloudManualSyncRecordObject<FitCloudStressIndexItemObject*>
+
+
+@end
+
 #pragma mark - 运动模式
 
 /**
@@ -306,6 +329,7 @@ typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM)
     FITCLOUDREALTIMEMHEALTHEASUREITEM_BREATHERATE = 1 << 3,            //呼吸频率
     FITCLOUDREALTIMEMHEALTHEASUREITEM_ECG = 1 << 4,                    //心电
     FITCLOUDREALTIMEMHEALTHEASUREITEM_BODYTEMPERATURE = 1 << 5,        //体温
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_STRESSINDEX = 1 << 6,            //压力指数
 };
 
 /**
@@ -379,6 +403,11 @@ typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM)
  * @brief 体温，单位：摄氏度
  */
 @property(nonatomic, assign) CGFloat  body;
+
+/**
+ * @brief 压力，当手表支持压力指数时有效
+ */
+@property(nonatomic, assign) UInt8  stressIndex;
 
 @end
 

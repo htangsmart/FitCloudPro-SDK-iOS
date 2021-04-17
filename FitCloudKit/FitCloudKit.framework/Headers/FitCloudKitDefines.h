@@ -53,6 +53,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR)
     FITCLOUDKITERROR_NOTDFUMODE = 60003,                     //当前不是DFU模式
     FITCLOUDKITERROR_FAVCONTACTSREACHMAX = 70001,            //常用联系人数量达到最大值，最多支持设定10个常用联系人
     FITCLOUDKITERROR_FAVCONTACTSNOTSUPPORT = 70002,          //当前手表不支持常用联系人
+    FITCLOUDKITERROR_NOCHANGEWITHSETTINGS = 80001,           //当前设定没有变化
 };
 
 #pragma mark - 日志等级
@@ -119,6 +120,8 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE)
     FITCLOUDHARDWARE_SHOULDSAVEHEARTRATEWHENSPORTSMODE = 1 << 9,      //运动模式保存心率数据，1.运动模式的数据item中增加心率，长度会变化，时间间隔也变化，具体看协议文档 2.App上要增加心率曲线
     FITCLOUDHARDWARE_BODYTEMPERATURE = 1 << 10,       //体温
     FITCLOUDHARDWARE_WOMENHEALTH = 1 << 11,           //女性健康
+    FITCLOUDHARDWARE_VOICERECOG = 1 << 12,            //语音识别， 为1时手表上有语音识别功能，为0则手表上没有语音识别功能
+    FITCLOUDHARDWARE_STRESSINDEX = 1 << 13,           //压力指数
 };
 
 #pragma mark - 手环显示
@@ -516,6 +519,21 @@ typedef NS_ENUM(Byte, WATCHFACEITEMFLAG)
     WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE3 = 0x22,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式3
     WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE4 = 0x23,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式4
     WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE5 = 0x24,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式5
+};
+
+/**
+ * @brief 表盘模块样式
+*/
+typedef NS_ENUM(Byte, WATCHFACEMODULESTYLE)
+{
+    WATCHFACEMODULESTYLE_1 = 0x00,
+    WATCHFACEMODULESTYLE_2 = 0x01,
+    WATCHFACEMODULESTYLE_3 = 0x02,
+    WATCHFACEMODULESTYLE_4 = 0x03,
+    WATCHFACEMODULESTYLE_5 = 0x04,
+    WATCHFACEMODULESTYLE_6 = 0x05,
+    WATCHFACEMODULESTYLE_7 = 0x06,
+    WATCHFACEMODULESTYLE_INVALID = 0x07,
 };
 
 #endif /* FitCloudKitDefines_h */

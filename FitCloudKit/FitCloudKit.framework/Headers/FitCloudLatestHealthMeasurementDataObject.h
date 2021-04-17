@@ -45,6 +45,11 @@
  */
 @property(nonatomic, readonly) CGFloat  body;
 
+/**
+ * @brief 压力指数
+ */
+@property(nonatomic, readonly) UInt8 stressIndex;
+
 @end
 
 
