@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FitcloudKit/FitCloudKitDefines.h>
+#import <FitCloudKit/FitCloudKitDefines.h>
 
 @interface FitCloudWomenHealthSetting : NSObject<NSCoding>
 
