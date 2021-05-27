@@ -138,9 +138,13 @@ pod 'FitCloudWFKit'
 ## 生成自定义表盘
 
 ```objc
+FitCloudAllConfigObject *allConfig = [FitCloudKit allConfig];
+
+BOOL isNextGUI = [allConfig isKindOfClass:[FitCloudAllConfigObject class]] && allConfig.firmware && allConfig.firmware.isNewGUIArchitecture;
+
 NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEFAULT_20200618142928_MP-cc0c13932ab8ca2f89301678993cfdeb" ofType:@"bin"];
 
-[FitCloudWFKit createWithTemplateBin:templateBinPath bkImage:resolvedBKImage bkCornerRadius:0 preview:resolvedPreviewImage dtPosition:_watchfaceStyle.dtPosition progress:^(CGFloat progress, NSString * _Nullable message) {
+[FitCloudWFKit createWithTemplateBin:templateBinPath isNextGUI:isNextGUI bkImage:resolvedBKImage bkCornerRadius:0 preview:resolvedPreviewImage dtPosition:_watchfaceStyle.dtPosition progress:^(CGFloat progress, NSString * _Nullable message) {
     XLOG_INFO(@"progress:%@%%, tip:%@", [NumberFormatUtil roundString:@(progress*100) withMaximumFractionDigits:1], message);
     
 } logging:^(FCWKLOGLEVEL level, NSString * _Nullable message) {
