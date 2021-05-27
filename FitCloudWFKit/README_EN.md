@@ -28,6 +28,15 @@
 
 ## Releases
 
+
+V1.0.8 Build202105260001
+
+```
+  Release Date：2021-05-26
+  Features：
+  1、 Next GUI watchface support.
+```
+
 V1.0.7 Build202102020001
 
 ```

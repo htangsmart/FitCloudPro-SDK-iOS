@@ -8,6 +8,9 @@
 //  框架名称:FitCloudWFKit.framework
 //  框架功能:iOS framework help you creating watchface with fitcloud smart watch easily. FitCloud 智能手表表盘创建辅助框架，旨在帮助您轻松创建属于您自己的表盘文件。
 //  修改记录:
+//     pcjbird    2021-05-26  Version:1.0.8 Build:202105260001
+//                            1.Next GUI 自定义表盘生成支持
+//
 //     pcjbird    2021-02-02  Version:1.0.7 Build:202102020001
 //                            1.自定义表盘增加文件大小信息的日志打印
 //
@@ -115,6 +118,7 @@ typedef void(^FitCloudWatchfacePushIndexModifyResultBlock)(BOOL success, NSStrin
 /**
  * @brief 根据模版Bin文件生成新的自定义表盘Bin文件
  * @param templateBin 模版Bin文件路径
+ * @param isNextGUI 是否为下一代表盘GUI模版
  * @param bkImage 背景图
  * @param bkCornerRadius 背景图圆角大小
  * @param preview 预览图
@@ -123,7 +127,8 @@ typedef void(^FitCloudWatchfacePushIndexModifyResultBlock)(BOOL success, NSStrin
  * @param logging 日志
  * @param completion 结果回调
 */
-+(void) createWithTemplateBin:(NSString*_Nonnull)templateBin bkImage:(UIImage*_Nonnull)bkImage bkCornerRadius:(CGFloat)bkCornerRadius preview:(UIImage*_Nonnull)preview dtPosition:(FITCLOUDWATCHFACEDTPOSITION)dtPosition progress:(FitCloudWatchfaceCreatingProgress  _Nullable)progress logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging completion:(FitCloudWatchfaceCreateResultBlock _Nullable)completion;
++(void) createWithTemplateBin:(NSString*_Nonnull)templateBin isNextGUI:(BOOL)isNextGUI bkImage:(UIImage*_Nonnull)bkImage bkCornerRadius:(CGFloat)bkCornerRadius preview:(UIImage*_Nonnull)preview dtPosition:(FITCLOUDWATCHFACEDTPOSITION)dtPosition progress:(FitCloudWatchfaceCreatingProgress  _Nullable)progress logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging completion:(FitCloudWatchfaceCreateResultBlock _Nullable)completion;
+
 
 /**
  * @brief 根据模版Bin文件修改表盘的推送位置，生成新的表盘Bin文件
