@@ -24,6 +24,47 @@
 @end
 
 /**
+ * @brief 表盘模块坐标定位
+ */
+@interface FitCloudWatchfaceModuleLocation: NSObject
+
+/**
+ * @brief 坐标x
+ */
+@property(nonatomic, readonly) UInt16 x;
+/**
+ * @brief 坐标y
+ */
+@property(nonatomic, readonly) UInt16 y;
+/**
+ * @brief 宽度
+ */
+@property(nonatomic, readonly) UInt16 width;
+/**
+ * @brief 高度
+ */
+@property(nonatomic, readonly) UInt16 height;
+
+@end
+
+/**
+ * @brief 表盘模块信息
+ */
+@interface FitCloudWatchfaceModuleInfo: NSObject
+
+/**
+ * @brief 支持的样式数量
+ */
+@property(nonatomic, readonly) UInt16 supportedStyleCount;
+
+/**
+ * @brief 位置及大小信息
+ */
+@property(nonatomic, readonly, strong) FitCloudWatchfaceModuleLocation* location;
+
+@end
+
+/**
  * @brief FitCloud 表盘 Item
  */
 @interface FitCloudWatchfaceItem : NSObject
@@ -36,7 +77,7 @@
 /**
  * @brief 编号
  */
-@property(nonatomic, readonly) UInt16 watchfaceIndex;
+@property(nonatomic, readonly) UInt32 watchfaceIndex;
 
 /**
  * @brief 版本
@@ -48,6 +89,12 @@
  * @Note 仅当 allowWatchfaceModular 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
  */
 @property(nonatomic, strong, readonly) NSArray<FitCloudWatchfaceModule*>* modules;
+
+/**
+ * @brief 所有模块(组件)信息
+ * @Note 仅当 allowWatchfaceModular 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
+ */
+@property(nonatomic, strong, readonly) NSArray<FitCloudWatchfaceModuleInfo*>* moduleInfos;
 @end
 
 /**
@@ -68,12 +115,19 @@
 /**
  * @brief 当前表盘编号
 */
-@property(nonatomic, readonly) UInt16 watchfaceIndex;
+@property(nonatomic, readonly) UInt32 watchfaceIndex;
 
 /**
  * @brief 当前表盘版本号
+ * @Note 当 allowWatchFaceUpgrade 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时无效
 */
 @property(nonatomic, readonly) UInt16 watchfaceVersionNo;
+
+/**
+ * @brief 当前显示的表盘所在的位置
+ * @Note 仅当 allowWatchFaceUpgrade 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
+*/
+@property(nonatomic, readonly) UInt16 displayedWFPosition;
 
 /**
  * @brief LCD像素与形状

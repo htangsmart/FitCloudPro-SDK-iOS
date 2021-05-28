@@ -180,4 +180,9 @@
  */
 @property(nonatomic, readonly) BOOL allowWatchfaceModular;
 
+/**
+ * @brief 是否为新的GUI结构
+ */
+@property(nonatomic, readonly) BOOL isNewGUIArchitecture;
+
 @end

@@ -40,6 +40,11 @@
 @property(nonatomic, strong, readonly) NSString* macAddr;
 
 /**
+ * @brief 是否为下一代厂商名称
+ */
+@property(nonatomic, readonly) BOOL nextManufacturerName;
+
+/**
  * @brief 是否已经跟系统配对
  */
 @property(nonatomic, assign) BOOL  paired;

@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2021-04-17  Version:1.2.3 Build:202104170001
+//     pcjbird    2021-05-24  Version:1.2.3 Build:202105240001
 //                            1.新增压力测量，仅部分手表支持
 //                            2.修正日程设置指令的问题
 //                            3.修正锁屏密码设置指令的问题
@@ -23,6 +23,9 @@
 //                                     此外，原先的syncSystemLanguageWithBlock也会受到影响，也就是说如果你自定义设定了手表语言，
 //                                     原先的syncSystemLanguageWithBlock也会同步自定义的手表语言设定
 //                            9. 新增设置是否允许手表设置日程，仅当时手表支持日程功能时有效
+//                           10. 支持将自行扫描的外设转换成可连接的外设
+//                           11. 新GUI结构相关协议更新
+//                           12. 下一代厂商名称支持，下一代厂商名称可以确定不需要过滤蓝牙名称中首字母H
 //
 //     pcjbird    2021-02-05  Version:1.2.2 Build:202102050001
 //                            1.新增天气推送开关，仅部分手表支持
@@ -208,6 +211,13 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief 停止扫描手表设备
  */
 +(void)stopScan;
+
+/**
+ * @brief 如果您使用自己的扫描方法，将您的外设转换成可连接的外设
+ * @param peripheral 您自己扫描的外设
+ * @param completion 转换结果
+ */
++ (void)translatePeripheral:(CBPeripheral * _Nonnull )peripheral toConnectablePeripheralCompletion:(void(^_Nullable)(BOOL success, NSError * _Nullable error, CBPeripheral * _Nullable connectablePeripheral)) completion;
 
 /**
  * @brief 连接手表设备

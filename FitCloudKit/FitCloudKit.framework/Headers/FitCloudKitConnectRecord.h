@@ -19,6 +19,11 @@
 @property(nonatomic, strong) NSString* name;
 
 /**
+ * @brief 是否为下一代厂商名称
+ */
+@property(nonatomic, assign) BOOL nextManufacturerName;
+
+/**
  * @brief UUID
  */
 @property(nonatomic, strong) NSUUID*   uuid;
