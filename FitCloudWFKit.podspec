@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "FitCloudWFKit"
-    s.version          = "1.0.8"
+    s.version          = "1.0.9"
     s.summary          = "FitCloud 智能手表自定义表盘创建框架， 旨在帮助您轻松创建属于您自己的表盘文件。"
     s.description      = <<-DESC
     iOS framework help you creating customized watchface for fitcloud smart watch easily. 

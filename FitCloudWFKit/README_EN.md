@@ -28,6 +28,13 @@
 
 ## Releases
 
+V1.0.9 Build202106010001
+
+```
+  Release Date：2021-06-01
+  Features：
+  1、 Fix Next GUI watchface generating issue with round corner processing.
+```
 
 V1.0.8 Build202105260001
 

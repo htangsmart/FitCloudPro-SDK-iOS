@@ -8,6 +8,9 @@
 //  框架名称:FitCloudWFKit.framework
 //  框架功能:iOS framework help you creating watchface with fitcloud smart watch easily. FitCloud 智能手表表盘创建辅助框架，旨在帮助您轻松创建属于您自己的表盘文件。
 //  修改记录:
+//     pcjbird    2021-06-01  Version:1.0.9 Build:202106010001
+//                            1.修正 Next GUI 自定义表盘生成圆角处理的问题
+//
 //     pcjbird    2021-05-26  Version:1.0.8 Build:202105260001
 //                            1.Next GUI 自定义表盘生成支持
 //
