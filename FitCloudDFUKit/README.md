@@ -224,7 +224,7 @@ pod 'FitCloudDFUKit'
 
 ```objc
 FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
-[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor isUI:NO];
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:NO];
 ```
 
 ## 普通固件升级/UI固件升级/表盘推送
