@@ -222,7 +222,7 @@ In the project `Info.Plist` set the following privacy permissions using descript
 
 ```objc
 FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
-[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor isUI:NO];
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:NO];
 ```
 
 ## Normal DFU / UI DFU / Watchface DFU
@@ -238,11 +238,11 @@ Check the battery level of the watch and get the dfuPeripheral. If it fails, I d
 
 **Step 2**
 
-Start the dfu, the isUI parameters means different types of dfu. YES: UI DFU or Watchface DFU; NO: Normal DFU.
+Start the dfu, the silentMode parameters means different types of dfu. YES: UI DFU or Watchface DFU; NO: Normal DFU.
 
 ```objc
 FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
-[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor isUI:YES];
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:YES];
 ```
 
 Process the delegate and log callback information. When the upgrade succeeds or fails, you need to observe the reconnection notification in DFU mode, like this:
