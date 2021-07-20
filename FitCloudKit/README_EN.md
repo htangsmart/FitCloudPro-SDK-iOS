@@ -43,6 +43,38 @@
 
 ## Releases
 
+V1.2.3 Build202107200001
+
+```
+  Release Date：2021-07-20
+  Features：
+  1. Stress index measurement support, only for some of the watches.
+  2. Schedule settings issue fixed.
+  3. Lock screen password settings issue fixed.
+  4. New watchface size 280 * 240 square / 200 * 320 squre / 368 * 448 square / 320 * 390 square  support.
+  5. The watchface modular support.
+  6. Schedule settings get issue fixed.
+  7. Set the watch localization language by app support.
+     @note: if you would like to set it when the sdk initialize, @see watchPreferLang for FitCloudOption
+     if you would like to set it anytime when the app running, invoke setSmartWatchLanguage:completion:
+     besides, the original syncSystemLanguageWithBlock may be affected by this behaviour.
+  8. The watch schedule can set by itself option set support.
+  9. You can scan the peripheral yourself and tranlate the peripheral you scanned to the connnectable peripheral.
+  10. Next GUI support.
+  11. The next generation manufacturer name supports. The next generation manufacturer name prefix letter H not need to be filtered.
+  12. The watchface modular information missed issue fixe when switch the watchface.
+  13. The maximum size of firmware that can be pushed for each watch position added, unit: kB.
+  14. Nordic support.
+  15. Game features: retrieve game categories, only for some of the watches.
+  16. Game features: retrieve top game rank records, only for some of the watches.
+  17. Game features: retrieve game skins, only for some of the watches.
+  18. New watchface size 172 * 320 square / 454 * 454 round / 128 * 220 square  support.
+  19. +(void)ignoreConnectedPeripheral:(BOOL)silent; add silent param.
+  20. Add FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY,
+      It is suggested that the user enter the system settings to remove the pairing information with the watch, kill the app process and restart the app. 
+      @Note: the notification may be sent continuously, and the app needs to avoid repeatedly prompting the user, causing trouble to the user.
+```
+
 V1.2.2 Build202102050001
 
 ```
