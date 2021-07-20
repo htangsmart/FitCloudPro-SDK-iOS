@@ -38,6 +38,8 @@
 #import <FitCloudKit/FitCloudHandWashRemindObject.h>
 #import <FitCloudKit/FitCloudLockScreenSetting.h>
 #import <FitCloudKit/FitCloudScheduleObject.h>
+#import <FitCloudKit/FitCloudGameObject.h>
+#import <FitCloudKit/FitCloudGameSkinObject.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -271,6 +273,30 @@ typedef void (^FitCloudDataManualSyncResultBlock)(BOOL succeed, NSString* userId
  *@param error 错误信息
  */
 typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, NSString* userId, FitCloudDailyHealthAndSportsDataObject* dataObject, NSError* error);
+
+/**
+ *@brief FitCloud 请求当前手环支持的游戏类型结果回调
+ *@param succeed 是否成功
+ *@param games 游戏列表
+ *@param error 错误信息
+ */
+typedef void (^FitCloudSupportedGamesResultBlock)(BOOL succeed, NSArray<FitCloudGameObject*>* games, NSError* error);
+
+/**
+ *@brief FitCloud 请求游戏最高三个游戏记录结果回调
+ *@param succeed 是否成功
+ *@param records 游戏记录列表
+ *@param error 错误信息
+ */
+typedef void (^FitCloudTop3RankGameRecordsResultBlock)(BOOL succeed, NSArray<FitCloudGameItemObject*>* records, NSError* error);
+
+/**
+ *@brief FitCloud 请求所有游戏皮肤信息结果回调
+ *@param succeed 是否成功
+ *@param allGameSkins 游戏皮肤信息列表
+ *@param error 错误信息
+ */
+typedef void (^FitCloudAllGameSkinsResultBlock)(BOOL succeed, NSArray<FitCloudGameSkinObject*>* allGameSkins, NSError* error);
 
 /**
  * @brief FitCloud 请求手表UI信息结果回调

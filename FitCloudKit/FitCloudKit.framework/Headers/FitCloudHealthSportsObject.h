@@ -264,6 +264,49 @@
 
 @end
 
+#pragma mark - 游戏记录
+
+/**
+ * @brief 游戏记录数据条目
+ */
+@interface FitCloudGameItemObject : FitCloudManualSyncItemObject
+
+/**
+ * @brief 游戏类型
+ */
+@property(nonatomic, assign) FITCLOUDGAME  category;
+
+/**
+ * @brief 游戏开始时间
+ */
+@property(nonatomic, strong) NSDate* begin;
+
+/**
+ * @brief 游戏持续时长，单位：s
+ */
+@property(nonatomic, assign) NSInteger duration;
+
+/**
+ * @brief 游戏分数
+ */
+@property(nonatomic, assign) NSInteger score;
+
+/**
+ * @brief 等级关卡
+ */
+@property(nonatomic, assign) NSInteger level;
+
+
+@end
+
+/**
+ * @brief 游戏记录数据
+ */
+@interface FitCloudGameRecordObject : FitCloudManualSyncRecordObject<FitCloudGameItemObject*>
+
+
+@end
+
 #pragma mark - 运动模式
 
 /**

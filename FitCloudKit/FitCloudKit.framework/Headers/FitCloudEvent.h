@@ -172,4 +172,11 @@ extern NSString *const FITCLOUDEVENT_ECG_STOP_NOTIFY;
  */
 extern NSString *const FITCLOUDEVENT_WATCHCONFIG_REMOTE_MANUAL_CHANGED_NOTIFY;
 
+/**
+ * @brief 手表上的配对信息丢失或与iOS系统上的配对信息不匹配通知，建议用户进入系统设置解除与该手表的配对信息，杀死App进程并重新启动App。
+ * @note: 该通知可能连续发送，应用层需要避免重复提示用户，给用户造成困扰
+ */
+extern NSString *const FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY;
+
+
 #endif /* FitCloudEvent_h */

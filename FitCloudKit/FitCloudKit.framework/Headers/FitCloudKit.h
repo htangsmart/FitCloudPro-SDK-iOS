@@ -9,24 +9,33 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2021-05-31  Version:1.2.3 Build:202105310001
-//                            1.新增压力测量，仅部分手表支持
+//     pcjbird    2021-07-20  Version:1.2.3 Build:202107200001
+//                            1.新增压力指数测量，仅部分手表支持
 //                            2.修正日程设置指令的问题
 //                            3.修正锁屏密码设置指令的问题
 //                            4.表盘尺寸支持280*240方/200*320方/368*448方/320*390方
 //                            5.新增表盘模块化(组件化)支持
-//                            6.新增压力指数测量
-//                            7.修正日程获取指令的问题
-//                            8.支持自定义设定手表语言
+//                            6.修正日程获取指令的问题
+//                            7.支持自定义设定手表语言
 //                              @note: 如果你希望SDK初始化时就设定好，@see watchPreferLang for FitCloudOption
-//                                     如果你系统在APP运行中动态改变手表语言设定请调用setSmartWatchLanguage:completion:
+//                                     如果你希望在APP运行中动态改变手表语言设定请调用setSmartWatchLanguage:completion:
 //                                     此外，原先的syncSystemLanguageWithBlock也会受到影响，也就是说如果你自定义设定了手表语言，
 //                                     原先的syncSystemLanguageWithBlock也会同步自定义的手表语言设定
-//                            9. 新增设置是否允许手表设置日程，仅当时手表支持日程功能时有效
-//                           10. 支持将自行扫描的外设转换成可连接的外设
-//                           11. 新GUI结构相关协议更新
-//                           12. 下一代厂商名称支持，下一代厂商名称可以确定不需要过滤蓝牙名称中首字母H
-//                           13. 修正切换表盘导致表盘模块信息丢失的问题
+//                            8. 新增设置是否允许手表设置日程，仅当时手表支持日程功能时有效
+//                           9. 支持将自行扫描的外设转换成可连接的外设
+//                           10. 新GUI结构相关协议更新
+//                           11. 下一代厂商名称支持，下一代厂商名称可以确定不需要过滤蓝牙名称中首字母H
+//                           12. 修正切换表盘导致表盘模块信息丢失的问题
+//                           13. 多表盘推送支持获取每个表盘位置最大可推送固件的大小，单位：kB
+//                           14. 支持Nordic芯片
+//                           15. 新增获取手表支持的游戏类型，仅部分手表支持
+//                           16. 新增获取游戏最高三个游戏记录，仅部分手表支持
+//                           17. 新增获取手环上所有游戏对应的皮肤信息，仅部分手表支持
+//                           18. 表盘尺寸支持172*320方/454*454圆/128*220方
+//                           19. +(void)ignoreConnectedPeripheral:(BOOL)silent; 添加 silent 参数
+//                           20. 新增FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY通知，
+//                               建议用户进入系统设置解除与该手表的配对信息，杀死App进程并重新启动App。具体参照其定义
+//                               @note: 该通知可能连续发送，应用层需要避免重复提示用户，给用户造成困扰
 //
 //     pcjbird    2021-02-05  Version:1.2.2 Build:202102050001
 //                            1.新增天气推送开关，仅部分手表支持
@@ -239,8 +248,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @brief 忽略当前已连接未绑定/绑定失败的设备
+ * @param silent YES则不会打印相关日志
  */
-+(void)ignoreConnectedPeripheral;
++(void)ignoreConnectedPeripheral:(BOOL)silent;
 
 
 #pragma mark 请求打开蓝牙来允许连接到配件
@@ -783,6 +793,27 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
 */
 +(void)setSmartWatchLanguage:(FITCLOUDLANGUAGE)lang completion:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取手表支持的游戏类型
+/**
+ * @brief 获取手表支持的游戏类型
+ * @param block 结果回调
+*/
++(void)getSupportedGamesWithBlock:(FitCloudSupportedGamesResultBlock _Nullable)block;
+
+#pragma mark 获取游戏最高三个游戏记录
+/**
+ * @brief 获取游戏最高三个游戏记录
+ * @param block 结果回调
+*/
++(void)getTop3RankGameRecordsWithBlock:(FitCloudTop3RankGameRecordsResultBlock _Nullable)block;
+
+#pragma mark 获取手表所有游戏的皮肤信息
+/**
+ * @brief  获取手表所有游戏的皮肤信息
+ * @param block 结果回调
+*/
++(void)getAllGameSkinsWithBlock:(FitCloudAllGameSkinsResultBlock _Nullable)block;
 
 #pragma mark 查找手表 (查找成功则手表会震动或发出提醒声)
 /**

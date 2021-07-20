@@ -85,6 +85,11 @@
 @property(nonatomic, readonly) UInt16 watchfaceVersion;
 
 /**
+ * @brief 最大可推送表盘的大小，单位：kB
+ */
+@property(nonatomic, readonly) NSInteger maxAllowPushBinFileSize;
+
+/**
  * @brief 所有模块(组件)
  * @Note 仅当 allowWatchfaceModular 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
  */
@@ -144,6 +149,9 @@
  *       10.200*320方
  *       11.368*448方
  *       12.320*390方
+ *       13.172*320方
+ *       14.454*454圆
+ *       15.128*220方
 */
 @property(nonatomic, readonly) UInt8 screenSolution;
 

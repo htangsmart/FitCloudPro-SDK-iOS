@@ -122,6 +122,8 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE)
     FITCLOUDHARDWARE_WOMENHEALTH = 1 << 11,           //女性健康
     FITCLOUDHARDWARE_VOICERECOG = 1 << 12,            //语音识别， 为1时手表上有语音识别功能，为0则手表上没有语音识别功能
     FITCLOUDHARDWARE_STRESSINDEX = 1 << 13,           //压力指数
+    FITCLOUDHARDWARE_GAME = 1 << 14,                  //游戏
+    FITCLOUDHARDWARE_NORDIC = 1 << 15,                //Nordic芯片
 };
 
 #pragma mark - 手环显示
@@ -534,6 +536,24 @@ typedef NS_ENUM(Byte, WATCHFACEMODULESTYLE)
     WATCHFACEMODULESTYLE_6 = 0x05,
     WATCHFACEMODULESTYLE_7 = 0x06,
     WATCHFACEMODULESTYLE_INVALID = 0x07,
+};
+
+#pragma mark - 游戏相关
+
+/**
+ * @brief 游戏类型定义
+*/
+typedef NS_ENUM(Byte, FITCLOUDGAME)
+{
+    FITCLOUDGAME_PETDEV = 0,            //宠物养成类
+    FITCLOUDGAME_2048 = 1,              //2048游戏
+    FITCLOUDGAME_CANDY = 2,             //糖果消消乐
+    FITCLOUDGAME_PICTUREPUZZLE = 3,     //拼图游戏
+    FITCLOUDGAME_PLANE = 4,             //飞机游戏
+    FITCLOUDGAME_RACINGCAR = 5,         //赛车游戏
+    FITCLOUDGAME_MAZE = 6,              //迷宫游戏
+    FITCLOUDGAME_BASKETBALL = 7,        //篮球游戏
+    FITCLOUDGAME_ARITHMETIC = 8,        //算术题游戏
 };
 
 #endif /* FitCloudKitDefines_h */
