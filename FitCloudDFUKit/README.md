@@ -144,6 +144,9 @@ pod 'FitCloudDFUKit'
     * CoreGraphics.framework
     
     * CoreBluetooth.framework
+5. 在Podfile中添加
+   
+   pod 'iOSDFULibrary', '4.10.3'
 
  
 ## 设置隐私权限
