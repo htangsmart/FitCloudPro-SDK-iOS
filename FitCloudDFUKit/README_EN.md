@@ -26,6 +26,14 @@
  
 ## Releases
 
+V1.2.2 Build202106040001
+
+```
+  Release Date：2021-06-04
+  Features：
+  1、Nordic DFU support.
+```
+
 V1.2.1 Build202102250001
 
 ```
