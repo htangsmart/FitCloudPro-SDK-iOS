@@ -28,6 +28,30 @@
 
 ## Releases
 
+V1.1.2 Build202106170001
+
+```
+  Release Date：2021-06-17
+  Features：
+  1、 Change game skin push  position/index support.
+```
+
+V1.1.1 Build202106160001
+
+```
+  Release Date：2021-06-16
+  Features：
+  1、 Next GUI watchface image in bin file storage optimization.
+```
+
+V1.1.0 Build202106050001
+
+```
+  Release Date：2021-06-05
+  Features：
+  1、 Change Next GUI watchface No. support.
+```
+
 V1.0.9 Build202106010001
 
 ```
