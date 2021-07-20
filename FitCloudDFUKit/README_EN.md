@@ -143,6 +143,10 @@ Method 2: download from making ` FitCloudDFUKit `, manual integrated into your p
 
     * CoreGraphics framework
     * CoreBluetooth framework
+    
+5. Add dependency in Podfile:
+
+   pod 'iOSDFULibrary', '4.10.3'
 
 ## Privacy Permissions
 In the project `Info.Plist` set the following privacy permissions using description, the actual describe the content depends on your business.
