@@ -8,6 +8,9 @@
 //  框架名称:FitCloudDFUKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet Device Firmware Upgrade, which is responsible for the upgrade of bracelet firmware. FitCloud智能手环固件升级的iOS框架，负责手环固件升级等功能的封装。
 //  修改记录:
+//     pcjbird    2021-06-04  Version:1.2.2 Build:202106040001
+//                            1.Nordic固件升级支持
+//
 //     pcjbird    2021-02-25  Version:1.2.1 Build:202102250001
 //                            1.升级Realtek固件升级程序，支持8762D平台
 //

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "FitCloudDFUKit"
-    s.version          = "1.2.1"
+    s.version          = "1.2.2"
     s.summary          = "和唐公司智能手表固件升级SDK。"
     s.description      = <<-DESC
     iOS framework for FitCloud Smart Bracelet Device Firmware Upgrade, which is responsible for the upgrade of bracelet firmware. FitCloud智能手表固件升级的iOS框架，负责手表固件升级等功能的封装。
@@ -14,11 +14,13 @@ Pod::Spec.new do |s|
     s.documentation_url = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudDFUKit/README.md'
     s.screenshot       = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/raw/master/FitCloudDFUKit/logo.png'
 
-    s.platform         = :ios, '8.0'
+    s.platform         = :ios, '9.0'
     s.frameworks       = 'Foundation', 'CoreBluetooth', 'CoreGraphics'
 
     s.vendored_frameworks = 'FitCloudDFUKit/FitCloudDFUKit.framework'
     s.resource = 'FitCloudDFUKit/FitCloudDFUKit.bundle'
+
+    s.dependency 'iOSDFULibrary', '~> 4.10.3'
 
     s.swift_version = '5.0'
 
