@@ -26,6 +26,7 @@ typedef NS_ENUM(NSInteger, FCWKERRORCODE)
     FCWKERRORCODE_COMMONEXCEPTION = 2008,                        //生成表盘时发生异常
     FCWKERRORCODE_BADPUSHINDEX = 3001,                           //错误的表盘推送位置(索引)
     FCWKERRORCODE_TEMPLATEBINFILEBADSIZE = 3002,                 //表盘模版bin文件长度不正确
+    FCWKERRORCODE_BADWATCHFACENO = 3003,                         //非法的表盘编号
 };
 
 #define FCWKERRORDOMAIN @"FCWKERRORDOMAIN"

@@ -13,7 +13,7 @@
 
 * Compatibility
   
-  ###### 1. iOS 8.0 and Above；
+  ###### 1. iOS 9.0 and Above；
   
   ###### 2. armv7/i386/x86_64/arm64 Instruction Set；
   
