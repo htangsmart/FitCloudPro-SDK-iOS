@@ -597,7 +597,7 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 
 >Q: 如何处理多台iOS设备先后绑定配对同一个手表导致的异常情况？
 >
->A: 通常情况下，用户只会拿一台iOS设备去绑定配对手表，但仍然有少部分用户会拿多台iOS设备先后去绑定配对一个手表，从而导致先前连接配对的那台iOS设备与手表配对异常，无法重新连接手表，请参照FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY通知进行处理。
+>A: 通常情况下，用户只会拿一台iOS设备去绑定配对手表，但仍然有少部分用户会拿多台iOS设备先后去绑定配对一个手表，从而导致先前连接配对的那台iOS设备与手表配对异常，无法重新连接手表，这是由于这些手表设备同时只能存储与一台iOS设备的配对信息所导致的，后面设备的配对信息覆盖了之前的配对信息，从而导致iOS设备上的配对信息与手表上的配对信息不匹配，请参照 FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY 通知进行处理。
 
 ## 技术支持
 
