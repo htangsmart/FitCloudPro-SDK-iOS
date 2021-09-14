@@ -185,4 +185,24 @@
  */
 @property(nonatomic, readonly) BOOL isNewGUIArchitecture;
 
+/**
+ * @brief 是否支持游戏皮肤推送
+ */
+@property(nonatomic, readonly) BOOL allowGameSkinPush;
+
+/**
+ * @brief 是否支持Apple Music、Zoom & Tiktok 提醒
+ */
+@property(nonatomic, readonly) BOOL allowAppleMusicZoomAndTiktokReminder;
+
+/**
+ * @brief 是否支持扫码连接
+ */
+@property(nonatomic, readonly) BOOL allowQRCodeConnect;
+
+/**
+ * @brief 是否支持获取屏幕分辨率信息
+ */
+@property(nonatomic, readonly) BOOL allowRetrieveScreenResolution;
+
 @end

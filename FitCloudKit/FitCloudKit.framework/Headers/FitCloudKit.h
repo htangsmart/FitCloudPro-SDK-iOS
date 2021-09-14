@@ -9,6 +9,21 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
+//     pcjbird    2021-09-13  Version:1.2.4 Build:202109130001
+//                            1.新增是否支持游戏皮肤推送标志
+//                            2.新增是否支持Apple Music、Zoom & Tiktok 提醒标志及其通知定义
+//                            3.新增是否支持扫码连接标志
+//                            4.添加硬件标识FITCLOUDHARDWARE_DFUSHOULDSILENTMODE
+//                            5.新增俄罗斯方块游戏/数独游戏/答题游戏定义
+//                            6.扫码绑定项目新增绑定失败原因(手表主动取消/手表超时未点击确认)
+//                            7.新增获取/设置亮屏时长、亮度、振动等信息
+//                            8.新增是否应该禁用自定义表盘功能标识
+//                            9.新增手表离开查找手机功能界面回调
+//                            10.手表偏好设置新增蓝牙断开时手表振动选项
+//                            11.修复同步心电数据时手表断开连接导致之后无法回连的问题
+//                            12.新增获取屏幕分辨率原始信息(lcd宽高/是否圆形屏幕/圆角大小等)指令，仅部分固件支持
+//                            13.Nordic平台表盘编号也扩展到3个字节
+//
 //     pcjbird    2021-07-20  Version:1.2.3 Build:202107200001
 //                            1.新增压力指数测量，仅部分手表支持
 //                            2.修正日程设置指令的问题
@@ -814,6 +829,29 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
 */
 +(void)getAllGameSkinsWithBlock:(FitCloudAllGameSkinsResultBlock _Nullable)block;
+
+#pragma mark 获取亮屏时长、亮度、振动等信息
+/**
+ * @brief  获取亮屏时长、亮度、振动等信息
+ * @param block 结果回调
+*/
++(void)getScreenAndVibrateSettingsWithBlock:(FitCloudScreenAndVibrateSettingsResultBlock _Nullable)block;
+
+#pragma mark 获取屏幕分辨率相关信息
+/**
+ * @brief  获取屏幕分辨率相关信息
+ * @param block 结果回调
+*/
++(void)getScreenResolutionWithBlock:(FitCloudScreenResolutionResultBlock _Nullable)block;
+
+#pragma mark 设置亮屏时长、亮度、振动等信息
+/**
+ * @brief 设置亮屏时长、亮度、振动等信息
+ * @param screenSettings 亮屏时长、亮度等信息
+ * @param vibrateSettings 马达振动信息
+ * @param block 结果回调
+*/
++(void)setScreenSettings:(FitCloudScreenSetting*) screenSettings vibrateSettings:(FitCloudVibrateSetting*)vibrateSettings completion:(FitCloudResultBlock _Nullable )block;
 
 #pragma mark 查找手表 (查找成功则手表会震动或发出提醒声)
 /**

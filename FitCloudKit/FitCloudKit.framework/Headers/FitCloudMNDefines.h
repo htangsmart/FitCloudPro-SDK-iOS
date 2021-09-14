@@ -36,6 +36,9 @@ typedef NS_OPTIONS(UInt32, FITCLOUDMN)
     FITCLOUDMN_SNAPCHAT = 1 << 18,              //SNAPCHAT通知
     FITCLOUDMN_HIKE = 1 << 19,                  //HIKE通知
     FITCLOUDMN_YOUTUBE = 1 << 20,               //YOUTUBE通知
+    FITCLOUDMN_APPLEMUSIC = 1 << 21,            //Apple Music通知
+    FITCLOUDMN_ZOOM = 1 << 22,                  //Zoom通知
+    FITCLOUDMN_TIKTOK = 1 << 23,                //Tiktok通知
     FITCLOUDMN_OTHER = ((UInt32)1) << 31,       //其他APP通知
 };
 

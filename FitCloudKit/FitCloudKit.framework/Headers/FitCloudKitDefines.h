@@ -37,6 +37,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR)
     FITCLOUDKITERROR_WRONGPARAM = 20026,                    //参数错误
     FITCLOUDKITERROR_USEROBJECTALREADYBOUND = 30001,         //手环已经绑定用户，请先解绑
     FITCLOUDKITERROR_USEROBJECTSHOULDBINDFIRST = 30002,      //需要先绑定用户
+    FITCLOUDKITERROR_CANCELBYREMOTEPEER = 30003,             //手表主动取消绑定
+    FITCLOUDKITERROR_CONFIRMTIMEOUTWITHREMOTEPEER = 30004,   //手表超时未点击确认绑定
     FITCLOUDKITERROR_DATASYNCREPEATREQUEST = 40001,          //当前正在同步历史运动健康数据，请勿重复请求
     FITCLOUDKITERROR_REQUESTSYNCDATALENFAILURE = 40002,      //请求待同步的运动健康数据总长度失败
     FITCLOUDKITERROR_BLOCKBYDATASYNC = 40003,                //当前正在同步历史运动健康数据，请稍后再试
@@ -124,6 +126,9 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE)
     FITCLOUDHARDWARE_STRESSINDEX = 1 << 13,           //压力指数
     FITCLOUDHARDWARE_GAME = 1 << 14,                  //游戏
     FITCLOUDHARDWARE_NORDIC = 1 << 15,                //Nordic芯片
+    FITCLOUDHARDWARE_DFUSHOULDSILENTMODE = 1 << 16,   //固件升级使用静默升级
+    FITCLOUDHARDWARE_SCREENANDVIBRATEPARAM = 1 << 17, //屏幕及马达参数调节(亮屏时长/亮度/马达振动强度)
+    FITCLOUDHARDWARE_SHOULDDISABLEDIYWATCHFACE = 1 << 18, // 是否应该禁用自定义表盘功能
 };
 
 #pragma mark - 手环显示
@@ -164,6 +169,7 @@ typedef NS_OPTIONS(UInt16, FITCLOUDPREFER)
     FITCLOUDPREFER_IMPERIALUNIT = 1 << 3,           //英制  0公制 1英制
     FITCLOUDPREFER_FAHRENHEIT = 1 << 4,             //华氏度 0摄氏度 1华氏度
     FITCLOUDPREFER_WEATHERPUSH = 1 << 5,            //开启天气推送  0关 1开
+    FITCLOUDPREFER_VIBRATEWHENDISCONNECT = 1 << 6,  //蓝牙断开时手表振动 0关 1开
 };
 
 #pragma mark - 手环语言
@@ -554,6 +560,9 @@ typedef NS_ENUM(Byte, FITCLOUDGAME)
     FITCLOUDGAME_MAZE = 6,              //迷宫游戏
     FITCLOUDGAME_BASKETBALL = 7,        //篮球游戏
     FITCLOUDGAME_ARITHMETIC = 8,        //算术题游戏
+    FITCLOUDGAME_TETRIS = 9,            //俄罗斯方块游戏
+    FITCLOUDGAME_SUDOKU = 10,           //数独游戏
+    FITCLOUDGAME_ANSWER = 11,           //答题游戏
 };
 
 #endif /* FitCloudKitDefines_h */

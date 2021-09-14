@@ -153,7 +153,7 @@
  *       14.454*454圆
  *       15.128*220方
 */
-@property(nonatomic, readonly) UInt8 screenSolution;
+@property(nonatomic, readonly) UInt8 lcd;
 
 /**
  * @brief 表盘生成工具版本

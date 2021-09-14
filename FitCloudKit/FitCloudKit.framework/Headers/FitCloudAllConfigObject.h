@@ -20,6 +20,8 @@
 #import <FitCloudKit/FitCloudWomenHealthSetting.h>
 #import <FitCloudKit/FitCloudPRObject.h>
 #import <FitCloudKit/FitCloudHandWashRemindObject.h>
+#import <FitCloudKit/FitCloudScreenSetting.h>
+#import <FitCloudKit/FitCloudVibrateSetting.h>
 
 /**
  * @brief 手环所有配置信息（用于手环绑定时一次性获取）
@@ -101,5 +103,15 @@
  * @brief 洗手提醒设置
  */
 @property(nonatomic, strong)FitCloudHandWashRemindObject* hwrSetting;
+
+/**
+ * @brief 屏幕设置
+ */
+@property(nonatomic, strong)FitCloudScreenSetting* screenSetting;
+
+/**
+ * @brief 振动设置
+ */
+@property(nonatomic, strong) FitCloudVibrateSetting* vibrateSetting;
 
 @end
