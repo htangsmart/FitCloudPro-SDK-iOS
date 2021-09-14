@@ -293,7 +293,7 @@ NSString* hardwareInfo = [firmware description];
 
 ```objc
 FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
-    NSInteger lcd = faceUI.screenSolution;
+    NSInteger lcd = faceUI.lcd;
 }];
 ```
 
