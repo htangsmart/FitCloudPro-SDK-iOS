@@ -26,6 +26,22 @@
  
 ## Releases
 
+V1.2.4 Build202108230001
+
+```
+  Release Date：2021-08-23
+  Features：
+  1、Fix some dfu failure issue.
+```
+
+V1.2.3 Build202108040001
+
+```
+  Release Date：2021-08-04
+  Features：
+  1、Fix dfu failure issue on iOS11.4.
+```
+
 V1.2.2 Build202106040001
 
 ```
