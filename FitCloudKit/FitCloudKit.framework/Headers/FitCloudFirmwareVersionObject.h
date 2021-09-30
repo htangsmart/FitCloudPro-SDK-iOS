@@ -136,7 +136,7 @@
 @property(nonatomic, readonly) BOOL allowSetLSRInterval;
 
 /**
- * @brief 是否支持天气预报
+ * @brief 是否支持天气预报(该手表支持实时天气 + 未来几天的天气预报)
 */
 @property(nonatomic, readonly) BOOL allowWeatherForecast;
 

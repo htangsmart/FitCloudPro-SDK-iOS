@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2021-09-15  Version:1.2.4 Build:202109150001
+//     pcjbird    2021-09-30  Version:1.2.4 Build:202109300001
 //                            1.新增是否支持游戏皮肤推送标志
 //                            2.新增是否支持Apple Music、Zoom & Tiktok 提醒标志及其通知定义
 //                            3.新增是否支持扫码连接标志
@@ -25,6 +25,9 @@
 //                            13.Nordic平台表盘编号也扩展到3个字节
 //                            14.修复游戏皮肤获取只能获取到3条的问题
 //                            15.修改表盘/游戏皮肤最大可推送文件的大小计算规则
+//                            16.修改天气硬件功能标志位定义
+//                            17.新增手表是否支持运动模式(DIY)固件推送标识
+//                            18.新增获取设备可支持的运动模式类型列表/设备当前运动模式类型列表，仅部分手表支持
 //
 //     pcjbird    2021-07-20  Version:1.2.3 Build:202107200001
 //                            1.新增压力指数测量，仅部分手表支持
@@ -845,6 +848,20 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
 */
 +(void)getScreenResolutionWithBlock:(FitCloudScreenResolutionResultBlock _Nullable)block;
+
+#pragma mark 获取设备可支持的运动模式类型列表
+/**
+ * @brief  获取设备可支持的运动模式类型列表
+ * @param block 结果回调
+*/
++(void)getSupportedWatchSportsWithBlock:(FitCloudSupportedWatchSportsResultBlock _Nullable)block;
+
+#pragma mark 获取设备当前运动模式类型列表
+/**
+ * @brief  获取设备当前运动模式类型列表
+ * @param block 结果回调
+*/
++(void)getCurrentWatchSportsWithBlock:(FitCloudCurrentWatchSportsResultBlock _Nullable)block;
 
 #pragma mark 设置亮屏时长、亮度、振动等信息
 /**

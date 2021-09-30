@@ -114,7 +114,7 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE)
     FITCLOUDHARDWARE_BLOODOXYGEN = 1 << 1,            //血氧
     FITCLOUDHARDWARE_BLOODPRESSURE = 1 << 2,          //血压
     FITCLOUDHARDWARE_BREATHERATE = 1 << 3,            //呼吸频率
-    FITCLOUDHARDWARE_WEATHERFORECAST = 1 << 4,        //天气预报
+    FITCLOUDHARDWARE_WEATHER = 1 << 4,                //天气
     FITCLOUDHARDWARE_ECG = 1 << 5,                    //心电
     FITCLOUDHARDWARE_SPORTSMODE = 1 << 6,             //运动模式
     FITCLOUDHARDWARE_WECHATSPORTS = 1 << 7,           //微信运动
@@ -129,6 +129,7 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE)
     FITCLOUDHARDWARE_DFUSHOULDSILENTMODE = 1 << 16,   //固件升级使用静默升级
     FITCLOUDHARDWARE_SCREENANDVIBRATEPARAM = 1 << 17, //屏幕及马达参数调节(亮屏时长/亮度/马达振动强度)
     FITCLOUDHARDWARE_SHOULDDISABLEDIYWATCHFACE = 1 << 18, // 是否应该禁用自定义表盘功能
+    FITCLOUDHARDWARE_SPORTSMODEDIY = 1 << 19,         //运动模式(DIY)固件推送
 };
 
 #pragma mark - 手环显示
