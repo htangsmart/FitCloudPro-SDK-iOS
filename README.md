@@ -18,14 +18,24 @@
   * [英文文档(English Doc)](FitCloudDFUKit/README_EN.md)
 
 
-# 3. FitCloudWFKit
-#### FitCloudPro 智能手表表盘创建辅助框架， 旨在帮助您轻松创建属于您自己的表盘文件。
-#### iOS framework help you creating watchface for fitcloudpro smart watch easily. 
+# 3. FitCloudWFKit (适用于Realtek芯片/for Realtek chip)
+#### FitCloudPro 智能手表表盘辅助框架， 旨在帮助您轻松自定义属于您自己的表盘文件。
+#### iOS framework help you customize watchface for fitcloudpro smart watch easily. 
 [![Pod Version](http://img.shields.io/cocoapods/v/FitCloudWFKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudWFKit/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/FitCloudWFKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudWFKit/)
 
   * [中文文档(Chinese Doc)](FitCloudWFKit/README.md)
   * [英文文档(English Doc)](FitCloudWFKit/README_EN.md)
+
+
+# 4. FitCloudNWFKit (适用于Nordic芯片/for Nordic chip)
+#### FitCloudPro 智能手表表盘辅助框架， 旨在帮助您轻松自定义属于您自己的表盘文件。
+#### iOS framework help you customize watchface for fitcloudpro smart watch easily. 
+[![Pod Version](http://img.shields.io/cocoapods/v/FitCloudNWFKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudNWFKit/)
+[![Pod Platform](http://img.shields.io/cocoapods/p/FitCloudNWFKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudNWFKit/)
+
+  * [中文文档(Chinese Doc)](FitCloudNWFKit/README.md)
+  * [英文文档(English Doc)](FitCloudNWFKit/README_EN.md)
 
 
 

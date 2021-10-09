@@ -1,0 +1,6 @@
+framework module FitCloudNWFKit {
+  umbrella header "FitCloudNWFKit.h"
+
+  export *
+  module * { export * }
+}

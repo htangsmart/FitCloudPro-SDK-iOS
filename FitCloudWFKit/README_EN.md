@@ -3,7 +3,7 @@
 ## Summary
 * What is FitCloudWFKit?
 
-  >###### iOS framework help you creating watchface for fitcloud smart watch easily.
+  >###### iOS framework help you customize watchface for fitcloud smart watch easily.
 
 * Scope
 
@@ -148,9 +148,9 @@ Method 2: download from making ` FitCloudWFKit `, manual integrated into your pr
 
 1. FitCloudWFKit SDK includes:
     * FitCloudWFKit. Framework  
-      static library, smart bracelet development kit core framework
+      static library, smart watch development kit core framework
     * FitCloudWFKit.bundle   
-      smart bracelet development kit core resource package
+      smart watch development kit core resource package
 
 2. Add the framework to the project;
 
