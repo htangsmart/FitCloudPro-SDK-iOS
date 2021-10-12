@@ -43,6 +43,31 @@
 
 ## Releases
 
+V1.2.4 Build202110120001
+
+```
+  Release Date：2021-10-12
+  Features：
+  1. Add flag to identify whether allow the game skin dfu update.
+  2. Add Apple Music、Zoom & Tiktok Notification support, only for some of the watches.
+  3. Add flag to identify whether allow the QRCode scan connnect.
+  4. Add hardware flag FITCLOUDHARDWARE_DFUSHOULDSILENTMODE.
+  5. Add Game defines for TETRIS/SUDOKU/ANSWER.
+  6. Add QRCode scan connect failure reason(Cancel by the watch/Timeout with click confirm). 
+  7. Obtain/set information such as bright screen duration, brightness, vibration, etc. added.
+  8. Add flag to identify whether should disable the watchface customize.
+  9. Add notify for the watch ui leave the "Find the iPhone".
+  10.Add option for vibration when ble disconnect at FITCLOUDPREFER.
+  11.Fix issue reconnect failure when disconnect during ECG data sync.
+  12.Add command to obtain the original information of screen resolution (LCD width and height / whether the screen is round / screen corner size, etc.), only for some of the watches.
+  13.The Nordic platform Watchface No. is also extended to 3 bytes.
+  14.Fix the issue that the game skin can only get 3 items.
+  15.Modify the calculation rules of the maximum pushable file size of the watchface / game skin.
+  16.Modify the definition of weather hardware function flag.
+  17.Add flag to identify whether allow the sports mode dfu update.
+  18.Add sports mode supported list and the current list, only for some of the watches.
+```
+
 V1.2.3 Build202107200001
 
 ```
