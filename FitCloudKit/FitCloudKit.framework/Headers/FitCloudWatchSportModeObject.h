@@ -6,7 +6,6 @@
 //  Copyright © 2021 Zero Status. All rights reserved.
 //
 
-#import "FitCloudCommand.h"
 #import <FitCloudKit/FitCloudKitDefines.h>
 
 /**
