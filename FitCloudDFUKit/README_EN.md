@@ -293,7 +293,7 @@ When you decide not to continue with the firmware upgrade or plan to exit the DF
 [FitCloudKit exitDFUModeWithBlock:nil];
 ```
 
-## Parameters required for docking to obtain our watch face server
+## Parameters required for docking to obtain our watchface server
 
 If you are our business customers who allowed to connect our watchface server, you may need to obtain some parameters from the SDK and pass it to our server. Of course, to obtain this capability, you need to contact our business manager.
 
