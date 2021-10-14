@@ -309,7 +309,7 @@ NSString* hardwareInfo = [firmware description];
 * lcd
 
 ```objc
-FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
+[FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
     NSInteger lcd = faceUI.lcd;
 }];
 ```
@@ -317,7 +317,7 @@ FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchface
 * toolVersion
 
 ```objc
-FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
+[FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
     NSString* toolVersion = faceUI.toolVersion;
 }];
 ```

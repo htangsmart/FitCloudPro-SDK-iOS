@@ -91,7 +91,7 @@ NSString* hardwareInfo = [firmware description];
 * lcd
 
 ```objc
-FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
+[FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
     NSInteger lcd = faceUI.lcd;
 }];
 ```
@@ -99,7 +99,7 @@ FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchface
 * toolVersion
 
 ```objc
-FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
+[FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
     NSString* toolVersion = faceUI.toolVersion;
 }];
 ```
@@ -172,7 +172,7 @@ WatchfaeTemplate {
 * lcd
 
 ```objc
-FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
+[FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
     NSInteger lcd = faceUI.lcd;
 }];
 ```
@@ -180,7 +180,7 @@ FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchface
 * toolVersion
 
 ```objc
-FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
+[FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
     NSString* toolVersion = faceUI.toolVersion;
 }];
 ```
@@ -203,6 +203,12 @@ FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchface
 #### 调用 FitCloudWFKit 修改表盘的背景图/预览图/日期的位置等，生成新的表盘文件
 
   [参看 Github 上 FitCloudWFKit 的相关文档。](https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudWFKit/README.md)
+
+
+#### 调用 FitCloudWFKit 修改表盘推送到手表上的位置（可选）
+   如果你需要指定表盘推送到手表上的位置，你可以再次调用 FitCloudWFKit 来修改表盘文件，如果不需要直接跳到下一步。
+
+   [参看 Github 上 FitCloudWFKit 的相关文档。](https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudWFKit/README.md)
 
 
 #### 调用 FitCloudDFUKit 将生成的新的表盘文件推送到手表
