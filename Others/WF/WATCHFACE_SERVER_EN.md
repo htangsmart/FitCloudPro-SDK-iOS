@@ -142,7 +142,7 @@ How to obtain the matching watchface template according to the current watch, yo
 
 API：http://ft-cn.hetangsmart.com/public/dial/custom    
 Feature：Query the watchface template matching the current watch.   
-Method：POST. 
+Method：POST.   
 Params：
 
 |Param|Type|Requried|Description| 
