@@ -106,7 +106,7 @@ FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchface
 }];
 ```
 
-* #### Invoke FitCloudDFUKit to push the watchface bin file to the watch
+### Invoke FitCloudDFUKit to push the watchface bin file to the watch
 
   [Visit document for FitCloudDFUKit at Github](https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudDFUKit/README_EN.md)
 
