@@ -44,6 +44,9 @@
 #import <FitCloudKit/FitCloudVibrateSetting.h>
 #import <FitCloudKit/FitCloudScreenResolution.h>
 #import <FitCloudKit/FitCloudWatchSportModeObject.h>
+#import <FitCloudKit/FitCloudSportsWithGPSData.h>
+#import <FitCloudKit/FitCloudSportsWithGPSActionParams.h>
+#import <FitCloudKit/FitCloudSportsWithGPSDistance.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -413,6 +416,12 @@ typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSStri
  *@brief 心电实时测量结束
  */
 -(void) OnRealTimeECGStop;
+
+/**
+ *@brief 手表GPS互联实时运动数据
+ *@param sportsData 数据
+ */
+-(void) OnGPSConnectSportsData:(FitCloudSportsWithGPSData*)sportsData;
 
 /**
  *@brief 手环控制手机拍照

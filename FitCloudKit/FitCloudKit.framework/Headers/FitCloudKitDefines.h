@@ -130,6 +130,7 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE)
     FITCLOUDHARDWARE_SCREENANDVIBRATEPARAM = 1 << 17, //屏幕及马达参数调节(亮屏时长/亮度/马达振动强度)
     FITCLOUDHARDWARE_SHOULDDISABLEDIYWATCHFACE = 1 << 18, // 是否应该禁用自定义表盘功能
     FITCLOUDHARDWARE_SPORTSMODEDIY = 1 << 19,         //运动模式(DIY)固件推送
+    FITCLOUDHARDWARE_WATCHSPORTSWITHGPSCONNECT = 1 << 20,//运动模式GPS互联
 };
 
 #pragma mark - 手环显示
@@ -436,6 +437,66 @@ typedef NS_ENUM(UInt16, FITCLOUDSPORTSTYPE)
     FITCLOUDSPORTSTYPE_RUGBY_BRACELETAPP = 0x4e,                     //橄榄球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
     FITCLOUDSPORTSTYPE_RUGBY_APPONLY = 0x4f,                         //橄榄球 APP单独
     FITCLOUDSPORTSTYPE_RUGBY_APPBRACELET = 0x50,                     //橄榄球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_CRICKET_BRACELETONLY = 0x51,                  //板球 手环单独
+    FITCLOUDSPORTSTYPE_CRICKET_BRACELETAPP = 0x52,                   //板球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_CRICKET_APPONLY = 0x53,                       //板球 APP单独
+    FITCLOUDSPORTSTYPE_CRICKET_APPBRACELET = 0x54,                   //板球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_FREEMOTION_BRACELETONLY = 0x55,               //自由运动 手环单独
+    FITCLOUDSPORTSTYPE_FREEMOTION_BRACELETAPP = 0x56,                //自由运动 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_FREEMOTION_APPONLY = 0x57,                    //自由运动 APP单独
+    FITCLOUDSPORTSTYPE_FREEMOTION_APPBRACELET = 0x58,                //自由运动 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_POWERTRAINING_BRACELETONLY = 0x59,            //力量训练 手环单独
+    FITCLOUDSPORTSTYPE_POWERTRAINING_BRACELETAPP = 0x5a,             //力量训练 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_POWERTRAINING_APPONLY = 0x5b,                 //力量训练 APP单独
+    FITCLOUDSPORTSTYPE_POWERTRAINING_APPBRACELET = 0x5c,             //力量训练 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_INDOORWALKING_BRACELETONLY = 0x5d,            //室内健走 手环单独
+    FITCLOUDSPORTSTYPE_INDOORWALKING_BRACELETAPP = 0x5e,             //室内健走 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_INDOORWALKING_APPONLY = 0x5f,                 //室内健走 APP单独
+    FITCLOUDSPORTSTYPE_INDOORWALKING_APPBRACELET = 0x60,             //室内健走 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_INDOORRIDING_BRACELETONLY = 0x61,            //室内骑行 手环单独
+    FITCLOUDSPORTSTYPE_INDOORRIDING_BRACELETAPP = 0x62,             //室内骑行 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_INDOORRIDING_APPONLY = 0x63,                 //室内骑行 APP单独
+    FITCLOUDSPORTSTYPE_INDOORRIDING_APPBRACELET = 0x64,             //室内骑行 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_DUMBBELL_BRACELETONLY = 0x65,                //哑铃 手环单独
+    FITCLOUDSPORTSTYPE_DUMBBELL_BRACELETAPP = 0x66,                 //哑铃 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_DUMBBELL_APPONLY = 0x67,                     //哑铃 APP单独
+    FITCLOUDSPORTSTYPE_DUMBBELL_APPBRACELET = 0x68,                 //哑铃 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_DANCING_BRACELETONLY = 0x69,                 //跳舞 手环单独
+    FITCLOUDSPORTSTYPE_DANCING_BRACELETAPP = 0x6a,                  //跳舞 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_DANCING_APPONLY = 0x6b,                      //跳舞 APP单独
+    FITCLOUDSPORTSTYPE_DANCING_APPBRACELET = 0x6c,                  //跳舞 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_HULAHOOP_BRACELETONLY = 0x6d,                 //呼啦圈 手环单独
+    FITCLOUDSPORTSTYPE_HULAHOOP_BRACELETAPP = 0x6e,                  //呼啦圈 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_HULAHOOP_APPONLY = 0x6f,                      //呼啦圈 APP单独
+    FITCLOUDSPORTSTYPE_HULAHOOP_APPBRACELET = 0x70,                  //呼啦圈 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_GOLF_BRACELETONLY = 0x71,                     //高尔夫 手环单独
+    FITCLOUDSPORTSTYPE_GOLF_BRACELETAPP = 0x72,                      //高尔夫 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_GOLF_APPONLY = 0x73,                          //高尔夫 APP单独
+    FITCLOUDSPORTSTYPE_GOLF_APPBRACELET = 0x74,                      //高尔夫 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_LONGJUMP_BRACELETONLY = 0x75,                 //跳远 手环单独
+    FITCLOUDSPORTSTYPE_LONGJUMP_BRACELETAPP = 0x76,                  //跳远 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_LONGJUMP_APPONLY = 0x77,                      //跳远 APP单独
+    FITCLOUDSPORTSTYPE_LONGJUMP_APPBRACELET = 0x78,                  //跳远 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_SITUP_BRACELETONLY = 0x79,                    //仰卧起坐 手环单独
+    FITCLOUDSPORTSTYPE_SITUP_BRACELETAPP = 0x7a,                     //仰卧起坐 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_SITUP_APPONLY = 0x7b,                         //仰卧起坐 APP单独
+    FITCLOUDSPORTSTYPE_SITUP_APPBRACELET = 0x7c,                     //仰卧起坐 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_VOLLEYBALL_BRACELETONLY = 0x7d,               //排球 手环单独
+    FITCLOUDSPORTSTYPE_VOLLEYBALL_BRACELETAPP = 0x7e,                //排球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_VOLLEYBALL_APPONLY = 0x7f,                    //排球 APP单独
+    FITCLOUDSPORTSTYPE_VOLLEYBALL_APPBRACELET = 0x80,                //排球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
 };
 
 #pragma mark - APP相机控制相关
@@ -565,5 +626,31 @@ typedef NS_ENUM(Byte, FITCLOUDGAME)
     FITCLOUDGAME_SUDOKU = 10,           //数独游戏
     FITCLOUDGAME_ANSWER = 11,           //答题游戏
 };
+
+#pragma mark -手表GPS互联实时运动相关
+
+/**
+ * @brief 手表GPS互联实时运动定义
+ */
+typedef NS_ENUM(Byte, FITCLOUDSPORTSWITHGPS)
+{
+    FITCLOUDSPORTSWITHGPS_WALKING = 0x10,       //步行
+    FITCLOUDSPORTSWITHGPS_RUNNING = 0x08,       //跑步
+    FITCLOUDSPORTSWITHGPS_CLIMBING = 0x14,      //登山
+    FITCLOUDSPORTSWITHGPS_BICYCLING = 0x04,     //骑行
+};
+
+/**
+ * @brief 手表GPS互联实时运动行为定义
+ */
+typedef NS_ENUM(Byte, FITCLOUDSPORTSWITHGPSACTION)
+{
+    FITCLOUDSPORTSWITHGPSACTION_STOP = 0x00,        //结束
+    FITCLOUDSPORTSWITHGPSACTION_START = 0x01,       //开始
+    FITCLOUDSPORTSWITHGPSACTION_PAUSE = 0x02,      //暂停
+    FITCLOUDSPORTSWITHGPSACTION_RESUME = 0x03,     //恢复
+};
+
+
 
 #endif /* FitCloudKitDefines_h */
