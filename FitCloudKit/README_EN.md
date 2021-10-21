@@ -644,7 +644,7 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 
 >Q: How to get the state of every notification?
 >
->A: You can invoke the following code to get the state of notification provided by the sdk, note that ‘FITCLOUDMN’ is NS_OPTION struct. I think you know how to use that.
+>A: You can invoke the following code to get the state of notification provided by the sdk, note that ‘FITCLOUDMN’ is NS_OPTIONS struct. I think you know how to use that.
 >
 ```objc
 [FitCloudKit getMessageNotificationSettingWithBlock:^(BOOL succeed, FITCLOUDMN mnSetting, NSError* error){
