@@ -8,6 +8,9 @@
 //  框架名称:FitCloudWFKit.framework
 //  框架功能:iOS framework help you creating watchface with fitcloud smart watch easily. FitCloud 智能手表表盘创建辅助框架，旨在帮助您轻松创建属于您自己的表盘文件。
 //  修改记录:
+//     pcjbird    2021-11-03 Version:1.1.3 Build:202111030001
+//                            1.新增修改手表运动的推送位置
+//
 //     pcjbird    2021-06-17 Version:1.1.2 Build:202106170001
 //                            1.新增修改游戏皮肤的推送位置
 //
@@ -104,6 +107,20 @@ typedef void (^FitCloudWatchfaceCreatingProgress)(CGFloat progress, NSString* _N
 typedef void (^FitCloudWatchfaceLoggingMessage)(FCWKLOGLEVEL level, NSString* _Nullable message);
 
 /**
+ *@brief 日志
+ *@param level 日志等级
+ *@param message 日志内容
+*/
+typedef void (^FitCloudGameSkinLoggingMessage)(FCWKLOGLEVEL level, NSString* _Nullable message);
+
+/**
+ *@brief 日志
+ *@param level 日志等级
+ *@param message 日志内容
+*/
+typedef void (^FitCloudWatchSportsLoggingMessage)(FCWKLOGLEVEL level, NSString* _Nullable message);
+
+/**
  *@brief 表盘生成结果
  *@param success 是否生成成功
  *@param resultBinPath 生成的表盘Bin文件路径
@@ -128,6 +145,14 @@ typedef void(^FitCloudWatchfacePushIndexModifyResultBlock)(BOOL success, NSStrin
  *@param error 错误
 */
 typedef void(^FitCloudGameSkinPushIndexModifyResultBlock)(BOOL success, NSString* _Nullable resultBinPath, NSError* _Nullable error);
+
+/**
+ *@brief 手表运动Bin推送位置修改结果
+ *@param success 是否生成成功
+ *@param resultBinPath 生成的手表运动Bin文件路径
+ *@param error 错误
+*/
+typedef void(^FitCloudWatchSportsBinPushIndexModifyResultBlock)(BOOL success, NSString* _Nullable resultBinPath, NSError* _Nullable error);
 
 
 /**
@@ -167,6 +192,15 @@ typedef void(^FitCloudGameSkinPushIndexModifyResultBlock)(BOOL success, NSString
  * @param logging 日志
  * @param completion 结果回调
 */
-+(void) modifyGameSkinBinPushIndexTo:(NSInteger)pushIndex fromTemplateBin:(NSString*_Nonnull)templateBin logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging completion:(FitCloudGameSkinPushIndexModifyResultBlock _Nullable)completion;
++(void) modifyGameSkinBinPushIndexTo:(NSInteger)pushIndex fromTemplateBin:(NSString*_Nonnull)templateBin logging:(FitCloudGameSkinLoggingMessage _Nullable)logging completion:(FitCloudGameSkinPushIndexModifyResultBlock _Nullable)completion;
+
+/**
+ * @brief 根据模版Bin文件修改手表运动的推送位置，生成新的手表运动Bin文件
+ * @param pushIndex 推送索引，取值范围 1～N
+ * @param templateBin 模版Bin文件路径
+ * @param logging 日志
+ * @param completion 结果回调
+*/
++(void) modifyWatchSportsBinPushIndexTo:(NSInteger)pushIndex fromTemplateBin:(NSString*_Nonnull)templateBin logging:(FitCloudWatchSportsLoggingMessage _Nullable)logging completion:(FitCloudWatchSportsBinPushIndexModifyResultBlock _Nullable)completion;
 
 @end
