@@ -272,11 +272,25 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 
 **Step 2**
 
-启动升级，silentMode 参数代表不同类型的升级。YES：UI固件升级或表盘推送；NO：普通固件升级。
+启动升级，silentMode 参数代表不同类型的升级。
+
+普通固件升级:
+```
+BOOL silentMode = FALSE;
+if([FitCloudKit allConfig].firmware.hardwareSupported & FITCLOUDHARDWARE_DFUSHOULDSILENTMODE)
+{
+  silentMode = TRUE;
+}
+```
+
+UI固件升级或表盘推送:
+```
+BOOL silentMode = YES;
+```
 
 ```objc
 FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
-[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:YES];
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:silentMode];
 ```
 
 处理 delegate 与日志回调信息。当升级成功或失败，您需要监听 DFU 模式下的回连通知，就像这样：
