@@ -250,8 +250,13 @@ pod 'FitCloudDFUKit'
 ## 启动固件升级
 
 ```objc
+BOOL silentMode = FALSE;
+if([FitCloudKit allConfig].firmware.hardwareSupported & FITCLOUDHARDWARE_DFUSHOULDSILENTMODE)
+{
+  silentMode = TRUE;
+}
 FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
-[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:NO];
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:silentMode];
 ```
 
 ## 普通固件升级/UI固件升级/表盘推送
