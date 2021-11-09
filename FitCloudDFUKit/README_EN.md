@@ -249,8 +249,13 @@ In the project `Info.Plist` set the following privacy permissions using descript
 ## Start DFU
 
 ```objc
+BOOL silentMode = FALSE;
+if([FitCloudKit allConfig].firmware.hardwareSupported & FITCLOUDHARDWARE_DFUSHOULDSILENTMODE)
+{
+  silentMode = TRUE;
+}
 FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
-[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:NO];
+[FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:silentMode];
 ```
 
 ## Normal DFU / UI DFU / Watchface DFU
