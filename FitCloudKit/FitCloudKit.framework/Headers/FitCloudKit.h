@@ -9,9 +9,10 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2021-10-15  Version:1.2.5 Build:202110150001
+//     pcjbird    2021-11-10  Version:1.2.5 Build:202111100001
 //                            1.新增板球/自由运动/力量训练/室内健走/室内骑行/哑铃/跳舞/呼啦圈/高尔夫/跳远/仰卧起坐/排球运动定义
 //                            2.新增手表GPS互联运动
+//                            3.新增唤醒APP相机功能，该功能有缺陷，慎用
 //
 //     pcjbird    2021-10-12  Version:1.2.4 Build:202110120001
 //                            1.新增是否支持游戏皮肤推送标志
@@ -1016,13 +1017,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void) requestRealTimeGPSConnectSports:(FitCloudSportsWithGPSActionParams*_Nonnull)params block:(FitCloudResultBlock _Nullable )block;
 
-#pragma mark 通知手表GPS互联运动当前已运动距离
+#pragma mark 通知手表GPS互联运动当前App端运动数据
 /**
- * @brief 通知手表GPS互联运动当前已运动距离
- * @param distance 已运动距离信息
+ * @brief 通知手表GPS互联运动当前App端运动数据
+ * @param appClientData 已运动信息
  * @param block 调用结果回调
  */
-+(void) notifyRealTimeGPSConnectSportsCurrentDistance:(FitCloudSportsWithGPSDistance*_Nonnull)distance block:(FitCloudResultBlock _Nullable )block;
++(void) notifyRealTimeGPSConnectSportsAppClientData:(FitCloudSportsWithGPSAppClientData*_Nonnull)appClientData block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 请求手表GPS互联运动当前状态
+/**
+ * @brief 请求手表GPS互联运动当前状态
+ * @param block 调用结果回调
+ */
++(void) requestRealTimeGPSConnectSportsCurrentStatusWithBlock:(FitCloudGPSConnectSportsCurrentStatusResultBlock _Nullable) block;
 
 @end
 

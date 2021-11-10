@@ -46,7 +46,8 @@
 #import <FitCloudKit/FitCloudWatchSportModeObject.h>
 #import <FitCloudKit/FitCloudSportsWithGPSData.h>
 #import <FitCloudKit/FitCloudSportsWithGPSActionParams.h>
-#import <FitCloudKit/FitCloudSportsWithGPSDistance.h>
+#import <FitCloudKit/FitCloudSportsWithGPSAppClientData.h>
+#import <FitCloudKit/FitCloudSportsWithGPSCurrentStatus.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -363,6 +364,14 @@ typedef void (^FitCloudWatchfaceUIInfoResultBlock)(BOOL succeed, FitCloudWatchfa
 typedef void (^FitCloudLatestHealthMeasurementDataResultBlock)(BOOL succeed, FitCloudLatestHealthMeasurementDataObject* dataObject, NSError* error);
 
 /**
+ * @brief FitCloud 请求GPS互联当前运动状态结果回调
+ * @param succeed 是否成功
+ * @param currentStatus 当前运动状态
+ * @param error 错误信息
+ */
+typedef void (^FitCloudGPSConnectSportsCurrentStatusResultBlock)(BOOL succeed, FitCloudSportsWithGPSCurrentStatus* currentStatus, NSError* error);
+
+/**
  * @brief FitCloud Alexa语音开始请求回调
  * @param result 回调结果
  */
@@ -432,6 +441,11 @@ typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSStri
  *@brief 手表通知App退出拍照
 */
 -(void)OnExitCamera;
+
+/**
+ *@brief 唤醒APP相机功能，该功能有缺陷，慎用
+ */
+-(void)OnWakeUpCamera;
 
 /**
  *@brief 收到手环的活跃通知(当前手环与手机连接还活跃着)
