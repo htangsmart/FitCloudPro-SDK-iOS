@@ -133,7 +133,7 @@ extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_BEGIN_NOTIFY;
 extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_END_NOTIFY;
 
 /**
- * @brief 手环电量信息通知 userInfo=>FitCloudBatteryInfoObject
+ * @brief 手环电量信息通知 object=>FitCloudBatteryInfoObject
  */
 extern NSString *const FTICLOUDEVENT_BATTERYINFO_NOTIFY;
 

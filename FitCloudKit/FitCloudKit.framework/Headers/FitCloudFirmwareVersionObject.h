@@ -205,4 +205,14 @@
  */
 @property(nonatomic, readonly) BOOL allowRetrieveScreenResolution;
 
+/**
+ * @brief 是否支持收款码推送功能
+ */
+@property(nonatomic, readonly) BOOL allowMoneyReceiveQRCode;
+
+/**
+ * @brief 是否支持名片推送功能
+ */
+@property(nonatomic, readonly) BOOL allowBusinessCardQRCode;
+
 @end
