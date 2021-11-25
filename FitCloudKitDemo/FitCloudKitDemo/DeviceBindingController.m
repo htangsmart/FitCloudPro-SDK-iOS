@@ -58,7 +58,7 @@
 
 -(void)dealloc
 {
-    if(![FitCloudKit alreadyBound])[FitCloudKit ignoreConnectedPeripheral];
+    if(![FitCloudKit alreadyBound])[FitCloudKit ignoreConnectedPeripheral:YES];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -101,11 +101,18 @@
 
 -(void) registerNotificationObserver
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudWriteCharacteristicReady:) name:FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudBindUserObjectBegin:) name:FITCLOUDEVENT_BINDUSEROBJECT_BEGIN_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudBindUserObjectResult:) name:FITCLOUDEVENT_BINDUSEROBJECT_RESULT_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudGetAllConfigBegin:) name:FITCLOUDEVENT_GETALLCONFIG_BEGIN_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudGetAllConfigResult:) name:FITCLOUDEVENT_GETALLCONFIG_RESULT_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudInitializeResult:) name:FITCLOUDEVENT_INITIALIZE_RESULT_NOTIFY object:nil];
+}
+
+-(void)OnFitCloudWriteCharacteristicReady:(NSNotification*) notification
+{
+    [FitCloudKit bindUserObject:USER_ID abortIfExist:YES block:^(BOOL succeed, NSError *error) {
+    }];
 }
 
 -(void)OnFitCloudBindUserObjectBegin:(NSNotification *)notification
@@ -235,10 +242,7 @@
             strongSelf.bindingImageView.alpha = 1.0f;
             [strongSelf.view layoutIfNeeded];
         }completion:^(BOOL finished) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [FitCloudKit bindUserObject:USER_ID abortIfExist:YES block:^(BOOL succeed, NSError *error) {
-                }];
-            });
+            
         }];
     }];
 }
@@ -270,7 +274,7 @@
 }
 
 - (IBAction)OnTryLater:(id)sender {
-    [FitCloudKit ignoreConnectedPeripheral];
+    [FitCloudKit ignoreConnectedPeripheral:YES];
     //[[NSNotificationCenter defaultCenter] postNotificationName:IGNORECONNECTEDPERIPHERALNOTIFICATION object:nil];
     [self dismissViewControllerAnimated:NO completion:^{
         //[[NSNotificationCenter defaultCenter] postNotificationName:SKIPTOAPPHOMENOTIFICATION object:nil];
