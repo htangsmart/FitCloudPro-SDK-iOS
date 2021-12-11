@@ -47,6 +47,11 @@ Method 1：`FitCloudNWFKit` is available through CocoaPods. To install it, simpl
 pod 'FitCloudNWFKit'
 ```
 
+If you want to integrate beta FitCloudNWFKit, you should use the following configuration in the podfile file:
+```
+pod 'FitCloudNWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+```
+
 Method 2: download from making ` FitCloudNWFKit `, manual integrated into your project.
 
 1. FitCloudNWFKit SDK includes:

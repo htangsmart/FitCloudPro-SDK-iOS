@@ -152,6 +152,11 @@ Method 1：`FitCloudWFKit` is available through CocoaPods. To install it, simply
 pod 'FitCloudWFKit'
 ```
 
+If you want to integrate beta FitCloudWFKit, you should use the following configuration in the podfile file:
+```
+pod 'FitCloudWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+```
+
 Method 2: download from making ` FitCloudWFKit `, manual integrated into your project.
 
 1. FitCloudWFKit SDK includes:

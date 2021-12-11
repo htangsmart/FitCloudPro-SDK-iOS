@@ -47,6 +47,11 @@
 pod 'FitCloudNWFKit'
 ```
 
+如果你想集成 beta 测试版，则 Podfile 文件中应该使用如下配置：
+```
+pod 'FitCloudNWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+```
+
 方法二：从 Github 上下载 `FitCloudNWFKit`，手动集成到您的项目中。
 
 1. FitCloudNWFKit SDK开发包含：
