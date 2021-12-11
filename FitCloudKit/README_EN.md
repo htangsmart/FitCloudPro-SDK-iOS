@@ -361,6 +361,11 @@ Method 1：`FitCloudKit` is available through CocoaPods. To install it, simply a
 pod 'FitCloudKit'
 ```
 
+If you want to integrate beta FitCloudKit, you should use the following configuration in the podfile file:
+```
+pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+```
+
 Method 2: download from making ` FitCloudKit `, manual integrated into your project.
 
 1. FitCloudKit SDK includes:
