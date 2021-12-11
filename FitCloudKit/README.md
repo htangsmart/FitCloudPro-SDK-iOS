@@ -362,7 +362,7 @@
 pod 'FitCloudKit'
 ```
 
-如果你像集成 beta 测试版，则 Podfile 文件中应该使用如下配置：
+如果你想集成 beta 测试版，则 Podfile 文件中应该使用如下配置：
 ```
 pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 ```
