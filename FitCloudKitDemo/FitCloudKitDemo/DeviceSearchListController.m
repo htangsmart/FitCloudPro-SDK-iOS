@@ -10,6 +10,8 @@
 #import "DeviceCell.h"
 #import "DeviceBindingController.h"
 
+#define USER_ID @"10000"
+
 @interface DeviceSearchListController ()
 
 @property (nonatomic, assign) BOOL isSearching;
@@ -67,6 +69,17 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripheralScanStopNotification:) name:FITCLOUDEVENT_PERIPHERAL_SCANSTOP_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripheralConnectedNotification:) name:FITCLOUDEVENT_PERIPHERAL_CONNECTED_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripheralConnectFailureNotification:) name:FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudWriteCharacteristicReady:) name:FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY object:nil];
+}
+
+-(void)OnFitCloudWriteCharacteristicReady:(NSNotification*) notification
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        DeviceBindingController* bindingVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DeviceBindingController"];
+        bindingVC.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self.navigationController presentViewController:bindingVC animated:NO completion:nil];
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    });
 }
 
 -(void) OnPeripheralDiscoveredNotification:(NSNotification*)notification
@@ -113,11 +126,7 @@
 
 -(void) OnPeripheralConnectedNotification:(NSNotification*)notification
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        DeviceBindingController* bindingVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DeviceBindingController"];
-        [self.navigationController presentViewController:bindingVC animated:NO completion:nil];
-        [self.navigationController popToRootViewControllerAnimated:NO];
-    });
+    
 }
 
 -(void) OnPeripheralConnectFailureNotification:(NSNotification *)notification
