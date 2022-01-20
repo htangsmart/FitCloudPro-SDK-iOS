@@ -78,7 +78,7 @@ extern NSString *const FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFI
 extern NSString *const FITCLOUDEVENT_BINDUSEROBJECT_BEGIN_NOTIFY;
 
 /**
- * @brief 绑定用户结果通知 object => @(UserId) userInfo=>{@"result":@(YES/NO), @"error" : error}
+ * @brief 绑定用户结果通知 object => @(UserId) userInfo=>{@"result":@(YES/NO), @"error" : error, @"audioBluetooth": bluetoothName}
  */
 extern NSString *const FITCLOUDEVENT_BINDUSEROBJECT_RESULT_NOTIFY;
 
