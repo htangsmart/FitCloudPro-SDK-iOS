@@ -28,12 +28,20 @@
 
 ## Releases
 
+V1.1.4 Build202201240001
+
+```
+  Release Date：2022-01-24
+  Features：
+  1、 Fix issue for game skin push index.
+```
+
 V1.1.3 Build202111030001
 
 ```
   Release Date：2021-11-03
   Features：
-  1、 Modify the watch sports push position/index support。
+  1、 Modify the watch sports push position/index support.
 ```
 
 V1.1.2 Build202106170001
@@ -41,7 +49,7 @@ V1.1.2 Build202106170001
 ```
   Release Date：2021-06-17
   Features：
-  1、 Modify game skin push  position/index support.
+  1、 Modify game skin push position/index support.
 ```
 
 V1.1.1 Build202106160001
