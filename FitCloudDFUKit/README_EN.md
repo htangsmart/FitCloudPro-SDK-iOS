@@ -26,6 +26,15 @@
  
 ## Releases
 
+V1.2.6 Build202201260001
+
+```
+  Release Date：2022-01-26
+  Features：
+  1. Upgrade the Realtek firmware upgrade program to fix dfu accidental error.
+  2. Upgrade the Realtek firmware upgrade program to support the 8763E platform.
+  3. Add Hindi.
+```
 
 V1.2.5 Build202112180001
 
