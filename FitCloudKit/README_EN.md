@@ -43,6 +43,25 @@
 
 ## Releases
 
+V1.2.5 Build202201260001
+
+```
+  Release Date：2022-01-26
+  Features：
+  1. Watch sports definitions for Cricket / Free exercise / Strength training / Indoor walking / Indoor cycling / Dumbbell / Dancing / Hula hoop / Golf / Long jump / Sit ups / Volleyball.
+  2. Add watch GPS-Connect sports.
+  3. Add command to wake-up app camera.
+  4. Add Blood pressure & Heart rate alarm check.
+  5. Add FITCLOUDPREFER_REMINDWHENSPORTSGOALACHIEVEMENT watch prefer for reminder of the goal achievement for watch sports (Steps / Distance / Calories).
+  6. Fix favorite contacts command issue for large command length.
+  7. Fix issue for app crash when close bluetooth in OTA process.
+  8. Add Money receive QRCode & Business card QRCode push.
+  9. Fix issue that if you unpair the watch when the bluetooth disconnected, it may cause reconnect when the watch is close to the iPhone device again. 
+  10.Fix issue that reconnect failure if bluetooth disconnected when ECG measuring.
+  11.Add audio bluetooth name response when bind failure with bluetooth call watch.新增通话手表绑定失败时音频蓝牙名称返回
+  12.Add Hindi.
+```
+
 V1.2.4 Build202110120001
 
 ```
