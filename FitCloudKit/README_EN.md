@@ -58,7 +58,7 @@ V1.2.5 Build202201260001
   8. Add Money receive QRCode & Business card QRCode push.
   9. Fix issue that if you unpair the watch when the bluetooth disconnected, it may cause reconnect when the watch is close to the iPhone device again. 
   10.Fix issue that reconnect failure if bluetooth disconnected when ECG measuring.
-  11.Add audio bluetooth name response when bind failure with bluetooth call watch.新增通话手表绑定失败时音频蓝牙名称返回
+  11.Add audio bluetooth name response when bind failure with bluetooth call watch.
   12.Add Hindi.
 ```
 
