@@ -10,7 +10,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "FitCloudKitDefines.h"
 
-#pragma mark - 手环手动同步对象基类
+#pragma mark - 手表手动同步对象基类
 
 
 @interface FitCloudManualSyncItemObject : NSObject
@@ -22,8 +22,9 @@
 
 @end
 
+
 /**
- * @brief 手环手动同步记录对象基类
+ * @brief 手表手动同步记录对象基类
  */
 @interface FitCloudManualSyncRecordObject<__covariant ObjectType> : NSObject
 
@@ -47,7 +48,7 @@
 #pragma mark - 计步
 
 /**
- * @brief 手环计步数据条目
+ * @brief 手表计步数据条目
  */
 @interface FitCloudStepItemObject : FitCloudManualSyncItemObject
 
@@ -72,7 +73,7 @@
 
 
 /**
- * @brief 手环计步数据记录
+ * @brief 手表计步数据记录
  */
 @interface FitCloudStepRecordObject : FitCloudManualSyncRecordObject<FitCloudStepItemObject*>
 
@@ -82,7 +83,7 @@
 #pragma mark - 睡眠
 
 /**
- * @brief 手环睡眠数据条目
+ * @brief 手表睡眠数据条目
  */
 @interface FitCloudSleepItemObject : FitCloudManualSyncItemObject
 
@@ -94,7 +95,7 @@
 @end
 
 /**
- * @brief 手环睡眠数据记录
+ * @brief 手表睡眠数据记录
  */
 @interface FitCloudSleepRecordObject : FitCloudManualSyncRecordObject<FitCloudSleepItemObject*>
 
@@ -103,7 +104,7 @@
 #pragma mark - 心率
 
 /**
- * @brief 手环心率(Heart Rate)数据条目
+ * @brief 手表心率(Heart Rate)数据条目
  */
 @interface FitCloudHRItemObject : FitCloudManualSyncItemObject
 
@@ -116,16 +117,32 @@
 @end
 
 /**
- * @brief 手环心率(Heart Rate)数据记录
+ * @brief 手表心率(Heart Rate)数据记录
  */
 @interface FitCloudHRRecordObject : FitCloudManualSyncRecordObject<FitCloudHRItemObject*>
+
+@end
+
+#pragma mark - 心率(手表手动测量)
+
+/**
+ * @brief 手表心率(Heart Rate)数据条目(手表手动测量)
+ */
+@interface FitCloudSFWHRItemObject: FitCloudHRItemObject
+
+@end
+
+/**
+ * @brief 手表心率(Heart Rate)数据记录(手表手动测量)
+ */
+@interface FitCloudSFWHRRecordObject : FitCloudManualSyncRecordObject<FitCloudSFWHRItemObject*>
 
 @end
 
 #pragma mark - 血压
 
 /**
- * @brief 手环血压(Blood Pressure)数据条目
+ * @brief 手表血压(Blood Pressure)数据条目
  */
 @interface FitCloudBPItemObject : FitCloudManualSyncItemObject
 
@@ -143,9 +160,25 @@
 @end
 
 /**
- * @brief 手环血压(Blood Pressure)数据记录
+ * @brief 手表血压(Blood Pressure)数据记录
  */
 @interface FitCloudBPRecordObject : FitCloudManualSyncRecordObject<FitCloudBPItemObject*>
+
+@end
+
+#pragma mark - 血压(手表手动测量)
+
+/**
+ * @brief 手表血压(Blood Pressure)数据条目(手表手动测量)
+ */
+@interface FitCloudSFWBPItemObject: FitCloudBPItemObject
+
+@end
+
+/**
+ * @brief 手表血压(Blood Pressure)数据记录(手表手动测量)
+ */
+@interface FitCloudSFWBPRecordObject : FitCloudManualSyncRecordObject<FitCloudSFWBPItemObject*>
 
 @end
 
@@ -153,7 +186,7 @@
 #pragma mark - 血氧
 
 /**
- * @brief 手环血氧(Blood Oxygen)数据条目
+ * @brief 手表血氧(Blood Oxygen)数据条目
  */
 @interface FitCloudBOItemObject : FitCloudManualSyncItemObject
 
@@ -165,16 +198,32 @@
 @end
 
 /**
- * @brief 手环血氧(Blood Oxygen)数据记录
+ * @brief 手表血氧(Blood Oxygen)数据记录
  */
 @interface FitCloudBORecordObject : FitCloudManualSyncRecordObject<FitCloudBOItemObject*>
+
+@end
+
+#pragma mark - 血氧(手表手动测量)
+
+/**
+ * @brief 手表血氧(Blood Oxygen)数据条目(手表手动测量)
+ */
+@interface FitCloudSFWBOItemObject : FitCloudBOItemObject
+
+@end
+
+/**
+ * @brief 手表血氧(Blood Oxygen)数据记录(手表手动测量)
+ */
+@interface FitCloudSFWBORecordObject : FitCloudManualSyncRecordObject<FitCloudSFWBOItemObject*>
 
 @end
 
 #pragma mark - 心电
 
 /**
- * @brief 手环心电数据条目
+ * @brief 手表心电数据条目
  */
 @interface FitCloudECGItemObject : FitCloudManualSyncItemObject
 
@@ -186,7 +235,7 @@
 @end
 
 /**
- * @brief 手环心电数据记录
+ * @brief 手表心电数据记录
  */
 @interface FitCloudECGRecordObject : FitCloudManualSyncRecordObject<FitCloudECGItemObject*>
 
@@ -195,7 +244,7 @@
 #pragma mark - 呼吸频率
 
 /**
- * @brief 手环呼吸频率(Breathe Rate)数据条目
+ * @brief 手表呼吸频率(Breathe Rate)数据条目
  */
 @interface FitCloudBRItemObject : FitCloudManualSyncItemObject
 
@@ -207,9 +256,26 @@
 @end
 
 /**
- * @brief 手环呼吸频率(Breathe Rate)数据记录
+ * @brief 手表呼吸频率(Breathe Rate)数据记录
  */
 @interface FitCloudBRRecordObject : FitCloudManualSyncRecordObject<FitCloudBRItemObject*>
+
+
+@end
+
+#pragma mark - 呼吸频率(手表手动测量)
+
+/**
+ * @brief 手表呼吸频率(Breathe Rate)数据条目
+ */
+@interface FitCloudSFWBRItemObject : FitCloudBRItemObject
+
+@end
+
+/**
+ * @brief 手表呼吸频率(Breathe Rate)数据记录
+ */
+@interface FitCloudSFWBRRecordObject : FitCloudManualSyncRecordObject<FitCloudSFWBRItemObject*>
 
 
 @end
@@ -241,6 +307,23 @@
 
 @end
 
+#pragma mark - 体温(手表手动测量)
+
+/**
+ * @brief 手表体温(Body Temperature)数据条目(手表手动测量)
+ */
+@interface FitCloudSFWBTItemObject : FitCloudBTItemObject
+
+@end
+
+/**
+ * @brief 手表体温(Body Temperature)数据记录(手表手动测量)
+ */
+@interface FitCloudSFWBTRecordObject : FitCloudManualSyncRecordObject<FitCloudSFWBTItemObject*>
+
+
+@end
+
 #pragma mark - 压力
 
 /**
@@ -260,6 +343,23 @@
  * @brief 手表压力指数(Stress Index)数据记录
  */
 @interface FitCloudStressIndexRecordObject : FitCloudManualSyncRecordObject<FitCloudStressIndexItemObject*>
+
+
+@end
+
+#pragma mark - 压力(手表手动测量)
+
+/**
+ * @brief 压力指数(Stress Index)数据条目(手表手动测量)
+ */
+@interface FitCloudSFWStressIndexItemObject : FitCloudStressIndexItemObject
+
+@end
+
+/**
+ * @brief 手表压力指数(Stress Index)数据记录(手表手动测量)
+ */
+@interface FitCloudSFWStressIndexRecordObject : FitCloudManualSyncRecordObject<FitCloudSFWStressIndexItemObject*>
 
 
 @end
@@ -310,7 +410,7 @@
 #pragma mark - 运动模式
 
 /**
- * @brief 手环运动模式运动数据条目
+ * @brief 手表运动模式运动数据条目
  */
 @interface FitCloudSportsItemObject : FitCloudManualSyncItemObject
 
@@ -352,7 +452,7 @@
 @end
 
 /**
- * @brief 手环运动模式运动数据记录
+ * @brief 手表运动模式运动数据记录
  */
 @interface FitCloudSportsRecordObject : FitCloudManualSyncRecordObject<FitCloudSportsItemObject*>
 

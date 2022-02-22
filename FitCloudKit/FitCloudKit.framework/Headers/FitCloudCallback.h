@@ -448,9 +448,21 @@ typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSStri
 -(void)OnWakeUpCamera;
 
 /**
- *@brief 收到手环的活跃通知(当前手环与手机连接还活跃着)
+ *@brief 收到手表的活跃通知(当前手表与手机连接还活跃着)
  */
 -(void) OnBraceletAlive;
+
+/**
+ *@brief 收到手表SOS请求
+ */
+-(void) OnSOS;
+
+/**
+ *@brief 启停第三方外设
+ *@param peripheral 第三方外设
+ *@param action 启停操作
+ */
+-(void) OnThirdPartyPeripheral:(THIRDPARTYPERIPHERAL)peripheral action:(THIRDPARTYPERIPHERALACTION)action;
 
 /**
  *@brief 通知App收到Alexa语音开始请求
