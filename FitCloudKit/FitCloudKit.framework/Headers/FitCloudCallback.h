@@ -427,6 +427,12 @@ typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSStri
 -(void) OnRealTimeECGStop;
 
 /**
+ *@brief 手表报告GPS互联运动状态
+ *@param state GPS互联运动状态
+ */
+-(void) OnGPSConnectWatchStatus:(FitCloudSportsWithGPSActionParams*) state;
+
+/**
  *@brief 手表GPS互联实时运动数据
  *@param sportsData 数据
  */
