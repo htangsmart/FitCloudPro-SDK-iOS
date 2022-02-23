@@ -48,6 +48,7 @@
 #import <FitCloudKit/FitCloudSportsWithGPSActionParams.h>
 #import <FitCloudKit/FitCloudSportsWithGPSAppClientData.h>
 #import <FitCloudKit/FitCloudSportsWithGPSCurrentStatus.h>
+#import <FitCloudKit/FitCloudWatchLaunchVibrateSetting.h>
 
 /**
  *@brief FitCloud调用结果回调
