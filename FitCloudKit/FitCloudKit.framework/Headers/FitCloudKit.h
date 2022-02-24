@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2022-02-23  Version:1.2.6-beta.4 Build:202202230001
+//     pcjbird    2022-02-24  Version:1.2.6-beta.6 Build:202202240002
 //                            1.修正GPS互联运动指令的问题
 //                            2.新增基于气压泵的真血压(部分手表支持)
 //                            3.部分手表支持手表手动测量数据同步
@@ -961,7 +961,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark 删除手表上存储的消息
 /**
  * @brief 删除手表上存储的消息
- * @param deleteIndex 删除索引 0～n-1  当 shouldDeleteAll 为 false 时有效
+ * @param deleteIndex 删除索引 0～n-1，0代表最新的一条  当 shouldDeleteAll 为 false 时有效
  * @param shouldDeleteAll 是否应该删除所有
  * @param block 结果回调
  */
