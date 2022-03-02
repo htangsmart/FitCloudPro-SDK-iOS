@@ -634,6 +634,24 @@ typedef NS_ENUM(Byte, FITCLOUDGAME)
     FITCLOUDGAME_ANSWER = 11,           //答题游戏
 };
 
+/**
+ * @brief 游戏锁操作定义
+*/
+typedef NS_ENUM(Byte, FITCLOUDGAMEPASSCODEOP)
+{
+    FITCLOUDGAMEPASSCODEOP_CANCEL = 0x00,   //取消
+    FITCLOUDGAMEPASSCODEOP_SET = 0x01,      //设置
+};
+
+/**
+ * @brief 游戏锁操作结果定义
+*/
+typedef NS_ENUM(Byte, FITCLOUDGAMEPASSCODEOPRESULT)
+{
+    FITCLOUDGAMEPASSCODEOPRESULT_SUCCESS = 0x00,   //成功
+    FITCLOUDGAMEPASSCODEOPRESULT_FAILURE = 0x01,   //失败
+};
+
 #pragma mark -手表GPS互联实时运动相关
 
 /**
