@@ -750,9 +750,9 @@ typedef NS_ENUM(Byte, THIRDPARTYPERIPHERALACTIONRESULT)
 
 typedef NS_ENUM(Byte, FITCLOUDDATASYNCOPTION)
 {
-    FITCLOUDDATASYNCOPTION_LEGACY = 0x00,      //旧的同步方式
-    FITCLOUDDATASYNCOPTION_STARTFROMWATCHONLY = 0x01, //仅同步手表手动测量的
-    FITCLOUDDATASYNCOPTION_ALL = 0x02,                  //全部
+    FITCLOUDDATASYNCOPTION_LEGACY = 0x00,                           //旧的同步方式
+    FITCLOUDDATASYNCOPTION_MANUALATWATCHONLY = 0x01,                //仅同步手表手动测量的
+    FITCLOUDDATASYNCOPTION_ALL = 0x02,                              //全部
 };
 
 #pragma mark -手表启动震动时长

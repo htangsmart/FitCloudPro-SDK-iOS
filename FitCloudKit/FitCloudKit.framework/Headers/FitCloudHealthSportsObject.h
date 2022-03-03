@@ -20,6 +20,11 @@
  */
 @property(nonatomic, strong) NSDate* moment;
 
+/**
+ * @brief 是否为手表手动测量
+ */
+@property(nonatomic, assign) BOOL manualAtWatch;
+
 @end
 
 
@@ -123,21 +128,6 @@
 
 @end
 
-#pragma mark - 心率(手表手动测量)
-
-/**
- * @brief 手表心率(Heart Rate)数据条目(手表手动测量)
- */
-@interface FitCloudSFWHRItemObject: FitCloudHRItemObject
-
-@end
-
-/**
- * @brief 手表心率(Heart Rate)数据记录(手表手动测量)
- */
-@interface FitCloudSFWHRRecordObject : FitCloudManualSyncRecordObject<FitCloudSFWHRItemObject*>
-
-@end
 
 #pragma mark - 血压
 
@@ -166,22 +156,6 @@
 
 @end
 
-#pragma mark - 血压(手表手动测量)
-
-/**
- * @brief 手表血压(Blood Pressure)数据条目(手表手动测量)
- */
-@interface FitCloudSFWBPItemObject: FitCloudBPItemObject
-
-@end
-
-/**
- * @brief 手表血压(Blood Pressure)数据记录(手表手动测量)
- */
-@interface FitCloudSFWBPRecordObject : FitCloudManualSyncRecordObject<FitCloudSFWBPItemObject*>
-
-@end
-
 
 #pragma mark - 血氧
 
@@ -201,22 +175,6 @@
  * @brief 手表血氧(Blood Oxygen)数据记录
  */
 @interface FitCloudBORecordObject : FitCloudManualSyncRecordObject<FitCloudBOItemObject*>
-
-@end
-
-#pragma mark - 血氧(手表手动测量)
-
-/**
- * @brief 手表血氧(Blood Oxygen)数据条目(手表手动测量)
- */
-@interface FitCloudSFWBOItemObject : FitCloudBOItemObject
-
-@end
-
-/**
- * @brief 手表血氧(Blood Oxygen)数据记录(手表手动测量)
- */
-@interface FitCloudSFWBORecordObject : FitCloudManualSyncRecordObject<FitCloudSFWBOItemObject*>
 
 @end
 
@@ -263,23 +221,6 @@
 
 @end
 
-#pragma mark - 呼吸频率(手表手动测量)
-
-/**
- * @brief 手表呼吸频率(Breathe Rate)数据条目
- */
-@interface FitCloudSFWBRItemObject : FitCloudBRItemObject
-
-@end
-
-/**
- * @brief 手表呼吸频率(Breathe Rate)数据记录
- */
-@interface FitCloudSFWBRRecordObject : FitCloudManualSyncRecordObject<FitCloudSFWBRItemObject*>
-
-
-@end
-
 #pragma mark - 体温
 
 /**
@@ -307,22 +248,6 @@
 
 @end
 
-#pragma mark - 体温(手表手动测量)
-
-/**
- * @brief 手表体温(Body Temperature)数据条目(手表手动测量)
- */
-@interface FitCloudSFWBTItemObject : FitCloudBTItemObject
-
-@end
-
-/**
- * @brief 手表体温(Body Temperature)数据记录(手表手动测量)
- */
-@interface FitCloudSFWBTRecordObject : FitCloudManualSyncRecordObject<FitCloudSFWBTItemObject*>
-
-
-@end
 
 #pragma mark - 压力
 
@@ -347,22 +272,6 @@
 
 @end
 
-#pragma mark - 压力(手表手动测量)
-
-/**
- * @brief 压力指数(Stress Index)数据条目(手表手动测量)
- */
-@interface FitCloudSFWStressIndexItemObject : FitCloudStressIndexItemObject
-
-@end
-
-/**
- * @brief 手表压力指数(Stress Index)数据记录(手表手动测量)
- */
-@interface FitCloudSFWStressIndexRecordObject : FitCloudManualSyncRecordObject<FitCloudSFWStressIndexItemObject*>
-
-
-@end
 
 #pragma mark - 游戏记录
 
