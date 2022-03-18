@@ -576,7 +576,7 @@ NSInteger userId = 1000;
 ## 手动同步历史运动健康数据
 
 ```objc
-[FitCloudKit manualSyncDataWithProgress:^(CGFloat progress, NSString *tip) {
+[FitCloudKit manualSyncDataWithOption:FITCLOUDDATASYNCOPTION_ALL progress:^(CGFloat progress, NSString *tip) {
     NSLog(@"同步进度：%.0f%%, %@",progress*100.0f, tip);
 } block:^(BOOL succeed, NSArray<FitCloudManualSyncRecordObject*> *records, NSError *error) {
     //同步结果

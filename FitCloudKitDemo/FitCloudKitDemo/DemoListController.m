@@ -55,7 +55,7 @@
 -(void) manualSyncData
 {
     __weak typeof(self) weakSelf = self;
-    [FitCloudKit manualSyncDataWithProgress:^(CGFloat progress, NSString *tip) {
+    [FitCloudKit manualSyncDataWithOption:FITCLOUDDATASYNCOPTION_ALL progress:^(CGFloat progress, NSString *tip) {
         XLOG_INFO(@"%@", APP_LOG_STRING(@"同步进度：%.0f%%, %@",progress*100.0f, tip));
     } block:^(BOOL succeed, NSString* userId, NSArray<FitCloudManualSyncRecordObject*> *records, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{

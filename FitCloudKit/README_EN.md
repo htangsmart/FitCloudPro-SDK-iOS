@@ -576,7 +576,7 @@ NSInteger userId = 1000;
 ## Manual Synchronization of Historical Exercise & Health Data
 
 ```objc
-[FitCloudKit manualSyncDataWithProgress:^(CGFloat progress, NSString *tip) {
+[FitCloudKit manualSyncDataWithOption:FITCLOUDDATASYNCOPTION_ALL progress:^(CGFloat progress, NSString *tip) {
     NSLog(@"Sync Progress：%.0f%%, %@",progress*100.0f, tip);
 } block:^(BOOL succeed, NSArray<FitCloudManualSyncRecordObject*> *records, NSError *error) {
     //Synchronization Result
