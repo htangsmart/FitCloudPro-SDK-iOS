@@ -215,4 +215,9 @@
  */
 @property(nonatomic, readonly) BOOL allowBusinessCardQRCode;
 
+/**
+ * @brief 是否支持获取单个游戏最高三条游戏记录
+ */
+@property(nonatomic, readonly) BOOL withSingleGameTop3GameRecord;
+
 @end

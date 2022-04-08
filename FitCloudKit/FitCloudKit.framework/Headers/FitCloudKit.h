@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2022-03-18  Version:1.2.6-beta.10 Build:202203180001
+//     pcjbird    2022-04-08  Version:1.2.6-beta.12 Build:202204080001
 //                            1.修正GPS互联运动指令的问题
 //                            2.新增基于气压泵的真血压(部分手表支持)
 //                            3.部分手表支持手表手动测量数据同步
@@ -19,6 +19,8 @@
 //                            7.新增手表上存储的消息删除指令
 //                            8.新增取消手表当前消息显示
 //                            9.新增游戏锁设置
+//                            10.登录/绑定指令新增iOS系统版本标志
+//                            11.新增获取单个游戏最高三个游戏记录(部分手表支持)
 //
 //     pcjbird    2022-01-26  Version:1.2.5 Build:202201260001
 //                            1.新增板球/自由运动/力量训练/室内健走/室内骑行/哑铃/跳舞/呼啦圈/高尔夫/跳远/仰卧起坐/排球运动定义
@@ -852,6 +854,14 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
 */
 +(void)getTop3RankGameRecordsWithBlock:(FitCloudTop3RankGameRecordsResultBlock _Nullable)block;
+
+#pragma mark 获取单个游戏最高三个游戏记录
+/**
+ * @brief 获取单个游戏最高三个游戏记录
+ * @param gameNo 游戏编号
+ * @param block 结果回调
+*/
++(void)getSingleGameTop3RankGameRecords:(NSInteger)gameNo withBlock:(FitCloudTop3RankGameRecordsResultBlock _Nullable)block;
 
 #pragma mark 获取手表所有游戏的皮肤信息
 /**
