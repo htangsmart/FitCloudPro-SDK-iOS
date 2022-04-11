@@ -25,6 +25,11 @@
  */
 @property(nonatomic, assign) BOOL manualAtWatch;
 
+/**
+ * @brief 是否为真血压
+ */
+@property(nonatomic, assign) BOOL baseOnPneumaticpump;
+
 @end
 
 
