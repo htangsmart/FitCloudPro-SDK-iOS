@@ -25,6 +25,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, assign) NSInteger distance;
 
+
+/**
+ * @brief 卡路里，单位：小卡(cal)
+ */
+@property(nonatomic, assign) NSInteger calories;
+
 /**
  * @brief 已运动时间，单位：秒(s)
  */

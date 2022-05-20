@@ -27,11 +27,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- * @brief 卡路里, 单位：小卡(cal)
- */
-@property(nonatomic, readonly) NSInteger calories;
-
-/**
  * @brief 心率
  */
 @property(nonatomic, readonly) UInt8  heartRate;

@@ -151,6 +151,11 @@
  */
 @property(nonatomic, assign) UInt8 systolic;
 
+/**
+ *@brief 心率，如果是真血压
+ */
+@property(nonatomic, assign) UInt8 heartRateIfBaseOnPneumaticpump;
+
 
 @end
 
