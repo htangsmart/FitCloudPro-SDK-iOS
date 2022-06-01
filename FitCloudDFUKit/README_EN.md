@@ -26,6 +26,14 @@
  
 ## Releases
 
+V1.2.7 Build202206010001
+
+```
+  Release Date：2022-06-01
+  Features：
+  1. Fix: OnStartDFUSuccess not invoked.
+```
+
 V1.2.6 Build202201260001
 
 ```
