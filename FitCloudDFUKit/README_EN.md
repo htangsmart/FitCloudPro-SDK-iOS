@@ -26,6 +26,13 @@
  
 ## Releases
 
+V1.2.8 Build202206060001
+```
+  Release Date：2022-06-06
+  Features：
+  1. Upgrade the Realtek firmware upgrade program to fix dfu slow issue.
+```
+
 V1.2.7 Build202206010001
 
 ```
