@@ -129,7 +129,7 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE)
     FITCLOUDHARDWARE_WOMENHEALTH = 1 << 11,           //女性健康
     FITCLOUDHARDWARE_VOICERECOG = 1 << 12,            //语音识别， 为1时手表上有语音识别功能，为0则手表上没有语音识别功能
     FITCLOUDHARDWARE_STRESSINDEX = 1 << 13,           //压力指数
-    FITCLOUDHARDWARE_GAME = 1 << 14,                  //游戏
+    FITCLOUDHARDWARE_GAMERECORDS = 1 << 14,           //游戏记录
     FITCLOUDHARDWARE_NORDIC = 1 << 15,                //Nordic芯片
     FITCLOUDHARDWARE_DFUSHOULDSILENTMODE = 1 << 16,   //固件升级使用静默升级
     FITCLOUDHARDWARE_SCREENANDVIBRATEPARAM = 1 << 17, //屏幕及马达参数调节(亮屏时长/亮度/马达振动强度)
