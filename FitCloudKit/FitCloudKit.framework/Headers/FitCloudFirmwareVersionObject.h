@@ -220,4 +220,9 @@
  */
 @property(nonatomic, readonly) BOOL withSingleGameTop3GameRecord;
 
+/**
+ * @brief 是否禁用在App上表盘模块化
+ */
+@property(nonatomic, readonly) BOOL disableWatchfaceModularInApp;
+
 @end
