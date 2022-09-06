@@ -159,6 +159,7 @@
  *       20.320*380方
  *       21.240*286方
  *       22.466*466圆
+ *       23.240*296方
 */
 @property(nonatomic, readonly) UInt8 lcd;
 
