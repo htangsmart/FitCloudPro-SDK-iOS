@@ -43,6 +43,33 @@
 
 ## Releases
 
+V1.2.6 Build202209200001
+
+```
+  Release Date：2022-09-20
+  Features：
+  1. Fix the issue of GPS interconnected motion command.
+  2. Add true blood pressure based on air pressure pump (supported for some of the watches).
+  3. Some watches support manual measurement data synchronization.
+  4. Some watches support SOS request.
+  5. Add third-party peripheral start & stop control.
+  6. Watch start vibration parameter settings.
+  7. Add command to delete the notification message on the watch.
+  8. Add command to cancel the current notification message display on the watch.
+  9. Add game lock settings.
+  10. Login/bind command enhancement.
+  11. Support to obtain the top three game records of a single game (supported for some of the watches).
+  12. Fix the issue of true blood pressure data synchronization.
+  13. Modification of GPS interconnection command.
+  14. Add game ranking trend settings (supported for some of the watches).
+  15. Aalarm list optimization.
+  16. Update SDK error code.
+  17. Health&Sports data sync optimization.
+  18. Add flag to disable the watchface modularization display on the App. @ see disableWatchfaceModularInApp
+  19. 240 * 296 square watchface support.
+  20. Improve SDK stability.
+```
+
 V1.2.5 Build202201260001
 
 ```
