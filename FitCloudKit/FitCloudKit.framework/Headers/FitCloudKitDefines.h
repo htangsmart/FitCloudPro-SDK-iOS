@@ -727,6 +727,7 @@ typedef NS_ENUM(Byte, FITCLOUDQRCODE)
     FITCLOUDQRCODE_BUSINESSCARD_LINE = 0x29,          //LINE名片
     FITCLOUDQRCODE_BUSINESSCARD_SNAPCHAT = 0x2A,      //Snapchat名片
     FITCLOUDQRCODE_BUSINESSCARD_SKYPE = 0x2B,         //Skype名片
+    FITCLOUDQRCODE_NUCLEICACID_CODE = 0x80,           //核酸码
 };
 
 #pragma mark -第三方外设

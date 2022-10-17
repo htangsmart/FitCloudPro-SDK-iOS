@@ -225,4 +225,9 @@
  */
 @property(nonatomic, readonly) BOOL disableWatchfaceModularInApp;
 
+/**
+ * @brief 是否支持核酸码推送功能
+ */
+@property(nonatomic, readonly) BOOL allowNucleicAcidQRCode;
+
 @end
