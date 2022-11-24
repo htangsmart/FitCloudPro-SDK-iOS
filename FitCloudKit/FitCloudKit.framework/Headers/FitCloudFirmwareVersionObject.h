@@ -230,4 +230,9 @@
  */
 @property(nonatomic, readonly) BOOL allowNucleicAcidQRCode;
 
+/**
+ * @brief 是否支持习惯养成功能
+ */
+@property(nonatomic, readonly) BOOL allowHabits;
+
 @end

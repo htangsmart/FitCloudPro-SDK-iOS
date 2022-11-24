@@ -51,6 +51,7 @@
 #import <FitCloudKit/FitCloudWatchLaunchVibrateSetting.h>
 #import <FitCloudKit/FitCloudGamePasscodeSetting.h>
 #import <FitCloudKit/FitCloudGameRankingTrend.h>
+#import <FitCloudKit/FitCloudHabitObject.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -107,6 +108,15 @@ typedef void (^FitCloudSchedulesResultBlock)(BOOL succeed, NSArray<FitCloudSched
  *@param error 错误信息
  */
 typedef void (^FitCloudFavContactsResultBlock)(BOOL succeed, NSArray<FitCloudContactObject*>*list, NSError* error);
+
+
+/**
+ *@brief FitCloud 获取习惯养成列表调用结果回调
+ *@param succeed 是否成功
+ *@param list 习惯养成列表
+ *@param error 错误信息
+ */
+typedef void (^FitCloudHabitsResultBlock)(BOOL succeed, NSArray<FitCloudHabitObject*>*list, NSError* error);
 
 /**
  *@brief FitCloud 获取手环软硬件版本信息调用结果回调

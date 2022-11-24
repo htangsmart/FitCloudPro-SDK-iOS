@@ -9,10 +9,11 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2022-10-31  Version:1.2.7-beta.5 Build:202210310001
+//     pcjbird    2022-11-24  Version:1.2.7-beta.6 Build:202211240001
 //                            1.新增禁用睡眠模块
 //                            2.新增核酸码推送功能 @see allowNucleicAcidQRCode
 //                            3.天气新增大气压强/风力/能见度信息
+//                            4.新增习惯养成相关指令 @see allowHabits
 //
 //     pcjbird    2022-09-20  Version:1.2.6 Build:202209200001
 //                            1.修正GPS互联运动指令的问题
@@ -406,6 +407,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(NSArray<FitCloudContactObject*>*_Nullable) favoriteContacts;
 
+
+#pragma mark 手表习惯养成列表
+/**
+ * @brief 手表习惯养成列表
+ */
++(NSArray<FitCloudHabitObject*>*_Nullable) habits;
+
 #pragma mark 最后连接的手表信息
 /**
  * @brief 最后连接的手表信息
@@ -546,6 +554,22 @@ NS_ASSUME_NONNULL_BEGIN
 * @param block 结果回调
 */
 +(void) getFavContactsWithBlock:(FitCloudFavContactsResultBlock _Nullable)block;
+
+
+#pragma mark 设置习惯养成列表
+/**
+* @brief 设置习惯养成列表（将手机上的习惯养成列表同步到手表）
+* @param habits 习惯养成列表
+* @param block 结果回调
+*/
++(void) setHabits:(NSArray<FitCloudHabitObject*>*_Nullable)habits block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取习惯养成列表
+/**
+* @brief 获取习惯养成列表（获取手表上的习惯养成列表）
+* @param block 结果回调
+*/
++(void) getHabitsWithBlock:(FitCloudHabitsResultBlock _Nullable)block;
 
 #pragma  mark 设置User Profile
 /**

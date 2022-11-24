@@ -60,6 +60,10 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR)
     FITCLOUDKITERROR_NOTDFUMODE = 60003,                     //当前不是DFU模式
     FITCLOUDKITERROR_FAVCONTACTSREACHMAX = 70001,            //常用联系人数量达到最大值，最多支持设定10个常用联系人
     FITCLOUDKITERROR_FAVCONTACTSNOTSUPPORT = 70002,          //当前手表不支持常用联系人
+    FITCLOUDKITERROR_HABITSREACHMAX = 71001,                 //习惯数量达到最大值，最多支持设定10个习惯养成
+    FITCLOUDKITERROR_BADHABITNAME = 71002,                   //习惯养成名称为空或长度超过限定的32字节
+    FITCLOUDKITERROR_BADHABITBEGINDATE = 71003,              //习惯养成习惯开始时间为空
+    FITCLOUDKITERROR_HABITSNOTSUPPORT = 71004,               //当前手表不支持习惯养成
     FITCLOUDKITERROR_NOCHANGEWITHSETTINGS = 80001,           //当前设定没有变化
 };
 
@@ -319,6 +323,55 @@ typedef NS_OPTIONS(Byte, FITCLOUDSCHEDULECYCLE)
     FITCLOUDSCHEDULECYCLE_FRI = 1 << 4,     //周五(循环)
     FITCLOUDSCHEDULECYCLE_SAT = 1 << 5,     //周六(循环)
     FITCLOUDSCHEDULECYCLE_SUN = 1 << 6,     //周日(循环)
+};
+
+
+#pragma mark - 习惯相关
+
+/**
+ * @brief 习惯循环定义
+ */
+typedef NS_OPTIONS(Byte, FITCLOUDHABITCYCLE)
+{
+    FITCLOUDHABITCYCLE_NONE = 0,         //不循环，仅当天有效
+    FITCLOUDHABITCYCLE_MON = 1,          //周一(循环)
+    FITCLOUDHABITCYCLE_TUE = 1 << 1,     //周二(循环)
+    FITCLOUDHABITCYCLE_WED = 1 << 2,     //周三(循环)
+    FITCLOUDHABITCYCLE_THUR = 1 << 3,    //周四(循环)
+    FITCLOUDHABITCYCLE_FRI = 1 << 4,     //周五(循环)
+    FITCLOUDHABITCYCLE_SAT = 1 << 5,     //周六(循环)
+    FITCLOUDHABITCYCLE_SUN = 1 << 6,     //周日(循环)
+};
+
+/**
+ * @brief 习惯关联功能定义
+ */
+typedef NS_ENUM(Byte, FITCLOUDHABITASSOCIATEDFEATURE)
+{
+    FITCLOUDHABITASSOCIATEDFEATURE_NONE = 0,  //无关联
+    FITCLOUDHABITASSOCIATEDFEATURE_SPORTS = 1, //运动
+};
+
+/**
+ * @brief 习惯状态定义
+ */
+typedef NS_ENUM(Byte, FITCLOUDHABITSTATUS)
+{
+    FITCLOUDHABITSTATUS_TOBESTARTED = 0,     //待开始
+    FITCLOUDHABITSTATUS_INPROGRESS = 1,      //进行中
+    FITCLOUDHABITSTATUS_DONE = 2,            //已完成
+    FITCLOUDHABITSTATUS_OVERDUE = 3,         //已逾期
+    FITCLOUDHABITSTATUS_CLOSED = 4,          //已关闭
+    FITCLOUDHABITSTATUS_REMOVED = 5,         //已删除
+};
+
+/**
+ * @brief 习惯名称规则定义
+ */
+typedef NS_ENUM(Byte, FITCLOUDHABITNAMERULE)
+{
+    FITCLOUDHABITNAMERULE_CUSTOM = 0,        //自定义
+    FITCLOUDHABITNAMERULE_SPORTS = 1,        //运动
 };
 
 #pragma mark - 用户相关

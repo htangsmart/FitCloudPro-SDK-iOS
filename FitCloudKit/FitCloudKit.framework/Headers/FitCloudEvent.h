@@ -153,6 +153,11 @@ extern NSString *const FITCLOUDEVENT_SCHEDULELIST_CHANGED_NOTIFY;
 extern NSString *const FITCLOUDEVENT_FAVCONTACTS_CHANGED_NOTIFY;
 
 /**
+ * @brief 习惯养成列表变化通知 userInfo=>NSArray<FitCloudHabitObject *>
+ */
+extern NSString *const FITCLOUDEVENT_HABITS_CHANGED_NOTIFY;
+
+/**
  * @brief 心电检测启动成功通知  object => 采样间隔(单位毫秒) NSNumber*
  */
 extern NSString *const FITCLOUDEVENT_ECG_START_SUCCEED_NOTIFY;
