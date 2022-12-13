@@ -235,4 +235,9 @@
  */
 @property(nonatomic, readonly) BOOL allowHabits;
 
+/**
+ * @brief 是否支持查找手机响铃结束通知
+ */
+@property(nonatomic, readonly) BOOL allowFindiPhoneRingEndNotify;
+
 @end
