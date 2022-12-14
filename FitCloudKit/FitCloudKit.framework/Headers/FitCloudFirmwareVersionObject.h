@@ -236,4 +236,10 @@
 @property(nonatomic, readonly) BOOL allowHabits;
 
 
+/**
+ * @brief 是否支持更多的二维码传输，收款码：Paytm收款码/PhonePe收款码/GPay收款码/BHTM收款码，名片：Email名片/Phone名片/LinkedIn名片
+ */
+@property(nonatomic, readonly) BOOL showAdditionalQRCodeTransfer;
+
+
 @end
