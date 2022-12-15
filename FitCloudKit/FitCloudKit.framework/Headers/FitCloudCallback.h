@@ -52,6 +52,7 @@
 #import <FitCloudKit/FitCloudGamePasscodeSetting.h>
 #import <FitCloudKit/FitCloudGameRankingTrend.h>
 #import <FitCloudKit/FitCloudHabitObject.h>
+#import <FitCloudKit/FitCloudDailyGoalObject.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -117,6 +118,14 @@ typedef void (^FitCloudFavContactsResultBlock)(BOOL succeed, NSArray<FitCloudCon
  *@param error 错误信息
  */
 typedef void (^FitCloudHabitsResultBlock)(BOOL succeed, NSArray<FitCloudHabitObject*>*list, NSError* error);
+
+/**
+ *@brief FitCloud 获取手表每日运动目标调用结果回调
+ *@param succeed 是否成功
+ *@param goal 运动目标
+ *@param error 错误信息
+ */
+typedef void (^FitCloudDailyGoalResultBlock)(BOOL succeed, FitCloudDailyGoalObject* goal, NSError* error);
 
 /**
  *@brief FitCloud 获取手环软硬件版本信息调用结果回调
