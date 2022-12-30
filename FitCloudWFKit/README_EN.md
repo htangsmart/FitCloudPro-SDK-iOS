@@ -28,6 +28,23 @@
 
 ## Releases
 
+V1.1.6 Build202212300001
+
+```
+  Release Date：2022-12-30
+  Features：
+  1、 Update error code localization.
+```
+
+V1.1.5 Build202205190001
+
+```
+  Release Date：2022-05-19
+  Features：
+    1、 Add Indian localiztion.
+    2、 Bitcode support.
+```
+
 V1.1.4 Build202201240001
 
 ```
