@@ -27,10 +27,18 @@
 
 ## Releases
 
-V1.0.0 Build202008310001
+V1.0.1 Build202205190001
 
 ```
-  Release Date：2020-08-31
+  Release Date：2022-05-19
+  Features：
+  1、 bitcode support.
+```
+
+V1.0.0 Build202108310001
+
+```
+  Release Date：2021-08-31
   Features：
   1、 First SDK release.
 ```
