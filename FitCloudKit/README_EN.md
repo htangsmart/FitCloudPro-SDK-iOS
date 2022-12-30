@@ -43,6 +43,21 @@
 
 ## Releases
 
+V1.2.7 Build202212300001
+
+```
+  Release Date：2022-12-30
+  Features：
+  1. Sleep module disable flag support.
+  2. Add nucleic acid qrcode. @see allowNucleicAcidQRCode
+  3. Add atmospheric pressure/wind force/visibility for weather.
+  4. Add habits. @ see allowHabits
+  5. Add Paytm qrcode/PhonePe qrcode/GPay qrcode/BHTM qrcode, Email business card/Phone business card/LinkedIn business card, @see showAdditionalQRCodeTransfer
+  6. Add a new notification watch to find out that the mobile phone ring has finished playing, and adapt to the Bluetooth call watch
+  7. Add command to acquire daily sports goal.
+  8. Optimize the peripheral MTU value.
+```
+
 V1.2.6 Build202209200001
 
 ```
