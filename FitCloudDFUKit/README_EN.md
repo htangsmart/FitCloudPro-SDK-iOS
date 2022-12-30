@@ -26,6 +26,15 @@
  
 ## Releases
 
+V1.3.0 Build202212300001
+```
+  Release Date：2022-12-30
+  Features：
+  1. Update error code localization.
+  2. Upgrade the Realtek firmware upgrade program with new invoke mode.
+  3. Add Vietnamese localization.
+```
+
 V1.2.9 Build202206300001
 ```
   Release Date：2022-06-30
