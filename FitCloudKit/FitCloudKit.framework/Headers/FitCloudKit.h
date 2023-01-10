@@ -9,8 +9,9 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-01-09  Version:1.2.8-beta.1 Build:202301090001
+//     pcjbird    2023-01-10  Version:1.2.8-beta.2 Build:202301100001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
+//                            2.新增自定义标签功能 @see withCustomLabels
 //
 //     pcjbird    2022-12-30  Version:1.2.7 Build:202212300001
 //                            1.新增禁用睡眠模块
@@ -585,6 +586,14 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void)setUserProfile:(FitCloudUserProfileObject *_Nonnull)profile block:(FitCloudResultBlock _Nullable )block;
+
+#pragma  mark 设置自定义标签
+/**
+ * @brief 设置自定义标签
+ * @param labels 自定义标签
+ * @param block 结果回调
+ */
++(void)setCustomLabels:(FitCloudCustomLabelsObject *_Nonnull)labels block:(FitCloudResultBlock _Nullable )block;
 
 #pragma mark 设定每日运动目标
 

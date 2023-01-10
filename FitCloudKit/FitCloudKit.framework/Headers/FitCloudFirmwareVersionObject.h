@@ -242,4 +242,10 @@
 @property(nonatomic, readonly) BOOL showAdditionalQRCodeTransfer;
 
 
+/**
+ * @brief 是否支持自定义标签
+ */
+@property(nonatomic, readonly) BOOL withCustomLabels;
+
+
 @end

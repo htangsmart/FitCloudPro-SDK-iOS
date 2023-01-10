@@ -53,6 +53,7 @@
 #import <FitCloudKit/FitCloudGameRankingTrend.h>
 #import <FitCloudKit/FitCloudHabitObject.h>
 #import <FitCloudKit/FitCloudDailyGoalObject.h>
+#import <FitCloudKit/FitCloudCustomLabelsObject.h>
 
 /**
  *@brief FitCloud调用结果回调

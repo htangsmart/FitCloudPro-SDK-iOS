@@ -64,6 +64,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR)
     FITCLOUDKITERROR_BADHABITNAME = 71002,                   //习惯养成名称为空或长度超过限定的32字节
     FITCLOUDKITERROR_BADHABITBEGINDATE = 71003,              //习惯养成习惯开始时间为空
     FITCLOUDKITERROR_HABITSNOTSUPPORT = 71004,               //当前手表不支持习惯养成
+    FITCLOUDKITERROR_CUSTOMLABELSNOTSUPPORT = 72001,         //当前手表不支持自定义标签
     FITCLOUDKITERROR_NOCHANGEWITHSETTINGS = 80001,           //当前设定没有变化
 };
 
