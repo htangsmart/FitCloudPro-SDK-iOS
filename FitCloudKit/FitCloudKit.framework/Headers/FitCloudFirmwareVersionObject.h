@@ -243,6 +243,17 @@
 
 
 /**
+ * @brief 是否音乐推送
+ */
+@property(nonatomic, readonly) BOOL allowMusicPush;
+
+/**
+ * @brief 是否支付宝Iot（阿里云Iot）
+ */
+@property(nonatomic, readonly) BOOL allowAliot;
+
+
+/**
  * @brief 是否支持自定义标签
  */
 @property(nonatomic, readonly) BOOL withCustomLabels;

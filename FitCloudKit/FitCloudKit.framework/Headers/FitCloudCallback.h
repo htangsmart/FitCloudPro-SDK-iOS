@@ -530,6 +530,17 @@ typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSStri
 -(void) OnAlexaVoiceDecodedWithData:(NSData*)voiceData;
 
 /**
+ *@brief 支付宝Iot数据通信准备好了，可以开始传输付宝Iot数据，仅支持改功能的手表才有该回调
+ */
+-(void) OnAliotDataExchangeReady;
+
+/**
+ *@brief 支付宝Iot数据回调
+ *@param aliotData 支付宝Iot数据
+ */
+-(void) OnAliotData:(NSData*)aliotData;
+
+/**
  * @brief 睡眠调试数据
  */
 -(void) OnSleepDebugData:(FitCloudSleepDebugData*)sleepDebugData;
