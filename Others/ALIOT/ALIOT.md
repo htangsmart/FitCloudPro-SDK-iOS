@@ -4,7 +4,7 @@
 
 ## 1. 将支付宝(阿里云)Iot SDK 添加进项目中
 
-[AliCloudIotKitAdvance.framework](AliCouldIotKitAdvance.framework)
+[AliCloudIotKitAdvance.framework](AliCloudIotKitAdvance.framework)
 
 ## 2. 添加并安装 cocoapods 依赖
 
