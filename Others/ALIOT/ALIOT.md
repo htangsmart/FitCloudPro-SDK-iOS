@@ -24,7 +24,7 @@ end
         
 ```
 
-```
+```bash
 //安装依赖
 pod install
 ```
