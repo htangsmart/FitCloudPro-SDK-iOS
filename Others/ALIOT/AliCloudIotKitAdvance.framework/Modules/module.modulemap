@@ -1,0 +1,11 @@
+framework module AliCloudIotKitAdvance {
+  umbrella header "AliCloudIotKitAdvance.h"
+
+  export *
+  module * { export * }
+}
+
+module AliCloudIotKitAdvance.Swift {
+  header "AliCloudIotKitAdvance-Swift.h"
+  requires objc
+}

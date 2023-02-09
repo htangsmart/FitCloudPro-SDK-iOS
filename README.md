@@ -6,6 +6,7 @@
 
   * [中文文档(Chinese Doc)](FitCloudKit/README.md)
   * [英文文档(English Doc)](FitCloudKit/README_EN.md)
+  * [支付宝Iot对接文档](Others/ALIOT/ALIOT.md)
   
  
 # 2. FitCloudDFUKit
