@@ -6,9 +6,7 @@
 
   * [中文文档(Chinese Doc)](FitCloudKit/README.md)
   * [英文文档(English Doc)](FitCloudKit/README_EN.md)
-  * [支付宝Iot对接文档](Others/ALIOT/ALIOT.md)
   
- 
 # 2. FitCloudDFUKit
 #### FitCloudPro 智能手表的iOS框架，负责手表固件升级/表盘升级等功能的封装。
 #### iOS framework for fitcloudpro smart watch, which is responsible for the upgrade of the smart watch firmware, also UI DFU / watchface DFU. 
@@ -39,7 +37,9 @@
   * [英文文档(English Doc)](FitCloudNWFKit/README_EN.md)
 
 
+### ALIOT
 
+   * [ALIOT](Others/ALIOT/ALIOT.md)
 
 
 ### 🚀 如何提出您的问题 / how to submit your issue
