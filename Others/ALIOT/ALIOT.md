@@ -1,6 +1,6 @@
 # 支付宝(阿里云)Iot对接文档
 
-|![支付宝 Iot 对接相关 SDK](media/aliot.png)
+![支付宝 Iot 对接相关 SDK](media/aliot.png)
 
 ## 1. 将支付宝(阿里云)Iot SDK 添加进项目中
 
