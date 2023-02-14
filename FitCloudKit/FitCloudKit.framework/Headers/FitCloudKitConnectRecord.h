@@ -24,6 +24,11 @@
 @property(nonatomic, assign) BOOL nextManufacturerName;
 
 /**
+ * @brief 是否允许同时连接通话蓝牙
+ */
+@property(nonatomic, assign) BOOL allowConnectWithBT;
+
+/**
  * @brief UUID
  */
 @property(nonatomic, strong) NSUUID*   uuid;

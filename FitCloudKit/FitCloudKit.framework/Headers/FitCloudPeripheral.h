@@ -45,6 +45,12 @@
 @property(nonatomic, readonly) BOOL nextManufacturerName;
 
 /**
+ * @brief 是否允许同时连接通话蓝牙
+ */
+@property(nonatomic, readonly) BOOL allowConnectWithBT;
+
+
+/**
  * @brief 是否已经跟系统配对
  */
 @property(nonatomic, assign) BOOL  paired;
