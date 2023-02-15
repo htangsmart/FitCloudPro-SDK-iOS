@@ -537,8 +537,10 @@ typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSStri
 /**
  *@brief 支付宝Iot数据回调
  *@param aliotData 支付宝Iot数据
+ *@param totalPacks 总数据包个数
+ *@param packIndex 当前第几个数据包，下标从0开始
  */
--(void) OnAliotData:(NSData*)aliotData;
+-(void) OnAliotData:(NSData*)aliotData totalPacks:(NSInteger)totalPacks packIndex:(NSInteger)packIndex;
 
 /**
  * @brief 睡眠调试数据
