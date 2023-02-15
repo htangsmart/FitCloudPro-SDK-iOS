@@ -126,10 +126,30 @@ extension ViewController: BleNeedSendDataDelegate {
 /**
  *@brief 支付宝Iot数据回调
  *@param aliotData 支付宝Iot数据
+ *@param totalPacks 总数据包个数
+ *@param packIndex 当前第几个数据包，下标从0开始
  */
--(void) OnAliotData:(NSData*)aliotData
+-(void) OnAliotData:(NSData*)aliotData totalPacks:(NSInteger)totalPacks packIndex:(NSInteger)packIndex
 {
-    [[AliConnectMananger shared] bleDataReceivedWithData:aliotData];
+    if(packIndex == 0)
+    {
+        self.aliotData = [NSMutableData data];
+    }
+    if(totalPacks == 1)
+    {
+        [[AliConnectMananger shared] bleDataReceivedWithData:aliotData];
+        return;
+    }
+    else
+    {
+        [self.aliotData appendData:aliotData];
+    }
+    if(packIndex == totalPacks - 1)
+    {
+        NSData* data = [NSData dataWithData:self.aliotData];
+        [[AliConnectMananger shared] bleDataReceivedWithData:data];
+        self.aliotData = nil;
+    }
 }
 
 ```
