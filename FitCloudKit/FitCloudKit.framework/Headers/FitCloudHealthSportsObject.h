@@ -375,6 +375,60 @@
  */
 @interface FitCloudSportsRecordObject : FitCloudManualSyncRecordObject<FitCloudSportsItemObject*>
 
+/**
+ * @brief 手表独立GPS运动，该字段关联对应的GPS数据
+ */
+@property(nonatomic, strong) NSString* gpsDataAssociateKey;
+
+@end
+
+
+#pragma mark - GPS数据
+
+/**
+ * @brief 手表运动模式运动GPS数据条目
+ */
+@interface FitCloudGPSItemObject : FitCloudManualSyncItemObject
+
+/**
+ * @brief 经度
+ */
+@property(nonatomic, assign) CGFloat longitude;
+
+
+/**
+ * @brief 纬度
+ */
+@property(nonatomic, assign) CGFloat latitude;
+
+/**
+ * @brief 海拔,单位：m
+ */
+@property(nonatomic, assign) UInt16 altitude;
+
+/**
+ * @brief 运动时长(秒)
+ */
+@property(nonatomic, assign) UInt16  duration;
+
+
+/**
+ * @brief 卫星数量（个数）
+ */
+@property(nonatomic, assign) UInt8  satellites_count;
+
+@end
+
+/**
+ * @brief 手表运动模式运动GPS数据记录
+ */
+@interface FitCloudGPSRecordObject : FitCloudManualSyncRecordObject<FitCloudGPSItemObject*>
+
+/**
+ * @brief 手表独立GPS运动Key
+ */
+@property(nonatomic, strong) NSString* gpsDataKey;
+
 @end
 
 #pragma mark - 健康实时测量
