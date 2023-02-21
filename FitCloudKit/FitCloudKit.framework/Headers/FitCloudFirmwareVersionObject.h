@@ -259,4 +259,8 @@
 @property(nonatomic, readonly) BOOL withCustomLabels;
 
 
+/**
+ * @brief 是否指定支持的收款码和名片，仅支持的收款码和名片才应该在App上展示推送入口
+ */
+@property(nonatomic, readonly) BOOL specifySupportedMoneyReceiveAndBusinessQRCode;
 @end

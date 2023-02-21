@@ -409,6 +409,13 @@ typedef void (^FitCloudAlexaVoiceStartRequestCompletion)(ALEXAINVOKEERROR result
 typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSString* text);
 
 /**
+ * @brief FitCloud 二维码功能列表回调
+ * @param supported 支持的二维码功能
+ * @param error 错误信息
+ */
+typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber*>*supported, NSError* error);
+
+/**
  *@brief FitCloudKit 回调协议
  */
 @protocol FitCloudCallback<NSObject>
