@@ -1,24 +1,24 @@
 # FitCloudKit iOS Development Guide
 
 ## Summary
-* What is FitCloudKit?
 
-  >###### iOS framework for FitCloud smartwatch, which is responsible for the communication with watch.
+- What is FitCloudKit?
 
-* Scope
+  > ###### iOS framework for FitCloud smartwatch, which is responsible for the communication with watch.
+
+- Scope
 
   ```
   Partners who need to customize their own iOS smartwatch APP.
   ```
 
-* Compatibility
+- Compatibility
 
   ###### 1. iOS 8.0 and Above；
 
   ###### 2. armv7/i386/x86_64/arm64 Instruction Set；
 
   ###### 3. Bitcode；
-
 
 ## Features
 
@@ -39,7 +39,6 @@
 8. Restart/shutdown of the smartwatch;
 
 9. Safety check before entering DFU mode (ensure the smartwatch has sufficient power);
-
 
 ## Releases
 
@@ -98,7 +97,7 @@ V1.2.5 Build202201260001
   6. Fix favorite contacts command issue for large command length.
   7. Fix issue for app crash when close bluetooth in OTA process.
   8. Add Money receive QRCode & Business card QRCode push.
-  9. Fix issue that if you unpair the watch when the bluetooth disconnected, it may cause reconnect when the watch is close to the iPhone device again. 
+  9. Fix issue that if you unpair the watch when the bluetooth disconnected, it may cause reconnect when the watch is close to the iPhone device again.
   10.Fix issue that reconnect failure if bluetooth disconnected when ECG measuring.
   11.Add audio bluetooth name response when bind failure with bluetooth call watch.
   12.Add Hindi.
@@ -114,7 +113,7 @@ V1.2.4 Build202110120001
   3. Add flag to identify whether allow the QRCode scan connnect.
   4. Add hardware flag FITCLOUDHARDWARE_DFUSHOULDSILENTMODE.
   5. Add Game defines for TETRIS/SUDOKU/ANSWER.
-  6. Add QRCode scan connect failure reason(Cancel by the watch/Timeout with click confirm). 
+  6. Add QRCode scan connect failure reason(Cancel by the watch/Timeout with click confirm).
   7. Obtain/set information such as bright screen duration, brightness, vibration, etc. added.
   8. Add flag to identify whether should disable the watchface customize.
   9. Add notify for the watch ui leave the "Find the iPhone".
@@ -157,7 +156,7 @@ V1.2.3 Build202107200001
   18. New watchface size 172 * 320 square / 454 * 454 round / 128 * 220 square  support.
   19. +(void)ignoreConnectedPeripheral:(BOOL)silent; add silent param.
   20. Add FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY,
-      It is suggested that the user enter the system settings to remove the pairing information with the watch, kill the app process and restart the app. 
+      It is suggested that the user enter the system settings to remove the pairing information with the watch, kill the app process and restart the app.
       @Note: the notification may be sent continuously, and the app needs to avoid repeatedly prompting the user, causing trouble to the user.
 ```
 
@@ -331,7 +330,7 @@ V1.1.2 Build201908190002
 ```
   Release Date：2019-08-19
   Features：
-  1、 Fixed problem with notification moment when bluetooth connection begin.  
+  1、 Fixed problem with notification moment when bluetooth connection begin.
 ```
 
 V1.1.1 Build201908190001
@@ -341,7 +340,7 @@ V1.1.1 Build201908190001
   Features：
   1、 Fixed the problem that the last binding Mac address of the bracelet was not cleared when the bracelet was unbound.
   2、 Add begin/end notification for prepare sync work when bind or login bracelet succeed.
-  3、 Fix the problem that shouldAutoConnect attribute does not work for the SDK initialization option.  
+  3、 Fix the problem that shouldAutoConnect attribute does not work for the SDK initialization option.
 ```
 
 V1.1.0 Build201908120001
@@ -423,17 +422,19 @@ pod 'FitCloudKit'
 ```
 
 If you want to integrate beta FitCloudKit, you should use the following configuration in the podfile file:
+
 ```
 pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 ```
 
-Method 2: download from making ` FitCloudKit `, manual integrated into your project.
+Method 2: download from making `FitCloudKit`, manual integrated into your project.
 
 1. FitCloudKit SDK includes:
-    * FitCloudKit. Framework  
-      static library, smart bracelet development kit core framework
-    * FitCloudKit.bundle   
-      smart bracelet development kit core resource package
+
+   - FitCloudKit. Framework  
+     static library, smart bracelet development kit core framework
+   - FitCloudKit.bundle  
+     smart bracelet development kit core resource package
 
 2. Add the framework to the project;
 
@@ -441,21 +442,23 @@ Method 2: download from making ` FitCloudKit `, manual integrated into your proj
 
 4. Add support for other system dependency libraries:
 
-    * CoreGraphics framework
-    * CoreBluetooth framework
+   - CoreGraphics framework
+   - CoreBluetooth framework
+
 5. add `-ObjC` link flag
    add`-ObjC` link flag at `Other Linker Flags` in `Build Settings` as following:
 
-
    ![ObjC Other Link Flag](media/build_settings.png)
+
 ## Privacy Permissions
+
 In the project `Info.Plist` set the following privacy permissions using description, the actual describe the content depends on your business.
 
 ![Bluetooth Privacy Permission](media/privacy_bluetooth_en.png)
 
 ## Bluetooth Background Mode
-![Bluetooth Background Mode](media/bluetooth_backgroundmode.png)
 
+![Bluetooth Background Mode](media/bluetooth_backgroundmode.png)
 
 ## Import Header File
 
@@ -530,7 +533,7 @@ self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
 }
 
 /**
- *@brief The bracelet notify the app it is alive. 
+ *@brief The bracelet notify the app it is alive.
  */
 -(void) OnBraceletAlive
 {
@@ -633,6 +636,7 @@ NSInteger userId = 1000;
 ```
 
 ## Start/Stop Real-time Health Measurements (heart rate, blood oxygen, blood pressure, respiratory rate, ecg, etc.)
+
 ⚠️Caution: ecg measurement should not be taken in conjunction with other real-time measurements.
 
 ```objc
@@ -653,65 +657,97 @@ param.maxMeasuringMinutes = 1;
 }];
 ```
 
+The Real-time Health Measurements results:
+@see FitCloudCallback
+
+```objc
+/**
+ *@brief Real-time exercise health measurement data callback (ecg data exception)
+ *@param records measurement data
+ */
+-(void) OnRealTimeHealthMeasuringData:(NSArray<FitCloudRealTimeHealthMeasuringResultObject*>*)records
+{
+    //According to the actual business logic response bracelet real-time measurement data
+}
+
+/**
+ *@brief Real-time ecg measurement results
+ *@param ecgDataArray ecg data array
+ *@param interval Sampling interval in milliseconds (ms)
+ */
+-(void)OnRealTimeECGData:(NSArray<NSNumber *> *)ecgDataArray interval:(NSInteger)interval
+{
+    //According to the actual business logic response bracelet real-time ecg measurement data
+}
+
+/**
+ *@brief Real-time ecg measurement stopped
+ */
+-(void) OnRealTimeECGStop
+{
+    //Notify the business logic ecg real-time measurement stopped
+}
+```
+
 ## Other Settings and Operations
 
 see detail comments in `<FitCloudKit/FitCloudKit.h>` header file.
 
 ## FAQ
 
->Q: What is the FitCloudKit main invoke process？
+> Q: What is the FitCloudKit main invoke process？
 >
->A: As the following:
+> A: As the following:
 >
-![invoke help en](media/invoke_help_en.png)
+> ![invoke help en](media/invoke_help_en.png)
 
 <!-- more -->
 
->Q: How to determine whether the current bracelet supports specific hardware functions, for example, how to determine whether it is a bracelet with ecg function?
+> Q: How to determine whether the current bracelet supports specific hardware functions, for example, how to determine whether it is a bracelet with ecg function?
 >
->A: You can get the current functions supported by the bracelet according to the information provided by the firmware, such as: whether the bracelet has heart rate/blood oxygen/blood pressure/breathing frequency/weather forecast/ecg/whether it supports sports mode/whether it supports WeChat sports/whether it needs to use the new firmware upgrade platform/whether it supports dynamic heart rate, etc.
+> A: You can get the current functions supported by the bracelet according to the information provided by the firmware, such as: whether the bracelet has heart rate/blood oxygen/blood pressure/breathing frequency/weather forecast/ecg/whether it supports sports mode/whether it supports WeChat sports/whether it needs to use the new firmware upgrade platform/whether it supports dynamic heart rate, etc.
 >
->Take the ecg function as an example, the code is as follows:
->
+> Take the ecg function as an example, the code is as follows:
+
 ```objc
-FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];   
+FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
 BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.hardwareSupported & FITCLOUDHARDWARE_ECG));
 ```
 
 <!-- more -->
 
->Q: When bind the user information, the bluetooth pairing request pops up. Must the user choose to pair with the bracelet?
+> Q: When bind the user information, the bluetooth pairing request pops up. Must the user choose to pair with the bracelet?
 >
->A: It is not required in theory, howerver, if you choose not to pair, the bracelet's message alert function (e.g. QQ/ WeChat /Facebook/Twitter, etc.) will not work properly.
+> A: It is not required in theory, howerver, if you choose not to pair, the bracelet's message alert function (e.g. QQ/ WeChat /Facebook/Twitter, etc.) will not work properly.
 
 <!-- more -->
 
->Q: Where is the part of getting data from self server?
+> Q: Where is the part of getting data from self server?
 >
->A: Our sdk has no communication with any server, you have to do that as yourself. Once you got data from the sdk, you may save it to your own server as you can. Our sdk always offline, we do nothing with that.
+> A: Our sdk has no communication with any server, you have to do that as yourself. Once you got data from the sdk, you may save it to your own server as you can. Our sdk always offline, we do nothing with that.
 
 <!-- more -->
 
->Q: How to get sport data yesterday?
+> Q: How to get sport data yesterday?
 >
->A: You can get sport data by synchronize data from the smart watch with our SDK, once you synchronzied data you should save it to db by your self, or you can upload it to your server, then you can query it later. However, if you have not synchronized the data from the smart watch, you should invoke the code as follows to sychronized it:
->
+> A: You can get sport data by synchronize data from the smart watch with our SDK, once you synchronzied data you should save it to db by your self, or you can upload it to your server, then you can query it later. However, if you have not synchronized the data from the smart watch, you should invoke the code as follows to sychronized it:
+
 ```objc
-[FitCloudKit manualSyncDataWithProgress:^(CGFloat progress, NSString *tip) { 
+[FitCloudKit manualSyncDataWithProgress:^(CGFloat progress, NSString *tip) {
     NSLog(@"Sync Progress:%.0f%%, %@",progress*100.0f, tip);
 } block:^(BOOL succeed, NSArray<FitCloudManualSyncRecordObject*> *records, NSError *error) {
     //Synchronization Result
 }];
 ```
->
->Of course, you should invoke the code when the sdk is ready.
+
+> Of course, you should invoke the code when the sdk is ready.
 
 <!-- more -->
 
->Q: How to get the state of every notification?
+> Q: How to get the state of every notification?
 >
->A: You can invoke the following code to get the state of notification provided by the sdk, note that ‘FITCLOUDMN’ is NS_OPTIONS struct. I think you know how to use that.
->
+> A: You can invoke the following code to get the state of notification provided by the sdk, note that ‘FITCLOUDMN’ is NS_OPTIONS struct. I think you know how to use that.
+
 ```objc
 [FitCloudKit getMessageNotificationSettingWithBlock:^(BOOL succeed, FITCLOUDMN mnSetting, NSError* error){
 }];
@@ -719,10 +755,10 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 
 <!-- more -->
 
->Q: How to get the current daily goal?
+> Q: How to get the current daily goal?
 >
->A: We have not provide the api to retrieve the current daily goal, usually, the daily goal is set by the app, most of the time you may manage it by yourself at the app side. However, the following is the method to set the daily goal.
->
+> A: We have not provide the api to retrieve the current daily goal, usually, the daily goal is set by the app, most of the time you may manage it by yourself at the app side. However, the following is the method to set the daily goal.
+
 ```objc
 [FitCloudKit setDailyGoalWithStepCount:8000 distance:8*1000*100 calory:100*1000 block:^(BOOL succeed, NSError* error){
 }];
@@ -730,14 +766,12 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 
 <!-- more -->
 
->Q: How to deal with the abnormal situation caused by multiple iOS devices successively binding and pairing the same watch?
+> Q: How to deal with the abnormal situation caused by multiple iOS devices successively binding and pairing the same watch?
 >
->A: Generally, users will only bind and pair watch with one iOS device, but a small number of users will bind and pair one watch with multiple iOS devices successively, which leads to abnormal pairing between the iOS device and the watch that was previously connected & paired, and the watch cannot be reconnected. This is due to the fact that these watch devices can only store the pairing information with one iOS device at the same time, The pairing information of the later device covers the previous pairing information, which causes the pairing information on iOS device to not match the pairing information on the watch. Please refer to FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY notification, and process in your app.
+> A: Generally, users will only bind and pair watch with one iOS device, but a small number of users will bind and pair one watch with multiple iOS devices successively, which leads to abnormal pairing between the iOS device and the watch that was previously connected & paired, and the watch cannot be reconnected. This is due to the fact that these watch devices can only store the pairing information with one iOS device at the same time, The pairing information of the later device covers the previous pairing information, which causes the pairing information on iOS device to not match the pairing information on the watch. Please refer to FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY notification, and process in your app.
 
 ## Technical Support
 
 Hetang Smart.
 
 Dai / iOS Developer
-
-

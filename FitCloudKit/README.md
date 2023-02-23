@@ -1,25 +1,24 @@
-# 和唐智能手表（FitCloudKit）iOS开发指南
+# 和唐智能手表（FitCloudKit）iOS 开发指南
 
 ## 简介 / Summary
-* 什么是和唐智能手表 SDK ?
 
-  >###### 和唐智能手表 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件负责与手表设备通信等功能的封装，旨在方便合作伙伴定制自己的智能手表应用。       
+- 什么是和唐智能手表 SDK ?
 
+  > ###### 和唐智能手表 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件负责与手表设备通信等功能的封装，旨在方便合作伙伴定制自己的智能手表应用。
 
-* 适用范围
+- 适用范围
 
   ```
   需要个性化定制自己的 iOS 智能手表 APP 的合作伙伴。
   ```
 
-* 兼容性
+- 兼容性
 
-  ###### 1. iOS 8.0及以上操作系统；
+  ###### 1. iOS 8.0 及以上操作系统；
 
-  ###### 2. 支持armv7/i386/x86_64/arm64指令集；
+  ###### 2. 支持 armv7/i386/x86_64/arm64 指令集；
 
-  ###### 3. 支持Bitcode；
-
+  ###### 3. 支持 Bitcode；
 
 ## 特性 / Features
 
@@ -33,7 +32,7 @@
 
 5. 同步天气信息；
 
-6. 查找手表/iOS设备；
+6. 查找手表/iOS 设备；
 
 7. 一键恢复出厂设置；
 
@@ -43,7 +42,7 @@
 
 ## 版本 / Releases
 
-版本V1.2.7 Build202212300001
+版本 V1.2.7 Build202212300001
 
 ```
   发布日期：2022年12月30日
@@ -58,7 +57,7 @@
   8.优化外设MTU值获取
 ```
 
-版本V1.2.6 Build202209200001
+版本 V1.2.6 Build202209200001
 
 ```
   发布日期：2022年09月20日
@@ -85,7 +84,7 @@
   20.提升SDK稳定性
 ```
 
-版本V1.2.5 Build202201260001
+版本 V1.2.5 Build202201260001
 
 ```
   发布日期：2022年01月26日
@@ -104,7 +103,7 @@
   12.新增印地语
 ```
 
-版本V1.2.4 Build202110120001
+版本 V1.2.4 Build202110120001
 
 ```
   发布日期：2021年10月12日
@@ -129,7 +128,7 @@
   18.新增获取设备可支持的运动模式类型列表/设备当前运动模式类型列表，仅部分手表支持
 ```
 
-版本V1.2.3 Build202107200001
+版本 V1.2.3 Build202107200001
 
 ```
   发布日期：2021年07月20日
@@ -162,7 +161,7 @@
     @note: 该通知可能连续发送，应用层需要避免重复提示用户，给用户造成困扰
 ```
 
-版本V1.2.2 Build202102050001
+版本 V1.2.2 Build202102050001
 
 ```
   发布日期：2021年02月05日
@@ -180,7 +179,7 @@
   11.新增运动类型定义
 ```
 
-版本V1.2.1 Build202010300001
+版本 V1.2.1 Build202010300001
 
 ```
   发布日期：2020年10月30日
@@ -200,7 +199,7 @@
   12.补丁：当allowShowAdditionalReminder标志位为true时，allowShowMailReminder/allowShowTelegramAndViberReminder强制为true
 ```
 
-版本V1.2.0 Build202007180001
+版本 V1.2.0 Build202007180001
 
 ```
   发布日期：2020年07月18日
@@ -218,7 +217,7 @@
   11.支持设置SDK定义的所有本地化语言至手表
 ```
 
-版本V1.1.9 Build202005150001
+版本 V1.1.9 Build202005150001
 
 ```
   发布日期：2020年05月15日
@@ -226,7 +225,7 @@
   1.支持体温测量，仅部分手表支持
 ```
 
-版本V1.1.8 Build202004250001
+版本 V1.1.8 Build202004250001
 
 ```
   发布日期：2020年04月25日
@@ -242,7 +241,7 @@
   9.修正连接手表超时不执行连接超时逻辑的问题
 ```
 
-版本V1.1.7 Build202002250001
+版本 V1.1.7 Build202002250001
 
 ```
   发布日期：2020年02月25日
@@ -261,7 +260,7 @@
   12.其他一些改进
 ```
 
-版本V1.1.6 Build201911210001
+版本 V1.1.6 Build201911210001
 
 ```
   发布日期：2019年11月21日
@@ -277,7 +276,7 @@
   9.提升SDK稳定性
 ```
 
-版本V1.1.5 Build201911130001
+版本 V1.1.5 Build201911130001
 
 ```
   发布日期：2019年11月13日
@@ -285,7 +284,7 @@
   1.新增勿扰模式(仅部分手表支持 @see allowDNDMode)
 ```
 
-版本V1.1.4 Build201910240001
+版本 V1.1.4 Build201910240001
 
 ```
   发布日期：2019年10月24日
@@ -294,7 +293,7 @@
   2.修正同步数据moment使得不会超过当前同步时间
 ```
 
-版本V1.1.3 Build201910160001
+版本 V1.1.3 Build201910160001
 
 ```
   发布日期：2019年10月16日
@@ -312,7 +311,7 @@
   11.避免歧义，+(NSArray<FitCloudPeripheral *>*_Nonnull)peripherals 修改为  +(NSArray<FitCloudPeripheral *>*_Nonnull)discoveredPeripherals
 ```
 
-版本V1.1.3-beta.9 Build201909300001
+版本 V1.1.3-beta.9 Build201909300001
 
 ```
   发布日期：2019年09月30日
@@ -327,7 +326,7 @@
   8.提升SDK稳定性
 ```
 
-版本V1.1.2 Build201908190002
+版本 V1.1.2 Build201908190002
 
 ```
   发布日期：2019年08月19日
@@ -335,7 +334,7 @@
   1.修正蓝牙连接开始的通知时刻问题
 ```
 
-版本V1.1.1 Build201908190001
+版本 V1.1.1 Build201908190001
 
 ```
   发布日期：2019年08月19日
@@ -345,7 +344,7 @@
   3.修正SDK初始化选项shouldAutoConnect不起作用的问题
 ```
 
-版本V1.1.0 Build201908120001
+版本 V1.1.0 Build201908120001
 
 ```
   发布日期：2019年08月12日
@@ -353,7 +352,7 @@
   1、 支持后台蓝牙数据同步功能
 ```
 
-版本V1.0.9 Build201907210001
+版本 V1.0.9 Build201907210001
 
 ```
   发布日期：2019年07月21日
@@ -361,7 +360,7 @@
   1、 支持获取当前SDK版本信息
 ```
 
-版本V1.0.8 Build201907200001
+版本 V1.0.8 Build201907200001
 
 ```
   发布日期：2019年07月20日
@@ -370,7 +369,7 @@
   2、 优化手表回连机制
 ```
 
-版本V1.0.7 Build201906280001
+版本 V1.0.7 Build201906280001
 
 ```
   发布日期：2019年06月28日
@@ -378,7 +377,7 @@
   1、 修正无法获取消息通知设置的一些问题
 ```
 
-版本V1.0.6 Build201906270001
+版本 V1.0.6 Build201906270001
 
 ```
   发布日期：2019年06月27日
@@ -386,7 +385,7 @@
   1、 扫描到的外部设备新增mac地址数据
 ```
 
-版本V1.0.5 Build201906250001
+版本 V1.0.5 Build201906250001
 
 ```
   发布日期：2019年06月25日
@@ -394,7 +393,7 @@
   1、 修改支持设置运动目标
 ```
 
-版本V1.0.4 Build201906110001
+版本 V1.0.4 Build201906110001
 
 ```
   发布日期：2019年06月11日
@@ -403,7 +402,7 @@
   2、 修复了手表同步的一些问题。
 ```
 
-版本V1.0.0 Build201905010001
+版本 V1.0.0 Build201905010001
 
 ```
   发布日期：2019年05月01日
@@ -424,38 +423,41 @@ pod 'FitCloudKit'
 ```
 
 如果你想集成 beta 测试版，则 Podfile 文件中应该使用如下配置：
+
 ```
 pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 ```
 
 方法二：从 Github 上下载 `FitCloudKit`，手动集成到您的项目中。
 
-1. FitCloudKit SDK开发包含：
+1. FitCloudKit SDK 开发包含：
 
-  * FitCloudKit.framework   静态库，智能手表开发套件核心framework
+- FitCloudKit.framework 静态库，智能手表开发套件核心 framework
 
-  * FitCloudKit.bundle     智能手表开发套件核心资源包
+- FitCloudKit.bundle 智能手表开发套件核心资源包
 
-2. 将framework添加到项目中;
-3. 将bundle资源包添加到项目中;
+2. 将 framework 添加到项目中;
+3. 将 bundle 资源包添加到项目中;
 4. 添加其他系统依赖库支持：
 
-    * CoreGraphics.framework
+   - CoreGraphics.framework
 
-    * CoreBluetooth.framework
+   - CoreBluetooth.framework
+
 5. 添加 `-ObjC` 链接标志
    在项目的 `Build Settings` 的 `Other Linker Flags` 中添加 `-ObjC` 链接标志，如下图所示：
 
    ![ObjC Other Link Flag](media/build_settings.png)
 
 ## 设置隐私权限
+
 在项目的`Info.plist`中设置以下隐私权限使用描述，实际描述内容各项目自行设置
 
 ![蓝牙隐私权限](media/privacy_bluetooth.png)
 
 ## 设置蓝牙后台模式
-![设置蓝牙后台模式](media/bluetooth_backgroundmode.png)
 
+![设置蓝牙后台模式](media/bluetooth_backgroundmode.png)
 
 ## 引用头文件
 
@@ -463,7 +465,7 @@ pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 #import <FitCloudKit/FitCloudKit.h>
 ```
 
-## 初始化SDK
+## 初始化 SDK
 
 ```objc
 FitCloudOption *option = [FitCloudOption defaultOption];
@@ -633,7 +635,8 @@ NSInteger userId = 1000;
 ```
 
 ## 启动/关闭实时健康测量（心率、血氧、血压、呼吸频率、心电等）
-⚠️注意事项：心电请勿与其他实时测量同时进行。
+
+⚠️ 注意事项：心电请勿与其他实时测量同时进行。
 
 ```objc
 //设置参数
@@ -653,47 +656,77 @@ param.maxMeasuringMinutes = 1;
 }];
 ```
 
+实时测量结果：
+@see FitCloudCallback 回调协议
+
+```objc
+/**
+ *@brief 实时运动健康测量数据（心电数据例外）
+ *@param records 数据
+ */
+-(void) OnRealTimeHealthMeasuringData:(NSArray<FitCloudRealTimeHealthMeasuringResultObject*>*)records
+{
+    //根据实际业务逻辑响应手表实时测量数据
+}
+
+/**
+ *@brief 心电实时测量结果
+ *@param ecgDataArray 数据
+ *@param interval 采样间隔, 单位：毫秒(ms)
+ */
+-(void)OnRealTimeECGData:(NSArray<NSNumber *> *)ecgDataArray interval:(NSInteger)interval
+{
+    //根据实际业务逻辑响应手表心电实时测量数据
+}
+
+/**
+ *@brief 心电实时测量结束
+ */
+-(void) OnRealTimeECGStop
+{
+    //通知业务逻辑心电实时测量停止了
+}
+```
+
 ## 其他设置和操作
 
 参看`<FitCloudKit/FitCloudKit.h>`头文件中详细注释说明。
 
 ## FAQ
 
->Q: FitCloudKit 主干调用流程是什么？
+> Q: FitCloudKit 主干调用流程是什么？
 >
->A: 如下图所示：
+> A: 如下图所示：
 >
-![invoke help cn](media/invoke_help_cn.png)
+> ![invoke help cn](media/invoke_help_cn.png)
 
 <!-- more -->
 
->Q: 如何判断当前手表是否支持特定的硬件功能，例如：怎么判断是否是具有心电功能的手表？
+> Q: 如何判断当前手表是否支持特定的硬件功能，例如：怎么判断是否是具有心电功能的手表？
 >
->A: 您可以根据固件提供的信息获取当前手表所支持的功能，例如：该手表是否具有心率/血氧/血压/呼吸频率/天气预报/心电/是否支持运动模式/是否支持微信运动/是否需要使用新的固件升级平台/是否支持动态心率等。
+> A: 您可以根据固件提供的信息获取当前手表所支持的功能，例如：该手表是否具有心率/血氧/血压/呼吸频率/天气预报/心电/是否支持运动模式/是否支持微信运动/是否需要使用新的固件升级平台/是否支持动态心率等。
 >
->以心电功能为例，代码如下：
->
+> 以心电功能为例，代码如下：
+
 ```objc
-FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];   
+FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
 BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.hardwareSupported & FITCLOUDHARDWARE_ECG));
 ```
 
 <!-- more -->
 
->Q: 绑定用户过程中，弹出蓝牙配对请求弹窗，用户是否必须选择与手表进行配对？
+> Q: 绑定用户过程中，弹出蓝牙配对请求弹窗，用户是否必须选择与手表进行配对？
 >
->A: 理论上不是必须的，但是如果选择不配对的话，手表的消息提醒功能(如QQ/微信/Facebook/Twitter等)将不能正常工作。
+> A: 理论上不是必须的，但是如果选择不配对的话，手表的消息提醒功能(如 QQ/微信/Facebook/Twitter 等)将不能正常工作。
 
 <!-- more -->
 
->Q: 如何处理多台iOS设备先后绑定配对同一个手表导致的异常情况？
+> Q: 如何处理多台 iOS 设备先后绑定配对同一个手表导致的异常情况？
 >
->A: 通常情况下，用户只会拿一台iOS设备去绑定配对手表，但仍然有少部分用户会拿多台iOS设备先后去绑定配对一个手表，从而导致先前连接配对的那台iOS设备与手表配对异常，无法重新连接手表，这是由于这些手表设备同时只能存储与一台iOS设备的配对信息所导致的，后面设备的配对信息覆盖了之前的配对信息，从而导致iOS设备上的配对信息与手表上的配对信息不匹配，请参照 FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY 通知进行处理。
+> A: 通常情况下，用户只会拿一台 iOS 设备去绑定配对手表，但仍然有少部分用户会拿多台 iOS 设备先后去绑定配对一个手表，从而导致先前连接配对的那台 iOS 设备与手表配对异常，无法重新连接手表，这是由于这些手表设备同时只能存储与一台 iOS 设备的配对信息所导致的，后面设备的配对信息覆盖了之前的配对信息，从而导致 iOS 设备上的配对信息与手表上的配对信息不匹配，请参照 FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY 通知进行处理。
 
 ## 技术支持
 
 和唐智能
 
 戴工 / iOS Developer
-
-
