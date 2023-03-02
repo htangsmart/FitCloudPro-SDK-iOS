@@ -10,6 +10,7 @@
 #import <CommonCrypto/CommonHMAC.h>
 #import "iotMqtt.h"
 #import "MqttManager.h"
+#import "AFHttpHelper.h"
 
 //! Project version number for AliCloudIotKitAdvance.
 FOUNDATION_EXPORT double AliCloudIotKitAdvanceVersionNumber;
