@@ -128,8 +128,9 @@ extension ViewController: BleNeedSendDataDelegate {
  *@param aliotData 支付宝Iot数据
  *@param totalPacks 总数据包个数
  *@param packIndex 当前第几个数据包，下标从0开始
+ *@param expectedTotalBytes 支付宝Iot数据总长度，即几个数据包加起来的总长度
  */
--(void) OnAliotData:(NSData*)aliotData totalPacks:(NSInteger)totalPacks packIndex:(NSInteger)packIndex
+-(void) OnAliotData:(NSData*)aliotData totalPacks:(NSInteger)totalPacks packIndex:(NSInteger)packIndex expectedTotalBytes:(NSInteger)expectedTotalBytes
 {
     if(packIndex == 0)
     {
