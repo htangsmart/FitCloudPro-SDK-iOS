@@ -8,8 +8,8 @@
   * [英文文档(English Doc)](FitCloudKit/README_EN.md)
   
 # 2. FitCloudDFUKit
-#### FitCloudPro 智能手表的iOS框架，负责手表固件升级/表盘升级等功能的封装。
-#### iOS framework for fitcloudpro smart watch, which is responsible for the upgrade of the smart watch firmware, also UI DFU / watchface DFU. 
+#### FitCloudPro 智能手表的iOS框架，负责手表固件升级/UI升级/表盘升级/运动推送等功能的封装。
+#### iOS framework for fitcloudpro smart watch, which is responsible for the upgrade of the smart watch firmware, also UI DFU / watchface DFU / watch sports DFU. 
 [![Pod Version](http://img.shields.io/cocoapods/v/FitCloudDFUKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudDFUKit/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/FitCloudDFUKit.svg?style=flat)](http://cocoadocs.org/docsets/FitCloudDFUKit/)
 

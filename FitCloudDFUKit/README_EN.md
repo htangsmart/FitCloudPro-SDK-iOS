@@ -312,7 +312,7 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 [FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:silentMode];
 ```
 
-## Normal DFU / UI DFU / Watchface DFU
+## Normal DFU / UI DFU / Watchface DFU / Watch Sports DFU
 
 **Step 1**
 
@@ -336,7 +336,7 @@ if([FitCloudKit allConfig].firmware.hardwareSupported & FITCLOUDHARDWARE_DFUSHOU
 }
 ```
 
-UI DFU or Watchface DFU:
+UI DFU / Watchface DFU / Watch Sports DFU:
 ```
 BOOL silentMode = YES;
 ```

@@ -313,7 +313,7 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 [FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:silentMode];
 ```
 
-## 普通固件升级/UI固件升级/表盘推送
+## 普通固件升级/UI固件升级/表盘推送/运动推送
 
 **Step 1**
 
@@ -337,7 +337,7 @@ if([FitCloudKit allConfig].firmware.hardwareSupported & FITCLOUDHARDWARE_DFUSHOU
 }
 ```
 
-UI固件升级或表盘推送:
+UI固件升级/表盘推送/运动推送:
 ```
 BOOL silentMode = YES;
 ```
@@ -354,7 +354,7 @@ BOOL silentMode = YES;
 
 -(void)OnReconnectWithDFUMode:(NSNotification*)notification
 {
-    NSLog(@"%@", APP_LOG_STRING(@"手表重启成功，此次表盘推送%@。", _lastDFUSucceed ? @"成功" : @"失败"));
+    NSLog(@"%@", APP_LOG_STRING(@"手表重启成功，此次推送%@。", _lastDFUSucceed ? @"成功" : @"失败"));
 }
 ```
 
