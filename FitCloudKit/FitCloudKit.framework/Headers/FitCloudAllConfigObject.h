@@ -22,6 +22,7 @@
 #import <FitCloudKit/FitCloudHandWashRemindObject.h>
 #import <FitCloudKit/FitCloudScreenSetting.h>
 #import <FitCloudKit/FitCloudVibrateSetting.h>
+#import <FitCloudKit/FitCloudPowerSavingSetting.h>
 
 /**
  * @brief 手环所有配置信息（用于手环绑定时一次性获取）
@@ -113,5 +114,8 @@
  * @brief 振动设置
  */
 @property(nonatomic, strong) FitCloudVibrateSetting* vibrateSetting;
+
+/// 省电模式设置
+@property(nonatomic, strong) FitCloudPowerSavingSetting* powerSavingSetting;
 
 @end

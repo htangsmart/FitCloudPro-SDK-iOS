@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-03-14  Version:1.2.8-beta.12 Build:202303140002
+//     pcjbird    2023-03-27  Version:1.2.8-beta.13 Build:202303270001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
 //                            2.新增自定义标签功能 @see withCustomLabels
 //                            3.支付宝Iot支持, @see allowAliot
@@ -19,6 +19,7 @@
 //                            7.表盘尺寸支持340*340圆
 //                            8.新增指定支持的收款码和名片，仅支持的收款码和名片才应该在App上展示推送入口 @see specifySupportedMoneyReceiveAndBusinessQRCode
 //                            9.修改习惯养成指令
+//                            10.新增省电模式设置 @see withPowerSavingMode & allowPowerSavingModePeriod
 //
 //     pcjbird    2022-12-30  Version:1.2.7 Build:202212300001
 //                            1.新增禁用睡眠模块
@@ -843,6 +844,22 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void)getDNDSettingWithBlock:(FitCloudDNDSettingResultBlock _Nullable)block;
+
+#pragma mark 省电模式设置
+/**
+ * @brief 省电模式设置
+ * @param settings 省电模式设置
+ * @param block 结果回调
+ */
++(void)setPowerSavingSettings:(FitCloudPowerSavingSetting* _Nonnull)settings block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取省电模式设置
+/**
+ * @brief 获取省电模式设置
+ * @param block 结果回调
+ */
++(void)getPowerSavingSettingWithBlock:(FitCloudPowerSavingSettingResultBlock _Nullable)block;
+
 
 #pragma mark 获取手表UI信息
 /**

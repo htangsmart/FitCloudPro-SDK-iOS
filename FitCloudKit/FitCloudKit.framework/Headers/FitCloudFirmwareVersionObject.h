@@ -263,4 +263,11 @@
  * @brief 是否指定支持的收款码和名片，仅支持的收款码和名片才应该在App上展示推送入口
  */
 @property(nonatomic, readonly) BOOL specifySupportedMoneyReceiveAndBusinessQRCode;
+
+
+/// 是否支持省电模式
+@property(nonatomic, readonly) BOOL withPowerSavingMode;
+
+/// 是否支持app设置省电模式时间段
+@property(nonatomic, readonly) BOOL allowPowerSavingModePeriod;
 @end

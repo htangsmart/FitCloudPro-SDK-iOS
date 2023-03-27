@@ -54,6 +54,7 @@
 #import <FitCloudKit/FitCloudHabitObject.h>
 #import <FitCloudKit/FitCloudDailyGoalObject.h>
 #import <FitCloudKit/FitCloudCustomLabelsObject.h>
+#import <FitCloudKit/FitCloudPowerSavingSetting.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -255,6 +256,15 @@ typedef void (^FitCloudAllConfigWhenBindResultBlock)(BOOL succeed, FitCloudAllCo
  *@param error 错误信息
  */
 typedef void (^FitCloudDNDSettingResultBlock)(BOOL succeed, FitCloudDNDSetting* dndSetting, NSError* error);
+
+
+/**
+ *@brief FitCloud 获取省电模式设置信息调用结果回调
+ *@param succeed 是否成功
+ *@param setting  省电模式设置信息
+ *@param error 错误信息
+ */
+typedef void (^FitCloudPowerSavingSettingResultBlock)(BOOL succeed, FitCloudPowerSavingSetting* setting, NSError* error);
 
 /**
  *@brief FitCloud 获取女性健康设置信息调用结果回调
