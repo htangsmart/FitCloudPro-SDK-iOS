@@ -415,7 +415,10 @@
 /**
  * @brief 卫星数量（个数）
  */
-@property(nonatomic, assign) UInt8  satellites_count;
+@property(nonatomic, assign) UInt8  satellitesCount;
+
+/// 是否为一段的起点
+@property(nonatomic, assign) BOOL   isStartingPoint;
 
 @end
 
