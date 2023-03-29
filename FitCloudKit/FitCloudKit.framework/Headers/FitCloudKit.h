@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-03-28  Version:1.2.8-beta.15 Build:202303280002
+//     pcjbird    2023-03-28  Version:1.2.8-beta.16 Build:202303290001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
 //                            2.新增自定义标签功能 @see withCustomLabels
 //                            3.支付宝Iot支持, @see allowAliot
