@@ -703,11 +703,25 @@ see detail comments in `<FitCloudKit/FitCloudKit.h>` header file.
 
 <!-- more -->
 
-> Q: How to determine whether the current bracelet supports specific hardware functions, for example, how to determine whether it is a bracelet with ecg function?
+> Q:  How determine whether the current smartwatch supports specific features, for example, how to determine whether the smartwatch with DND feature?
 >
-> A: You can get the current functions supported by the bracelet according to the information provided by the firmware, such as: whether the bracelet has heart rate/blood oxygen/blood pressure/breathing frequency/weather forecast/ecg/whether it supports sports mode/whether it supports WeChat sports/whether it needs to use the new firmware upgrade platform/whether it supports dynamic heart rate, etc.
+> A: You can get the current features supported by the smartwatch according to the information provided by the firmware, such as the dnd mode feature. Software feature & hardware feature included.
 >
-> Take the ecg function as an example, the code is as follows:
+> Take the dnd mode feature for example, the code is as follows:
+
+```objc
+FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+BOOL isDNDSupported = (allConfig && allConfig.firmware && allConfig.firmware.allowDNDMode);
+```
+> Above is the example for the software feature, and the hardware feature see the next FAQ.
+
+<!-- more -->
+
+> Q: How to determine whether the current smartwatch supports specific hardware features, for example, how to determine whether the smartwatch with ecg feature?
+>
+> A: You can get the current features supported by the smartwatch according to the information provided by the firmware, such as: whether the smartwatch has heart rate/blood oxygen/blood pressure/breathing frequency/weather forecast/ecg/sports mode/WeChat sports/the new firmware upgrade platform/dynamic heart rate, etc.
+>
+> Take the ecg feature as an example, the code is as follows:
 
 ```objc
 FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];

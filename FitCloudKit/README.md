@@ -702,6 +702,20 @@ param.maxMeasuringMinutes = 1;
 
 <!-- more -->
 
+> Q: 如何判断当前手表固件是否支持特定的功能，例如：怎么判断当前手表固件是否支持勿扰模式？
+>
+> A: 您可以根据固件提供的信息获取当前手表所支持的功能，包含软件功能和硬件功能的部分。
+>
+> 以勿扰模式为例，代码如下：
+
+```objc
+FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+BOOL isDNDSupported = (allConfig && allConfig.firmware && allConfig.firmware.allowDNDMode);
+```
+> 以上是软件功能的示例，硬件功能参看下一个FAQ。
+
+<!-- more -->
+
 > Q: 如何判断当前手表是否支持特定的硬件功能，例如：怎么判断是否是具有心电功能的手表？
 >
 > A: 您可以根据固件提供的信息获取当前手表所支持的功能，例如：该手表是否具有心率/血氧/血压/呼吸频率/天气预报/心电/是否支持运动模式/是否支持微信运动/是否需要使用新的固件升级平台/是否支持动态心率等。
