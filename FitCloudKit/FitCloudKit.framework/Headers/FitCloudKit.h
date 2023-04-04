@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-03-28  Version:1.2.8-beta.16 Build:202303290001
+//     pcjbird    2023-04-04  Version:1.2.8-beta.17 Build:202304040001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
 //                            2.新增自定义标签功能 @see withCustomLabels
 //                            3.支付宝Iot支持, @see allowAliot
@@ -20,6 +20,7 @@
 //                            8.新增指定支持的收款码和名片，仅支持的收款码和名片才应该在App上展示推送入口 @see specifySupportedMoneyReceiveAndBusinessQRCode
 //                            9.修改习惯养成指令
 //                            10.新增省电模式设置 @see withPowerSavingMode & allowPowerSavingModePeriod
+//                            11.设定每日目标新增时间戳参数
 //
 //     pcjbird    2022-12-30  Version:1.2.7 Build:202212300001
 //                            1.新增禁用睡眠模块
@@ -618,9 +619,10 @@ NS_ASSUME_NONNULL_BEGIN
  * @param stepcount 步数目标, 单位：步数
  * @param distance 距离目标, 单位：厘米(cm)
  * @param calory 卡路里, 单位：小卡(cal)
+ * @param timestamp 时间戳，传nil，则默认为当前时间
  * @param block 结果回调
  */
-+(void)setDailyGoalWithStepCount:(UInt32) stepcount distance:(UInt32)distance calory:(UInt32)calory block:(FitCloudResultBlock _Nullable )block;
++(void)setDailyGoalWithStepCount:(UInt32) stepcount distance:(UInt32)distance calory:(UInt32)calory timestamp:(NSDate*)timestamp block:(FitCloudResultBlock _Nullable )block;
 
 #pragma mark 获取每日运动目标
 /**
