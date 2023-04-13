@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-04-04  Version:1.2.8-beta.17 Build:202304040001
+//     pcjbird    2023-04-13  Version:1.2.8-beta.18 Build:202304130001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
 //                            2.新增自定义标签功能 @see withCustomLabels
 //                            3.支付宝Iot支持, @see allowAliot
@@ -622,7 +622,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param timestamp 时间戳，传nil，则默认为当前时间
  * @param block 结果回调
  */
-+(void)setDailyGoalWithStepCount:(UInt32) stepcount distance:(UInt32)distance calory:(UInt32)calory timestamp:(NSDate*)timestamp block:(FitCloudResultBlock _Nullable )block;
++(void)setDailyGoalWithStepCount:(UInt32) stepcount distance:(UInt32)distance calory:(UInt32)calory timestamp:(NSDate* _Nullable )timestamp block:(FitCloudResultBlock _Nullable )block;
 
 #pragma mark 获取每日运动目标
 /**
