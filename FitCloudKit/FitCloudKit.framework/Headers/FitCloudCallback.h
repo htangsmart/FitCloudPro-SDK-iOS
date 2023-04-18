@@ -547,9 +547,9 @@ typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber
 -(void) OnAlexaVoiceDecodedWithData:(NSData*)voiceData;
 
 /**
- *@brief 支付宝Iot数据通信准备好了，可以开始传输付宝Iot数据，仅支持改功能的手表才有该回调
+ *@brief 通知App开始发起支付宝Iot认证
  */
--(void) OnAliotDataExchangeReady;
+-(void) OnNotifyAppToAliotAuth;
 
 /**
  *@brief 支付宝Iot数据回调
