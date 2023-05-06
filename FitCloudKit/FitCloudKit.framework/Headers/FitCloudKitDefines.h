@@ -485,10 +485,10 @@ typedef NS_ENUM(UInt16, FITCLOUDSPORTSTYPE)
     FITCLOUDSPORTSTYPE_FITNESSBIKE_BRACELETAPP = 0x3E,               //健身车 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
     FITCLOUDSPORTSTYPE_FITNESSBIKE_APPONLY = 0x3F,                   //健身车 APP单独
     FITCLOUDSPORTSTYPE_FITNESSBIKE_APPBRACELET = 0x40,               //健身车 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
-    FITCLOUDSPORTSTYPE_FITNESS_BRACELETONLY = 0x41,                  //健身 手环单独
-    FITCLOUDSPORTSTYPE_FITNESS_BRACELETAPP = 0x42,                   //健身 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
-    FITCLOUDSPORTSTYPE_FITNESS_APPONLY = 0x43,                       //健身 APP单独
-    FITCLOUDSPORTSTYPE_FITNESS_APPBRACELET = 0x44,                   //健身 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_FREETRAINING_BRACELETONLY = 0x41,             //自由训练 手环单独
+    FITCLOUDSPORTSTYPE_FREETRAINING_BRACELETAPP = 0x42,              //自由训练 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_FREETRAINING_APPONLY = 0x43,                  //自由训练 APP单独
+    FITCLOUDSPORTSTYPE_FREETRAINING_APPBRACELET = 0x44,              //自由训练 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
     FITCLOUDSPORTSTYPE_TENNIS_BRACELETONLY = 0x45,                   //网球 手环单独
     FITCLOUDSPORTSTYPE_TENNIS_BRACELETAPP = 0x46,                    //网球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
     FITCLOUDSPORTSTYPE_TENNIS_APPONLY = 0x47,                        //网球 APP单独
@@ -561,6 +561,426 @@ typedef NS_ENUM(UInt16, FITCLOUDSPORTSTYPE)
     FITCLOUDSPORTSTYPE_VOLLEYBALL_BRACELETAPP = 0x7e,                //排球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
     FITCLOUDSPORTSTYPE_VOLLEYBALL_APPONLY = 0x7f,                    //排球 APP单独
     FITCLOUDSPORTSTYPE_VOLLEYBALL_APPBRACELET = 0x80,                //排球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_PARKOUR_BRACELETONLY = 0x81,                  //跑酷 手环单独
+    FITCLOUDSPORTSTYPE_PARKOUR_BRACELETAPP = 0x82,                   //跑酷 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_PARKOUR_APPONLY = 0x83,                       //跑酷 APP单独
+    FITCLOUDSPORTSTYPE_PARKOUR_APPBRACELET = 0x84,                   //跑酷 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_ONFOOT_BRACELETONLY = 0x85,                   //徒步 手环单独
+    FITCLOUDSPORTSTYPE_ONFOOT_BRACELETAPP = 0x86,                    //徒步 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_ONFOOT_APPONLY = 0x87,                        //徒步 APP单独
+    FITCLOUDSPORTSTYPE_ONFOOT_APPBRACELET = 0x88,                    //徒步 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_HOCKEY_BRACELETONLY = 0x89,                   //曲棍球 手环单独
+    FITCLOUDSPORTSTYPE_HOCKEY_BRACELETAPP = 0x8A,                    //曲棍球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_HOCKEY_APPONLY = 0x8B,                        //曲棍球 APP单独
+    FITCLOUDSPORTSTYPE_HOCKEY_APPBRACELET = 0x8C,                    //曲棍球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_BOATING_BRACELETONLY = 0x8D,                  //划船 手环单独
+    FITCLOUDSPORTSTYPE_BOATING_BRACELETAPP = 0x8E,                   //划船 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_BOATING_APPONLY = 0x8F,                       //划船 APP单独
+    FITCLOUDSPORTSTYPE_BOATING_APPBRACELET = 0x90,                   //划船 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_HIIT_BRACELETONLY = 0x91,                     //HIIT 手环单独
+    FITCLOUDSPORTSTYPE_HIIT_BRACELETAPP = 0x92,                      //HIIT 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_HIIT_APPONLY = 0x93,                          //HIIT APP单独
+    FITCLOUDSPORTSTYPE_HIIT_APPBRACELET = 0x94,                      //HIIT APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_SOFTBALL_BRACELETONLY = 0x95,                 //垒球 手环单独
+    FITCLOUDSPORTSTYPE_SOFTBALL_BRACELETAPP = 0x96,                  //垒球 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_SOFTBALL_APPONLY = 0x97,                      //垒球 APP单独
+    FITCLOUDSPORTSTYPE_SOFTBALL_APPBRACELET = 0x98,                  //垒球 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_CROSSCOUNTRYRUNNING_BRACELETONLY = 0x99,       //越野跑 手环单独
+    FITCLOUDSPORTSTYPE_CROSSCOUNTRYRUNNING_BRACELETAPP = 0x9A,        //越野跑 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_CROSSCOUNTRYRUNNING_APPONLY = 0x9B,            //越野跑 APP单独
+    FITCLOUDSPORTSTYPE_CROSSCOUNTRYRUNNING_APPBRACELET = 0x9C,        //越野跑 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_SKIING_BRACELETONLY = 0x9D,                    //滑雪 手环单独
+    FITCLOUDSPORTSTYPE_SKIING_BRACELETAPP = 0x9E,                     //滑雪 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_SKIING_APPONLY = 0x9F,                         //滑雪 APP单独
+    FITCLOUDSPORTSTYPE_SKIING_APPBRACELET = 0xA0,                     //滑雪 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_STROLLER_BRACELETONLY = 0xA1,                  //漫步机 手环单独
+    FITCLOUDSPORTSTYPE_STROLLER_BRACELETAPP = 0xA2,                   //漫步机 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_STROLLER_APPONLY = 0xA3,                       //漫步机 APP单独
+    FITCLOUDSPORTSTYPE_STROLLER_APPBRACELET = 0xA4,                   //漫步机 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_RELAXATION_BRACELETONLY = 0xA5,                //整理放松 手环单独
+    FITCLOUDSPORTSTYPE_RELAXATION_BRACELETAPP = 0xA6,                 //整理放松 手环+APP  手环连着APP时，手环上发起启动，手环和APP一起启动
+    FITCLOUDSPORTSTYPE_RELAXATION_APPONLY = 0xA7,                     //整理放松 APP单独
+    FITCLOUDSPORTSTYPE_RELAXATION_APPBRACELET = 0xA8,                 //整理放松 APP+手环   APP连着手环，APP上发起启动，手环和APP一起启动
+    
+    FITCLOUDSPORTSTYPE_CROSS_TRAINING_BRACELETONLY = 0xA9,             //交叉训练（仅手环）
+    FITCLOUDSPORTSTYPE_CROSS_TRAINING_BRACELETAPP = 0xAA,              //交叉训练（手环+App）
+    FITCLOUDSPORTSTYPE_CROSS_TRAINING_APPONLY = 0xAB,                  //交叉训练（仅App）
+    FITCLOUDSPORTSTYPE_CROSS_TRAINING_APPBRACELET = 0xAC,              //交叉训练（App+手环）
+    
+    FITCLOUDSPORTSTYPE_PILATES_BRACELETONLY = 0xAD,                     //普拉提（仅手环）
+    FITCLOUDSPORTSTYPE_PILATES_BRACELETAPP = 0xAE,                      //普拉提（手环+App）
+    FITCLOUDSPORTSTYPE_PILATES_APPONLY = 0xAF,                          //普拉提（仅App）
+    FITCLOUDSPORTSTYPE_PILATES_APPBRACELET = 0xB0,                      //普拉提（App+手环）
+    
+    FITCLOUDSPORTSTYPE_CROSS_COORDINATION_BRACELETONLY = 0xB1,          //交叉配合（仅手环）
+    FITCLOUDSPORTSTYPE_CROSS_COORDINATION_BRACELETAPP = 0xB2,           //交叉配合（手环+App）
+    FITCLOUDSPORTSTYPE_CROSS_COORDINATION_APPONLY = 0xB3,               //交叉配合（仅App）
+    FITCLOUDSPORTSTYPE_CROSS_COORDINATION_APPBRACELET = 0xB4,           //交叉配合（App+手环）
+    
+    FITCLOUDSPORTSTYPE_FUNCTIONAL_TRAINING_BRACELETONLY = 0xB5,         //功能性训练（仅手环）
+    FITCLOUDSPORTSTYPE_FUNCTIONAL_TRAINING_BRACELETAPP = 0xB6,          //功能性训练（手环+App）
+    FITCLOUDSPORTSTYPE_FUNCTIONAL_TRAINING_APPONLY = 0xB7,              //功能性训练（仅App）
+    FITCLOUDSPORTSTYPE_FUNCTIONAL_TRAINING_APPBRACELET = 0xB8,          //功能性训练（App+手环）
+    
+    FITCLOUDSPORTSTYPE_PHYSICAL_FITNESS_TRAINING_BRACELETONLY = 0xB9,   //体能训练（仅手环）
+    FITCLOUDSPORTSTYPE_PHYSICAL_FITNESS_TRAINING_BRACELETAPP = 0xBA,    //体能训练（手环+App）
+    FITCLOUDSPORTSTYPE_PHYSICAL_FITNESS_TRAINING_APPONLY = 0xBB,        //体能训练（仅App）
+    FITCLOUDSPORTSTYPE_PHYSICAL_FITNESS_TRAINING_APPBRACELET = 0xBC,    //体能训练（App+手环）
+    
+    FITCLOUDSPORTSTYPE_MIXED_AEROBICS_BRACELETONLY = 0xBD,              //混合有氧（仅手环）
+    FITCLOUDSPORTSTYPE_MIXED_AEROBICS_BRACELETAPP = 0xBE,               //混合有氧（手环+App）
+    FITCLOUDSPORTSTYPE_MIXED_AEROBICS_APPONLY = 0xBF,                   //混合有氧（仅App）
+    FITCLOUDSPORTSTYPE_MIXED_AEROBICS_APPBRACELET = 0xC0,               //混合有氧（App+手环）
+    
+    FITCLOUDSPORTSTYPE_LATIN_DANCE_BRACELETONLY = 0xC1,                 //拉丁舞（仅手环）
+    FITCLOUDSPORTSTYPE_LATIN_DANCE_BRACELETAPP = 0xC2,                  //拉丁舞（手环+App）
+    FITCLOUDSPORTSTYPE_LATIN_DANCE_APPONLY = 0xC3,                      //拉丁舞（仅App）
+    FITCLOUDSPORTSTYPE_LATIN_DANCE_APPBRACELET = 0xC4,                  //拉丁舞（App+手环）
+    
+    FITCLOUDSPORTSTYPE_STREET_DANCE_BRACELETONLY = 0xC5,                //街舞（仅手环）
+    FITCLOUDSPORTSTYPE_STREET_DANCE_BRACELETAPP = 0xC6,                 //街舞（手环+App）
+    FITCLOUDSPORTSTYPE_STREET_DANCE_APPONLY = 0xC7,                     //街舞（仅App）
+    FITCLOUDSPORTSTYPE_STREET_DANCE_APPBRACELET = 0xC8,                 //街舞（App+手环）
+    
+    FITCLOUDSPORTSTYPE_MIXED_MARTIAL_ARTS_BRACELETONLY = 0xC9,          //自由搏击（仅手环）
+    FITCLOUDSPORTSTYPE_MIXED_MARTIAL_ARTS_BRACELETAPP = 0xCA,           //自由搏击（手环+App）
+    FITCLOUDSPORTSTYPE_MIXED_MARTIAL_ARTS_APPONLY = 0xCB,               //自由搏击（仅App）
+    FITCLOUDSPORTSTYPE_MIXED_MARTIAL_ARTS_APPBRACELET = 0xCC,           //自由搏击（App+手环）
+    
+    FITCLOUDSPORTSTYPE_BALLET_BRACELETONLY = 0xCD,                      //芭蕾（仅手环）
+    FITCLOUDSPORTSTYPE_BALLET_BRACELETAPP = 0xCE,                       //芭蕾（手环+App）
+    FITCLOUDSPORTSTYPE_BALLET_APPONLY = 0xCF,                           //芭蕾（仅App）
+    FITCLOUDSPORTSTYPE_BALLET_APPBRACELET = 0xD0,                       //芭蕾（App+手环）
+    
+    FITCLOUDSPORTSTYPE_AUSTRALIAN_RULES_FOOTBALL_BRACELETONLY = 0xD1,   //澳式足球（仅手环）
+    FITCLOUDSPORTSTYPE_AUSTRALIAN_RULES_FOOTBALL_BRACELETAPP = 0xD2,    //澳式足球（手环+App）
+    FITCLOUDSPORTSTYPE_AUSTRALIAN_RULES_FOOTBALL_APPONLY = 0xD3,        //澳式足球（仅App）
+    FITCLOUDSPORTSTYPE_AUSTRALIAN_RULES_FOOTBALL_APPBRACELET = 0xD4,    //澳式足球（App+手环）
+    
+    FITCLOUDSPORTSTYPE_BOWLING_BRACELETONLY = 0xD5,                     //保龄球（仅手环）
+    FITCLOUDSPORTSTYPE_BOWLING_BRACELETAPP = 0xD6,                      //保龄球（手环+App）
+    FITCLOUDSPORTSTYPE_BOWLING_APPONLY = 0xD7,                          //保龄球（仅App）
+    FITCLOUDSPORTSTYPE_BOWLING_APPBRACELET = 0xD8,                      //保龄球（App+手环）
+    
+    FITCLOUDSPORTSTYPE_SQUASH_BRACELETONLY = 0xD9,                      //壁球（仅手环）
+    FITCLOUDSPORTSTYPE_SQUASH_BRACELETAPP = 0xDA,                       //壁球（手环+App）
+    FITCLOUDSPORTSTYPE_SQUASH_APPONLY = 0xDB,                           //壁球（仅App）
+    FITCLOUDSPORTSTYPE_SQUASH_APPBRACELET = 0xDC,                       //壁球（App+手环）
+    
+    FITCLOUDSPORTSTYPE_CURLING_BRACELETONLY = 0xDD,                     //冰壶（仅手环）
+    FITCLOUDSPORTSTYPE_CURLING_BRACELETAPP = 0xDE,                      //冰壶（手环+App）
+    FITCLOUDSPORTSTYPE_CURLING_APPONLY = 0xDF,                          //冰壶（仅App）
+    FITCLOUDSPORTSTYPE_CURLING_APPBRACELET = 0xE0,                      //冰壶（App+手环）
+    
+    FITCLOUDSPORTSTYPE_SNOWBOARDING_BRACELETONLY = 0xE1,                //单板滑雪（仅手环）
+    FITCLOUDSPORTSTYPE_SNOWBOARDING_BRACELETAPP = 0xE2,                 //单板滑雪（手环+App）
+    FITCLOUDSPORTSTYPE_SNOWBOARDING_APPONLY = 0xE3,                     //单板滑雪（仅App）
+    FITCLOUDSPORTSTYPE_SNOWBOARDING_APPBRACELET = 0xE4,                 //单板滑雪（App+手环）
+    
+    FITCLOUDSPORTSTYPE_FISHING_BRACELETONLY = 0xE5,                     //钓鱼（手环专用）
+    FITCLOUDSPORTSTYPE_FISHING_BRACELETAPP = 0xE6,                      //钓鱼（手环+App）
+    FITCLOUDSPORTSTYPE_FISHING_APPONLY = 0xE7,                          //钓鱼（仅限App）
+    FITCLOUDSPORTSTYPE_FISHING_APPBRACELET = 0xE8,                      //钓鱼（App+手环）
+
+    FITCLOUDSPORTSTYPE_FRISBEE_SPORTS_BRACELETONLY = 0xE9,              //飞盘运动（手环专用）
+    FITCLOUDSPORTSTYPE_FRISBEE_SPORTS_BRACELETAPP = 0xEA,               //飞盘运动（手环+App）
+    FITCLOUDSPORTSTYPE_FRISBEE_SPORTS_APPONLY = 0xEB,                   //飞盘运动（仅限App）
+    FITCLOUDSPORTSTYPE_FRISBEE_SPORTS_APPBRACELET = 0xEC,               //飞盘运动（App+手环）
+
+    FITCLOUDSPORTSTYPE_ALPINE_SKIING_BRACELETONLY = 0xED,               //高山滑雪（手环专用）
+    FITCLOUDSPORTSTYPE_ALPINE_SKIING_BRACELETAPP = 0xEE,                //高山滑雪（手环+App）
+    FITCLOUDSPORTSTYPE_ALPINE_SKIING_APPONLY = 0xEF,                    //高山滑雪（仅限App）
+    FITCLOUDSPORTSTYPE_ALPINE_SKIING_APPBRACELET = 0xF0,                //高山滑雪（App+手环）
+
+    FITCLOUDSPORTSTYPE_CORE_TRAINING_BRACELETONLY = 0xF1,                //核心训练（手环专用）
+    FITCLOUDSPORTSTYPE_CORE_TRAINING_BRACELETAPP = 0xF2,                 //核心训练（手环+App）
+    FITCLOUDSPORTSTYPE_CORE_TRAINING_APPONLY = 0xF3,                     //核心训练（仅限App）
+    FITCLOUDSPORTSTYPE_CORE_TRAINING_APPBRACELET = 0xF4,                 //核心训练（App+手环）
+
+    FITCLOUDSPORTSTYPE_ICE_SKATING_BRACELETONLY = 0xF5,                  //滑冰（手环专用）
+    FITCLOUDSPORTSTYPE_ICE_SKATING_BRACELETAPP = 0xF6,                   //滑冰（手环+App）
+    FITCLOUDSPORTSTYPE_ICE_SKATING_APPONLY = 0xF7,                       //滑冰（仅限App）
+    FITCLOUDSPORTSTYPE_ICE_SKATING_APPBRACELET = 0xF8,                   //滑冰（App+手环）
+
+    FITCLOUDSPORTSTYPE_FITNESS_GAMES_BRACELETONLY = 0xF9,               //健身游戏（手环专用）
+    FITCLOUDSPORTSTYPE_FITNESS_GAMES_BRACELETAPP = 0xFA,                //健身游戏（手环+App）
+    FITCLOUDSPORTSTYPE_FITNESS_GAMES_APPONLY = 0xFB,                    //健身游戏（仅限App）
+    FITCLOUDSPORTSTYPE_FITNESS_GAMES_APPBRACELET = 0xFC,                //健身游戏（App+手环）
+
+    FITCLOUDSPORTSTYPE_AEROBICS_BRACELETONLY = 0xFD,                    //健身操（手环专用）
+    FITCLOUDSPORTSTYPE_AEROBICS_BRACELETAPP = 0xFE,                     //健身操（手环+App）
+    FITCLOUDSPORTSTYPE_AEROBICS_APPONLY = 0xFF,                         //健身操（仅限App）
+    FITCLOUDSPORTSTYPE_AEROBICS_APPBRACELET = 0x100,                    //健身操（App+手环）
+
+    FITCLOUDSPORTSTYPE_GROUP_GYMNASTICS_BRACELETONLY = 0x101,           //团体操（手环专用）
+    FITCLOUDSPORTSTYPE_GROUP_GYMNASTICS_BRACELETAPP = 0x102,            //团体操（手环+App）
+    FITCLOUDSPORTSTYPE_GROUP_GYMNASTICS_APPONLY = 0x103,                //团体操（仅限App）
+    FITCLOUDSPORTSTYPE_GROUP_GYMNASTICS_APPBRACELET = 0x104,            //团体操（App+手环）
+
+    FITCLOUDSPORTSTYPE_COMBAT_AEROBICS_BRACELETONLY = 0x105,            //搏击操（手环专用）
+    FITCLOUDSPORTSTYPE_COMBAT_AEROBICS_BRACELETAPP = 0x106,             //搏击操（手环+App）
+    FITCLOUDSPORTSTYPE_COMBAT_AEROBICS_APPONLY = 0x107,                 //搏击操（仅限App）
+    FITCLOUDSPORTSTYPE_COMBAT_AEROBICS_APPBRACELET = 0x108,             //搏击操（App+手环）
+
+    FITCLOUDSPORTSTYPE_FENCING_BRACELETONLY = 0x109,                    //击剑（手环专用）
+    FITCLOUDSPORTSTYPE_FENCING_BRACELETAPP = 0x10A,                     //击剑（手环+App）
+    FITCLOUDSPORTSTYPE_FENCING_APPONLY = 0x10B,                         //击剑（仅限App）
+    FITCLOUDSPORTSTYPE_FENCING_APPBRACELET = 0x10C,                     //击剑（App+手环）
+
+    FITCLOUDSPORTSTYPE_STAIR_CLIMBING_BRACELETONLY = 0x10D,             //爬楼梯（手环专用）
+    FITCLOUDSPORTSTYPE_STAIR_CLIMBING_BRACELETAPP = 0x10E,              //爬楼梯（手环+App）
+    FITCLOUDSPORTSTYPE_STAIR_CLIMBING_APPONLY = 0x10F,                  //爬楼梯（仅限App）
+    FITCLOUDSPORTSTYPE_STAIR_CLIMBING_APPBRACELET = 0x110,              //爬楼梯（App+手环）
+
+    FITCLOUDSPORTSTYPE_AMERICAN_FOOTBALL_BRACELETONLY = 0x111,          //美式橄榄球（手环专用）
+    FITCLOUDSPORTSTYPE_AMERICAN_FOOTBALL_BRACELETAPP = 0x112,           //美式橄榄球（手环+App）
+    FITCLOUDSPORTSTYPE_AMERICAN_FOOTBALL_APPONLY = 0x113,               //美式橄榄球（仅限App）
+    FITCLOUDSPORTSTYPE_AMERICAN_FOOTBALL_APPBRACELET = 0x114,           //美式橄榄球（App+手环）
+
+    FITCLOUDSPORTSTYPE_FOAM_ROLLER_MYOFASCIAL_RELEASE_BRACELETONLY = 0x115, //泡沫滚筒筋膜放松（手环专用）
+    FITCLOUDSPORTSTYPE_FOAM_ROLLER_MYOFASCIAL_RELEASE_BRACELETAPP = 0x116,  //泡沫滚筒筋膜放松（手环+App）
+    FITCLOUDSPORTSTYPE_FOAM_ROLLER_MYOFASCIAL_RELEASE_APPONLY = 0x117,      //泡沫滚筒筋膜放松（仅限App）
+    FITCLOUDSPORTSTYPE_FOAM_ROLLER_MYOFASCIAL_RELEASE_APPBRACELET = 0x118,  //泡沫滚筒筋膜放松（App+手环）
+
+    FITCLOUDSPORTSTYPE_PICKLEBALL_BRACELETONLY = 0x119,                     //匹克球（手环专用）
+    FITCLOUDSPORTSTYPE_PICKLEBALL_BRACELETAPP = 0x11A,                      //匹克球（手环+App）
+    FITCLOUDSPORTSTYPE_PICKLEBALL_APPONLY = 0x11B,                          //匹克球（仅限App）
+    FITCLOUDSPORTSTYPE_PICKLEBALL_APPBRACELET = 0x11C,                      //匹克球（App+手环）
+
+    FITCLOUDSPORTSTYPE_BOXING_BRACELETONLY = 0x11D,                         //拳击（手环专用）
+    FITCLOUDSPORTSTYPE_BOXING_BRACELETAPP = 0x11E,                          //拳击（手环+App）
+    FITCLOUDSPORTSTYPE_BOXING_APPONLY = 0x11F,                              //拳击（仅限App）
+    FITCLOUDSPORTSTYPE_BOXING_APPBRACELET = 0x120,                          //拳击（App+手环）
+
+    FITCLOUDSPORTSTYPE_TAEKWONDO_BRACELETONLY = 0x121,                      //跆拳道（手环专用）
+    FITCLOUDSPORTSTYPE_TAEKWONDO_BRACELETAPP = 0x122,                       //跆拳道（手环+App）
+    FITCLOUDSPORTSTYPE_TAEKWONDO_APPONLY = 0x123,                           //跆拳道（仅限App）
+    FITCLOUDSPORTSTYPE_TAEKWONDO_APPBRACELET = 0x124,                       //跆拳道（App+手环）
+
+    FITCLOUDSPORTSTYPE_KARATE_BRACELETONLY = 0x125,                         //空手道（手环专用）
+    FITCLOUDSPORTSTYPE_KARATE_BRACELETAPP = 0x126,                          //空手道（手环+App）
+    FITCLOUDSPORTSTYPE_KARATE_APPONLY = 0x127,                              //空手道（仅限App）
+    FITCLOUDSPORTSTYPE_KARATE_APPBRACELET = 0x128,                          //空手道（App+手环）
+
+    FITCLOUDSPORTSTYPE_FLEXIBILITY_BRACELETONLY = 0x129,                    //柔韧度（手环专用）
+    FITCLOUDSPORTSTYPE_FLEXIBILITY_BRACELETAPP = 0x12A,                     //柔韧度（手环+App）
+    FITCLOUDSPORTSTYPE_FLEXIBILITY_APPONLY = 0x12B,                         //柔韧度（仅限App）
+    FITCLOUDSPORTSTYPE_FLEXIBILITY_APPBRACELET = 0x12C,                     //柔韧度（App+手环）
+
+    FITCLOUDSPORTSTYPE_HANDBALL_BRACELETONLY = 0x12D,                       //手球（手环专用）
+    FITCLOUDSPORTSTYPE_HANDBALL_BRACELETAPP = 0x12E,                        //手球（手环+App）
+    FITCLOUDSPORTSTYPE_HANDBALL_APPONLY = 0x12F,                            //手球（仅限App）
+    FITCLOUDSPORTSTYPE_HANDBALL_APPBRACELET = 0x130,                        //手球（App+手环）
+
+    FITCLOUDSPORTSTYPE_HAND_CRANK_VEHICLE_BRACELETONLY = 0x131,             //手摇车（手环专用）
+    FITCLOUDSPORTSTYPE_HAND_CRANK_VEHICLE_BRACELETAPP = 0x132,              //手摇车（手环+App）
+    FITCLOUDSPORTSTYPE_HAND_CRANK_VEHICLE_APPONLY = 0x133,                  //手摇车（仅限App）
+    FITCLOUDSPORTSTYPE_HAND_CRANK_VEHICLE_APPBRACELET = 0x134,              //手摇车（App+手环）
+
+    FITCLOUDSPORTSTYPE_RELAXATION_AND_MEDITATION_EXERCISES_BRACELETONLY = 0x135, //舒缓冥想类运动（手环专用）
+    FITCLOUDSPORTSTYPE_RELAXATION_AND_MEDITATION_EXERCISES_BRACELETAPP = 0x136,  //舒缓冥想类运动（手环+App）
+    FITCLOUDSPORTSTYPE_RELAXATION_AND_MEDITATION_EXERCISES_APPONLY = 0x137,      //舒缓冥想类运动（仅限App）
+    FITCLOUDSPORTSTYPE_RELAXATION_AND_MEDITATION_EXERCISES_APPBRACELET = 0x138,  //舒缓冥想类运动（App+手环）
+
+    FITCLOUDSPORTSTYPE_WRESTLING_BRACELETONLY = 0x139,                      //摔跤（手环专用）
+    FITCLOUDSPORTSTYPE_WRESTLING_BRACELETAPP = 0x13A,                       //摔跤（手环+App）
+    FITCLOUDSPORTSTYPE_WRESTLING_APPONLY = 0x13B,                           //摔跤（仅限App）
+    FITCLOUDSPORTSTYPE_WRESTLING_APPBRACELET = 0x13C,                       //摔跤（App+手环）
+
+    FITCLOUDSPORTSTYPE_STEP_TRAINING_BRACELETONLY = 0x013D,                 //踏步训练（手环专用）
+    FITCLOUDSPORTSTYPE_STEP_TRAINING_BRACELETAPP = 0x013E,                  //踏步训练（手环+App）
+    FITCLOUDSPORTSTYPE_STEP_TRAINING_APPONLY = 0x013F,                      //踏步训练（仅限App）
+    FITCLOUDSPORTSTYPE_STEP_TRAINING_APPBRACELET = 0x0140,                  //踏步训练（App+手环）
+    
+    FITCLOUDSPORTSTYPE_TAI_CHI_BRACELETONLY = 0x0141,                       //太极（手环专用）
+    FITCLOUDSPORTSTYPE_TAI_CHI_BRACELETAPP = 0x0142,                        //太极（手环+App）
+    FITCLOUDSPORTSTYPE_TAI_CHI_APPONLY = 0x0143,                            //太极（仅限App）
+    FITCLOUDSPORTSTYPE_TAI_CHI_APPBRACELET = 0x0144,                        //太极（App+手环）
+    
+    FITCLOUDSPORTSTYPE_GYMNASTICS_BRACELETONLY = 0x0145,                    //体操（手环专用）
+    FITCLOUDSPORTSTYPE_GYMNASTICS_BRACELETAPP = 0x0146,                     //体操（手环+App）
+    FITCLOUDSPORTSTYPE_GYMNASTICS_APPONLY = 0x0147,                         //体操（仅限App）
+    FITCLOUDSPORTSTYPE_GYMNASTICS_APPBRACELET = 0x0148,                     //体操（App+手环）
+    
+    FITCLOUDSPORTSTYPE_TRACK_AND_FIELD_BRACELETONLY = 0x0149,                //田径（手环专用）
+    FITCLOUDSPORTSTYPE_TRACK_AND_FIELD_BRACELETAPP = 0x014A,                 //田径（手环+App）
+    FITCLOUDSPORTSTYPE_TRACK_AND_FIELD_APPONLY = 0x014B,                     //田径（仅限App）
+    FITCLOUDSPORTSTYPE_TRACK_AND_FIELD_APPBRACELET = 0x014C,                 //田径（App+手环）
+    
+    FITCLOUDSPORTSTYPE_MARTIAL_ARTS_BRACELETONLY = 0x014D,                    //武术（手环专用）
+    FITCLOUDSPORTSTYPE_MARTIAL_ARTS_BRACELETAPP = 0x014E,                     //武术（手环+App）
+    FITCLOUDSPORTSTYPE_MARTIAL_ARTS_APPONLY = 0x014F,                         //武术（仅限App）
+    FITCLOUDSPORTSTYPE_MARTIAL_ARTS_APPBRACELET = 0x0150,                     //武术（App+手环）
+    
+    FITCLOUDSPORTSTYPE_RECREATIONAL_SPORTS_BRACELETONLY = 0x0151,             //休闲运动（手环专用）
+    FITCLOUDSPORTSTYPE_RECREATIONAL_SPORTS_BRACELETAPP = 0x0152,              //休闲运动（手环+App）
+    FITCLOUDSPORTSTYPE_RECREATIONAL_SPORTS_APPONLY = 0x0153,                  //休闲运动（仅限App）
+    FITCLOUDSPORTSTYPE_RECREATIONAL_SPORTS_APPBRACELET = 0x0154,              //休闲运动（App+手环）
+    
+    FITCLOUDSPORTSTYPE_SNOW_SPORTS_BRACELETONLY = 0x0155,                     //雪上运动（手环专用）
+    FITCLOUDSPORTSTYPE_SNOW_SPORTS_BRACELETAPP = 0x0156,                      //雪上运动（手环+App）
+    FITCLOUDSPORTSTYPE_SNOW_SPORTS_APPONLY = 0x0157,                          //雪上运动（仅限App）
+    FITCLOUDSPORTSTYPE_SNOW_SPORTS_APPBRACELET = 0x0158,                      //雪上运动（App+手环）
+    
+    FITCLOUDSPORTSTYPE_LACROSSE_BRACELETONLY = 0x0159,                        //长曲棍球（手环专用）
+    FITCLOUDSPORTSTYPE_LACROSSE_BRACELETAPP = 0x015A,                         //长曲棍球（手环+App）
+    FITCLOUDSPORTSTYPE_LACROSSE_APPONLY = 0x015B,                             //长曲棍球（仅限App）
+    FITCLOUDSPORTSTYPE_LACROSSE_APPBRACELET = 0x015C,                         //长曲棍球（App+手环）
+    
+    FITCLOUDSPORTSTYPE_HORIZONTAL_BARS_BRACELETONLY = 0x015D,                 //单杠（手环专用）
+    FITCLOUDSPORTSTYPE_HORIZONTAL_BARS_BRACELETAPP = 0x015E,                  //单杠（手环+App）
+    FITCLOUDSPORTSTYPE_HORIZONTAL_BARS_APPONLY = 0x015F,                      //单杠（仅限App）
+    FITCLOUDSPORTSTYPE_HORIZONTAL_BARS_APPBRACELET = 0x0160,                  //单杠（App+手环）
+    
+    FITCLOUDSPORTSTYPE_PARALLEL_BARS_BRACELETONLY = 0x0161,                   //双杠（手环专用）
+    FITCLOUDSPORTSTYPE_PARALLEL_BARS_BRACELETAPP = 0x0162,                    //双杠（手环+App）
+    FITCLOUDSPORTSTYPE_PARALLEL_BARS_APPONLY = 0x0163,                        //双杠（仅限App）
+    FITCLOUDSPORTSTYPE_PARALLEL_BARS_APPBRACELET = 0x0164,                    //双杠（App+手环）
+
+    FITCLOUDSPORTSTYPE_ROLLER_SKATING_BRACELETONLY = 0x0165,                  //轮滑（手环专用）
+    FITCLOUDSPORTSTYPE_ROLLER_SKATING_BRACELETAPP = 0x0166,                   //轮滑（手环+App）
+    FITCLOUDSPORTSTYPE_ROLLER_SKATING_APPONLY = 0x0167,                       //轮滑（仅限App）
+    FITCLOUDSPORTSTYPE_ROLLER_SKATING_APPBRACELET = 0x0168,                   //轮滑（App+手环）
+    
+    FITCLOUDSPORTSTYPE_DARTS_BRACELETONLY = 0x0169,                           //飞镖（手环专用）
+    FITCLOUDSPORTSTYPE_DARTS_BRACELETAPP = 0x016A,                            //飞镖（手环+App）
+    FITCLOUDSPORTSTYPE_DARTS_APPONLY = 0x016B,                                //飞镖（仅限App）
+    FITCLOUDSPORTSTYPE_DARTS_APPBRACELET = 0x016C,                            //飞镖（App+手环）
+    
+    FITCLOUDSPORTSTYPE_ARCHERY_BRACELETONLY = 0x016D,                         //射箭（手环专用）
+    FITCLOUDSPORTSTYPE_ARCHERY_BRACELETAPP = 0x016E,                          //射箭（手环+App）
+    FITCLOUDSPORTSTYPE_ARCHERY_APPONLY = 0x016F,                              //射箭（仅限App）
+    FITCLOUDSPORTSTYPE_ARCHERY_APPBRACELET = 0x0170,                          //射箭（App+手环）
+    
+    FITCLOUDSPORTSTYPE_HORSEBACK_RIDING_BRACELETONLY = 0x0171,                //骑马（手环专用）
+    FITCLOUDSPORTSTYPE_HORSEBACK_RIDING_BRACELETAPP = 0x0172,                 //骑马（手环+App）
+    FITCLOUDSPORTSTYPE_HORSEBACK_RIDING_APPONLY = 0x0173,                     //骑马（仅限App）
+    FITCLOUDSPORTSTYPE_HORSEBACK_RIDING_APPBRACELET = 0x0174,                 //骑马（App+手环）
+    
+    FITCLOUDSPORTSTYPE_JIANZI_BRACELETONLY = 0x0175,                          //毽球（手环专用）
+    FITCLOUDSPORTSTYPE_JIANZI_BRACELETAPP = 0x0176,                           //毽球（手环+App）
+    FITCLOUDSPORTSTYPE_JIANZI_APPONLY = 0x0177,                               //毽球（仅限App）
+    FITCLOUDSPORTSTYPE_JIANZI_APPBRACELET = 0x0178,                           //毽球（App+手环）
+
+    FITCLOUDSPORTSTYPE_ICE_HOCKEY_BRACELETONLY = 0x0179,                      //冰球（手环专用）
+    FITCLOUDSPORTSTYPE_ICE_HOCKEY_BRACELETAPP = 0x017A,                       //冰球（手环+APP）
+    FITCLOUDSPORTSTYPE_ICE_HOCKEY_APPONLY = 0x017B,                           //冰球（仅APP）
+    FITCLOUDSPORTSTYPE_ICE_HOCKEY_APPBRACELET = 0x017C,                       //冰球（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_WAIST_AND_ABDOMEN_TRAINING_BRACELETONLY = 0x017D,      //腰腹训练（手环专用）
+    FITCLOUDSPORTSTYPE_WAIST_AND_ABDOMEN_TRAINING_BRACELETAPP = 0x017E,       //腰腹训练（手环+APP）
+    FITCLOUDSPORTSTYPE_WAIST_AND_ABDOMEN_TRAINING_APPONLY = 0x017F,           //腰腹训练（仅APP）
+    FITCLOUDSPORTSTYPE_WAIST_AND_ABDOMEN_TRAINING_APPBRACELET = 0x0180,       //腰腹训练（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_MAXIMUM_OXYGEN_UPTAKE_TEST_BRACELETONLY = 0x0181,      //最大摄氧量测试（手环专用）
+    FITCLOUDSPORTSTYPE_MAXIMUM_OXYGEN_UPTAKE_TEST_BRACELETAPP = 0x0182,       //最大摄氧量测试（手环+APP）
+    FITCLOUDSPORTSTYPE_MAXIMUM_OXYGEN_UPTAKE_TEST_APPONLY = 0x0183,           //最大摄氧量测试（仅APP）
+    FITCLOUDSPORTSTYPE_MAXIMUM_OXYGEN_UPTAKE_TEST_APPBRACELET = 0x0184,       //最大摄氧量测试（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_JUDO_BRACELETONLY = 0x0185,                            //柔道（手环专用）
+    FITCLOUDSPORTSTYPE_JUDO_BRACELETAPP = 0x0186,                             //柔道（手环+APP）
+    FITCLOUDSPORTSTYPE_JUDO_APPONLY = 0x0187,                                 //柔道（仅APP）
+    FITCLOUDSPORTSTYPE_JUDO_APPBRACELET = 0x0188,                             //柔道（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_TRAMPOLINING_BRACELETONLY = 0x0189,                    //蹦床（手环专用）
+    FITCLOUDSPORTSTYPE_TRAMPOLINING_BRACELETAPP = 0x018A,                     //蹦床（手环+APP）
+    FITCLOUDSPORTSTYPE_TRAMPOLINING_APPONLY = 0x018B,                         //蹦床（仅APP）
+    FITCLOUDSPORTSTYPE_TRAMPOLINING_APPBRACELET = 0x018C,                     //蹦床（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_SKATEBOARDING_BRACELETONLY = 0x018D,                   //滑板（手环专用）
+    FITCLOUDSPORTSTYPE_SKATEBOARDING_BRACELETAPP = 0x018E,                    //滑板（手环+APP）
+    FITCLOUDSPORTSTYPE_SKATEBOARDING_APPONLY = 0x018F,                        //滑板（仅APP）
+    FITCLOUDSPORTSTYPE_SKATEBOARDING_APPBRACELET = 0x0190,                    //滑板（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_BALANCING_SCOOTER_BRACELETONLY = 0x0191,               //平衡车（手环专用）
+    FITCLOUDSPORTSTYPE_BALANCING_SCOOTER_BRACELETAPP = 0x0192,                //平衡车（手环+APP）
+    FITCLOUDSPORTSTYPE_BALANCING_SCOOTER_APPONLY = 0x0193,                    //平衡车（仅APP）
+    FITCLOUDSPORTSTYPE_BALANCING_SCOOTER_APPBRACELET = 0x0194,                //平衡车（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_BLADING_BRACELETONLY = 0x0195,                         //溜旱冰（手环专用）
+    FITCLOUDSPORTSTYPE_BLADING_BRACELETAPP = 0x0196,                          //溜旱冰（手环+APP）
+    FITCLOUDSPORTSTYPE_BLADING_APPONLY = 0x0197,                              //溜旱冰（仅APP）
+    FITCLOUDSPORTSTYPE_BLADING_APPBRACELET = 0x0198,                          //溜旱冰（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_INDOOR_RUNNING_BRACELETONLY = 0x0199,                  //室内跑步（手环专用）
+    FITCLOUDSPORTSTYPE_INDOOR_RUNNING_BRACELETAPP = 0x019A,                   //室内跑步（手环+APP）
+    FITCLOUDSPORTSTYPE_INDOOR_RUNNING_APPONLY = 0x019B,                       //室内跑步（仅APP）
+    FITCLOUDSPORTSTYPE_INDOOR_RUNNING_APPBRACELET = 0x019C,                   //室内跑步（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_DIVING_BRACELETONLY = 0x019D,                          //跳水（手环专用）
+    FITCLOUDSPORTSTYPE_DIVING_BRACELETAPP = 0x019E,                           //跳水（手环+APP）
+    FITCLOUDSPORTSTYPE_DIVING_APPONLY = 0x019F,                               //跳水（仅APP）
+    FITCLOUDSPORTSTYPE_DIVING_APPBRACELET = 0x01A0,                           //跳水（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_SURFING_BRACELETONLY = 0x01A1,                         //冲浪（手环专用）
+    FITCLOUDSPORTSTYPE_SURFING_BRACELETAPP = 0x01A2,                          //冲浪（手环+APP）
+    FITCLOUDSPORTSTYPE_SURFING_APPONLY = 0x01A3,                              //冲浪（仅APP）
+    FITCLOUDSPORTSTYPE_SURFING_APPBRACELET = 0x01A4,                          //冲浪（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_SNORKELING_BRACELETONLY = 0x01A5,                      //浮潜（手环专用）
+    FITCLOUDSPORTSTYPE_SNORKELING_BRACELETAPP = 0x01A6,                       //浮潜（手环+APP）
+    FITCLOUDSPORTSTYPE_SNORKELING_APPONLY = 0x01A7,                           //浮潜（仅APP）
+    FITCLOUDSPORTSTYPE_SNORKELING_APPBRACELET = 0x01A8,                       //浮潜（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_PULL_UPS_BRACELETONLY = 0x01A9,                        //引体向上（手环专用）
+    FITCLOUDSPORTSTYPE_PULL_UPS_BRACELETAPP = 0x01AA,                         //引体向上（手环+APP）
+    FITCLOUDSPORTSTYPE_PULL_UPS_APPONLY = 0x01AB,                             //引体向上（仅APP）
+    FITCLOUDSPORTSTYPE_PULL_UPS_APPBRACELET = 0x01AC,                         //引体向上（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_PUSH_UPS_BRACELETONLY = 0x01AD,                        //俯卧撑（手环专用）
+    FITCLOUDSPORTSTYPE_PUSH_UPS_BRACELETAPP = 0x01AE,                         //俯卧撑（手环+APP）
+    FITCLOUDSPORTSTYPE_PUSH_UPS_APPONLY = 0x01AF,                             //俯卧撑（仅APP）
+    FITCLOUDSPORTSTYPE_PUSH_UPS_APPBRACELET = 0x01B0,                         //俯卧撑（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_PLANK_BRACELETONLY = 0x01B1,                           //平板支撑（仅手环）
+    FITCLOUDSPORTSTYPE_PLANK_BRACELETAPP = 0x01B2,                            //平板支撑（手环+APP）
+    FITCLOUDSPORTSTYPE_PLANK_APPONLY = 0x01B3,                                //平板支撑（仅APP）
+    FITCLOUDSPORTSTYPE_PLANK_APPBRACELET = 0x01B4,                            //平板支撑（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_ROCK_CLIMBING_BRACELETONLY = 0x01B5,                   //攀岩（仅手环）
+    FITCLOUDSPORTSTYPE_ROCK_CLIMBING_BRACELETAPP = 0x01B6,                    //攀岩（手环+APP）
+    FITCLOUDSPORTSTYPE_ROCK_CLIMBING_APPONLY = 0x01B7,                        //攀岩（仅APP）
+    FITCLOUDSPORTSTYPE_ROCK_CLIMBING_APPBRACELET = 0x01B8,                    //攀岩（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_HIGH_JUMP_BRACELETONLY = 0x01B9,                       //跳高（仅手环）
+    FITCLOUDSPORTSTYPE_HIGH_JUMP_BRACELETAPP = 0x01BA,                        //跳高（手环+APP）
+    FITCLOUDSPORTSTYPE_HIGH_JUMP_APPONLY = 0x01BB,                            //跳高（仅APP）
+    FITCLOUDSPORTSTYPE_HIGH_JUMP_APPBRACELET = 0x01BC,                        //跳高（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_BUNGEE_JUMPING_BRACELETONLY = 0x01BD,                  //蹦极（仅手环）
+    FITCLOUDSPORTSTYPE_BUNGEE_JUMPING_BRACELETAPP = 0x01BE,                   //蹦极（手环+APP）
+    FITCLOUDSPORTSTYPE_BUNGEE_JUMPING_APPONLY = 0x01BF,                       //蹦极（仅APP）
+    FITCLOUDSPORTSTYPE_BUNGEE_JUMPING_APPBRACELET = 0x01C0,                   //蹦极（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_ETHNIC_DANCE_BRACELETONLY = 0x01C1,                    //民族舞（仅手环）
+    FITCLOUDSPORTSTYPE_ETHNIC_DANCE_BRACELETAPP = 0x01C2,                     //民族舞（手环+APP）
+    FITCLOUDSPORTSTYPE_ETHNIC_DANCE_APPONLY = 0x01C3,                         //民族舞（仅APP）
+    FITCLOUDSPORTSTYPE_ETHNIC_DANCE_APPBRACELET = 0x01C4,                     //民族舞（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_HUNTING_BRACELETONLY = 0x01C5,                         //狩猎（仅手环）
+    FITCLOUDSPORTSTYPE_HUNTING_BRACELETAPP = 0x01C6,                          //狩猎（手环+APP）
+    FITCLOUDSPORTSTYPE_HUNTING_APPONLY = 0x01C7,                              //狩猎（仅APP）
+    FITCLOUDSPORTSTYPE_HUNTING_APPBRACELET = 0x01C8,                          //狩猎（APP+手环）
+    
+    FITCLOUDSPORTSTYPE_SHOOTING_BRACELETONLY = 0x01C9,                        //射击（仅手环）
+    FITCLOUDSPORTSTYPE_SHOOTING_BRACELETAPP = 0x01CA,                         //射击（手环+APP）
+    FITCLOUDSPORTSTYPE_SHOOTING_APPONLY = 0x01CB,                             //射击（仅APP）
+    FITCLOUDSPORTSTYPE_SHOOTING_APPBRACELET = 0x01CC,                         //射击（APP+手环）
+
+    FITCLOUDSPORTSTYPE_MARATHON_BRACELETONLY = 0x01CD,                        //马拉松（仅手环）
+    FITCLOUDSPORTSTYPE_MARATHON_BRACELETAPP = 0x01CE,                         //马拉松（手环+APP）
+    FITCLOUDSPORTSTYPE_MARATHON_APPONLY = 0x01CF,                             //马拉松（仅APP）
+    FITCLOUDSPORTSTYPE_MARATHON_APPBRACELET = 0x01D0,                         //马拉松（APP+手环）
 };
 
 #pragma mark - APP相机控制相关

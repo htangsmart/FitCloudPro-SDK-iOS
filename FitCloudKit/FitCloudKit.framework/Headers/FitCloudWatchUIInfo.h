@@ -24,7 +24,7 @@
 @property(nonatomic, readonly) UInt16 uiFileVersionSeqNo;
 
 /**
- * @brief 当前表盘编号
+ * @brief 当前表盘编号，仅当支持表盘推送时有效
 */
 @property(nonatomic, readonly) UInt16 watchfaceIndex;
 
