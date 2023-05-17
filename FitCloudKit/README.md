@@ -727,6 +727,12 @@ FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
 BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.hardwareSupported & FITCLOUDHARDWARE_ECG));
 ```
 
+> Q: 如何理解睡眠格式？
+>
+> A: 如下图所示：
+>
+> ![sleep data format](media/sleep_data_format.png)
+
 <!-- more -->
 
 > Q: 绑定用户过程中，弹出蓝牙配对请求弹窗，用户是否必须选择与手表进行配对？
