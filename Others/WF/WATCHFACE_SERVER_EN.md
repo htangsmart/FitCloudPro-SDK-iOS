@@ -26,7 +26,7 @@ How to obtain the matching watchface list according to the current watch, you ca
 
 ### ❖ Connect to our watchface server
 
-API：http://ft-cn.hetangsmart.com/public/dial/list    
+API：http://fitcloud.hetangsmart.com/public/dial/list    
 Feature：Query the watchface list matching the current watch.   
 Method：POST.  
 Params：
@@ -140,7 +140,7 @@ How to obtain the matching watchface template according to the current watch, yo
 
 ### ❖ Connect to our watchface template server
 
-API：http://ft-cn.hetangsmart.com/public/dial/custom    
+API：http://fitcloud.hetangsmart.com/public/dial/custom    
 Feature：Query the watchface template matching the current watch.   
 Method：POST.   
 Params：

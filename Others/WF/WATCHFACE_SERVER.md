@@ -24,7 +24,7 @@
 
 #### 对接我们的表盘服务器
 
-接口地址：http://ft-cn.hetangsmart.com/public/dial/list  
+接口地址：http://fitcloud.hetangsmart.com/public/dial/list  
 接口作用：查询匹配当前手表的表盘列表  
 调用方法：POST
 接口参数：
@@ -133,7 +133,7 @@ NSString* hardwareInfo = [firmware description];
 
 #### 对接我们的表盘模版服务器
 
-接口地址：http://ft-cn.hetangsmart.com/public/dial/custom  
+接口地址：http://fitcloud.hetangsmart.com/public/dial/custom  
 接口作用：查询匹配当前手表的表盘模版列表  
 调用方法：POST
 接口参数：
