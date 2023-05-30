@@ -42,6 +42,29 @@
 
 ## Releases
 
+V1.2.8 Build202305300001
+
+```
+  Release Date：2023-05-30
+  Features：
+  1. Watchface size supports 410*502 square/416*416 circular/240*288 square.
+  2. Added custom label, @see withCustomLabels.
+  3. Added support for Alipay IoT, @see allowAliot.
+  4. Bluetooth connection now supports setting whether to use one-click dual connection to connect classic Bluetooth (BT) simultaneously, @see allowConnectWithBT.
+  5. Added the ability to obtain related manufacturer information and parameters through broadcast data, @see FitCloudManufacturer.
+  6. Added support for transmitting watch exercise GPS data, @see FitCloudGPSRecordObject.
+  7. Watch face size now supports 340*340 circular.
+  8. Added support for specifying supported payment codes and business cards. Only supported payment codes and business cards should be displayed in the App's push entry, @see specifySupportedMoneyReceiveAndBusinessQRCode.
+  9. Modified habit-forming instructions.
+  10. Added power saving mode settings, @see withPowerSavingMode & allowPowerSavingModePeriod.
+  11. Added timestamp parameter for setting daily goals.
+  12. Adjusted Alipay IoT security authentication instructions.
+  13. Modified automatic login logs, where userId now supports String.
+  14. Modified watch UI information instruction parsing to be compatible with firmware versions.
+  15. Updated and added a large number of exercise type definitions.
+  16. Improved the SDK stability.
+```
+
 V1.2.7 Build202212300001
 
 ```

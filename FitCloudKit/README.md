@@ -42,6 +42,29 @@
 
 ## 版本 / Releases
 
+版本 V1.2.8 Build202305300001
+
+```
+  发布日期：2023年05月30日
+  功能更新：
+  1.表盘尺寸支持410*502方/416*416圆/240*288方
+  2.新增自定义标签功能 @see withCustomLabels
+  3.支付宝Iot支持, @see allowAliot
+  4.蓝牙连接支持设置是否使用一键双连同时连接经典蓝牙(BT), @see allowConnectWithBT
+  5.新增通过广播数据获取相关厂商信息及参数 @see FitCloudManufacturer
+  6.手表运动GPS数据传输支持 @see FitCloudGPSRecordObject
+  7.表盘尺寸支持340*340圆
+  8.新增指定支持的收款码和名片，仅支持的收款码和名片才应该在App上展示推送入口 @see specifySupportedMoneyReceiveAndBusinessQRCode
+  9.修改习惯养成指令
+  10.新增省电模式设置 @see withPowerSavingMode & allowPowerSavingModePeriod
+  11.设定每日目标新增时间戳参数
+  12.调整支付宝Iot安全认证指令
+  13.修改自动登录日志，userId支持String
+  14.修改获取手表UI信息指令解析，兼容固件版本
+  15.更新和新增了一大批运动类型定义
+  16.提升SDK稳定性
+```
+
 版本 V1.2.7 Build202212300001
 
 ```
