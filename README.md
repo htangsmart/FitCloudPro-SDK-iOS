@@ -3,7 +3,8 @@
 #### iOS framework for fitcloudpro smart watch, which is responsible for the communication with the watch. 
 ![Pod Version](http://img.shields.io/badge/pod-v1.2.8-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![Nightly Version](http://img.shields.io/badge/Nightly-v1.2.9%20beta.2-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.2.9%20beta.2-brightgreen)
+![Chip Vendor](http://img.shields.io/badge/chip%20vendor-both-blueviolet)
 
   * [中文文档(Chinese Doc)](FitCloudKit/README.md)
   * [英文文档(English Doc)](FitCloudKit/README_EN.md)
@@ -13,7 +14,8 @@
 #### iOS framework for fitcloudpro smart watch, which is responsible for the upgrade of the smart watch firmware, also UI DFU / watchface DFU / watch sports DFU. 
 ![Pod Version](http://img.shields.io/badge/pod-v1.3.0-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![Nightly Version](http://img.shields.io/badge/Nightly-v1.3.0-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.0-brightgreen)
+![Chip Vendor](http://img.shields.io/badge/chip%20vendor-both-blueviolet)
 
   * [中文文档(Chinese Doc)](FitCloudDFUKit/README.md)
   * [英文文档(English Doc)](FitCloudDFUKit/README_EN.md)
@@ -24,7 +26,8 @@
 #### iOS framework help you customize watchface for fitcloudpro smart watch easily. 
 ![Pod Version](http://img.shields.io/badge/pod-v1.1.6-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![Nightly Version](http://img.shields.io/badge/Nightly-v1.1.6-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.1.6-brightgreen)
+![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek-blueviolet)
 
   * [中文文档(Chinese Doc)](FitCloudWFKit/README.md)
   * [英文文档(English Doc)](FitCloudWFKit/README_EN.md)
@@ -35,7 +38,8 @@
 #### iOS framework help you customize watchface for fitcloudpro smart watch easily. 
 ![Pod Version](http://img.shields.io/badge/pod-v1.0.1-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![Nightly Version](http://img.shields.io/badge/Nightly-v1.0.1-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.0.1-brightgreen)
+![Chip Vendor](http://img.shields.io/badge/chip%20vendor-nordic-blueviolet)
 
   * [中文文档(Chinese Doc)](FitCloudNWFKit/README.md)
   * [英文文档(English Doc)](FitCloudNWFKit/README_EN.md)
