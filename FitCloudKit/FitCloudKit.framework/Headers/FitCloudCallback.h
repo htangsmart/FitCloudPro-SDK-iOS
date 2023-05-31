@@ -55,6 +55,7 @@
 #import <FitCloudKit/FitCloudDailyGoalObject.h>
 #import <FitCloudKit/FitCloudCustomLabelsObject.h>
 #import <FitCloudKit/FitCloudPowerSavingSetting.h>
+#import <FitCloudKit/SkyworthPVPowerStationObject.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -425,6 +426,7 @@ typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSStri
  */
 typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber*>*supported, NSError* error);
 
+
 /**
  *@brief FitCloudKit 回调协议
  */
@@ -559,6 +561,11 @@ typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber
  *@param expectedTotalBytes 支付宝Iot数据总长度，即几个数据包加起来的总长度
  */
 -(void) OnAliotData:(NSData*)aliotData totalPacks:(NSInteger)totalPacks packIndex:(NSInteger)packIndex expectedTotalBytes:(NSInteger)expectedTotalBytes;
+
+/**
+ * @brief 手表请求创维光伏数据
+ */
+-(void) OnRequestSkyworthPV;
 
 /**
  * @brief 睡眠调试数据

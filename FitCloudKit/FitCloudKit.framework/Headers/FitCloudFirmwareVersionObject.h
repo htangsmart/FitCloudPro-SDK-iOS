@@ -270,4 +270,7 @@
 
 /// 是否支持app设置省电模式时间段
 @property(nonatomic, readonly) BOOL allowPowerSavingModePeriod;
+
+/// 是否支持创维光伏
+@property(nonatomic, readonly) BOOL withSkyworthPV;
 @end
