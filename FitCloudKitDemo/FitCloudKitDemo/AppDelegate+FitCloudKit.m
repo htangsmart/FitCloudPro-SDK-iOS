@@ -89,15 +89,15 @@
     message = [[message stringByReplacingOccurrencesOfString:@"<" withString:@"["] stringByReplacingOccurrencesOfString:@">" withString:@"]"];
     if(level == FITCLOUDKITLOGLEVEL_INFO)
     {
-        //XLOG_INFO(@"%@", message);
+        XLOG_INFO(@"%@", message);
     }
     else if(level == FITCLOUDKITLOGLEVEL_WARNING)
     {
-        //XLOG_WARNING(@"%@", message);
+        XLOG_WARNING(@"%@", message);
     }
     else if(level == FITCLOUDKITLOGLEVEL_ERROR)
     {
-        //XLOG_ERROR(@"%@", message);
+        XLOG_ERROR(@"%@", message);
     }
 }
 
