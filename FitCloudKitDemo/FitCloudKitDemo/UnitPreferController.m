@@ -30,13 +30,25 @@
 {
     if(indexPath.row == 0)
     {
-        
-        [self braceletSyncWithLengthWeightPerfer:TRUE];
+        FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+        FITCLOUDPREFER prefer = allConfig ? allConfig.prefer : 0;
+        BOOL bImperial = prefer & FITCLOUDPREFER_IMPERIALUNIT;
+        [self braceletSyncWithLengthWeightPerfer:!bImperial];
         
     }
     else if(indexPath.row == 1)
     {
-        [self braceletSyncWithTemperaturePerfer:TRUE];
+        FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+        FITCLOUDPREFER prefer = allConfig ? allConfig.prefer : 0;
+        BOOL bFahrenheit = prefer & FITCLOUDPREFER_FAHRENHEIT;
+        [self braceletSyncWithTemperaturePerfer:!bFahrenheit];
+    }
+    else if(indexPath.row == 2)
+    {
+        FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+        FITCLOUDPREFER prefer = allConfig ? allConfig.prefer : 0;
+        BOOL b12Hr = prefer & FITCLOUDPREFER_SHOWAS12HOURS;
+        [self braceletSyncWithTimeFormatPerfer:!b12Hr];
     }
 }
 
@@ -65,6 +77,25 @@
     FITCLOUDPREFER newPrefer = allConfig ? allConfig.prefer : 0;
     
     newPrefer = bFahrenheit ? (newPrefer | FITCLOUDPREFER_FAHRENHEIT) : (newPrefer & (~FITCLOUDPREFER_FAHRENHEIT));
+    __weak typeof(self) weakSelf = self;
+    [FitCloudKit setFitCloudPrefer:newPrefer block:^(BOOL succeed, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            OpResultToastTip(weakSelf.view, succeed);
+        });
+        if(!succeed)
+        {
+            return;
+        }
+        allConfig.prefer = newPrefer;
+    }];
+}
+
+-(void) braceletSyncWithTimeFormatPerfer:(BOOL)b12Hr
+{
+    FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+    FITCLOUDPREFER newPrefer = allConfig ? allConfig.prefer : 0;
+    
+    newPrefer = b12Hr ? (newPrefer | FITCLOUDPREFER_SHOWAS12HOURS) : (newPrefer & (~FITCLOUDPREFER_SHOWAS12HOURS));
     __weak typeof(self) weakSelf = self;
     [FitCloudKit setFitCloudPrefer:newPrefer block:^(BOOL succeed, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{

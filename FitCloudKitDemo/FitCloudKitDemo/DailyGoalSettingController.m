@@ -36,7 +36,7 @@
         CGFloat distanceGoalInKM = 5.5;
         CGFloat caloryGoalInKCal = 500;
         
-        [FitCloudKit setDailyGoalWithStepCount:(UInt32)(stepGoal) distance:(UInt32)(distanceGoalInKM*100000) calory:(UInt32)(caloryGoalInKCal*1000) block:^(BOOL succeed, NSError *error) {
+        [FitCloudKit setDailyGoalWithStepCount:(UInt32)(stepGoal) distance:(UInt32)(distanceGoalInKM*100000) calory:(UInt32)(caloryGoalInKCal*1000) timestamp:nil block:^(BOOL succeed, NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 OpResultToastTip(weakSelf.view, succeed);
             });
