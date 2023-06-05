@@ -20,6 +20,8 @@
 	<string>201908260001</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>FitCloudKitDemo将使用您的蓝牙外设权限用于与手环设备配对</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>FitCloudKitDemo将使用您的蓝牙外设权限用于与手环设备配对</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
@@ -38,11 +40,11 @@
 	<array>
 		<string>armv7</string>
 	</array>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>FitCloudKitDemo将使用您的蓝牙外设权限用于与手环设备配对</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>
