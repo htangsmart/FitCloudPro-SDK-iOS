@@ -14,7 +14,7 @@
 #### iOS framework for fitcloudpro smart watch, which is responsible for the upgrade of the smart watch firmware, also UI DFU / watchface DFU / watch sports DFU. 
 ![Pod Version](http://img.shields.io/badge/pod-v1.3.0-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.1%20beta.1-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.0-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek%20%7C%20nordic-blueviolet)
 
   * [中文文档(Chinese Doc)](FitCloudDFUKit/README.md)
