@@ -20,6 +20,13 @@ typedef void(^FitCloudMusicCompletionBlock)(BOOL success, NSError *_Nullable err
 
 @optional
 
+/// 激活结果回调
+/// - Parameters:
+///   - bridge: 音乐管理Bridge
+///   - success: 是否成功
+///   - error: 错误信息
+-(void) bridge:(FitCloudMusicBridge*_Nonnull)bridge didActivate:(BOOL)success error:(NSError* _Nullable)error;
+
 /// 歌曲发送进度回调
 /// - Parameters:
 ///   - bridge: 音乐管理Bridge
