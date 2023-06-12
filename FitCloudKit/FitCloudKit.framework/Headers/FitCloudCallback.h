@@ -82,6 +82,15 @@ typedef void (^FitCloudObjectResultBlock)(BOOL succeed, id val, NSError* error);
 typedef void (^FitCloudEnterDFUModeResultBlock)(BOOL succeed, CBPeripheral* dfuPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError* error);
 
 /**
+ *@brief FitCloud获取音乐桥接外设结果回调
+ *@param succeed 是否成功
+ *@param musicPeripheral 音乐蓝牙外设
+ *@param chipVendor  蓝牙外设芯片供应商
+ *@param error 错误信息
+ */
+typedef void (^FitCloudMusicBridgePeripheralResultBlock)(BOOL succeed, CBPeripheral* musicPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError* error);
+
+/**
  *@brief FitCloud退出DFU模式结果回调
  *@param succeed 是否成功进入DFU
  *@param error 错误信息
