@@ -42,20 +42,20 @@ typedef void(^FitCloudMusicCompletionBlock)(BOOL success, NSError *_Nullable err
 /// 代理
 @property (nonatomic, weak, nullable) id<FitCloudMusicBridgeDelegate> delegate;
 
-/// 新品厂商
+/// 芯片厂商
 @property(nonatomic, readonly) FITCLOUDDFUCHIPVENDOR chipVendor;
 
 /// 歌曲列表
-@property (nullable, readonly) NSArray <FitCloudSong*> *songs;
+@property (nonatomic, strong, nullable, readonly) NSArray <FitCloudSong*> *songs;
 
 /// 播放清单列表
-@property (nullable, readonly) NSArray <FitCloudPlaylist*> *playlists;
+@property (nonatomic, strong, nullable, readonly) NSArray <FitCloudPlaylist*> *playlists;
 
 /// SD卡总空间
-@property (readonly) NSUInteger totalSpace;
+@property (nonatomic, readonly) NSUInteger totalSpace;
 
 /// SD卡剩余空间
-@property (readonly) NSUInteger freeSpace;
+@property (nonatomic, readonly) NSUInteger freeSpace;
 
 
 ///获取歌曲列表
@@ -93,7 +93,13 @@ typedef void(^FitCloudMusicCompletionBlock)(BOOL success, NSError *_Nullable err
 + (instancetype _Nullable)new NS_UNAVAILABLE;
 - (instancetype _Nullable)init NS_UNAVAILABLE;
 
-- (instancetype _Nullable)initWithPeripheral:(CBPeripheral *_Nonnull) peripheral chipVendor:(FITCLOUDDFUCHIPVENDOR)chipVendor;
+/// 初始化MusicBridge
+/// - Parameters:
+///   - peripheral: 外设
+///   - chipVendor: 芯片厂商
+///   - delegate: 代理
+/// - Returns: MusicBridge
+- (instancetype _Nullable)initWithPeripheral:(CBPeripheral *_Nonnull) peripheral chipVendor:(FITCLOUDDFUCHIPVENDOR)chipVendor delegate:(id<FitCloudMusicBridgeDelegate>_Nullable)delegate;
 @end
 
 
