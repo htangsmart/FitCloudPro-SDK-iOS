@@ -45,6 +45,9 @@ typedef void(^FitCloudMusicCompletionBlock)(BOOL success, NSError *_Nullable err
 /// 芯片厂商
 @property(nonatomic, readonly) FITCLOUDDFUCHIPVENDOR chipVendor;
 
+/// 是否已经激活
+@property(nonatomic, readonly) BOOL activated;
+
 /// 歌曲列表
 @property (nonatomic, strong, nullable, readonly) NSArray <FitCloudSong*> *songs;
 
@@ -100,6 +103,9 @@ typedef void(^FitCloudMusicCompletionBlock)(BOOL success, NSError *_Nullable err
 ///   - delegate: 代理
 /// - Returns: MusicBridge
 - (instancetype _Nullable)initWithPeripheral:(CBPeripheral *_Nonnull) peripheral chipVendor:(FITCLOUDDFUCHIPVENDOR)chipVendor delegate:(id<FitCloudMusicBridgeDelegate>_Nullable)delegate;
+
+/// 激活
+- (void) activateWithCompletionHandler:(FitCloudMusicCompletionBlock _Nullable)handler;
 @end
 
 
