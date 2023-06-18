@@ -1,0 +1,205 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AliCloudIotKitAdvance
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Alamofire
+@_exported import AliCloudIotKitAdvance
+import CommonCrypto
+import CoreBluetooth
+import CryptoSwift
+import Foundation
+import RxBluetoothKit
+import RxSwift
+import Swift
+import SwiftyBeaver
+import SwiftyJSON
+import UIKit
+import _Concurrency
+import _StringProcessing
+@_hasMissingDesignatedInitializers public class ThingCommunicateService {
+  public func wearCommonEventUpload(event: AliCloudIotKitAdvance.WearCommonEvent) throws
+  public func wearCommonCommandReply(replyPack: AliCloudIotKitAdvance.RelpyPack) throws
+  public func tryResolve(topic: Swift.String, messageData: Any?) -> AliCloudIotKitAdvance.WearCommonCommand?
+  @objc deinit
+}
+@objc public protocol AliCloudIotBleDelegate {
+  @objc func parseMacAddressFromManufacturerDataData(manufacturerData: Foundation.Data?) -> Swift.String?
+  @objc func onBleConnectionStateChanged(state: AliCloudIotKitAdvance.BleStatus, mac: Swift.String)
+  @objc func onBleDataReceived(uuid: Swift.String, data: Foundation.Data)
+}
+public enum AliCludIotConnectionState : Swift.Int {
+  case connected
+  case disconnected
+  case connecting
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum MqttState : Swift.UInt8 {
+  case onlineSuccess = 0x00
+  case authenticationFailure = 0x01
+  case authenticationTimeout = 0x02
+  case offlineSuccess = 0x03
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public struct WearCommonCommand : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class AliCloudIotLogManager : ObjectiveC.NSObject {
+  @objc public static let shared: AliCloudIotKitAdvance.AliCloudIotLogManager
+  @objc public func switchLogStatus(_ isOpen: Swift.Bool = true)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class IotService : ObjectiveC.NSObject {
+  @objc public func uploadData(eventContent: Swift.String, trackId: Swift.String?) throws
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class AliCloudIotWatchManager : ObjectiveC.NSObject {
+  @objc public static let shared: AliCloudIotKitAdvance.AliCloudIotWatchManager
+  @objc public var sdkInitOrDeInitInAsync: Swift.Bool
+  public func initSdk<T>(config: T, sdkDelegate: any AliCloudIotKitAdvance.AliCloudIotSdkInitDelegate, iotDelegate: any AliCloudIotKitAdvance.AliCloudIotDelegate) throws where T : AliCloudIotKitAdvance.AliCloudIotSdkConfigBase
+  @objc public func initSdk(config: any AliCloudIotKitAdvance.AliCloudIotSdkConfigBaseClass, sdkDelegate: any AliCloudIotKitAdvance.AliCloudIotSdkInitDelegate, iotDelegate: any AliCloudIotKitAdvance.AliCloudIotDelegate) throws
+  @objc public func deInitSdk()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension AliCloudIotKitAdvance.AliCloudIotWatchManager {
+  @objc dynamic public func publishMessage(topic: Swift.String, data: Foundation.Data) throws
+  @objc dynamic public func publishMessage(topic: Swift.String, data: Foundation.Data, qos: Swift.Int32, resultBlock: @escaping (Swift.Bool, (any Swift.Error)?) -> Swift.Void) throws
+  @objc dynamic public func subscribeTopic(topic: Swift.String) throws
+  @objc dynamic public func unsubscribeTopic(topic: Swift.String) throws
+}
+extension AliCloudIotKitAdvance.AliCloudIotWatchManager {
+  @objc dynamic public var rideYardService: AliCloudIotKitAdvance.RideYardService {
+    @objc get
+  }
+  @objc dynamic public var bleService: AliCloudIotKitAdvance.BleService {
+    @objc get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class RideYardService : AliCloudIotKitAdvance.BleBaseSendService {
+  @objc public func uploadData(eventContent: Swift.String, trackId: Swift.String?) throws
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension RxBluetoothKit.ScannedPeripheral : Swift.Equatable {
+  public static func == (lhs: RxBluetoothKit.ScannedPeripheral, rhs: RxBluetoothKit.ScannedPeripheral) -> Swift.Bool
+}
+extension Foundation.Data {
+  public func hexString(uppercase: Swift.Bool = true, separator: Swift.String = "") -> Swift.String
+}
+@objc public enum BleStatus : Swift.Int {
+  case connecting = 0
+  case connected = 1
+  case disconnected = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class BleBaseSendService : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol AliCloudIotDelegate {
+  @objc func onIotDisconnected()
+  @objc func onIotConnected()
+  @objc func onIotConnecting()
+  @objc func onMessageArrived(topic: Swift.String, message: Any?)
+  @objc func onIotMessageArrived(data: Swift.String, message: Swift.String, code: Swift.Int32)
+  @objc func onBusCodeMessageArrived(data: Swift.String, message: Swift.String, code: Swift.Int32)
+}
+public struct WearCommonEvent : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AliCloudIotQulianConfig : AliCloudIotKitAdvance.AliCloudIotSdkConfigBase {
+  public var productKey: Swift.String
+  public var deviceName: Swift.String
+  public var server: Swift.String
+  public var port: Swift.Int32
+  public init(productKey: Swift.String, deviceName: Swift.String, server: Swift.String, timestamp: Swift.String, password: Swift.String)
+  public init(productKey: Swift.String, deviceName: Swift.String, server: Swift.String, port: Swift.Int32, timestamp: Swift.String, password: Swift.String)
+}
+@objc public class AliCloudIotQulianConfigClass : ObjectiveC.NSObject, AliCloudIotKitAdvance.AliCloudIotSdkConfigBaseClass {
+  @objc public init(productKey: Swift.String, deviceName: Swift.String, server: Swift.String, timestamp: Swift.String, password: Swift.String)
+  @objc public init(productKey: Swift.String, deviceName: Swift.String, server: Swift.String, port: Swift.Int32, timestamp: Swift.String, password: Swift.String)
+  @objc public func getConfig() -> AliCloudIotKitAdvance.ConfigWrapper
+  @objc deinit
+}
+public protocol AliCloudIotSdkConfigBase {
+  var productKey: Swift.String { get set }
+  var deviceName: Swift.String { get set }
+  var server: Swift.String { get set }
+  var port: Swift.Int32 { get set }
+}
+@_hasMissingDesignatedInitializers @objc public class ConfigWrapper : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc public protocol AliCloudIotSdkConfigBaseClass {
+  @objc func getConfig() -> AliCloudIotKitAdvance.ConfigWrapper
+}
+@objc public protocol AliCloudIotSdkInitDelegate {
+  @objc func onInit(successed: Swift.Bool, error: (any Swift.Error)?)
+  @objc func onDeinit(successed: Swift.Bool, error: (any Swift.Error)?)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class BleService : ObjectiveC.NSObject {
+  @objc public func connectBle(mac: Swift.String, scanTimeout: Swift.Int = 30, delegate: any AliCloudIotKitAdvance.AliCloudIotBleDelegate)
+  @objc public func disconnect()
+  @objc public func sendBleData(data: Foundation.Data)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct AliCloudIotDirectConfig : AliCloudIotKitAdvance.AliCloudIotSdkConfigBase {
+  public var productKey: Swift.String
+  public var deviceName: Swift.String
+  public var server: Swift.String
+  public var port: Swift.Int32
+  public init(productKey: Swift.String, deviceName: Swift.String, server: Swift.String, deviceSecret: Swift.String)
+  public init(productKey: Swift.String, deviceName: Swift.String, server: Swift.String, port: Swift.Int32, deviceSecret: Swift.String)
+}
+@objc public class AliCloudIotDirectConfigClass : ObjectiveC.NSObject, AliCloudIotKitAdvance.AliCloudIotSdkConfigBaseClass {
+  @objc public init(productKey: Swift.String, deviceName: Swift.String, server: Swift.String, deviceSecret: Swift.String)
+  @objc public init(productKey: Swift.String, deviceName: Swift.String, server: Swift.String, port: Swift.Int32, deviceSecret: Swift.String)
+  @objc public func getConfig() -> AliCloudIotKitAdvance.ConfigWrapper
+  @objc deinit
+}
+@objc public protocol BleNeedSendDataDelegate {
+  @objc func sendBleData(data: Foundation.Data)
+}
+public struct RelpyPack : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias checkFgsStateComplete = (_ isSuccess: Swift.Bool, _ data: [Swift.String : Any]) -> ()
+public typealias fndStateComplete = (_ isSuccess: Swift.Bool, _ data: [Swift.String : Any]) -> ()
+@objc @_inheritsConvenienceInitializers @objcMembers public class AliConnectMananger : ObjectiveC.NSObject {
+  @objc public static let shared: AliCloudIotKitAdvance.AliConnectMananger
+  @objc public var bleSendDataDelegate: (any AliCloudIotKitAdvance.BleNeedSendDataDelegate)?
+  @objc open func bleDataReceived(data: Foundation.Data)
+  @objc open func checkFgsState(result: @escaping AliCloudIotKitAdvance.checkFgsStateComplete)
+  @objc open func startConnectLpState(result: @escaping AliCloudIotKitAdvance.fndStateComplete)
+  @objc open func disConnect()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension AliCloudIotKitAdvance.AliCludIotConnectionState : Swift.Equatable {}
+extension AliCloudIotKitAdvance.AliCludIotConnectionState : Swift.Hashable {}
+extension AliCloudIotKitAdvance.AliCludIotConnectionState : Swift.RawRepresentable {}
+extension AliCloudIotKitAdvance.MqttState : Swift.Equatable {}
+extension AliCloudIotKitAdvance.MqttState : Swift.Hashable {}
+extension AliCloudIotKitAdvance.MqttState : Swift.RawRepresentable {}
+extension AliCloudIotKitAdvance.BleStatus : Swift.Equatable {}
+extension AliCloudIotKitAdvance.BleStatus : Swift.Hashable {}
+extension AliCloudIotKitAdvance.BleStatus : Swift.RawRepresentable {}
