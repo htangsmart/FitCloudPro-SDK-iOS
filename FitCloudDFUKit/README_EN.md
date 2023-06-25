@@ -404,7 +404,7 @@ NSString* hardwareInfo = [firmware description];
 
 ## MUSIC PUSH
 
-- [MUSIC PUSH](Others/Music/MUSIC_EN.md)
+- [MUSIC PUSH](../Others/Music/MUSIC_EN.md)
 
 ## FAQ
 

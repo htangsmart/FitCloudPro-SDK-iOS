@@ -396,7 +396,7 @@ NSString* hardwareInfo = [firmware description];
 
 ## 音乐推送
 
-- [音乐推送](Others/Music/MUSIC.md)
+- [音乐推送](../Others/Music/MUSIC.md)
 
 ## FAQ
 
