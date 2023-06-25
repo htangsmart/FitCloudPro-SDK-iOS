@@ -6,7 +6,7 @@
 
 ```objc
 [FitCloudKit enterDFUModeWithBlock:^(BOOL succeed, CBPeripheral *dfuPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError *error) {
-}
+}];
 ```
 
 **Step 2**
