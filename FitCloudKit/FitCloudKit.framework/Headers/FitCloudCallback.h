@@ -81,6 +81,7 @@ typedef void (^FitCloudObjectResultBlock)(BOOL succeed, id val, NSError* error);
  */
 typedef void (^FitCloudEnterDFUModeResultBlock)(BOOL succeed, CBPeripheral* dfuPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError* error);
 
+
 /**
  *@brief FitCloud退出DFU模式结果回调
  *@param succeed 是否成功进入DFU

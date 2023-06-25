@@ -1,32 +1,33 @@
 # FitCloudDFUKit iOS Development Guide
 
 ## Summary
-* What is FitCloudKit? 
-  
-  >###### iOS framework for FitCloud Smart Bracelet, which is responsible for the upgrade of bracelet firmware. 
-         
-* Scope
+
+- What is FitCloudKit?
+
+  > ###### iOS framework for FitCloud Smart Bracelet, which is responsible for the upgrade of bracelet firmware.
+
+- Scope
 
   ```
   Partners who need to customize their own iOS smart bracelet APP.
   ```
 
-* Compatibility
-  
+- Compatibility
+
   ###### 1. iOS 9.0 and Above；
-  
+
   ###### 2. armv7/i386/x86_64/arm64 Instruction Set；
-  
+
   ###### 3. Bitcode；
-  
- 
+
 ## Features
- 
+
 1. Device firmware upgrade for bracelet (excluding firmware upgrade for air and remote download);
- 
+
 ## Releases
 
 V1.3.0 Build202212300001
+
 ```
   Release Date：2022-12-30
   Features：
@@ -36,6 +37,7 @@ V1.3.0 Build202212300001
 ```
 
 V1.2.9 Build202206300001
+
 ```
   Release Date：2022-06-30
   Features：
@@ -43,6 +45,7 @@ V1.2.9 Build202206300001
 ```
 
 V1.2.8 Build202206060001
+
 ```
   Release Date：2022-06-06
   Features：
@@ -193,17 +196,19 @@ pod 'FitCloudDFUKit'
 ```
 
 If you want to integrate beta FitCloudDFUKit, you should use the following configuration in the podfile file:
+
 ```
 pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 ```
 
-Method 2: download from making ` FitCloudDFUKit `, manual integrated into your project.
+Method 2: download from making `FitCloudDFUKit`, manual integrated into your project.
 
 1. FitCloudDFUKit SDK includes:
-    * FitCloudDFUKit. Framework  
-      static library, smart bracelet dfu development kit core framework
-    * FitCloudDFUkit.bundle   
-      smart bracelet development kit core resource package
+
+   - FitCloudDFUKit. Framework  
+     static library, smart bracelet dfu development kit core framework
+   - FitCloudDFUkit.bundle  
+     smart bracelet development kit core resource package
 
 2. Add the framework to the project;
 
@@ -211,18 +216,18 @@ Method 2: download from making ` FitCloudDFUKit `, manual integrated into your p
 
 4. Add support for other system dependency libraries:
 
-    * CoreGraphics framework
-    * CoreBluetooth framework
-    
+   - CoreGraphics framework
+   - CoreBluetooth framework
+
 5. Add dependency in Podfile:
 
    pod 'iOSDFULibrary', '4.11.0'
 
 ## Privacy Permissions
+
 In the project `Info.Plist` set the following privacy permissions using description, the actual describe the content depends on your business.
 
 ![Bluetooth Privacy Permission](media/privacy_bluetooth_en.png)
-
 
 ## Import Header File
 
@@ -325,9 +330,10 @@ Check the battery level of the watch and get the dfuPeripheral. If it fails, I d
 
 **Step 2**
 
-Start the dfu, the silentMode parameters means different types of dfu. 
+Start the dfu, the silentMode parameters means different types of dfu.
 
 Normal DFU:
+
 ```
 BOOL silentMode = FALSE;
 if([FitCloudKit allConfig].firmware.hardwareSupported & FITCLOUDHARDWARE_DFUSHOULDSILENTMODE)
@@ -337,11 +343,13 @@ if([FitCloudKit allConfig].firmware.hardwareSupported & FITCLOUDHARDWARE_DFUSHOU
 ```
 
 UI DFU / Watchface DFU / Watch Sports DFU:
+
 ```
 BOOL silentMode = YES;
 ```
 
 then:
+
 ```objc
 [FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:silentMode];
 ```
@@ -370,7 +378,7 @@ When you decide not to continue with the firmware upgrade or plan to exit the DF
 
 If you are our business customers who allowed to connect our watchface server, you may need to obtain some parameters from the SDK and pass it to our server. Of course, to obtain this capability, you need to contact our business manager.
 
-* hardwareInfo
+- hardwareInfo
 
 ```objc
 FitCloudAllConfigObject *allConfig = [FitCloudKit allConfig];
@@ -378,7 +386,7 @@ FitCloudFirmwareVersionObject* firmware = allconfig.firmware;
 NSString* hardwareInfo = [firmware description];
 ```
 
-* lcd
+- lcd
 
 ```objc
 [FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
@@ -386,7 +394,7 @@ NSString* hardwareInfo = [firmware description];
 }];
 ```
 
-* toolVersion
+- toolVersion
 
 ```objc
 [FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
@@ -394,23 +402,24 @@ NSString* hardwareInfo = [firmware description];
 }];
 ```
 
+## MUSIC PUSH
+
+- [MUSIC PUSH](Others/Music/MUSIC_EN.md)
+
 ## FAQ
 
->Q: Which chipmaker firmware updates are supported now?
+> Q: Which chipmaker firmware updates are supported now?
 >
->A: The SDK integrates ` Realtek ` and ` Nordic ` manufacturers firmware upgrade procedure, but because at present all bracelet actually uses only ` Realtek ` chip, therefore in the process of actual use, you can only use the ` Realtek ` chip firmware upgrade.
+> A: The SDK integrates `Realtek` and `Nordic` manufacturers firmware upgrade procedure, but because at present all bracelet actually uses only `Realtek` chip, therefore in the process of actual use, you can only use the `Realtek` chip firmware upgrade.
 
 <!-- more -->
 
->Q: What is the difference between normal DFU and UI DFU?
+> Q: What is the difference between normal DFU and UI DFU?
 >
->A: Usually, DFU without user interface named normal DFU, and DFU with user interface is UI DFU. Of course, watchface DFU is UI DFU.
+> A: Usually, DFU without user interface named normal DFU, and DFU with user interface is UI DFU. Of course, watchface DFU is UI DFU.
 
 ## Technical Support
 
 Hetang Smart.
 
 Dai / iOS Developer
-
-
-
