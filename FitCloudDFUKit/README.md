@@ -394,6 +394,10 @@ NSString* hardwareInfo = [firmware description];
 }];
 ```
 
+## 音乐推送
+
+- [音乐推送](Others/Music/MUSIC.md)
+
 ## FAQ
 
 >Q: 现在支持哪些芯片厂商的固件升级？
