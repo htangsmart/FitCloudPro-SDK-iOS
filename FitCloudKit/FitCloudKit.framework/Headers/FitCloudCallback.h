@@ -56,6 +56,9 @@
 #import <FitCloudKit/FitCloudCustomLabelsObject.h>
 #import <FitCloudKit/FitCloudPowerSavingSetting.h>
 #import <FitCloudKit/SkyworthPVPowerStationObject.h>
+#import <FitCloudKit/FitCloudCricketUpcomingMatch.h>
+#import <FitCloudKit/FitCloudCricketLiveMatch.h>
+#import <FitCloudKit/FitCloudCricketEndedMatch.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -567,6 +570,11 @@ typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber
  * @brief 手表请求创维光伏数据
  */
 -(void) OnRequestSkyworthPV;
+
+/**
+ * @brief 手表请求板球比赛数据
+ */
+-(void) OnRequestCricketMatchData;
 
 /**
  * @brief 睡眠调试数据

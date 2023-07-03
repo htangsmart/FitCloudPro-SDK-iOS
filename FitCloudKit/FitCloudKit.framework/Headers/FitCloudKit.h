@@ -9,9 +9,10 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-06-14  Version:1.2.9-beta.6 Build:202306140001
+//     pcjbird    2023-07-03  Version:1.2.9-beta.7 Build:202307030001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
+//                            3.板球比赛数据指令支持, @see withCricketMatch
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1136,6 +1137,34 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void) sendSkyworthPVData:(NSArray<SkyworthPVPowerStationObject*>*)stations withBlock:(FitCloudResultBlock _Nullable)block;
+
+#pragma mark 发送即将到来的板球比赛数据
+
+/**
+ * @brief 发送即将到来的板球比赛数据
+ * @param matches 比赛数据，目前最多支持两个
+ * @param block 结果回调
+ */
++(void) sendUpcomingCricketMatchData:(NSArray<FitCloudCricketUpcomingMatch*>*)matches withBlock:(FitCloudResultBlock _Nullable)block;
+
+#pragma mark 发送正在进行的板球比赛数据
+
+/**
+ * @brief 发送正在进行的板球比赛数据
+ * @param matches 比赛数据，目前最多支持两个
+ * @param block 结果回调
+ */
++(void) sendLiveCricketMatchData:(NSArray<FitCloudCricketLiveMatch*>*)matches withBlock:(FitCloudResultBlock _Nullable)block;
+
+
+#pragma mark 发送已经结束的板球比赛数据
+
+/**
+ * @brief 发送已经结束的板球比赛数据
+ * @param matches 比赛数据，目前最多支持两个
+ * @param block 结果回调
+ */
++(void) sendEndedCricketMatchData:(NSArray<FitCloudCricketEndedMatch*>*)matches withBlock:(FitCloudResultBlock _Nullable)block;
 @end
 
 /**

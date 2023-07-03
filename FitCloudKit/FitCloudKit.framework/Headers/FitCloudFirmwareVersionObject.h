@@ -273,4 +273,11 @@
 
 /// 是否支持创维光伏
 @property(nonatomic, readonly) BOOL withSkyworthPV;
+
+/// 是否支持定制二维码功能
+@property(nonatomic, readonly) BOOL canCustomizeQRCode;
+
+/// 是否支持板球比赛
+@property(nonatomic, readonly) BOOL withCricketMatch;
+
 @end
