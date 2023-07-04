@@ -1,5 +1,13 @@
 # 板球比赛数据推送指南
 
+**判断手表是否支持板球比赛功能**
+
+```objc
+FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+BOOL withCricketMatch = (allConfig && allConfig.firmware.withCricketMatch);
+
+```
+
 **推送即将到来的比赛数据**
 
 ```objc

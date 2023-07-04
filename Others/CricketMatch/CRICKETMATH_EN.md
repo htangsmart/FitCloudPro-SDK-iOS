@@ -1,5 +1,13 @@
 # Cricket match data guide
 
+**Check whether the cricket match feature is supported**
+
+```objc
+FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+BOOL withCricketMatch = (allConfig && allConfig.firmware.withCricketMatch);
+
+```
+
 **Send upcoming cricket match data**
 
 ```objc
@@ -60,23 +68,23 @@ Under normal circumstances, a watch does not request cricket match data from the
 
 **Team id defines**
 
-1. Afghanistan(阿富汗) - AFG
-2. Australia(澳大利亚) - AUS
-3. Bangladesh(孟加拉国) - BGD
-4. England(英格兰) - GBR
-5. India(印度) - IND
-6. Ireland(爱尔兰) - IRL
-7. Nederland(荷兰) - NLD
-8. New-Zealand(新西兰) - NZ
-9. Oman(阿曼) - OM
-10. Pakistan(巴基斯坦) - PAK
-11. Scotland(苏格兰) - SCT
-12. South-Africa(南非) - ZAF
-13. Sri-Lanka(斯里兰卡) - LKA
-14. United-Arab-Emirates(阿拉伯联合酋长国) - ARE
-15. United-States-of-America(美利坚合众国) - USA
-16. West-Indies(西印度群岛) - WI
-17. Zimbabwe(津巴布韦) - ZWE
+1. Afghanistan - AFG
+2. Australia - AUS
+3. Bangladesh - BGD
+4. England - GBR
+5. India - IND
+6. Ireland - IRL
+7. Nederland - NLD
+8. New-Zealand - NZ
+9. Oman - OM
+10. Pakistan - PAK
+11. Scotland - SCT
+12. South-Africa - ZAF
+13. Sri-Lanka - LKA
+14. United-Arab-Emirates - ARE
+15. United-States-of-America - USA
+16. West-Indies - WI
+17. Zimbabwe - ZWE
 18. CSK - CSK
 19. Delhi-Capitals - DC
 20. Gujarat-Titans - GT
