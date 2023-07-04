@@ -711,6 +711,10 @@ param.maxMeasuringMinutes = 1;
 }
 ```
 
+## 板球比赛
+
+[板球比赛](../Others/CricketMatch/CRICKETMATCH.md)
+
 ## 其他设置和操作
 
 参看`<FitCloudKit/FitCloudKit.h>`头文件中详细注释说明。
@@ -768,12 +772,6 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 > Q: 如何处理多台 iOS 设备先后绑定配对同一个手表导致的异常情况？
 >
 > A: 通常情况下，用户只会拿一台 iOS 设备去绑定配对手表，但仍然有少部分用户会拿多台 iOS 设备先后去绑定配对一个手表，从而导致先前连接配对的那台 iOS 设备与手表配对异常，无法重新连接手表，这是由于这些手表设备同时只能存储与一台 iOS 设备的配对信息所导致的，后面设备的配对信息覆盖了之前的配对信息，从而导致 iOS 设备上的配对信息与手表上的配对信息不匹配，请参照 FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY 通知进行处理。
-
-<!-- more -->
-
-> Q: 如何推送板球比赛数据？
->
-> A: [推送板球比赛数据](../Others/CricketMatch/CRICKETMATCH.md)
 
 ## 技术支持
 

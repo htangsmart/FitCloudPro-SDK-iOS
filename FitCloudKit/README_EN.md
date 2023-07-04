@@ -712,6 +712,10 @@ The Real-time Health Measurements results:
 }
 ```
 
+## Cricket match
+
+[Cricket match](../Others/CricketMatch/CRICKETMATCH_EN.md)
+
 ## Other Settings and Operations
 
 see detail comments in `<FitCloudKit/FitCloudKit.h>` header file.
@@ -815,12 +819,6 @@ BOOL isECGSupported = (allConfig && allConfig.firmware && (allConfig.firmware.ha
 > Q: How to deal with the abnormal situation caused by multiple iOS devices successively binding and pairing the same watch?
 >
 > A: Generally, users will only bind and pair watch with one iOS device, but a small number of users will bind and pair one watch with multiple iOS devices successively, which leads to abnormal pairing between the iOS device and the watch that was previously connected & paired, and the watch cannot be reconnected. This is due to the fact that these watch devices can only store the pairing information with one iOS device at the same time, The pairing information of the later device covers the previous pairing information, which causes the pairing information on iOS device to not match the pairing information on the watch. Please refer to FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY notification, and process in your app.
-
-<!-- more -->
-
-> Q: How to send the cricket match data
->
-> A: [Send the cricket match data](../Others/CricketMatch/CRICKETMATCH_EN.md)
 
 ## Technical Support
 
