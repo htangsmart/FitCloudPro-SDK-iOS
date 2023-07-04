@@ -66,7 +66,7 @@ BOOL withCricketMatch = (allConfig && allConfig.firmware.withCricketMatch);
 
 正常情况下手表不会向 App 请求板球比赛数据，而是由 App 主动向手表推送板球比赛数据
 
-**退伍 Id 定义**
+**队伍 Id 定义**
 
 1. Afghanistan(阿富汗) - AFG
 2. Australia(澳大利亚) - AUS
