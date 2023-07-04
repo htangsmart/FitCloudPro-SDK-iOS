@@ -711,6 +711,10 @@ param.maxMeasuringMinutes = 1;
 }
 ```
 
+## 常见功能
+
+[常见功能](COMMON_FEATURES.md)
+
 ## 板球比赛
 
 [板球比赛](../Others/CricketMatch/CRICKETMATCH.md)
