@@ -131,7 +131,7 @@
         self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
         self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
         if([FitCloudKit lastConnectPeripheral])self.btnConnectDevice.hidden = FALSE;
-        self.btnRemoveDevice.hidden = YES;
+        self.btnRemoveDevice.hidden = NO;
         self.btnMoreDemo.hidden = YES;
         self.soc.text = @"";
     });
