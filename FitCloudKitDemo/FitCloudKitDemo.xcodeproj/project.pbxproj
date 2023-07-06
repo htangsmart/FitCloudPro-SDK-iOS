@@ -28,6 +28,7 @@
 		89A438C022B0D19900555B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438BF22B0D19900555B98 /* main.m */; };
 		89A438C822B0DA9500555B98 /* AppDelegate+FitCloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438C722B0DA9500555B98 /* AppDelegate+FitCloudKit.m */; };
 		89A438CC22B0ED3800555B98 /* AppDelegate+LoggerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438CB22B0ED3800555B98 /* AppDelegate+LoggerService.m */; };
+		89A891AC2A56B08F0073CEBA /* WomenHealthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A891AB2A56B08F0073CEBA /* WomenHealthController.m */; };
 		89C5154123083707000BD54C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89C5154323083707000BD54C /* Localizable.strings */; };
 		89C515442308370B000BD54C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89C515462308370B000BD54C /* InfoPlist.strings */; };
 		89C5155023083B22000BD54C /* LocalizedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5154C23083B22000BD54C /* LocalizedLabel.m */; };
@@ -82,6 +83,8 @@
 		89A438C922B0DB6000555B98 /* FitCloudKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitCloudKitDemo-Prefix.pch"; sourceTree = "<group>"; };
 		89A438CA22B0ED3800555B98 /* AppDelegate+LoggerService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LoggerService.h"; sourceTree = "<group>"; };
 		89A438CB22B0ED3800555B98 /* AppDelegate+LoggerService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LoggerService.m"; sourceTree = "<group>"; };
+		89A891AA2A56B08F0073CEBA /* WomenHealthController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WomenHealthController.h; sourceTree = "<group>"; };
+		89A891AB2A56B08F0073CEBA /* WomenHealthController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WomenHealthController.m; sourceTree = "<group>"; };
 		89C5154223083707000BD54C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		89C515452308370B000BD54C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89C515472308371F000BD54C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				898ADEB2231EB43C00342172 /* UserProfileController.m */,
 				898ADEB4231EB6DA00342172 /* WeatherController.h */,
 				898ADEB5231EB6DA00342172 /* WeatherController.m */,
+				89A891AA2A56B08F0073CEBA /* WomenHealthController.h */,
+				89A891AB2A56B08F0073CEBA /* WomenHealthController.m */,
 				89C515552308499D000BD54C /* DeviceCell.h */,
 				89C515562308499D000BD54C /* DeviceCell.m */,
 				89A438B622B0D19700555B98 /* Main.storyboard */,
@@ -371,6 +376,7 @@
 			files = (
 				89A438B522B0D19700555B98 /* ViewController.m in Sources */,
 				89A438C822B0DA9500555B98 /* AppDelegate+FitCloudKit.m in Sources */,
+				89A891AC2A56B08F0073CEBA /* WomenHealthController.m in Sources */,
 				891FA8D6231A98AD0097E996 /* SedentaryRemindController.m in Sources */,
 				89C5155023083B22000BD54C /* LocalizedLabel.m in Sources */,
 				893B4499231D54870057EC21 /* RealtimeMeasureController.m in Sources */,
