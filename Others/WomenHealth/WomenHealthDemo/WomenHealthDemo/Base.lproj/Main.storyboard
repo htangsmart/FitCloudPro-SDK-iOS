@@ -12,7 +12,7 @@
         <!--Navigation Controller-->
         <scene sceneID="f89-kb-usc">
             <objects>
-                <navigationController id="PXW-IG-9J9" sceneMemberID="viewController">
+                <navigationController id="PXW-IG-9J9" customClass="YPNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xvk-eX-S1E">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

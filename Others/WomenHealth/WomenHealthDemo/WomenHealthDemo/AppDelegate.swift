@@ -7,6 +7,7 @@
 
 import UIKit
 import WomenHealth
+import YPNavigationBarTransition
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,3 +37,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension YPNavigationController : NavigationBarConfigureStyle {
+    public func yp_navigtionBarConfiguration() -> YPNavigationBarConfigurations {
+        return [.backgroundStyleColor]
+    }
+    
+    public func yp_navigationBarTintColor() -> UIColor! {
+        return .black
+    }
+    
+    public func yp_navigationBackgroundColor() -> UIColor! {
+        return .white
+    }
+}
