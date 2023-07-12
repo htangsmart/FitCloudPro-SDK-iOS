@@ -1,0 +1,4748 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WomenHealthMode",
+        "printedName": "WomenHealthMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthMode.Type) -> WomenHealth.WomenHealthMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthMode",
+                    "printedName": "WomenHealth.WomenHealthMode",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthMode",
+                        "printedName": "WomenHealth.WomenHealthMode",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthMode@WomenHealthModeNone",
+            "mangledName": "$s11WomenHealth0aB4ModeO4noneyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "menses",
+            "printedName": "menses",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthMode.Type) -> WomenHealth.WomenHealthMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthMode",
+                    "printedName": "WomenHealth.WomenHealthMode",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthMode",
+                        "printedName": "WomenHealth.WomenHealthMode",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthMode@WomenHealthModeMenses",
+            "mangledName": "$s11WomenHealth0aB4ModeO6mensesyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "pregnancy_prepare",
+            "printedName": "pregnancy_prepare",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthMode.Type) -> WomenHealth.WomenHealthMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthMode",
+                    "printedName": "WomenHealth.WomenHealthMode",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthMode",
+                        "printedName": "WomenHealth.WomenHealthMode",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthMode@WomenHealthModePregnancy_prepare",
+            "mangledName": "$s11WomenHealth0aB4ModeO17pregnancy_prepareyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "pregnancy",
+            "printedName": "pregnancy",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthMode.Type) -> WomenHealth.WomenHealthMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthMode",
+                    "printedName": "WomenHealth.WomenHealthMode",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthMode",
+                        "printedName": "WomenHealth.WomenHealthMode",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthMode@WomenHealthModePregnancy",
+            "mangledName": "$s11WomenHealth0aB4ModeO9pregnancyyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "WomenHealth.WomenHealthMode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthMode",
+                    "printedName": "WomenHealth.WomenHealthMode",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthMode"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11WomenHealth0aB4ModeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11WomenHealth0aB4ModeO8rawValueACSgSi_tcfc",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB4ModeO8rawValueSivp",
+            "mangledName": "$s11WomenHealth0aB4ModeO8rawValueSivp",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB4ModeO8rawValueSivg",
+                "mangledName": "$s11WomenHealth0aB4ModeO8rawValueSivg",
+                "moduleName": "WomenHealth",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@WomenHealth@E@WomenHealthMode",
+        "mangledName": "$s11WomenHealth0aB4ModeO",
+        "moduleName": "WomenHealth",
+        "intro_iOS": "11.0",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "Available",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MensesOpAdvanceType",
+        "printedName": "MensesOpAdvanceType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "finish",
+            "printedName": "finish",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.MensesOpAdvanceType.Type) -> WomenHealth.MensesOpAdvanceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MensesOpAdvanceType",
+                    "printedName": "WomenHealth.MensesOpAdvanceType",
+                    "usr": "c:@M@WomenHealth@E@MensesOpAdvanceType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.MensesOpAdvanceType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MensesOpAdvanceType",
+                        "printedName": "WomenHealth.MensesOpAdvanceType",
+                        "usr": "c:@M@WomenHealth@E@MensesOpAdvanceType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@MensesOpAdvanceType@MensesOpAdvanceTypeFinish",
+            "mangledName": "$s11WomenHealth19MensesOpAdvanceTypeO6finishyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "start",
+            "printedName": "start",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.MensesOpAdvanceType.Type) -> WomenHealth.MensesOpAdvanceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MensesOpAdvanceType",
+                    "printedName": "WomenHealth.MensesOpAdvanceType",
+                    "usr": "c:@M@WomenHealth@E@MensesOpAdvanceType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.MensesOpAdvanceType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MensesOpAdvanceType",
+                        "printedName": "WomenHealth.MensesOpAdvanceType",
+                        "usr": "c:@M@WomenHealth@E@MensesOpAdvanceType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@MensesOpAdvanceType@MensesOpAdvanceTypeStart",
+            "mangledName": "$s11WomenHealth19MensesOpAdvanceTypeO5startyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "WomenHealth.MensesOpAdvanceType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MensesOpAdvanceType",
+                    "printedName": "WomenHealth.MensesOpAdvanceType",
+                    "usr": "c:@M@WomenHealth@E@MensesOpAdvanceType"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11WomenHealth19MensesOpAdvanceTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11WomenHealth19MensesOpAdvanceTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth19MensesOpAdvanceTypeO8rawValueSivp",
+            "mangledName": "$s11WomenHealth19MensesOpAdvanceTypeO8rawValueSivp",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth19MensesOpAdvanceTypeO8rawValueSivg",
+                "mangledName": "$s11WomenHealth19MensesOpAdvanceTypeO8rawValueSivg",
+                "moduleName": "WomenHealth",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@WomenHealth@E@MensesOpAdvanceType",
+        "mangledName": "$s11WomenHealth19MensesOpAdvanceTypeO",
+        "moduleName": "WomenHealth",
+        "intro_iOS": "11.0",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "Available",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PregnancyRemindType",
+        "printedName": "PregnancyRemindType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "pregnancy_days",
+            "printedName": "pregnancy_days",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.PregnancyRemindType.Type) -> WomenHealth.PregnancyRemindType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PregnancyRemindType",
+                    "printedName": "WomenHealth.PregnancyRemindType",
+                    "usr": "c:@M@WomenHealth@E@PregnancyRemindType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.PregnancyRemindType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PregnancyRemindType",
+                        "printedName": "WomenHealth.PregnancyRemindType",
+                        "usr": "c:@M@WomenHealth@E@PregnancyRemindType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@PregnancyRemindType@PregnancyRemindTypePregnancy_days",
+            "mangledName": "$s11WomenHealth19PregnancyRemindTypeO14pregnancy_daysyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "days_before_edc",
+            "printedName": "days_before_edc",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.PregnancyRemindType.Type) -> WomenHealth.PregnancyRemindType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PregnancyRemindType",
+                    "printedName": "WomenHealth.PregnancyRemindType",
+                    "usr": "c:@M@WomenHealth@E@PregnancyRemindType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.PregnancyRemindType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PregnancyRemindType",
+                        "printedName": "WomenHealth.PregnancyRemindType",
+                        "usr": "c:@M@WomenHealth@E@PregnancyRemindType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@PregnancyRemindType@PregnancyRemindTypeDays_before_edc",
+            "mangledName": "$s11WomenHealth19PregnancyRemindTypeO15days_before_edcyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "WomenHealth.PregnancyRemindType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PregnancyRemindType",
+                    "printedName": "WomenHealth.PregnancyRemindType",
+                    "usr": "c:@M@WomenHealth@E@PregnancyRemindType"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11WomenHealth19PregnancyRemindTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11WomenHealth19PregnancyRemindTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth19PregnancyRemindTypeO8rawValueSivp",
+            "mangledName": "$s11WomenHealth19PregnancyRemindTypeO8rawValueSivp",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth19PregnancyRemindTypeO8rawValueSivg",
+                "mangledName": "$s11WomenHealth19PregnancyRemindTypeO8rawValueSivg",
+                "moduleName": "WomenHealth",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@WomenHealth@E@PregnancyRemindType",
+        "mangledName": "$s11WomenHealth19PregnancyRemindTypeO",
+        "moduleName": "WomenHealth",
+        "intro_iOS": "11.0",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "Available",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WomenHealthModule",
+        "printedName": "WomenHealthModule",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "userId",
+            "printedName": "userId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@WomenHealth@objc(cs)WomenHealthModule(py)userId",
+            "mangledName": "$s11WomenHealth0aB6ModuleC6userIdSSvp",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@WomenHealth@objc(cs)WomenHealthModule(im)userId",
+                "mangledName": "$s11WomenHealth0aB6ModuleC6userIdSSvg",
+                "moduleName": "WomenHealth",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(with:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "WomenHealth.WomenHealthModuleLocalizable?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleLocalizable",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizable",
+                    "usr": "c:@M@WomenHealth@objc(pl)WomenHealthModuleLocalizable"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "WomenHealth.WomenHealthModuleThemable?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleThemable",
+                    "printedName": "WomenHealth.WomenHealthModuleThemable",
+                    "usr": "c:@M@WomenHealth@objc(pl)WomenHealthModuleThemable"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@WomenHealth@objc(cs)WomenHealthModule(cm)startWith:::",
+            "mangledName": "$s11WomenHealth0aB6ModuleC5start4with__ySS_AA0abC11Localizable_pSgAA0abC8Themable_pSgtFZ",
+            "moduleName": "WomenHealth",
+            "static": true,
+            "objc_name": "startWith:::",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enterMainSettings",
+            "printedName": "enterMainSettings(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@WomenHealth@objc(cs)WomenHealthModule(cm)enterMainSettingsFrom:",
+            "mangledName": "$s11WomenHealth0aB6ModuleC17enterMainSettings4fromySo16UIViewControllerC_tFZ",
+            "moduleName": "WomenHealth",
+            "static": true,
+            "objc_name": "enterMainSettingsFrom:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enterCurrentModeHome",
+            "printedName": "enterCurrentModeHome(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@WomenHealth@objc(cs)WomenHealthModule(cm)enterCurrentModeHomeFrom:",
+            "mangledName": "$s11WomenHealth0aB6ModuleC20enterCurrentModeHome4fromySo16UIViewControllerC_tFZ",
+            "moduleName": "WomenHealth",
+            "static": true,
+            "objc_name": "enterCurrentModeHomeFrom:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@WomenHealth@objc(cs)WomenHealthModule",
+        "mangledName": "$s11WomenHealth0aB6ModuleC",
+        "moduleName": "WomenHealth",
+        "intro_iOS": "11.0",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "Available",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WomenHealthModuleLocalizationKey",
+        "printedName": "WomenHealthModuleLocalizationKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "WomenHealth",
+            "printedName": "WomenHealth",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleLocalizationKey.Type) -> WomenHealth.WomenHealthModuleLocalizationKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleLocalizationKey",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleLocalizationKey",
+                        "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey@WomenHealthModuleLocalizationKeyWomenHealth",
+            "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyOAAyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "WomenHealthSettings",
+            "printedName": "WomenHealthSettings",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleLocalizationKey.Type) -> WomenHealth.WomenHealthModuleLocalizationKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleLocalizationKey",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleLocalizationKey",
+                        "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey@WomenHealthModuleLocalizationKeyWomenHealthSettings",
+            "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO0aB8SettingsyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "MensesOnly",
+            "printedName": "MensesOnly",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleLocalizationKey.Type) -> WomenHealth.WomenHealthModuleLocalizationKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleLocalizationKey",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleLocalizationKey",
+                        "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey@WomenHealthModuleLocalizationKeyMensesOnly",
+            "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO10MensesOnlyyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "MenstrualCycleWithDurationFormat",
+            "printedName": "MenstrualCycleWithDurationFormat",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleLocalizationKey.Type) -> WomenHealth.WomenHealthModuleLocalizationKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleLocalizationKey",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleLocalizationKey",
+                        "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey@WomenHealthModuleLocalizationKeyMenstrualCycleWithDurationFormat",
+            "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO32MenstrualCycleWithDurationFormatyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "PregnancyPreparationPhase",
+            "printedName": "PregnancyPreparationPhase",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleLocalizationKey.Type) -> WomenHealth.WomenHealthModuleLocalizationKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleLocalizationKey",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleLocalizationKey",
+                        "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey@WomenHealthModuleLocalizationKeyPregnancyPreparationPhase",
+            "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO25PregnancyPreparationPhaseyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "PregnancyPhase",
+            "printedName": "PregnancyPhase",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleLocalizationKey.Type) -> WomenHealth.WomenHealthModuleLocalizationKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleLocalizationKey",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleLocalizationKey",
+                        "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey@WomenHealthModuleLocalizationKeyPregnancyPhase",
+            "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO14PregnancyPhaseyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB21ModuleLocalizationKeyO11stringValueSSvp",
+            "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO11stringValueSSvp",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB21ModuleLocalizationKeyO11stringValueSSvg",
+                "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO11stringValueSSvg",
+                "moduleName": "WomenHealth",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "WomenHealth.WomenHealthModuleLocalizationKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleLocalizationKey",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11WomenHealth0aB21ModuleLocalizationKeyO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO8rawValueACSgSi_tcfc",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB21ModuleLocalizationKeyO8rawValueSivp",
+            "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO8rawValueSivp",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB21ModuleLocalizationKeyO8rawValueSivg",
+                "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO8rawValueSivg",
+                "moduleName": "WomenHealth",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[WomenHealth.WomenHealthModuleLocalizationKey]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleLocalizationKey",
+                    "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB21ModuleLocalizationKeyO8allCasesSayACGvpZ",
+            "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO8allCasesSayACGvpZ",
+            "moduleName": "WomenHealth",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[WomenHealth.WomenHealthModuleLocalizationKey]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleLocalizationKey",
+                        "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB21ModuleLocalizationKeyO8allCasesSayACGvgZ",
+                "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO8allCasesSayACGvgZ",
+                "moduleName": "WomenHealth",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey",
+        "mangledName": "$s11WomenHealth0aB21ModuleLocalizationKeyO",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[WomenHealth.WomenHealthModuleLocalizationKey]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleLocalizationKey",
+                        "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WomenHealthModuleLocalizable",
+        "printedName": "WomenHealthModuleLocalizable",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "localizationString",
+            "printedName": "localizationString(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WomenHealthModuleLocalizationKey",
+                "printedName": "WomenHealth.WomenHealthModuleLocalizationKey",
+                "usr": "c:@M@WomenHealth@E@WomenHealthModuleLocalizationKey"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@WomenHealth@objc(pl)WomenHealthModuleLocalizable(im)localizationString:",
+            "mangledName": "$s11WomenHealth0aB17ModuleLocalizableP18localizationStringySSSgAA0abC15LocalizationKeyOF",
+            "moduleName": "WomenHealth",
+            "genericSig": "<τ_0_0 where τ_0_0 : WomenHealth.WomenHealthModuleLocalizable>",
+            "sugared_genericSig": "<Self where Self : WomenHealth.WomenHealthModuleLocalizable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@WomenHealth@objc(pl)WomenHealthModuleLocalizable",
+        "mangledName": "$s11WomenHealth0aB17ModuleLocalizableP",
+        "moduleName": "WomenHealth",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WomenHealthModuleThemeColorKey",
+        "printedName": "WomenHealthModuleThemeColorKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "brand",
+            "printedName": "brand",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleThemeColorKey.Type) -> WomenHealth.WomenHealthModuleThemeColorKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleThemeColorKey",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeColorKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleThemeColorKey",
+                        "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey@WomenHealthModuleThemeColorKeyBrand",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO5brandyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "separator",
+            "printedName": "separator",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleThemeColorKey.Type) -> WomenHealth.WomenHealthModuleThemeColorKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleThemeColorKey",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeColorKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleThemeColorKey",
+                        "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey@WomenHealthModuleThemeColorKeySeparator",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO9separatoryA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "table_background",
+            "printedName": "table_background",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleThemeColorKey.Type) -> WomenHealth.WomenHealthModuleThemeColorKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleThemeColorKey",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeColorKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleThemeColorKey",
+                        "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey@WomenHealthModuleThemeColorKeyTable_background",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO16table_backgroundyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB19ModuleThemeColorKeyO11stringValueSSvp",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO11stringValueSSvp",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB19ModuleThemeColorKeyO11stringValueSSvg",
+                "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO11stringValueSSvg",
+                "moduleName": "WomenHealth",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "WomenHealth.WomenHealthModuleThemeColorKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleThemeColorKey",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11WomenHealth0aB19ModuleThemeColorKeyO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO8rawValueACSgSi_tcfc",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB19ModuleThemeColorKeyO8rawValueSivp",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO8rawValueSivp",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB19ModuleThemeColorKeyO8rawValueSivg",
+                "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO8rawValueSivg",
+                "moduleName": "WomenHealth",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[WomenHealth.WomenHealthModuleThemeColorKey]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleThemeColorKey",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB19ModuleThemeColorKeyO8allCasesSayACGvpZ",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO8allCasesSayACGvpZ",
+            "moduleName": "WomenHealth",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[WomenHealth.WomenHealthModuleThemeColorKey]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleThemeColorKey",
+                        "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB19ModuleThemeColorKeyO8allCasesSayACGvgZ",
+                "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO8allCasesSayACGvgZ",
+                "moduleName": "WomenHealth",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey",
+        "mangledName": "$s11WomenHealth0aB19ModuleThemeColorKeyO",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[WomenHealth.WomenHealthModuleThemeColorKey]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleThemeColorKey",
+                        "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WomenHealthModuleThemeImageKey",
+        "printedName": "WomenHealthModuleThemeImageKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "icon_tablecell_accessory_checkmark",
+            "printedName": "icon_tablecell_accessory_checkmark",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleThemeImageKey.Type) -> WomenHealth.WomenHealthModuleThemeImageKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleThemeImageKey",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeImageKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeImageKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleThemeImageKey",
+                        "printedName": "WomenHealth.WomenHealthModuleThemeImageKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey@WomenHealthModuleThemeImageKeyIcon_tablecell_accessory_checkmark",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeImageKeyO34icon_tablecell_accessory_checkmarkyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "icon_tablecell_accessory_chevron_right",
+            "printedName": "icon_tablecell_accessory_chevron_right",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthModuleThemeImageKey.Type) -> WomenHealth.WomenHealthModuleThemeImageKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleThemeImageKey",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeImageKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeImageKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleThemeImageKey",
+                        "printedName": "WomenHealth.WomenHealthModuleThemeImageKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey@WomenHealthModuleThemeImageKeyIcon_tablecell_accessory_chevron_right",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeImageKeyO38icon_tablecell_accessory_chevron_rightyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB19ModuleThemeImageKeyO11stringValueSSvp",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeImageKeyO11stringValueSSvp",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB19ModuleThemeImageKeyO11stringValueSSvg",
+                "mangledName": "$s11WomenHealth0aB19ModuleThemeImageKeyO11stringValueSSvg",
+                "moduleName": "WomenHealth",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "WomenHealth.WomenHealthModuleThemeImageKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleThemeImageKey",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeImageKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11WomenHealth0aB19ModuleThemeImageKeyO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeImageKeyO8rawValueACSgSi_tcfc",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB19ModuleThemeImageKeyO8rawValueSivp",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeImageKeyO8rawValueSivp",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB19ModuleThemeImageKeyO8rawValueSivg",
+                "mangledName": "$s11WomenHealth0aB19ModuleThemeImageKeyO8rawValueSivg",
+                "moduleName": "WomenHealth",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[WomenHealth.WomenHealthModuleThemeImageKey]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthModuleThemeImageKey",
+                    "printedName": "WomenHealth.WomenHealthModuleThemeImageKey",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB19ModuleThemeImageKeyO8allCasesSayACGvpZ",
+            "mangledName": "$s11WomenHealth0aB19ModuleThemeImageKeyO8allCasesSayACGvpZ",
+            "moduleName": "WomenHealth",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[WomenHealth.WomenHealthModuleThemeImageKey]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleThemeImageKey",
+                        "printedName": "WomenHealth.WomenHealthModuleThemeImageKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB19ModuleThemeImageKeyO8allCasesSayACGvgZ",
+                "mangledName": "$s11WomenHealth0aB19ModuleThemeImageKeyO8allCasesSayACGvgZ",
+                "moduleName": "WomenHealth",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey",
+        "mangledName": "$s11WomenHealth0aB19ModuleThemeImageKeyO",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[WomenHealth.WomenHealthModuleThemeImageKey]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthModuleThemeImageKey",
+                        "printedName": "WomenHealth.WomenHealthModuleThemeImageKey",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WomenHealthModuleThemable",
+        "printedName": "WomenHealthModuleThemable",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "colorWith",
+            "printedName": "colorWith(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WomenHealthModuleThemeColorKey",
+                "printedName": "WomenHealth.WomenHealthModuleThemeColorKey",
+                "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeColorKey"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UITraitCollection?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UITraitCollection",
+                    "printedName": "UIKit.UITraitCollection",
+                    "usr": "c:objc(cs)UITraitCollection"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@WomenHealth@objc(pl)WomenHealthModuleThemable(im)colorWith::",
+            "mangledName": "$s11WomenHealth0aB14ModuleThemableP9colorWithySo7UIColorCSgAA0abC13ThemeColorKeyO_So17UITraitCollectionCSgtF",
+            "moduleName": "WomenHealth",
+            "genericSig": "<τ_0_0 where τ_0_0 : WomenHealth.WomenHealthModuleThemable>",
+            "sugared_genericSig": "<Self where Self : WomenHealth.WomenHealthModuleThemable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "imageWith",
+            "printedName": "imageWith(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WomenHealthModuleThemeImageKey",
+                "printedName": "WomenHealth.WomenHealthModuleThemeImageKey",
+                "usr": "c:@M@WomenHealth@E@WomenHealthModuleThemeImageKey"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UITraitCollection?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UITraitCollection",
+                    "printedName": "UIKit.UITraitCollection",
+                    "usr": "c:objc(cs)UITraitCollection"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@WomenHealth@objc(pl)WomenHealthModuleThemable(im)imageWith::",
+            "mangledName": "$s11WomenHealth0aB14ModuleThemableP9imageWithySo7UIImageCSgAA0abC13ThemeImageKeyO_So17UITraitCollectionCSgtF",
+            "moduleName": "WomenHealth",
+            "genericSig": "<τ_0_0 where τ_0_0 : WomenHealth.WomenHealthModuleThemable>",
+            "sugared_genericSig": "<Self where Self : WomenHealth.WomenHealthModuleThemable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@WomenHealth@objc(pl)WomenHealthModuleThemable",
+        "mangledName": "$s11WomenHealth0aB14ModuleThemableP",
+        "moduleName": "WomenHealth",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WomenHealthPhase",
+        "printedName": "WomenHealthPhase",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthPhase.Type) -> WomenHealth.WomenHealthPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthPhase",
+                    "printedName": "WomenHealth.WomenHealthPhase",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthPhase"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthPhase",
+                        "printedName": "WomenHealth.WomenHealthPhase",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthPhase"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthPhase@WomenHealthPhaseUnknown",
+            "mangledName": "$s11WomenHealth0aB5PhaseO7unknownyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "menses",
+            "printedName": "menses",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthPhase.Type) -> WomenHealth.WomenHealthPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthPhase",
+                    "printedName": "WomenHealth.WomenHealthPhase",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthPhase"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthPhase",
+                        "printedName": "WomenHealth.WomenHealthPhase",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthPhase"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthPhase@WomenHealthPhaseMenses",
+            "mangledName": "$s11WomenHealth0aB5PhaseO6mensesyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "ovulation",
+            "printedName": "ovulation",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthPhase.Type) -> WomenHealth.WomenHealthPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthPhase",
+                    "printedName": "WomenHealth.WomenHealthPhase",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthPhase"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthPhase",
+                        "printedName": "WomenHealth.WomenHealthPhase",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthPhase"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthPhase@WomenHealthPhaseOvulation",
+            "mangledName": "$s11WomenHealth0aB5PhaseO9ovulationyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "safty",
+            "printedName": "safty",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WomenHealth.WomenHealthPhase.Type) -> WomenHealth.WomenHealthPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthPhase",
+                    "printedName": "WomenHealth.WomenHealthPhase",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthPhase"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "WomenHealth.WomenHealthPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WomenHealthPhase",
+                        "printedName": "WomenHealth.WomenHealthPhase",
+                        "usr": "c:@M@WomenHealth@E@WomenHealthPhase"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@WomenHealth@E@WomenHealthPhase@WomenHealthPhaseSafty",
+            "mangledName": "$s11WomenHealth0aB5PhaseO5saftyyA2CmF",
+            "moduleName": "WomenHealth",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "WomenHealth.WomenHealthPhase?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WomenHealthPhase",
+                    "printedName": "WomenHealth.WomenHealthPhase",
+                    "usr": "c:@M@WomenHealth@E@WomenHealthPhase"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11WomenHealth0aB5PhaseO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11WomenHealth0aB5PhaseO8rawValueACSgSi_tcfc",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11WomenHealth0aB5PhaseO8rawValueSivp",
+            "mangledName": "$s11WomenHealth0aB5PhaseO8rawValueSivp",
+            "moduleName": "WomenHealth",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11WomenHealth0aB5PhaseO8rawValueSivg",
+                "mangledName": "$s11WomenHealth0aB5PhaseO8rawValueSivg",
+                "moduleName": "WomenHealth",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@WomenHealth@E@WomenHealthPhase",
+        "mangledName": "$s11WomenHealth0aB5PhaseO",
+        "moduleName": "WomenHealth",
+        "intro_iOS": "11.0",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "Available",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FitCloudKit",
+        "printedName": "FitCloudKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftHEXColors",
+        "printedName": "SwiftHEXColors",
+        "declKind": "Import",
+        "moduleName": "WomenHealth"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCellItem.swift",
+      "kind": "StringLiteral",
+      "offset": 169,
+      "length": 14,
+      "value": "\"WomenHealth.SwitchCellItem\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1058,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1064,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1074,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1086,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1206,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 1355,
+      "length": 4,
+      "value": "12.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 1427,
+      "length": 4,
+      "value": "20.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 1526,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1633,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2150,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 2306,
+      "length": 5,
+      "value": "-12.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2420,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 2664,
+      "length": 4,
+      "value": "14.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3124,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3253,
+      "length": 4,
+      "value": "42.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3397,
+      "length": 5,
+      "value": "-20.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3527,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 4032,
+      "length": 4,
+      "value": "11.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4320,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4543,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 4672,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 4815,
+      "length": 5,
+      "value": "-20.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4936,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 5357,
+      "length": 4,
+      "value": "42.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 5364,
+      "length": 4,
+      "value": "12.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 5431,
+      "length": 4,
+      "value": "-8.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 5438,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 6207,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 6213,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 442,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 712,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 978,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1159,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1218,
+      "length": 13,
+      "value": "\"WomenHealth\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1287,
+      "length": 8,
+      "value": "\"bundle\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1376,
+      "length": 13,
+      "value": "\"WomenHealth\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 228,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 274,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 331,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 380,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 228,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 274,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 331,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 380,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/MensesOpAdvanceType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 252,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/MensesOpAdvanceType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 303,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/MensesOpAdvanceType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 252,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/MensesOpAdvanceType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 303,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/PregnancyRemindType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 254,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/PregnancyRemindType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 318,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/PregnancyRemindType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 254,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/PregnancyRemindType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 318,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/WomenHealthModule.swift",
+      "kind": "StringLiteral",
+      "offset": 329,
+      "length": 6,
+      "value": "\"1000\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/WomenHealthModule.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2118,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 287,
+      "length": 19,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 337,
+      "length": 10,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 442,
+      "length": 32,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 502,
+      "length": 25,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 555,
+      "length": 14,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "StringLiteral",
+      "offset": 711,
+      "length": 19,
+      "value": "\"WomenHealthLocKey\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "StringLiteral",
+      "offset": 794,
+      "length": 27,
+      "value": "\"WomenHealthSettingsLocKey\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "StringLiteral",
+      "offset": 880,
+      "length": 18,
+      "value": "\"MensesOnlyLocKey\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "StringLiteral",
+      "offset": 979,
+      "length": 40,
+      "value": "\"MenstrualCycleWithDurationFormatLocKey\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "StringLiteral",
+      "offset": 1093,
+      "length": 33,
+      "value": "\"PregnancyPreparationPhaseLocKey\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "StringLiteral",
+      "offset": 1189,
+      "length": 22,
+      "value": "\"PregnancyPhaseLocKey\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 287,
+      "length": 19,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 337,
+      "length": 10,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 442,
+      "length": 32,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 502,
+      "length": 25,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/WomenHealthModuleLocalizable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 555,
+      "length": 14,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "Array",
+      "offset": 267,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "Array",
+      "offset": 650,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 810,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 851,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 862,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "Array",
+      "offset": 961,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 1114,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 1262,
+      "length": 7,
+      "value": "\"%@,%@\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1278,
+      "length": 2,
+      "value": "28"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1290,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 1331,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1352,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 1598,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 1638,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 1649,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1653,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 1897,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 1937,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 1948,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1952,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2730,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2983,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3452,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3566,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "FloatLiteral",
+      "offset": 3691,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "FloatLiteral",
+      "offset": 3819,
+      "length": 5,
+      "value": "0.001"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 4008,
+      "length": 12,
+      "value": "\"HeaderView\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 4111,
+      "length": 12,
+      "value": "\"HeaderView\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 4338,
+      "length": 12,
+      "value": "\"FooterView\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 4441,
+      "length": 12,
+      "value": "\"FooterView\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "FloatLiteral",
+      "offset": 4606,
+      "length": 4,
+      "value": "54.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 4830,
+      "length": 12,
+      "value": "\"CommonCell\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 4956,
+      "length": 12,
+      "value": "\"CommonCell\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 5238,
+      "length": 11,
+      "value": "\"CheckCell\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 5361,
+      "length": 11,
+      "value": "\"CheckCell\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 5643,
+      "length": 12,
+      "value": "\"SwitchCell\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 5769,
+      "length": 12,
+      "value": "\"SwitchCell\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 6529,
+      "length": 13,
+      "value": "\"DefaultCell\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Main\/WomenHealthMainSettingsController.swift",
+      "kind": "StringLiteral",
+      "offset": 6638,
+      "length": 13,
+      "value": "\"DefaultCell\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/DefaultWomenHealthModuleLocalization.swift",
+      "kind": "StringLiteral",
+      "offset": 840,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 949,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 955,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 965,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 977,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1097,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 1246,
+      "length": 4,
+      "value": "12.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 1318,
+      "length": 4,
+      "value": "20.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 1417,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1524,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1886,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 2039,
+      "length": 5,
+      "value": "-12.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2150,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 2488,
+      "length": 4,
+      "value": "14.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2948,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3077,
+      "length": 4,
+      "value": "42.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3218,
+      "length": 5,
+      "value": "-20.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3441,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3737,
+      "length": 4,
+      "value": "42.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3743,
+      "length": 4,
+      "value": "12.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 4680,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/SwitchCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 4686,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 261,
+      "length": 9,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 306,
+      "length": 16,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "StringLiteral",
+      "offset": 463,
+      "length": 13,
+      "value": "\"color.brand\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "StringLiteral",
+      "offset": 530,
+      "length": 24,
+      "value": "\"color.common.separator\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "StringLiteral",
+      "offset": 619,
+      "length": 28,
+      "value": "\"color.tableview.background\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 261,
+      "length": 9,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 306,
+      "length": 16,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 887,
+      "length": 38,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "StringLiteral",
+      "offset": 1095,
+      "length": 36,
+      "value": "\"icon.tablecell.accessory.checkmark\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "StringLiteral",
+      "offset": 1214,
+      "length": 40,
+      "value": "\"icon.tablecell.accessory.chevron.right\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Theme\/WomenHealthModuleThemable.swift",
+      "kind": "IntegerLiteral",
+      "offset": 887,
+      "length": 38,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthPhase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 229,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthPhase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 272,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthPhase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 318,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthPhase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 360,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthPhase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 229,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthPhase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 272,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthPhase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 318,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Defines\/WomenHealthPhase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 360,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1105,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1111,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1121,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1133,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1253,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 1402,
+      "length": 4,
+      "value": "12.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 1474,
+      "length": 4,
+      "value": "20.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 1573,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1680,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2196,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 2351,
+      "length": 5,
+      "value": "-12.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2464,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 2715,
+      "length": 4,
+      "value": "11.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3061,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3293,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3439,
+      "length": 5,
+      "value": "-20.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3630,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3874,
+      "length": 4,
+      "value": "14.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4334,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 4463,
+      "length": 4,
+      "value": "42.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 4607,
+      "length": 5,
+      "value": "-20.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4737,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 5242,
+      "length": 4,
+      "value": "11.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5530,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5753,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 5882,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 6025,
+      "length": 5,
+      "value": "-20.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6146,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 6568,
+      "length": 4,
+      "value": "42.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 6575,
+      "length": 4,
+      "value": "12.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 6642,
+      "length": 4,
+      "value": "-8.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 6649,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 7467,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 7473,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCellItem.swift",
+      "kind": "StringLiteral",
+      "offset": 1155,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCellItem.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1195,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CommonCellItem.swift",
+      "kind": "StringLiteral",
+      "offset": 106,
+      "length": 14,
+      "value": "\"WomenHealth.CommonCellItem\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 652,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 679,
+      "length": 2,
+      "value": "28"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 998,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1085,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1527,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1530,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1533,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1622,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1775,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1810,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2665,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2668,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2671,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2760,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2913,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2948,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3519,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3546,
+      "length": 2,
+      "value": "28"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3652,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3779,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3838,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3866,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3922,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3950,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4050,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4728,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4903,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4906,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4909,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5068,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5121,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5499,
+      "length": 2,
+      "value": "28"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5542,
+      "length": 3,
+      "value": "252"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5548,
+      "length": 3,
+      "value": "280"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5629,
+      "length": 3,
+      "value": "280"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5716,
+      "length": 3,
+      "value": "252"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6052,
+      "length": 2,
+      "value": "28"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6095,
+      "length": 3,
+      "value": "252"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6101,
+      "length": 3,
+      "value": "280"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6165,
+      "length": 4,
+      "value": "-280"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Utils\/WomenHealthUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6236,
+      "length": 4,
+      "value": "-252"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 390,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 430,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 506,
+      "length": 32,
+      "value": "\"SyncWomenHealthConfigOperation\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 603,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 965,
+      "length": 12,
+      "value": "\"isFinished\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1008,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 1053,
+      "length": 12,
+      "value": "\"isFinished\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 1133,
+      "length": 13,
+      "value": "\"isExecuting\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1257,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 1298,
+      "length": 13,
+      "value": "\"isExecuting\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 1374,
+      "length": 50,
+      "value": "\"开始执行同步女性健康配置Operation...\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 1747,
+      "length": 35,
+      "value": "\"当前手表未连接或繁忙...\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 1879,
+      "length": 13,
+      "value": "\"isExecuting\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1920,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 1962,
+      "length": 13,
+      "value": "\"isExecuting\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 2023,
+      "length": 12,
+      "value": "\"isFinished\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2062,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 2103,
+      "length": 12,
+      "value": "\"isFinished\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 2140,
+      "length": 50,
+      "value": "\"同步女性健康配置Operation执行完毕！\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Operations\/SyncWomenHealthConfigOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 235,
+      "length": 30,
+      "value": "\"WomenHealth.SyncWomenHealthConfigOperation\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 426,
+      "length": 9,
+      "value": "\"#3D3D3D\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 444,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 549,
+      "length": 9,
+      "value": "\"#F5F5F5\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 567,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 724,
+      "length": 9,
+      "value": "\"#F5F5F5\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 742,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/Date+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 257,
+      "length": 5,
+      "value": "86400"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/CheckCellItem.swift",
+      "kind": "StringLiteral",
+      "offset": 105,
+      "length": 13,
+      "value": "\"WomenHealth.CheckCellItem\""
+    }
+  ]
+}

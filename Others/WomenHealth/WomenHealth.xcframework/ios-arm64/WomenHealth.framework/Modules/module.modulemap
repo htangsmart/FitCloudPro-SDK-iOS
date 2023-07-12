@@ -1,0 +1,11 @@
+framework module WomenHealth {
+  umbrella header "WomenHealth.h"
+
+  export *
+  module * { export * }
+}
+
+module WomenHealth.Swift {
+  header "WomenHealth-Swift.h"
+  requires objc
+}
