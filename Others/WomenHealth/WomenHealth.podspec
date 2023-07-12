@@ -19,9 +19,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.vendored_frameworks = 'WomenHealth.xcframework'
   s.resource = 'WomenHealth.bundle'
-  
   s.dependency 'FitCloudKit'
   s.dependency 'WCDB.swift'
-  s.dependency 'SwiftHEXColors'
 
 end

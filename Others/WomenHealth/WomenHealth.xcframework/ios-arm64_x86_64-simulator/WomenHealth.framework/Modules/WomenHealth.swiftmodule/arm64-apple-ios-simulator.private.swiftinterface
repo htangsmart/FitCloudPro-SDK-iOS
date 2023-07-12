@@ -4,7 +4,6 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 import Swift
-import SwiftHEXColors
 import UIKit
 @_exported import WomenHealth
 import _Concurrency

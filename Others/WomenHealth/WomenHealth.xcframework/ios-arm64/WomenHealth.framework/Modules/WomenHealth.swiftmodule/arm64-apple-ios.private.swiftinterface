@@ -5,7 +5,6 @@
 import FitCloudKit
 import Foundation
 import Swift
-import SwiftHEXColors
 import UIKit
 @_exported import WomenHealth
 import _Concurrency

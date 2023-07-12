@@ -2909,10 +2909,13 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftHEXColors",
-        "printedName": "SwiftHEXColors",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "WomenHealth"
+        "moduleName": "WomenHealth",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -4543,45 +4546,423 @@
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 256,
+      "length": 5,
+      "value": "0xF00"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 266,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 290,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 340,
+      "length": 5,
+      "value": "0x0F0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 350,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 374,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 424,
+      "length": 5,
+      "value": "0x00F"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 434,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 458,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 616,
+      "length": 6,
+      "value": "0xF000"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 627,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 652,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 702,
+      "length": 6,
+      "value": "0x0F00"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 713,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 737,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 787,
+      "length": 6,
+      "value": "0x00F0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 798,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 822,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 903,
+      "length": 6,
+      "value": "0x000F"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 914,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 938,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1053,
+      "length": 8,
+      "value": "0xFF0000"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1066,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 1073,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1122,
+      "length": 8,
+      "value": "0x00FF00"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1135,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 1141,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1190,
+      "length": 8,
+      "value": "0x0000FF"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1203,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 1209,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1348,
+      "length": 10,
+      "value": "0xFF000000"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1363,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 1370,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1419,
+      "length": 10,
+      "value": "0x00FF0000"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1434,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 1441,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1490,
+      "length": 10,
+      "value": "0x0000FF00"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1505,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 1511,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1591,
+      "length": 10,
+      "value": "0x000000FF"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1606,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 1612,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
       "kind": "StringLiteral",
-      "offset": 426,
+      "offset": 2098,
+      "length": 3,
+      "value": "\"#\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2228,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2337,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 2392,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2410,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2476,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 2531,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2549,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 3342,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3361,
+      "length": 8,
+      "value": "0x000000"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3374,
+      "length": 8,
+      "value": "0xFFFFFF"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 3792,
       "length": 9,
       "value": "\"#3D3D3D\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
       "kind": "FloatLiteral",
-      "offset": 444,
+      "offset": 3810,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
       "kind": "StringLiteral",
-      "offset": 549,
+      "offset": 3915,
       "length": 9,
       "value": "\"#F5F5F5\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
       "kind": "FloatLiteral",
-      "offset": 567,
+      "offset": 3933,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
       "kind": "StringLiteral",
-      "offset": 724,
+      "offset": 4090,
       "length": 9,
       "value": "\"#F5F5F5\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/UIColor+Ext.swift",
       "kind": "FloatLiteral",
-      "offset": 742,
+      "offset": 4108,
       "length": 3,
       "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/Int64+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 191,
+      "length": 1,
+      "value": "4"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Extensions\/Date+Ext.swift",
