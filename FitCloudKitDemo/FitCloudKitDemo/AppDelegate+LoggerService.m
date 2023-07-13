@@ -7,7 +7,17 @@
 //
 
 #import "AppDelegate+LoggerService.h"
+#if __has_include(<QuickTraceiOSLogger/QuickTraceiOSLogger.h>)
+#import <QuickTraceiOSLogger/QuickTraceiOSLogger.h>
+#else
+#import "QuickTraceiOSLogger.h"
+#endif
+
+#if __has_include(<XLFacility/XLStandardLogger.h>)
 #import <XLFacility/XLStandardLogger.h>
+#else
+#import "XLStandardLogger.h"
+#endif
 
 @implementation AppDelegate (LoggerService)
 
