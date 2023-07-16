@@ -2,12 +2,35 @@
 // swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WomenHealth
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import EventKit
 import Foundation
 import Swift
 import UIKit
+import WCDBSwift
 @_exported import WomenHealth
 import _Concurrency
 import _StringProcessing
+@available(iOS 11.0, *)
+@objc public enum LogLevel : Swift.Int {
+  case verbose = 0
+  case debug = 1
+  case info = 2
+  case warning = 3
+  case error = 4
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension WomenHealth.LogLevel : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@objc public protocol Loggable : ObjectiveC.NSObjectProtocol {
+  @objc func log(_ logLevel: WomenHealth.LogLevel, _ message: Swift.String)
+}
 @available(iOS 11.0, *)
 @objc public enum WomenHealthMode : Swift.Int {
   case none = 0
@@ -40,75 +63,150 @@ import _StringProcessing
     get
   }
 }
+extension WomenHealth.PregnancyRemindType : WCDBSwift.ColumnCodable {
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 11.0, *)
 @objc public class WomenHealthModule : ObjectiveC.NSObject {
   @objc public var userId: Swift.String {
     @objc get
   }
-  @objc public class func start(with userId: Swift.String, _ localizationProvider: (any WomenHealth.WomenHealthModuleLocalizable)? = nil, _ themeProvider: (any WomenHealth.WomenHealthModuleThemable)? = nil)
+  @objc public class func start(with userId: Swift.String, _ localizationProvider: (any WomenHealth.Localizable)? = nil, _ themeProvider: (any WomenHealth.Themable)? = nil, _ logProvider: (any WomenHealth.Loggable)? = nil)
   @objc public class func enterMainSettings(from fromVC: UIKit.UIViewController)
   @objc public class func enterCurrentModeHome(from vc: UIKit.UIViewController)
+  @objc public class func localizableStrings() -> [Swift.String]
   @objc deinit
 }
-@objc public enum WomenHealthModuleLocalizationKey : Swift.Int, Swift.CaseIterable {
+@objc public enum LocalizationKey : Swift.Int, Swift.CaseIterable {
   case WomenHealth
   case WomenHealthSettings
   case MensesOnly
   case MenstrualCycleWithDurationFormat
   case PregnancyPreparationPhase
   case PregnancyPhase
+  case MensesEventRemindTitleFormat
+  case EDCEventRemindTitle
+  case MensesModeSettingsTitle
+  case PregnancyPrepareModeSettingsTitle
+  case PregnancyModeSettingsTitle
+  case MenstrualDurationQuestion
+  case MenstrualDuration
+  case MenstrualDurationPickerTitle
+  case MenstrualCycleQuestion
+  case MenstrualCycle
+  case MenstrualCyclePickerTitle
+  case EDCQuestion
+  case SetEDC
+  case DaysFormat
+  case RecentMenstrualBegin
+  case DateFormat
+  case MenstrualBeginRemind
+  case AdvanceDaysToRemindFormat
+  case RemindTime
+  case RemindTimeFormat
+  case RemindAtWatch
+  case StartMensesMode
+  case StartPregnancyPrepareMode
+  case StartPregnancyMode
+  case CalcEDC
+  case PregnancyPhaseRemind
+  case DaysToEDC
+  case DaysToEDCFormat
+  case PregnancyDays
+  case PregnancyDaysFormat
+  case TodayIsEDC
   public var stringValue: Swift.String {
     get
   }
+  public var comment: Swift.String {
+    get
+  }
+  public static var sampleLocalizedStrings: [Swift.String] {
+    get
+  }
   public init?(rawValue: Swift.Int)
-  public typealias AllCases = [WomenHealth.WomenHealthModuleLocalizationKey]
+  public typealias AllCases = [WomenHealth.LocalizationKey]
   public typealias RawValue = Swift.Int
-  public static var allCases: [WomenHealth.WomenHealthModuleLocalizationKey] {
+  public static var allCases: [WomenHealth.LocalizationKey] {
     get
   }
   public var rawValue: Swift.Int {
     get
   }
 }
-@objc public protocol WomenHealthModuleLocalizable : ObjectiveC.NSObjectProtocol {
-  @objc func localizationString(_ localizationKey: WomenHealth.WomenHealthModuleLocalizationKey) -> Swift.String?
+extension WomenHealth.LocalizationKey : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
 }
-@objc public enum WomenHealthModuleThemeColorKey : Swift.Int, Swift.CaseIterable {
+@objc public protocol Localizable : ObjectiveC.NSObjectProtocol {
+  @objc func localizationString(_ localizationKey: WomenHealth.LocalizationKey) -> Swift.String?
+}
+extension WomenHealth.WomenHealthMode : WCDBSwift.ColumnCodable {
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+}
+@objc public enum ThemeColorKey : Swift.Int, Swift.CaseIterable {
   case brand
   case separator
   case table_background
+  case button_title_destructive
   public var stringValue: Swift.String {
     get
   }
+  public var comment: Swift.String {
+    get
+  }
   public init?(rawValue: Swift.Int)
-  public typealias AllCases = [WomenHealth.WomenHealthModuleThemeColorKey]
+  public typealias AllCases = [WomenHealth.ThemeColorKey]
   public typealias RawValue = Swift.Int
-  public static var allCases: [WomenHealth.WomenHealthModuleThemeColorKey] {
+  public static var allCases: [WomenHealth.ThemeColorKey] {
     get
   }
   public var rawValue: Swift.Int {
     get
   }
 }
-@objc public enum WomenHealthModuleThemeImageKey : Swift.Int, Swift.CaseIterable {
+extension WomenHealth.ThemeColorKey : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@objc public enum ThemeImageKey : Swift.Int, Swift.CaseIterable {
   case icon_tablecell_accessory_checkmark
   case icon_tablecell_accessory_chevron_right
+  case icon_chevron_down
   public var stringValue: Swift.String {
     get
   }
+  public var comment: Swift.String {
+    get
+  }
   public init?(rawValue: Swift.Int)
-  public typealias AllCases = [WomenHealth.WomenHealthModuleThemeImageKey]
+  public typealias AllCases = [WomenHealth.ThemeImageKey]
   public typealias RawValue = Swift.Int
-  public static var allCases: [WomenHealth.WomenHealthModuleThemeImageKey] {
+  public static var allCases: [WomenHealth.ThemeImageKey] {
     get
   }
   public var rawValue: Swift.Int {
     get
   }
 }
-@objc public protocol WomenHealthModuleThemable : ObjectiveC.NSObjectProtocol {
-  @objc func colorWith(_ colorKey: WomenHealth.WomenHealthModuleThemeColorKey, _ traits: UIKit.UITraitCollection?) -> UIKit.UIColor?
-  @objc func imageWith(_ imageKey: WomenHealth.WomenHealthModuleThemeImageKey, _ traits: UIKit.UITraitCollection?) -> UIKit.UIImage?
+extension WomenHealth.ThemeImageKey : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@objc public protocol Themable : ObjectiveC.NSObjectProtocol {
+  @objc func colorWith(_ colorKey: WomenHealth.ThemeColorKey, _ traits: UIKit.UITraitCollection?) -> UIKit.UIColor?
+  @objc func imageWith(_ imageKey: WomenHealth.ThemeImageKey, _ traits: UIKit.UITraitCollection?) -> UIKit.UIImage?
 }
 @available(iOS 11.0, *)
 @objc public enum WomenHealthPhase : Swift.Int {
@@ -122,6 +220,12 @@ import _StringProcessing
     get
   }
 }
+@available(iOS 11.0, *)
+extension WomenHealth.LogLevel : Swift.Equatable {}
+@available(iOS 11.0, *)
+extension WomenHealth.LogLevel : Swift.Hashable {}
+@available(iOS 11.0, *)
+extension WomenHealth.LogLevel : Swift.RawRepresentable {}
 @available(iOS 11.0, *)
 extension WomenHealth.WomenHealthMode : Swift.Equatable {}
 @available(iOS 11.0, *)
@@ -140,15 +244,15 @@ extension WomenHealth.PregnancyRemindType : Swift.Equatable {}
 extension WomenHealth.PregnancyRemindType : Swift.Hashable {}
 @available(iOS 11.0, *)
 extension WomenHealth.PregnancyRemindType : Swift.RawRepresentable {}
-extension WomenHealth.WomenHealthModuleLocalizationKey : Swift.Equatable {}
-extension WomenHealth.WomenHealthModuleLocalizationKey : Swift.Hashable {}
-extension WomenHealth.WomenHealthModuleLocalizationKey : Swift.RawRepresentable {}
-extension WomenHealth.WomenHealthModuleThemeColorKey : Swift.Equatable {}
-extension WomenHealth.WomenHealthModuleThemeColorKey : Swift.Hashable {}
-extension WomenHealth.WomenHealthModuleThemeColorKey : Swift.RawRepresentable {}
-extension WomenHealth.WomenHealthModuleThemeImageKey : Swift.Equatable {}
-extension WomenHealth.WomenHealthModuleThemeImageKey : Swift.Hashable {}
-extension WomenHealth.WomenHealthModuleThemeImageKey : Swift.RawRepresentable {}
+extension WomenHealth.LocalizationKey : Swift.Equatable {}
+extension WomenHealth.LocalizationKey : Swift.Hashable {}
+extension WomenHealth.LocalizationKey : Swift.RawRepresentable {}
+extension WomenHealth.ThemeColorKey : Swift.Equatable {}
+extension WomenHealth.ThemeColorKey : Swift.Hashable {}
+extension WomenHealth.ThemeColorKey : Swift.RawRepresentable {}
+extension WomenHealth.ThemeImageKey : Swift.Equatable {}
+extension WomenHealth.ThemeImageKey : Swift.Hashable {}
+extension WomenHealth.ThemeImageKey : Swift.RawRepresentable {}
 @available(iOS 11.0, *)
 extension WomenHealth.WomenHealthPhase : Swift.Equatable {}
 @available(iOS 11.0, *)

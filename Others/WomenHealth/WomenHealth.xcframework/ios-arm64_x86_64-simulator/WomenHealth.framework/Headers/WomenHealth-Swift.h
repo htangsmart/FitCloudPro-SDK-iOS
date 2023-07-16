@@ -260,6 +260,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
 @import ObjectiveC;
 #endif
 
@@ -281,6 +282,120 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+enum LocalizationKey : NSInteger;
+@class NSString;
+
+/// 国际化协议
+SWIFT_PROTOCOL("_TtP11WomenHealth11Localizable_")
+@protocol Localizable <NSObject>
+/// 根据 localizationKey 返回国际化字符串
+- (NSString * _Nullable)localizationString:(enum LocalizationKey)localizationKey SWIFT_WARN_UNUSED_RESULT;
+@end
+
+/// 国际化Key定义
+typedef SWIFT_ENUM(NSInteger, LocalizationKey, open) {
+/// 女性健康
+  LocalizationKeyWomenHealth = 0,
+/// 女性健康设置
+  LocalizationKeyWomenHealthSettings = 1,
+/// 只记经期
+  LocalizationKeyMensesOnly = 2,
+/// 月经周期长度和经期长度格式，例如：周期%@天，经期%@天
+  LocalizationKeyMenstrualCycleWithDurationFormat = 3,
+/// 备孕期
+  LocalizationKeyPregnancyPreparationPhase = 4,
+/// 怀孕期
+  LocalizationKeyPregnancyPhase = 5,
+/// 月经期提醒事件标题格式，例如：距离月经期还有%@天
+  LocalizationKeyMensesEventRemindTitleFormat = 6,
+/// 预产期提醒事件标题
+  LocalizationKeyEDCEventRemindTitle = 7,
+/// 经期设置
+  LocalizationKeyMensesModeSettingsTitle = 8,
+/// 备孕设置
+  LocalizationKeyPregnancyPrepareModeSettingsTitle = 9,
+/// 孕期设置
+  LocalizationKeyPregnancyModeSettingsTitle = 10,
+/// 您的月经大概持续几天？
+  LocalizationKeyMenstrualDurationQuestion = 11,
+/// 经期长度
+  LocalizationKeyMenstrualDuration = 12,
+/// 选择经期长度（单位：天）
+  LocalizationKeyMenstrualDurationPickerTitle = 13,
+/// 两次月经开始日大概间隔多久？
+  LocalizationKeyMenstrualCycleQuestion = 14,
+/// 周期长度
+  LocalizationKeyMenstrualCycle = 15,
+/// 选择周期长度（单位：天）
+  LocalizationKeyMenstrualCyclePickerTitle = 16,
+/// 您的预产期大概是什么时候？
+  LocalizationKeyEDCQuestion = 17,
+/// 设置预产期
+  LocalizationKeySetEDC = 18,
+/// 天数格式，例如 %@天
+  LocalizationKeyDaysFormat = 19,
+/// 最近一次月经
+  LocalizationKeyRecentMenstrualBegin = 20,
+/// 日期格式，例如yyyy-MM-dd
+  LocalizationKeyDateFormat = 21,
+/// 经期开始提醒
+  LocalizationKeyMenstrualBeginRemind = 22,
+/// 提前几天提醒格式，例如：提前%@天
+  LocalizationKeyAdvanceDaysToRemindFormat = 23,
+/// 提醒时间
+  LocalizationKeyRemindTime = 24,
+/// 提醒时间格式，例如： %02ld:%02ld
+  LocalizationKeyRemindTimeFormat = 25,
+/// 手表提醒
+  LocalizationKeyRemindAtWatch = 26,
+/// 开始经期模式
+  LocalizationKeyStartMensesMode = 27,
+/// 开始备孕模式
+  LocalizationKeyStartPregnancyPrepareMode = 28,
+/// 开始怀孕模式
+  LocalizationKeyStartPregnancyMode = 29,
+/// 计算预产期
+  LocalizationKeyCalcEDC = 30,
+/// 怀孕期提醒
+  LocalizationKeyPregnancyPhaseRemind = 31,
+/// 距离预产期天数
+  LocalizationKeyDaysToEDC = 32,
+/// 距离预产期还有多少天格式，例如：距离预产期还有%@天
+  LocalizationKeyDaysToEDCFormat = 33,
+/// 已怀孕天数
+  LocalizationKeyPregnancyDays = 34,
+/// 已怀孕天数格式，例如：已怀孕%@周%@天
+  LocalizationKeyPregnancyDaysFormat = 35,
+/// 今日为预产期当日
+  LocalizationKeyTodayIsEDC = 36,
+};
+
+/// The log level
+typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
+/// verbose
+  LogLevelVerbose = 0,
+/// debug
+  LogLevelDebug = 1,
+/// info
+  LogLevelInfo = 2,
+/// warning
+  LogLevelWarning = 3,
+/// error
+  LogLevelError = 4,
+};
+
+
+/// 日志协议
+SWIFT_PROTOCOL("_TtP11WomenHealth8Loggable_")
+@protocol Loggable <NSObject>
+/// 打印日志
+/// \param logLevel 日志等级
+///
+/// \param message 日志信息
+///
+- (void)log:(enum LogLevel)logLevel :(NSString * _Nonnull)message;
+@end
+
 /// 经期操作提前类型
 typedef SWIFT_ENUM(NSInteger, MensesOpAdvanceType, open) {
 /// 提前结束经期
@@ -297,6 +412,43 @@ typedef SWIFT_ENUM(NSInteger, PregnancyRemindType, open) {
   PregnancyRemindTypeDays_before_edc = 1,
 };
 
+enum ThemeColorKey : NSInteger;
+@class UITraitCollection;
+@class UIColor;
+enum ThemeImageKey : NSInteger;
+@class UIImage;
+
+/// 皮肤协议
+SWIFT_PROTOCOL("_TtP11WomenHealth8Themable_")
+@protocol Themable <NSObject>
+/// 根据 colorKey，traits返回皮肤颜色
+- (UIColor * _Nullable)colorWith:(enum ThemeColorKey)colorKey :(UITraitCollection * _Nullable)traits SWIFT_WARN_UNUSED_RESULT;
+/// 根据 imageKey，traits返回皮肤图片
+- (UIImage * _Nullable)imageWith:(enum ThemeImageKey)imageKey :(UITraitCollection * _Nullable)traits SWIFT_WARN_UNUSED_RESULT;
+@end
+
+/// 颜色Key定义
+typedef SWIFT_ENUM(NSInteger, ThemeColorKey, open) {
+/// 品牌色
+  ThemeColorKeyBrand = 0,
+/// 分割线
+  ThemeColorKeySeparator = 1,
+/// UITable背景色
+  ThemeColorKeyTable_background = 2,
+/// 警示(重要/凸显)按钮标题颜色
+  ThemeColorKeyButton_title_destructive = 3,
+};
+
+/// 图片Key定义
+typedef SWIFT_ENUM(NSInteger, ThemeImageKey, open) {
+/// Table Cell checkmark 图标
+  ThemeImageKeyIcon_tablecell_accessory_checkmark = 0,
+/// Table Cell chevron.right 图标
+  ThemeImageKeyIcon_tablecell_accessory_chevron_right = 1,
+/// chevron.down 图标
+  ThemeImageKeyIcon_chevron_down = 2,
+};
+
 
 /// 女性健康模式
 typedef SWIFT_ENUM(NSInteger, WomenHealthMode, open) {
@@ -310,9 +462,6 @@ typedef SWIFT_ENUM(NSInteger, WomenHealthMode, open) {
   WomenHealthModePregnancy = 3,
 };
 
-@class NSString;
-@protocol WomenHealthModuleLocalizable;
-@protocol WomenHealthModuleThemable;
 @class UIViewController;
 
 /// 女性健康模块
@@ -330,7 +479,9 @@ SWIFT_CLASS("_TtC11WomenHealth17WomenHealthModule") SWIFT_AVAILABILITY(ios,intro
 ///
 /// \param themeProvider 皮肤提供者
 ///
-+ (void)startWith:(NSString * _Nonnull)userId :(id <WomenHealthModuleLocalizable> _Nullable)localizationProvider :(id <WomenHealthModuleThemable> _Nullable)themeProvider;
+/// \param logProvider 日志服务提供者
+///
++ (void)startWith:(NSString * _Nonnull)userId :(id <Localizable> _Nullable)localizationProvider :(id <Themable> _Nullable)themeProvider :(id <Loggable> _Nullable)logProvider;
 /// 进入主设置界面
 /// \param fromVC 起始视图控制器
 ///
@@ -339,60 +490,12 @@ SWIFT_CLASS("_TtC11WomenHealth17WomenHealthModule") SWIFT_AVAILABILITY(ios,intro
 /// \param fromVC 起始视图控制器
 ///
 + (void)enterCurrentModeHomeFrom:(UIViewController * _Nonnull)vc;
+/// 可本地化的字符串数组
+///
+/// returns:
+/// 本地化的字符串数组
++ (NSArray<NSString *> * _Nonnull)localizableStrings SWIFT_WARN_UNUSED_RESULT;
 @end
-
-enum WomenHealthModuleLocalizationKey : NSInteger;
-
-SWIFT_PROTOCOL("_TtP11WomenHealth28WomenHealthModuleLocalizable_")
-@protocol WomenHealthModuleLocalizable <NSObject>
-- (NSString * _Nullable)localizationString:(enum WomenHealthModuleLocalizationKey)localizationKey SWIFT_WARN_UNUSED_RESULT;
-@end
-
-/// 国际化Key定义
-typedef SWIFT_ENUM(NSInteger, WomenHealthModuleLocalizationKey, open) {
-/// 女性健康
-  WomenHealthModuleLocalizationKeyWomenHealth = 0,
-/// 女性健康设置
-  WomenHealthModuleLocalizationKeyWomenHealthSettings = 1,
-/// 只记经期
-  WomenHealthModuleLocalizationKeyMensesOnly = 2,
-/// 月经周期长度和经期长度格式，例如：周期%@天，经期%@天
-  WomenHealthModuleLocalizationKeyMenstrualCycleWithDurationFormat = 3,
-/// 备孕期
-  WomenHealthModuleLocalizationKeyPregnancyPreparationPhase = 4,
-/// 怀孕期
-  WomenHealthModuleLocalizationKeyPregnancyPhase = 5,
-};
-
-enum WomenHealthModuleThemeColorKey : NSInteger;
-@class UITraitCollection;
-@class UIColor;
-enum WomenHealthModuleThemeImageKey : NSInteger;
-@class UIImage;
-
-SWIFT_PROTOCOL("_TtP11WomenHealth25WomenHealthModuleThemable_")
-@protocol WomenHealthModuleThemable <NSObject>
-- (UIColor * _Nullable)colorWith:(enum WomenHealthModuleThemeColorKey)colorKey :(UITraitCollection * _Nullable)traits SWIFT_WARN_UNUSED_RESULT;
-- (UIImage * _Nullable)imageWith:(enum WomenHealthModuleThemeImageKey)imageKey :(UITraitCollection * _Nullable)traits SWIFT_WARN_UNUSED_RESULT;
-@end
-
-/// 颜色Key定义
-typedef SWIFT_ENUM(NSInteger, WomenHealthModuleThemeColorKey, open) {
-/// 品牌色
-  WomenHealthModuleThemeColorKeyBrand = 0,
-/// 分割线
-  WomenHealthModuleThemeColorKeySeparator = 1,
-/// UITable背景色
-  WomenHealthModuleThemeColorKeyTable_background = 2,
-};
-
-/// 图片Key定义
-typedef SWIFT_ENUM(NSInteger, WomenHealthModuleThemeImageKey, open) {
-/// Table Cell checked图标
-  WomenHealthModuleThemeImageKeyIcon_tablecell_accessory_checkmark = 0,
-/// Table Cell 更多向右箭头图标
-  WomenHealthModuleThemeImageKeyIcon_tablecell_accessory_chevron_right = 1,
-};
 
 /// 女性健康阶段
 typedef SWIFT_ENUM(NSInteger, WomenHealthPhase, open) {
@@ -676,6 +779,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
 @import ObjectiveC;
 #endif
 
@@ -697,6 +801,120 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+enum LocalizationKey : NSInteger;
+@class NSString;
+
+/// 国际化协议
+SWIFT_PROTOCOL("_TtP11WomenHealth11Localizable_")
+@protocol Localizable <NSObject>
+/// 根据 localizationKey 返回国际化字符串
+- (NSString * _Nullable)localizationString:(enum LocalizationKey)localizationKey SWIFT_WARN_UNUSED_RESULT;
+@end
+
+/// 国际化Key定义
+typedef SWIFT_ENUM(NSInteger, LocalizationKey, open) {
+/// 女性健康
+  LocalizationKeyWomenHealth = 0,
+/// 女性健康设置
+  LocalizationKeyWomenHealthSettings = 1,
+/// 只记经期
+  LocalizationKeyMensesOnly = 2,
+/// 月经周期长度和经期长度格式，例如：周期%@天，经期%@天
+  LocalizationKeyMenstrualCycleWithDurationFormat = 3,
+/// 备孕期
+  LocalizationKeyPregnancyPreparationPhase = 4,
+/// 怀孕期
+  LocalizationKeyPregnancyPhase = 5,
+/// 月经期提醒事件标题格式，例如：距离月经期还有%@天
+  LocalizationKeyMensesEventRemindTitleFormat = 6,
+/// 预产期提醒事件标题
+  LocalizationKeyEDCEventRemindTitle = 7,
+/// 经期设置
+  LocalizationKeyMensesModeSettingsTitle = 8,
+/// 备孕设置
+  LocalizationKeyPregnancyPrepareModeSettingsTitle = 9,
+/// 孕期设置
+  LocalizationKeyPregnancyModeSettingsTitle = 10,
+/// 您的月经大概持续几天？
+  LocalizationKeyMenstrualDurationQuestion = 11,
+/// 经期长度
+  LocalizationKeyMenstrualDuration = 12,
+/// 选择经期长度（单位：天）
+  LocalizationKeyMenstrualDurationPickerTitle = 13,
+/// 两次月经开始日大概间隔多久？
+  LocalizationKeyMenstrualCycleQuestion = 14,
+/// 周期长度
+  LocalizationKeyMenstrualCycle = 15,
+/// 选择周期长度（单位：天）
+  LocalizationKeyMenstrualCyclePickerTitle = 16,
+/// 您的预产期大概是什么时候？
+  LocalizationKeyEDCQuestion = 17,
+/// 设置预产期
+  LocalizationKeySetEDC = 18,
+/// 天数格式，例如 %@天
+  LocalizationKeyDaysFormat = 19,
+/// 最近一次月经
+  LocalizationKeyRecentMenstrualBegin = 20,
+/// 日期格式，例如yyyy-MM-dd
+  LocalizationKeyDateFormat = 21,
+/// 经期开始提醒
+  LocalizationKeyMenstrualBeginRemind = 22,
+/// 提前几天提醒格式，例如：提前%@天
+  LocalizationKeyAdvanceDaysToRemindFormat = 23,
+/// 提醒时间
+  LocalizationKeyRemindTime = 24,
+/// 提醒时间格式，例如： %02ld:%02ld
+  LocalizationKeyRemindTimeFormat = 25,
+/// 手表提醒
+  LocalizationKeyRemindAtWatch = 26,
+/// 开始经期模式
+  LocalizationKeyStartMensesMode = 27,
+/// 开始备孕模式
+  LocalizationKeyStartPregnancyPrepareMode = 28,
+/// 开始怀孕模式
+  LocalizationKeyStartPregnancyMode = 29,
+/// 计算预产期
+  LocalizationKeyCalcEDC = 30,
+/// 怀孕期提醒
+  LocalizationKeyPregnancyPhaseRemind = 31,
+/// 距离预产期天数
+  LocalizationKeyDaysToEDC = 32,
+/// 距离预产期还有多少天格式，例如：距离预产期还有%@天
+  LocalizationKeyDaysToEDCFormat = 33,
+/// 已怀孕天数
+  LocalizationKeyPregnancyDays = 34,
+/// 已怀孕天数格式，例如：已怀孕%@周%@天
+  LocalizationKeyPregnancyDaysFormat = 35,
+/// 今日为预产期当日
+  LocalizationKeyTodayIsEDC = 36,
+};
+
+/// The log level
+typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
+/// verbose
+  LogLevelVerbose = 0,
+/// debug
+  LogLevelDebug = 1,
+/// info
+  LogLevelInfo = 2,
+/// warning
+  LogLevelWarning = 3,
+/// error
+  LogLevelError = 4,
+};
+
+
+/// 日志协议
+SWIFT_PROTOCOL("_TtP11WomenHealth8Loggable_")
+@protocol Loggable <NSObject>
+/// 打印日志
+/// \param logLevel 日志等级
+///
+/// \param message 日志信息
+///
+- (void)log:(enum LogLevel)logLevel :(NSString * _Nonnull)message;
+@end
+
 /// 经期操作提前类型
 typedef SWIFT_ENUM(NSInteger, MensesOpAdvanceType, open) {
 /// 提前结束经期
@@ -713,6 +931,43 @@ typedef SWIFT_ENUM(NSInteger, PregnancyRemindType, open) {
   PregnancyRemindTypeDays_before_edc = 1,
 };
 
+enum ThemeColorKey : NSInteger;
+@class UITraitCollection;
+@class UIColor;
+enum ThemeImageKey : NSInteger;
+@class UIImage;
+
+/// 皮肤协议
+SWIFT_PROTOCOL("_TtP11WomenHealth8Themable_")
+@protocol Themable <NSObject>
+/// 根据 colorKey，traits返回皮肤颜色
+- (UIColor * _Nullable)colorWith:(enum ThemeColorKey)colorKey :(UITraitCollection * _Nullable)traits SWIFT_WARN_UNUSED_RESULT;
+/// 根据 imageKey，traits返回皮肤图片
+- (UIImage * _Nullable)imageWith:(enum ThemeImageKey)imageKey :(UITraitCollection * _Nullable)traits SWIFT_WARN_UNUSED_RESULT;
+@end
+
+/// 颜色Key定义
+typedef SWIFT_ENUM(NSInteger, ThemeColorKey, open) {
+/// 品牌色
+  ThemeColorKeyBrand = 0,
+/// 分割线
+  ThemeColorKeySeparator = 1,
+/// UITable背景色
+  ThemeColorKeyTable_background = 2,
+/// 警示(重要/凸显)按钮标题颜色
+  ThemeColorKeyButton_title_destructive = 3,
+};
+
+/// 图片Key定义
+typedef SWIFT_ENUM(NSInteger, ThemeImageKey, open) {
+/// Table Cell checkmark 图标
+  ThemeImageKeyIcon_tablecell_accessory_checkmark = 0,
+/// Table Cell chevron.right 图标
+  ThemeImageKeyIcon_tablecell_accessory_chevron_right = 1,
+/// chevron.down 图标
+  ThemeImageKeyIcon_chevron_down = 2,
+};
+
 
 /// 女性健康模式
 typedef SWIFT_ENUM(NSInteger, WomenHealthMode, open) {
@@ -726,9 +981,6 @@ typedef SWIFT_ENUM(NSInteger, WomenHealthMode, open) {
   WomenHealthModePregnancy = 3,
 };
 
-@class NSString;
-@protocol WomenHealthModuleLocalizable;
-@protocol WomenHealthModuleThemable;
 @class UIViewController;
 
 /// 女性健康模块
@@ -746,7 +998,9 @@ SWIFT_CLASS("_TtC11WomenHealth17WomenHealthModule") SWIFT_AVAILABILITY(ios,intro
 ///
 /// \param themeProvider 皮肤提供者
 ///
-+ (void)startWith:(NSString * _Nonnull)userId :(id <WomenHealthModuleLocalizable> _Nullable)localizationProvider :(id <WomenHealthModuleThemable> _Nullable)themeProvider;
+/// \param logProvider 日志服务提供者
+///
++ (void)startWith:(NSString * _Nonnull)userId :(id <Localizable> _Nullable)localizationProvider :(id <Themable> _Nullable)themeProvider :(id <Loggable> _Nullable)logProvider;
 /// 进入主设置界面
 /// \param fromVC 起始视图控制器
 ///
@@ -755,60 +1009,12 @@ SWIFT_CLASS("_TtC11WomenHealth17WomenHealthModule") SWIFT_AVAILABILITY(ios,intro
 /// \param fromVC 起始视图控制器
 ///
 + (void)enterCurrentModeHomeFrom:(UIViewController * _Nonnull)vc;
+/// 可本地化的字符串数组
+///
+/// returns:
+/// 本地化的字符串数组
++ (NSArray<NSString *> * _Nonnull)localizableStrings SWIFT_WARN_UNUSED_RESULT;
 @end
-
-enum WomenHealthModuleLocalizationKey : NSInteger;
-
-SWIFT_PROTOCOL("_TtP11WomenHealth28WomenHealthModuleLocalizable_")
-@protocol WomenHealthModuleLocalizable <NSObject>
-- (NSString * _Nullable)localizationString:(enum WomenHealthModuleLocalizationKey)localizationKey SWIFT_WARN_UNUSED_RESULT;
-@end
-
-/// 国际化Key定义
-typedef SWIFT_ENUM(NSInteger, WomenHealthModuleLocalizationKey, open) {
-/// 女性健康
-  WomenHealthModuleLocalizationKeyWomenHealth = 0,
-/// 女性健康设置
-  WomenHealthModuleLocalizationKeyWomenHealthSettings = 1,
-/// 只记经期
-  WomenHealthModuleLocalizationKeyMensesOnly = 2,
-/// 月经周期长度和经期长度格式，例如：周期%@天，经期%@天
-  WomenHealthModuleLocalizationKeyMenstrualCycleWithDurationFormat = 3,
-/// 备孕期
-  WomenHealthModuleLocalizationKeyPregnancyPreparationPhase = 4,
-/// 怀孕期
-  WomenHealthModuleLocalizationKeyPregnancyPhase = 5,
-};
-
-enum WomenHealthModuleThemeColorKey : NSInteger;
-@class UITraitCollection;
-@class UIColor;
-enum WomenHealthModuleThemeImageKey : NSInteger;
-@class UIImage;
-
-SWIFT_PROTOCOL("_TtP11WomenHealth25WomenHealthModuleThemable_")
-@protocol WomenHealthModuleThemable <NSObject>
-- (UIColor * _Nullable)colorWith:(enum WomenHealthModuleThemeColorKey)colorKey :(UITraitCollection * _Nullable)traits SWIFT_WARN_UNUSED_RESULT;
-- (UIImage * _Nullable)imageWith:(enum WomenHealthModuleThemeImageKey)imageKey :(UITraitCollection * _Nullable)traits SWIFT_WARN_UNUSED_RESULT;
-@end
-
-/// 颜色Key定义
-typedef SWIFT_ENUM(NSInteger, WomenHealthModuleThemeColorKey, open) {
-/// 品牌色
-  WomenHealthModuleThemeColorKeyBrand = 0,
-/// 分割线
-  WomenHealthModuleThemeColorKeySeparator = 1,
-/// UITable背景色
-  WomenHealthModuleThemeColorKeyTable_background = 2,
-};
-
-/// 图片Key定义
-typedef SWIFT_ENUM(NSInteger, WomenHealthModuleThemeImageKey, open) {
-/// Table Cell checked图标
-  WomenHealthModuleThemeImageKeyIcon_tablecell_accessory_checkmark = 0,
-/// Table Cell 更多向右箭头图标
-  WomenHealthModuleThemeImageKeyIcon_tablecell_accessory_chevron_right = 1,
-};
 
 /// 女性健康阶段
 typedef SWIFT_ENUM(NSInteger, WomenHealthPhase, open) {
