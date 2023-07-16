@@ -489,7 +489,7 @@ SWIFT_CLASS("_TtC11WomenHealth17WomenHealthModule") SWIFT_AVAILABILITY(ios,intro
 /// 进入当前女性健康模式(月经期/备孕期/怀孕期)主页
 /// \param fromVC 起始视图控制器
 ///
-+ (void)enterCurrentModeHomeFrom:(UIViewController * _Nonnull)vc;
++ (void)enterCurrentModeHomeFrom:(UIViewController * _Nonnull)fromVC;
 /// 可本地化的字符串数组
 ///
 /// returns:

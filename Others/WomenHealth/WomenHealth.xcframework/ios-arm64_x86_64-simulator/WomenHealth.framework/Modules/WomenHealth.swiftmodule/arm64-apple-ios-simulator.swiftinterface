@@ -77,7 +77,7 @@ extension WomenHealth.PregnancyRemindType : WCDBSwift.ColumnCodable {
   }
   @objc public class func start(with userId: Swift.String, _ localizationProvider: (any WomenHealth.Localizable)? = nil, _ themeProvider: (any WomenHealth.Themable)? = nil, _ logProvider: (any WomenHealth.Loggable)? = nil)
   @objc public class func enterMainSettings(from fromVC: UIKit.UIViewController)
-  @objc public class func enterCurrentModeHome(from vc: UIKit.UIViewController)
+  @objc public class func enterCurrentModeHome(from fromVC: UIKit.UIViewController)
   @objc public class func localizableStrings() -> [Swift.String]
   @objc deinit
 }

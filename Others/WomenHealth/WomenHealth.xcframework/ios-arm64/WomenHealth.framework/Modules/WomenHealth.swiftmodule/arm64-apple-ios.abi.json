@@ -6236,16 +6236,23 @@
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12284,
+      "offset": 12278,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12512,
+      "offset": 12506,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12668,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
@@ -6257,56 +6264,49 @@
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12680,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12705,
+      "offset": 12699,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12855,
+      "offset": 12849,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12861,
+      "offset": 12855,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12887,
+      "offset": 12881,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "FloatLiteral",
-      "offset": 13301,
+      "offset": 13295,
       "length": 4,
       "value": "16.0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 13331,
+      "offset": 13325,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 13437,
+      "offset": 13431,
       "length": 2,
       "value": "\"\""
     },
@@ -6320,210 +6320,210 @@
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "IntegerLiteral",
-      "offset": 14928,
+      "offset": 14991,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "IntegerLiteral",
-      "offset": 15047,
+      "offset": 15110,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "IntegerLiteral",
-      "offset": 15179,
+      "offset": 15242,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "FloatLiteral",
-      "offset": 15354,
+      "offset": 15417,
       "length": 4,
       "value": "13.0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "IntegerLiteral",
-      "offset": 15359,
+      "offset": 15422,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "FloatLiteral",
-      "offset": 15370,
+      "offset": 15433,
       "length": 5,
       "value": "120.0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "FloatLiteral",
-      "offset": 15471,
+      "offset": 15534,
       "length": 4,
       "value": "13.0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "FloatLiteral",
-      "offset": 15568,
+      "offset": 15631,
       "length": 4,
       "value": "30.0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "FloatLiteral",
-      "offset": 15612,
+      "offset": 15675,
       "length": 4,
       "value": "10.0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "FloatLiteral",
-      "offset": 15740,
+      "offset": 15803,
       "length": 5,
       "value": "0.001"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "IntegerLiteral",
-      "offset": 15875,
+      "offset": 15938,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 16229,
+      "offset": 16292,
       "length": 12,
       "value": "\"HeaderView\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 16332,
+      "offset": 16395,
       "length": 12,
       "value": "\"HeaderView\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 16559,
+      "offset": 16622,
       "length": 12,
       "value": "\"FooterView\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 16662,
+      "offset": 16725,
       "length": 12,
       "value": "\"FooterView\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "FloatLiteral",
-      "offset": 16827,
+      "offset": 16890,
       "length": 4,
       "value": "54.0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 17158,
+      "offset": 17221,
       "length": 12,
       "value": "\"CommonCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 17284,
+      "offset": 17347,
       "length": 12,
       "value": "\"CommonCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 17607,
+      "offset": 17670,
       "length": 16,
       "value": "\"StringPickCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 17745,
+      "offset": 17808,
       "length": 16,
       "value": "\"StringPickCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 18072,
+      "offset": 18135,
       "length": 14,
       "value": "\"DatePickCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 18204,
+      "offset": 18267,
       "length": 14,
       "value": "\"DatePickCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 18521,
+      "offset": 18584,
       "length": 11,
       "value": "\"CheckCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 18644,
+      "offset": 18707,
       "length": 11,
       "value": "\"CheckCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 18957,
+      "offset": 19020,
       "length": 12,
       "value": "\"SwitchCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 19083,
+      "offset": 19146,
       "length": 12,
       "value": "\"SwitchCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 19396,
+      "offset": 19459,
       "length": 11,
       "value": "\"TitleCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 19519,
+      "offset": 19582,
       "length": 11,
       "value": "\"TitleCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 20287,
+      "offset": 20350,
       "length": 13,
       "value": "\"DefaultCell\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/ModeSettings\/ModeSettingsController.swift",
       "kind": "StringLiteral",
-      "offset": 20396,
+      "offset": 20459,
       "length": 13,
       "value": "\"DefaultCell\""
     },
@@ -6859,79 +6859,65 @@
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
       "kind": "BooleanLiteral",
-      "offset": 2476,
+      "offset": 2585,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
       "kind": "BooleanLiteral",
-      "offset": 2583,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2671,
+      "offset": 2673,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
       "kind": "IntegerLiteral",
-      "offset": 2688,
+      "offset": 2690,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
       "kind": "BooleanLiteral",
-      "offset": 2751,
+      "offset": 2753,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
       "kind": "IntegerLiteral",
-      "offset": 2768,
+      "offset": 2770,
       "length": 2,
       "value": "28"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
       "kind": "BooleanLiteral",
-      "offset": 2837,
+      "offset": 2839,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
       "kind": "IntegerLiteral",
-      "offset": 2854,
+      "offset": 2856,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
       "kind": "BooleanLiteral",
-      "offset": 2916,
+      "offset": 2918,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
       "kind": "BooleanLiteral",
-      "offset": 2933,
+      "offset": 2935,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModeSetting.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3005,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Localization\/Localizable.swift",
@@ -10215,13 +10201,6 @@
       "offset": 1110,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Database\/ModuleSetting.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1174,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudWomenHealth\/WomenHealth\/WomenHealth\/Features\/Common\/DatePickCell\/DatePickCell.swift",
