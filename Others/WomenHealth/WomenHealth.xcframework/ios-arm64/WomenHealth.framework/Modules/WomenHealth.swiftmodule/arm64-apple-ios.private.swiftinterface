@@ -3,7 +3,6 @@
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WomenHealth
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import EventKit
-import FitCloudKit
 import Foundation
 import Swift
 import UIKit
@@ -61,13 +60,6 @@ extension WomenHealth.LogLevel : Swift.CustomStringConvertible {
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
-    get
-  }
-}
-extension WomenHealth.PregnancyRemindType : WCDBSwift.ColumnCodable {
-  public init?(with value: WCDBSwift.Value)
-  public func archivedValue() -> WCDBSwift.Value
-  public static var columnType: WCDBSwift.ColumnType {
     get
   }
 }
@@ -146,6 +138,13 @@ extension WomenHealth.LocalizationKey : Swift.CustomStringConvertible {
 }
 @objc public protocol Localizable : ObjectiveC.NSObjectProtocol {
   @objc func localizationString(_ localizationKey: WomenHealth.LocalizationKey) -> Swift.String?
+}
+extension WomenHealth.PregnancyRemindType : WCDBSwift.ColumnCodable {
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
 }
 extension WomenHealth.WomenHealthMode : WCDBSwift.ColumnCodable {
   public init?(with value: WCDBSwift.Value)

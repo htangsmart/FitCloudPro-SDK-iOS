@@ -63,13 +63,6 @@ extension WomenHealth.LogLevel : Swift.CustomStringConvertible {
     get
   }
 }
-extension WomenHealth.PregnancyRemindType : WCDBSwift.ColumnCodable {
-  public init?(with value: WCDBSwift.Value)
-  public func archivedValue() -> WCDBSwift.Value
-  public static var columnType: WCDBSwift.ColumnType {
-    get
-  }
-}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 11.0, *)
 @objc public class WomenHealthModule : ObjectiveC.NSObject {
   @objc public var userId: Swift.String {
@@ -145,6 +138,13 @@ extension WomenHealth.LocalizationKey : Swift.CustomStringConvertible {
 }
 @objc public protocol Localizable : ObjectiveC.NSObjectProtocol {
   @objc func localizationString(_ localizationKey: WomenHealth.LocalizationKey) -> Swift.String?
+}
+extension WomenHealth.PregnancyRemindType : WCDBSwift.ColumnCodable {
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
 }
 extension WomenHealth.WomenHealthMode : WCDBSwift.ColumnCodable {
   public init?(with value: WCDBSwift.Value)

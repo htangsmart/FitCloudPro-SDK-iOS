@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/WomenHealth.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		pJCYNAB9Y+OsRz2F21Xf4kO18aE=
+		xHY1Bt95s697NrrrZGUEVVr9hmc=
 		</data>
 		<key>Modules/WomenHealth.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		o84OP94mKSdbRXVWqaH+c72DQBk=
+		3XhgjiprmVW2QBIkrmEuJ0BlJPA=
 		</data>
 		<key>Modules/WomenHealth.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/WomenHealth.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		o84OP94mKSdbRXVWqaH+c72DQBk=
+		3XhgjiprmVW2QBIkrmEuJ0BlJPA=
 		</data>
 		<key>Modules/WomenHealth.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		A+Qul0STT176D7xj+WyspD4z/2w=
+		u1CxqL2WHzcMFZwwNIns1duiTow=
 		</data>
 		<key>Modules/WomenHealth.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		pJCYNAB9Y+OsRz2F21Xf4kO18aE=
+		xHY1Bt95s697NrrrZGUEVVr9hmc=
 		</data>
 		<key>Modules/WomenHealth.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		1iUdBOj9s+2MgdQzNV9TRHwk80Q=
+		vbHEbHOnj7gwOFtUlp572ZyiKxI=
 		</data>
 		<key>Modules/WomenHealth.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/WomenHealth.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		1iUdBOj9s+2MgdQzNV9TRHwk80Q=
+		vbHEbHOnj7gwOFtUlp572ZyiKxI=
 		</data>
 		<key>Modules/WomenHealth.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+R39/6pyjsivLBqZa//kr0OWy1w=
+		77ZVOzd67A7fjSQkzQeUjb+kIrE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,10 +65,6 @@
 	<dict>
 		<key>Headers/WomenHealth-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			wmvQKD47ehHyURVoLinA+SW18vY=
-			</data>
 			<key>hash2</key>
 			<data>
 			K7KJwvY1QBd5iZMhjYsBifkABi5n/xqyyDe+jSYqHb0=
@@ -76,10 +72,6 @@
 		</dict>
 		<key>Headers/WomenHealth.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			DDzSz3HjsQjZM0aYuGvqxyi+Ebo=
-			</data>
 			<key>hash2</key>
 			<data>
 			0ICEXSQdEQO1EWfKo9UMgAvHYkRvVl8wqUfJcysQltA=
@@ -87,32 +79,20 @@
 		</dict>
 		<key>Modules/WomenHealth.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			pJCYNAB9Y+OsRz2F21Xf4kO18aE=
-			</data>
 			<key>hash2</key>
 			<data>
-			+2KV92XiRKaAZ8VmOMjmVT1et6a+N8rzaKCOTrbduwc=
+			DmSiTCJIFAzmK+dH06v+1b0jQiu7CU2viOReH3vcR4g=
 			</data>
 		</dict>
 		<key>Modules/WomenHealth.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			o84OP94mKSdbRXVWqaH+c72DQBk=
-			</data>
 			<key>hash2</key>
 			<data>
-			KqAglwfhZdRbojZeQAIvc3T8grPnr8XNnvnMzi5MkAY=
+			F8bbVpj9xsg0uy1p70UKcxOSw8l6TVQJXiCgGnF4Ong=
 			</data>
 		</dict>
 		<key>Modules/WomenHealth.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			2ppoYrelLzQoM3dAFZ/3yuzJUTg=
-			</data>
 			<key>hash2</key>
 			<data>
 			1bPwMm8LU3CMJtXtKQHckXjsSaSL7/44t8oiGdkn17g=
@@ -120,54 +100,34 @@
 		</dict>
 		<key>Modules/WomenHealth.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			o84OP94mKSdbRXVWqaH+c72DQBk=
-			</data>
 			<key>hash2</key>
 			<data>
-			KqAglwfhZdRbojZeQAIvc3T8grPnr8XNnvnMzi5MkAY=
+			F8bbVpj9xsg0uy1p70UKcxOSw8l6TVQJXiCgGnF4Ong=
 			</data>
 		</dict>
 		<key>Modules/WomenHealth.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			A+Qul0STT176D7xj+WyspD4z/2w=
-			</data>
 			<key>hash2</key>
 			<data>
-			yhnane1Y0LU16wbdSBnzSthR8mhapVe2pXjQj8zkg94=
+			r+kp2G/JtQMEUQiVY2lt9H2YqRZirQKqw9IC0twjyHs=
 			</data>
 		</dict>
 		<key>Modules/WomenHealth.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			pJCYNAB9Y+OsRz2F21Xf4kO18aE=
-			</data>
 			<key>hash2</key>
 			<data>
-			+2KV92XiRKaAZ8VmOMjmVT1et6a+N8rzaKCOTrbduwc=
+			DmSiTCJIFAzmK+dH06v+1b0jQiu7CU2viOReH3vcR4g=
 			</data>
 		</dict>
 		<key>Modules/WomenHealth.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			1iUdBOj9s+2MgdQzNV9TRHwk80Q=
-			</data>
 			<key>hash2</key>
 			<data>
-			FNaC4N71K8zMuNQ26zYds9jCdX9oQZjIgy3aSvQQSU4=
+			BuDVjwNOvyxyx8LlveblhTu0wxMsp8zYjKwQzOIMkg0=
 			</data>
 		</dict>
 		<key>Modules/WomenHealth.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			xWlxZ6jeSneox8IP+aJxHqVX1Nc=
-			</data>
 			<key>hash2</key>
 			<data>
 			osVaCsa3oKnY7CXf8IakITslBXhaJLSVIkWGoDhRqp8=
@@ -175,32 +135,20 @@
 		</dict>
 		<key>Modules/WomenHealth.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			1iUdBOj9s+2MgdQzNV9TRHwk80Q=
-			</data>
 			<key>hash2</key>
 			<data>
-			FNaC4N71K8zMuNQ26zYds9jCdX9oQZjIgy3aSvQQSU4=
+			BuDVjwNOvyxyx8LlveblhTu0wxMsp8zYjKwQzOIMkg0=
 			</data>
 		</dict>
 		<key>Modules/WomenHealth.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			+R39/6pyjsivLBqZa//kr0OWy1w=
-			</data>
 			<key>hash2</key>
 			<data>
-			C49EMTlxRNrWqVayofrCugAQqTpSFU+K68AYbEOhGTQ=
+			C279kFwb1wp0uenybDcKZ+5snkDo7NV/bQyFuH4e3mo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			l4X9OF/RA4wfdcuMqWOsciUIEGg=
-			</data>
 			<key>hash2</key>
 			<data>
 			GHjdY5EnY5ulQczapIbNcVFR7nbwBwzMNSNqTpkOo48=
