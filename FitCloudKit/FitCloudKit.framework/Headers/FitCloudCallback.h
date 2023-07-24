@@ -59,6 +59,8 @@
 #import <FitCloudKit/FitCloudCricketUpcomingMatch.h>
 #import <FitCloudKit/FitCloudCricketLiveMatch.h>
 #import <FitCloudKit/FitCloudCricketEndedMatch.h>
+#import <FitCloudKit/FitCloudGPSData.h>
+#import <FitCloudKit/FitCloudGPSEpoTimestamp.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -425,10 +427,35 @@ typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSStri
 
 /**
  * @brief FitCloud 二维码功能列表回调
+ * @param succeed 是否成功
  * @param supported 支持的二维码功能
  * @param error 错误信息
  */
 typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber*>*supported, NSError* error);
+
+/**
+ * @brief FitCloud GPS epo 时间戳回调
+ * @param succeed 是否成功
+ * @param timestamp 时间戳
+ * @param error 错误信息
+ */
+typedef void (^FitCloudGPSEPOTimestampResultBlock)(BOOL succeed, FitCloudGPSEpoTimestamp* timestamp, NSError* error);
+
+/**
+ * @brief FitCloud GPS epo 文件是否已过期回调
+ * @param succeed 是否成功
+ * @param isOutdate 是否过期
+ * @param error 错误信息
+ */
+typedef void (^FitCloudWatchGPSEpoOutdateResultBlock)(BOOL succeed, BOOL isOutdate, NSError* error);
+
+/**
+ * @brief FitCloud GPS epo 文件是否允许推送回调
+ * @param succeed 是否成功
+ * @param canPush 是否允许推送
+ * @param error 错误信息
+ */
+typedef void (^FitCloudGPSEPOCanPushResultBlock)(BOOL succeed, BOOL canPush, NSError* error);
 
 
 /**
@@ -575,6 +602,11 @@ typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber
  * @brief 手表请求板球比赛数据
  */
 -(void) OnRequestCricketMatchData;
+
+/**
+ * @brief 手表请求GPS数据
+ */
+-(void) OnRequestGPSData;
 
 /**
  * @brief 睡眠调试数据

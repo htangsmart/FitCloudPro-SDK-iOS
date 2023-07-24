@@ -280,4 +280,7 @@
 /// 是否支持板球比赛
 @property(nonatomic, readonly) BOOL withCricketMatch;
 
+/// 是否支持GPS更新epo功能
+@property(nonatomic, readonly) BOOL withGPSEpo;
+
 @end

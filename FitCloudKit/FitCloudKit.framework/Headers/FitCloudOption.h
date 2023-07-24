@@ -51,7 +51,7 @@
 @property(nonatomic, assign) BOOL    preferSystemLocale;
 
 /**
- * @brief 是否自动同步系统时间
+ * @brief 是否自动同步系统时间，默认为YES
  */
 @property(nonatomic, assign) BOOL autoSyncSystemTime;
 
