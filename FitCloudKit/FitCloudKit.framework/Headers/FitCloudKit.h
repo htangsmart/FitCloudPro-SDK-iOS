@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-07-24  Version:1.2.9-beta.9 Build:202307240001
+//     pcjbird    2023-07-24  Version:1.2.9-beta.10 Build:202307250001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -1184,13 +1184,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void) sendGPSData:(FitCloudGPSData*)gpsData withBlock:(FitCloudResultBlock _Nullable)block;
 
-#pragma mark 检查手表上的 epo 文件是否过期
+#pragma mark 获取手表上的epo文件状态
 
 /**
- * @brief 检查手表上的 epo 文件是否过期
+ * @brief 获取手表上的epo文件状态
  * @param block 结果回调
  */
-+(void) checkWatchEpoIsOutdateWithBlock:(FitCloudWatchGPSEpoOutdateResultBlock _Nullable)block;
++(void) getWatchEpoStateWithBlock:(FitCloudWatchGPSEpoStateResultBlock _Nullable)block;
 
 #pragma mark 判断 epo 文件是否过期
 
@@ -1199,15 +1199,23 @@ NS_ASSUME_NONNULL_BEGIN
  * @param epoFilePath 文件路径
  * @param error 错误信息
  */
-+(BOOL) checkEpoFileIsOutdate:(NSString*)epoFilePath error:(NSError**) error;
++(BOOL) epoFileOutdated:(NSString*)epoFilePath error:(NSError**) error;
 
-#pragma mark 获取当前是否允许推送 epo 文件
+#pragma mark 获取当前是否允许推送epo文件
 
 /**
  * @brief 获取当前是否允许推送 epo 文件
  * @param block 结果回调
  */
 +(void) getEpoCanPushWithBlock:(FitCloudGPSEPOCanPushResultBlock _Nullable)block;
+
+#pragma mark 设置epo文件升级模式
+
+/**
+ * @brief 设置epo文件升级模式
+ * @param block 结果回调
+ */
++(void) setEpoUpgradeMode:(FITCLOUDEPOUPGRADEMODE)upgradeMode withBlock:(FitCloudResultBlock _Nullable)block;
 @end
 
 /**

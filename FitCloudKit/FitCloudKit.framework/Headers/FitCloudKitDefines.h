@@ -1259,4 +1259,24 @@ typedef NS_ENUM(Byte, FITCLOUDWATCHLAUNCHVIBRATEDURATION)
     FITCLOUDWATCHLAUNCHVIBRATEDURATION_CYCLE = 0x02,        //周期2s的震动(震0.6s停1.4s)
 };
 
+
+#pragma mark -手表上的EPO文件状态
+
+typedef NS_ENUM(Byte, FITCLOUDWATCHEPOSTATE)
+{
+    FITCLOUDWATCHEPOSTATE_UNKNOWN = -1,                   //未知状态
+    FITCLOUDWATCHEPOSTATE_NOTEXIST = 0,                   //当前手表上没有EPO文件
+    FITCLOUDWATCHEPOSTATE_GOOD = 1,                       //良好
+    FITCLOUDWATCHEPOSTATE_NEEDUPDATE = 2,                 //未过期，但需要更新
+    FITCLOUDWATCHEPOSTATE_OUTDATED = 3,                   //已过期
+};
+
+#pragma mark -更新EPO文件模式
+
+typedef NS_ENUM(Byte, FITCLOUDEPOUPGRADEMODE)
+{
+    FITCLOUDEPOUPGRADEMODE_BEFOREEXPIRE = 0,               //需要清除当前 EPO 文件更新（当前文件未过期）
+    FITCLOUDEPOUPGRADEMODE_AFTEREXPIRE = 1,                //直接更新（当前文件已过期）
+};
+
 #endif /* FitCloudKitDefines_h */
