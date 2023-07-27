@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-07-24  Version:1.2.9-beta.10 Build:202307250001
+//     pcjbird    2023-07-27  Version:1.2.9-beta.11 Build:202307270001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -1184,38 +1184,38 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void) sendGPSData:(FitCloudGPSData*)gpsData withBlock:(FitCloudResultBlock _Nullable)block;
 
-#pragma mark 获取手表上的epo文件状态
+#pragma mark 获取手表上的GPS文件状态
 
 /**
- * @brief 获取手表上的epo文件状态
+ * @brief 获取手表上的GPS文件状态
  * @param block 结果回调
  */
-+(void) getWatchEpoStateWithBlock:(FitCloudWatchGPSEpoStateResultBlock _Nullable)block;
++(void) getWatchGPSFileStateWithBlock:(FitCloudWatchGPSFileStateResultBlock _Nullable)block;
 
-#pragma mark 判断 epo 文件是否过期
+#pragma mark 判断GPS文件是否过期
 
 /**
- * @brief 判断 epo 文件是否过期
- * @param epoFilePath 文件路径
+ * @brief 判断GPS文件是否过期
+ * @param filePath GPS文件路径
  * @param error 错误信息
  */
-+(BOOL) epoFileOutdated:(NSString*)epoFilePath error:(NSError**) error;
++(BOOL) gpsFileOutdated:(NSString*)filePath error:(NSError**) error;
 
-#pragma mark 获取当前是否允许推送epo文件
-
-/**
- * @brief 获取当前是否允许推送 epo 文件
- * @param block 结果回调
- */
-+(void) getEpoCanPushWithBlock:(FitCloudGPSEPOCanPushResultBlock _Nullable)block;
-
-#pragma mark 设置epo文件升级模式
+#pragma mark 获取当前是否允许推送GPS文件
 
 /**
- * @brief 设置epo文件升级模式
+ * @brief 获取当前是否允许推送GPS文件
  * @param block 结果回调
  */
-+(void) setEpoUpgradeMode:(FITCLOUDEPOUPGRADEMODE)upgradeMode withBlock:(FitCloudResultBlock _Nullable)block;
++(void) getGPSFileCanPushWithBlock:(FitCloudGPSFileCanPushResultBlock _Nullable)block;
+
+#pragma mark 设置GPS文件升级模式
+
+/**
+ * @brief 设置GPS文件升级模式
+ * @param block 结果回调
+ */
++(void) setGPSFileUpgradeMode:(FITCLOUDGPSFILEUPGRADEMODE)upgradeMode withBlock:(FitCloudResultBlock _Nullable)block;
 @end
 
 /**

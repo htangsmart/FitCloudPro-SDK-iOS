@@ -442,20 +442,20 @@ typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber
 typedef void (^FitCloudGPSEPOTimestampResultBlock)(BOOL succeed, FitCloudGPSEpoTimestamp* timestamp, NSError* error);
 
 /**
- * @brief FitCloud 手表 GPS epo 文件状态回调
+ * @brief FitCloud 手表 GPS 文件状态回调
  * @param succeed 是否成功
- * @param epoState 手表epo文件状态
+ * @param fileState 手表GPS文件状态
  * @param error 错误信息
  */
-typedef void (^FitCloudWatchGPSEpoStateResultBlock)(BOOL succeed, FITCLOUDWATCHEPOSTATE epoState, NSError* error);
+typedef void (^FitCloudWatchGPSFileStateResultBlock)(BOOL succeed, FITCLOUDWATCHGPSFILESTATE fileState, NSError* error);
 
 /**
- * @brief FitCloud GPS epo 文件是否允许推送回调
+ * @brief FitCloud GPS 文件是否允许推送回调
  * @param succeed 是否成功
  * @param canPush 是否允许推送
  * @param error 错误信息
  */
-typedef void (^FitCloudGPSEPOCanPushResultBlock)(BOOL succeed, BOOL canPush, NSError* error);
+typedef void (^FitCloudGPSFileCanPushResultBlock)(BOOL succeed, BOOL canPush, NSError* error);
 
 
 /**
@@ -609,9 +609,9 @@ typedef void (^FitCloudGPSEPOCanPushResultBlock)(BOOL succeed, BOOL canPush, NSE
 -(void) OnRequestGPSData;
 
 /**
- * @brief 手表通知EPO文件升级代码，升级中的范围：0~100 ，升级成功：101，升级失败：255
+ * @brief 手表通知GPS文件升级代码，升级中的范围：0~100 ，升级成功：101，升级失败：255
  */
--(void) OnEPOUpgradeCode:(NSInteger)code;
+-(void) OnGPSFileUpgradeCode:(NSInteger)code;
 
 /**
  * @brief 睡眠调试数据

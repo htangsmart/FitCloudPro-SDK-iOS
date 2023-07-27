@@ -1260,23 +1260,23 @@ typedef NS_ENUM(Byte, FITCLOUDWATCHLAUNCHVIBRATEDURATION)
 };
 
 
-#pragma mark -手表上的EPO文件状态
+#pragma mark -手表上的GPS文件状态
 
-typedef NS_ENUM(Byte, FITCLOUDWATCHEPOSTATE)
+typedef NS_ENUM(Byte, FITCLOUDWATCHGPSFILESTATE)
 {
-    FITCLOUDWATCHEPOSTATE_UNKNOWN = -1,                   //未知状态
-    FITCLOUDWATCHEPOSTATE_NOTEXIST = 0,                   //当前手表上没有EPO文件
-    FITCLOUDWATCHEPOSTATE_GOOD = 1,                       //良好
-    FITCLOUDWATCHEPOSTATE_NEEDUPDATE = 2,                 //未过期，但需要更新
-    FITCLOUDWATCHEPOSTATE_OUTDATED = 3,                   //已过期
+    FITCLOUDWATCHGPSFILESTATE_UNKNOWN = -1,                   //未知状态
+    FITCLOUDWATCHGPSFILESTATE_NOTEXIST = 0,                   //当前手表上没有GPS文件
+    FITCLOUDWATCHGPSFILESTATE_GOOD = 1,                       //良好
+    FITCLOUDWATCHGPSFILESTATE_NEEDUPDATE = 2,                 //未过期，但需要更新
+    FITCLOUDWATCHGPSFILESTATE_OUTDATED = 3,                   //已过期
 };
 
-#pragma mark -更新EPO文件模式
+#pragma mark -更新GPS文件模式
 
-typedef NS_ENUM(Byte, FITCLOUDEPOUPGRADEMODE)
+typedef NS_ENUM(Byte, FITCLOUDGPSFILEUPGRADEMODE)
 {
-    FITCLOUDEPOUPGRADEMODE_BEFOREEXPIRE = 0,               //需要清除当前 EPO 文件更新（当前文件未过期）
-    FITCLOUDEPOUPGRADEMODE_AFTEREXPIRE = 1,                //直接更新（当前文件已过期）
+    FITCLOUDGPSFILEUPGRADEMODE_BEFOREEXPIRE = 0,               //需要清除当前GPS文件更新（当前文件未过期）
+    FFITCLOUDGPSFILEUPGRADEMODE_AFTEREXPIRE = 1,               //直接更新（当前文件已过期）
 };
 
 #endif /* FitCloudKitDefines_h */
