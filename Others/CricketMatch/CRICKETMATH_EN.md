@@ -50,6 +50,21 @@ BOOL withCricketMatch = (allConfig && allConfig.firmware.withCricketMatch);
 
 ```
 
+**Send cricket match score list order**
+
+```objc
+#pragma mark Send cricket match score list order
+
+/**
+ * @brief Send cricket match score list order
+ * @param match1order  match1 order
+ * @param match2order  match2 order
+ * @param block the send result
+ */
++(void) sendCricketMatchScoreListOrderWith:(FitCloudCricketMatchScoreOrder*)match1order match2order:(FitCloudCricketMatchScoreOrder*)match2order withBlock:(FitCloudResultBlock _Nullable)block;
+
+```
+
 **Response the smart watch cricket match data request**
 
 Implement the FitCloudCallback

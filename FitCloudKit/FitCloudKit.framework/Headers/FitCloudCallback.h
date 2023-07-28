@@ -61,6 +61,7 @@
 #import <FitCloudKit/FitCloudCricketEndedMatch.h>
 #import <FitCloudKit/FitCloudGPSData.h>
 #import <FitCloudKit/FitCloudGPSEpoTimestamp.h>
+#import <FitCloudKit/FitCloudCricketMatchScoreOrder.h>
 
 /**
  *@brief FitCloud调用结果回调
