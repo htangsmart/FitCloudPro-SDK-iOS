@@ -25,8 +25,8 @@
 + (FitCloudGPSEpoTimestamp* _Nullable) fromGPSHours:(NSInteger) gpsHours;
 
 
-///从 epo file 获取 GPS epo 时间戳
-+ (FitCloudGPSEpoTimestamp*_Nullable) fromEPOFile:(NSString*_Nonnull) epoFilePath;
+///从 gps file 获取 GPS epo 时间戳
++ (FitCloudGPSEpoTimestamp*_Nullable) fromGPSFile:(NSString*_Nonnull) gpsFilePath;
 
 @end
 
