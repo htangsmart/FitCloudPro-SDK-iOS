@@ -28,5 +28,8 @@
 ///从 gps file 获取 GPS epo 时间戳
 + (FitCloudGPSEpoTimestamp*_Nullable) fromGPSFile:(NSString*_Nonnull) gpsFilePath;
 
+/// 有效期
+-(NSDate*_Nonnull)expireDate;
+
 @end
 
