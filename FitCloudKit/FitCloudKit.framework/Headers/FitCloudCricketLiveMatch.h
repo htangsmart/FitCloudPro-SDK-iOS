@@ -60,7 +60,7 @@
 @property(nonatomic, assign) UInt16 strikePlayer1Score;
 
 ///击球手1打了多少球
-@property(nonatomic, assign) UInt8 strikePlayer1Balls;
+@property(nonatomic, assign) UInt16 strikePlayer1Balls;
 
 ///击球手2名字
 @property(nonatomic, strong) NSString* strikePlayer2Name;
@@ -69,7 +69,7 @@
 @property(nonatomic, assign) UInt16 strikePlayer2Score;
 
 ///击球手2打了多少球
-@property(nonatomic, assign) UInt8 strikePlayer2Balls;
+@property(nonatomic, assign) UInt16 strikePlayer2Balls;
 
 ///投球手名字
 @property(nonatomic, strong) NSString* pitcherName;
