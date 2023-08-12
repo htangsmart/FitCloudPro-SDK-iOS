@@ -1,5 +1,12 @@
 # User Guide for Women's Health Module
 
+**Add Privacy Description**
+
+```
+<key>NSCalendarsUsageDescription</key>
+<string>Permission is required to access calendars for Women's Health reminders, etc.</string>
+```
+
 **Initializing the Women's Health Module**
 
 ```swift

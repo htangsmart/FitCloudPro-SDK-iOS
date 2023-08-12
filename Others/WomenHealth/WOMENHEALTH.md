@@ -1,5 +1,13 @@
 # 女性健康模块使用指南
 
+**添加隐私描述**
+
+```
+<key>NSCalendarsUsageDescription</key>
+<string>需要获得日历权限用于女性健康提醒等</string>
+
+```
+
 **初始化女性健康模块**
 
 ```swift
