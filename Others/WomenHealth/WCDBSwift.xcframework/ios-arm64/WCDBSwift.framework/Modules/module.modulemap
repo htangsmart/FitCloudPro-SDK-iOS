@@ -1,0 +1,19 @@
+framework module WCDBSwift {
+    module All {
+        export *
+    }
+}
+
+framework module WCDB_Private {
+    requires objc
+
+    module BridgeHeader [extern_c] {
+        umbrella header "WCDBBridging.h"
+        export *
+    }
+}
+
+module WCDBSwift.Swift {
+  header "WCDBSwift-Swift.h"
+  requires objc
+}

@@ -1,0 +1,2696 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WCDBSwift
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+@_exported import WCDBSwift
+import WCDB_Private
+import _Concurrency
+import _StringProcessing
+public typealias Tag = Swift.Int
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class BindParameter : WCDBSwift.Identifier<WCDB_Private.CPPBindParameter> {
+  convenience public init(_ num: Swift.Int32)
+  convenience public init(_ name: Swift.String)
+  public static func at(named name: Swift.String) -> WCDBSwift.BindParameter
+  public static func colon(named name: Swift.String) -> WCDBSwift.BindParameter
+  public static func dollar(named name: Swift.String) -> WCDBSwift.BindParameter
+  public static func bindParameters(_ num: Swift.Int) -> [WCDBSwift.BindParameter]
+  @objc deinit
+}
+extension WCDBSwift.BindParameter : WCDBSwift.ExpressionConvertible {
+  final public func asExpression() -> WCDBSwift.Expression
+}
+public protocol InsertChainCallInterface : AnyObject {
+  func prepareInsert<Root>(of cls: Root.Type, intoTable table: Swift.String) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  func prepareInsertOrReplace<Root>(of cls: Root.Type, intoTable table: Swift.String) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  func prepareInsertOrIgnore<Root>(of cls: Root.Type, intoTable table: Swift.String) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  func prepareInsert(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., intoTable table: Swift.String) throws -> WCDBSwift.Insert
+  func prepareInsertOrReplace(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., intoTable table: Swift.String) throws -> WCDBSwift.Insert
+  func prepareInsertOrIgnore(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., intoTable table: Swift.String) throws -> WCDBSwift.Insert
+  func prepareInsert(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], intoTable table: Swift.String) throws -> WCDBSwift.Insert
+  func prepareInsertOrReplace(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], intoTable table: Swift.String) throws -> WCDBSwift.Insert
+  func prepareInsertOrIgnore(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], intoTable table: Swift.String) throws -> WCDBSwift.Insert
+}
+extension WCDBSwift.InsertChainCallInterface where Self : WCDBSwift.HandleRepresentable {
+  public func prepareInsert<Root>(of cls: Root.Type, intoTable table: Swift.String) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  public func prepareInsertOrReplace<Root>(of cls: Root.Type, intoTable table: Swift.String) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  public func prepareInsertOrIgnore<Root>(of cls: Root.Type, intoTable table: Swift.String) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  public func prepareInsert(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., intoTable table: Swift.String) throws -> WCDBSwift.Insert
+  public func prepareInsertOrReplace(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., intoTable table: Swift.String) throws -> WCDBSwift.Insert
+  public func prepareInsertOrIgnore(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., intoTable table: Swift.String) throws -> WCDBSwift.Insert
+  public func prepareInsert(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], intoTable table: Swift.String) throws -> WCDBSwift.Insert
+  public func prepareInsertOrReplace(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], intoTable table: Swift.String) throws -> WCDBSwift.Insert
+  public func prepareInsertOrIgnore(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], intoTable table: Swift.String) throws -> WCDBSwift.Insert
+}
+public protocol DeleteChainCallInterface : AnyObject {
+  func prepareDelete(fromTable table: Swift.String) throws -> WCDBSwift.Delete
+}
+extension WCDBSwift.DeleteChainCallInterface where Self : WCDBSwift.HandleRepresentable {
+  public func prepareDelete(fromTable table: Swift.String) throws -> WCDBSwift.Delete
+}
+public protocol UpdateChainCallInterface : AnyObject {
+  func prepareUpdate(table: Swift.String, on propertyConvertibleList: any WCDBSwift.PropertyConvertible...) throws -> WCDBSwift.Update
+  func prepareUpdate(table: Swift.String, on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]) throws -> WCDBSwift.Update
+}
+extension WCDBSwift.UpdateChainCallInterface where Self : WCDBSwift.HandleRepresentable {
+  public func prepareUpdate(table: Swift.String, on propertyConvertibleList: any WCDBSwift.PropertyConvertible...) throws -> WCDBSwift.Update
+  public func prepareUpdate(table: Swift.String, on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]) throws -> WCDBSwift.Update
+}
+public protocol RowSelectChainCallInterface : AnyObject {
+  func prepareRowSelect(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., fromTables tables: [Swift.String], isDistinct: Swift.Bool) throws -> WCDBSwift.RowSelect
+  func prepareRowSelect(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], fromTables tables: [Swift.String], isDistinct: Swift.Bool) throws -> WCDBSwift.RowSelect
+  func prepareRowSelect(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., fromTable table: Swift.String, isDistinct: Swift.Bool) throws -> WCDBSwift.RowSelect
+  func prepareRowSelect(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], fromTable table: Swift.String, isDistinct: Swift.Bool) throws -> WCDBSwift.RowSelect
+}
+extension WCDBSwift.RowSelectChainCallInterface where Self : WCDBSwift.HandleRepresentable {
+  public func prepareRowSelect(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., fromTables tables: [Swift.String], isDistinct: Swift.Bool = false) throws -> WCDBSwift.RowSelect
+  public func prepareRowSelect(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], fromTables tables: [Swift.String], isDistinct: Swift.Bool = false) throws -> WCDBSwift.RowSelect
+  public func prepareRowSelect(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., fromTable table: Swift.String, isDistinct: Swift.Bool = false) throws -> WCDBSwift.RowSelect
+  public func prepareRowSelect(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], fromTable table: Swift.String, isDistinct: Swift.Bool = false) throws -> WCDBSwift.RowSelect
+}
+public protocol SelectChainCallInterface : AnyObject {
+  func prepareSelect<Root>(of cls: Root.Type, fromTable table: Swift.String, isDistinct: Swift.Bool) throws -> WCDBSwift.Select where Root : WCDBSwift.TableDecodable
+  func prepareSelect(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., fromTable table: Swift.String, isDistinct: Swift.Bool) throws -> WCDBSwift.Select
+  func prepareSelect(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], fromTable table: Swift.String, isDistinct: Swift.Bool) throws -> WCDBSwift.Select
+}
+extension WCDBSwift.SelectChainCallInterface where Self : WCDBSwift.HandleRepresentable {
+  public func prepareSelect<Root>(of cls: Root.Type, fromTable table: Swift.String, isDistinct: Swift.Bool = false) throws -> WCDBSwift.Select where Root : WCDBSwift.TableDecodable
+  public func prepareSelect(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., fromTable table: Swift.String, isDistinct: Swift.Bool = false) throws -> WCDBSwift.Select
+  public func prepareSelect(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], fromTable table: Swift.String, isDistinct: Swift.Bool = false) throws -> WCDBSwift.Select
+}
+public protocol MultiSelectChainCallInterface : AnyObject {
+  func prepareMultiSelect(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., fromTables tables: [Swift.String]) throws -> WCDBSwift.MultiSelect
+  func prepareMultiSelect(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], fromTables tables: [Swift.String]) throws -> WCDBSwift.MultiSelect
+}
+extension WCDBSwift.MultiSelectChainCallInterface where Self : WCDBSwift.HandleRepresentable {
+  public func prepareMultiSelect(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., fromTables tables: [Swift.String]) throws -> WCDBSwift.MultiSelect
+  public func prepareMultiSelect(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], fromTables tables: [Swift.String]) throws -> WCDBSwift.MultiSelect
+}
+final public class CheckExpressionConfig : WCDBSwift.TableConfiguration {
+  final public func config(with tableBinding: WCDBSwift.TableBindingBase)
+  public init(@WCDBSwift.CheckExpressionConfig.CheckExpressionBuilder _ constraintBuilder: () -> [WCDBSwift.TableConstraint])
+  @_functionBuilder public struct CheckExpressionBuilder {
+    public static func buildBlock() -> [WCDBSwift.TableConstraint]
+    public static func buildBlock(_ enums: WCDBSwift.Expression...) -> [WCDBSwift.TableConstraint]
+  }
+  @objc deinit
+}
+extension Swift.Int8 : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.Int16 : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.Int32 : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.Int64 : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.Int : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.UInt8 : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.UInt16 : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.UInt32 : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.UInt64 : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.UInt : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.Bool : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.Float : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.Double : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.String : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Foundation.Data : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Foundation.Date : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Foundation.URL : WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+extension Swift.Array : WCDBSwift.ColumnCodable, WCDBSwift.ColumnCodableBase where Element : Swift.Decodable, Element : Swift.Encodable {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+public typealias FundamentalValue = WCDBSwift.Value
+extension Swift.Dictionary : WCDBSwift.ColumnCodable, WCDBSwift.ColumnCodableBase where Key : Swift.Decodable, Key : Swift.Encodable, Value : Swift.Decodable, Value : Swift.Encodable {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.FundamentalValue)
+  public func archivedValue() -> WCDBSwift.FundamentalValue
+}
+extension Swift.Set : WCDBSwift.ColumnCodable, WCDBSwift.ColumnCodableBase where Element : Swift.Decodable, Element : Swift.Encodable {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+  public init?(with value: WCDBSwift.Value)
+  public func archivedValue() -> WCDBSwift.Value
+}
+public protocol ColumnJSONEncodable : WCDBSwift.ColumnEncodable {
+}
+extension WCDBSwift.ColumnJSONEncodable {
+  public func archivedValue() -> WCDBSwift.Value
+}
+public protocol ColumnJSONDecodable : WCDBSwift.ColumnDecodable {
+}
+extension WCDBSwift.ColumnJSONDecodable {
+  public init?(with value: WCDBSwift.Value)
+}
+public protocol ColumnJSONCodable : WCDBSwift.ColumnJSONDecodable, WCDBSwift.ColumnJSONEncodable {
+}
+extension WCDBSwift.ColumnJSONCodable {
+  public static var columnType: WCDBSwift.ColumnType {
+    get
+  }
+}
+public protocol CodingTableKeyBase : Swift.CodingKey {
+  var rootType: any WCDBSwift.TableCodableBase.Type { get }
+}
+public protocol CodingTableKey : Swift.Hashable, Swift.RawRepresentable, WCDBSwift.CodingTableKeyBase, WCDBSwift.ExpressionBetweenOperable, WCDBSwift.ExpressionBinaryOperable, WCDBSwift.ExpressionCollateOperable, WCDBSwift.ExpressionFunctionOperable, WCDBSwift.ExpressionInOperable, WCDBSwift.ExpressionUnaryOperable, WCDBSwift.PropertyConvertible where Self.RawValue == Swift.String {
+  associatedtype Root : WCDBSwift.TableCodableBase
+  static var all: [WCDBSwift.Property] { get }
+  static var any: WCDBSwift.Column { get }
+  static var objectRelationalMapping: WCDBSwift.TableBinding<Self> { get }
+  typealias BindColumnConstraint = WCDBSwift.ColumnConstraintConfig<Self>
+  typealias BindIndex = WCDBSwift.IndexConfig<Self>
+  typealias BindMultiPrimary = WCDBSwift.MultiPrimaryConfig<Self>
+  typealias BindMultiUnique = WCDBSwift.MultiUniqueConfig<Self>
+  typealias BindChecks = WCDBSwift.CheckExpressionConfig
+  typealias BindForeginKey = WCDBSwift.ForeignKeyConfig<Self>
+  typealias BindVirtualTable = WCDBSwift.VirtualTableConfig
+}
+extension WCDBSwift.CodingTableKey {
+  public var rootType: any WCDBSwift.TableCodableBase.Type {
+    get
+  }
+}
+extension WCDBSwift.CodingTableKey {
+  public static var all: [WCDBSwift.Property] {
+    get
+  }
+  public static var any: WCDBSwift.Column {
+    get
+  }
+}
+extension WCDBSwift.CodingTableKey {
+  public func isSwiftProperty() -> Swift.Bool
+  public var codingTableKey: (any WCDBSwift.CodingTableKeyBase)? {
+    get
+  }
+  public func `as`(_ propertyConvertible: any WCDBSwift.PropertyConvertible) -> WCDBSwift.Property
+  public func asProperty() -> WCDBSwift.Property
+  public func `in`(table: Swift.String) -> WCDBSwift.Property
+  public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.Property
+  public func asExpression() -> WCDBSwift.Expression
+  public func asColumn() -> WCDBSwift.Column
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class Column : WCDBSwift.Identifier<WCDB_Private.CPPColumn> {
+  public static let all: WCDBSwift.Column
+  public static let rowid: WCDBSwift.Column
+  convenience public init(named name: Swift.String)
+  @discardableResult
+  final public func `in`(table: Swift.String) -> WCDBSwift.Column
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.Column
+  @objc deinit
+}
+extension WCDBSwift.Column : WCDBSwift.ColumnConvertible, WCDBSwift.ExpressionOperable {
+  final public func asColumn() -> WCDBSwift.Column
+}
+public protocol ColumnCodableBase {
+  static var columnType: WCDBSwift.ColumnType { get }
+}
+public protocol ColumnEncodable : Swift.Encodable, WCDBSwift.ColumnCodableBase {
+  func archivedValue() -> WCDBSwift.Value
+}
+extension WCDBSwift.ColumnEncodable where Self : WCDBSwift.LiteralValueConvertible {
+  public func asLiteralValue() -> WCDBSwift.LiteralValue
+}
+public protocol ColumnDecodable : Swift.Decodable, WCDBSwift.ColumnCodableBase {
+  init?(with value: WCDBSwift.Value)
+}
+public typealias ColumnCodable = WCDBSwift.ColumnDecodable & WCDBSwift.ColumnEncodable
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ColumnConstraint : WCDBSwift.Identifier<WCDB_Private.CPPColumnConstraint> {
+  convenience public init(named name: Swift.String? = nil)
+  @discardableResult
+  final public func primaryKey() -> WCDBSwift.ColumnConstraint
+  @discardableResult
+  final public func order(_ order: WCDBSwift.Order) -> WCDBSwift.ColumnConstraint
+  @discardableResult
+  final public func conflict(action: WCDBSwift.ConflictAction) -> WCDBSwift.ColumnConstraint
+  @discardableResult
+  final public func autoIncrement() -> WCDBSwift.ColumnConstraint
+  @discardableResult
+  final public func notNull() -> WCDBSwift.ColumnConstraint
+  @discardableResult
+  final public func unique() -> WCDBSwift.ColumnConstraint
+  @discardableResult
+  final public func check(with expression: WCDBSwift.Expression) -> WCDBSwift.ColumnConstraint
+  @discardableResult
+  final public func `default`(with expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.ColumnConstraint
+  @discardableResult
+  final public func collate(with collation: Swift.String) -> WCDBSwift.ColumnConstraint
+  @discardableResult
+  final public func foreignKey(with key: WCDBSwift.ForeignKey) -> WCDBSwift.ColumnConstraint
+  @discardableResult
+  final public func unIndexed() -> WCDBSwift.ColumnConstraint
+  @objc deinit
+}
+final public class ColumnConstraintConfig<CodingTableKeyType> : WCDBSwift.TableConfiguration where CodingTableKeyType : WCDBSwift.CodingTableKey {
+  final public func config(with tableBinding: WCDBSwift.TableBindingBase)
+  required public init(_ codingKey: CodingTableKeyType, isPrimary: Swift.Bool = false, orderBy term: WCDBSwift.Order? = nil, isAutoIncrement: Swift.Bool = false, onConflict conflict: WCDBSwift.ConflictAction? = nil, isNotNull: Swift.Bool = false, isUnique: Swift.Bool = false, defaultTo defaultValue: WCDBSwift.LiteralValue? = nil, isNotIndexed: Swift.Bool = false)
+  convenience public init<T>(_ codingKey: CodingTableKeyType, isPrimary: Swift.Bool = false, orderBy term: WCDBSwift.Order? = nil, isAutoIncrement: Swift.Bool = false, onConflict conflict: WCDBSwift.ConflictAction? = nil, isNotNull: Swift.Bool = false, isUnique: Swift.Bool = false, defaultTo defaultEncodedValue: T, isNotIndexed: Swift.Bool = false) where T : WCDBSwift.ColumnEncodable
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ColumnDef : WCDBSwift.Identifier<WCDB_Private.CPPColumnDef> {
+  convenience public init(with columnConvertible: any WCDBSwift.ColumnConvertible, and optionalType: WCDBSwift.ColumnType? = nil)
+  final public func addConstraint(_ constraint: WCDBSwift.ColumnConstraint)
+  @discardableResult
+  final public func makePrimary(orderBy order: WCDBSwift.Order? = nil, isAutoIncrement: Swift.Bool? = false, onConflict conflict: WCDBSwift.ConflictAction? = nil) -> WCDBSwift.ColumnDef
+  @discardableResult
+  final public func makeDefault(to defaultValue: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.ColumnDef
+  @discardableResult
+  final public func makeNotNull() -> WCDBSwift.ColumnDef
+  @discardableResult
+  final public func makeUnique() -> WCDBSwift.ColumnDef
+  @discardableResult
+  final public func makeForeignKey(_ foreignKey: WCDBSwift.ForeignKey) -> WCDBSwift.ColumnDef
+  @discardableResult
+  final public func makeNotIndexed() -> WCDBSwift.ColumnDef
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class CommonTableExpression : WCDBSwift.Identifier<WCDB_Private.CPPCommonTableExpression> {
+  public init(_ table: Swift.String)
+  @discardableResult
+  final public func column(_ columnConvertible: any WCDBSwift.ColumnConvertible) -> WCDBSwift.CommonTableExpression
+  @discardableResult
+  final public func `as`(_ select: WCDBSwift.StatementSelect) -> WCDBSwift.CommonTableExpression
+  @objc deinit
+}
+public protocol OrderingTermConvertible {
+  func asOrder() -> WCDBSwift.OrderingTerm
+  func order(_ order: WCDBSwift.Order?) -> WCDBSwift.OrderingTerm
+  func collate(_ collation: Swift.String) -> WCDBSwift.OrderingTerm
+}
+public protocol SpecificColumnDefConvertible {
+  func asDef(with columnType: WCDBSwift.ColumnType?) -> WCDBSwift.ColumnDef
+}
+public protocol IndexedColumnConvertible {
+  func asIndex() -> WCDBSwift.IndexedColumn
+}
+public protocol SpecificColumnIndexConvertible : WCDBSwift.IndexedColumnConvertible {
+  func asIndex(orderBy term: WCDBSwift.Order?) -> WCDBSwift.IndexedColumn
+}
+extension WCDBSwift.SpecificColumnIndexConvertible {
+  public func asIndex() -> WCDBSwift.IndexedColumn
+}
+public protocol ResultColumnConvertible {
+  func asResultColumn() -> WCDBSwift.ResultColumn
+}
+public protocol SchemaConvertible {
+  func asSchema() -> WCDBSwift.Schema
+}
+public protocol QualifiedTableConvertible {
+  func asQualifiedTable() -> WCDBSwift.QualifiedTable
+}
+public protocol TableOrSubqueryConvertible {
+  func asTableOrSubquery() -> WCDBSwift.TableOrSubquery
+}
+public protocol ExpressionConvertible : WCDBSwift.OrderingTermConvertible, WCDBSwift.ResultColumnConvertible {
+  func asExpression() -> WCDBSwift.Expression
+}
+extension WCDBSwift.ExpressionConvertible {
+  public func asResultColumn() -> WCDBSwift.ResultColumn
+  public func asOrder() -> WCDBSwift.OrderingTerm
+  public func order(_ order: WCDBSwift.Order?) -> WCDBSwift.OrderingTerm
+  public func collate(_ collation: Swift.String) -> WCDBSwift.OrderingTerm
+}
+public protocol ColumnConvertible : WCDBSwift.ExpressionConvertible, WCDBSwift.SpecificColumnDefConvertible, WCDBSwift.SpecificColumnIndexConvertible {
+  func asColumn() -> WCDBSwift.Column
+  func `in`(table: Swift.String) -> WCDBSwift.Column
+  func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.Column
+}
+extension WCDBSwift.ColumnConvertible {
+  public func asExpression() -> WCDBSwift.Expression
+  public func asIndex(orderBy term: WCDBSwift.Order?) -> WCDBSwift.IndexedColumn
+  public func asDef(with columnType: WCDBSwift.ColumnType? = nil) -> WCDBSwift.ColumnDef
+  public func `in`(table: Swift.String) -> WCDBSwift.Column
+  public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.Column
+}
+public protocol LiteralValueConvertible : WCDBSwift.ExpressionConvertible {
+  func asLiteralValue() -> WCDBSwift.LiteralValue
+}
+extension WCDBSwift.LiteralValueConvertible {
+  public func asExpression() -> WCDBSwift.Expression
+}
+@_hasMissingDesignatedInitializers public class Database {
+  convenience public init(at path: Swift.String)
+  convenience public init(at url: Foundation.URL)
+  public var tag: WCDBSwift.Tag? {
+    get
+    set
+  }
+  final public var path: Swift.String {
+    get
+  }
+  public var canOpen: Swift.Bool {
+    get
+  }
+  public var isOpened: Swift.Bool {
+    get
+  }
+  public var isBlockaded: Swift.Bool {
+    get
+  }
+  public typealias OnClosed = () throws -> Swift.Void
+  public func close(onClosed: @escaping WCDBSwift.Database.OnClosed) throws
+  public func close()
+  public func blockade()
+  public func unblockade()
+  public func purge()
+  public static func purge()
+  public func getHandle() throws -> WCDBSwift.Handle
+  public func getDatabase() -> WCDBSwift.Database
+  public func exec(_ statement: any WCDBSwift.Statement) throws
+  @objc deinit
+}
+extension WCDBSwift.Database {
+  public enum CipherVersion : Swift.Int32 {
+    case defaultVerion
+    case version1
+    case version2
+    case version3
+    case version4
+    public init?(rawValue: Swift.Int32)
+    public typealias RawValue = Swift.Int32
+    public var rawValue: Swift.Int32 {
+      get
+    }
+  }
+  public func setCipher(key optionalKey: Foundation.Data?, pageSize: Swift.Int = 4096, cipherVersion: WCDBSwift.Database.CipherVersion = .defaultVerion)
+  public static func setDefaultCipherConfiguration(_ version: WCDBSwift.Database.CipherVersion)
+  public static func setDefaultTemporaryDirectory(_ directory: Swift.String) -> Swift.Bool
+  public typealias PerformanceTracer = (Swift.String, Swift.UInt64, Swift.String, Swift.Double) -> Swift.Void
+  public typealias SQLTracer = (Swift.String, Swift.UInt64, Swift.String) -> Swift.Void
+  public static func globalTrace(ofPerformance trace: @escaping WCDBSwift.Database.PerformanceTracer)
+  public static func globalTrace(ofPerformance: Swift.Void?)
+  public func trace(ofPerformance trace: @escaping WCDBSwift.Database.PerformanceTracer)
+  public func trace(ofPerformance: Swift.Void?)
+  public static func globalTrace(ofSQL trace: @escaping WCDBSwift.Database.SQLTracer)
+  public static func globalTrace(ofSQL: Swift.Void?)
+  public func trace(ofSQL trace: @escaping WCDBSwift.Database.SQLTracer)
+  public func trace(ofSQL: Swift.Void?)
+  public static func globalTrace(ofError errorReporter: @escaping (WCDBSwift.WCDBError) -> Swift.Void)
+  public static func globalTrace(ofError: Swift.Void?)
+  public func trace(ofError errorReporter: @escaping (WCDBSwift.WCDBError) -> Swift.Void)
+  public func trace(ofError: Swift.Void?)
+  public enum Operation : Swift.Int {
+    case Create
+    case SetTag
+    case OpenHandle
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public typealias OperationTracer = (WCDBSwift.Database, WCDBSwift.Database.Operation) -> Swift.Void
+  public static func globalTrace(ofDatabaseOperation trace: @escaping WCDBSwift.Database.OperationTracer)
+  public static func globalTrace(ofDatabaseOperation trace: Swift.Void?)
+  public enum ConfigPriority : Swift.Int32 {
+    case highest
+    case high
+    case `default`
+    case low
+    public init?(rawValue: Swift.Int32)
+    public typealias RawValue = Swift.Int32
+    public var rawValue: Swift.Int32 {
+      get
+    }
+  }
+  public typealias Config = (WCDBSwift.Handle) throws -> Swift.Void
+  public func setConfig(named name: Swift.String, withInvocation invocation: @escaping WCDBSwift.Database.Config, withUninvocation uninvocation: WCDBSwift.Database.Config? = nil, withPriority priority: WCDBSwift.Database.ConfigPriority = ConfigPriority.default)
+}
+extension WCDBSwift.Database {
+  public var urls: [Foundation.URL] {
+    get
+  }
+  public var paths: [Swift.String] {
+    get
+  }
+  public func removeFiles() throws
+  public func moveFiles(toDirectory directory: Swift.String) throws
+  public func getFilesSize() throws -> Swift.UInt64
+}
+extension WCDBSwift.Database {
+  public typealias OnCorrupted = (_ corruptedDatabase: WCDBSwift.Database) -> Swift.Void
+  public func setNotification(whenCorrupted callback: WCDBSwift.Database.OnCorrupted?)
+  public func checkIfCorrupted() -> Swift.Bool
+  public func isAlreadyCorrupted() -> Swift.Bool
+  public func setAutoBackup(enable flag: Swift.Bool)
+  public func backup() throws
+  public typealias BackupFiilter = (_ tableName: Swift.String) -> Swift.Bool
+  public func filterBackup(tableShouldBeBackedUp filter: WCDBSwift.Database.BackupFiilter?)
+  public typealias RetrieveProgress = (_ percentage: Swift.Double, _ increment: Swift.Double) -> Swift.Void
+  public func retrieve(with progress: WCDBSwift.Database.RetrieveProgress?) -> Swift.Double
+  public func deposit() throws
+  public func containDepositedFiles() -> Swift.Bool
+  public func removeDepositedFiles() throws
+}
+extension WCDBSwift.Database {
+  public struct MigrationInfo {
+    public var database: Swift.String
+    public var table: Swift.String
+    public var sourceDatabase: Swift.String?
+    public var sourceTable: Swift.String?
+  }
+  public typealias MigrationFilter = (_ info: inout WCDBSwift.Database.MigrationInfo) -> Swift.Void
+  public func filterMigration(_ filter: WCDBSwift.Database.MigrationFilter?)
+  public func stepMigration() throws
+  public func setAutoMigration(enable flag: Swift.Bool)
+  public func isMigrated() -> Swift.Bool
+  public typealias MigratedCallback = (_ database: WCDBSwift.Database, _ tableInfo: WCDBSwift.Database.MigrationInfo?) -> Swift.Void
+  public func setNotification(whenMigrated callback: WCDBSwift.Database.MigratedCallback?)
+}
+public struct BuiltinTokenizer {
+  public static let Simple: Swift.String
+  public static let Porter: Swift.String
+  public static let ICU: Swift.String
+  public static let Unicode61: Swift.String
+  public static let OneOrBinary: Swift.String
+  public static let Verbatim: Swift.String
+  public static let Pinyin: Swift.String
+  public struct Parameter {
+    public static let NeedSymbol: Swift.String
+    public static let SimplifyChinese: Swift.String
+    public static let SkipStemming: Swift.String
+  }
+}
+public struct BuiltinAuxiliaryFunction {
+  public static let SubstringMatchInfo: Swift.String
+}
+extension WCDBSwift.Database {
+  public func setAutoMergeFTS5Index(enable: Swift.Bool)
+  public func add(tokenizer: Swift.String)
+  public static func register<TokenizerType>(tokenizer: TokenizerType.Type, of name: Swift.String, of version: WCDBSwift.FTSVersion) where TokenizerType : WCDBSwift.Tokenizer
+  public func add(auxFunction: Swift.String)
+  public static func config(pinyinDict: [Swift.String : [Swift.String]])
+  public static func config(traditionalChineseDict: [Swift.String : Swift.String])
+}
+extension WCDBSwift.Database {
+  public func passiveCheckpoint() throws
+  public func truncateCheckpoint() throws
+}
+extension WCDBSwift.Database : WCDBSwift.HandleRepresentable {
+}
+extension WCDBSwift.Database : WCDBSwift.InsertChainCallInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.UpdateChainCallInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.DeleteChainCallInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.RowSelectChainCallInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.SelectChainCallInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.MultiSelectChainCallInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.InsertInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.UpdateInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.DeleteInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.RowSelectInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.SelectInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.StatementSelectInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.TableInterface {
+}
+extension WCDBSwift.Database : WCDBSwift.TransactionInterface {
+}
+public typealias Condition = WCDBSwift.ExpressionConvertible
+public typealias Limit = WCDBSwift.ExpressionConvertible
+public typealias Offset = WCDBSwift.ExpressionConvertible
+public typealias GroupBy = WCDBSwift.ExpressionConvertible
+public typealias Having = WCDBSwift.ExpressionConvertible
+public typealias OrderBy = WCDBSwift.OrderingTermConvertible
+@_hasMissingDesignatedInitializers final public class Delete {
+  final public let statement: WCDBSwift.StatementDelete
+  final public var changes: Swift.Int?
+  @discardableResult
+  final public func `where`(_ condition: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Delete
+  @discardableResult
+  final public func order(by orderList: any WCDBSwift.OrderingTermConvertible...) -> WCDBSwift.Delete
+  @discardableResult
+  final public func order(by orderList: [any WCDBSwift.OrderingTermConvertible]) -> WCDBSwift.Delete
+  @discardableResult
+  final public func limit(from begin: any WCDBSwift.ExpressionConvertible, to end: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Delete
+  @discardableResult
+  final public func limit(_ limit: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Delete
+  @discardableResult
+  final public func limit(_ limit: any WCDBSwift.ExpressionConvertible, offset: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Delete
+  final public func execute() throws
+  @objc deinit
+}
+public protocol DeleteInterface : AnyObject {
+  func delete(fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws
+}
+extension WCDBSwift.DeleteInterface where Self : WCDBSwift.HandleRepresentable {
+  public func delete(fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class Expression : WCDBSwift.Identifier<WCDB_Private.CPPExpression> {
+  convenience public init(with literalValueConvertible: any WCDBSwift.LiteralValueConvertible)
+  convenience public init(with bindParameter: WCDBSwift.BindParameter)
+  convenience public init(with columnConvertible: any WCDBSwift.ColumnConvertible)
+  convenience public init(with statementSelect: WCDBSwift.StatementSelect)
+  convenience public init(with raiseFunc: WCDBSwift.RaiseFunction)
+  public static func function(_ name: Swift.String) -> WCDBSwift.Expression
+  @discardableResult
+  final public func schema(_ schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.Expression
+  @discardableResult
+  final public func distinct() -> WCDBSwift.Expression
+  @discardableResult
+  final public func arguments(_ expressionConvertibleList: [any WCDBSwift.ExpressionConvertible]) -> WCDBSwift.Expression
+  @discardableResult
+  final public func arguments(_ expressionConvertibleList: any WCDBSwift.ExpressionConvertible...) -> WCDBSwift.Expression
+  @discardableResult
+  final public func invoke() -> WCDBSwift.Expression
+  @discardableResult
+  final public func invokeAll() -> WCDBSwift.Expression
+  public static func cast(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  @discardableResult
+  final public func `as`(_ type: WCDBSwift.ColumnType) -> WCDBSwift.Expression
+  public static func `case`(_ expressionConvertible: (any WCDBSwift.ExpressionConvertible)? = nil) -> WCDBSwift.Expression
+  @discardableResult
+  final public func when(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  @discardableResult
+  final public func then(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  @discardableResult
+  final public func `else`(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  @discardableResult
+  final public func escape(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public static func windowFunction(_ funcName: Swift.String) -> WCDBSwift.Expression
+  @discardableResult
+  final public func filter(_ filter: WCDBSwift.Filter) -> WCDBSwift.Expression
+  @discardableResult
+  final public func over(_ window: WCDBSwift.WindowDef) -> WCDBSwift.Expression
+  @discardableResult
+  final public func over(_ window: Swift.String) -> WCDBSwift.Expression
+  @objc deinit
+}
+extension WCDBSwift.Expression : Swift.ExpressibleByNilLiteral {
+  convenience public init(nilLiteral value: ())
+}
+extension WCDBSwift.Expression : Swift.ExpressibleByBooleanLiteral {
+  convenience public init(booleanLiteral value: Swift.Bool)
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension WCDBSwift.Expression : Swift.ExpressibleByIntegerLiteral {
+  convenience public init(integerLiteral value: Swift.Int)
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension WCDBSwift.Expression : Swift.ExpressibleByFloatLiteral {
+  convenience public init(floatLiteral value: Swift.Double)
+  public typealias FloatLiteralType = Swift.Double
+}
+extension WCDBSwift.Expression : Swift.ExpressibleByStringLiteral {
+  convenience public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension WCDBSwift.Expression : WCDBSwift.ExpressionOperable {
+  public static func exists(_ select: WCDBSwift.StatementSelect) -> WCDBSwift.Expression
+  public static func notExists(_ select: WCDBSwift.StatementSelect) -> WCDBSwift.Expression
+  public static func `case`(_ expressionConvertible: any WCDBSwift.ExpressionConvertible, _ flows: (when: any WCDBSwift.ExpressionConvertible, then: any WCDBSwift.ExpressionConvertible)..., else: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public static func `case`(_ case: any WCDBSwift.ExpressionConvertible, _ flows: [(when: any WCDBSwift.ExpressionConvertible, then: any WCDBSwift.ExpressionConvertible)], else: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  final public func asExpression() -> WCDBSwift.Expression
+}
+@_hasMissingDesignatedInitializers final public class Filter : WCDBSwift.Identifier<WCDB_Private.CPPFilter> {
+  public init()
+  @discardableResult
+  final public func `where`(_ condition: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Filter
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class ForeignKey : WCDBSwift.Identifier<WCDB_Private.CPPForeignKey> {
+  public init()
+  @discardableResult
+  final public func references(with table: Swift.String) -> WCDBSwift.ForeignKey
+  @discardableResult
+  final public func columns(_ columnConvertibleList: [any WCDBSwift.ColumnConvertible]) -> WCDBSwift.ForeignKey
+  @discardableResult
+  final public func columns(_ columnConvertibleList: any WCDBSwift.ColumnConvertible...) -> WCDBSwift.ForeignKey
+  public enum Action {
+    case setNull
+    case setDefault
+    case cascade
+    case restrict
+    case noAction
+    public static func == (a: WCDBSwift.ForeignKey.Action, b: WCDBSwift.ForeignKey.Action) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @discardableResult
+  final public func onDelete(_ action: WCDBSwift.ForeignKey.Action) -> WCDBSwift.ForeignKey
+  @discardableResult
+  final public func onUpdate(_ action: WCDBSwift.ForeignKey.Action) -> WCDBSwift.ForeignKey
+  public enum MatchType {
+    case Simple
+    case Full
+    case Patial
+    public static func == (a: WCDBSwift.ForeignKey.MatchType, b: WCDBSwift.ForeignKey.MatchType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @discardableResult
+  final public func match(with type: WCDBSwift.ForeignKey.MatchType) -> WCDBSwift.ForeignKey
+  public enum Deferrable {
+    case deferred
+    case immediate
+    public static func == (a: WCDBSwift.ForeignKey.Deferrable, b: WCDBSwift.ForeignKey.Deferrable) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @discardableResult
+  final public func deferrable(_ deferrable: WCDBSwift.ForeignKey.Deferrable? = nil) -> WCDBSwift.ForeignKey
+  @discardableResult
+  final public func notDeferrable(_ deferrable: WCDBSwift.ForeignKey.Deferrable? = nil) -> WCDBSwift.ForeignKey
+  @objc deinit
+}
+final public class ForeignKeyConfig<CodingTableKeyType> : WCDBSwift.TableConfiguration where CodingTableKeyType : WCDBSwift.CodingTableKey {
+  public init(_ codingKeys: CodingTableKeyType..., foreignKey: WCDBSwift.ForeignKey)
+  final public func config(with tableBinding: WCDBSwift.TableBindingBase)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class FrameSpec : WCDBSwift.Identifier<WCDB_Private.CPPFrameSpec> {
+  public init()
+  @discardableResult
+  final public func range() -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func rows() -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func unboundedPreceding() -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func preceding(_ expressionConverable: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func currentRow() -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func betweenUnboundedPreceding() -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func betweenPreceding(_ expressionConverable: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func betweenCurrentRow() -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func betweenFollowing(_ expressionConverable: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func andCurrentRow() -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func andPreceding(_ expressionConverable: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func andUnboundedFollowing() -> WCDBSwift.FrameSpec
+  @discardableResult
+  final public func andFollowing(_ expressionConverable: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.FrameSpec
+  @objc deinit
+}
+public enum TokenizerErrorCode {
+  case OK
+  case Done
+  case NoMemory
+  public static func == (a: WCDBSwift.TokenizerErrorCode, b: WCDBSwift.TokenizerErrorCode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Tokenizer : AnyObject {
+  init(args: [Swift.String])
+  func load(input: Swift.UnsafePointer<Swift.Int8>?, length: Swift.Int, flags: Swift.Int)
+  func nextToken(ppToken: Swift.UnsafeMutablePointer<Swift.UnsafePointer<Swift.Int8>?>, pnBytes: Swift.UnsafeMutablePointer<Swift.Int32>, piStart: Swift.UnsafeMutablePointer<Swift.Int32>, piEnd: Swift.UnsafeMutablePointer<Swift.Int32>, pFlags: Swift.UnsafeMutablePointer<Swift.Int32>?, piPosition: Swift.UnsafeMutablePointer<Swift.Int32>?) -> WCDBSwift.TokenizerErrorCode
+}
+@_hasMissingDesignatedInitializers final public class Handle {
+  final public func exec(_ statement: any WCDBSwift.Statement) throws
+  final public func getOrCreatePreparedStatement(with statement: any WCDBSwift.Statement) throws -> WCDBSwift.PreparedStatement
+  final public func finalizeAllStatement()
+  final public var changes: Swift.Int {
+    get
+  }
+  final public var totalChanges: Swift.Int {
+    get
+  }
+  final public var lastInsertedRowID: Swift.Int64 {
+    get
+  }
+  @objc deinit
+}
+public protocol HandleRepresentable {
+  func getHandle() throws -> WCDBSwift.Handle
+  func getDatabase() -> WCDBSwift.Database
+}
+extension WCDBSwift.Handle : WCDBSwift.HandleRepresentable {
+  final public func getHandle() throws -> WCDBSwift.Handle
+  final public func getDatabase() -> WCDBSwift.Database
+}
+extension WCDBSwift.Handle : WCDBSwift.RawStatementmentRepresentable {
+  final public func finalizeWhenError() -> Swift.Bool
+  final public func getRawStatement() -> WCDB_Private.CPPHandleStatement
+  final public func prepare(_ statement: any WCDBSwift.Statement) throws
+  final public var isPrepared: Swift.Bool {
+    get
+  }
+}
+extension WCDBSwift.Handle : WCDBSwift.StatementInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.InsertChainCallInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.UpdateChainCallInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.DeleteChainCallInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.RowSelectChainCallInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.SelectChainCallInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.MultiSelectChainCallInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.InsertInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.UpdateInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.DeleteInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.RowSelectInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.SelectInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.StatementSelectInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.TableInterface {
+}
+extension WCDBSwift.Handle : WCDBSwift.TransactionInterface {
+}
+public typealias Describable = Swift.CustomStringConvertible
+@_hasMissingDesignatedInitializers public class Identifier<CPPType> : WCDBSwift.Describable, WCDBSwift.RawCPPObjectRepresentable {
+  public var rawCPPObj: Swift.UnsafeMutablePointer<WCDB_Private.CPPObject> {
+    get
+  }
+  final public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public protocol RawCPPObjectRepresentable {
+  var rawCPPObj: Swift.UnsafeMutablePointer<WCDB_Private.CPPObject> { get }
+}
+final public class IndexConfig<CodingTableKeyType> : WCDBSwift.TableConfiguration where CodingTableKeyType : WCDBSwift.CodingTableKey {
+  final public func config(with tableBinding: WCDBSwift.TableBindingBase)
+  required public init(_ indexes: any WCDBSwift.IndexedColumnConvertible..., namedWith subfix: Swift.String, isUnique: Swift.Bool = false)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class IndexedColumn : WCDBSwift.Identifier<WCDB_Private.CPPIndexedColumn> {
+  public init(with columnConvertible: any WCDBSwift.ColumnConvertible)
+  public init(with expressionConvertible: any WCDBSwift.ExpressionConvertible)
+  @discardableResult
+  final public func order(_ order: WCDBSwift.Order) -> WCDBSwift.IndexedColumn
+  @discardableResult
+  final public func collate(_ collation: Swift.String) -> WCDBSwift.IndexedColumn
+  @objc deinit
+}
+extension WCDBSwift.IndexedColumn : WCDBSwift.IndexedColumnConvertible {
+  final public func asIndex() -> WCDBSwift.IndexedColumn
+}
+@_hasMissingDesignatedInitializers final public class Insert {
+  final public var statement: WCDBSwift.StatementInsert {
+    get
+    set
+  }
+  final public func execute<Object>(with objects: Object...) throws where Object : WCDBSwift.TableEncodable
+  final public func execute<Object>(with objects: [Object]) throws where Object : WCDBSwift.TableEncodable
+  @objc deinit
+}
+public protocol InsertInterface : AnyObject {
+  func insert<Object>(_ objects: Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+  func insert<Object>(_ objects: [Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+  func insertOrReplace<Object>(_ objects: Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+  func insertOrReplace<Object>(_ objects: [Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+  func insertOrIgnore<Object>(_ objects: Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+  func insertOrIgnore<Object>(_ objects: [Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+}
+extension WCDBSwift.InsertInterface where Self : WCDBSwift.HandleRepresentable {
+  public func insert<Object>(_ objects: [Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+  public func insertOrReplace<Object>(_ objects: [Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+  public func insertOrIgnore<Object>(_ objects: [Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+  public func insert<Object>(_ objects: Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+  public func insertOrReplace<Object>(_ objects: Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+  public func insertOrIgnore<Object>(_ objects: Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil, intoTable table: Swift.String) throws where Object : WCDBSwift.TableEncodable
+}
+@_hasMissingDesignatedInitializers final public class Join : WCDBSwift.Identifier<WCDB_Private.CPPJoin> {
+  public init(with subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible)
+  @discardableResult
+  final public func join(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func with(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func leftOuterJoin(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func leftJoin(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func innerJoin(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func crossJoin(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func naturalJoin(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func naturalLeftOuterJoin(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func naturalLeftJoin(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func naturalInnerJoin(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func naturalCrossJoin(_ subqueryConvertible: any WCDBSwift.TableOrSubqueryConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func on(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Join
+  @discardableResult
+  final public func using(_ columnConvertibleList: any WCDBSwift.ColumnConvertible...) -> WCDBSwift.Join
+  @discardableResult
+  final public func using(_ columnConvertibleList: [any WCDBSwift.ColumnConvertible]) -> WCDBSwift.Join
+  @objc deinit
+}
+extension WCDBSwift.Join : WCDBSwift.TableOrSubqueryConvertible {
+  final public func asTableOrSubquery() -> WCDBSwift.TableOrSubquery
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class LiteralValue : WCDBSwift.Identifier<WCDB_Private.CPPLiteralValue> {
+  convenience public init(_ value: Swift.Int32)
+  convenience public init(_ value: Swift.Int64)
+  convenience public init(_ value: Swift.Bool)
+  convenience public init(_ value: Swift.Double)
+  convenience public init(_ value: Swift.String)
+  convenience public init(_ value: Foundation.Data)
+  convenience public init(_ value: Swift.Void?)
+  convenience public init(_ value: WCDBSwift.Value)
+  convenience public init<T>(_ encodedValue: T) where T : WCDBSwift.ColumnEncodable
+  public static func currentTime() -> WCDBSwift.LiteralValue
+  public static func currentDate() -> WCDBSwift.LiteralValue
+  public static func currentTimestamp() -> WCDBSwift.LiteralValue
+  @objc deinit
+}
+extension WCDBSwift.LiteralValue : Swift.ExpressibleByNilLiteral {
+  convenience public init(nilLiteral: ())
+}
+extension WCDBSwift.LiteralValue : Swift.ExpressibleByIntegerLiteral {
+  convenience public init(integerLiteral value: Swift.Int)
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension WCDBSwift.LiteralValue : Swift.ExpressibleByBooleanLiteral {
+  convenience public init(booleanLiteral value: Swift.Bool)
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension WCDBSwift.LiteralValue : Swift.ExpressibleByFloatLiteral {
+  convenience public init(floatLiteral value: Swift.Double)
+  public typealias FloatLiteralType = Swift.Double
+}
+extension WCDBSwift.LiteralValue : Swift.ExpressibleByStringLiteral {
+  convenience public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension WCDBSwift.LiteralValue : WCDBSwift.LiteralValueConvertible {
+  final public func asLiteralValue() -> WCDBSwift.LiteralValue
+}
+public struct Master : WCDBSwift.TableCodable {
+  public static let builtinTableName: Swift.String
+  public var type: Swift.String?
+  public var name: Swift.String?
+  public var tableName: Swift.String?
+  public var rootpage: Swift.Int?
+  public var sql: Swift.String?
+  public enum CodingKeys : Swift.String, WCDBSwift.CodingTableKey {
+    public typealias Root = WCDBSwift.Master
+    case type
+    case name
+    case tableName
+    case rootpage
+    case sql
+    public static let objectRelationalMapping: WCDBSwift.TableBinding<WCDBSwift.Master.CodingKeys>
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+final public class MultiPrimaryConfig<CodingTableKeyType> : WCDBSwift.TableConfiguration where CodingTableKeyType : WCDBSwift.CodingTableKey {
+  final public func config(with tableBinding: WCDBSwift.TableBindingBase)
+  required public init(_ indexes: any WCDBSwift.IndexedColumnConvertible..., onConflict conflict: WCDBSwift.ConflictAction? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class MultiSelect : WCDBSwift.Selectable {
+  final public func nextMultiObject() throws -> [Swift.String : Any]?
+  final public func allMultiObjects() throws -> [[Swift.String : Any]]
+  @objc deinit
+}
+final public class MultiUniqueConfig<CodingTableKeyType> : WCDBSwift.TableConfiguration where CodingTableKeyType : WCDBSwift.CodingTableKey {
+  final public func config(with tableBinding: WCDBSwift.TableBindingBase)
+  required public init(_ codingKeys: CodingTableKeyType..., onConflict conflict: WCDBSwift.ConflictAction? = nil)
+  @objc deinit
+}
+public protocol ExpressionUnaryOperable : WCDBSwift.ExpressionConvertible {
+  prefix static func ! (operand: Self) -> WCDBSwift.Expression
+  prefix static func + (operand: Self) -> WCDBSwift.Expression
+  prefix static func - (operand: Self) -> WCDBSwift.Expression
+  prefix static func ~ (operand: Self) -> WCDBSwift.Expression
+  func isNull() -> WCDBSwift.Expression
+  func isNotNull() -> WCDBSwift.Expression
+}
+extension WCDBSwift.ExpressionUnaryOperable {
+  prefix public static func ! (operand: Self) -> WCDBSwift.Expression
+  prefix public static func + (operand: Self) -> WCDBSwift.Expression
+  prefix public static func - (operand: Self) -> WCDBSwift.Expression
+  prefix public static func ~ (operand: Self) -> WCDBSwift.Expression
+  public func isNull() -> WCDBSwift.Expression
+  public func isNotNull() -> WCDBSwift.Expression
+}
+public protocol ExpressionBinaryOperable : WCDBSwift.ExpressionConvertible {
+  static func || <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func && <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func * <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func / <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func % <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func + <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func - <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func << <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func >> <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func & <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func | <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func < <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func <= <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func > <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func >= <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func == <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  static func != <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  func concat(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+}
+extension WCDBSwift.ExpressionBinaryOperable {
+  public static func || <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func && <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func * <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func / <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func % <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func + <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func - <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func << <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func >> <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func & <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func | <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func < <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func <= <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func > <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func >= <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func == <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public static func != <ExpressionConvertibleType>(left: Self, right: ExpressionConvertibleType) -> WCDBSwift.Expression where ExpressionConvertibleType : WCDBSwift.ExpressionConvertible
+  public func concat(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+}
+public protocol ExpressionBetweenOperable : WCDBSwift.ExpressionConvertible {
+  func between(_ begin: any WCDBSwift.ExpressionConvertible, _ end: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func notBetween(_ begin: any WCDBSwift.ExpressionConvertible, _ end: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+}
+extension WCDBSwift.ExpressionBetweenOperable {
+  public func between(_ begin: any WCDBSwift.ExpressionConvertible, _ end: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func notBetween(_ begin: any WCDBSwift.ExpressionConvertible, _ end: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func between(_ begin: any WCDBSwift.ExpressionConvertible, _ end: any WCDBSwift.ExpressionConvertible, isNot: Swift.Bool) -> WCDBSwift.Expression
+}
+public protocol ExpressionInOperable : WCDBSwift.ExpressionConvertible {
+  func `in`(function: Swift.String) -> WCDBSwift.Expression
+  func notIn(function: Swift.String) -> WCDBSwift.Expression
+  func inTable(_ name: Swift.String) -> WCDBSwift.Expression
+  func notInTable(_ name: Swift.String) -> WCDBSwift.Expression
+  func `in`(_ statementSelect: WCDBSwift.StatementSelect) -> WCDBSwift.Expression
+  func notIn(_ statementSelect: WCDBSwift.StatementSelect) -> WCDBSwift.Expression
+  func `in`(_ expressionConvertibleList: any WCDBSwift.ExpressionConvertible...) -> WCDBSwift.Expression
+  func notIn(_ expressionConvertibleList: any WCDBSwift.ExpressionConvertible...) -> WCDBSwift.Expression
+  func `in`(_ expressionConvertibleList: [any WCDBSwift.ExpressionConvertible]) -> WCDBSwift.Expression
+  func notIn(_ expressionConvertibleList: [any WCDBSwift.ExpressionConvertible]) -> WCDBSwift.Expression
+}
+extension WCDBSwift.ExpressionInOperable {
+  public func `in`(function: Swift.String) -> WCDBSwift.Expression
+  public func notIn(function: Swift.String) -> WCDBSwift.Expression
+  public func inTable(_ name: Swift.String) -> WCDBSwift.Expression
+  public func notInTable(_ name: Swift.String) -> WCDBSwift.Expression
+  public func `in`(_ statementSelect: WCDBSwift.StatementSelect) -> WCDBSwift.Expression
+  public func notIn(_ statementSelect: WCDBSwift.StatementSelect) -> WCDBSwift.Expression
+  public func `in`(_ expressionConvertibleList: any WCDBSwift.ExpressionConvertible...) -> WCDBSwift.Expression
+  public func notIn(_ expressionConvertibleList: any WCDBSwift.ExpressionConvertible...) -> WCDBSwift.Expression
+  public func `in`(_ expressionConvertibleList: [any WCDBSwift.ExpressionConvertible]) -> WCDBSwift.Expression
+  public func notIn(_ expressionConvertibleList: [any WCDBSwift.ExpressionConvertible]) -> WCDBSwift.Expression
+}
+public protocol ExpressionCollateOperable : WCDBSwift.ExpressionConvertible {
+  func collate(_ collation: Swift.String) -> WCDBSwift.Expression
+}
+extension WCDBSwift.ExpressionCollateOperable {
+  public func collate(_ collation: Swift.String) -> WCDBSwift.Expression
+}
+public protocol ExpressionFunctionOperable : WCDBSwift.ExpressionConvertible {
+  func substr(start: any WCDBSwift.ExpressionConvertible, length: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func like(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func glob(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func match(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func regexp(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func notLike(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func notGlob(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func notMatch(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func notRegexp(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func `is`(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func isNot(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  func collate(_ collation: Swift.String) -> WCDBSwift.Expression
+  func avg(isDistinct: Swift.Bool) -> WCDBSwift.Expression
+  func count(isDistinct: Swift.Bool) -> WCDBSwift.Expression
+  func groupConcat(isDistinct: Swift.Bool) -> WCDBSwift.Expression
+  func groupConcat(isDistinct: Swift.Bool, separateBy seperator: Swift.String) -> WCDBSwift.Expression
+  func max(isDistinct: Swift.Bool) -> WCDBSwift.Expression
+  func min(isDistinct: Swift.Bool) -> WCDBSwift.Expression
+  func sum(isDistinct: Swift.Bool) -> WCDBSwift.Expression
+  func total(isDistinct: Swift.Bool) -> WCDBSwift.Expression
+  func abs() -> WCDBSwift.Expression
+  func hex() -> WCDBSwift.Expression
+  func length() -> WCDBSwift.Expression
+  func lower() -> WCDBSwift.Expression
+  func upper() -> WCDBSwift.Expression
+  func round() -> WCDBSwift.Expression
+  func matchinfo() -> WCDBSwift.Expression
+  func offsets() -> WCDBSwift.Expression
+  func snippet() -> WCDBSwift.Expression
+  func bm25() -> WCDBSwift.Expression
+  func highlight() -> WCDBSwift.Expression
+  func substringMatchInfo() -> WCDBSwift.Expression
+}
+extension WCDBSwift.ExpressionFunctionOperable {
+  public func substr(start: any WCDBSwift.ExpressionConvertible, length: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func like(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func glob(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func match(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func regexp(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func notLike(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func notGlob(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func notMatch(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func notRegexp(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func `is`(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func isNot(_ operand: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Expression
+  public func avg(isDistinct: Swift.Bool = false) -> WCDBSwift.Expression
+  public func count(isDistinct: Swift.Bool = false) -> WCDBSwift.Expression
+  public func groupConcat(isDistinct: Swift.Bool = false) -> WCDBSwift.Expression
+  public func groupConcat(isDistinct: Swift.Bool = false, separateBy seperator: Swift.String) -> WCDBSwift.Expression
+  public func max(isDistinct: Swift.Bool = false) -> WCDBSwift.Expression
+  public func min(isDistinct: Swift.Bool = false) -> WCDBSwift.Expression
+  public func sum(isDistinct: Swift.Bool = false) -> WCDBSwift.Expression
+  public func total(isDistinct: Swift.Bool = false) -> WCDBSwift.Expression
+  public func abs() -> WCDBSwift.Expression
+  public func hex() -> WCDBSwift.Expression
+  public func length() -> WCDBSwift.Expression
+  public func lower() -> WCDBSwift.Expression
+  public func upper() -> WCDBSwift.Expression
+  public func round() -> WCDBSwift.Expression
+  public func matchinfo() -> WCDBSwift.Expression
+  public func offsets() -> WCDBSwift.Expression
+  public func snippet() -> WCDBSwift.Expression
+  public func bm25() -> WCDBSwift.Expression
+  public func highlight() -> WCDBSwift.Expression
+  public func substringMatchInfo() -> WCDBSwift.Expression
+}
+public typealias ExpressionOperable = WCDBSwift.ExpressionBetweenOperable & WCDBSwift.ExpressionBinaryOperable & WCDBSwift.ExpressionCollateOperable & WCDBSwift.ExpressionFunctionOperable & WCDBSwift.ExpressionInOperable & WCDBSwift.ExpressionUnaryOperable
+public protocol OptionalRepresentable {
+  associatedtype WrappedType
+  static var `nil`: Self { get }
+}
+extension Swift.Optional : WCDBSwift.OptionalRepresentable {
+  public static var `nil`: Wrapped? {
+    get
+  }
+  public typealias WrappedType = Wrapped
+}
+@_hasMissingDesignatedInitializers final public class OrderingTerm : WCDBSwift.Identifier<WCDB_Private.CPPOrderingTerm> {
+  public init(with expressionConvertible: any WCDBSwift.ExpressionConvertible)
+  @discardableResult
+  final public func order(_ order: WCDBSwift.Order?) -> WCDBSwift.OrderingTerm
+  @discardableResult
+  final public func collate(_ collation: Swift.String) -> WCDBSwift.OrderingTerm
+  public static func ascendingRowid() -> WCDBSwift.OrderingTerm
+  public static func descendingRowid() -> WCDBSwift.OrderingTerm
+  @objc deinit
+}
+extension WCDBSwift.OrderingTerm : WCDBSwift.OrderingTermConvertible {
+  final public func asOrder() -> WCDBSwift.OrderingTerm
+}
+@_hasMissingDesignatedInitializers final public class Pragma : WCDBSwift.Identifier<WCDB_Private.CPPPragma> {
+  public init(named name: Swift.String)
+  public static let applicationId: WCDBSwift.Pragma
+  public static let autoVacuum: WCDBSwift.Pragma
+  public static let automaticIndex: WCDBSwift.Pragma
+  public static let busyTimeout: WCDBSwift.Pragma
+  public static let cacheSize: WCDBSwift.Pragma
+  public static let cacheSpill: WCDBSwift.Pragma
+  public static let caseSensitiveLike: WCDBSwift.Pragma
+  public static let cellSizeCheck: WCDBSwift.Pragma
+  public static let checkpointFullfsync: WCDBSwift.Pragma
+  public static let cipher: WCDBSwift.Pragma
+  public static let cipherAddRandom: WCDBSwift.Pragma
+  public static let cipherDefaultKdfIter: WCDBSwift.Pragma
+  public static let cipherDefaultPageSize: WCDBSwift.Pragma
+  public static let cipherDefaultUseHmac: WCDBSwift.Pragma
+  public static let cipherMigrate: WCDBSwift.Pragma
+  public static let cipherProfile: WCDBSwift.Pragma
+  public static let cipherProvider: WCDBSwift.Pragma
+  public static let cipherProviderVersion: WCDBSwift.Pragma
+  public static let cipherUseHmac: WCDBSwift.Pragma
+  public static let cipherVersion: WCDBSwift.Pragma
+  public static let cipherPageSize: WCDBSwift.Pragma
+  public static let cipherSalt: WCDBSwift.Pragma
+  public static let cipherPlainTextHeaderSize: WCDBSwift.Pragma
+  public static let collationList: WCDBSwift.Pragma
+  public static let compileOptions: WCDBSwift.Pragma
+  public static let countChanges: WCDBSwift.Pragma
+  public static let dataStoreDirectory: WCDBSwift.Pragma
+  public static let dataVersion: WCDBSwift.Pragma
+  public static let databaseList: WCDBSwift.Pragma
+  public static let defaultCacheSize: WCDBSwift.Pragma
+  public static let deferForeignKeys: WCDBSwift.Pragma
+  public static let emptyResultCallbacks: WCDBSwift.Pragma
+  public static let encoding: WCDBSwift.Pragma
+  public static let foreignKeyCheck: WCDBSwift.Pragma
+  public static let foreignKeyList: WCDBSwift.Pragma
+  public static let foreignKeys: WCDBSwift.Pragma
+  public static let freelistCount: WCDBSwift.Pragma
+  public static let fullColumnNames: WCDBSwift.Pragma
+  public static let fullfsync: WCDBSwift.Pragma
+  public static let ignoreCheckConstraints: WCDBSwift.Pragma
+  public static let incrementalVacuum: WCDBSwift.Pragma
+  public static let indexInfo: WCDBSwift.Pragma
+  public static let indexList: WCDBSwift.Pragma
+  public static let indexXinfo: WCDBSwift.Pragma
+  public static let integrityCheck: WCDBSwift.Pragma
+  public static let journalMode: WCDBSwift.Pragma
+  public static let journalSizeLimit: WCDBSwift.Pragma
+  public static let key: WCDBSwift.Pragma
+  public static let kdfIter: WCDBSwift.Pragma
+  public static let legacyFileFormat: WCDBSwift.Pragma
+  public static let lockingMode: WCDBSwift.Pragma
+  public static let maxPageCount: WCDBSwift.Pragma
+  public static let mmapSize: WCDBSwift.Pragma
+  public static let pageCount: WCDBSwift.Pragma
+  public static let pageSize: WCDBSwift.Pragma
+  public static let parserTrace: WCDBSwift.Pragma
+  public static let queryOnly: WCDBSwift.Pragma
+  public static let quickCheck: WCDBSwift.Pragma
+  public static let readUncommitted: WCDBSwift.Pragma
+  public static let recursiveTriggers: WCDBSwift.Pragma
+  public static let rekey: WCDBSwift.Pragma
+  public static let reverseUnorderedSelects: WCDBSwift.Pragma
+  public static let schemaVersion: WCDBSwift.Pragma
+  public static let secureDelete: WCDBSwift.Pragma
+  public static let shortColumnNames: WCDBSwift.Pragma
+  public static let shrinkMemory: WCDBSwift.Pragma
+  public static let softHeapLimit: WCDBSwift.Pragma
+  public static let stats: WCDBSwift.Pragma
+  public static let synchronous: WCDBSwift.Pragma
+  public static let tableInfo: WCDBSwift.Pragma
+  public static let tempStore: WCDBSwift.Pragma
+  public static let tempStoreDirectory: WCDBSwift.Pragma
+  public static let threads: WCDBSwift.Pragma
+  public static let userVersion: WCDBSwift.Pragma
+  public static let vdbeAddoptrace: WCDBSwift.Pragma
+  public static let vdbeDebug: WCDBSwift.Pragma
+  public static let vdbeListing: WCDBSwift.Pragma
+  public static let vdbeTrace: WCDBSwift.Pragma
+  public static let walAutocheckpoint: WCDBSwift.Pragma
+  public static let walCheckpoint: WCDBSwift.Pragma
+  public static let writableSchema: WCDBSwift.Pragma
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class PreparedStatement {
+  @objc deinit
+}
+public protocol RawStatementmentRepresentable {
+  func getRawStatement() -> WCDB_Private.CPPHandleStatement
+  func finalizeWhenError() -> Swift.Bool
+}
+extension WCDBSwift.PreparedStatement : WCDBSwift.RawStatementmentRepresentable {
+  final public func getRawStatement() -> WCDB_Private.CPPHandleStatement
+  final public func finalizeWhenError() -> Swift.Bool
+}
+extension WCDBSwift.PreparedStatement : WCDBSwift.StatementInterface {
+}
+public protocol PropertyConvertible : WCDBSwift.ColumnConvertible, WCDBSwift.PropertyRedirectable {
+  func isSwiftProperty() -> Swift.Bool
+  var codingTableKey: (any WCDBSwift.CodingTableKeyBase)? { get }
+  func asProperty() -> WCDBSwift.Property
+  func `in`(table: Swift.String) -> WCDBSwift.Property
+  func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.Property
+}
+public typealias PropertyOperable = WCDBSwift.PropertyConvertible & WCDBSwift.ExpressionOperable
+final public class Property : WCDBSwift.Describable {
+  final public var description: Swift.String {
+    get
+  }
+  final public var codingTableKey: (any WCDBSwift.CodingTableKeyBase)? {
+    get
+  }
+  public init(named name: Swift.String, with codingTableKey: (any WCDBSwift.CodingTableKeyBase)?)
+  public init(with codingTableKey: any WCDBSwift.CodingTableKeyBase)
+  final public var name: Swift.String {
+    get
+  }
+  @objc deinit
+}
+extension WCDBSwift.Property : WCDBSwift.PropertyOperable {
+  final public func isSwiftProperty() -> Swift.Bool
+  final public func asProperty() -> WCDBSwift.Property
+  final public func `in`(table: Swift.String) -> WCDBSwift.Property
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.Property
+  final public func asColumn() -> WCDBSwift.Column
+}
+@_hasMissingDesignatedInitializers final public class QualifiedTable : WCDBSwift.Identifier<WCDB_Private.CPPQualifiedTable> {
+  public init(with name: Swift.String)
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.QualifiedTable
+  @discardableResult
+  final public func `as`(_ alias: Swift.String) -> WCDBSwift.QualifiedTable
+  @discardableResult
+  final public func indexed(by indexName: Swift.String) -> WCDBSwift.QualifiedTable
+  @discardableResult
+  final public func notIndexed() -> WCDBSwift.QualifiedTable
+  @objc deinit
+}
+extension WCDBSwift.QualifiedTable : WCDBSwift.QualifiedTableConvertible {
+  final public func asQualifiedTable() -> WCDBSwift.QualifiedTable
+}
+extension Swift.String : WCDBSwift.QualifiedTableConvertible {
+  public func asQualifiedTable() -> WCDBSwift.QualifiedTable
+}
+@_hasMissingDesignatedInitializers final public class RaiseFunction : WCDBSwift.Identifier<WCDB_Private.CPPRaiseFunction> {
+  public init()
+  @discardableResult
+  final public func ignore() -> WCDBSwift.RaiseFunction
+  @discardableResult
+  final public func rollback(with errorMessage: Swift.String) -> WCDBSwift.RaiseFunction
+  @discardableResult
+  final public func abort(with errorMessage: Swift.String) -> WCDBSwift.RaiseFunction
+  @discardableResult
+  final public func fail(with errorMessage: Swift.String) -> WCDBSwift.RaiseFunction
+  @objc deinit
+}
+extension WCDBSwift.RaiseFunction : WCDBSwift.ExpressionConvertible {
+  final public func asExpression() -> WCDBSwift.Expression
+}
+public protocol PropertyRedirectable {
+  func `as`(_ propertyConvertible: any WCDBSwift.PropertyConvertible) -> WCDBSwift.Property
+}
+extension WCDBSwift.PropertyRedirectable where Self : Swift.CustomStringConvertible {
+  public func `as`(_ propertyConvertible: any WCDBSwift.PropertyConvertible) -> WCDBSwift.Property
+}
+extension WCDBSwift.Column : WCDBSwift.PropertyRedirectable {
+}
+extension WCDBSwift.ResultColumn : WCDBSwift.PropertyRedirectable {
+}
+extension WCDBSwift.Expression : WCDBSwift.PropertyRedirectable {
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ResultColumn : WCDBSwift.Identifier<WCDB_Private.CPPResultColumn> {
+  convenience public init(with expressionConvertible: any WCDBSwift.ExpressionConvertible)
+  @discardableResult
+  final public func `as`(_ alias: Swift.String) -> WCDBSwift.ResultColumn
+  @objc deinit
+}
+extension WCDBSwift.ResultColumn : WCDBSwift.ResultColumnConvertible {
+  final public func asResultColumn() -> WCDBSwift.ResultColumn
+}
+@_hasMissingDesignatedInitializers final public class RowSelect : WCDBSwift.Selectable {
+  final public func nextRow() throws -> WCDBSwift.OneRowValue?
+  final public func allRows() throws -> WCDBSwift.MultiRowsValue
+  final public func nextValue() throws -> WCDBSwift.Value?
+  final public func allValues() throws -> WCDBSwift.OneColumnValue
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class Schema : WCDBSwift.Identifier<WCDB_Private.CPPSchema> {
+  convenience public init(with name: Swift.String)
+  public static let main: WCDBSwift.Schema
+  public static let temp: WCDBSwift.Schema
+  @objc deinit
+}
+extension WCDBSwift.Schema : WCDBSwift.SchemaConvertible {
+  final public func asSchema() -> WCDBSwift.Schema
+}
+extension Swift.String : WCDBSwift.SchemaConvertible {
+  public func asSchema() -> WCDBSwift.Schema
+}
+@_hasMissingDesignatedInitializers final public class Select : WCDBSwift.Selectable {
+  final public func nextObject() throws -> Any?
+  final public func allObjects() throws -> [Any]
+  final public func nextObject<Object>(of type: Object.Type = Object.self) throws -> Object? where Object : WCDBSwift.TableDecodable
+  final public func allObjects<Object>(of type: Object.Type = Object.self) throws -> [Object] where Object : WCDBSwift.TableDecodable
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Selectable {
+  final public let statement: WCDBSwift.StatementSelect
+  @objc deinit
+  @discardableResult
+  final public func next() throws -> Swift.Bool
+  @discardableResult
+  final public func `where`(_ condition: any WCDBSwift.ExpressionConvertible) -> Self
+  @discardableResult
+  final public func order(by orderConvertibleList: any WCDBSwift.OrderingTermConvertible...) -> Self
+  @discardableResult
+  final public func order(by orderConvertibleList: [any WCDBSwift.OrderingTermConvertible]) -> Self
+  @discardableResult
+  final public func limit(from begin: any WCDBSwift.ExpressionConvertible, to end: any WCDBSwift.ExpressionConvertible) -> Self
+  @discardableResult
+  final public func limit(_ expressionConvertibleLimit: any WCDBSwift.ExpressionConvertible) -> Self
+  @discardableResult
+  final public func limit(_ expressionConvertibleLimit: any WCDBSwift.ExpressionConvertible, offset expressionConvertibleOffset: any WCDBSwift.ExpressionConvertible) -> Self
+  @discardableResult
+  final public func group(by expressionConvertibleGroupList: any WCDBSwift.ExpressionConvertible...) -> Self
+  @discardableResult
+  final public func group(by expressionConvertibleGroupList: [any WCDBSwift.ExpressionConvertible]) -> Self
+  @discardableResult
+  final public func having(_ expressionConvertibleHaving: any WCDBSwift.ExpressionConvertible) -> Self
+}
+public protocol RowSelectInterface : AnyObject {
+  func getRows(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.MultiRowsValue
+  func getRows(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.MultiRowsValue
+  func getRow(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.OneRowValue
+  func getRow(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.OneRowValue
+  func getColumn(on resultColumnConvertible: any WCDBSwift.ResultColumnConvertible, fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.OneColumnValue
+  func getDistinctColumn(on resultColumnConvertible: any WCDBSwift.ResultColumnConvertible, fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.OneColumnValue
+  func getValue(on resultColumnConvertible: any WCDBSwift.ResultColumnConvertible, fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.Value
+  func getDistinctValue(on result: any WCDBSwift.ResultColumnConvertible, fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.Value
+}
+extension WCDBSwift.RowSelectInterface where Self : WCDBSwift.HandleRepresentable {
+  public func getRows(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.MultiRowsValue
+  public func getRows(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.MultiRowsValue
+  public func getRow(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.OneRowValue
+  public func getRow(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.OneRowValue
+  public func getColumn(on result: any WCDBSwift.ResultColumnConvertible, fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.OneColumnValue
+  public func getDistinctColumn(on result: any WCDBSwift.ResultColumnConvertible, fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.OneColumnValue
+  public func getValue(on result: any WCDBSwift.ResultColumnConvertible, fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.Value
+  public func getDistinctValue(on result: any WCDBSwift.ResultColumnConvertible, fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.Value
+}
+public protocol SelectInterface : AnyObject {
+  func getObjects<Object>(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> [Object] where Object : WCDBSwift.TableDecodable
+  func getObjects<Object>(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> [Object] where Object : WCDBSwift.TableDecodable
+  func getObject<Object>(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> Object? where Object : WCDBSwift.TableDecodable
+  func getObject<Object>(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> Object? where Object : WCDBSwift.TableDecodable
+}
+extension WCDBSwift.SelectInterface where Self : WCDBSwift.HandleRepresentable {
+  public func getObjects<Object>(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> [Object] where Object : WCDBSwift.TableDecodable
+  public func getObjects<Object>(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> [Object] where Object : WCDBSwift.TableDecodable
+  public func getObject<Object>(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> Object? where Object : WCDBSwift.TableDecodable
+  public func getObject<Object>(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., fromTable table: Swift.String, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> Object? where Object : WCDBSwift.TableDecodable
+}
+public protocol Statement : AnyObject, Swift.CustomStringConvertible {
+  var rawCPPObj: Swift.UnsafeMutablePointer<WCDB_Private.CPPObject> { get }
+}
+@_hasMissingDesignatedInitializers final public class StatementAlterTable : WCDBSwift.Identifier<WCDB_Private.CPPStatementAlterTable>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func alter(table: Swift.String) -> WCDBSwift.StatementAlterTable
+  @discardableResult
+  final public func schema(_ schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementAlterTable
+  @discardableResult
+  final public func rename(to newTable: Swift.String) -> WCDBSwift.StatementAlterTable
+  final public func rename(column columnConvertible: any WCDBSwift.ColumnConvertible, to newColumnConvertible: any WCDBSwift.ColumnConvertible) -> WCDBSwift.StatementAlterTable
+  @discardableResult
+  final public func addColumn(with columnDef: WCDBSwift.ColumnDef) -> WCDBSwift.StatementAlterTable
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementAnalyze : WCDBSwift.Identifier<WCDB_Private.CPPStatementAnalyze>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func analyze() -> WCDBSwift.StatementAnalyze
+  @discardableResult
+  final public func schema(_ schemaConcertable: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementAnalyze
+  @discardableResult
+  final public func table(_ name: Swift.String) -> WCDBSwift.StatementAnalyze
+  @discardableResult
+  final public func index(_ name: Swift.String) -> WCDBSwift.StatementAnalyze
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementAttach : WCDBSwift.Identifier<WCDB_Private.CPPStatementAttach>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func attach(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementAttach
+  @discardableResult
+  final public func `as`(_ schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementAttach
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementBegin : WCDBSwift.Identifier<WCDB_Private.CPPStatementBegin>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func begin(_ transactionType: WCDBSwift.TransactionType) -> WCDBSwift.StatementBegin
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementCommit : WCDBSwift.Identifier<WCDB_Private.CPPStatementCommit>, WCDBSwift.Statement {
+  public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementCreateIndex : WCDBSwift.Identifier<WCDB_Private.CPPStatementCreateIndex>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func create(index: Swift.String, isUnique: Swift.Bool = false) -> WCDBSwift.StatementCreateIndex
+  @discardableResult
+  final public func unique() -> WCDBSwift.StatementCreateIndex
+  @discardableResult
+  final public func ifNotExists() -> WCDBSwift.StatementCreateIndex
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementCreateIndex
+  @discardableResult
+  final public func on(table: Swift.String) -> WCDBSwift.StatementCreateIndex
+  @discardableResult
+  final public func indexesBy(_ indexedColumnConvertibleList: any WCDBSwift.IndexedColumnConvertible...) -> WCDBSwift.StatementCreateIndex
+  @discardableResult
+  final public func indexesBy(_ indexedColumnConvertibleList: [any WCDBSwift.IndexedColumnConvertible]) -> WCDBSwift.StatementCreateIndex
+  @discardableResult
+  final public func `where`(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementCreateIndex
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementCreateTable : WCDBSwift.Identifier<WCDB_Private.CPPStatementCreateTable>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func create(table: Swift.String, isTemp: Swift.Bool = false) -> WCDBSwift.StatementCreateTable
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementCreateTable
+  @discardableResult
+  final public func ifNotExists() -> WCDBSwift.StatementCreateTable
+  @discardableResult
+  final public func `as`(_ select: WCDBSwift.StatementSelect) -> WCDBSwift.StatementCreateTable
+  @discardableResult
+  final public func with(columns: WCDBSwift.ColumnDef...) -> WCDBSwift.StatementCreateTable
+  @discardableResult
+  final public func with(columns: [WCDBSwift.ColumnDef]) -> WCDBSwift.StatementCreateTable
+  @discardableResult
+  final public func constraint(_ constraints: WCDBSwift.TableConstraint...) -> WCDBSwift.StatementCreateTable
+  @discardableResult
+  final public func constraint(_ constraints: [WCDBSwift.TableConstraint]? = nil) -> WCDBSwift.StatementCreateTable
+  @discardableResult
+  final public func withoutRowid() -> WCDBSwift.StatementCreateTable
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementCreateTrigger : WCDBSwift.Identifier<WCDB_Private.CPPStatementCreateTrigger>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func create(trigger: Swift.String, isTemp: Swift.Bool = false) -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func ifNotExists() -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func before() -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func after() -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func insteadOf() -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func delete() -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func insert() -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func update() -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func of(columns columnConvertibleList: any WCDBSwift.ColumnConvertible...) -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func of(columns columnConvertibleList: [any WCDBSwift.ColumnConvertible]) -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func on(table: Swift.String) -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func forEachRow() -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func when(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func execute(_ insert: WCDBSwift.StatementInsert) -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func execute(_ update: WCDBSwift.StatementUpdate) -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func execute(_ delete: WCDBSwift.StatementDelete) -> WCDBSwift.StatementCreateTrigger
+  @discardableResult
+  final public func execute(_ select: WCDBSwift.StatementSelect) -> WCDBSwift.StatementCreateTrigger
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementCreateView : WCDBSwift.Identifier<WCDB_Private.CPPStatementCreateView>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func create(view: Swift.String, isTemp: Swift.Bool = false) -> WCDBSwift.StatementCreateView
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementCreateView
+  @discardableResult
+  final public func ifNotExists() -> WCDBSwift.StatementCreateView
+  @discardableResult
+  final public func `as`(_ select: WCDBSwift.StatementSelect) -> WCDBSwift.StatementCreateView
+  final public func with(columns: WCDBSwift.Column...) -> WCDBSwift.StatementCreateView
+  final public func with(columns: [WCDBSwift.Column]) -> WCDBSwift.StatementCreateView
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementCreateVirtualTable : WCDBSwift.Identifier<WCDB_Private.CPPStatementCreateVirtualTable>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func create(virtualTable table: Swift.String) -> WCDBSwift.StatementCreateVirtualTable
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementCreateVirtualTable
+  @discardableResult
+  final public func ifNotExists() -> WCDBSwift.StatementCreateVirtualTable
+  @discardableResult
+  final public func using(module: WCDBSwift.FTSVersion) -> WCDBSwift.StatementCreateVirtualTable
+  @discardableResult
+  final public func using(module: Swift.String) -> WCDBSwift.StatementCreateVirtualTable
+  @discardableResult
+  final public func arguments(_ args: [any Swift.CustomStringConvertible]) -> WCDBSwift.StatementCreateVirtualTable
+  @discardableResult
+  final public func arguments(_ args: any Swift.CustomStringConvertible...) -> WCDBSwift.StatementCreateVirtualTable
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementDelete : WCDBSwift.Identifier<WCDB_Private.CPPStatementDelete>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func with(recursive: Swift.Bool = false, _ expList: WCDBSwift.CommonTableExpression...) -> WCDBSwift.StatementDelete
+  @discardableResult
+  final public func with(recursive: Swift.Bool = false, _ expList: [WCDBSwift.CommonTableExpression]) -> WCDBSwift.StatementDelete
+  @discardableResult
+  final public func delete(from qualifiedTableConvertible: any WCDBSwift.QualifiedTableConvertible) -> WCDBSwift.StatementDelete
+  @discardableResult
+  final public func `where`(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementDelete
+  @discardableResult
+  final public func order(by orderConvertibleList: any WCDBSwift.OrderingTermConvertible...) -> WCDBSwift.StatementDelete
+  @discardableResult
+  final public func order(by orderConvertibleList: [any WCDBSwift.OrderingTermConvertible]) -> WCDBSwift.StatementDelete
+  @discardableResult
+  final public func limit(from expressionConvertibleFrom: any WCDBSwift.ExpressionConvertible, to expressionConvertibleTo: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementDelete
+  @discardableResult
+  final public func limit(_ expressionConvertibleLimit: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementDelete
+  @discardableResult
+  final public func offset(_ expressionConvertibleOffset: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementDelete
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementDetach : WCDBSwift.Identifier<WCDB_Private.CPPStatementDetach>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func detach(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementDetach
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementDropIndex : WCDBSwift.Identifier<WCDB_Private.CPPStatementDropIndex>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func drop(index: Swift.String) -> WCDBSwift.StatementDropIndex
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementDropIndex
+  @discardableResult
+  final public func ifExists() -> WCDBSwift.StatementDropIndex
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementDropTable : WCDBSwift.Identifier<WCDB_Private.CPPStatementDropTable>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func drop(table: Swift.String) -> WCDBSwift.StatementDropTable
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementDropTable
+  @discardableResult
+  final public func ifExists() -> WCDBSwift.StatementDropTable
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementDropTrigger : WCDBSwift.Identifier<WCDB_Private.CPPStatementDropTrigger>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func drop(trigger: Swift.String) -> WCDBSwift.StatementDropTrigger
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementDropTrigger
+  @discardableResult
+  final public func ifExists() -> WCDBSwift.StatementDropTrigger
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementDropView : WCDBSwift.Identifier<WCDB_Private.CPPStatementDropView>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func drop(view: Swift.String) -> WCDBSwift.StatementDropView
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementDropView
+  @discardableResult
+  final public func ifExists() -> WCDBSwift.StatementDropView
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementExplain : WCDBSwift.Identifier<WCDB_Private.CPPStatementExplain>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func explain(_ statement: any WCDBSwift.Statement) -> WCDBSwift.StatementExplain
+  @discardableResult
+  final public func explainQueryPlan(_ statement: any WCDBSwift.Statement) -> WCDBSwift.StatementExplain
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementInsert : WCDBSwift.Identifier<WCDB_Private.CPPStatementInsert>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func with(recursive: Swift.Bool = false, _ expList: WCDBSwift.CommonTableExpression...) -> WCDBSwift.StatementInsert
+  @discardableResult
+  final public func with(recursive: Swift.Bool = false, _ expList: [WCDBSwift.CommonTableExpression]) -> WCDBSwift.StatementInsert
+  @discardableResult
+  final public func insert(intoTable table: Swift.String) -> WCDBSwift.StatementInsert
+  @discardableResult
+  final public func of(schema schemaConvertibale: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementInsert
+  @discardableResult
+  final public func `as`(_ alias: Swift.String) -> WCDBSwift.StatementInsert
+  @discardableResult
+  final public func onConflict(_ conflict: WCDBSwift.ConflictAction? = nil) -> WCDBSwift.StatementInsert
+  @discardableResult
+  final public func columns(_ columnConvertibleList: any WCDBSwift.ColumnConvertible...) -> WCDBSwift.StatementInsert
+  @discardableResult
+  final public func columns(_ columnConvertibleList: [any WCDBSwift.ColumnConvertible]) -> WCDBSwift.StatementInsert
+  @discardableResult
+  final public func values(_ expressionConvertibleList: any WCDBSwift.ExpressionConvertible...) -> WCDBSwift.StatementInsert
+  @discardableResult
+  final public func values(_ expressionConvertibleList: [any WCDBSwift.ExpressionConvertible]) -> WCDBSwift.StatementInsert
+  @discardableResult
+  final public func values(_ select: WCDBSwift.StatementSelect) -> WCDBSwift.StatementInsert
+  final public func defaultValues() -> WCDBSwift.StatementInsert
+  final public func upsert(_ upsert: WCDBSwift.Upsert) -> WCDBSwift.StatementInsert
+  @objc deinit
+}
+public protocol StatementInterface : AnyObject {
+  func finalize()
+  @discardableResult
+  func step() throws -> Swift.Bool
+  func reset() throws
+  var isReadOnly: Swift.Bool { get }
+  func bind<TableEncodableType>(_ propertyConvertible: any WCDBSwift.PropertyConvertible, of object: TableEncodableType, toIndex index: Swift.Int) throws where TableEncodableType : WCDBSwift.TableEncodable
+  func bind<TableEncodableType>(_ indexedPropertyConvertibleList: [(any WCDBSwift.PropertyConvertible, toIndex: Swift.Int)], of object: TableEncodableType) throws where TableEncodableType : WCDBSwift.TableEncodable
+  func bind<TableEncodableType>(_ propertyConvertibleList: [any WCDBSwift.PropertyConvertible], of object: TableEncodableType) throws where TableEncodableType : WCDBSwift.TableEncodable
+  func bind(_ value: (any WCDBSwift.ColumnEncodable)?, toIndex index: Swift.Int)
+  func bind(_ value: WCDBSwift.Value, toIndex index: Swift.Int)
+  func bind(_ value: Swift.Int32, toIndex index: Swift.Int)
+  func bind(_ value: Swift.Int64, toIndex index: Swift.Int)
+  func bind(_ value: Swift.Double, toIndex index: Swift.Int)
+  func bind(_ value: Swift.String, toIndex index: Swift.Int)
+  func bind(_ value: Foundation.Data, toIndex index: Swift.Int)
+  func value(atIndex index: Swift.Int, of type: any WCDBSwift.ColumnDecodable.Type) -> (any WCDBSwift.ColumnDecodable)?
+  func value<ColumnDecodableType>(byName name: Swift.String, of type: ColumnDecodableType.Type) -> ColumnDecodableType? where ColumnDecodableType : WCDBSwift.ColumnDecodable
+  func value(atIndex index: Swift.Int) -> WCDBSwift.Value
+  func oneRowValue() -> WCDBSwift.OneRowValue
+  func oneColumnValue(atIndex index: Swift.Int) throws -> WCDBSwift.OneColumnValue
+  func multiRowsValue() throws -> WCDBSwift.MultiRowsValue
+  func extractObject<Object>(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?, of type: Object.Type) throws -> Object where Object : WCDBSwift.TableDecodable
+  func extractAllObjects<Object>(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?, of type: Object.Type) throws -> [Object] where Object : WCDBSwift.TableDecodable
+  func index(byName name: Swift.String) -> Swift.Int?
+  func indexOf(bindParameter: Swift.String) -> Swift.Int
+  func columnValue(atIndex index: Swift.Int) -> Swift.Int32
+  func columnValue(atIndex index: Swift.Int, of type: Swift.Int32.Type) -> Swift.Int32
+  func columnValue(atIndex index: Swift.Int) -> Swift.Int64
+  func columnValue(atIndex index: Swift.Int, of type: Swift.Int64.Type) -> Swift.Int64
+  func columnValue(atIndex index: Swift.Int) -> Swift.Double
+  func columnValue(atIndex index: Swift.Int, of type: Swift.Double.Type) -> Swift.Double
+  func columnValue(atIndex index: Swift.Int) -> Swift.String
+  func columnValue(atIndex index: Swift.Int, of type: Swift.String.Type) -> Swift.String
+  func columnValue(atIndex index: Swift.Int) -> Foundation.Data
+  func columnValue(atIndex index: Swift.Int, of type: Foundation.Data.Type) -> Foundation.Data
+  func columnCount() -> Swift.Int
+  func columnName(atIndex index: Swift.Int) -> Swift.String
+  func columnType(byName name: Swift.String) -> WCDBSwift.ColumnType
+  func columnType(atIndex index: Swift.Int) -> WCDBSwift.ColumnType
+  func originalColumnName(atIndex index: Swift.Int) -> Swift.String
+  func columnTableName(atIndex index: Swift.Int) -> Swift.String
+}
+extension WCDBSwift.StatementInterface where Self : WCDBSwift.RawStatementmentRepresentable {
+  public func finalize()
+  @discardableResult
+  public func step() throws -> Swift.Bool
+  public func reset()
+  public var isReadOnly: Swift.Bool {
+    get
+  }
+  public func bind<TableEncodableType>(_ propertyConvertible: any WCDBSwift.PropertyConvertible, of object: TableEncodableType, toIndex index: Swift.Int = 1) throws where TableEncodableType : WCDBSwift.TableEncodable
+  public func bind<TableEncodableType>(_ indexedPropertyConvertibleList: [(any WCDBSwift.PropertyConvertible, toIndex: Swift.Int)], of object: TableEncodableType) throws where TableEncodableType : WCDBSwift.TableEncodable
+  public func bind<TableEncodableType>(_ propertyConvertibleList: [any WCDBSwift.PropertyConvertible], of object: TableEncodableType) throws where TableEncodableType : WCDBSwift.TableEncodable
+  public func bind(_ value: (any WCDBSwift.ColumnEncodable)?, toIndex index: Swift.Int)
+  public func bind(_ value: WCDBSwift.Value, toIndex index: Swift.Int)
+  public func bind(_ value: Swift.Int32, toIndex index: Swift.Int)
+  public func bind(_ value: Swift.Int64, toIndex index: Swift.Int)
+  public func bind(_ value: Swift.Double, toIndex index: Swift.Int)
+  public func bind(_ value: Swift.String, toIndex index: Swift.Int)
+  public func bind(_ value: Foundation.Data, toIndex index: Swift.Int)
+  public func value(atIndex index: Swift.Int, of type: any WCDBSwift.ColumnDecodable.Type) -> (any WCDBSwift.ColumnDecodable)?
+  public func value<ColumnDecodableType>(atIndex index: Swift.Int, of type: ColumnDecodableType.Type = ColumnDecodableType.self) -> ColumnDecodableType? where ColumnDecodableType : WCDBSwift.ColumnDecodable
+  public func value(atIndex index: Swift.Int) -> WCDBSwift.Value
+  public func value<ColumnDecodableType>(byName name: Swift.String, of type: ColumnDecodableType.Type = ColumnDecodableType.self) -> ColumnDecodableType? where ColumnDecodableType : WCDBSwift.ColumnDecodable
+  public func oneRowValue() -> WCDBSwift.OneRowValue
+  public func oneColumnValue(atIndex index: Swift.Int) throws -> WCDBSwift.OneColumnValue
+  public func multiRowsValue() throws -> WCDBSwift.MultiRowsValue
+  public func extractObject<Object>(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil, of type: Object.Type = Object.self) throws -> Object where Object : WCDBSwift.TableDecodable
+  public func extractAllObjects<Object>(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil, of type: Object.Type = Object.self) throws -> [Object] where Object : WCDBSwift.TableDecodable
+  public func index(byName name: Swift.String) -> Swift.Int?
+  public func indexOf(bindParameter: Swift.String) -> Swift.Int
+  public func columnValue(atIndex index: Swift.Int) -> Swift.Int32
+  public func columnValue(atIndex index: Swift.Int, of type: Swift.Int32.Type = Int32.self) -> Swift.Int32
+  public func columnValue(atIndex index: Swift.Int) -> Swift.Int64
+  public func columnValue(atIndex index: Swift.Int, of type: Swift.Int64.Type = Int64.self) -> Swift.Int64
+  public func columnValue(atIndex index: Swift.Int) -> Swift.Double
+  public func columnValue(atIndex index: Swift.Int, of type: Swift.Double.Type = Double.self) -> Swift.Double
+  public func columnValue(atIndex index: Swift.Int) -> Swift.String
+  public func columnValue(atIndex index: Swift.Int, of type: Swift.String.Type = String.self) -> Swift.String
+  public func columnValue(atIndex index: Swift.Int) -> Foundation.Data
+  public func columnValue(atIndex index: Swift.Int, of type: Foundation.Data.Type = Data.self) -> Foundation.Data
+  public func columnCount() -> Swift.Int
+  public func columnName(atIndex index: Swift.Int) -> Swift.String
+  public func columnType(byName name: Swift.String) -> WCDBSwift.ColumnType
+  public func columnType(atIndex index: Swift.Int) -> WCDBSwift.ColumnType
+  public func originalColumnName(atIndex index: Swift.Int) -> Swift.String
+  public func columnTableName(atIndex index: Swift.Int) -> Swift.String
+}
+@_hasMissingDesignatedInitializers final public class StatementPragma : WCDBSwift.Identifier<WCDB_Private.CPPStatementPragma>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func pragma(_ pragma: WCDBSwift.Pragma) -> WCDBSwift.StatementPragma
+  @discardableResult
+  final public func schema(_ schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementPragma
+  @discardableResult
+  final public func to(_ literalValueConvertible: any WCDBSwift.LiteralValueConvertible) -> WCDBSwift.StatementPragma
+  @discardableResult
+  final public func with(_ literalValueConvertible: any WCDBSwift.LiteralValueConvertible) -> WCDBSwift.StatementPragma
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementReindex : WCDBSwift.Identifier<WCDB_Private.CPPStatementReIndex>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func reindex(collation: Swift.String) -> WCDBSwift.StatementReindex
+  @discardableResult
+  final public func reindex(table: Swift.String) -> WCDBSwift.StatementReindex
+  @discardableResult
+  final public func reindex(index: Swift.String) -> WCDBSwift.StatementReindex
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.StatementReindex
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementRelease : WCDBSwift.Identifier<WCDB_Private.CPPStatementRelease>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func release(savepoint name: Swift.String) -> WCDBSwift.StatementRelease
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementRollback : WCDBSwift.Identifier<WCDB_Private.CPPStatementRollback>, WCDBSwift.Statement {
+  public init()
+  final public func rollback(toSavepoint optionalName: Swift.String) -> WCDBSwift.StatementRollback
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementSavepoint : WCDBSwift.Identifier<WCDB_Private.CPPStatementSavepoint>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func savepoint(_ name: Swift.String) -> WCDBSwift.StatementSavepoint
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementSelect : WCDBSwift.Identifier<WCDB_Private.CPPStatementSelect>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func with(recursive: Swift.Bool = false, _ expList: WCDBSwift.CommonTableExpression...) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func with(recursive: Swift.Bool = false, _ expList: [WCDBSwift.CommonTableExpression]) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func select(distinct: Swift.Bool = false, _ resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible...) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func select(distinct: Swift.Bool = false, _ resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible]) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func from(_ tableOrSubqueryConvertibleList: any WCDBSwift.TableOrSubqueryConvertible...) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func from(_ tableOrSubqueryConvertibleList: [any WCDBSwift.TableOrSubqueryConvertible]) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func `where`(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func group(by expressionConvertibleGroupList: any WCDBSwift.ExpressionConvertible...) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func group(by expressionConvertibleGroupList: [any WCDBSwift.ExpressionConvertible]) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func having(_ expressionConvertibleHaving: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func order(by orderConvertibleList: any WCDBSwift.OrderingTermConvertible...) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func order(by orderConvertibleList: [any WCDBSwift.OrderingTermConvertible]) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func limit(from expressionConvertibleFrom: any WCDBSwift.ExpressionConvertible, to expressionConvertibleTo: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func limit(_ expressionConvertibleLimit: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func offset(_ expressionConvertibleOffset: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func union() -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func unionAll() -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func intersect() -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func except() -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func window(_ name: Swift.String) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func `as`(_ windowDef: WCDBSwift.WindowDef) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func value(_ expressionConvertibleList: any WCDBSwift.ExpressionConvertible...) -> WCDBSwift.StatementSelect
+  @discardableResult
+  final public func value(_ expressionConvertibleList: [any WCDBSwift.ExpressionConvertible]) -> WCDBSwift.StatementSelect
+  @objc deinit
+}
+extension WCDBSwift.StatementSelect : WCDBSwift.ExpressionConvertible, WCDBSwift.TableOrSubqueryConvertible {
+  final public func asExpression() -> WCDBSwift.Expression
+  final public func asTableOrSubquery() -> WCDBSwift.TableOrSubquery
+}
+public protocol StatementSelectInterface : AnyObject {
+  func getValue(from statement: any WCDBSwift.Statement) throws -> WCDBSwift.Value?
+  func getColumn(from statement: any WCDBSwift.Statement) throws -> WCDBSwift.OneColumnValue
+  func getRow(from statement: any WCDBSwift.Statement) throws -> WCDBSwift.OneRowValue?
+  func getRows(from statement: any WCDBSwift.Statement) throws -> WCDBSwift.MultiRowsValue
+}
+extension WCDBSwift.StatementSelectInterface where Self : WCDBSwift.HandleRepresentable {
+  public func getValue(from statement: any WCDBSwift.Statement) throws -> WCDBSwift.Value?
+  public func getColumn(from statement: any WCDBSwift.Statement) throws -> WCDBSwift.OneColumnValue
+  public func getRow(from statement: any WCDBSwift.Statement) throws -> WCDBSwift.OneRowValue?
+  public func getRows(from statement: any WCDBSwift.Statement) throws -> WCDBSwift.MultiRowsValue
+}
+@_hasMissingDesignatedInitializers final public class StatementUpdate : WCDBSwift.Identifier<WCDB_Private.CPPStatementUpdate>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func with(recursive: Swift.Bool = false, _ expList: WCDBSwift.CommonTableExpression...) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func with(recursive: Swift.Bool = false, _ expList: [WCDBSwift.CommonTableExpression]) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func update(table qualifiedTableConvertible: any WCDBSwift.QualifiedTableConvertible) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func onConflict(_ conflict: WCDBSwift.ConflictAction? = nil) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func set(_ columnConvertibleList: any WCDBSwift.ColumnConvertible...) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func set(_ columnConvertibleList: [any WCDBSwift.ColumnConvertible]) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func to(_ value: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func `where`(_ condition: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func order(by orderConvertibleList: any WCDBSwift.OrderingTermConvertible...) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func order(by orderConvertibleList: [any WCDBSwift.OrderingTermConvertible]) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func limit(from expressionConvertibleFrom: any WCDBSwift.ExpressionConvertible, to expressionConvertibleTo: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func limit(_ expressionConvertibleLimit: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementUpdate
+  @discardableResult
+  final public func offset(_ expressionConvertibleOffset: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.StatementUpdate
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class StatementVacuum : WCDBSwift.Identifier<WCDB_Private.CPPStatementVacuum>, WCDBSwift.Statement {
+  public init()
+  @discardableResult
+  final public func vacuum(schema schemaConvertible: (any WCDBSwift.SchemaConvertible)? = nil) -> WCDBSwift.StatementVacuum
+  @objc deinit
+}
+public enum Order {
+  case ascending
+  case descending
+  public static func == (a: WCDBSwift.Order, b: WCDBSwift.Order) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ConflictAction {
+  case Replace
+  case Rollback
+  case Abort
+  case Fail
+  case Ignore
+  public static func == (a: WCDBSwift.ConflictAction, b: WCDBSwift.ConflictAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ColumnType {
+  case integer32
+  case integer64
+  case text
+  case float
+  case BLOB
+  case null
+  public static func == (a: WCDBSwift.ColumnType, b: WCDBSwift.ColumnType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum TransactionType {
+  case deferred
+  case immediate
+  case exclusive
+  public static func == (a: WCDBSwift.TransactionType, b: WCDBSwift.TransactionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum FTSVersion : WCDBSwift.Describable {
+  case FTS3
+  case FTS4
+  case FTS5
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: WCDBSwift.FTSVersion, b: WCDBSwift.FTSVersion) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class Table<Root> {
+  public typealias Object = Root
+  final public let name: Swift.String
+  final public var rootType: Root.Type {
+    get
+  }
+  @objc deinit
+}
+extension WCDBSwift.Table : WCDBSwift.InsertTableInterface where Root : WCDBSwift.TableDecodable, Root : WCDBSwift.TableEncodable {
+  final public func insert(_ objects: [WCDBSwift.Table<Root>.Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil) throws
+  final public func insertOrReplace(_ objects: [WCDBSwift.Table<Root>.Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil) throws
+  final public func insertOrIgnore(_ objects: [WCDBSwift.Table<Root>.Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil) throws
+  final public func insert(_ objects: WCDBSwift.Table<Root>.Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil) throws
+  final public func insertOrReplace(_ objects: WCDBSwift.Table<Root>.Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil) throws
+  final public func insertOrIgnore(_ objects: WCDBSwift.Table<Root>.Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]? = nil) throws
+}
+extension WCDBSwift.Table : WCDBSwift.UpdateTableInterface where Root : WCDBSwift.TableEncodable {
+  final public func update(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], with object: WCDBSwift.Table<Root>.Object, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws
+  final public func update(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., with object: WCDBSwift.Table<Root>.Object, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws
+  final public func update(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., with row: [any WCDBSwift.ColumnEncodable], where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws
+  final public func update(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], with row: [any WCDBSwift.ColumnEncodable], where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws
+}
+extension WCDBSwift.Table : WCDBSwift.DeleteTableInterface {
+  final public func delete(where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws
+}
+extension WCDBSwift.Table : WCDBSwift.SelectTableInterface where Root : WCDBSwift.TableDecodable {
+  final public func getObjects(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> [WCDBSwift.Table<Root>.Object]
+  final public func getObjects(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> [WCDBSwift.Table<Root>.Object]
+  final public func getObject(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.Table<Root>.Object?
+  final public func getObject(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.Table<Root>.Object?
+}
+extension WCDBSwift.Table : WCDBSwift.RowSelectTableInterface {
+  final public func getRows(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.MultiRowsValue
+  final public func getRows(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.MultiRowsValue
+  final public func getRow(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.OneRowValue
+  final public func getRow(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.OneRowValue
+  final public func getColumn(on result: any WCDBSwift.ResultColumnConvertible, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.OneColumnValue
+  final public func getDistinctColumn(on result: any WCDBSwift.ResultColumnConvertible, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.OneColumnValue
+  final public func getValue(on result: any WCDBSwift.ResultColumnConvertible, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.Value
+  final public func getDistinctValue(on result: any WCDBSwift.ResultColumnConvertible, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws -> WCDBSwift.Value
+}
+extension WCDBSwift.Table : WCDBSwift.TableInsertChainCallInterface {
+  final public func prepareInsert<Root>(of cls: Root.Type) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  final public func prepareInsertOrReplace<Root>(of cls: Root.Type) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  final public func prepareInsertOrIgnore<Root>(of cls: Root.Type) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  final public func prepareInsert(on propertyConvertibleList: any WCDBSwift.PropertyConvertible...) throws -> WCDBSwift.Insert
+  final public func prepareInsertOrReplace(on propertyConvertibleList: any WCDBSwift.PropertyConvertible...) throws -> WCDBSwift.Insert
+  final public func prepareInsertOrIgnore(on propertyConvertibleList: any WCDBSwift.PropertyConvertible...) throws -> WCDBSwift.Insert
+  final public func prepareInsert(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]) throws -> WCDBSwift.Insert
+  final public func prepareInsertOrReplace(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]) throws -> WCDBSwift.Insert
+  final public func prepareInsertOrIgnore(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]) throws -> WCDBSwift.Insert
+}
+extension WCDBSwift.Table : WCDBSwift.TableDeleteChainCallInterface {
+  final public func prepareDelete() throws -> WCDBSwift.Delete
+}
+extension WCDBSwift.Table : WCDBSwift.TableUpdateChainCallInterface {
+  final public func prepareUpdate(on propertyConvertibleList: any WCDBSwift.PropertyConvertible...) throws -> WCDBSwift.Update
+  final public func prepareUpdate(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]) throws -> WCDBSwift.Update
+}
+extension WCDBSwift.Table : WCDBSwift.TableRowSelectChainCallInterface {
+  final public func prepareRowSelect(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., isDistinct: Swift.Bool = false) throws -> WCDBSwift.RowSelect
+  final public func prepareRowSelect(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], isDistinct: Swift.Bool = false) throws -> WCDBSwift.RowSelect
+}
+extension WCDBSwift.Table : WCDBSwift.TableSelectChainCallInterface {
+  final public func prepareSelect<Root>(of cls: Root.Type, isDistinct: Swift.Bool = false) throws -> WCDBSwift.Select where Root : WCDBSwift.TableDecodable
+  final public func prepareSelect(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., isDistinct: Swift.Bool = false) throws -> WCDBSwift.Select
+  final public func prepareSelect(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], isDistinct: Swift.Bool = false) throws -> WCDBSwift.Select
+}
+public class TableBindingBase {
+  public init()
+  @objc deinit
+}
+final public class TableBinding<CodingTableKeyType> : WCDBSwift.TableBindingBase where CodingTableKeyType : WCDBSwift.CodingTableKey {
+  public init(_ type: CodingTableKeyType.Type)
+  @_functionBuilder public struct TableConfigurationBuilder {
+    public static func buildBlock(_ configs: any WCDBSwift.TableConfiguration...) -> [any WCDBSwift.TableConfiguration]
+    public static func buildBlock() -> [any WCDBSwift.TableConfiguration]
+  }
+  convenience public init(_ type: CodingTableKeyType.Type, @WCDBSwift.TableBinding<CodingTableKeyType>.TableConfigurationBuilder _ configBuilder: @escaping () -> [any WCDBSwift.TableConfiguration])
+  @objc deinit
+}
+public protocol TableInsertChainCallInterface : AnyObject {
+  func prepareInsert<Root>(of cls: Root.Type) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  func prepareInsertOrReplace<Root>(of cls: Root.Type) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  func prepareInsertOrIgnore<Root>(of cls: Root.Type) throws -> WCDBSwift.Insert where Root : WCDBSwift.TableEncodable
+  func prepareInsert(on propertyConvertibleList: any WCDBSwift.PropertyConvertible...) throws -> WCDBSwift.Insert
+  func prepareInsertOrReplace(on propertyConvertibleList: any WCDBSwift.PropertyConvertible...) throws -> WCDBSwift.Insert
+  func prepareInsertOrIgnore(on propertyConvertibleList: any WCDBSwift.PropertyConvertible...) throws -> WCDBSwift.Insert
+  func prepareInsert(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]) throws -> WCDBSwift.Insert
+  func prepareInsertOrReplace(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]) throws -> WCDBSwift.Insert
+  func prepareInsertOrIgnore(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]) throws -> WCDBSwift.Insert
+}
+public protocol TableDeleteChainCallInterface : AnyObject {
+  func prepareDelete() throws -> WCDBSwift.Delete
+}
+public protocol TableUpdateChainCallInterface : AnyObject {
+  func prepareUpdate(on propertyConvertibleList: any WCDBSwift.PropertyConvertible...) throws -> WCDBSwift.Update
+  func prepareUpdate(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]) throws -> WCDBSwift.Update
+}
+public protocol TableRowSelectChainCallInterface : AnyObject {
+  func prepareRowSelect(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., isDistinct: Swift.Bool) throws -> WCDBSwift.RowSelect
+  func prepareRowSelect(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], isDistinct: Swift.Bool) throws -> WCDBSwift.RowSelect
+}
+public protocol TableSelectChainCallInterface : AnyObject {
+  func prepareSelect<Root>(of cls: Root.Type, isDistinct: Swift.Bool) throws -> WCDBSwift.Select where Root : WCDBSwift.TableDecodable
+  func prepareSelect(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., isDistinct: Swift.Bool) throws -> WCDBSwift.Select
+  func prepareSelect(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], isDistinct: Swift.Bool) throws -> WCDBSwift.Select
+}
+public protocol TableCodableBase {
+}
+public protocol TableEncodableBase : Swift.Encodable, WCDBSwift.TableCodableBase {
+}
+public protocol TableEncodable : WCDBSwift.TableEncodableBase {
+  associatedtype CodingKeys : WCDBSwift.CodingTableKey where Self == Self.CodingKeys.Root
+  typealias Properties = Self.CodingKeys
+  var isAutoIncrement: Swift.Bool { get }
+  var lastInsertedRowID: Swift.Int64 { get set }
+}
+extension WCDBSwift.TableEncodable {
+  public var isAutoIncrement: Swift.Bool {
+    get
+  }
+  public var lastInsertedRowID: Swift.Int64 {
+    get
+    set
+  }
+}
+public protocol TableDecodableBase : Swift.Decodable, WCDBSwift.TableCodableBase {
+}
+public protocol TableDecodable : WCDBSwift.TableDecodableBase {
+  associatedtype CodingKeys : WCDBSwift.CodingTableKey where Self == Self.CodingKeys.Root
+  typealias Properties = Self.CodingKeys
+}
+public typealias TableCodable = WCDBSwift.TableDecodable & WCDBSwift.TableEncodable
+public protocol TableConfiguration {
+  func config(with tableBinding: WCDBSwift.TableBindingBase)
+}
+@_hasMissingDesignatedInitializers final public class TableConstraint : WCDBSwift.Identifier<WCDB_Private.CPPTableConstraint> {
+  public init(named name: Swift.String? = nil)
+  @discardableResult
+  final public func primaryKey() -> WCDBSwift.TableConstraint
+  @discardableResult
+  final public func unique() -> WCDBSwift.TableConstraint
+  @discardableResult
+  final public func indexed(by indexedColumnConvertibleList: any WCDBSwift.IndexedColumnConvertible...) -> WCDBSwift.TableConstraint
+  @discardableResult
+  final public func indexed(by indexedColumnConvertibleList: [any WCDBSwift.IndexedColumnConvertible]) -> WCDBSwift.TableConstraint
+  @discardableResult
+  final public func onConflict(_ conflict: WCDBSwift.ConflictAction) -> WCDBSwift.TableConstraint
+  @discardableResult
+  final public func check(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.TableConstraint
+  @discardableResult
+  final public func foreignKey(_ columnConvertibleList: any WCDBSwift.ColumnConvertible..., foreignKey: WCDBSwift.ForeignKey) -> WCDBSwift.TableConstraint
+  @discardableResult
+  final public func foreignKey(_ columnConvertibleList: [any WCDBSwift.ColumnConvertible], foreignKey: WCDBSwift.ForeignKey) -> WCDBSwift.TableConstraint
+  @objc deinit
+}
+public protocol InsertTableInterface : AnyObject {
+  associatedtype Object : WCDBSwift.TableEncodable
+  func insert(_ objects: Self.Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?) throws
+  func insert(_ objects: [Self.Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?) throws
+  func insertOrReplace(_ objects: Self.Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?) throws
+  func insertOrReplace(_ objects: [Self.Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?) throws
+  func insertOrIgnore(_ objects: Self.Object..., on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?) throws
+  func insertOrIgnore(_ objects: [Self.Object], on propertyConvertibleList: [any WCDBSwift.PropertyConvertible]?) throws
+}
+public protocol UpdateTableInterface : AnyObject {
+  associatedtype Object : WCDBSwift.TableEncodable
+  func update(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., with object: Self.Object, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws
+  func update(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], with object: Self.Object, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws
+  func update(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., with row: [any WCDBSwift.ColumnEncodable], where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws
+  func update(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], with row: [any WCDBSwift.ColumnEncodable], where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws
+}
+public protocol DeleteTableInterface : AnyObject {
+  func delete(where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws
+}
+public protocol RowSelectTableInterface : AnyObject {
+  func getRows(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.MultiRowsValue
+  func getRows(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.MultiRowsValue
+  func getRow(on resultColumnConvertibleList: any WCDBSwift.ResultColumnConvertible..., where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.OneRowValue
+  func getRow(on resultColumnConvertibleList: [any WCDBSwift.ResultColumnConvertible], where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.OneRowValue
+  func getColumn(on result: any WCDBSwift.ResultColumnConvertible, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.OneColumnValue
+  func getDistinctColumn(on result: any WCDBSwift.ResultColumnConvertible, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.OneColumnValue
+  func getValue(on result: any WCDBSwift.ResultColumnConvertible, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.Value
+  func getDistinctValue(on result: any WCDBSwift.ResultColumnConvertible, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> WCDBSwift.Value
+}
+public protocol SelectTableInterface : AnyObject {
+  associatedtype Object : WCDBSwift.TableDecodable
+  func getObjects(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> [Self.Object]
+  func getObjects(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> [Self.Object]
+  func getObject(on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> Self.Object?
+  func getObject(on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, offset: (any WCDBSwift.ExpressionConvertible)?) throws -> Self.Object?
+}
+public protocol TableInterface : AnyObject {
+  func create<Root>(table name: Swift.String, of rootType: Root.Type) throws where Root : WCDBSwift.TableDecodable
+  func create<Root>(virtualTable name: Swift.String, of rootType: Root.Type) throws where Root : WCDBSwift.TableDecodable
+  func create(table name: Swift.String, with columnDefList: [WCDBSwift.ColumnDef], and constraintList: [WCDBSwift.TableConstraint]?) throws
+  func create(table name: Swift.String, with columnDefList: WCDBSwift.ColumnDef..., and constraintList: [WCDBSwift.TableConstraint]?) throws
+  func getTable<Root>(named name: Swift.String, of type: Root.Type) -> WCDBSwift.Table<Root> where Root : WCDBSwift.TableDecodable, Root : WCDBSwift.TableEncodable
+  func isTableExists(_ table: Swift.String) throws -> Swift.Bool
+  func addColumn(with columnDef: WCDBSwift.ColumnDef, forTable table: Swift.String) throws
+  func drop(table name: Swift.String) throws
+  func create(index name: Swift.String, with indexedColumnConvertibleList: [any WCDBSwift.IndexedColumnConvertible], forTable table: Swift.String) throws
+  func create(index name: Swift.String, with indexedColumnConvertibleList: any WCDBSwift.IndexedColumnConvertible..., forTable table: Swift.String) throws
+  func drop(index name: Swift.String) throws
+}
+extension WCDBSwift.TableInterface where Self : WCDBSwift.HandleRepresentable {
+  public func create<Root>(table name: Swift.String, of rootType: Root.Type) throws where Root : WCDBSwift.TableDecodable
+  public func create<Root>(virtualTable name: Swift.String, of rootType: Root.Type) throws where Root : WCDBSwift.TableDecodable
+  public func create(table name: Swift.String, with columnDefList: WCDBSwift.ColumnDef..., and constraintList: [WCDBSwift.TableConstraint]? = nil) throws
+  public func create(table name: Swift.String, with columnDefList: [WCDBSwift.ColumnDef], and constraintList: [WCDBSwift.TableConstraint]? = nil) throws
+  public func getTable<Root>(named name: Swift.String, of type: Root.Type = Root.self) -> WCDBSwift.Table<Root> where Root : WCDBSwift.TableDecodable, Root : WCDBSwift.TableEncodable
+  public func isTableExists(_ table: Swift.String) throws -> Swift.Bool
+  public func addColumn(with columnDef: WCDBSwift.ColumnDef, forTable table: Swift.String) throws
+  public func drop(table name: Swift.String) throws
+  public func create(index name: Swift.String, with indexedColumnConvertibleList: any WCDBSwift.IndexedColumnConvertible..., forTable table: Swift.String) throws
+  public func create(index name: Swift.String, with indexedColumnConvertibleList: [any WCDBSwift.IndexedColumnConvertible], forTable table: Swift.String) throws
+  public func drop(index name: Swift.String) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TableOrSubquery : WCDBSwift.Identifier<WCDB_Private.CPPTableOrSubquery> {
+  convenience public init(withTable table: Swift.String)
+  convenience public init(with join: WCDBSwift.Join)
+  convenience public init(with tableOrSubqueryConvertibleList: any WCDBSwift.TableOrSubqueryConvertible...)
+  convenience public init(with tableOrSubqueryConvertibleList: [any WCDBSwift.TableOrSubqueryConvertible])
+  convenience public init(with statementSelect: WCDBSwift.StatementSelect)
+  @discardableResult
+  final public func `as`(alias: Swift.String) -> WCDBSwift.TableOrSubquery
+  @discardableResult
+  final public func of(schema schemaConvertible: any WCDBSwift.SchemaConvertible) -> WCDBSwift.TableOrSubquery
+  @discardableResult
+  final public func notIndexed() -> WCDBSwift.TableOrSubquery
+  @discardableResult
+  final public func indexed(by indexName: Swift.String) -> WCDBSwift.TableOrSubquery
+  public static func function(_ name: Swift.String) -> WCDBSwift.TableOrSubquery
+  @discardableResult
+  final public func arguments(_ expressionConvertibleList: [any WCDBSwift.ExpressionConvertible]) -> WCDBSwift.TableOrSubquery
+  @discardableResult
+  final public func arguments(_ expressionConvertibleList: any WCDBSwift.ExpressionConvertible...) -> WCDBSwift.TableOrSubquery
+  public static func master() -> WCDBSwift.TableOrSubquery
+  @objc deinit
+}
+extension WCDBSwift.TableOrSubquery : WCDBSwift.TableOrSubqueryConvertible {
+  final public func asTableOrSubquery() -> WCDBSwift.TableOrSubquery
+}
+extension Swift.String : WCDBSwift.TableOrSubqueryConvertible {
+  public func asTableOrSubquery() -> WCDBSwift.TableOrSubquery
+}
+public protocol TransactionInterface {
+  func begin() throws
+  func commit() throws
+  func rollback() throws
+  var isInTransaction: Swift.Bool { get }
+  func beginNestedTransaction() throws
+  func commitNestedTransaction() throws
+  func rollbackNestedTransaction() throws
+  typealias TransactionClosure = (WCDBSwift.Handle) throws -> Swift.Void
+  func run(transaction: @escaping Self.TransactionClosure) throws
+  typealias ControlableTransactionClosure = (WCDBSwift.Handle) throws -> Swift.Bool
+  func run(controllableTransaction: @escaping Self.ControlableTransactionClosure) throws
+  func run(nestedTransaction: @escaping Self.ControlableTransactionClosure) throws
+  typealias PausableTransactionClosure = (WCDBSwift.Handle, inout Swift.Bool, Swift.Bool) throws -> Swift.Void
+  func run(pausableTransaction: @escaping Self.PausableTransactionClosure) throws
+}
+extension WCDBSwift.TransactionInterface where Self : WCDBSwift.HandleRepresentable {
+  public func begin() throws
+  public func commit() throws
+  public func rollback() throws
+  public var isInTransaction: Swift.Bool {
+    get
+  }
+  public func beginNestedTransaction() throws
+  public func commitNestedTransaction() throws
+  public func rollbackNestedTransaction() throws
+  public func run(transaction: @escaping Self.TransactionClosure) throws
+  public func run(controllableTransaction: @escaping Self.ControlableTransactionClosure) throws
+  public func run(nestedTransaction: @escaping Self.ControlableTransactionClosure) throws
+  public func run(pausableTransaction: @escaping Self.PausableTransactionClosure) throws
+}
+@_hasMissingDesignatedInitializers final public class Update {
+  final public let statement: WCDBSwift.StatementUpdate
+  final public var changes: Swift.Int?
+  @discardableResult
+  final public func `where`(_ condition: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Update
+  @discardableResult
+  final public func order(by orderList: any WCDBSwift.OrderingTermConvertible...) -> WCDBSwift.Update
+  @discardableResult
+  final public func order(by orderList: [any WCDBSwift.OrderingTermConvertible]) -> WCDBSwift.Update
+  @discardableResult
+  final public func limit(from begin: any WCDBSwift.ExpressionConvertible, to end: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Update
+  @discardableResult
+  final public func limit(_ limit: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Update
+  @discardableResult
+  final public func limit(_ limit: any WCDBSwift.ExpressionConvertible, offset: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Update
+  final public func execute<Object>(with object: Object) throws where Object : WCDBSwift.TableEncodable
+  final public func execute(with row: [(any WCDBSwift.ColumnEncodable)?]) throws
+  @objc deinit
+}
+public protocol UpdateInterface : AnyObject {
+  func update<Object>(table: Swift.String, on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., with object: Object, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws where Object : WCDBSwift.TableEncodable
+  func update<Object>(table: Swift.String, on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], with object: Object, where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws where Object : WCDBSwift.TableEncodable
+  func update(table: Swift.String, on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., with row: [any WCDBSwift.ColumnEncodable], where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws
+  func update(table: Swift.String, on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., with row: any WCDBSwift.ColumnEncodable..., where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws
+  func update(table: Swift.String, on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], with row: any WCDBSwift.ColumnEncodable..., where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws
+  func update(table: Swift.String, on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], with row: [any WCDBSwift.ColumnEncodable], where condition: (any WCDBSwift.ExpressionConvertible)?, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]?, limit: (any WCDBSwift.ExpressionConvertible)?, offset: (any WCDBSwift.ExpressionConvertible)?) throws
+}
+extension WCDBSwift.UpdateInterface where Self : WCDBSwift.HandleRepresentable {
+  public func update<Object>(table: Swift.String, on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], with object: Object, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws where Object : WCDBSwift.TableEncodable
+  public func update<Object>(table: Swift.String, on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., with object: Object, where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws where Object : WCDBSwift.TableEncodable
+  public func update(table: Swift.String, on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., with row: [any WCDBSwift.ColumnEncodable], where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws
+  public func update(table: Swift.String, on propertyConvertibleList: any WCDBSwift.PropertyConvertible..., with row: any WCDBSwift.ColumnEncodable..., where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws
+  public func update(table: Swift.String, on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], with row: any WCDBSwift.ColumnEncodable..., where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws
+  public func update(table: Swift.String, on propertyConvertibleList: [any WCDBSwift.PropertyConvertible], with row: [any WCDBSwift.ColumnEncodable], where condition: (any WCDBSwift.ExpressionConvertible)? = nil, orderBy orderList: [any WCDBSwift.OrderingTermConvertible]? = nil, limit: (any WCDBSwift.ExpressionConvertible)? = nil, offset: (any WCDBSwift.ExpressionConvertible)? = nil) throws
+}
+@_hasMissingDesignatedInitializers final public class Upsert : WCDBSwift.Identifier<WCDB_Private.CPPUpsert> {
+  public init()
+  @discardableResult
+  final public func onConflict() -> WCDBSwift.Upsert
+  @discardableResult
+  final public func indexed(by indexedColumnConvertibleList: any WCDBSwift.IndexedColumnConvertible...) -> WCDBSwift.Upsert
+  @discardableResult
+  final public func indexed(by indexedColumnConvertibleList: [any WCDBSwift.IndexedColumnConvertible]) -> WCDBSwift.Upsert
+  @discardableResult
+  final public func `where`(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Upsert
+  @discardableResult
+  final public func doNothing() -> WCDBSwift.Upsert
+  @discardableResult
+  final public func doUpdate() -> WCDBSwift.Upsert
+  @discardableResult
+  final public func set(_ columnConvertible: any WCDBSwift.ColumnConvertible...) -> WCDBSwift.Upsert
+  @discardableResult
+  final public func set(_ columnConvertible: [any WCDBSwift.ColumnConvertible]) -> WCDBSwift.Upsert
+  @discardableResult
+  final public func to(_ expressionConvertible: any WCDBSwift.ExpressionConvertible) -> WCDBSwift.Upsert
+  @objc deinit
+}
+public struct Value {
+  public let type: WCDBSwift.ColumnType
+  public init(_: Swift.Void? = nil)
+  public init(_ value: Swift.Int32)
+  public init(_ value: Swift.Int64)
+  public init(_ value: Swift.Double)
+  public init(_ value: Swift.String)
+  public init(_ value: Foundation.Data)
+  public init<T>(_ encodedValue: T) where T : WCDBSwift.ColumnEncodable
+  public var int32Value: Swift.Int32 {
+    get
+  }
+  public var int64Value: Swift.Int64 {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+  public var doubleValue: Swift.Double {
+    get
+  }
+  public var dataValue: Foundation.Data {
+    get
+  }
+}
+public typealias OneColumnValue = [WCDBSwift.Value]
+public typealias OneRowValue = [WCDBSwift.Value]
+public typealias MultiRowsValue = [WCDBSwift.OneRowValue]
+extension Swift.Array where Element == [WCDBSwift.Value] {
+  public subscript(row row: Swift.Array<Element>.Index, column column: Swift.Array<WCDBSwift.Value>.Index) -> WCDBSwift.Value {
+    get
+  }
+  public subscript(row row: Swift.Array<Element>.Index) -> WCDBSwift.OneColumnValue {
+    get
+  }
+}
+final public class VirtualTableConfig : WCDBSwift.TableConfiguration {
+  final public func config(with tableBinding: WCDBSwift.TableBindingBase)
+  public init(withModule version: WCDBSwift.FTSVersion, and tokenizer: Swift.String...)
+  public init(withModule module: Swift.String, and parameters: Swift.String...)
+  @objc deinit
+}
+public struct ErrorValue {
+  public enum ErrorValueType {
+    case int
+    case double
+    case string
+    public static func == (a: WCDBSwift.ErrorValue.ErrorValueType, b: WCDBSwift.ErrorValue.ErrorValueType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let type: WCDBSwift.ErrorValue.ErrorValueType
+  public var intValue: Swift.Int {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+  public var doubleValue: Swift.Double {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class WCDBError : Swift.Error, Swift.CustomStringConvertible {
+  public enum Code : Swift.Int {
+    case OK
+    case Error
+    case Internal
+    case Permission
+    case Abort
+    case Busy
+    case Locked
+    case NoMemory
+    case Readonly
+    case Interrupt
+    case IOError
+    case Corrupt
+    case NotFound
+    case Full
+    case CantOpen
+    case `Protocol`
+    case Empty
+    case Schema
+    case Exceed
+    case Constraint
+    case Mismatch
+    case Misuse
+    case NoLargeFileSupport
+    case Authorization
+    case Format
+    case Range
+    case NotADatabase
+    case Notice
+    case Warning
+    case Row
+    case Done
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum ExtendCode : Swift.Int {
+    case ErrorMissingCollseq
+    case ErrorRetry
+    case ErrorSnapshot
+    case IOErrorRead
+    case IOErrorShortRead
+    case IOErrorWrite
+    case IOErrorFsync
+    case IOErrorDirFsync
+    case IOErrorTruncate
+    case IOErrorFstat
+    case IOErrorUnlock
+    case IOErrorRdlock
+    case IOErrorDelete
+    case IOErrorBlocked
+    case IOErrorNoMemory
+    case IOErrorAccess
+    case IOErrorCheckReservedLock
+    case IOErrorLock
+    case IOErrorClose
+    case IOErrorDirClose
+    case IOErrorShmOpen
+    case IOErrorShmSize
+    case IOErrorShmLock
+    case IOErrorShmMap
+    case IOErrorSeek
+    case IOErrorDeleteNoEntry
+    case IOErrorMmap
+    case IOErrorGetTempPath
+    case IOErrorConvPath
+    case IOErrorVnode
+    case IOErrorAuthorization
+    case IOErrorBeginAtomic
+    case IOErrorCommitAtomic
+    case IOErrorRollbackAtomic
+    case LockedSharedCache
+    case LockedVirtualTable
+    case BusyRecovery
+    case BusySnapshot
+    case CantOpenNoTempDir
+    case CantOpenIsDir
+    case CantOpenFullPath
+    case CantOpenConvPath
+    case CantOpenDirtyWal
+    case CorruptVirtualTable
+    case CorruptSequence
+    case ReadonlyRecovery
+    case ReadonlyCantLock
+    case ReadonlyRollback
+    case ReadonlyDatabaseMoved
+    case ReadonlyCantInit
+    case ReadonlyDirectory
+    case AbortRollback
+    case ConstraintCheck
+    case ConstraintCommitHook
+    case ConstraintForeignKey
+    case ConstraintFunction
+    case ConstraintNotNull
+    case ConstraintPrimaryKey
+    case ConstraintTrigger
+    case ConstraintUnique
+    case ConstraintVirtualTable
+    case ConstraintRowID
+    case NoticeRecoverWal
+    case NoticeRecoverRollback
+    case WarningAutoIndex
+    case AuthorizationUser
+    case OKLoadPermanently
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum Level : Swift.Int, Swift.CustomStringConvertible {
+    case Ignore
+    case Debug
+    case Warning
+    case Notice
+    case Error
+    case Fatal
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum Key : Swift.Int, Swift.CustomStringConvertible {
+    case tag
+    case path
+    case type
+    case source
+    case SQL
+    case extendedCode
+    case message
+    case invalidKey
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  final public let level: WCDBSwift.WCDBError.Level
+  final public let code: WCDBSwift.WCDBError.Code
+  public typealias Infos = [WCDBSwift.WCDBError.Key : WCDBSwift.ErrorValue]
+  final public let infos: WCDBSwift.WCDBError.Infos
+  public typealias ExtInfos = [Swift.String : WCDBSwift.ErrorValue]
+  final public let extInfos: WCDBSwift.WCDBError.ExtInfos
+  final public var tag: WCDBSwift.Tag? {
+    get
+  }
+  final public var extendedCode: WCDBSwift.WCDBError.ExtendCode? {
+    get
+  }
+  final public var message: Swift.String? {
+    get
+  }
+  final public var sql: Swift.String? {
+    get
+  }
+  final public var path: Swift.String? {
+    get
+  }
+  final public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class WindowDef : WCDBSwift.Identifier<WCDB_Private.CPPWindowDef> {
+  public init()
+  @discardableResult
+  final public func partition(_ expressionConvertibleList: any WCDBSwift.ExpressionConvertible...) -> WCDBSwift.WindowDef
+  @discardableResult
+  final public func partition(_ expressionConvertibleList: [any WCDBSwift.ExpressionConvertible]) -> WCDBSwift.WindowDef
+  @discardableResult
+  final public func order(_ orderConvertibleList: any WCDBSwift.OrderingTermConvertible...) -> WCDBSwift.WindowDef
+  @discardableResult
+  final public func order(_ orderConvertibleList: [any WCDBSwift.OrderingTermConvertible]) -> WCDBSwift.WindowDef
+  @discardableResult
+  final public func frameSpec(_ frameSpec: WCDBSwift.FrameSpec) -> WCDBSwift.WindowDef
+  @objc deinit
+}
+extension WCDBSwift.Database.CipherVersion : Swift.Equatable {}
+extension WCDBSwift.Database.CipherVersion : Swift.Hashable {}
+extension WCDBSwift.Database.CipherVersion : Swift.RawRepresentable {}
+extension WCDBSwift.Database.Operation : Swift.Equatable {}
+extension WCDBSwift.Database.Operation : Swift.Hashable {}
+extension WCDBSwift.Database.Operation : Swift.RawRepresentable {}
+extension WCDBSwift.Database.ConfigPriority : Swift.Equatable {}
+extension WCDBSwift.Database.ConfigPriority : Swift.Hashable {}
+extension WCDBSwift.Database.ConfigPriority : Swift.RawRepresentable {}
+extension WCDBSwift.ForeignKey.Action : Swift.Equatable {}
+extension WCDBSwift.ForeignKey.Action : Swift.Hashable {}
+extension WCDBSwift.ForeignKey.MatchType : Swift.Equatable {}
+extension WCDBSwift.ForeignKey.MatchType : Swift.Hashable {}
+extension WCDBSwift.ForeignKey.Deferrable : Swift.Equatable {}
+extension WCDBSwift.ForeignKey.Deferrable : Swift.Hashable {}
+extension WCDBSwift.TokenizerErrorCode : Swift.Equatable {}
+extension WCDBSwift.TokenizerErrorCode : Swift.Hashable {}
+extension WCDBSwift.Order : Swift.Equatable {}
+extension WCDBSwift.Order : Swift.Hashable {}
+extension WCDBSwift.ConflictAction : Swift.Equatable {}
+extension WCDBSwift.ConflictAction : Swift.Hashable {}
+extension WCDBSwift.ColumnType : Swift.Equatable {}
+extension WCDBSwift.ColumnType : Swift.Hashable {}
+extension WCDBSwift.TransactionType : Swift.Equatable {}
+extension WCDBSwift.TransactionType : Swift.Hashable {}
+extension WCDBSwift.FTSVersion : Swift.Equatable {}
+extension WCDBSwift.FTSVersion : Swift.Hashable {}
+extension WCDBSwift.ErrorValue.ErrorValueType : Swift.Equatable {}
+extension WCDBSwift.ErrorValue.ErrorValueType : Swift.Hashable {}
+extension WCDBSwift.WCDBError.Code : Swift.Equatable {}
+extension WCDBSwift.WCDBError.Code : Swift.Hashable {}
+extension WCDBSwift.WCDBError.Code : Swift.RawRepresentable {}
+extension WCDBSwift.WCDBError.ExtendCode : Swift.Equatable {}
+extension WCDBSwift.WCDBError.ExtendCode : Swift.Hashable {}
+extension WCDBSwift.WCDBError.ExtendCode : Swift.RawRepresentable {}
+extension WCDBSwift.WCDBError.Level : Swift.Equatable {}
+extension WCDBSwift.WCDBError.Level : Swift.Hashable {}
+extension WCDBSwift.WCDBError.Level : Swift.RawRepresentable {}
+extension WCDBSwift.WCDBError.Key : Swift.Equatable {}
+extension WCDBSwift.WCDBError.Key : Swift.Hashable {}
+extension WCDBSwift.WCDBError.Key : Swift.RawRepresentable {}

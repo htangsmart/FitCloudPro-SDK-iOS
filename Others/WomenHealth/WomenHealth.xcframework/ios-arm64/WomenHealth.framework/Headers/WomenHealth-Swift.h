@@ -302,72 +302,128 @@ typedef SWIFT_ENUM(NSInteger, LocalizationKey, open) {
   LocalizationKeyMensesOnly = 2,
 /// 月经周期长度和经期长度格式，例如：周期%@天，经期%@天
   LocalizationKeyMenstrualCycleWithDurationFormat = 3,
+/// 月经期
+  LocalizationKeyMenstrualPhase = 4,
 /// 备孕期
-  LocalizationKeyPregnancyPreparationPhase = 4,
+  LocalizationKeyPregnancyPreparePhase = 5,
 /// 怀孕期
-  LocalizationKeyPregnancyPhase = 5,
+  LocalizationKeyPregnancyPhase = 6,
+/// 安全期
+  LocalizationKeySafetyPhase = 7,
+/// 排卵期
+  LocalizationKeyOvulationPhase = 8,
+/// 排卵日
+  LocalizationKeyOvulationDay = 9,
+/// 孕早期
+  LocalizationKeyEarlyPregnancyPhase = 10,
+/// 孕中期
+  LocalizationKeyMidPregnancyPhase = 11,
+/// 孕晚期
+  LocalizationKeyLatePregnancyPhase = 12,
 /// 月经期提醒事件标题格式，例如：距离月经期还有%@天
-  LocalizationKeyMensesEventRemindTitleFormat = 6,
+  LocalizationKeyMensesEventRemindTitleFormat = 13,
 /// 预产期提醒事件标题
-  LocalizationKeyEDCEventRemindTitle = 7,
+  LocalizationKeyEDCEventRemindTitle = 14,
 /// 经期设置
-  LocalizationKeyMensesModeSettingsTitle = 8,
+  LocalizationKeyMensesModeSettingsTitle = 15,
 /// 备孕设置
-  LocalizationKeyPregnancyPrepareModeSettingsTitle = 9,
+  LocalizationKeyPregnancyPrepareModeSettingsTitle = 16,
 /// 孕期设置
-  LocalizationKeyPregnancyModeSettingsTitle = 10,
+  LocalizationKeyPregnancyModeSettingsTitle = 17,
 /// 您的月经大概持续几天？
-  LocalizationKeyMenstrualDurationQuestion = 11,
+  LocalizationKeyMenstrualDurationQuestion = 18,
 /// 经期长度
-  LocalizationKeyMenstrualDuration = 12,
+  LocalizationKeyMenstrualDuration = 19,
 /// 选择经期长度（单位：天）
-  LocalizationKeyMenstrualDurationPickerTitle = 13,
+  LocalizationKeyMenstrualDurationPickerTitle = 20,
 /// 两次月经开始日大概间隔多久？
-  LocalizationKeyMenstrualCycleQuestion = 14,
+  LocalizationKeyMenstrualCycleQuestion = 21,
 /// 周期长度
-  LocalizationKeyMenstrualCycle = 15,
+  LocalizationKeyMenstrualCycle = 22,
 /// 选择周期长度（单位：天）
-  LocalizationKeyMenstrualCyclePickerTitle = 16,
+  LocalizationKeyMenstrualCyclePickerTitle = 23,
 /// 您的预产期大概是什么时候？
-  LocalizationKeyEDCQuestion = 17,
+  LocalizationKeyEDCQuestion = 24,
 /// 设置预产期
-  LocalizationKeySetEDC = 18,
+  LocalizationKeySetEDC = 25,
 /// 天数格式，例如 %@天
-  LocalizationKeyDaysFormat = 19,
+  LocalizationKeyDaysFormat = 26,
 /// 最近一次月经
-  LocalizationKeyRecentMenstrualBegin = 20,
+  LocalizationKeyRecentMenstrualBegin = 27,
 /// 日期格式，例如yyyy-MM-dd
-  LocalizationKeyDateFormat = 21,
+  LocalizationKeyDateFormat = 28,
 /// 经期开始提醒
-  LocalizationKeyMenstrualBeginRemind = 22,
+  LocalizationKeyMenstrualBeginRemind = 29,
+/// 选择提前几天提醒（单位：天）
+  LocalizationKeyAdvanceDaysToRemindPickerTitle = 30,
 /// 提前几天提醒格式，例如：提前%@天
-  LocalizationKeyAdvanceDaysToRemindFormat = 23,
+  LocalizationKeyAdvanceDaysToRemindFormat = 31,
 /// 提醒时间
-  LocalizationKeyRemindTime = 24,
+  LocalizationKeyRemindTime = 32,
+/// 选择提醒时间
+  LocalizationKeyRemindTimePickerTitle = 33,
 /// 提醒时间格式，例如： %02ld:%02ld
-  LocalizationKeyRemindTimeFormat = 25,
+  LocalizationKeyRemindTimeFormat = 34,
 /// 手表提醒
-  LocalizationKeyRemindAtWatch = 26,
+  LocalizationKeyRemindAtWatch = 35,
 /// 开始经期模式
-  LocalizationKeyStartMensesMode = 27,
+  LocalizationKeyStartMensesMode = 36,
 /// 开始备孕模式
-  LocalizationKeyStartPregnancyPrepareMode = 28,
+  LocalizationKeyStartPregnancyPrepareMode = 37,
 /// 开始怀孕模式
-  LocalizationKeyStartPregnancyMode = 29,
+  LocalizationKeyStartPregnancyMode = 38,
 /// 计算预产期
-  LocalizationKeyCalcEDC = 30,
+  LocalizationKeyCalcEDC = 39,
 /// 怀孕期提醒
-  LocalizationKeyPregnancyPhaseRemind = 31,
+  LocalizationKeyPregnancyPhaseRemind = 40,
+/// 选择怀孕期提醒方式
+  LocalizationKeyPregnancyPhaseRemindMethodPickerTitle = 41,
 /// 距离预产期天数
-  LocalizationKeyDaysToEDC = 32,
+  LocalizationKeyDaysToEDC = 42,
 /// 距离预产期还有多少天格式，例如：距离预产期还有%@天
-  LocalizationKeyDaysToEDCFormat = 33,
+  LocalizationKeyDaysToEDCFormat = 43,
 /// 已怀孕天数
-  LocalizationKeyPregnancyDays = 34,
+  LocalizationKeyPregnancyDays = 44,
 /// 已怀孕天数格式，例如：已怀孕%@周%@天
-  LocalizationKeyPregnancyDaysFormat = 35,
+  LocalizationKeyPregnancyDaysFormat = 45,
 /// 今日为预产期当日
-  LocalizationKeyTodayIsEDC = 36,
+  LocalizationKeyTodayIsEDC = 46,
+/// 今天
+  LocalizationKeyToday = 47,
+/// 回今天
+  LocalizationKeyBackToToday = 48,
+/// 月经结束
+  LocalizationKeyEndTheMenses = 49,
+/// 月经开始
+  LocalizationKeyBeginTheMenses = 50,
+/// 过去日期，无法操作
+  LocalizationKeyPastDateNoOperationAvailable = 51,
+/// 经期开始，无法操作
+  LocalizationKeyMenstrualBeginDayNoOperationAvailable = 52,
+/// 未来日期，无法操作
+  LocalizationKeyFutureDateNoOperationAvailable = 53,
+/// 月经期 第%@天
+  LocalizationKeyMensesBeginDaysFormat = 54,
+/// 怀孕概率 %@%%
+  LocalizationKeyPregnancyProbabilityFormat = 55,
+/// 取消
+  LocalizationKeyCancel = 56,
+/// 完成
+  LocalizationKeyDone = 57,
+/// 确定
+  LocalizationKeyOk = 58,
+/// 经期模式
+  LocalizationKeyMenstrualMode = 59,
+/// 备孕模式
+  LocalizationKeyPregnancyPrepareMode = 60,
+/// 怀孕模式
+  LocalizationKeyPregnancyMode = 61,
+/// 当前处于%@，是否开始%@?
+  LocalizationKeyChangeModeConfirmMessageFormat = 62,
+/// 是
+  LocalizationKeyYes = 63,
+/// 否
+  LocalizationKeyNo = 64,
 };
 
 /// The log level
@@ -396,12 +452,34 @@ SWIFT_PROTOCOL("_TtP11WomenHealth8Loggable_")
 - (void)log:(enum LogLevel)logLevel :(NSString * _Nonnull)message;
 @end
 
-/// 经期操作提前类型
-typedef SWIFT_ENUM(NSInteger, MensesOpAdvanceType, open) {
-/// 提前结束经期
-  MensesOpAdvanceTypeFinish = 0,
-/// 提前开始经期
-  MensesOpAdvanceTypeStart = 1,
+/// 经期人为操作类型
+typedef SWIFT_ENUM(NSInteger, MenstrualBehaviorDate, open) {
+/// 过去日期
+  MenstrualBehaviorDatePast = 0,
+/// 经期开始当天
+  MenstrualBehaviorDateMenstrual_begin = 1,
+/// 可以操作结束月经
+  MenstrualBehaviorDateEnd_available = 2,
+/// 可以操作开始月经
+  MenstrualBehaviorDateStart_available = 3,
+/// 未来日期
+  MenstrualBehaviorDateFuture = 4,
+/// 未来超出范围日期
+  MenstrualBehaviorDateFuture_outscope = 5,
+/// 非法日期
+  MenstrualBehaviorDateInvalid = 6,
+/// 女性健康未启用
+  MenstrualBehaviorDateFeature_disabled = 7,
+/// 女性健康模式不匹配，当前为怀孕期
+  MenstrualBehaviorDateMode_not_match = 8,
+};
+
+/// 经期人为操作类型
+typedef SWIFT_ENUM(NSInteger, MenstrualBehaviorType, open) {
+/// 结束月经
+  MenstrualBehaviorTypeEnd_manual = 0,
+/// 开始月经
+  MenstrualBehaviorTypeBegin_manual = 1,
 };
 
 /// 怀孕期提醒方式
@@ -411,6 +489,41 @@ typedef SWIFT_ENUM(NSInteger, PregnancyRemindType, open) {
 /// 距离预产期天数
   PregnancyRemindTypeDays_before_edc = 1,
 };
+
+enum WomenHealthMode : NSInteger;
+@class NSDate;
+
+/// 智能手表同步协议
+SWIFT_PROTOCOL("_TtP11WomenHealth18SmartWatchSyncable_")
+@protocol SmartWatchSyncable <NSObject>
+/// 如果需要则同步女性健康配置给手表
+/// \param userId 用户Id
+///
+/// \param mode 当前女性健康模式
+///
+/// \param recentMenstrualBegin 最近一次月经开始日期
+///
+/// \param menstrualDuration 经期长度
+///
+/// \param menstrualCycle 周期长度
+///
+/// \param advanceDaysToRemind 提前几天提醒
+///
+/// \param hoursInDayForRemind 几点提醒
+///
+/// \param remindAtWatch 是否在手表上提醒
+///
+/// \param pregnancyRemindType 怀孕期提醒方式
+///
+/// \param menstrualDurationWhenManualBehaviorExist：如果存在手动经期操作时经期长度，当为0时，表示没有手动经期操作 
+///
+- (void)syncIfNeededWith:(NSString * _Nonnull)userId :(enum WomenHealthMode)mode :(NSDate * _Nonnull)recentMenstrualBegin :(NSInteger)menstrualDuration :(NSInteger)menstrualCycle :(NSInteger)advanceDaysToRemind :(NSInteger)hoursInDayForRemind :(BOOL)remindAtWatch :(enum PregnancyRemindType)pregnancyRemindType :(NSInteger)menstrualDurationWhenManualBehaviorExist;
+/// 手表是否支持女性健康功能
+///
+/// returns:
+/// 手表是否支持女性健康功能
+- (BOOL)withFeatureOnWatch SWIFT_WARN_UNUSED_RESULT;
+@end
 
 enum ThemeColorKey : NSInteger;
 @class UITraitCollection;
@@ -434,9 +547,33 @@ typedef SWIFT_ENUM(NSInteger, ThemeColorKey, open) {
 /// 分割线
   ThemeColorKeySeparator = 1,
 /// UITable背景色
-  ThemeColorKeyTable_background = 2,
+  ThemeColorKeyTable_background_default = 2,
+/// Table Cell 背景色
+  ThemeColorKeyTablecell_background_default = 3,
+/// Secondary Table Cell 背景色
+  ThemeColorKeyTablecell_background_secondary = 4,
+/// Table Cell chevron.right 图标颜色
+  ThemeColorKeyTablecell_accessory_chevron_right = 5,
 /// 警示(重要/凸显)按钮标题颜色
-  ThemeColorKeyButton_title_destructive = 3,
+  ThemeColorKeyButton_title_destructive = 6,
+/// 月经期指示色
+  ThemeColorKeyMenstrual_phase_indicator = 7,
+/// 安全期指示色
+  ThemeColorKeySafety_phase_indicator = 8,
+/// 排卵期指示色
+  ThemeColorKeyOvulation_phase_indicator = 9,
+/// 排卵日指示色
+  ThemeColorKeyOvulation_day_indicator = 10,
+/// 孕早期指示色
+  ThemeColorKeyEarly_pregnancy_indicator = 11,
+/// 孕中期指示色
+  ThemeColorKeyMid_pregnancy_indicator = 12,
+/// 孕晚期指示色
+  ThemeColorKeyLate_pregnancy_indicator = 13,
+/// 日历背景色
+  ThemeColorKeyCalendar_background_default = 14,
+/// 选中日期背景色
+  ThemeColorKeyCalendar_date_selected_background_default = 15,
 };
 
 /// 图片Key定义
@@ -447,6 +584,22 @@ typedef SWIFT_ENUM(NSInteger, ThemeImageKey, open) {
   ThemeImageKeyIcon_tablecell_accessory_chevron_right = 1,
 /// chevron.down 图标
   ThemeImageKeyIcon_chevron_down = 2,
+/// 排卵日图标
+  ThemeImageKeyIcon_ovulationday = 3,
+/// 日历上一页按钮图标
+  ThemeImageKeyIcon_button_calendar_page_prev = 4,
+/// 日历下一页按钮图标
+  ThemeImageKeyIcon_button_calendar_page_next = 5,
+/// 最近一次月经开始日期图标
+  ThemeImageKeyIcon_menstrual_date_begin = 6,
+/// 开始月经/结束月经图标
+  ThemeImageKeyIcon_menstrual_behavior = 7,
+/// 预产期图标
+  ThemeImageKeyIcon_edc_date = 8,
+/// 预产期当日图标
+  ThemeImageKeyIcon_edc_today = 9,
+/// 导航栏设置图标
+  ThemeImageKeyIcon_navbar_settings = 10,
 };
 
 
@@ -495,6 +648,28 @@ SWIFT_CLASS("_TtC11WomenHealth17WomenHealthModule") SWIFT_AVAILABILITY(ios,intro
 /// returns:
 /// 本地化的字符串数组
 + (NSArray<NSString *> * _Nonnull)localizableStrings SWIFT_WARN_UNUSED_RESULT;
+/// 设置同步女性健康配置给手表服务提供者
+/// \param provider 同步女性健康配置给手表服务提供者
+///
++ (void)setWatchSyncServiceProvider:(id <SmartWatchSyncable> _Nullable)provider;
+/// 通知女性健康模块手表女性健康功能可用状态发生改变
++ (void)notifySmartWatchWomenHealthFeatureAvailableChanged;
+/// 若有必要将女性健康当前模式配置同步给手表
++ (void)syncModeSettingsToSmartWatchIfNeeded;
+/// 导出女性健康数据库
+/// \param fromVC 从该视图控制器弹出导出弹窗
+///
++ (void)exportDB:(UIViewController * _Nonnull)fromVC;
+@end
+
+
+/// 女性健康模块通知
+SWIFT_CLASS("_TtC11WomenHealth24WomenHealthNotifications")
+@interface WomenHealthNotifications : NSObject
+/// 女性健康当前模式改变通知
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull modeDidChangedNotification;)
++ (NSNotificationName _Nonnull)modeDidChangedNotification SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 /// 女性健康阶段

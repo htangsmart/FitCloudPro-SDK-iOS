@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890E6B212A868C81007A7C89 /* SyncWomenHealthConfigOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E6B202A868C81007A7C89 /* SyncWomenHealthConfigOperation.swift */; };
 		89E34C582A5E909700B947BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E34C572A5E909700B947BF /* AppDelegate.swift */; };
 		89E34C5A2A5E909700B947BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E34C592A5E909700B947BF /* SceneDelegate.swift */; };
 		89E34C5C2A5E909700B947BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E34C5B2A5E909700B947BF /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		6466CCE8E7CD106CC73A9835 /* Pods_WomenHealthDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WomenHealthDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		890E6B202A868C81007A7C89 /* SyncWomenHealthConfigOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncWomenHealthConfigOperation.swift; sourceTree = "<group>"; };
 		89E34C542A5E909700B947BF /* WomenHealthDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WomenHealthDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E34C572A5E909700B947BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89E34C592A5E909700B947BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		89E34C562A5E909700B947BF /* WomenHealthDemo */ = {
 			isa = PBXGroup;
 			children = (
+				890E6B202A868C81007A7C89 /* SyncWomenHealthConfigOperation.swift */,
 				89E34C572A5E909700B947BF /* AppDelegate.swift */,
 				89E34C592A5E909700B947BF /* SceneDelegate.swift */,
 				89E34C5B2A5E909700B947BF /* ViewController.swift */,
@@ -233,6 +236,7 @@
 				89E34C5C2A5E909700B947BF /* ViewController.swift in Sources */,
 				89E34C582A5E909700B947BF /* AppDelegate.swift in Sources */,
 				89E34C5A2A5E909700B947BF /* SceneDelegate.swift in Sources */,
+				890E6B212A868C81007A7C89 /* SyncWomenHealthConfigOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,8 +395,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 202308120001;
+				DEVELOPMENT_TEAM = 4R4ZQP25B9;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,6 +404,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WomenHealthDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "女性健康";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -413,7 +418,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.WomenHealthDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -431,8 +436,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 202308120001;
+				DEVELOPMENT_TEAM = 4R4ZQP25B9;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +445,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WomenHealthDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "女性健康";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -453,7 +459,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.WomenHealthDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

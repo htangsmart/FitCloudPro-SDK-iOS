@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>需要获得日历权限用于女性健康提醒等</string>
 </dict>
 </plist>

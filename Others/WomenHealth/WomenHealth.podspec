@@ -14,12 +14,14 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   
+  s.libraries        = 'c++', 'z'
   s.frameworks       = 'Foundation', 'UIKit', 'EventKit'
 
   s.requires_arc = true
-  s.vendored_frameworks = 'WomenHealth.xcframework'
+  s.vendored_frameworks = 'WomenHealth.xcframework', 'WCDBSwift.xcframework', 'sqlcipher.xcframework'
   s.resource = 'WomenHealth.bundle'
-  s.dependency 'FitCloudKit'
-  s.dependency 'WCDB.swift'
+
+  s.dependency 'FSCalendar'
+  s.dependency 'zipzap'
 
 end

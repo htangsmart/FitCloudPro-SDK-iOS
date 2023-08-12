@@ -19,5 +19,14 @@ class ViewController: UIViewController {
     @IBAction func OnGoMainSettings(_ sender: Any) {
         WomenHealthModule.enterMainSettings(from: self)
     }
+    
+    @IBAction func OnEnterCurrentMode(_ sender: Any) {
+        WomenHealthModule.enterCurrentModeHome(from: self)
+    }
+    
+    @IBAction func OnExportDB(_ sender: Any) {
+        WomenHealthModule.exportDB(self)
+    }
+    
 }
 
