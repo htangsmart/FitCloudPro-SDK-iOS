@@ -594,6 +594,19 @@ typedef void (^FitCloudGPSFileCanPushResultBlock)(BOOL succeed, BOOL canPush, NS
  */
 -(void) OnAliotData:(NSData*)aliotData totalPacks:(NSInteger)totalPacks packIndex:(NSInteger)packIndex expectedTotalBytes:(NSInteger)expectedTotalBytes;
 
+
+/**
+ *@brief 网易云音乐MTU回调
+ *@param mtu mtu值
+ */
+-(void) MTUNotifyForNetEaseCloudMusic:(NSUInteger)mtu;
+
+/**
+ *@brief 网易云音乐桥接数据回调
+ *@param data 网易云音乐桥接数据
+ */
+-(void) OnNetEaseCloudMusicBridgeData:(NSData*)data;
+
 /**
  * @brief 手表请求创维光伏数据
  */

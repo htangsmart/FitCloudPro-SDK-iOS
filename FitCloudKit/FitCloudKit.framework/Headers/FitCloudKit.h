@@ -9,12 +9,13 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-08-01  Version:1.2.9-beta.19 Build:202308010001
+//     pcjbird    2023-08-26  Version:1.2.9-beta.20 Build:202308260001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
 //                            4.新增同步指定时间到手表支持
 //                            5.GPS&EPO支持, @see withGPSEpo
+//                            6.网易云音乐支持
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1137,6 +1138,13 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void) sendAliotData:(NSData*)aliotData withBlock:(FitCloudResultBlock _Nullable)block;
+
+#pragma mark 发送网易云音乐桥接数据
+/**
+ * @brief 发送网易云音乐桥接数据
+ * @param data 发送网易云音乐桥接数据
+ */
++(void) sendNetEaseBridgeData:(NSData*)data;
 
 #pragma mark 发送创维光伏数据
 

@@ -49,6 +49,16 @@
  */
 @property(nonatomic, readonly) BOOL allowConnectWithBT;
 
+/**
+ * @brief 是否支持网易云音乐
+ */
+@property(nonatomic, readonly) BOOL allowNetEaseCloudMusic;
+
+/**
+ * @brief 网易云音乐需要的广播数据
+ */
+@property(nonatomic, strong, readonly) NSData* necmAdvData;
+
 
 /**
  * @brief 是否已经跟系统配对
