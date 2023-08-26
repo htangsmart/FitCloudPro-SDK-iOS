@@ -1,0 +1,6 @@
+framework module AliIotSdk {
+  umbrella header "AliIotSdk.h"
+  export *
+
+  module * { export * }
+}
