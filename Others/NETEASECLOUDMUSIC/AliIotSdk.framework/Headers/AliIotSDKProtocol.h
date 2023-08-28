@@ -8,6 +8,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @protocol AliIotSDKProtocol <NSObject>
 - (instancetype)init NS_UNAVAILABLE;
 
@@ -57,8 +58,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @protocol AliIotSDKFeatureProtocol <NSObject>
-///
-
 
 @end
 

@@ -4,21 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Frameworks/AliIotConnectKit.framework/AliIotConnectKit</key>
+		<key>.DS_Store</key>
 		<data>
-		OzbQ1Ud6CpmsXpGFZeHtFdYbaFw=
-		</data>
-		<key>Frameworks/AliIotConnectKit.framework/Info.plist</key>
-		<data>
-		HFu0iiPLzPgYW1vv9pzHCHSOY5w=
-		</data>
-		<key>Frameworks/AliIotConnectKit.framework/_CodeSignature/CodeResources</key>
-		<data>
-		G+uVdoUkwmhsZmcpgTdejH8WbkY=
-		</data>
-		<key>Frameworks/AliIotConnectKit.framework/srca.cer</key>
-		<data>
-		Lghy510qxTrhqbiuSvYdpLbcqMk=
+		eMMjiD2wXlKYGZEX6F47h6kWkpQ=
 		</data>
 		<key>Headers/AliIot.h</key>
 		<data>
@@ -26,7 +14,7 @@
 		</data>
 		<key>Headers/AliIotSDKProtocol.h</key>
 		<data>
-		LtjhmYS5kyz3+pACD89S/SWj5Rc=
+		isH3uNnr3BpnQihJCSxGupKgFvQ=
 		</data>
 		<key>Headers/AliIotSdk.h</key>
 		<data>
@@ -34,43 +22,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		40dRseh8T+7rIck74VnKllfvSs0=
+		oeh6ajYTak9iWwpzKt5wi/wktmQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		0xA0ohWPWngHk+48TTejfhmfG/4=
+		ynxD9goemDu8LJ0UNdJeyhfs2OQ=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/AliIotConnectKit.framework/AliIotConnectKit</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			F/Kd/0wJfEsPlH0GmDA8egJokJJJqRa9pFkW9Y2DGKk=
-			</data>
-		</dict>
-		<key>Frameworks/AliIotConnectKit.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VFuwTBIzNsLR+O7DOeru/ljHbp5pz0J19UuP+123AaY=
-			</data>
-		</dict>
-		<key>Frameworks/AliIotConnectKit.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			d0VjoK8YMPobQnYcODF7cfKB/ImwcaZ1imvIi5pVm5M=
-			</data>
-		</dict>
-		<key>Frameworks/AliIotConnectKit.framework/srca.cer</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			kgKRadeYamUXqJWquf6akXtKoncLt42bY9bdMwyVGGw=
-			</data>
-		</dict>
 		<key>Headers/AliIot.h</key>
 		<dict>
 			<key>hash2</key>
@@ -82,7 +42,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4VvOPgNkcGxTrsjvY9WBpsDBTlpIwzYjEMX7XHos63Y=
+			pWMnAEaErJyGxxJr3wtQhTrKkqyKaoA3lq6zvr5KGfc=
 			</data>
 		</dict>
 		<key>Headers/AliIotSdk.h</key>
@@ -96,7 +56,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hQzEQznj7blxdTxYUy2RzF5MLre3as+2kEbPTeLwk9A=
+			LXhugPZJ6XlfaukeCo9bqncvIIX9BYtkZiZnuvDXrho=
 			</data>
 		</dict>
 	</dict>
