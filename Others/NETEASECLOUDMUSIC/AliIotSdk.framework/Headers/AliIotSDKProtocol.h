@@ -57,7 +57,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)handleLog:(NSString *)log;
 @end
 
-@protocol AliIotSDKFeatureProtocol <NSObject>
+typedef void(^AliIotCommonRequestBlock)(id data);
+@protocol AliIotSDKCommonProtocol <NSObject>
+@optional
+
+- (void)requestConnectLP:(AliIotCommonRequestBlock)complete;
+
+- (void)requestSyncTime:(AliIotCommonRequestBlock)complete;
 
 @end
 

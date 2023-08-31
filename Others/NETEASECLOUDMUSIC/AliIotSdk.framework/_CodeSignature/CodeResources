@@ -4,17 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		eMMjiD2wXlKYGZEX6F47h6kWkpQ=
-		</data>
 		<key>Headers/AliIot.h</key>
 		<data>
-		ZI6Ht7+MkhMdLHCRmtgf9EwzY1U=
+		hKVe0iHz46fY8fPYbWrFO0quxbE=
 		</data>
 		<key>Headers/AliIotSDKProtocol.h</key>
 		<data>
-		isH3uNnr3BpnQihJCSxGupKgFvQ=
+		S2x1mIXGOPu9bq0wZOBtR06liII=
 		</data>
 		<key>Headers/AliIotSdk.h</key>
 		<data>
@@ -35,14 +31,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DkPVYRh++7BzKE942TXYC8LjI2r0gqiwL9yAHGwRBIk=
+			/5P+jcyxtKi6cvt3SfojocTeT5xgoQR7PGqIkpiximU=
 			</data>
 		</dict>
 		<key>Headers/AliIotSDKProtocol.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pWMnAEaErJyGxxJr3wtQhTrKkqyKaoA3lq6zvr5KGfc=
+			0A+IY9BGX5xDMXk8RC6ru2h7iD3WTPr/tdlP9pSqT6k=
 			</data>
 		</dict>
 		<key>Headers/AliIotSdk.h</key>

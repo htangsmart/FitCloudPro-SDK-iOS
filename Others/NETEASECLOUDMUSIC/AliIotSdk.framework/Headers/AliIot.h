@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AliIot : NSObject <AliIotSDKProtocol, AliIotSDKFeatureProtocol>
+@interface AliIot : NSObject <AliIotSDKProtocol>
 + (instancetype)shareInstance;
 
 @property (nonatomic, weak) id<AliIotSDKCallbackProtocol> delegate;
