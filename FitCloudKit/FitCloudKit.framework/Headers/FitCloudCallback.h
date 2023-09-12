@@ -596,10 +596,9 @@ typedef void (^FitCloudGPSFileCanPushResultBlock)(BOOL succeed, BOOL canPush, NS
 
 
 /**
- *@brief 网易云音乐MTU回调
- *@param mtu mtu值
+ *@brief 网易云音乐桥接准备完毕
  */
--(void) MTUNotifyForNetEaseCloudMusic:(NSUInteger)mtu;
+-(void) OnNetEaseCloudMusicBridgeReady;
 
 /**
  *@brief 网易云音乐桥接数据回调
