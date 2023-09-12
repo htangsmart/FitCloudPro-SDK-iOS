@@ -33,16 +33,6 @@
 @property(nonatomic, readonly) BOOL allowConnectWithBT;
 
 /**
- * @brief 是否支持网易云音乐
- */
-@property(nonatomic, readonly) BOOL allowNetEaseCloudMusic;
-
-/**
- * @brief 网易云音乐需要的广播数据
- */
-@property(nonatomic, strong, readonly) NSData* _Nullable necmAdvData;
-
-/**
  * @brief 从广播数据获取厂商信息
  * @param advertisementData 广播数据
  * @return FitCloud 厂商信息, 如果不是FitCloud设备返回nil
