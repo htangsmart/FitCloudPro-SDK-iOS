@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-09-15  Version:1.2.9-beta.27 Build:202309150001
+//     pcjbird    2023-09-22  Version:1.2.9-beta.28 Build:202309220001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -17,6 +17,9 @@
 //                            5.GPS&EPO支持, @see withGPSEpo
 //                            6.网易云音乐支持
 //                            7.表盘尺寸支持228*460方
+//                            8.新增习惯养成类型
+//                            9.新增获取手表的支持的日程类型列表 @see canGetSupportedSchedules
+//                            10.支持设置和获取勋章列表 @see withMedals
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -452,6 +455,12 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief 手表习惯养成列表
  */
 +(NSArray<FitCloudHabitObject*>*_Nullable) habits;
+
+#pragma mark 手表勋章列表
+/**
+ * @brief 手表勋章列表
+ */
++(NSArray<FitCloudMedal*>*_Nullable) medals;
 
 #pragma mark 最后连接的手表信息
 /**
@@ -1028,6 +1037,28 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
 */
 +(void) getWatchSpecifiedSupportedMoneyReceiveAndBusinessQRCodeFeaturesWithBlock:(FitCloudQRCodeFeaturesResultBlock _Nullable)block;
+
+#pragma mark 设置勋章列表
+/**
+* @brief 设置勋章列表（将手机上的勋章列表同步到手表）
+* @param medals 勋章列表
+* @param block 结果回调
+*/
++(void) setMedals:(NSArray<FitCloudMedal*>*_Nullable)medals block:(FitCloudResultBlock _Nullable )block;
+
+#pragma mark 获取勋章列表
+/**
+* @brief 获取勋章列表（获取手表上的勋章列表）
+* @param block 结果回调
+*/
++(void) getMedalsWithBlock:(FitCloudMedalsResultBlock _Nullable)block;
+
+#pragma mark 获取支持的日程类型列表
+/**
+* @brief 获取支持的日程类型列表（获取手表上支持的日程类型列表）
+* @param block 结果回调
+*/
++(void) getSupportedSchedulesWithBlock:(FitCloudSupportedSchedulesResultBlock _Nullable)block;
 
 
 #pragma mark 设置亮屏时长、亮度、振动等信息

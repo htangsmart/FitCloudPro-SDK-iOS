@@ -183,5 +183,8 @@ extern NSString *const FITCLOUDEVENT_WATCHCONFIG_REMOTE_MANUAL_CHANGED_NOTIFY;
  */
 extern NSString *const FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY;
 
-
+/**
+ * @brief 勋章列表变化通知 userInfo=>NSArray<FitCloudMedal *>
+ */
+extern NSString *const FITCLOUDEVENT_MEDALLIST_CHANGED_NOTIFY;
 #endif /* FitCloudEvent_h */

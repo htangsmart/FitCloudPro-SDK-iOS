@@ -283,4 +283,13 @@
 /// 是否支持GPS更新epo功能
 @property(nonatomic, readonly) BOOL withGPSEpo;
 
+/// 是否支持体感游戏
+@property(nonatomic, readonly) BOOL withMotionSensingGame;
+
+/// 是否支持勋章
+@property(nonatomic, readonly) BOOL withMedals;
+
+/// 是否支持获取支持的日程类型
+@property(nonatomic, readonly) BOOL canGetSupportedSchedules;
+
 @end

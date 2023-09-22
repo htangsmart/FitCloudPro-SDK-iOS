@@ -310,6 +310,17 @@ typedef NS_OPTIONS(Byte, FITCLOUDSCHEDULE)
     FITCLOUDSCHEDULE_GOTOBED = 9,           //睡觉
     FITCLOUDSCHEDULE_GOTOSCHOOL = 10,       //上学
     FITCLOUDSCHEDULE_GOHOME = 11,           //回家
+    FITCLOUDSCHEDULE_READ = 12,             //阅读
+    FITCLOUDSCHEDULE_BATH = 13,             //洗澡
+    FITCLOUDSCHEDULE_PARTY = 14,            //聚会
+    FITCLOUDSCHEDULE_GAME = 15,             //打游戏
+    FITCLOUDSCHEDULE_CAMP = 16,             //露营
+    FITCLOUDSCHEDULE_MUSIC = 17,            //音乐
+    FITCLOUDSCHEDULE_DRAW = 18,             //绘画
+    FITCLOUDSCHEDULE_DANCE = 19,            //跳舞
+    FITCLOUDSCHEDULE_PHOTOGRAPHY = 20,      //摄影
+    FITCLOUDSCHEDULE_WALKTHEDOG = 21,       //遛狗
+    FITCLOUDSCHEDULE_MOVIE = 22,            //电影
 };
 
 /**
@@ -374,6 +385,8 @@ typedef NS_ENUM(Byte, FITCLOUDHABITNAMERULE)
 {
     FITCLOUDHABITNAMERULE_CUSTOM = 0,        //自定义
     FITCLOUDHABITNAMERULE_SPORTS = 1,        //运动
+    FITCLOUDHABITNAMERULE_STUDY = 2,         //学习
+    FITCLOUDHABITNAMERULE_SLEEP = 3,         //睡眠
 };
 
 #pragma mark - 用户相关
@@ -1277,6 +1290,17 @@ typedef NS_ENUM(Byte, FITCLOUDGPSFILEUPGRADEMODE)
 {
     FITCLOUDGPSFILEUPGRADEMODE_BEFOREEXPIRE = 0,               //需要清除当前GPS文件更新（当前文件未过期）
     FFITCLOUDGPSFILEUPGRADEMODE_AFTEREXPIRE = 1,               //直接更新（当前文件已过期）
+};
+
+#pragma mark -勋章成就等级
+
+typedef NS_ENUM(Byte, FITCLOUDMEDALACHIEVEMENTLEVEL)
+{
+    FITCLOUDMEDALACHIEVEMENTLEVEL_ELEMENTARY = 0,               //初级
+    FITCLOUDMEDALACHIEVEMENTLEVEL_MONTHLYCHALLENGE = 1,         //月度挑战
+    FITCLOUDMEDALACHIEVEMENTLEVEL_EXCEEDONESELF = 2,            //超越自我
+    FITCLOUDMEDALACHIEVEMENTLEVEL_MILESTONE = 3,                //里程碑
+    FITCLOUDMEDALACHIEVEMENTLEVEL_PERSISTENCEMASTER = 4,        //毅力大师
 };
 
 #endif /* FitCloudKitDefines_h */

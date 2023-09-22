@@ -62,6 +62,7 @@
 #import <FitCloudKit/FitCloudGPSData.h>
 #import <FitCloudKit/FitCloudGPSEpoTimestamp.h>
 #import <FitCloudKit/FitCloudCricketMatchScoreOrder.h>
+#import <FitCloudKit/FitCloudMedal.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -457,6 +458,22 @@ typedef void (^FitCloudWatchGPSFileStateResultBlock)(BOOL succeed, FITCLOUDWATCH
  * @param error 错误信息
  */
 typedef void (^FitCloudGPSFileCanPushResultBlock)(BOOL succeed, BOOL canPush, NSError* error);
+
+/**
+ * @brief FitCloud 勋章列表回调
+ * @param succeed 是否成功
+ * @param medals 勋章
+ * @param error 错误信息
+ */
+typedef void (^FitCloudMedalsResultBlock)(BOOL succeed, NSArray<FitCloudMedal*>*medals, NSError* error);
+
+/**
+ * @brief FitCloud 支持的日程类型回调
+ * @param succeed 是否成功
+ * @param supported 支持的日程类型
+ * @param error 错误信息
+ */
+typedef void (^FitCloudSupportedSchedulesResultBlock)(BOOL succeed, NSArray<NSNumber*>*supported, NSError* error);
 
 
 /**

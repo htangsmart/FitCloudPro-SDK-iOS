@@ -15,7 +15,7 @@
 @interface FitCloudScheduleObject : NSObject<NSCoding>
 
 /**
- * @brief 类型 (有效值 0～11)
+ * @brief 类型 (有效值 0～22)
  */
 @property (nonatomic, assign) FITCLOUDSCHEDULE scheduleType;
 
