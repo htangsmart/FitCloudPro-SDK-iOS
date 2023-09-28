@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-09-22  Version:1.2.9-beta.28 Build:202309220001
+//     pcjbird    2023-09-28  Version:1.2.9-beta.29 Build:202309280001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -20,6 +20,7 @@
 //                            8.新增习惯养成类型
 //                            9.新增获取手表的支持的日程类型列表 @see canGetSupportedSchedules
 //                            10.支持设置和获取勋章列表 @see withMedals
+//                            11.体感游戏支持 @see withMotionSensingGame
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1379,6 +1380,21 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 调用结果回调
  */
 +(void) requestRealTimeGPSConnectSportsCurrentStatusWithBlock:(FitCloudGPSConnectSportsCurrentStatusResultBlock _Nullable) block;
+
+
+#pragma mark 开启GSensor
+/**
+ * @brief 开启GSensor
+ * @param block 结果回调
+ */
++(void)openGSensorWithBlock:(FitCloudOpenGSensorResultBlock _Nullable )block;
+
+#pragma mark 关闭GSensor
+/**
+ * @brief 关闭GSensor
+ * @param block 结果回调
+ */
++(void)closeGSensorWithBlock:(FitCloudResultBlock _Nullable )block;
 
 @end
 

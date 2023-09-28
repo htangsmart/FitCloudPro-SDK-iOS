@@ -475,6 +475,13 @@ typedef void (^FitCloudMedalsResultBlock)(BOOL succeed, NSArray<FitCloudMedal*>*
  */
 typedef void (^FitCloudSupportedSchedulesResultBlock)(BOOL succeed, NSArray<NSNumber*>*supported, NSError* error);
 
+/**
+ *@brief FitCloud开启GSensor结果回调
+ *@param succeed 是否成功开启
+ *@param error 错误信息
+ */
+typedef void (^FitCloudOpenGSensorResultBlock)(BOOL succeed, NSError* error);
+
 
 /**
  *@brief FitCloudKit 回调协议
@@ -642,6 +649,13 @@ typedef void (^FitCloudSupportedSchedulesResultBlock)(BOOL succeed, NSArray<NSNu
  * @brief 手表通知GPS文件升级代码，升级中的范围：0~100 ，升级成功：101，升级失败：255
  */
 -(void) OnGPSFileUpgradeCode:(NSInteger)code;
+
+/// GSensor数据
+/// - Parameters:
+///   - xGravity: 对应sensor数据中的X轴加速度
+///   - yGravity: 对应sensor数据中的Y轴加速度
+///   - zGravity: 对应sensor数据中的Z轴加速度
+-(void) OnGSensorDataWithXGravity:(SInt16)xGravity yGravity:(SInt16)yGravity zGravity:(SInt16)zGravity;
 
 /**
  * @brief 睡眠调试数据
