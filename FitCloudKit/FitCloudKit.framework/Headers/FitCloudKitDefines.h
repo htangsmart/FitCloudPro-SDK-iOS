@@ -357,6 +357,22 @@ typedef NS_OPTIONS(Byte, FITCLOUDHABITCYCLE)
 };
 
 /**
+ * @brief 习惯一周内达标情况定义
+ */
+typedef NS_OPTIONS(Byte, FITCLOUDHABITACHIEVEMENT)
+{
+    FITCLOUDHABITACHIEVEMENT_NONE = 0,          //不达标
+    FITCLOUDHABITACHIEVEMENT_LAST_SUN = 1,     //上周日达标
+    FITCLOUDHABITACHIEVEMENT_MON = 1 << 1,     //本周一达标
+    FITCLOUDHABITACHIEVEMENT_TUE = 1 << 2,     //本周二达标
+    FITCLOUDHABITACHIEVEMENT_WED = 1 << 3,     //本周三达标
+    FITCLOUDHABITACHIEVEMENT_THUR = 1 << 4,    //本周四达标
+    FITCLOUDHABITACHIEVEMENT_FRI = 1 << 5,     //本周五达标
+    FITCLOUDHABITACHIEVEMENT_SAT = 1 << 6,     //本周六达标
+    FITCLOUDHABITACHIEVEMENT_SUN = 1 << 7,     //本周日达标
+};
+
+/**
  * @brief 习惯关联功能定义
  */
 typedef NS_ENUM(Byte, FITCLOUDHABITASSOCIATEDFEATURE)

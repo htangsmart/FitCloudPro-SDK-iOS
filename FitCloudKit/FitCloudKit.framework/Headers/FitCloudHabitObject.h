@@ -68,6 +68,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) UInt8 targetDays;
 
+/*
+ * @brief 一周内达标情况
+ */
+@property (nonatomic, readonly) FITCLOUDHABITACHIEVEMENT achievementLastWeek;
+
+/**
+ * @brief 最新达标日期的月份
+ */
+@property(nonatomic, readonly) UInt8 lastAchievementMonth;
+
+/**
+ * @brief 最新达标日
+ */
+@property(nonatomic, readonly) UInt8 lastAchievementDay;
+
 /**
  * @brief 习惯名称规则
  */
@@ -90,6 +105,9 @@ NS_ASSUME_NONNULL_BEGIN
  * @param achievementDays 达标天数，单位：天
  * @param maxContinuousAchievementDays 最长连续达标天数，单位：天
  * @param targetDays 任务(目标)天数，单位：天
+ * @param achievementLastWeek 一周内达标情况
+ * @param lastAchievementMonth 最新达标日期的月份
+ * @param lastAchievementDay 最新达标日
  * @param nameRule 习惯名称规则
  * @param customName 自定义名称，非自定义名称时为空
  * @param allowNameTrim 是否允许根据长度自动截取名字
@@ -106,6 +124,9 @@ NS_ASSUME_NONNULL_BEGIN
                                       achievement:(UInt8)achievementDays
                          maxContinuousAchievement:(UInt8)maxContinuousAchievementDays
                                        targetDays:(UInt8)targetDays
+                              achievementLastWeek:(FITCLOUDHABITACHIEVEMENT) achievementLastWeek
+                             lastAchievementMonth:(UInt8) lastAchievementMonth
+                               lastAchievementDay:(UInt8) lastAchievementDay
                                          nameRule:(FITCLOUDHABITNAMERULE)nameRule
                                        customName:(NSString* _Nullable)customName
                                     allowNameTrim:(BOOL)allowNameTrim
