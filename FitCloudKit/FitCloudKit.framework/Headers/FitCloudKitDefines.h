@@ -187,6 +187,7 @@ typedef NS_OPTIONS(UInt16, FITCLOUDPREFER)
     FITCLOUDPREFER_WEATHERPUSH = 1 << 5,            //开启天气推送  0关 1开
     FITCLOUDPREFER_VIBRATEWHENDISCONNECT = 1 << 6,  //蓝牙断开时手表振动 0关 1开
     FITCLOUDPREFER_REMINDWHENSPORTSGOALACHIEVEMENT = 1 << 7, // 手表运动(计步/距离/卡路里)目标达成提醒 0关 1开
+    FITCLOUDPREFER_METRICWEIGHT = 1 << 8,           //重量使用公制 0 英制 1 公制
 };
 
 #pragma mark - 手环语言

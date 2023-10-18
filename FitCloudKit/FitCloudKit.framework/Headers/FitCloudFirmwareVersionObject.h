@@ -292,4 +292,10 @@
 /// 是否支持获取支持的日程类型
 @property(nonatomic, readonly) BOOL canGetSupportedSchedules;
 
+/// 是否支持获取设备最近一周习惯达标情况和最新达标日期
+@property(nonatomic, readonly) BOOL canGetLatestHabitAchievement;
+
+/// 是否可以设置公制重量偏好
+@property(nonatomic, readonly) BOOL withMetricWeightPreferFixed;
+
 @end
