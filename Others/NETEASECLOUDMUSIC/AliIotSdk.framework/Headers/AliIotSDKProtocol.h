@@ -8,20 +8,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 @protocol AliIotSDKProtocol <NSObject>
 - (instancetype)init NS_UNAVAILABLE;
 
-/// 传入厂商数据
-/// - Parameter advData: -
-/// Some code - Demo
-///     [AliIotSDK]
-/// ---
-- (BOOL)setAdvData:(NSData *)advData;
-
-/// 设置 mtu
-/// - Parameter mtuSize: mtu大小
-- (BOOL)setMtu:(NSInteger)mtuSize;
+/// 初始化 SDK
+/// - Parameter param:
+- (void)configSDK:(id)param;
 
 /// 收到 蓝牙 数据
 /// - Parameter currData: data
@@ -37,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 - (void)handleReceivedData:(NSData *)currData;
 
+/// 设备断开时调用
+/// - Parameter param:
+- (void)done:(void(^ _Nonnull )(id _Nullable param))completed;
 
 @end
 
@@ -55,16 +50,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 输出日志,直接监听即可
 /// - Parameter log: 日志信息
 - (void)handleLog:(NSString *)log;
-@end
-
-typedef void(^AliIotCommonRequestBlock)(id data);
-@protocol AliIotSDKCommonProtocol <NSObject>
-@optional
-
-- (void)requestConnectLP:(AliIotCommonRequestBlock)complete;
-
-- (void)requestSyncTime:(AliIotCommonRequestBlock)complete;
-
 @end
 
 NS_ASSUME_NONNULL_END
