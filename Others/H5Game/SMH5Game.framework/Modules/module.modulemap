@@ -1,0 +1,6 @@
+framework module SMH5Game {
+  umbrella header "SMH5Game.h"
+
+  export *
+  module * { export * }
+}

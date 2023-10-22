@@ -1,0 +1,6 @@
+framework module FitCloudH5Game {
+  umbrella header "FitCloudH5Game.h"
+  export *
+
+  module * { export * }
+}
