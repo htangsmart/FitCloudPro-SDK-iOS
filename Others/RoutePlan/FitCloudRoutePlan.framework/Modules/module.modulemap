@@ -1,0 +1,6 @@
+framework module FitCloudRoutePlan {
+  umbrella header "FitCloudRoutePlan.h"
+  export *
+
+  module * { export * }
+}
