@@ -17,15 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    /// You must the this for baidu map
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    
-    self.window.rootViewController = [storyboard instantiateInitialViewController];
-    [self.window makeKeyAndVisible];
-    //高德地图
+    /// 高德地图 (AMap)
     [FitCloudRoutePlan registerAMapApiKey:@""];
-    //百度地图
+    /// 百度地图 (BaiduMap)
     [FitCloudRoutePlan registerBaiduMapApiKey:@""];
     //[FitCloudRoutePlan setBrandColor:[UIColor orangeColor]];
     //[FitCloudRoutePlan setBrandGradientColors:@[[UIColor orangeColor], [UIColor purpleColor]]];
