@@ -12,8 +12,8 @@
 		8934560C2AF6855A00094315 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8934560B2AF6855A00094315 /* ViewController.m */; };
 		893456112AF6855B00094315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893456102AF6855B00094315 /* Assets.xcassets */; };
 		893456172AF6855B00094315 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 893456162AF6855B00094315 /* main.m */; };
-		893456212AF686C700094315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934561D2AF686C700094315 /* Main.storyboard */; };
-		893456222AF686C700094315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8934561F2AF686C700094315 /* LaunchScreen.storyboard */; };
+		89644A702AF7530400A2CFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89644A712AF7530400A2CFC3 /* Main.storyboard */; };
+		89644A722AF7531600A2CFC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89644A732AF7531600A2CFC3 /* LaunchScreen.storyboard */; };
 		B35C741F5725611B37CDB39F /* Pods_RoutePlanDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3E43753937BC4B05B2C11C /* Pods_RoutePlanDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,10 +28,8 @@
 		893456102AF6855B00094315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		893456152AF6855B00094315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		893456162AF6855B00094315 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8934561E2AF686C700094315 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
-		893456202AF686C700094315 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		893456232AF686D700094315 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		893456242AF686DD00094315 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		89644A712AF7530400A2CFC3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		89644A732AF7531600A2CFC3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA69858902EC5A4429FE81EF /* Pods-RoutePlanDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutePlanDemo.debug.xcconfig"; path = "Target Support Files/Pods-RoutePlanDemo/Pods-RoutePlanDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DB3E43753937BC4B05B2C11C /* Pods_RoutePlanDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoutePlanDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E098B95DA1E96D7F61F46C2B /* Pods-RoutePlanDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutePlanDemo.release.xcconfig"; path = "Target Support Files/Pods-RoutePlanDemo/Pods-RoutePlanDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,8 +68,8 @@
 		893456032AF6855A00094315 /* RoutePlanDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8934561F2AF686C700094315 /* LaunchScreen.storyboard */,
-				8934561D2AF686C700094315 /* Main.storyboard */,
+				89644A732AF7531600A2CFC3 /* LaunchScreen.storyboard */,
+				89644A712AF7530400A2CFC3 /* Main.storyboard */,
 				893456042AF6855A00094315 /* AppDelegate.h */,
 				893456052AF6855A00094315 /* AppDelegate.m */,
 				893456072AF6855A00094315 /* SceneDelegate.h */,
@@ -162,9 +160,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				893456222AF686C700094315 /* LaunchScreen.storyboard in Resources */,
+				89644A722AF7531600A2CFC3 /* LaunchScreen.storyboard in Resources */,
 				893456112AF6855B00094315 /* Assets.xcassets in Resources */,
-				893456212AF686C700094315 /* Main.storyboard in Resources */,
+				89644A702AF7530400A2CFC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,27 +240,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8934561D2AF686C700094315 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8934561E2AF686C700094315 /* en */,
-				893456242AF686DD00094315 /* zh-Hans */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8934561F2AF686C700094315 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				893456202AF686C700094315 /* en */,
-				893456232AF686D700094315 /* zh-Hans */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		893456182AF6855B00094315 /* Debug */ = {
@@ -393,7 +370,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RoutePlanDemo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = FitCloudRoutePlanDemo;
+				INFOPLIST_KEY_CFBundleDisplayName = RoutePlan;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "导航SDK需要您的定位服务，否则可能无法使用，如果您需要使用后台导航功能请选择“始终允许”。";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "导航SDK需要您的定位服务，否则可能无法使用。";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "导航SDK需要您的定位服务，否则可能无法使用。";
@@ -426,7 +403,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RoutePlanDemo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = FitCloudRoutePlanDemo;
+				INFOPLIST_KEY_CFBundleDisplayName = RoutePlan;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "导航SDK需要您的定位服务，否则可能无法使用，如果您需要使用后台导航功能请选择“始终允许”。";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "导航SDK需要您的定位服务，否则可能无法使用。";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "导航SDK需要您的定位服务，否则可能无法使用。";

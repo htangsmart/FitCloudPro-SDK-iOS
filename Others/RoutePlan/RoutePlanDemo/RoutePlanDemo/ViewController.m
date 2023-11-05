@@ -19,8 +19,11 @@
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)onStart:(id)sender {
+- (IBAction)onBaiduMap:(id)sender {
     [FitCloudRoutePlan startRoutePlanFromVC:self withProvider:FITCLOUDROUTEPLANMAPPROVIDER_BAIDU];
 }
 
+- (IBAction)onAMap:(id)sender {
+    [FitCloudRoutePlan startRoutePlanFromVC:self withProvider:FITCLOUDROUTEPLANMAPPROVIDER_AMAP];
+}
 @end
