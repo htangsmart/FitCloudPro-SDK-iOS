@@ -3,7 +3,9 @@
 Route planning and cycling navigation Development Guide
 
 **Step 1**
+
 使用 Cocoapods 安装。由于依赖关系复杂，且需要大量的链接库，因此不建议手动安装。
+
 Install using Cocoapods. Due to complex dependency relationships and the need for a large number of link libraries, manual installation is not recommended.
 
 ```objc
@@ -22,7 +24,9 @@ end
 ```
 
 **Step 2**
+
 需要为 Info.plist 额外配置以下字段
+
 The following additional fields need to be configured for Info.plist
 
 ```
@@ -48,15 +52,19 @@ Required background modes
 ```
 
 **Step 3**
-正确初始化 AppDelegate 的 UIWindow* window 成员
-Initialize the UIWindow * window member of AppDelegate correctly
 
-由于导航界面会使用到 UIWindow _mainWindow = [[UIApplication sharedApplication].delegate window]; 的 safeAreaInsets 适配刘海屏，因此必须手动初始化 window 成员，否则会导致导航界面有问题。
-Due to the navigation interface using UIWindow _ mainWindow=[[UIApplication sharedApplication]. delete window]; SafeAreaInsets is compatible with the Notch screen, so it is necessary to manually initialize the window members, otherwise it will cause navigation interface issues.
+正确初始化 AppDelegate 的 UIWindow\* window 成员
+
+Initialize the UIWindow \* window member of AppDelegate correctly
+
+由于导航界面会使用到 UIWindow \_mainWindow = [[UIApplication sharedApplication].delegate window]; 的 safeAreaInsets 适配刘海屏，因此必须手动初始化 window 成员，否则会导致导航界面有问题。
+
+Due to the navigation interface using UIWindow \_ mainWindow=[[UIApplication sharedApplication]. delete window]; SafeAreaInsets is compatible with the Notch screen, so it is necessary to manually initialize the window members, otherwise it will cause navigation interface issues.
 
 ![初始化UIWindow](media/window_init.png)
 
 **Step 4**
+
 初始化地图 APIKey
 Initialize the map APIKeys
 
@@ -68,7 +76,9 @@ Initialize the map APIKeys
 ```
 
 **Step 5**
+
 设置主题色
+
 Setup the brand colors
 
 ```
@@ -77,7 +87,9 @@ Setup the brand colors
 ```
 
 **Step 6**
+
 根据需要启动对应地图的路线规划界面
+
 Show the route plan ui as your needs
 
 ```
