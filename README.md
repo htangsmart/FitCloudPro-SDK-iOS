@@ -62,6 +62,9 @@
 
 - [网易云音乐](Others/NETEASECLOUDMUSIC/NETEASECLOUDMUSIC.md)
 
+### 🚀 路线规划及步骑行导航
+- [路线规划及步骑行导航](Others/RoutePlan/ROUTEPLAN.md)
+
 ### 🚀 如何提出您的问题 / how to submit your issue
 
 - [问题提问模版(issue template)](issue_template.pdf)
