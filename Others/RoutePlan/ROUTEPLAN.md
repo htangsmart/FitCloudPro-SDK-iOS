@@ -240,6 +240,6 @@ Show the route plan ui as your needs
     }
 
     - (IBAction)onAMap:(id)sender {
-        [FitCloudRoutePlan startRoutePlanFromVC:self withProvider:FITCLOUDROUTEPLANMAPPROVIDER_AMAP deleate: self];
+        [FitCloudRoutePlan startRoutePlanFromVC:self withProvider:FITCLOUDROUTEPLANMAPPROVIDER_AMAP delegate: self];
     }
 ```
