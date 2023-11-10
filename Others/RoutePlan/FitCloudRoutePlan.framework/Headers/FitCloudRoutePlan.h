@@ -17,7 +17,44 @@ FOUNDATION_EXPORT const unsigned char FitCloudRoutePlanVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <FitCloudRoutePlan/PublicHeader.h>
 
+/// Route Plan & Navi Module Delegate
+@protocol FitCloudRoutePlanDelegate<NSObject>
 
+@optional
+
+/// The navigation start callback
+/// - Parameters:
+///   - map: the navigation map
+///   - naviType: navi type
+-(void) onNaviStartWithMap:(FITCLOUDROUTEPLANMAPPROVIDER)map type:(FITCLOUDROUTEPLANNAVITYPE) naviType;
+
+/// The navigation guide kind callback
+/// - Parameters:
+///   - guideKind: the guide kind
+-(void) onNaviGuideKind:(FITCLOUDROUTEPLANGUIDEKIND)guideKind;
+
+/// The navigation guide text callback
+/// - Parameters:
+///   - guideText: the guide text
+-(void) onNaviGuideText:(NSString*)guideText;
+
+/// The remain time for navigation update callback
+/// - Parameters:
+///   - remainTime: the remain time in seconds
+-(void) onNaviRemainTimeUpdate:(NSInteger)remainTime;
+
+/// The remain distance for navigation update callback
+/// - Parameters:
+///   - remainDistance: the remain distance in meters
+-(void) onNaviRemainDistanceUpdate:(NSInteger)remainDistance;
+
+/// The navigation arrive destination callback
+-(void) onNaviArriveDest;
+
+/// The naviagation exit callback
+-(void) onNaviExit;
+
+@end
 
 /// Route Plan & Navi Module
 @interface FitCloudRoutePlan: NSObject
@@ -60,6 +97,7 @@ FOUNDATION_EXPORT const unsigned char FitCloudRoutePlanVersionString[];
 /// - Parameters:
 ///   - fromVC: the from view controller
 ///   - mapProvider: the map provider
-+(void) startRoutePlanFromVC:(UIViewController*)fromVC withProvider:(FITCLOUDROUTEPLANMAPPROVIDER)mapProvider;
+///   - delegate: the delegate
++(void) startRoutePlanFromVC:(UIViewController*)fromVC withProvider:(FITCLOUDROUTEPLANMAPPROVIDER)mapProvider delegate:(id<FitCloudRoutePlanDelegate>)delegate;
 
 @end
