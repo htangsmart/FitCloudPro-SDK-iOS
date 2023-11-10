@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-10-18  Version:1.2.9-beta.32 Build:202310180001
+//     pcjbird    2023-11-10  Version:1.2.9-beta.33 Build:202311100001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -23,6 +23,7 @@
 //                            11.体感游戏支持 @see withMotionSensingGame
 //                            12.修改习惯养成协议
 //                            13.表盘尺寸支持390*390圆
+//                            14.新增导航信息同步支持
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1270,6 +1271,42 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void) setGPSFileUpgradeMode:(FITCLOUDGPSFILEUPGRADEMODE)upgradeMode withBlock:(FitCloudResultBlock _Nullable)block;
+
+
+#pragma mark 导航信息同步
+
+/// The navigation start callback
+/// - Parameters:
+///   - map: the navigation map
+///   - naviType: navi type
++(void) onNaviStartWithMap:(FITCLOUDROUTEPLANMAPPROVIDER)map type:(FITCLOUDROUTEPLANNAVITYPE) naviType withBlock:(FitCloudResultBlock _Nullable)block;
+
+/// The navigation guide kind callback
+/// - Parameters:
+///   - guideKind: the guide kind
++(void) onNaviGuideKind:(FITCLOUDROUTEPLANGUIDEKIND)guideKind withBlock:(FitCloudResultBlock _Nullable)block;
+
+/// The navigation guide text callback
+/// - Parameters:
+///   - guideText: the guide text
++(void) onNaviGuideText:(NSString*)guideText withBlock:(FitCloudResultBlock _Nullable)block;
+
+/// The remain time for navigation update callback
+/// - Parameters:
+///   - remainTime: the remain time in seconds
++(void) onNaviRemainTimeUpdate:(NSInteger)remainTime withBlock:(FitCloudResultBlock _Nullable)block;
+
+/// The remain distance for navigation update callback
+/// - Parameters:
+///   - remainDistance: the remain distance in meters
++(void) onNaviRemainDistanceUpdate:(NSInteger)remainDistance withBlock:(FitCloudResultBlock _Nullable)block;
+
+/// The navigation arrive destination callback
++(void) onNaviArriveDestwithBlock:(FitCloudResultBlock _Nullable)block;
+
+/// The naviagation exit callback
++(void) onNaviExitwithBlock:(FitCloudResultBlock _Nullable)block;
+
 @end
 
 /**

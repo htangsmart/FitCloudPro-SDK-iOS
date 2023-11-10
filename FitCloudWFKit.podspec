@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = 'FitCloudWFKit/FitCloudWFKit.framework'
     s.resource = 'FitCloudWFKit/FitCloudWFKit.bundle'
 
-    s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+    s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 
 
 end

@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
     s.swift_version = '5.0'
 
-    s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+    s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 
 
 end

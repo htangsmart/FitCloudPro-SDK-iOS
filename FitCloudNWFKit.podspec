@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = 'FitCloudNWFKit/FitCloudNWFKit.framework'
     s.resource = 'FitCloudNWFKit/FitCloudNWFKit.bundle'
 
-    s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+    s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 
     s.dependency 'zipzap', '~> 8.1.1'
 

@@ -298,4 +298,7 @@
 /// 是否可以设置公制重量偏好
 @property(nonatomic, readonly) BOOL withMetricWeightPreferFixed;
 
+/// 是否支持导航诱导
+@property(nonatomic, readonly) BOOL naviGuideSupported;
+
 @end
