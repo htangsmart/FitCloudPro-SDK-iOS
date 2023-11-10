@@ -93,13 +93,44 @@ Setup the brand colors
 Implement the delegate
 
 ```
+#pragma mark 路线规划与导航
+
 /// The navigation start callback
 /// - Parameters:
 ///   - map: the navigation map
 ///   - naviType: navi type
 -(void) onNaviStartWithMap:(FITCLOUDROUTEPLANMAPPROVIDER)map type:(FITCLOUDROUTEPLANNAVITYPE) naviType
 {
-    NSLog(@"onNaviStartWithMap: %@,%@", @(map), @(naviType));
+    //NSLog(@"onNaviStartWithMap: %@,%@", @(map), @(naviType));
+    NSString *mapName = @"未知";
+    switch(map)
+    {
+        case FITCLOUDROUTEPLANMAPPROVIDER_BAIDU:
+            mapName = @"百度";
+            break;
+        case FITCLOUDROUTEPLANMAPPROVIDER_AMAP:
+            mapName = @"高德";
+            break;
+    }
+
+    NSString* naviTypeName = @"未知";
+    switch(naviType)
+    {
+        case FITCLOUDROUTEPLANNAVITYPE_UNKNOWN:
+            naviTypeName = @"未知";
+            break;
+        case FITCLOUDROUTEPLANNAVITYPE_NORMAL_CYCLE:
+            naviTypeName = @"骑行";
+            break;
+        case FITCLOUDROUTEPLANNAVITYPE_ELECTRIC_CYCLE:
+            naviTypeName = @"电动车";
+            break;
+        case FITCLOUDROUTEPLANNAVITYPE_WALK:
+            naviTypeName = @"步行";
+            break;
+    }
+    XLOG_INFO(@"[路线规划与导航SDK] 导航开始，当前使用%@地图，出行方式为%@。", mapName, naviTypeName);
+    [FitCloudKit onNaviStartWithMap:map type:naviType withBlock:nil];
 }
 
 /// The navigation guide kind callback
@@ -107,7 +138,52 @@ Implement the delegate
 ///   - guideKind: the guide kind
 -(void) onNaviGuideKind:(FITCLOUDROUTEPLANGUIDEKIND)guideKind
 {
-    NSLog(@"onNaviGuideKind: %@", @(guideKind));
+    NSString* guideKindText = @"";
+    switch(guideKind)
+    {
+        case FITCLOUDROUTEPLANGUIDEKIND_INVALID:
+            guideKindText = @"";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_START:
+            guideKindText = @"起点";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_FRONT:
+            guideKindText = @"直行";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_RIGHT_FRONT:
+            guideKindText = @"右前方转弯";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_RIGHT:
+            guideKindText = @"右转";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_RIGHT_BACK:
+            guideKindText = @"右后方转弯";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_LEFT_BACK:
+            guideKindText = @"左后方转弯";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_LEFT:
+            guideKindText = @"左转";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_LEFT_FRONT:
+            guideKindText = @"左前方转弯";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_LEFT_U_TURN:
+            guideKindText = @"左掉头";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_RIGHT_U_TURN:
+            guideKindText = @"右掉头";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_DEST:
+            guideKindText = @"到达终点";
+            break;
+        case FITCLOUDROUTEPLANGUIDEKIND_STAIR:
+            guideKindText = @"台阶楼梯";
+            break;
+    }
+
+    XLOG_INFO(@"[路线规划与导航SDK] 导航诱导%@。", guideKindText);
+    [FitCloudKit onNaviGuideKind:guideKind withBlock:nil];
 }
 
 /// The navigation guide text callback
@@ -115,7 +191,8 @@ Implement the delegate
 ///   - guideText: the guide text
 -(void) onNaviGuideText:(NSString*)guideText
 {
-    NSLog(@"onNaviGuideText: %@", guideText);
+    XLOG_INFO(@"[路线规划与导航SDK] 导航诱导文本：%@。", guideText);
+    [FitCloudKit onNaviGuideText:guideText withBlock:nil];
 }
 
 /// The remain time for navigation update callback
@@ -123,7 +200,8 @@ Implement the delegate
 ///   - remainTime: the remain time in seconds
 -(void) onNaviRemainTimeUpdate:(NSInteger)remainTime
 {
-    NSLog(@"onNaviRemainTimeUpdate: %@", @(remainTime));
+    XLOG_INFO(@"[路线规划与导航SDK] 剩余时间：%@ 秒。", @(remainTime));
+    [FitCloudKit onNaviRemainTimeUpdate:remainTime withBlock:nil];
 }
 
 /// The remain distance for navigation update callback
@@ -131,19 +209,22 @@ Implement the delegate
 ///   - remainDistance: the remain distance in meters
 -(void) onNaviRemainDistanceUpdate:(NSInteger)remainDistance
 {
-    NSLog(@"onNaviRemainDistanceUpdate: %@", @(remainDistance));
+    XLOG_INFO(@"[路线规划与导航SDK] 剩余距离：%@ 米。", @(remainDistance));
+    [FitCloudKit onNaviRemainDistanceUpdate:remainDistance withBlock:nil];
 }
 
 /// The navigation arrive destination callback
 -(void) onNaviArriveDest
 {
-    NSLog(@"onNaviArriveDest");
+    XLOG_INFO(@"[路线规划与导航SDK] 到达终点。");
+    [FitCloudKit onNaviArriveDestwithBlock:nil];
 }
 
 /// The naviagation exit callback
 -(void) onNaviExit
 {
-    NSLog(@"onNaviExit");
+    XLOG_INFO(@"[路线规划与导航SDK] 退出导航。");
+    [FitCloudKit onNaviExitwithBlock:nil];
 }
 ```
 
