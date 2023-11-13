@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol AliIotSDKProtocol <NSObject>
 - (instancetype)init NS_UNAVAILABLE;
 
-/// 初始化 SDK
+/// 初始化 SDK,每次连接上蓝牙设备后调用
 /// - Parameter param:
 - (void)configSDK:(id)param;
 
@@ -46,7 +46,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - error: 先判断空，再发送出去
 - (void)handleSendData:(NSData *)currData toDevice:(NSData *)mac error:(NSError * _Nullable)error;
 
+
 @optional
+/// 初始化结果
+/// - Parameter isFinish: 是否完成初始化
+- (void)sdkInitResult:(BOOL)isFinish;
+
 /// 输出日志,直接监听即可
 /// - Parameter log: 日志信息
 - (void)handleLog:(NSString *)log;
