@@ -236,6 +236,13 @@ Implement the FitCloudCallback
 
 ```
 
+/// 手表端通知退出导航
+-(void) OnExitNaviFromWatchNotify
+{
+    XLOG_INFO(@"%@", APP_LOG_STRING(@"手表端通知退出导航。"));
+    [FitCloudRoutePlan exitNaviIfNeeded];
+}
+
 ```
 
 **Step 8**
