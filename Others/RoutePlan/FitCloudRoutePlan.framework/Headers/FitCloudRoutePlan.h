@@ -100,4 +100,9 @@ FOUNDATION_EXPORT const unsigned char FitCloudRoutePlanVersionString[];
 ///   - delegate: the delegate
 +(void) startRoutePlanFromVC:(UIViewController*)fromVC withProvider:(FITCLOUDROUTEPLANMAPPROVIDER)mapProvider delegate:(id<FitCloudRoutePlanDelegate>)delegate;
 
+#pragma mark Exit the navigation if needed
+
+/// Exit the navigation if needed
++(void) exitNaviIfNeeded;
+
 @end

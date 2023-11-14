@@ -230,6 +230,16 @@ Implement the delegate
 
 **Step 7**
 
+实现 FitCloudCallback
+
+Implement the FitCloudCallback
+
+```
+
+```
+
+**Step 8**
+
 根据需要启动对应地图的路线规划界面
 
 Show the route plan ui as your needs

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'FitCloudRoutePlan'
   s.summary      = 'Route Plan module.'
-  s.version      = '1.0.0'
+  s.version      = '1.0.0-beta.2'
   s.description      = <<-DESC
   The FitCloud route plan module.
   DESC
