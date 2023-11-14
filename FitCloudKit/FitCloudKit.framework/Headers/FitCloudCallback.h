@@ -657,6 +657,9 @@ typedef void (^FitCloudOpenGSensorResultBlock)(BOOL succeed, NSError* error);
 ///   - zGravity: 对应sensor数据中的Z轴加速度
 -(void) OnGSensorDataWithXGravity:(SInt16)xGravity yGravity:(SInt16)yGravity zGravity:(SInt16)zGravity;
 
+/// 手表端通知退出导航
+-(void) OnExitNaviFromWatchNotify;
+
 /**
  * @brief 睡眠调试数据
  */
