@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-11-14  Version:1.2.9-beta.35 Build:202311140001
+//     pcjbird    2023-11-16  Version:1.2.9-beta.36 Build:202311160001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -1482,6 +1482,18 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void)sendAlexaResult:(NSString*)text with:(ALEXAINVOKEERROR)error withBlock:(FitCloudResultBlock _Nullable )block;
+
+@end
+
+/// FitCloudKit Mockup
+@interface FitCloudKit (Mockup)
+
+#pragma mark 模拟接收到远程手表发来的指令
+
+/// mockup remote command
+/// - Parameters:
+///   - hexData: 十六进制字符串，0x开头
++(void)mockupRemoteCommandWithData:(NSString*) hexData;
 
 @end
 
