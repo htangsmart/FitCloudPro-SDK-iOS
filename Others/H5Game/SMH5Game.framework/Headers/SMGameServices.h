@@ -139,4 +139,21 @@ typedef NS_ENUM(NSUInteger, SMGameLanguage) {
  */
 - (void)getGameBannerListWithCompletion:(void (^)(NSArray<SMBannerGameInfo *> *result, NSError *error))completion;
 
+
+/**
+* @brief 游戏入口曝光上报
+*
+* @discussion App每次展示游戏入口时调用
+*/
+- (void)exposureReport;
+
+/**
+* @brief 游戏上报
+*
+* @param gameId 游戏id
+*
+* @discussion SDK内部调用
+*/
+- (void)gameReport:(NSInteger)gameId;
+
 @end

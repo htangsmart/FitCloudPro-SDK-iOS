@@ -89,6 +89,11 @@ typedef NS_ENUM(NSInteger, FITCLOUDH5GAMELANG) {
 ///   - completion: 结果回调
 + (void)fetchGroupsWithMacAddr:(NSString*) macAddr completion:(void(^)(NSArray<FitCloudH5GameGroup*>* result, NSError *error)) completion;
 
+#pragma mark 当用户看到体感游戏入口时上报
+
+/// 当用户看到体感游戏入口时上报
++ (void)reportWhenExposureMotionGameEntrance;
+
 #pragma mark 进入游戏
 
 /// 进入游戏
