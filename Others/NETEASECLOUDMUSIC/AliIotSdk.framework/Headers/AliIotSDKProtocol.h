@@ -38,14 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol AliIotSDKCallbackProtocol <NSObject>
 
-
 /// 响应数据，返回给上层调用
 /// - Parameters:
 ///   - currData: 当前发出去的数据
 ///   - device: 蓝牙设备 MAC
 ///   - error: 先判断空，再发送出去
 - (void)handleSendData:(NSData *)currData toDevice:(NSData *)mac error:(NSError * _Nullable)error;
-
 
 @optional
 /// 初始化结果
