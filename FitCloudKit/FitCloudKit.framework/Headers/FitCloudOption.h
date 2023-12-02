@@ -55,6 +55,9 @@
  */
 @property(nonatomic, assign) BOOL autoSyncSystemTime;
 
+/// 是否优先使用WriteWithoutResponse，默认为NO
+@property(nonatomic, assign) BOOL preferWriteWithoutResponse;
+
 /**
  * @brief 默认选项
  */
