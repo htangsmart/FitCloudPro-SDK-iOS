@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'FitCloudRoutePlan'
   s.summary      = 'Route Plan module.'
-  s.version      = '1.0.0-beta.6'
+  s.version      = '1.0.0-beta.7'
   s.description      = <<-DESC
   The FitCloud route plan module.
   DESC
@@ -28,5 +28,6 @@ Pod::Spec.new do |s|
   s.dependency 'BaiduNaviKit-All/Map'
   s.dependency 'BaiduNaviKit-All/WalkNavi'
   s.dependency 'BaiduNaviKit-All/Search'
+  s.dependency 'BaiduNaviKit-All/Utils'
 
 end
