@@ -301,4 +301,16 @@
 /// 是否支持导航诱导
 @property(nonatomic, readonly) BOOL naviGuideSupported;
 
+/// 是否支持小睡功能
+@property(nonatomic, readonly) BOOL withSnooze;
+
+/// 是否支持快速眼动
+@property(nonatomic, readonly) BOOL withREM;
+
+/// 是否支持相册推送功能
+@property(nonatomic, readonly) BOOL allowPhotoPush;
+
+/// 是否支持电子书推送功能
+@property(nonatomic, readonly) BOOL allowEBookPush;
+
 @end

@@ -36,7 +36,7 @@
 
 
 /**
- * @brief 圆角大小
+ * @brief 表盘预览图圆角大小
  */
 @property(nonatomic, readonly) UInt8 cornerRadius;
 
