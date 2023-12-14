@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shareInstance;
 
 @property (nonatomic, weak) id<AliIotSDKCallbackProtocol> delegate;
+
+- (void)mqttUploadFile:(NSString *)fileName content:(NSData *)content;
 @end
 
 NS_ASSUME_NONNULL_END

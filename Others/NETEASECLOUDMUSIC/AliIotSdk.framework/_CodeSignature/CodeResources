@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AliIot.h</key>
 		<data>
-		6il700pb1PRkJLrXl5bdWZEZzoY=
+		2AuvBqJ9ZFm6ZBa7GqpJZ/Zmsbo=
 		</data>
 		<key>Headers/AliIotSDKProtocol.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7BbcuQSrMf5EE9phos/18Nw1dKg=
+		Hzpy0t/sFmVkK/NKnw2Y9XnS6z4=
 		</data>
 		<key>Modules/AliIotSdk.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/AliIotSdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		2juD7kT1ji2mXx6P6GGIFxNJQS0=
+		mHPh7T5x/keIGsqIMPzELOVORdg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,7 +63,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hYiolJPGfHxKsQHpK204mxr13gABaELmtUoOlq9CZQU=
+			CVNkcJlbQRHZIan8XXnWcRJHUl2FflhH3f6MXeVFbDA=
 			</data>
 		</dict>
 		<key>Headers/AliIotSDKProtocol.h</key>
@@ -126,7 +126,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7M5uaBh0+/XzlTFuE7K65M7rdvXJa3oS/X15o5z9/1Q=
+			ZKSd6exvL5L5hNp0xqIEQX5P7RJkJc38lihfxK3zbQE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
