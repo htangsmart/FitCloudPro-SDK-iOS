@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2023-12-04  Version:1.2.9-beta.46 Build:202312040002
+//     pcjbird    2023-12-14  Version:1.2.9-beta.47 Build:202312140001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -26,6 +26,10 @@
 //                            14.新增导航信息同步支持,@see naviGuideSupported
 //                            15.表盘尺寸支持390*450方
 //                            16.表盘尺寸支持286*240方
+//                            17.新增相册推送支持,@see allowPhotoPush
+//                            18.新增电子书推送支持,@see allowEBookPush
+//                            19.新增小睡支持,@see withSnooze
+//                            20.新增快速眼动支持,@see withREM
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1022,6 +1026,13 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
 */
 +(void)getScreenResolutionWithBlock:(FitCloudScreenResolutionResultBlock _Nullable)block;
+
+#pragma mark 获取相册推送功能参数信息
+
+/// 获取相册推送功能参数信息
+/// - Parameters:
+///   - block: 结果回调
++(void)getPhotoPushParamsWithBlock:(FitCloudPhotoAlbumParamsResultBlock _Nullable)block;
 
 #pragma mark 获取设备可支持的运动模式类型列表
 /**

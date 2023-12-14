@@ -63,6 +63,7 @@
 #import <FitCloudKit/FitCloudGPSEpoTimestamp.h>
 #import <FitCloudKit/FitCloudCricketMatchScoreOrder.h>
 #import <FitCloudKit/FitCloudMedal.h>
+#import <FitCloudKit/FitCloudPhotoAlbumParams.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -466,6 +467,14 @@ typedef void (^FitCloudGPSFileCanPushResultBlock)(BOOL succeed, BOOL canPush, NS
  * @param error 错误信息
  */
 typedef void (^FitCloudMedalsResultBlock)(BOOL succeed, NSArray<FitCloudMedal*>*medals, NSError* error);
+
+/**
+ * @brief FitCloud 相册推送功能参数回调
+ * @param succeed 是否成功
+ * @param params 参数
+ * @param error 错误信息
+ */
+typedef void (^FitCloudPhotoAlbumParamsResultBlock)(BOOL succeed, FitCloudPhotoAlbumParams* params, NSError* error);
 
 /**
  * @brief FitCloud 支持的日程类型回调
