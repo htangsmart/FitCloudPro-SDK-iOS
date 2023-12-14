@@ -64,7 +64,7 @@ typedef void(^FitCloudFilesCompletionBlock)(BOOL success, NSError *_Nullable err
 - (NSProgress *_Nullable)addNewFile:(NSString *_Nonnull)filePath completionHandler:(void(^_Nullable)(BOOL success, NSError * _Nullable error, FitCloudFile * _Nonnull newFile))handler;
 
 /// 添加文件列表
-- (NSProgress *_Nullable)addNewFiles:(NSMutableArray <NSString *> *_Nonnull)filePaths completionHandler:(void(^_Nullable)(BOOL success, NSError * _Nullable error))handler;
+- (NSProgress *_Nullable)addNewFiles:(NSArray <NSString *> *_Nonnull)filePaths completionHandler:(void(^_Nullable)(BOOL success, NSError * _Nullable error, NSArray<FitCloudFile*> * _Nullable newFiles))handler;
 
 
 /// 取消发送文件
