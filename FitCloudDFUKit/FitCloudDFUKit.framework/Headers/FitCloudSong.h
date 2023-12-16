@@ -7,16 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <FitCloudDFUKit/FitCloudFile.h>
 
 /// 歌曲
-@interface FitCloudSong : NSObject
+@interface FitCloudSong : FitCloudFile
 
 + (instancetype _Nullable)new NS_UNAVAILABLE;
 - (instancetype _Nullable)init NS_UNAVAILABLE;
-
-/// 名称
-@property (nonatomic, strong, readonly) NSString * _Nonnull name;
 
 
 @end

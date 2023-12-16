@@ -8,6 +8,10 @@
 //  框架名称:FitCloudWFKit.framework
 //  框架功能:iOS framework help you creating watchface with fitcloud smart watch easily. FitCloud 智能手表表盘创建辅助框架，旨在帮助您轻松创建属于您自己的表盘文件。
 //  修改记录:
+//     pcjbird    2023-12-14 Version:1.1.7 Build:202312140001
+//                            1.SDK健壮性优化
+//                            2.新增创建手表照片推送文件功能
+//
 //     pcjbird    2022-12-30 Version:1.1.6 Build:202212300001
 //                            1.更新错误码翻译
 //
@@ -65,6 +69,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <FitCloudWFKit/FCWKErrorCode.h>
+#import <FitCloudWFKit/DevicePhotoCreateParams.h>
 
 //! Project version number for FitCloudWFKit.
 FOUNDATION_EXPORT double FitCloudWFKitVersionNumber;
@@ -130,6 +135,14 @@ typedef void (^FitCloudGameSkinLoggingMessage)(FCWKLOGLEVEL level, NSString* _Nu
 */
 typedef void (^FitCloudWatchSportsLoggingMessage)(FCWKLOGLEVEL level, NSString* _Nullable message);
 
+
+/**
+ *@brief 日志
+ *@param level 日志等级
+ *@param message 日志内容
+*/
+typedef void (^FitCloudWatchPhotoLoggingMessage)(FCWKLOGLEVEL level, NSString* _Nullable message);
+
 /**
  *@brief 表盘生成结果
  *@param success 是否生成成功
@@ -163,6 +176,15 @@ typedef void(^FitCloudGameSkinPushIndexModifyResultBlock)(BOOL success, NSString
  *@param error 错误
 */
 typedef void(^FitCloudWatchSportsBinPushIndexModifyResultBlock)(BOOL success, NSString* _Nullable resultBinPath, NSError* _Nullable error);
+
+
+/**
+ *@brief 手表照片推送文件生成结果
+ *@param success 是否生成成功
+ *@param resultBinPath 生成的手表照片Bin文件路径
+ *@param error 错误
+*/
+typedef void(^FitCloudWatchPhotoCreateResultBlock)(BOOL success, NSString* _Nullable resultBinPath, NSError* _Nullable error);
 
 
 /**
@@ -212,5 +234,16 @@ typedef void(^FitCloudWatchSportsBinPushIndexModifyResultBlock)(BOOL success, NS
  * @param completion 结果回调
 */
 +(void) modifyWatchSportsBinPushIndexTo:(NSInteger)pushIndex fromTemplateBin:(NSString*_Nonnull)templateBin logging:(FitCloudWatchSportsLoggingMessage _Nullable)logging completion:(FitCloudWatchSportsBinPushIndexModifyResultBlock _Nullable)completion;
+
+/// 创建手表照片推送文件(bin)
+/// - Parameters:
+///   - photo: 照片
+///   - params: 设备参数
+///   - logging: 日志
+///   - completion 结果回调
++(void) createPhotoBinWith:(UIImage*_Nonnull)photo
+                parameters:(DevicePhotoCreateParams*_Nonnull)params
+                   logging:(FitCloudWatchPhotoLoggingMessage _Nullable)logging
+                completion:(FitCloudWatchPhotoCreateResultBlock _Nullable)completion;
 
 @end

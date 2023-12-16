@@ -27,12 +27,6 @@ typedef void(^FitCloudMusicCompletionBlock)(BOOL success, NSError *_Nullable err
 ///   - error: 错误信息
 -(void) bridge:(FitCloudMusicBridge*_Nonnull)bridge didActivate:(BOOL)success error:(NSError* _Nullable)error;
 
-/// 歌曲发送进度回调
-/// - Parameters:
-///   - bridge: 音乐管理Bridge
-///   - songFile: 音乐文件
-///   - progress: 进度
--(void) bridge:(FitCloudMusicBridge*_Nonnull)bridge didSendSong:(NSString*_Nonnull)songFile progress:(NSProgress*_Nonnull)progress;
 
 @end
 
@@ -81,7 +75,7 @@ typedef void(^FitCloudMusicCompletionBlock)(BOOL success, NSError *_Nullable err
 - (void)deleteSongs:(NSMutableArray <FitCloudSong *> *_Nonnull)songs withCompletionHandler:(FitCloudMusicCompletionBlock _Nullable )handler;
 
 ///删除所有歌曲
-- (void)deleteAllSongsWithCompletionHandler:(FitCloudMusicCompletionBlock _Nullable )handler;
+- (void)deleteAllSongsWithCompletionHandler:(FitCloudMusicCompletionBlock _Nullable )handler DEPRECATED_MSG_ATTRIBUTE("Delete all only song files not support now.");
 
 /// 添加歌曲到播放清单
 - (void)addSong:(FitCloudSong *_Nonnull)song toPlayList:(FitCloudPlaylist *_Nonnull)playlist withCompletionHandler:(FitCloudMusicCompletionBlock _Nullable )handler;
