@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
-#import "FitCloudKitDefines.h"
+#import <FitCloudKit/FitCloudKitDefines.h>
 
 #pragma mark - 手表手动同步对象基类
 
