@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "FitCloudNWFKit"
-    s.version          = "1.0.1"
+    s.version          = "1.0.2-beta.1"
     s.summary          = "FitCloudPro 智能手表表盘辅助框架， 旨在帮助您轻松自定义属于您自己的表盘文件，适用于Nordic芯片的手表。"
     s.description      = <<-DESC
     iOS framework help you creating customized watchface for fitcloudpro smart watch easily. 
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
     s.platform         = :ios, '9.0'
     s.frameworks       = 'Foundation'
 
-    s.vendored_frameworks = 'FitCloudNWFKit/FitCloudNWFKit.framework'
+    s.vendored_frameworks = 'FitCloudNWFKit/FitCloudNWFKit.xcframework'
     s.resource = 'FitCloudNWFKit/FitCloudNWFKit.bundle'
 
     s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }

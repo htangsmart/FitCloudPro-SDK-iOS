@@ -8,6 +8,9 @@
 //  框架名称:FitCloudNWFKit.framework
 //  框架功能:iOS framework help you creating nordic watchface with fitcloud smart watch easily. FitCloud 智能手表表盘创建辅助框架，旨在帮助您轻松创建属于您自己的Nordic芯片表盘文件。
 //  修改记录:
+//     pcjbird    2023-12-29  Version:1.0.2-beta.1 Build:202312290001
+//                            1.xcframework支持
+//
 //     pcjbird    2022-05-19  Version:1.0.1 Build:202205190001
 //                            1.bitcode支持
 //
