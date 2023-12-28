@@ -205,10 +205,16 @@ Method 2: download from making `FitCloudDFUKit`, manual integrated into your pro
 
 1. FitCloudDFUKit SDK includes:
 
-   - FitCloudDFUKit. Framework  
+   - FitCloudDFUKit.xcframework  
      static library, smart bracelet dfu development kit core framework
    - FitCloudDFUkit.bundle  
      smart bracelet development kit core resource package
+
+   - RTKLEFoundation.xcframework
+
+   - RTKOTASDK.xcframework
+
+   - RTKLocalPlaybackSDK.xcframework
 
 2. Add the framework to the project;
 

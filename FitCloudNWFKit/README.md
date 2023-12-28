@@ -64,7 +64,7 @@ pod 'FitCloudNWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.gi
 
 1. FitCloudNWFKit SDK开发包含：
 
-  * FitCloudNWFKit.framework   静态库，智能手表开发套件核心framework
+  * FitCloudNWFKit.xcframework   静态库，智能手表开发套件核心framework
 
   * FitCloudNWFKit.bundle     智能手环开发套件核心资源包
 

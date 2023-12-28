@@ -454,7 +454,7 @@ Method 2: download from making `FitCloudKit`, manual integrated into your projec
 
 1. FitCloudKit SDK includes:
 
-   - FitCloudKit. Framework  
+   - FitCloudKit.xcframework  
      static library, smart bracelet development kit core framework
    - FitCloudKit.bundle  
      smart bracelet development kit core resource package

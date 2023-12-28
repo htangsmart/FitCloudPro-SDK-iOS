@@ -203,9 +203,15 @@ pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.gi
 
 1. FitCloudDFUKit SDK开发包含：
   
-  * FitCloudDFUKit.framework   静态库，智能手环固件升级开发套件核心framework
+  * FitCloudDFUKit.xcframework   静态库，智能手环固件升级开发套件核心framework
   
   * FitCloudDFUKit.bundle     智能手环固件升级开发套件核心资源包
+
+  * RTKLEFoundation.xcframework
+
+  * RTKOTASDK.xcframework
+
+  * RTKLocalPlaybackSDK.xcframework
   
 2. 将framework添加到项目中;
 3. 将bundle资源包添加到项目中;

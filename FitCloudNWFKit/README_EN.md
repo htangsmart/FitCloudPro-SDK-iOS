@@ -63,7 +63,7 @@ pod 'FitCloudNWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.gi
 Method 2: download from making ` FitCloudNWFKit `, manual integrated into your project.
 
 1. FitCloudNWFKit SDK includes:
-    * FitCloudNWFKit. Framework  
+    * FitCloudNWFKit.xcframework  
       static library, smart watch development kit core framework
     * FitCloudNWFKit.bundle   
       smart watch development kit core resource package

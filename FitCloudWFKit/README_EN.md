@@ -185,7 +185,7 @@ pod 'FitCloudWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git
 Method 2: download from making ` FitCloudWFKit `, manual integrated into your project.
 
 1. FitCloudWFKit SDK includes:
-    * FitCloudWFKit. Framework  
+    * FitCloudWFKit.xcframework  
       static library, smart watch development kit core framework
     * FitCloudWFKit.bundle   
       smart watch development kit core resource package

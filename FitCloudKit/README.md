@@ -455,7 +455,7 @@ pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 
 1. FitCloudKit SDK 开发包含：
 
-- FitCloudKit.framework 静态库，智能手表开发套件核心 framework
+- FitCloudKit.xcframework 静态库，智能手表开发套件核心 framework
 
 - FitCloudKit.bundle 智能手表开发套件核心资源包
 
