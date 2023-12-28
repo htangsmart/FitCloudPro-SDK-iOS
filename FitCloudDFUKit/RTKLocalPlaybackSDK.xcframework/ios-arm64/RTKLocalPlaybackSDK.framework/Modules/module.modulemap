@@ -1,0 +1,6 @@
+framework module RTKLocalPlaybackSDK {
+  umbrella header "RTKLocalPlaybackSDK.h"
+
+  export *
+  module * { export * }
+}
