@@ -1,6 +1,0 @@
-framework module FitCloudKit {
-  umbrella header "FitCloudKit.h"
-  export *
-
-  module * { export * }
-}

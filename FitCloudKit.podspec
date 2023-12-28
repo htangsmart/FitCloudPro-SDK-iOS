@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     s.platform         = :ios, '8.0'
     s.frameworks       = 'Foundation', 'CoreBluetooth', 'CoreGraphics'
 
-    s.vendored_frameworks = 'FitCloudKit/FitCloudKit.framework'
+    s.vendored_frameworks = 'FitCloudKit/FitCloudKit.xcframework'
     s.resource = 'FitCloudKit/FitCloudKit.bundle'
 
     s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
