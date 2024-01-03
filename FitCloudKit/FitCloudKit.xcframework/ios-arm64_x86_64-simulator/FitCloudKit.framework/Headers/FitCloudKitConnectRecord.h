@@ -43,4 +43,14 @@
  */
 @property(nonatomic, assign) BOOL      shouldAutoConnect;
 
+/**
+ * @brief 绑定的 userId
+ */
+@property(nonatomic, strong) NSString* bindUserId;
+
+/**
+ * @brief 绑定时间
+ */
+@property(nonatomic, strong) NSDate*   bindTime;
+
 @end
