@@ -25,8 +25,7 @@ typedef NS_ENUM(Byte, WEATHERTYPE)
     WEATHERTYPE_HEAVYSNOW = 0x0a,               //大雪、暴雪
     WEATHERTYPE_SANDSTORM = 0x0b,               //沙尘暴、浮沉
     WEATHERTYPE_FOGORHAZE = 0x0c,               //雾、雾霾
-    WEATHERTYPE_ICE = 0x0d,                     //结冰、路滑
-    WEATHERTYPE_WINDY = 0x0e,                   //风、龙卷风、飓风
+    WEATHERTYPE_WINDY = 0x0d,                   //风、龙卷风、飓风
     WEATHERTYPE_UNKNOWN = 0xff,                 //未知天气
 };
 
