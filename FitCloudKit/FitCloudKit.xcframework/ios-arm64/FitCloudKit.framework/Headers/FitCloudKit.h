@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-01-04  Version:1.2.9-beta.56 Build:202401040001
+//     pcjbird    2024-01-08  Version:1.2.9-beta.57 Build:202401080001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -31,6 +31,7 @@
 //                            19.新增小睡支持,@see withSnooze
 //                            20.新增快速眼动支持,@see withREM
 //                            21.新增超过10个常用联系人支持,@see allowHugeCountFavContacts
+//                            22.新增电子卡包功能
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1320,6 +1321,31 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// The naviagation exit callback
 +(void) onNaviExitwithBlock:(FitCloudResultBlock _Nullable)block;
+
+#pragma mark 电子卡包
+
+/// Query the electronic cards from the smart watch
+/// - Parameters:
+///   - block: the electronic cards query result
++(void)getECardsWithBlock:(FitCloudECardsResultBlock _Nullable)block;
+
+/// Set the electronic card
+/// - Parameters:
+///   - ecard: the electronic card
+///   - block: the electronic card set response
++(void)setECard:(FitCloudECard*)ecard withBlock:(FitCloudResultBlock _Nullable)block;
+
+/// sort the electronic cards
+/// - Parameters:
+///   - idArray: the electronic card id array
+///   - block: the electronic cards sort response
++(void)sortECardsWithIdArray:(NSArray<NSNumber*>*) idArray withBlock:(FitCloudResultBlock _Nullable)block;
+
+/// delete the electronic cards
+/// - Parameters:
+///   - idArray: the electronic card id array
+///   - block: the electronic cards delete response
++(void)deleteECardsWithIdArray:(NSArray<NSNumber*>*) idArray withBlock:(FitCloudResultBlock _Nullable)block;
 
 @end
 

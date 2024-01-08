@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FitCloudMedal : NSObject
 
++ (instancetype _Nullable)new NS_UNAVAILABLE;
+- (instancetype _Nullable)init NS_UNAVAILABLE;
+
 ///  勋章成就等级
 @property(nonatomic, readonly) FITCLOUDMEDALACHIEVEMENTLEVEL achievementLevel;
 

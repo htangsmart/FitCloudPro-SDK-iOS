@@ -316,5 +316,7 @@
 /// 是否支持电子书推送功能
 @property(nonatomic, readonly) BOOL allowEBookPush;
 
+/// 是否支持电子卡包功能，传音Infinix项目
+@property(nonatomic, readonly) BOOL withECard;
 
 @end

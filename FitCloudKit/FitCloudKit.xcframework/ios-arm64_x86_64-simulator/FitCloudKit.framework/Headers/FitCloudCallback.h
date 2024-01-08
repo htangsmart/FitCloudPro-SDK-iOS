@@ -64,6 +64,7 @@
 #import <FitCloudKit/FitCloudCricketMatchScoreOrder.h>
 #import <FitCloudKit/FitCloudMedal.h>
 #import <FitCloudKit/FitCloudPhotoAlbumParams.h>
+#import <FitCloudKit/FitCloudECard.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -490,6 +491,18 @@ typedef void (^FitCloudSupportedSchedulesResultBlock)(BOOL succeed, NSArray<NSNu
  *@param error 错误信息
  */
 typedef void (^FitCloudOpenGSensorResultBlock)(BOOL succeed, NSError* error);
+
+/// The electronic card query result
+/// - Parameters:
+///   - succeed: whether succeed
+///   - maxCount: the max electronic card count
+///   - maxContentLen: the max  electronic card qrcode content length
+///   - ecards: the electronic card list
+///   - error: the error information
+///
+/// - Returns:
+///   void
+typedef void (^FitCloudECardsResultBlock)(BOOL succeed, NSInteger maxCount, NSInteger maxContentLen, NSArray<FitCloudECard*>*ecards, NSError* error);
 
 
 /**

@@ -1376,4 +1376,15 @@ typedef NS_ENUM(NSInteger, FITCLOUDROUTEPLANGUIDEKIND)
     FITCLOUDROUTEPLANGUIDEKIND_STAIR = 0x0C,
 };
 
+#pragma mark - 电子卡包
+
+/// The electronic card operation
+typedef NS_ENUM(NSInteger, FITCLOUDECARDOPERATION)
+{
+    /// sort
+    FITCLOUDECARDOPERATION_SORT = 0x01,
+    /// delete
+    FITCLOUDECARDOPERATION_DEL = 0x02,
+};
+
 #endif /* FitCloudKitDefines_h */
