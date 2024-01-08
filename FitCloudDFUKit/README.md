@@ -301,7 +301,7 @@ pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.gi
  *@param message 日志信息
  *@param level 日志等级
  */
--(void) OnLogMessage:(NSString*)message level:(FCDFUKLogLevel)level
+-(void) OnDFULogMessage:(NSString*)message level:(FCDFUKLogLevel)level
 {
     //您可以根据实际需要处理日志逻辑
 }
