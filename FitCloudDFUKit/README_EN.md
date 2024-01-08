@@ -305,7 +305,7 @@ In the project `Info.Plist` set the following privacy permissions using descript
  *@param message log message
  *@param level log level
  */
--(void) OnLogMessage:(NSString*)message level:(FCDFUKLogLevel)level
+-(void) OnDFULogMessage:(NSString*)message level:(FCDFUKLogLevel)level
 {
     //You can process the log message according to your actual business logic
 }
