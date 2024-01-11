@@ -56,6 +56,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// Once this method get called, the waitor call completion handler.
 - (void)fulfillWithUserInfo:(nullable id)userInfo;
 
+
+/// Interrupt the waitor due to a specified error.
+///
+/// - Parameter error: an error prevents waitor from continuing.
+///
+/// Once this method get called, the waitor call completion handler.
+- (void)interruptWithError:(NSError *)error;
+
 @end
 
 NS_ASSUME_NONNULL_END

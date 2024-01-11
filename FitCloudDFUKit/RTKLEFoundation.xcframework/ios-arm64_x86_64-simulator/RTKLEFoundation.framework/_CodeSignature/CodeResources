@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/RTKBatchDataSendReception.h</key>
 		<data>
-		4KArcfM5UcFD63VTJIEc2+7EeCQ=
+		/wNSPHXq/JqVVMDh+vPYeqZY654=
 		</data>
 		<key>Headers/RTKCharacteristicOperate.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Headers/RTKOperationWaitor.h</key>
 		<data>
-		epPxEE91dInYnTEoz3zWkI+eSCw=
+		0GfpZT7UZO4U+Fcn5YJWqSlXQ1Y=
 		</data>
 		<key>Headers/RTKPackageCommunication.h</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lDc/KbGATRd9yROEmg7dCKVLwJ0=
+		+GBlMeNL7ypqx2pcAeHIeS9iOEE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -276,11 +276,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4KArcfM5UcFD63VTJIEc2+7EeCQ=
+			/wNSPHXq/JqVVMDh+vPYeqZY654=
 			</data>
 			<key>hash2</key>
 			<data>
-			P95ceyvvBBz3WMrS8stvsl6QSI5EjOnxJhE3nDBfqyg=
+			h8I2OfSpa2m1jbQBI9tVa0ZhujNHivC8+llw46jGcug=
 			</data>
 		</dict>
 		<key>Headers/RTKCharacteristicOperate.h</key>
@@ -430,11 +430,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			epPxEE91dInYnTEoz3zWkI+eSCw=
+			0GfpZT7UZO4U+Fcn5YJWqSlXQ1Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			u+Iddm5xqu6hOFUSHXZx083al1K8+j6XIjb9ehBzf+s=
+			Hj4k6bNDfFCIWlQV/lhIadLjYYuxUm0mMdR5GL0j0eY=
 			</data>
 		</dict>
 		<key>Headers/RTKPackageCommunication.h</key>

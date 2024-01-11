@@ -45,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// Used protectly in subclass.
 - (void)cancelWaiting;
 
+@property (readonly) BOOL isWaiting;
+
 /// Complete this sending or receiving.
 ///
 /// Used protectly in subclass.
