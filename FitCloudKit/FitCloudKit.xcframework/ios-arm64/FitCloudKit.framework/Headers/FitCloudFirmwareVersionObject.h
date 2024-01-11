@@ -307,6 +307,9 @@
 /// 是否支持快速眼动
 @property(nonatomic, readonly) BOOL withREM;
 
+/// 心率监测时间段是否支持跨天
+@property(nonatomic, readonly) BOOL allowHeartRateMonitoringAcrossDays;
+
 /// 是否支持超过10个常用联系人
 @property(nonatomic, readonly) BOOL allowHugeCountFavContacts;
 
