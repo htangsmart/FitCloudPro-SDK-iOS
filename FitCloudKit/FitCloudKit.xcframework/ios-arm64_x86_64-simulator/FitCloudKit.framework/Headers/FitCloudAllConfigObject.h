@@ -23,6 +23,7 @@
 #import <FitCloudKit/FitCloudScreenSetting.h>
 #import <FitCloudKit/FitCloudVibrateSetting.h>
 #import <FitCloudKit/FitCloudPowerSavingSetting.h>
+#import <FitCloudKit/FitCloudCapacity.h>
 
 /**
  * @brief 手环所有配置信息（用于手环绑定时一次性获取）
@@ -117,5 +118,8 @@
 
 /// 省电模式设置
 @property(nonatomic, strong) FitCloudPowerSavingSetting* powerSavingSetting;
+
+/// 设备能力信息，仅当支持查询设备能力的手表有效
+@property(nonatomic, strong) NSArray<FitCloudCapacity*>* deviceCapacities;
 
 @end

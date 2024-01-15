@@ -322,4 +322,7 @@
 /// 是否支持电子卡包功能，传音Infinix项目
 @property(nonatomic, readonly) BOOL withECard;
 
+/// 是否支持查询设备能力
+@property(nonatomic, readonly) BOOL allowQueryDeviceCapacities;
+
 @end
