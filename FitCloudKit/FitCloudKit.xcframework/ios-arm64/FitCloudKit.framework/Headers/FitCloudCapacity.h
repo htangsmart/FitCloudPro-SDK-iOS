@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// Capacity
-@interface FitCloudCapacity : NSObject<NSCoding>
+@interface FitCloudCapacity : NSObject<NSCoding,NSCopying>
 
 /// the capacity
 @property(nonatomic, readonly) FITCLOUDDEVICECAPACITY capacity;

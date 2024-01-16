@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/FitCloudCapacity.h</key>
 		<data>
-		7XzVViVHZ8JWik9ZLZVePYVw4W8=
+		zT8E2ZjOhletWIC7Cye5PGh2QmM=
 		</data>
 		<key>Headers/FitCloudContactObject.h</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		Msql6+PDJHT+O0k3ucP9rA7g1Hc=
+		Vha1rgb1vaavZ2SgEvtHpbR3Q84=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -274,7 +274,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ujO4MQLYz7s9q81RGfghbqlHqNQ=
+		ZwdfJkd1kECYpgtVJAMiXimvr9s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -353,11 +353,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7XzVViVHZ8JWik9ZLZVePYVw4W8=
+			zT8E2ZjOhletWIC7Cye5PGh2QmM=
 			</data>
 			<key>hash2</key>
 			<data>
-			pDZFHTu3xi5cHOpm5lbKikb1S6orK68cNHoqJA+xc1w=
+			bmtFTlDNYPvB6lZSPE7Ozurhd6inDhCk4A93b07tOj8=
 			</data>
 		</dict>
 		<key>Headers/FitCloudContactObject.h</key>
@@ -639,11 +639,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Msql6+PDJHT+O0k3ucP9rA7g1Hc=
+			Vha1rgb1vaavZ2SgEvtHpbR3Q84=
 			</data>
 			<key>hash2</key>
 			<data>
-			NRNTlgahTChK9gVTHQECaoMMiXpOWwlXcG4SnKytsm8=
+			C/cAUdkzs69eaW9eZaH+qA8pGROMUwhLwLal5pSZP7Y=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
