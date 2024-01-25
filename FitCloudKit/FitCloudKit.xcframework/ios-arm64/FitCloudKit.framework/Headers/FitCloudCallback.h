@@ -74,6 +74,12 @@
 typedef void (^FitCloudResultBlock)(BOOL succeed, NSError* error);
 
 /**
+ *@brief FitCloud进度回调
+ *@param progress 进度 0～1
+ */
+typedef void (^FitCloudProgressBlock)(CGFloat progress);
+
+/**
  *@brief FitCloud调用结果回调
  *@param succeed 是否成功
  *@param val 对象值
