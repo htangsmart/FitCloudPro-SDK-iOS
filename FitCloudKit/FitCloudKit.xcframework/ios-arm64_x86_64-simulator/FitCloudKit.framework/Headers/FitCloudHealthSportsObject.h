@@ -380,6 +380,12 @@
  */
 @property(nonatomic, strong) NSString* gpsDataAssociateKey;
 
+/// 当手表支持独立GPS运动且支持指定展示数据是表示展示数据信息
+/// the workout display configurations
+///
+/// @see `WORKOUTDATAITEMDISPLAY`,  if want to display `WORKOUTDATAITEMDISPLAY_DURATION` and `WORKOUTDATAITEMDISPLAY_AVG_BPM`, the displayConfig string should be `"1,2"`, and so on.
+@property(nonatomic, strong) NSString* displayConfig;
+
 @end
 
 

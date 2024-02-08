@@ -14,6 +14,10 @@
  */
 @interface FitCloudAlarmObject : NSObject<NSCoding>
 
+
+/// 有效值0～7，为-1时SDK自动编号
+@property(nonatomic, assign) NSInteger alarmId;
+
 /**
  * @brief 闹钟日期信息
  */

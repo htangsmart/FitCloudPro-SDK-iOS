@@ -325,4 +325,7 @@
 /// 是否支持查询设备能力
 @property(nonatomic, readonly) BOOL allowQueryDeviceCapacities;
 
+/// 运动训练数据是否包含应该展示的数据的配置信息
+@property(nonatomic, readonly) BOOL withDisplayConfigInWorkoutData;
+
 @end
