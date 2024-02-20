@@ -14,6 +14,7 @@ typedef NS_ENUM(Byte, MANUALSINGLESYNCKEY)
     MANUALSINGLESYNCKEY_STEPS = 0x01,                   //计步数据
     MANUALSINGLESYNCKEY_SLEEP = 0x02,                   //睡眠数据
     MANUALSINGLESYNCKEY_HEARTRATE = 0x03,               //心率数据
+    MANUALSINGLESYNCKEY_BLOODOXYGEN = 0x04,             //血氧数据
     MANUALSINGLESYNCKEY_SPORSMODE   = 0x10,             //运动模式数据
 };
 
