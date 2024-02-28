@@ -18,12 +18,12 @@ typedef NS_ENUM(Byte, BATTERYSTATE)
 };
 
 /**
- * @brief 手环电量以及充电状态信息
+ * @brief 手表电量以及充电状态信息
  */
 @interface FitCloudBatteryInfoObject : NSObject
 
 /**
- * @brief 手环充电状态
+ * @brief 手表充电状态
  */
 @property(nonatomic, assign) BATTERYSTATE state;
 

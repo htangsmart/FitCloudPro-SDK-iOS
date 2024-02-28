@@ -187,4 +187,17 @@ extern NSString *const FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIF
  * @brief 勋章列表变化通知 userInfo=>NSArray<FitCloudMedal *>
  */
 extern NSString *const FITCLOUDEVENT_MEDALLIST_CHANGED_NOTIFY;
+
+/// 手表端运动结束通知
+extern NSString *const FITCLOUDEVENT_WATCHSIDE_WORKOUT_END_NOTIFY;
+
+/// 手表表盘切换通知
+extern NSString *const FITCLOUDEVENT_WATCHFACE_TOGGLED_NOTIFY;
+
+/// 手表心率测量结果通知
+///
+/// userInfo=>{@"timestamp":timestamp, @"hrValue" : @(hrValue)}
+///  timestamp 类型 NSDate
+///  hrValue 类型 NSInteger
+extern NSString *const FITCLOUDEVENT_WATCHSIDE_HEARTRATE_MEASURE_RESULT_NOTIFY;
 #endif /* FitCloudEvent_h */
