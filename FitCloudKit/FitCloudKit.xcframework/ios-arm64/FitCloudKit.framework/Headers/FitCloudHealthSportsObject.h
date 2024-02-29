@@ -412,11 +412,6 @@
  */
 @property(nonatomic, assign) UInt16 altitude;
 
-/**
- * @brief 运动时长(秒)
- */
-@property(nonatomic, assign) UInt16  duration;
-
 
 /**
  * @brief 卫星数量（个数）
