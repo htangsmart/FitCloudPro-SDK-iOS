@@ -201,6 +201,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Indicates whether the first or second bud is being upgraded.
 @property (readonly) RTKOTABudFlag budFlag;
 
+/// Indicates whether the current link is GATT Over BREDR.
+@property (readonly) BOOL GATTOverBREDR;
+
 @end
 
 

@@ -208,16 +208,16 @@ didDiscoverPeripheralOfConnection:(RTKProfileConnection *)connection
 - (BOOL)manageConnection:(RTKProfileConnection *)connection;
 
 
-/// Returns an ``RTKProfileConnection`` object which manages connection with a specific GATT peripheral.
+/// Returns a list of ``RTKProfileConnection`` instances each manages connection with a specific GATT peripheral.
 ///
-/// - Returns `nil` if there is no profile connection with this peripheral that is managed by this manager.
-- (nullable RTKProfileConnection *)managedConnectionWithPeripheral:(CBPeripheral *)peripheral;
+/// - Returns a empty set if there is no profile connection with this peripheral that is managed by this manager.
+- (NSSet <RTKProfileConnection*> *)managedConnectionsWithPeripheral:(CBPeripheral *)peripheral;
 
 
-/// Returns an ``RTKProfileConnection`` object which connected with a specific iAP accessory.
+/// Returns a list of ``RTKProfileConnection`` instances which connects with a specific iAP accessory.
 ///
-/// - Returns `nil` if there is no profile connection with this accessory that is managed by this manager.
-- (nullable RTKProfileConnection *)managedConnectionWithAccessory:(EAAccessory *)accessory;
+/// - Returns a empty set if there is no profile connection with this accessory that is managed by this manager.
+- (NSSet <RTKProfileConnection*> *)managedConnectionsWithAccessory:(EAAccessory *)accessory;
 
 
 // MARK: - Device connection state observation

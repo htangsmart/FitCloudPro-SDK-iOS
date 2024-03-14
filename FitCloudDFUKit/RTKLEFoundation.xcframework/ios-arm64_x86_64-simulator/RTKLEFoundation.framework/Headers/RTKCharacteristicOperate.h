@@ -64,6 +64,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// Called by `RTKConnectionUponGATT` to notify that characteristic value can not be wrote.
 - (void)characteristicDidFailToWriteValue:(CBCharacteristic *)characteristic error:(NSError *)error;
 
+
+/// Called by an `RTKConnectionUponGATT` to notify that the peripheral is ready again to write without response.
+- (void)isReadyToWriteWithoutResponse;
+
 @end
 
 

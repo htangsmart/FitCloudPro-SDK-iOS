@@ -74,6 +74,7 @@ typedef NS_ENUM(NSUInteger, RTKOTAImageType) {
     RTKOTAImageType_BBpro_EXT_IMAGE2                = 13,     ///< Extension Image 2 (Sensor)
     RTKOTAImageType_BBpro_EXT_IMAGE3                = 14,     ///< Extension Image 3
     RTKOTAImageType_BBpro_FACTORY_IMAGE             = 15,     ///< Factory Image
+    RTKOTAImageType_BBpro_BootPatch                 = 15,     ///< Boot Patch Image
     RTKOTAImageType_BBpro_BACKUP_DATA               = 16,     ///< Backup Data
     RTKOTAImageType_BBpro_BACKUP_DATA2              = 17,     ///< Backup Data 2
     RTKOTAImageType_BBpro_Platform_Img              = 18,     ///< Platform Image

@@ -8,10 +8,12 @@
 //  框架名称:FitCloudDFUKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet Device Firmware Upgrade, which is responsible for the upgrade of bracelet firmware. FitCloud智能手环固件升级的iOS框架，负责手环固件升级等功能的封装。
 //  修改记录:
-//     pcjbird    2023-12-29  Version:1.3.1-beta.15 Build:202312900002
+//     pcjbird    2024-03-14  Version:1.3.1-beta.17 Build:202403140001
 //                            1.Realtek音乐推送支持
 //                            2.Realtek电子书/相册推送支持
 //                            3.重命名日志回调函数
+//                            4.新增终止固件升级功能
+//                            5.更新Realtek固件升级SDK，支持8773型号芯片
 //
 //     pcjbird    2022-12-30  Version:1.3.0 Build:202212300001
 //                            1.更新错误码翻译
@@ -177,6 +179,9 @@ typedef NS_ENUM(NSInteger, FITCLOUDDFUCHIPVENDOR)
  * @param silentMode 是否为静默模式，普通固件升级使用非静默模式，UI升级/表盘升级使用静默模式
  */
 +(void) startWithPeripheral:(CBPeripheral *) peripheral firmware:(NSString*)firmware chipVendor:(FITCLOUDDFUCHIPVENDOR)chipVendor silentMode:(BOOL)silentMode;
+
+/// 终止固件升级
++(void) abortIfNeeded;
 
 @end
 
