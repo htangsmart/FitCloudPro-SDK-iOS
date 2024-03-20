@@ -4,13 +4,33 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		mNY5tEEbcjBXTIdA7ocz6Vow4tw=
+		</data>
+		<key>AliIot.bundle/HelloWord.html</key>
+		<data>
+		4AysiTz7e5JDys6KG4yVqoxs95s=
+		</data>
+		<key>AliIot.bundle/index.html</key>
+		<data>
+		PTu90w6ZtuJJMKW8T6neqgIG1rY=
+		</data>
+		<key>AliIot.bundle/umi.css</key>
+		<data>
+		+evUzmF8zTAROQ2ahXU6VNuDBmc=
+		</data>
+		<key>AliIot.bundle/umi.js</key>
+		<data>
+		0N+gZlTBevMN4o71XAsfskPuf/U=
+		</data>
 		<key>Headers/AliIot.h</key>
 		<data>
-		2AuvBqJ9ZFm6ZBa7GqpJZ/Zmsbo=
+		IsIF51BH24LDln/whd+RPiAkXes=
 		</data>
 		<key>Headers/AliIotSDKProtocol.h</key>
 		<data>
-		Q9d/z9l0qN6JzonvR6zhP7V82HU=
+		vFLXScqU7caraa9L72L7XurzEwM=
 		</data>
 		<key>Headers/AliIotSdk-Swift.h</key>
 		<data>
@@ -26,11 +46,11 @@
 		</data>
 		<key>Modules/AliIotSdk.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		ljUfwFlHtC3EuKuDeHO1/XE7m2c=
+		dzO5TK+hSj3piQadp88SQknnjvk=
 		</data>
 		<key>Modules/AliIotSdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		LlLnMtpuu3B+7CoXYa6npeiiwzM=
+		ABEtkBFwVo4FDp0fVoMUvUS3gtc=
 		</data>
 		<key>Modules/AliIotSdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -46,7 +66,7 @@
 		</data>
 		<key>Modules/AliIotSdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		mHPh7T5x/keIGsqIMPzELOVORdg=
+		+T17+ZcmgeqeE/5L4Q5LQp5cxVk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -59,18 +79,46 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AliIot.bundle/HelloWord.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QvDdR372jWi83HUqJDcMzk3AFNLSx9chD8O7A+uo8Dc=
+			</data>
+		</dict>
+		<key>AliIot.bundle/index.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			at8epG5+Rm5EG/4ARCxS+F6NwkhIlNf4SXN6KN2dfBs=
+			</data>
+		</dict>
+		<key>AliIot.bundle/umi.css</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QVMack/LMjKOWTBgf/PG3lHqF6Y/dfF3R4Rc//3iNwQ=
+			</data>
+		</dict>
+		<key>AliIot.bundle/umi.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YYZCP9e/ELKQ8jPUly+kXkZkpisZuRwPxjfb9d9faFg=
+			</data>
+		</dict>
 		<key>Headers/AliIot.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CVNkcJlbQRHZIan8XXnWcRJHUl2FflhH3f6MXeVFbDA=
+			lJmACW4fGpM6sZRgXD0bIStCsZXJoN5jO63jVyBBUsA=
 			</data>
 		</dict>
 		<key>Headers/AliIotSDKProtocol.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e6g1fadHii6Kinze5AkUpxJuolve6BYAC27BfBmIs/0=
+			RYkmnVWdQIHSVoNJ8tpfX7pKiHnz0i0s1DppVN0wRVs=
 			</data>
 		</dict>
 		<key>Headers/AliIotSdk-Swift.h</key>
@@ -91,14 +139,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VCI35z3Wvpw0BezwAX4Kn17M/nHTFY9U0FF1r6Li8cM=
+			syDpzIhQXZW2et4Zswnh1BUaAuHL6vAXvWUCWO9wG8Q=
 			</data>
 		</dict>
 		<key>Modules/AliIotSdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			v33Lylws8gXkU1o0Kw7hxLPr63MHOPu9VG66IU/Ftds=
+			jlTqJtBviNFDiRTo04cOjsBE8p1SlRPr1V0d3q1EFMI=
 			</data>
 		</dict>
 		<key>Modules/AliIotSdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -126,7 +174,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZKSd6exvL5L5hNp0xqIEQX5P7RJkJc38lihfxK3zbQE=
+			t2grj7N9eladb01DmnCQLqe3L6efRvwjkPdGBf4IkmA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

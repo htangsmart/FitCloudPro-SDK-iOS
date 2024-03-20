@@ -10,13 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AliIot : NSObject <AliIotSDKProtocol>
+@interface AliIot : NSObject <AliIotSDKProtocol,AliIotSDKMapProtocol>
+
+@property (nonatomic, weak) id<AliIotSDKCallbackProtocol> delegate;
+@property (nonatomic, weak) id<AliIotSdkMapCallbackProtocol> mapDelegate;
+@property (nonatomic,assign)BOOL configSuccess;
 
 + (instancetype)shareInstance;
 
-@property (nonatomic, weak) id<AliIotSDKCallbackProtocol> delegate;
-
-- (void)mqttUploadFile:(NSString *)fileName content:(NSData *)content;
 @end
 
 NS_ASSUME_NONNULL_END

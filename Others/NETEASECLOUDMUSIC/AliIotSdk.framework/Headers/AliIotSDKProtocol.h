@@ -5,34 +5,23 @@
 //  Created by cookies on 2023/6/15.
 //
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol AliIotSDKProtocol <NSObject>
 - (instancetype)init NS_UNAVAILABLE;
 
-/// 初始化 SDK,每次连接上蓝牙设备后调用
-/// - Parameter param:
-- (void)configSDK:(id)param;
+/// 配置SDK,每次连接上蓝牙设备后调用
+- (void)configSDK;
 
 /// 收到 蓝牙 数据
-/// - Parameter currData: data
-///
-/// ```objc
-///     // 系统蓝牙外围设备收到设备侧发送回来的蓝牙数据
-///     - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
-///     {
-///         // 传入蓝牙数据给 SDK
-///         [AliIot.shareInstance handleReceivedData:characteristic.value];
-///     }
-/// ```
-///
+/// - Parameter currData: 蓝牙数据
 - (void)handleReceivedData:(NSData *)currData;
 
-/// 设备断开时调用
-/// - Parameter param:
+/// 断开设备调用结束工作
+/// - Parameter completed: 清理结束回调
 - (void)done:(void(^ _Nonnull )(id _Nullable param))completed;
-
 @end
 
 
@@ -50,9 +39,60 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter isFinish: 是否完成初始化
 - (void)sdkInitResult:(BOOL)isFinish;
 
-/// 输出日志,直接监听即可
+/// 输出日志=
 /// - Parameter log: 日志信息
 - (void)handleLog:(NSString *)log;
 @end
 
+
+@protocol AliIotSDKMapProtocol <NSObject>
+/// 打开map h5
+/// - Parameters:
+///   - viewController: 跳转controller
+- (void)openMapBy:(UIViewController *)viewController;
+
+/// 发送收藏列表
+/// - Parameter jsonString: 收藏数据
+- (void)sendCollectList:(NSString *)jsonString;
+
+/// 发送轨迹数据
+/// - Parameter jsonString: 轨迹数据
+- (void)sendTrajectoryList:(NSString *)jsonString;
+@end
+
+@protocol AliIotSdkMapCallbackProtocol <NSObject>
+
+/// 添加收藏
+/// - Parameters:
+///   - collectionId: 收藏id
+///   - jsonString: 内容
+- (void)addCollect:(NSString *)collectionId content:(NSString *)jsonString;
+
+/// 取消收藏
+/// - Parameter collectionId: 收藏id
+- (void)removeCollect:(NSString *)collectionId;
+
+/// 获取收藏列表
+/// - Parameters:
+///   - page: 页码
+///   - pageSize: 页大小
+- (void)getCollectListView:(NSInteger)page pageSize:(NSInteger)pageSize;
+
+
+///  添加轨迹
+/// - Parameters:
+///   - trajectoryId: 轨迹id
+///   - jsonString: 内容
+- (void)addTrajectory:(NSString *)trajectoryId content:(NSString *)jsonString;
+
+/// 移除轨迹
+/// - Parameter trajectoryId: 轨迹id
+- (void)removeTrajectory:(NSString*)trajectoryId;
+
+/// 获取轨迹列表
+/// - Parameters:
+///   - page: 页码
+///   - pageSize: 页大小
+- (void)getTrajectoryListView:(NSInteger)page pageSize:(NSInteger)pageSize;
+@end
 NS_ASSUME_NONNULL_END
