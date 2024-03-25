@@ -36,8 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 /// 初始化结果
-/// - Parameter isFinish: 是否完成初始化
-- (void)sdkInitResult:(BOOL)isFinish;
+/// - Parameter isSuccess: 是否成功初始化
+- (void)sdkInitResult:(BOOL)isSuccess;
 
 /// 输出日志=
 /// - Parameter log: 日志信息
