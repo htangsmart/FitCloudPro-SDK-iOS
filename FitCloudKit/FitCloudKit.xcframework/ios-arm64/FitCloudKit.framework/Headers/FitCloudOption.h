@@ -55,6 +55,9 @@
  */
 @property(nonatomic, assign) BOOL autoSyncSystemTime;
 
+/// 是否自动同步系统语言，默认YES
+@property(nonatomic, assign) BOOL autoSyncSystemLang;
+
 /// 是否优先使用WriteWithoutResponse，默认为NO
 @property(nonatomic, assign) BOOL preferWriteWithoutResponse;
 
