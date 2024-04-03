@@ -510,6 +510,30 @@ typedef void (^FitCloudOpenGSensorResultBlock)(BOOL succeed, NSError* error);
 ///   void
 typedef void (^FitCloudECardsResultBlock)(BOOL succeed, NSInteger maxCount, NSInteger maxContentLen, NSArray<FitCloudECard*>*ecards, NSError* error);
 
+/// The new OTA start confirm result block
+/// - Parameters:
+///   - success: whether start success
+///   - error: error information
+typedef void (^FitCloudNewOTAStartConfirmResultBlock)(BOOL success, NSError* error);
+
+/// The new OTA progress block
+/// - Parameters:
+///   - progress: the progress, range 0.0~1.0f
+typedef void (^FitCloudNewOTAProgressBlock)(CGFloat progress);
+
+/// The new OTA completion block
+/// - Parameters:
+///   - success: whether upgrade success
+///   - avgSpeed: the avg transfer speed, kB/s
+///   - error: error information
+typedef void (^FitCloudNewOTACompletionBlock)(BOOL success, CGFloat avgSpeed, NSError* error);
+
+/// The new OTA cancel completion block
+/// - Parameters:
+///   - success: whether cancel success
+///   - error: error information
+typedef void (^FitCloudNewOTACancelCompletionBlock)(BOOL success, NSError* error);
+
 
 /**
  *@brief FitCloudKit 回调协议

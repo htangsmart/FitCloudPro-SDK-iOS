@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-03-27  Version:1.2.9-beta.82 Build:202403270001
+//     pcjbird    2024-04-03  Version:1.2.9-beta.83 Build:202404030001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -37,6 +37,7 @@
 //                            25.新增设备能力查询支持,@see allowQueryDeviceCapacities, allConfig.deviceCapacities
 //                            26.新增获取运动训练展示数据项信息,@see withDisplayConfigInWorkoutData
 //                            27.FitCloudOption新增是否自动同步系统语言选项,@see autoSyncSystemLang
+//                            28.新OTA升级支持
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -298,79 +299,67 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- * @brief FitCloud健康手表iOS框架
- */
+/// FitCloud智能手表iOS框架
 @interface FitCloudKit : NSObject
 
 #pragma mark 版本信息
 
-/**
- * @brief SDK版本号
- */
+/// SDK版本号
+/// - Returns:
+/// SDK 版本号
 +(NSString*) sdkVersion;
 
-/**
- * @brief SDK Build 版本号
- */
+/// SDK Build 版本号
+/// - Returns:
+/// SDK Build 版本号
 +(NSString*) sdkBuild;
 
 
 #pragma mark 初始化/扫描/连接
 
-/**
- * @brief 初始化
- * @param option 选项, 传nil则使用默认选项
- * @param callback 回调类，主要用于接受处理手表的请求命令或事件
- */
+/// 初始化
+/// - Parameters:
+///   - option: 选项, 传nil则使用默认选项
+///   - callback 回调类，主要用于接受处理手表的请求命令或事件
+/// - Returns:
+///  FitCloudKit
 +(instancetype _Nonnull)initWithOption:(FitCloudOption* _Nullable)option callback:(id<FitCloudCallback> _Nullable)callback;
 
-/**
- * @brief 扫描手表设备
- */
+/// 扫描手表设备
 +(void)scanPeripherals;
 
-/**
- * @brief 停止扫描手表设备
- */
+/// 停止扫描手表设备
 +(void)stopScan;
 
-/**
- * @brief 如果您使用自己的扫描方法，将您的外设转换成可连接的外设
- * @param peripheral 您自己扫描的外设
- * @param completion 转换结果
- */
-+ (void)translatePeripheral:(CBPeripheral * _Nonnull )peripheral toConnectablePeripheralCompletion:(void(^_Nullable)(BOOL success, NSError * _Nullable error, CBPeripheral * _Nullable connectablePeripheral)) completion;
+/// 如果您使用自己的扫描方法，将您的外设转换成可连接的外设
+/// - Parameters:
+///   - peripheral: 您自己扫描的外设
+///   - completion: 转换结果
++(void)translatePeripheral:(CBPeripheral * _Nonnull )peripheral toConnectablePeripheralCompletion:(void(^_Nullable)(BOOL success, NSError * _Nullable error, CBPeripheral * _Nullable connectablePeripheral)) completion;
 
-/**
- * @brief 连接手表设备
- * @param peripheral 手表设备
- */
+/// 连接手表设备
+/// - Parameters:
+///   - peripheral: 手表设备
 +(void)connect:(CBPeripheral * _Nonnull )peripheral;
 
 
-/**
- * @brief 连接手表设备
- * @param peripheral 手表设备
- * @param btMode 是否使用一键双连同时连接经典蓝牙(BT)
- */
+/// 连接手表设备
+/// - Parameters:
+///   - peripheral: 手表设备
+///   - btMode: 是否使用一键双连同时连接经典蓝牙(BT)
 +(void)connect:(CBPeripheral * _Nonnull )peripheral btMode:(BOOL)btMode;
 
-/**
- * @brief 尝试连接已知的外部设备
- * @param record 已知的外部设备
- */
+/// 尝试连接已知的外部设备
+/// - Parameters:
+///   - record: 已知的外部设备
 +(void)tryConnect:(FitCloudKitConnectRecord* _Nonnull )record;
 
-/**
- * @brief 断开外部设备连接
- */
+/// 断开外部设备连接
 +(void)disconnect;
 
-/**
- * @brief 忽略当前已连接未绑定/绑定失败的设备
- * @param silent YES则不会打印相关日志
- */
+/// 忽略当前已连接未绑定/绑定失败的设备
+/// - Parameters:
+///   - silent YES则不会打印相关日志
 +(void)ignoreConnectedPeripheral:(BOOL)silent;
 
 
@@ -1538,6 +1527,29 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - hexData: 十六进制字符串，0x开头
 +(void)mockupRemoteCommandWithData:(NSString*) hexData;
+
+@end
+
+/// 新OTA
+@interface FitCloudKit (NewOTA)
+
+#pragma mark 传输新OTA升级文件
+
+/// 传输新OTA升级文件
+/// 尽量在后台线程调用该方法
+/// - Parameters:
+///   - newOTAFilePath: 新OTA升级文件路径
+///   - startConfirmResult: 升级确认结果回调
+///   - progress: 传输进度回调
+///   - completion: 结果回调
++(void)sendNewOTA:(NSString*)newOTAFilePath startConfirmResult:(FitCloudNewOTAStartConfirmResultBlock _Nullable)startConfirmResult progress:(FitCloudNewOTAProgressBlock _Nullable)progress completion:(FitCloudNewOTACompletionBlock _Nullable)completion;
+
+#pragma mark 取消传输新OTA升级文件
+
+/// 取消传输新OTA升级文件
+/// - Parameters:
+///   - completion: 完成回调
++(void)cancelSendTheNewOTAIfNeededWithCompletion:(FitCloudNewOTACancelCompletionBlock _Nullable)completion;
 
 @end
 

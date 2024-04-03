@@ -16,6 +16,9 @@
  */
 #define FITCLOUDKITERRORDOMAIN @"FITCLOUDKITERRORDOMAIN"
 
+/// FitCloudKit 新OTA升级错误码作用域
+#define FITCLOUDNEWOTAERRORDOMAIN @"FITCLOUDNEWOTAERRORDOMAIN"
+
 /**
  * @brief FitCloudKit 错误码定义
  */
