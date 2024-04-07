@@ -52,6 +52,7 @@
         alarm.cycle = FITCLOUDALARMCYCLE_MON;
         alarm.on = YES;
         alarm.label = @"test alarm label";
+        alarm.alarmId = 0;
         [alarmlist addObject:alarm];
         [alarmlist addObjectsFromArray:[FitCloudKit alarmlist]];
         __weak typeof(self) weakSelf = self;

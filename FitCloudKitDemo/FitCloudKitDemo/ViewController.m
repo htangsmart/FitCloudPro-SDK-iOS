@@ -89,7 +89,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripheralDisconnectedNotification:) name:FITCLOUDEVENT_PERIPHERAL_DISCONNECT_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnPeripherialConnectFailureNotification:) name:FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnBatteryInfoNotification:) name:FTICLOUDEVENT_BATTERYINFO_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnBatteryInfoNotification:) name:FITCLOUDEVENT_BATTERYINFO_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudLoginUserObjectBegin:) name:FITCLOUDEVENT_LOGINUSEROBJECT_BEGIN_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudLoginUserObjectResult:) name:FITCLOUDEVENT_LOGINUSEROBJECT_RESULT_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnFitCloudGetAllConfigBegin:) name:FITCLOUDEVENT_GETALLCONFIG_BEGIN_NOTIFY object:nil];
