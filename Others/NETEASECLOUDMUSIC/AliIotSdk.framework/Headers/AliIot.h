@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shareInstance;
 
+- (void)sendFileFromPath:(NSString *)filePath fileName:(NSString *)fileName;
 @end
 
 NS_ASSUME_NONNULL_END
