@@ -1320,14 +1320,6 @@ typedef NS_ENUM(SInt8, FITCLOUDWATCHGPSFILESTATE)
     FITCLOUDWATCHGPSFILESTATE_OUTDATED = 3,                   //已过期
 };
 
-#pragma mark -更新GPS文件模式
-
-typedef NS_ENUM(Byte, FITCLOUDGPSFILEUPGRADEMODE)
-{
-    FITCLOUDGPSFILEUPGRADEMODE_BEFOREEXPIRE = 0,               //需要清除当前GPS文件更新（当前文件未过期）
-    FFITCLOUDGPSFILEUPGRADEMODE_AFTEREXPIRE = 1,               //直接更新（当前文件已过期）
-};
-
 #pragma mark -勋章成就等级
 
 typedef NS_ENUM(Byte, FITCLOUDMEDALACHIEVEMENTLEVEL)

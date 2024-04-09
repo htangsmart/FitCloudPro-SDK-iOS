@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-04-07  Version:1.2.9-beta.88 Build:202404070001
+//     pcjbird    2024-04-09  Version:1.2.9-beta.89 Build:202404090001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -1273,13 +1273,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(void) getGPSFileCanPushWithBlock:(FitCloudGPSFileCanPushResultBlock _Nullable)block;
 
-#pragma mark 设置GPS文件升级模式
+#pragma mark 准备GPS文件升级
 
 /**
- * @brief 设置GPS文件升级模式
+ * @brief 准备GPS文件升级
  * @param block 结果回调
  */
-+(void) setGPSFileUpgradeMode:(FITCLOUDGPSFILEUPGRADEMODE)upgradeMode withBlock:(FitCloudResultBlock _Nullable)block;
++(void) prepareGPSFileUpgradeWithCompletion:(FitCloudResultBlock _Nullable)block;
 
 
 #pragma mark 导航信息同步
