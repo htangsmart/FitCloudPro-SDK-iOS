@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BBE7554BE2E097262B1624B /* Pods_FitCloudGPSAccelerateDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F91FF4EED9E20406F878D5 /* Pods_FitCloudGPSAccelerateDemo.framework */; };
+		89B403622BC3CF3A0057E172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403612BC3CF3A0057E172 /* AppDelegate.m */; };
+		89B403652BC3CF3A0057E172 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403642BC3CF3A0057E172 /* SceneDelegate.m */; };
+		89B403682BC3CF3A0057E172 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403672BC3CF3A0057E172 /* ViewController.m */; };
+		89B4036D2BC3CF3A0057E172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B4036C2BC3CF3A0057E172 /* Assets.xcassets */; };
+		89B403732BC3CF3A0057E172 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403722BC3CF3A0057E172 /* main.m */; };
+		89B403C02BC55C730057E172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B403C12BC55C730057E172 /* Main.storyboard */; };
+		89B403C22BC55C780057E172 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B403C32BC55C780057E172 /* LaunchScreen.storyboard */; };
+		89B403D82BC55D2D0057E172 /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403C82BC55D2D0057E172 /* DeviceCell.m */; };
+		89B403D92BC55D2D0057E172 /* DeviceBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403C92BC55D2D0057E172 /* DeviceBindingController.m */; };
+		89B403DA2BC55D2D0057E172 /* LocalizedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403CD2BC55D2D0057E172 /* LocalizedLabel.m */; };
+		89B403DB2BC55D2D0057E172 /* LocalizedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403CF2BC55D2D0057E172 /* LocalizedButton.m */; };
+		89B403DC2BC55D2D0057E172 /* MoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403D32BC55D2D0057E172 /* MoView.m */; };
+		89B403DD2BC55D2D0057E172 /* MoCurveLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403D42BC55D2D0057E172 /* MoCurveLayer.m */; };
+		89B403DE2BC55D2D0057E172 /* DeviceSearchListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403D62BC55D2D0057E172 /* DeviceSearchListController.m */; };
+		89B403DF2BC55D2D0057E172 /* AppDelegate+FitCloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403D72BC55D2D0057E172 /* AppDelegate+FitCloudKit.m */; };
+		89B403E22BC55D560057E172 /* AppDelegate+LoggerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403E12BC55D560057E172 /* AppDelegate+LoggerService.m */; };
+		89B403E62BC563B30057E172 /* DemoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B403E52BC563B30057E172 /* DemoListController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D8DD999A9F697955E1B8E78 /* Pods-FitCloudGPSAccelerate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudGPSAccelerate.debug.xcconfig"; path = "Target Support Files/Pods-FitCloudGPSAccelerate/Pods-FitCloudGPSAccelerate.debug.xcconfig"; sourceTree = "<group>"; };
+		6C6DF93FFC7555C4FB516FAA /* Pods_FitCloudGPSAccelerate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitCloudGPSAccelerate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB630CA7413AE188265ECE3 /* Pods-FitCloudGPSAccelerateDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudGPSAccelerateDemo.release.xcconfig"; path = "Target Support Files/Pods-FitCloudGPSAccelerateDemo/Pods-FitCloudGPSAccelerateDemo.release.xcconfig"; sourceTree = "<group>"; };
+		89B4035E2BC3CF3A0057E172 /* FitCloudGPSAccelerateDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudGPSAccelerateDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89B403602BC3CF3A0057E172 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		89B403612BC3CF3A0057E172 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		89B403632BC3CF3A0057E172 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		89B403642BC3CF3A0057E172 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		89B403662BC3CF3A0057E172 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		89B403672BC3CF3A0057E172 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		89B4036C2BC3CF3A0057E172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89B403712BC3CF3A0057E172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B403722BC3CF3A0057E172 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		89B4037C2BC3DE200057E172 /* LogMate.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = LogMate.xcframework; sourceTree = "<group>"; };
+		89B4037E2BC3E08A0057E172 /* FitCloudOTAGenKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FitCloudOTAGenKit.xcframework; sourceTree = "<group>"; };
+		89B403C12BC55C730057E172 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		89B403C32BC55C780057E172 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89B403C42BC55D2C0057E172 /* AppDelegate+FitCloudKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+FitCloudKit.h"; sourceTree = "<group>"; };
+		89B403C52BC55D2C0057E172 /* DeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
+		89B403C62BC55D2C0057E172 /* DeviceBindingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceBindingController.h; sourceTree = "<group>"; };
+		89B403C72BC55D2C0057E172 /* DeviceSearchListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSearchListController.h; sourceTree = "<group>"; };
+		89B403C82BC55D2D0057E172 /* DeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
+		89B403C92BC55D2D0057E172 /* DeviceBindingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceBindingController.m; sourceTree = "<group>"; };
+		89B403CC2BC55D2D0057E172 /* LocalizedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedLabel.h; sourceTree = "<group>"; };
+		89B403CD2BC55D2D0057E172 /* LocalizedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedLabel.m; sourceTree = "<group>"; };
+		89B403CF2BC55D2D0057E172 /* LocalizedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedButton.m; sourceTree = "<group>"; };
+		89B403D02BC55D2D0057E172 /* LocalizedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedButton.h; sourceTree = "<group>"; };
+		89B403D22BC55D2D0057E172 /* MoCurveLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoCurveLayer.h; sourceTree = "<group>"; };
+		89B403D32BC55D2D0057E172 /* MoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoView.m; sourceTree = "<group>"; };
+		89B403D42BC55D2D0057E172 /* MoCurveLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoCurveLayer.m; sourceTree = "<group>"; };
+		89B403D52BC55D2D0057E172 /* MoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoView.h; sourceTree = "<group>"; };
+		89B403D62BC55D2D0057E172 /* DeviceSearchListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSearchListController.m; sourceTree = "<group>"; };
+		89B403D72BC55D2D0057E172 /* AppDelegate+FitCloudKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+FitCloudKit.m"; sourceTree = "<group>"; };
+		89B403E02BC55D560057E172 /* AppDelegate+LoggerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LoggerService.h"; sourceTree = "<group>"; };
+		89B403E12BC55D560057E172 /* AppDelegate+LoggerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LoggerService.m"; sourceTree = "<group>"; };
+		89B403E32BC55E040057E172 /* FitCloudGPSAccelerateDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FitCloudGPSAccelerateDemo-Prefix.pch"; sourceTree = "<group>"; };
+		89B403E42BC563B30057E172 /* DemoListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoListController.h; sourceTree = "<group>"; };
+		89B403E52BC563B30057E172 /* DemoListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoListController.m; sourceTree = "<group>"; };
+		B4A5BC158151DD8E708ABC8F /* Pods-FitCloudGPSAccelerate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudGPSAccelerate.release.xcconfig"; path = "Target Support Files/Pods-FitCloudGPSAccelerate/Pods-FitCloudGPSAccelerate.release.xcconfig"; sourceTree = "<group>"; };
+		C4F91FF4EED9E20406F878D5 /* Pods_FitCloudGPSAccelerateDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitCloudGPSAccelerateDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D03DCA5267D432F292BF1D66 /* Pods-FitCloudGPSAccelerateDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudGPSAccelerateDemo.debug.xcconfig"; path = "Target Support Files/Pods-FitCloudGPSAccelerateDemo/Pods-FitCloudGPSAccelerateDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89B4035B2BC3CF3A0057E172 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BBE7554BE2E097262B1624B /* Pods_FitCloudGPSAccelerateDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42CF4450B245D679E9850D00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D8DD999A9F697955E1B8E78 /* Pods-FitCloudGPSAccelerate.debug.xcconfig */,
+				B4A5BC158151DD8E708ABC8F /* Pods-FitCloudGPSAccelerate.release.xcconfig */,
+				D03DCA5267D432F292BF1D66 /* Pods-FitCloudGPSAccelerateDemo.debug.xcconfig */,
+				6DB630CA7413AE188265ECE3 /* Pods-FitCloudGPSAccelerateDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5BFC33A79E12BBD0C3492495 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89B4037B2BC3DE200057E172 /* vendors */,
+				6C6DF93FFC7555C4FB516FAA /* Pods_FitCloudGPSAccelerate.framework */,
+				C4F91FF4EED9E20406F878D5 /* Pods_FitCloudGPSAccelerateDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89B403442BC3CCAB0057E172 = {
+			isa = PBXGroup;
+			children = (
+				89B4035F2BC3CF3A0057E172 /* FitCloudGPSAccelerateDemo */,
+				89B4034F2BC3CCAB0057E172 /* Products */,
+				42CF4450B245D679E9850D00 /* Pods */,
+				5BFC33A79E12BBD0C3492495 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		89B4034F2BC3CCAB0057E172 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89B4035E2BC3CF3A0057E172 /* FitCloudGPSAccelerateDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89B4035F2BC3CF3A0057E172 /* FitCloudGPSAccelerateDemo */ = {
+			isa = PBXGroup;
+			children = (
+				89B403602BC3CF3A0057E172 /* AppDelegate.h */,
+				89B403612BC3CF3A0057E172 /* AppDelegate.m */,
+				89B403C42BC55D2C0057E172 /* AppDelegate+FitCloudKit.h */,
+				89B403D72BC55D2D0057E172 /* AppDelegate+FitCloudKit.m */,
+				89B403E02BC55D560057E172 /* AppDelegate+LoggerService.h */,
+				89B403E12BC55D560057E172 /* AppDelegate+LoggerService.m */,
+				89B403C62BC55D2C0057E172 /* DeviceBindingController.h */,
+				89B403C92BC55D2D0057E172 /* DeviceBindingController.m */,
+				89B403C52BC55D2C0057E172 /* DeviceCell.h */,
+				89B403C82BC55D2D0057E172 /* DeviceCell.m */,
+				89B403C72BC55D2C0057E172 /* DeviceSearchListController.h */,
+				89B403D62BC55D2D0057E172 /* DeviceSearchListController.m */,
+				89B403E42BC563B30057E172 /* DemoListController.h */,
+				89B403E52BC563B30057E172 /* DemoListController.m */,
+				89B403CA2BC55D2D0057E172 /* Vendors */,
+				89B403632BC3CF3A0057E172 /* SceneDelegate.h */,
+				89B403642BC3CF3A0057E172 /* SceneDelegate.m */,
+				89B403662BC3CF3A0057E172 /* ViewController.h */,
+				89B403672BC3CF3A0057E172 /* ViewController.m */,
+				89B403C12BC55C730057E172 /* Main.storyboard */,
+				89B4036C2BC3CF3A0057E172 /* Assets.xcassets */,
+				89B403C32BC55C780057E172 /* LaunchScreen.storyboard */,
+				89B403712BC3CF3A0057E172 /* Info.plist */,
+				89B403722BC3CF3A0057E172 /* main.m */,
+				89B403E32BC55E040057E172 /* FitCloudGPSAccelerateDemo-Prefix.pch */,
+			);
+			path = FitCloudGPSAccelerateDemo;
+			sourceTree = "<group>";
+		};
+		89B4037B2BC3DE200057E172 /* vendors */ = {
+			isa = PBXGroup;
+			children = (
+				89B4037E2BC3E08A0057E172 /* FitCloudOTAGenKit.xcframework */,
+				89B4037C2BC3DE200057E172 /* LogMate.xcframework */,
+			);
+			name = vendors;
+			path = FitCloudGPSAccelerate/vendors;
+			sourceTree = "<group>";
+		};
+		89B403CA2BC55D2D0057E172 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				89B403CB2BC55D2D0057E172 /* LocalizedLabel */,
+				89B403CE2BC55D2D0057E172 /* LocalizedButton */,
+				89B403D12BC55D2D0057E172 /* MoLoading */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		89B403CB2BC55D2D0057E172 /* LocalizedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				89B403CC2BC55D2D0057E172 /* LocalizedLabel.h */,
+				89B403CD2BC55D2D0057E172 /* LocalizedLabel.m */,
+			);
+			path = LocalizedLabel;
+			sourceTree = "<group>";
+		};
+		89B403CE2BC55D2D0057E172 /* LocalizedButton */ = {
+			isa = PBXGroup;
+			children = (
+				89B403CF2BC55D2D0057E172 /* LocalizedButton.m */,
+				89B403D02BC55D2D0057E172 /* LocalizedButton.h */,
+			);
+			path = LocalizedButton;
+			sourceTree = "<group>";
+		};
+		89B403D12BC55D2D0057E172 /* MoLoading */ = {
+			isa = PBXGroup;
+			children = (
+				89B403D22BC55D2D0057E172 /* MoCurveLayer.h */,
+				89B403D32BC55D2D0057E172 /* MoView.m */,
+				89B403D42BC55D2D0057E172 /* MoCurveLayer.m */,
+				89B403D52BC55D2D0057E172 /* MoView.h */,
+			);
+			path = MoLoading;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89B4035D2BC3CF3A0057E172 /* FitCloudGPSAccelerateDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89B403762BC3CF3A0057E172 /* Build configuration list for PBXNativeTarget "FitCloudGPSAccelerateDemo" */;
+			buildPhases = (
+				BA0442E04BCEBE6F7B4DE5A4 /* [CP] Check Pods Manifest.lock */,
+				89B4035A2BC3CF3A0057E172 /* Sources */,
+				89B4035B2BC3CF3A0057E172 /* Frameworks */,
+				89B4035C2BC3CF3A0057E172 /* Resources */,
+				6991A54D8E5E1B0554ADEFA5 /* [CP] Embed Pods Frameworks */,
+				57766FAA9D71FEC0750F5E74 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitCloudGPSAccelerateDemo;
+			productName = FitCloudGPSAccelerateDemo;
+			productReference = 89B4035E2BC3CF3A0057E172 /* FitCloudGPSAccelerateDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89B403452BC3CCAB0057E172 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					89B4035D2BC3CF3A0057E172 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 89B403482BC3CCAB0057E172 /* Build configuration list for PBXProject "FitCloudGPSAccelerateDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89B403442BC3CCAB0057E172;
+			productRefGroup = 89B4034F2BC3CCAB0057E172 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89B4035D2BC3CF3A0057E172 /* FitCloudGPSAccelerateDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89B4035C2BC3CF3A0057E172 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B403C22BC55C780057E172 /* LaunchScreen.storyboard in Resources */,
+				89B4036D2BC3CF3A0057E172 /* Assets.xcassets in Resources */,
+				89B403C02BC55C730057E172 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57766FAA9D71FEC0750F5E74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudGPSAccelerateDemo/Pods-FitCloudGPSAccelerateDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudGPSAccelerateDemo/Pods-FitCloudGPSAccelerateDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitCloudGPSAccelerateDemo/Pods-FitCloudGPSAccelerateDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6991A54D8E5E1B0554ADEFA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudGPSAccelerateDemo/Pods-FitCloudGPSAccelerateDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudGPSAccelerateDemo/Pods-FitCloudGPSAccelerateDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitCloudGPSAccelerateDemo/Pods-FitCloudGPSAccelerateDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA0442E04BCEBE6F7B4DE5A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitCloudGPSAccelerateDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89B4035A2BC3CF3A0057E172 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B403682BC3CF3A0057E172 /* ViewController.m in Sources */,
+				89B403622BC3CF3A0057E172 /* AppDelegate.m in Sources */,
+				89B403DC2BC55D2D0057E172 /* MoView.m in Sources */,
+				89B403732BC3CF3A0057E172 /* main.m in Sources */,
+				89B403E22BC55D560057E172 /* AppDelegate+LoggerService.m in Sources */,
+				89B403652BC3CF3A0057E172 /* SceneDelegate.m in Sources */,
+				89B403DF2BC55D2D0057E172 /* AppDelegate+FitCloudKit.m in Sources */,
+				89B403DA2BC55D2D0057E172 /* LocalizedLabel.m in Sources */,
+				89B403DE2BC55D2D0057E172 /* DeviceSearchListController.m in Sources */,
+				89B403D82BC55D2D0057E172 /* DeviceCell.m in Sources */,
+				89B403DD2BC55D2D0057E172 /* MoCurveLayer.m in Sources */,
+				89B403D92BC55D2D0057E172 /* DeviceBindingController.m in Sources */,
+				89B403E62BC563B30057E172 /* DemoListController.m in Sources */,
+				89B403DB2BC55D2D0057E172 /* LocalizedButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		89B403552BC3CCAB0057E172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		89B403562BC3CCAB0057E172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		89B403742BC3CF3A0057E172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D03DCA5267D432F292BF1D66 /* Pods-FitCloudGPSAccelerateDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4R4ZQP25B9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FitCloudGPSAccelerateDemo/FitCloudGPSAccelerateDemo-Prefix.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitCloudGPSAccelerateDemo/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "FitCloudKitDemo将使用您的蓝牙外设权限用于与手环设备配对";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "FitCloudKitDemo将使用您的蓝牙外设权限用于与手环设备配对";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudGPSAccelerateDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		89B403752BC3CF3A0057E172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB630CA7413AE188265ECE3 /* Pods-FitCloudGPSAccelerateDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4R4ZQP25B9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FitCloudGPSAccelerateDemo/FitCloudGPSAccelerateDemo-Prefix.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitCloudGPSAccelerateDemo/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "FitCloudKitDemo将使用您的蓝牙外设权限用于与手环设备配对";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "FitCloudKitDemo将使用您的蓝牙外设权限用于与手环设备配对";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudGPSAccelerateDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89B403482BC3CCAB0057E172 /* Build configuration list for PBXProject "FitCloudGPSAccelerateDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B403552BC3CCAB0057E172 /* Debug */,
+				89B403562BC3CCAB0057E172 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89B403762BC3CF3A0057E172 /* Build configuration list for PBXNativeTarget "FitCloudGPSAccelerateDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B403742BC3CF3A0057E172 /* Debug */,
+				89B403752BC3CF3A0057E172 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89B403452BC3CCAB0057E172 /* Project object */;
+}

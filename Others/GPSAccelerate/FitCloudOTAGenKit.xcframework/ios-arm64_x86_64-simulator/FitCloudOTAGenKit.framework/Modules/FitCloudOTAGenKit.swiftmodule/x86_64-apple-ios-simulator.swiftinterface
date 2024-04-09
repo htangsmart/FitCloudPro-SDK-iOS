@@ -1,0 +1,96 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FitCloudOTAGenKit
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@objc public enum OTAImageType : Swift.Int, Swift.CaseIterable {
+  case invalid = -1
+  case patch = 0
+  case firmware
+  case ui
+  case watchface
+  case tp
+  case font
+  case watchface_bundle
+  case onoff_logo
+  case game_skin
+  case game_ui_bundle_lx
+  case sports
+  case sports_bundle_lx
+  case gps_epo
+  case daemon_process
+  case mini_program
+  case file_tablelist_lx
+  case full_package_lx
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [FitCloudOTAGenKit.OTAImageType]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [FitCloudOTAGenKit.OTAImageType] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum LogLevel : Swift.Int {
+  case verbose = 0
+  case debug = 1
+  case info = 2
+  case warning = 3
+  case error = 4
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension FitCloudOTAGenKit.LogLevel : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@objc public protocol Loggable : ObjectiveC.NSObjectProtocol {
+  @objc func log(_ logLevel: FitCloudOTAGenKit.LogLevel, _ message: Swift.String)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class FitCloudOTAGenService : ObjectiveC.NSObject {
+  @objc public class func createGpsEpoBin(_ epoFilePaths: [Swift.String], _ outputDirectory: Swift.String, _ logProvider: (any FitCloudOTAGenKit.Loggable)? = nil) throws -> Swift.String
+  @objc deinit
+}
+@objc public enum ParamsError : Swift.Int, Swift.Error {
+  case badSlot
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum OTAGenError : Swift.Int, Swift.Error {
+  case fileNotExist
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension FitCloudOTAGenKit.OTAImageType : Swift.Equatable {}
+extension FitCloudOTAGenKit.OTAImageType : Swift.Hashable {}
+extension FitCloudOTAGenKit.OTAImageType : Swift.RawRepresentable {}
+extension FitCloudOTAGenKit.LogLevel : Swift.Equatable {}
+extension FitCloudOTAGenKit.LogLevel : Swift.Hashable {}
+extension FitCloudOTAGenKit.LogLevel : Swift.RawRepresentable {}
+extension FitCloudOTAGenKit.ParamsError : Swift.Equatable {}
+extension FitCloudOTAGenKit.ParamsError : Swift.Hashable {}
+extension FitCloudOTAGenKit.ParamsError : Swift.RawRepresentable {}
+extension FitCloudOTAGenKit.OTAGenError : Swift.Equatable {}
+extension FitCloudOTAGenKit.OTAGenError : Swift.Hashable {}
+extension FitCloudOTAGenKit.OTAGenError : Swift.RawRepresentable {}

@@ -1,0 +1,32 @@
+//
+//  FitCloudKitDemo-Prefix.pch
+//  FitCloudKitDemo
+//
+//  Created by pcjbird on 2019/6/12.
+//  Copyright © 2019 HetangSmart. All rights reserved.
+//
+
+#ifndef FitCloudKitDemo_Prefix_pch
+#define FitCloudKitDemo_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//APP 信息
+#define APP_NAME ([[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"] ? [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"]:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
+#define APP_VERSION ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
+#define APP_BUILD ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"])
+#define APP_CHANNELID ([[[NSBundle mainBundle] infoDictionary] integerValueForKey:@"CHANNELID" default:0])
+#define APP_BUNDLEIDENTIFIER ([[NSBundle mainBundle] bundleIdentifier])
+//日志
+#define APP_LOG_STRING(format, ...) [NSString stringWithFormat:@"[🏃‍♀️%@] %s (line %d) " format, APP_NAME, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__]
+
+#define RGB(r, g, b)                        [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:1.f]
+
+#import <QuickTraceiOSLogger/QuickTraceiOSLogger.h>
+#import <FitCloudKit/FitCloudKit.h>
+#import <YYCategories/YYCategories.h>
+#import <Toast/Toast.h>
+#import "LocalizedLabel.h"
+#import "LocalizedButton.h"
+
+#endif /* FitCloudKitDemo_Prefix_pch */

@@ -1,0 +1,6 @@
+framework module FitCloudGPSAccelerate {
+  umbrella header "FitCloudGPSAccelerate.h"
+  export *
+
+  module * { export * }
+}

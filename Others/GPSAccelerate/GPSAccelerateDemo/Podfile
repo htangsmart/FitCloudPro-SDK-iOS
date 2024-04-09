@@ -1,0 +1,58 @@
+# Uncomment this line to define a global platform for your project
+
+# 忽略引入库的所有警告（强迫症者的福音啊）
+inhibit_all_warnings!
+
+#install! 'cocoapods', generate_multiple_pod_projects: true
+
+def commonPods
+  pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+  pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+  pod 'FitCloudWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+  pod 'FitCloudNWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+end
+
+
+target 'FitCloudGPSAccelerateDemo' do
+  platform :ios, '10.0'
+  workspace 'FitCloudGPSAccelerateDemo.xcworkspace'
+  project 'FitCloudGPSAccelerateDemo.xcodeproj'
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
+  # Pods for FitCloudGPSAccelerateDemo
+  
+  commonPods
+  
+  pod 'FitCloudGPSAccelerate',:path => '../'
+  pod 'QuickTraceiOSLogger'
+  pod 'YYCategories'
+  pod 'Toast'
+
+end
+
+post_install do |installer|
+  
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 10.0
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
+      end
+    end
+    
+    if target.respond_to?(:product_type) and target.product_type == "com.apple.product-type.bundle"
+      target.build_configurations.each do |config|
+        config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+      end
+    end
+    
+    compatibilityPhase = target.build_phases.find { |ph| ph.display_name == 'Copy generated compatibility header' }
+    if compatibilityPhase
+        build_phase = target.new_shell_script_build_phase('Copy Swift Header')
+        build_phase.shell_script = <<-SH.strip_heredoc
+            COMPATIBILITY_HEADER_PATH="${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h"
+            ditto "${COMPATIBILITY_HEADER_PATH}" "${PODS_ROOT}/Headers/Public/${PRODUCT_MODULE_NAME}/${PRODUCT_MODULE_NAME}-Swift.h"
+        SH
+    end
+    
+  end
+end

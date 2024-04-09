@@ -1,0 +1,4 @@
+framework module FitCloudOTAGenKit {
+  header "FitCloudOTAGenKit-Swift.h"
+  requires objc
+}
