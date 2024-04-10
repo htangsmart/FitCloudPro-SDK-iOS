@@ -8,6 +8,10 @@
 		<data>
 		4AysiTz7e5JDys6KG4yVqoxs95s=
 		</data>
+		<key>AliIot.bundle/ble_analyze.js</key>
+		<data>
+		joLEbO+tcbmwDg2/3h6BPHV2DDU=
+		</data>
 		<key>AliIot.bundle/index.html</key>
 		<data>
 		PTu90w6ZtuJJMKW8T6neqgIG1rY=
@@ -80,6 +84,13 @@
 			<key>hash2</key>
 			<data>
 			QvDdR372jWi83HUqJDcMzk3AFNLSx9chD8O7A+uo8Dc=
+			</data>
+		</dict>
+		<key>AliIot.bundle/ble_analyze.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dmMh5jx9nJTCARbYthbHTDwMGqjozzn5TpJKOzpTbwY=
 			</data>
 		</dict>
 		<key>AliIot.bundle/index.html</key>
