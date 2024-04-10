@@ -35,7 +35,7 @@
 @property(nonatomic, strong)NSNumber *RSSI;
 
 /**
- * @brief mac地址
+ * @brief mac地址，如果厂商自定义了广播数据，这里返回nil
  */
 @property(nonatomic, strong, readonly) NSString* macAddr;
 
@@ -48,6 +48,9 @@
  * @brief 是否允许同时连接通话蓝牙
  */
 @property(nonatomic, readonly) BOOL allowConnectWithBT;
+
+/// 厂商是否自定义了广播数据
+@property(nonatomic, readonly) BOOL isCustomizedAdvData;
 
 
 /**
