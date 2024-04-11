@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-04-10  Version:1.2.9-beta.91 Build:202404100001
+//     pcjbird    2024-04-11  Version:1.2.9-beta.92 Build:202404110001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -37,7 +37,15 @@
 //                            25.新增设备能力查询支持,@see allowQueryDeviceCapacities, allConfig.deviceCapacities
 //                            26.新增获取运动训练展示数据项信息,@see withDisplayConfigInWorkoutData
 //                            27.FitCloudOption新增是否自动同步系统语言选项,@see autoSyncSystemLang
-//                            28.新OTA升级支持
+//                            28.新OTA升级支持, @see withNewOTA
+//                            29.进入DFU模式新增返回错误类型 `FITCLOUDKITERROR_DFUNOTALLOWFORPOWERSAVINGMODE`
+//                            30.新增健康定时监测独立开关设置和查询功能, @see allowSingleHTMSettings
+//                            31.新增静态心率/动态心率过低报警功能, @see withHRLowAlarm
+//                            32.天气设置新增紫外线指数设置功能
+//                            33.新增猎声定制天气类型 @see WEATHERTYPE_CLOUDYINEVENING/WEATHERTYPE_CLEARINEVENING/WEATHERTYPE_EVENINGSHOWERS
+//                            34.设备能力类型新增设备支持的天气种类数量
+//                            35.新增设置和查询运动极限心率，仅特定项目可用
+//                            36.新增猎声相关软件版本信息查询功能，仅该客户可用，版本信息数据由客户自行解析, @see FitCloudKit+Haylou.h
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -745,7 +753,22 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief 获取健康定时监测设置
  * @param block 结果回调
  */
-+(void)getHealthTimingMonitorSettingWithBlock:(FitCloudHealtTimingMonitorResultBlock _Nullable )block;
++(void)getHealthTimingMonitorSettingWithBlock:(FitCloudHealthTimingMonitorResultBlock _Nullable )block;
+
+#pragma mark 健康定时监测独立设置
+
+/// 健康定时监测独立设置
+/// - Parameters:
+///   - htmlSingleSettings: 健康定时监测独立设置信息，可以单个类型单独设置也可以多个类型一起设置
+///   - completion: 结果回调
++(void) setSingleHealthTimingMonitoring:(NSArray<FitCloudHTMSingleObject*>*) htmSingleSettings completion:(FitCloudResultBlock _Nullable )completion;
+
+#pragma mark 获取健康定时监测独立设置
+
+/// 获取健康定时监测独立设置
+/// - Parameters:
+///   - completion: 结果回调
++(void) getSingleHealthTimingMonitoringSettingsWithCompletion:(FitCloudHealthTimingMonitoringSingleSettingsResultBlock _Nullable)completion;
 
 #pragma mark 久坐提醒设置
 /**
@@ -1341,6 +1364,19 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: the electronic cards delete response
 +(void)deleteECardsWithIdArray:(NSArray<NSNumber*>*) idArray withBlock:(FitCloudResultBlock _Nullable)block;
 
+#pragma mark - 其他
+
+/// 设置运动极限心率(Set maximum exercise heart rate)
+/// - Parameters:
+///   - value: 运动极限心率(maximum exercise heart rate)
+///   - completion: the completion callback
++(void)setMaxExerciseHeartRate:(NSInteger)value withCompletion:(FitCloudResultBlock _Nullable)completion;
+
+/// 获取运动极限心率(Query maximum exercise heart rate)
+/// - Parameters:
+///   - completion: the completion callback
++(void)queryMaxExerciseHeartRateWithCompletion:(void(^_Nullable)(BOOL success, NSInteger maxExerciseHeartRate, NSError*_Nullable error))completion;
+
 @end
 
 /**
@@ -1554,3 +1590,4 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+

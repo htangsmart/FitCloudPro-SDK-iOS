@@ -65,6 +65,7 @@
 #import <FitCloudKit/FitCloudMedal.h>
 #import <FitCloudKit/FitCloudPhotoAlbumParams.h>
 #import <FitCloudKit/FitCloudECard.h>
+#import <FitCloudKit/FitCloudHTMSingleObject.h>
 
 /**
  *@brief FitCloud调用结果回调
@@ -192,7 +193,15 @@ typedef void (^FitCloudBatteryInfoResultBlock)(BOOL succeed, FitCloudBatteryInfo
  *@param htmSetting 健康定时监测设置
  *@param error 错误信息
  */
-typedef void (^FitCloudHealtTimingMonitorResultBlock)(BOOL succeed, FitCloudHTMObject* htmSetting, NSError* error);
+typedef void (^FitCloudHealthTimingMonitorResultBlock)(BOOL succeed, FitCloudHTMObject* htmSetting, NSError* error);
+
+/**
+ *@brief FitCloud 获取健康定时监测独立设置调用结果回调
+ *@param succeed 是否成功
+ *@param htmSingleSettings 健康定时监测独立设置信息
+ *@param error 错误信息
+ */
+typedef void (^FitCloudHealthTimingMonitoringSingleSettingsResultBlock)(BOOL succeed, NSArray<FitCloudHTMSingleObject*>* htmSingleSettings, NSError* error);
 
 /**
  *@brief FitCloud 获取久坐提醒设置调用结果回调

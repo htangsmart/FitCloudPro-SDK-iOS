@@ -26,6 +26,9 @@ typedef NS_ENUM(Byte, WEATHERTYPE)
     WEATHERTYPE_SANDSTORM = 0x0b,               //沙尘暴、浮沉
     WEATHERTYPE_FOGORHAZE = 0x0c,               //雾、雾霾
     WEATHERTYPE_WINDY = 0x0d,                   //风、龙卷风、飓风
+    WEATHERTYPE_CLOUDYINEVENING = 0x0e,         //晚间多云
+    WEATHERTYPE_CLEARINEVENING = 0x0f,          //晚间晴朗
+    WEATHERTYPE_EVENINGSHOWERS = 0x10,          //晚间阵雨
     WEATHERTYPE_UNKNOWN = 0xff,                 //未知天气
 };
 
@@ -105,5 +108,8 @@ typedef NS_ENUM(Byte, WEATHERTYPE)
  * @brief 能见度，默认单位：公里
  */
 @property(nonatomic, assign) UInt8 vis;
+
+/// 紫外线等级
+@property(nonatomic, assign) UInt8 uvIndex;
 
 @end

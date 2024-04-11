@@ -10,6 +10,7 @@
 #import <FitCloudKit/FitCloudFirmwareVersionObject.h>
 #import <FitCloudKit/FitCloudMNDefines.h>
 #import <FitCloudKit/FitCloudHTMObject.h>
+#import <FitCloudKit/FitCloudHTMSingleObject.h>
 #import <FitCloudKit/FitCloudLSRObject.h>
 #import <FitCloudKit/FitCloudDRObject.h>
 #import <FitCloudKit/FitCloudBPRObject.h>
@@ -54,6 +55,11 @@
  * @brief 健康定时监测设置
  */
 @property(nonatomic, strong)FitCloudHTMObject* htmSetting;
+
+/**
+ * @brief 健康定时监测独立设置
+ */
+@property(nonatomic, strong)NSArray<FitCloudHTMSingleObject*>* htmSingleSettings;
 
 /**
  * @brief 久坐提醒设置

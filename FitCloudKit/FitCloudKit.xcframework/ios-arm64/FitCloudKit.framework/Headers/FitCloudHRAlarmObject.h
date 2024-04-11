@@ -23,6 +23,9 @@
  */
 @property(nonatomic, assign) UInt8 normalHRAlarmValue;
 
+/// 静态心率过低报警值， 仅当 withHRLowAlarm 标识位 为 YES 时有效
+@property(nonatomic, assign) UInt8 normalHRLowAlarmValue;
+
 /**
  * @brief 动态心率报警开关是否开启
  */
@@ -33,5 +36,7 @@
  */
 @property(nonatomic, assign) UInt8 sportsHRAlarmValue;
 
+/// 动态心率过低报警值， 仅当 withHRLowAlarm 标识位 为 YES 时有效
+@property(nonatomic, assign) UInt8 sportsHRLowAlarmValue;
 @end
 

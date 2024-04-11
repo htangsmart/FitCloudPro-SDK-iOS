@@ -328,4 +328,19 @@
 /// 运动训练数据是否包含应该展示的数据的配置信息
 @property(nonatomic, readonly) BOOL withDisplayConfigInWorkoutData;
 
+/// 是否支持独立定时健康监测设置
+@property(nonatomic, readonly) BOOL allowSingleHTMSettings;
+
+/// 是否支持心率过低报警
+@property(nonatomic, readonly) BOOL withHRLowAlarm;
+
+/// 是否支持不常用内容数据设置指令
+@property(nonatomic, readonly) BOOL withUncommonValueCommand;
+
+/// 是否支持新OTA
+@property(nonatomic, readonly) BOOL withNewOTA;
+
+/// 是否支持文心一言
+@property(nonatomic, readonly) BOOL withERNIEBot;
+
 @end

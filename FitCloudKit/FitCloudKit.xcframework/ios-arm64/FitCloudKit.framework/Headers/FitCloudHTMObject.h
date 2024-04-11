@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- * @brief 健康定时监测设置（Health Timing Monitor）
+ * @brief 健康定时监测设置（Health Timing Monitoring）
  */
 @interface FitCloudHTMObject : NSObject<NSCoding>
 
