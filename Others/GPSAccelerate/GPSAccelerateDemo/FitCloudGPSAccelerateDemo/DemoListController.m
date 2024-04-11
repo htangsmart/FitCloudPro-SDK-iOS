@@ -28,7 +28,10 @@
     {
         [self upgradeGPSFile];
     }
-    
+    else if(indexPath.row == 1)
+    {
+        [FitCloudGPSAccelerate requestCurrentLocationAndNotifyTheWatchDevice];
+    }
 }
 
 -(void) upgradeGPSFile
