@@ -665,6 +665,14 @@ typedef void (^FitCloudNewOTACancelCompletionBlock)(BOOL success, NSError* error
  */
 -(void) OnAlexaVoiceDecodedWithData:(NSData*)voiceData;
 
+/// 文心一言语音传输开始
+-(void) OnERNIEBotVoiceBegin;
+
+/// 文心一言语音传输结束，并返回请求的语音数据，该数据已经经过解码
+/// - Parameters:
+///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
+-(void) OnERNIEBotVoiceStopWithDecodedVoiceData:(NSData*)voiceData;
+
 /**
  *@brief 通知App开始发起支付宝Iot认证
  */

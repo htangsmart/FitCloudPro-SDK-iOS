@@ -1111,6 +1111,17 @@ typedef NS_ENUM(Byte, ALEXARESULTTYPE)
     ALEXARESULTTYPE_DIRECTIVE = 0x01,                   //指令
 };
 
+#pragma mark - 文心一言
+
+/// 文心一言结果类型
+typedef NS_ENUM(NSInteger, ERNIEBOTRESULTTYPE)
+{
+    /// APP自行生成的错误文案
+    ERNIEBOTRESULTTYPE_ERRORTEXT = 0x00,
+    /// 文心一言大模型生成的文案
+    ERNIEBOTRESULTTYPE_LLMTEXT = 0x01,
+};
+
 #pragma mark - 表盘相关
 
 /**

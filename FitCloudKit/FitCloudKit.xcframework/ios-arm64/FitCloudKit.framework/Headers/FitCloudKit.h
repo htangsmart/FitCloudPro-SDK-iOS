@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-04-11  Version:1.2.9-beta.92 Build:202404110001
+//     pcjbird    2024-04-17  Version:1.2.9-beta.94 Build:202404170001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -46,6 +46,7 @@
 //                            34.设备能力类型新增设备支持的天气种类数量
 //                            35.新增设置和查询运动极限心率，仅特定项目可用
 //                            36.新增猎声相关软件版本信息查询功能，仅该客户可用，版本信息数据由客户自行解析, @see FitCloudKit+Haylou.h
+//                            37.新增文心一言支持, @see withERNIEBot
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1551,6 +1552,21 @@ NS_ASSUME_NONNULL_BEGIN
  * @param block 结果回调
  */
 +(void)sendAlexaResult:(NSString*)text with:(ALEXAINVOKEERROR)error withBlock:(FitCloudResultBlock _Nullable )block;
+
+@end
+
+/// 文心一言
+@interface FitCloudKit (ERNIEBot)
+
+#pragma mark 发送文心一言结果
+
+/// 发送文心一言结果
+/// - Parameters:
+///   - text: 结果
+///   - isEnd: 是否结束
+///   - resultType: 文案类型
+///   - completion: 结果回调
++(void) sendERNIEBotResult:(NSString*)text isEnd:(BOOL)isEnd resultType:(ERNIEBOTRESULTTYPE)resultType completion:(FitCloudResultBlock _Nullable) completion;
 
 @end
 
