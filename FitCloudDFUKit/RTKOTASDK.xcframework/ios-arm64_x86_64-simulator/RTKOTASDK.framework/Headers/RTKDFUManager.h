@@ -37,6 +37,12 @@ NS_ASSUME_NONNULL_BEGIN
                                           withDeviceInfo:(RTKOTADeviceInfo *)deviceInfo
                                        completionHandler:(void (^)(BOOL success, NSError *__nullable error, RTKConnectionUponGATT *otaModeDevice))handler;
 
+/// - Parameter timeOut: Customize the interval of time out.
+- (void)scanForOTAModeDeviceConnectionOfDeviceConnection:(RTKConnectionUponGATT *)connection
+                                          withDeviceInfo:(RTKOTADeviceInfo *)deviceInfo
+                                                 timeOut:(NSTimeInterval)timeOut
+                                       completionHandler:(void (^)(BOOL success, NSError *__nullable error, RTKConnectionUponGATT *otaModeDevice))handler;
+
 
 /// Scan for companion device of the given device.
 ///

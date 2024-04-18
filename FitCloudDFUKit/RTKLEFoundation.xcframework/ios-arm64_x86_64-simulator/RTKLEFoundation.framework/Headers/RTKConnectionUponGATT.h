@@ -84,6 +84,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// When a new RSSI value is measured, this connection calls ``RTKConnectionUponGATTDelegate/GATTConnection:didReadPeripheralRSSI:error:`` on its delegate object.
 - (void)readPeripheralRSSI;
 
+/// Communicate with the device to get the state of its battery level.
+///
+/// - Parameter handler: The block to be invoked when the task completes.
+- (void)getBatteryLevelWithCompletionHandler:(nullable void(^)(BOOL success, NSError *error, RTKBatteryLevel level))handler;
+
 @end
 
 

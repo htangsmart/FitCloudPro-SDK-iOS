@@ -19,6 +19,13 @@
 /// By convention, when a block of this type get called, the `success` argument with `YES` set and the `error` with `nil` set indicates that task succeed. If the task fails, the `success` argument is set to `NO`, and the `error` argument is probabaly set to a valid error object.
 typedef void(^RTKLECompletionBlock)(BOOL success, NSError *_Nullable error);
 
+/// The battery level state of a device
+///
+/// Valid value ranges from 0 to 100; 0 represents a battery that is fully discharged, 100 represents a battery that is fully charged. The `RTKBatteryLevelInvalid` valued as `0xFFFF`  indicates that the battery level is not available.
+typedef uint16_t RTKBatteryLevel;
+
+/// Represents an invalid battery level.
+#define RTKBatteryLevelInvalid 0xFFFF
 
 #pragma pack(push, 1)
 

@@ -46,7 +46,7 @@ typedef NS_ENUM(NSUInteger, RTKErrorCode) {
     RTKErrorAttemptTimeout = RTKErrorTimeout,             ///< Attempt failed due to time out.
     
     RTKErrorInvalidOperation,                       ///< The operation can not be performed.
-    RTKErrorTransportBusy,                          ///< The transport is in some process.
+    RTKErrorTransportBusy,                          ///< The transport is busy with some task..
     
     RTKErrorDeviceConnectionFail,               ///< Connect to device failed.
     RTKErrorDeviceValidation,                   ///< Validate device failed.
@@ -70,6 +70,10 @@ typedef NS_ENUM(NSUInteger, RTKErrorCode) {
     RTKErrorAccessorySessionNotOpen,      ///< Communication session with iAP accessory is not open.
     RTKErrorOperationNotSupport,
     RTKErrorAccessoryDisconnected,          ///< Th accessory is disconnected unexpected.
+    
+    RTKErrorGATTAttributeLack,          ///< Operation fails due to required GATT attribute not exist
+    
+    RTKErrorTransportBecomeUnavailable,     ///< The transport is now unable to transfer data.
 } ;
 
 

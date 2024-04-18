@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/RTKBTGeneralDefines.h</key>
 		<data>
-		P9wxDMp0UA0+IIHUF3khIcZ8DvU=
+		FIqLZtlpJIOSsPCS58NVv0iMoJU=
 		</data>
 		<key>Headers/RTKBTLogMacros.h</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Headers/RTKConnectionUponGATT.h</key>
 		<data>
-		AcZSywprJSPpvGIQ1ylN9CDRt2o=
+		Ht/Rj9ajzc4OWZ/C6OpZOjfYBNc=
 		</data>
 		<key>Headers/RTKConnectionUponiAP.h</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Headers/RTKError.h</key>
 		<data>
-		8+7VYcQBc2JU/7pVDUqfjkAj3J4=
+		i65ynk8rqcp/i/hTAIIC3+4VnpA=
 		</data>
 		<key>Headers/RTKLEFoundation.h</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yHtVZNSSGHMcDAgjNxGoMQQY6yo=
+		t81JxAytcX1tsuU9ZTu518ScgkY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -254,11 +254,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			P9wxDMp0UA0+IIHUF3khIcZ8DvU=
+			FIqLZtlpJIOSsPCS58NVv0iMoJU=
 			</data>
 			<key>hash2</key>
 			<data>
-			cqn2o4Oo9eTuV1gmYuQHD79fEmnw5G6xo5CRPNFGBtw=
+			FSFZGAGAGPEdt+MrYi9qt43Rl6TOzO2vFSn71K22iD4=
 			</data>
 		</dict>
 		<key>Headers/RTKBTLogMacros.h</key>
@@ -342,11 +342,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AcZSywprJSPpvGIQ1ylN9CDRt2o=
+			Ht/Rj9ajzc4OWZ/C6OpZOjfYBNc=
 			</data>
 			<key>hash2</key>
 			<data>
-			kT1bdgYnd0W48IKxiDX690tpDe5qul4AqtVwrynJ7Vo=
+			yLjuNlTAhmBH+iTZd/3KetTbNypsFCb2fFpkKzl+Edw=
 			</data>
 		</dict>
 		<key>Headers/RTKConnectionUponiAP.h</key>
@@ -364,11 +364,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8+7VYcQBc2JU/7pVDUqfjkAj3J4=
+			i65ynk8rqcp/i/hTAIIC3+4VnpA=
 			</data>
 			<key>hash2</key>
 			<data>
-			YO5y8lQV3fwStfeH34Jv+Ub97xW6cwDmsiW6rCbMjm8=
+			HDdsZCeaI5eRizWM51eH0j9v30SYqStPkytkiA2cspk=
 			</data>
 		</dict>
 		<key>Headers/RTKLEFoundation.h</key>
