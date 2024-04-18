@@ -18,7 +18,15 @@
 /// Query Haylou version information data
 /// - Parameters:
 ///   - completion: the completion callback
-+(void) queryHaylouVersionDataWithCompletion:(void(^_Nullable)(BOOL success, NSData*_Nullable versionData, NSError* _Nullable error))completion;
++(void) queryHaylouVersionDataWithCompletion:(void(^_Nullable)(BOOL success, NSData* _Nullable versionData, NSError* _Nullable error))completion;
+
+
+#pragma mark - Query Haylou Watch Serial Number
+
+/// Query Haylou Watch Serial Number
+/// - Parameters:
+///   - completion: the completion callback
++(void) queryHalylouWatchSerialNumberWithCompletion:(void(^_Nullable)(BOOL success, NSString* _Nullable sn, NSError* _Nullable error)) completion;
 
 @end
 

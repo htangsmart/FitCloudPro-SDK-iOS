@@ -608,7 +608,7 @@ typedef void (^FitCloudNewOTACancelCompletionBlock)(BOOL success, NSError* error
 -(void)OnExitCamera;
 
 /**
- *@brief 唤醒APP相机功能，该功能有缺陷，慎用
+ *@brief 唤醒APP相机功能
  */
 -(void)OnWakeUpCamera;
 

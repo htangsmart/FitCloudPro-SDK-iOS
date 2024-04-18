@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-04-17  Version:1.2.9-beta.94 Build:202404170001
+//     pcjbird    2024-04-18  Version:1.2.9-beta.95 Build:202404180001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -47,6 +47,7 @@
 //                            35.新增设置和查询运动极限心率，仅特定项目可用
 //                            36.新增猎声相关软件版本信息查询功能，仅该客户可用，版本信息数据由客户自行解析, @see FitCloudKit+Haylou.h
 //                            37.新增文心一言支持, @see withERNIEBot
+//                            38.新增猎声手表SN信息查询功能，仅该客户可用, @see FitCloudKit+Haylou.h
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
