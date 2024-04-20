@@ -30,6 +30,9 @@
  */
 @property (nonatomic, readonly) UInt32 caloryGoal;
 
+/// 运动时长目标，单位：分钟
+@property (nonatomic, readonly) UInt16 durationGoal;
+
 /**
  * @brief 时间戳
  */

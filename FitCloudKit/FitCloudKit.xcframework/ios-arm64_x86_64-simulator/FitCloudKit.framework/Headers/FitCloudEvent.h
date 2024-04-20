@@ -200,4 +200,8 @@ extern NSString *const FITCLOUDEVENT_WATCHFACE_TOGGLED_NOTIFY;
 ///  timestamp 类型 NSDate
 ///  hrValue 类型 NSInteger
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_HEARTRATE_MEASURE_RESULT_NOTIFY;
+
+/// 手表端主动通知停止查找手表
+extern NSString *const FITCLOUDEVENT_WATCHSIDE_PERFORM_STOP_FIND_WATCH_ACTION_NOTIFY;
+
 #endif /* FitCloudEvent_h */

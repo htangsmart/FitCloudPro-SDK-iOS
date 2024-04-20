@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudFirmwareVersionObject.h>
-#import <FitCloudKit/FitCloudMNDefines.h>
+#import <FitCloudKit/FitCloudKitDefines.h>
 #import <FitCloudKit/FitCloudHTMObject.h>
 #import <FitCloudKit/FitCloudHTMSingleObject.h>
 #import <FitCloudKit/FitCloudLSRObject.h>

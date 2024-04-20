@@ -12,7 +12,6 @@
 #import <FitCloudKit/FitCloudKitDefines.h>
 #import <FitCloudKit/FitCloudAlarmObject.h>
 #import <FitCloudKit/FitCloudFirmwareVersionObject.h>
-#import <FitCloudKit/FitCloudMNDefines.h>
 #import <FitCloudKit/FitCloudBatteryInfoObject.h>
 #import <FitCloudKit/FitCloudHTMObject.h>
 #import <FitCloudKit/FitCloudLSRObject.h>
@@ -542,6 +541,13 @@ typedef void (^FitCloudNewOTACompletionBlock)(BOOL success, CGFloat avgSpeed, NS
 ///   - success: whether cancel success
 ///   - error: error information
 typedef void (^FitCloudNewOTACancelCompletionBlock)(BOOL success, NSError* error);
+
+/// The smart watch language query completion block
+/// - Parameters:
+///   - success: whether query success
+///   - lang: the smart watch language
+///   - error: error information
+typedef void (^FitCloudLanguageQueryCompletion)(BOOL success, FITCLOUDLANGUAGE lang, NSError* error);
 
 
 /**

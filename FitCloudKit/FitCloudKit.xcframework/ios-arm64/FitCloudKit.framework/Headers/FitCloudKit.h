@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-04-18  Version:1.2.9-beta.95 Build:202404180001
+//     pcjbird    2024-04-20  Version:1.2.9-beta.96 Build:202404200001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -48,6 +48,11 @@
 //                            36.新增猎声相关软件版本信息查询功能，仅该客户可用，版本信息数据由客户自行解析, @see FitCloudKit+Haylou.h
 //                            37.新增文心一言支持, @see withERNIEBot
 //                            38.新增猎声手表SN信息查询功能，仅该客户可用, @see FitCloudKit+Haylou.h
+//                            39.修改绑定API，新增随机码，没有随机码是填nil
+//                            40.绑定失败错误新增`手表需要恢复出厂设置才能绑定`
+//                            41.新增查询手表当前语言设置功能
+//                            42.新增手表端执行了停止查找手表操作通知, @see FITCLOUDEVENT_WATCHSIDE_PERFORM_STOP_FIND_WATCH_ACTION_NOTIFY
+//                            43.修改停止查找手表API名称，新增停止查找手表功能
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -997,6 +1002,13 @@ NS_ASSUME_NONNULL_BEGIN
 */
 +(void)setSmartWatchLanguage:(FITCLOUDLANGUAGE)lang completion:(FitCloudResultBlock _Nullable )block;
 
+#pragma mark 查询手表语言设置
+
+/// 查询手表语言
+/// - Parameters:
+///   - completion: 查询结果回调
++(void)querySmartWatchLanguageWithCompletion:(FitCloudLanguageQueryCompletion _Nullable )completion;
+
 #pragma mark 获取手表支持的游戏类型
 /**
  * @brief 获取手表支持的游戏类型
@@ -1111,9 +1123,16 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark 查找手表 (查找成功则手表会震动或发出提醒声)
 /**
  * @brief 查找手表 (查找成功则手表会震动或发出提醒声)
- * @param block 结果回调
+ * @param comletion 结果回调
  */
-+(void)findBraceletWithBlock:(FitCloudResultBlock _Nullable )block;
++(void)findWatchWithCompletion:(FitCloudResultBlock _Nullable )comletion;
+
+#pragma mark 停止查找手表
+/**
+ * @brief 停止查找手表
+ * @param comletion 结果回调
+ */
++(void)stopFindWatchWithCompletion:(FitCloudResultBlock _Nullable )comletion;
 
 #pragma mark 一键恢复出厂设置
 /**
@@ -1404,10 +1423,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * @brief 绑定用户
  * @param userId 用户Id
+ * @param randomCode 随机码，如果没有，则填 nil，仅部分项目有该功能
  * @param bAbort 如果已经存在绑定用户是否终止，当为FALSE时，自动先解绑并绑定新的用户
  * @param block 结果回调
  */
-+(void)bindUserObject:(NSString*)userId abortIfExist:(BOOL)bAbort block:(FitCloudResultBlock _Nullable )block;
++(void)bindUserObject:(NSString*)userId randomCode:(NSString* _Nullable)randomCode abortIfExist:(BOOL)bAbort block:(FitCloudResultBlock _Nullable )block;
 
 #pragma mark 最后绑定时间
 /**

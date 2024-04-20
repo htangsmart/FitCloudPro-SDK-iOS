@@ -343,4 +343,5 @@
 /// 是否支持文心一言
 @property(nonatomic, readonly) BOOL withERNIEBot;
 
+
 @end
