@@ -112,4 +112,7 @@ typedef NS_ENUM(Byte, WEATHERTYPE)
 /// 紫外线等级
 @property(nonatomic, assign) UInt8 uvIndex;
 
+/// 能见度，最大30000米，单位：米
+@property(nonatomic, assign) UInt16 visibility;
+
 @end

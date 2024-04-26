@@ -21,13 +21,13 @@ typedef NS_ENUM(Byte, MANUALSINGLESYNCKEY)
 @interface FitCloudKit (SingleDataSync)
 
 #pragma mark 手动同步单项历史运动健康数据
-/**
- * @brief 手动同步历史运动健康数据
- * @param option 选项，默认 FITCLOUDDATASYNCOPTION_LEGACY
- * @param syncKey 同步Key
- * @param progress 进度回调
- * @param block 结果回调
- */
+
+/// 手动同步历史运动健康数据
+/// - Parameters:
+///   - option: 选项，默认 FITCLOUDDATASYNCOPTION_LEGACY
+///   - syncKey: 同步Key
+///   - progress: 进度回调
+///   - block: 结果回调
 +(void)manualSingleSyncDataWithOption:(FITCLOUDDATASYNCOPTION) option dataKey:(MANUALSINGLESYNCKEY)syncKey progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block;
 
 @end

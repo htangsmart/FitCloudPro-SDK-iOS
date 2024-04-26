@@ -343,5 +343,19 @@
 /// 是否支持文心一言
 @property(nonatomic, readonly) BOOL withERNIEBot;
 
+/// 是否支持个性化提醒(高级提醒)
+@property(nonatomic, readonly) BOOL withPersonalizedReminder;
+
+/// 是否支持查询设备当前语言设置
+@property(nonatomic, readonly) BOOL allowQueryDeviceLanguage;
+
+/// 是否支持紧急联系人功能
+@property(nonatomic, readonly) BOOL withEmergencyContact;
+
+/// 计步数据item是否支持运动时长
+@property(nonatomic, readonly) BOOL shouldStepItemWithDuration;
+
+/// 是否支持静息心率
+@property(nonatomic, readonly) BOOL withRestingHR;
 
 @end

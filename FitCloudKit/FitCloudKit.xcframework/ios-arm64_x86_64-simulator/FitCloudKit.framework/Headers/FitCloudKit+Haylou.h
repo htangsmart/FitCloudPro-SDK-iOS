@@ -13,12 +13,12 @@
 
 @interface FitCloudKit (Haylou)
 
-#pragma mark - Query Haylou version information data
+#pragma mark - Query Haylou version information
 
-/// Query Haylou version information data
+/// Query Haylou version information
 /// - Parameters:
 ///   - completion: the completion callback
-+(void) queryHaylouVersionDataWithCompletion:(void(^_Nullable)(BOOL success, NSData* _Nullable versionData, NSError* _Nullable error))completion;
++(void) queryHaylouVersionWithCompletion:(void(^_Nullable)(BOOL success, NSString* _Nullable version, NSError* _Nullable error))completion;
 
 
 #pragma mark - Query Haylou Watch Serial Number

@@ -79,6 +79,10 @@
  */
 @property(nonatomic, assign) UInt16 calory;
 
+/// 运动时长，单位：分钟
+/// 该字段仅部分设备有效, @see shouldStepItemWithDuration
+@property(nonatomic, assign) UInt16 duration;
+
 @end
 
 
@@ -533,39 +537,37 @@ typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM)
 
 #pragma mark - 每日运动健康数据
 
-/**
- * @brief 每日运动健康数据
- */
+/// 每日运动健康数据
 @interface FitCloudDailyHealthAndSportsDataObject : NSObject<NSCoding>
 
-/**
- * @brief 累计步数
- */
+/// 累计步数
 @property(nonatomic, assign) NSUInteger steps;
 
-/**
- * @brief 距离(单位：米)
- */
+/// 距离(单位：米)
 @property(nonatomic, assign) NSUInteger distance;
 
-/**
- * @brief 卡路里
- */
-@property(nonatomic, assign) NSUInteger calory;
+/// 卡路里(单位：小卡)
+@property(nonatomic, assign) NSUInteger calorie;
 
-/**
- * @brief 深度睡眠时间(单位：分钟)
- */
-@property(nonatomic, assign) NSUInteger deepSleepMinutes;
+/// 深度睡眠时间(单位：分钟)
+@property(nonatomic, assign) NSUInteger deepSleepInMinutes;
 
-/**
- * @brief 浅度睡眠时间(单位：分钟)
- */
-@property(nonatomic, assign) NSUInteger shallowSleepMinutes;
+/// 浅度睡眠时间(单位：分钟)
+@property(nonatomic, assign) NSUInteger lightSleepInMinutes;
 
-/**
- * @brief 平均心率(次/分钟)
- */
-@property(nonatomic, assign) NSUInteger averageHeartRate;
+/// 平均心率(次/分钟)
+@property(nonatomic, assign) NSUInteger avgBPM;
+
+/// 尚未保存的步数
+@property(nonatomic, assign) UInt16 bufSteps;
+
+/// 尚未保存的距离(单位：米)
+@property(nonatomic, assign) UInt16 bufDistance;
+
+/// 尚未保存的卡路里数据(单位：小卡)
+@property(nonatomic, assign) UInt16 bufCalorie;
+
+/// 运动时长(单位：分钟)
+@property(nonatomic, assign) UInt16 durationInMinutes;
 
 @end

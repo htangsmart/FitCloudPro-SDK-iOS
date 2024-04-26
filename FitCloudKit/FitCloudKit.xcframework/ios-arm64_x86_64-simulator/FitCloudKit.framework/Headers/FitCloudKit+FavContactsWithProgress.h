@@ -13,12 +13,12 @@
 @interface FitCloudKit (FavContactsWithProgress)
 
 #pragma mark 设置常用联系人
-/**
-* @brief 设置常用联系人（将手机上的常用联系人列表同步到手表）
-* @param contacts 常用联系人列表
-* @param progress 进度回调
-* @param block 结果回调
-*/
+
+/// 设置常用联系人（将手机上的常用联系人列表同步到手表）
+/// - Parameters:
+///   - contacts: 常用联系人列表
+///   - progress: 进度回调
+///   - block: 结果回调
 +(void) setFavContacts:(NSArray<FitCloudContactObject*>*_Nullable)contacts progress:(FitCloudProgressBlock _Nullable ) progress block:(FitCloudResultBlock _Nullable )block;
 
 @end
