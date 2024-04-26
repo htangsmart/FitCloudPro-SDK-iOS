@@ -7,6 +7,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger,AliIotConnectState){
+    AliIotConnectState_disConnect = 0,//未连接
+    AliIotConnectState_didConnect = 1,//蓝牙已连接，未初始化
+    AliIotConnectState_didConnectAndfinishInit = 2//已连接，已初始化
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol AliIotSDKProtocol <NSObject>
@@ -94,5 +100,6 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - page: 页码
 ///   - pageSize: 页大小
 - (void)getTrajectoryListView:(NSInteger)page pageSize:(NSInteger)pageSize;
+
 @end
 NS_ASSUME_NONNULL_END
