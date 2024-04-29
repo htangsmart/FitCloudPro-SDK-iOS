@@ -10,15 +10,15 @@
 		</data>
 		<key>Headers/FCWKErrorCode.h</key>
 		<data>
-		KaiOtdstA9uvnNwJY7yevUwQX+U=
+		3jSrkvxMJ4UsBev2/Co/uoWWsSk=
 		</data>
 		<key>Headers/FitCloudWFKit.h</key>
 		<data>
-		X1qHZTGp4u97Jh8sADTMLvLXMwA=
+		wevOL6jcn0w3/D3h3woPMOmuPHc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KixjlI+GV+X565ltMbvXcilaxQA=
+		R1/2jh+fQNkQrBG2l7OzdXO9Yx4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -42,22 +42,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KaiOtdstA9uvnNwJY7yevUwQX+U=
+			3jSrkvxMJ4UsBev2/Co/uoWWsSk=
 			</data>
 			<key>hash2</key>
 			<data>
-			CSwWpLe7BGkzfwhaqSktRW24mQwCg3lB4u9nYnMRuQ4=
+			vExe84ohzb1AW65XIo0MAed8tSw1Gf8sGtsb2LcsLf4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudWFKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			X1qHZTGp4u97Jh8sADTMLvLXMwA=
+			wevOL6jcn0w3/D3h3woPMOmuPHc=
 			</data>
 			<key>hash2</key>
 			<data>
-			k3iB+rCfiO6Awk7Qy9XUBcFpqGj9eufZg5qHUR/dTmU=
+			6s4btHmoVt+mrieDcOK4dNPS1WXgPWMdv2piD3tu+6c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

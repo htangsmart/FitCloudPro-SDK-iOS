@@ -29,6 +29,9 @@ typedef NS_ENUM(NSInteger, FCWKERRORCODE)
     FCWKERRORCODE_BADWATCHFACENO = 3003,                         //非法的表盘编号
     FCWKERRORCODE_BADTEMPLATEBIN = 3004,                         //表盘模版bin文件不正确
     FCWKERRORCODE_BADPHOTOCREATEPARAMETERS = 3005,               //非法的手表照片推送文件生成参数
+    FCWKERRORCODE_BADFILEHANDLE = 4001,                          //非法的文件句柄
+    FCWKERRORCODE_SEEKFILEOFFSETEXCEPTION = 4002,                //查找文件偏移量异常
+    FCWKERRORCODE_BADFILEOFFSET = 4003,                          //非法的文件偏移量
 };
 
 #define FCWKERRORDOMAIN @"FCWKERRORDOMAIN"
