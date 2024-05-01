@@ -8,7 +8,7 @@
 //  框架名称:FitCloudWFKit.framework
 //  框架功能:iOS framework help you creating watchface with fitcloud smart watch easily. FitCloud 智能手表表盘创建辅助框架，旨在帮助您轻松创建属于您自己的表盘文件。
 //  修改记录:
-//     pcjbird    2024-04-29 Version:1.1.7-beta.4 Build:202404290001
+//     pcjbird    2024-05-01 Version:1.1.7-beta.5 Build:20240501001
 //                            1.SDK健壮性优化
 //                            2.新增创建手表照片推送文件功能
 //                            3.新增8773自定义表盘生成支持
@@ -194,6 +194,21 @@ typedef void(^FitCloudWatchPhotoCreateResultBlock)(BOOL success, NSString* _Null
  */
 @interface FitCloudWFKit : NSObject
 
+#pragma mark 版本信息
+
+/// SDK版本号
+/// - Returns:
+/// SDK 版本号
++(NSString*_Nonnull) sdkVersion;
+
+/// SDK Build 版本号
+/// - Returns:
+/// SDK Build 版本号
++(NSString*_Nonnull) sdkBuild;
+
+
+#pragma mark 根据模版Bin文件生成新的自定义表盘Bin文件
+
 /**
  * @brief 根据模版Bin文件生成新的自定义表盘Bin文件
  * @param templateBin 模版Bin文件路径
@@ -210,6 +225,8 @@ typedef void(^FitCloudWatchPhotoCreateResultBlock)(BOOL success, NSString* _Null
 +(void) createWithTemplateBin:(NSString*_Nonnull)templateBin isNextGUI:(BOOL)isNextGUI rewriteNextGUIWatchfaceNo:(NSNumber* _Nullable)nextGUIWatchfaceNo bkImage:(UIImage*_Nonnull)bkImage bkCornerRadius:(CGFloat)bkCornerRadius preview:(UIImage*_Nonnull)preview dtPosition:(FITCLOUDWATCHFACEDTPOSITION)dtPosition progress:(FitCloudWatchfaceCreatingProgress  _Nullable)progress logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging completion:(FitCloudWatchfaceCreateResultBlock _Nullable)completion;
 
 
+#pragma mark 根据模版Bin文件修改表盘的推送位置，生成新的表盘Bin文件
+
 /**
  * @brief 根据模版Bin文件修改表盘的推送位置，生成新的表盘Bin文件
  * @param pushIndex 推送索引，取值范围 1～8
@@ -218,6 +235,8 @@ typedef void(^FitCloudWatchPhotoCreateResultBlock)(BOOL success, NSString* _Null
  * @param completion 结果回调
 */
 +(void) modifyWatchfaceBinPushIndexTo:(NSInteger)pushIndex fromTemplateBin:(NSString*_Nonnull)templateBin logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging completion:(FitCloudWatchfacePushIndexModifyResultBlock _Nullable)completion;
+
+#pragma mark 根据模版Bin文件修改游戏皮肤的推送位置，生成新的游戏皮肤Bin文件
 
 /**
  * @brief 根据模版Bin文件修改游戏皮肤的推送位置，生成新的游戏皮肤Bin文件
@@ -228,6 +247,8 @@ typedef void(^FitCloudWatchPhotoCreateResultBlock)(BOOL success, NSString* _Null
 */
 +(void) modifyGameSkinBinPushIndexTo:(NSInteger)pushIndex fromTemplateBin:(NSString*_Nonnull)templateBin logging:(FitCloudGameSkinLoggingMessage _Nullable)logging completion:(FitCloudGameSkinPushIndexModifyResultBlock _Nullable)completion;
 
+#pragma mark 根据模版Bin文件修改手表运动的推送位置，生成新的手表运动Bin文件
+
 /**
  * @brief 根据模版Bin文件修改手表运动的推送位置，生成新的手表运动Bin文件
  * @param pushIndex 推送索引，取值范围 1～N
@@ -236,6 +257,8 @@ typedef void(^FitCloudWatchPhotoCreateResultBlock)(BOOL success, NSString* _Null
  * @param completion 结果回调
 */
 +(void) modifyWatchSportsBinPushIndexTo:(NSInteger)pushIndex fromTemplateBin:(NSString*_Nonnull)templateBin logging:(FitCloudWatchSportsLoggingMessage _Nullable)logging completion:(FitCloudWatchSportsBinPushIndexModifyResultBlock _Nullable)completion;
+
+#pragma mark 创建手表照片推送文件(bin)
 
 /// 创建手表照片推送文件(bin)
 /// - Parameters:
