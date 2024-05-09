@@ -560,6 +560,12 @@ typedef void (^FitCloudRestingHRQueryCompletion)(BOOL success, NSArray<FitCloudR
 ///   - error: error information
 typedef void (^FitCloudPersonalizedRemindersQueryCompletion)(BOOL success, NSArray<FitCloudPersonalizedReminderObject*>* reminderArray, NSError* error);
 
+/// FitCloud New OTA environment check result callback
+/// - Parameters:
+///   - succeed: whether new ota environment is available to upgrade
+///   - error: error information
+typedef void (^FitCloudNewOTAEnvironmentCheckCompletion)(BOOL succeed, NSError* error);
+
 /**
  *@brief FitCloudKit 回调协议
  */
