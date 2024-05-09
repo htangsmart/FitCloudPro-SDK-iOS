@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-05-09  Version:1.2.9-beta.100 Build:20240509001
+//     pcjbird    2024-05-10  Version:1.2.9-beta.101 Build:20240510001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -1632,7 +1632,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 尽量在后台线程调用该方法
 /// - Parameters:
 ///   - newOTAFilePath: 新OTA升级文件路径
-///   - startConfirmResult: 升级确认结果回调
+///   - startConfirmResult: 升级启动结果回调，即启动OTA升级是否成功
 ///   - progress: 传输进度回调
 ///   - completion: 结果回调
 +(void)sendNewOTA:(NSString*)newOTAFilePath startConfirmResult:(FitCloudNewOTAStartConfirmResultBlock _Nullable)startConfirmResult progress:(FitCloudNewOTAProgressBlock _Nullable)progress completion:(FitCloudNewOTACompletionBlock _Nullable)completion;
