@@ -93,21 +93,13 @@ typedef NS_ENUM(Byte, WEATHERTYPE)
 */
 @property(nonatomic, strong) NSArray<FitCloudWeatherForecast*>* forecast;
 
-/**
- * @brief 大气压强，默认单位：百帕
- */
+/// 大气压强，默认单位：百帕
 @property(nonatomic, assign) UInt32 pressure;
 
 
-/**
- * @brief 风力等级
- */
+/// 风力等级
 @property(nonatomic, assign) UInt8 windScale;
 
-/**
- * @brief 能见度，默认单位：公里
- */
-@property(nonatomic, assign) UInt8 vis;
 
 /// 紫外线等级
 @property(nonatomic, assign) UInt8 uvIndex;

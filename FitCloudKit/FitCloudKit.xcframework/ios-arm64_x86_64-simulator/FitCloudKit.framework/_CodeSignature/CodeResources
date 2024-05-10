@@ -150,7 +150,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		v57fyANI5NhxjpGNgewdUMVYBi0=
+		s/2dkPARc6HIRpPl1WMO7M7qQiI=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -270,7 +270,7 @@
 		</data>
 		<key>Headers/FitCloudWeatherObject.h</key>
 		<data>
-		YLTl+VBYt128swNrCwK9e95tb04=
+		3JUw6BQGRLrB9d97cNtSpaAWN0M=
 		</data>
 		<key>Headers/FitCloudWomenHealthSetting.h</key>
 		<data>
@@ -703,11 +703,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v57fyANI5NhxjpGNgewdUMVYBi0=
+			s/2dkPARc6HIRpPl1WMO7M7qQiI=
 			</data>
 			<key>hash2</key>
 			<data>
-			68KwgutYF4UHZ8UkfJ2bSsgeHRpNaZeiHoXIMXhl5F8=
+			Ox6xsxpC7XQ+GeLo/xcqDmv+eMd85zdeAqyxRI3/57I=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -1033,11 +1033,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YLTl+VBYt128swNrCwK9e95tb04=
+			3JUw6BQGRLrB9d97cNtSpaAWN0M=
 			</data>
 			<key>hash2</key>
 			<data>
-			kx56FhB6YY2gv/jAqldnJDqL0DCj25yWNoFYtGMePEE=
+			vm9nzhWligH2va2bexklM2ydXat16HZsY2G1PfAZCT8=
 			</data>
 		</dict>
 		<key>Headers/FitCloudWomenHealthSetting.h</key>
