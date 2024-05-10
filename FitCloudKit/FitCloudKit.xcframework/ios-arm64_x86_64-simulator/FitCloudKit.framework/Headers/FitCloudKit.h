@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-05-10  Version:1.2.9-beta.103 Build:20240510001
+//     pcjbird    2024-05-11  Version:1.2.9-beta.104 Build:20240511001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -417,6 +417,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 蓝牙外部设备是否初始化/准备完毕(是否可以执行与蓝牙外设的相关操作)
 +(BOOL) deviceReady;
 
+#pragma mark 手表准备连接后的准备工作是否已完成
+
+/// 手表准备连接后的准备工作是否已完成
++(BOOL) devicePrepareWorkFinished;
+
 #pragma mark 蓝牙外部设备是否初始化/准备完毕且当前处于空闲状态(是否可以执行与蓝牙外设的相关操作)
 
 /// 蓝牙外部设备是否初始化/准备完毕且当前处于空闲状态(是否可以执行与蓝牙外设的相关操作)
@@ -532,6 +537,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - block: 结果回调
 +(void)exitDFUModeWithBlock:(FitCloudExitDFUModeResultBlock _Nullable )block;
+
+#pragma mark 判断设备是否支持指定的常用功能
+
+/// 判断设备是否支持指定的常用功能
+/// - Parameters:
+///   - feature: 功能
+/// - Returns:
+/// 是否支持该功能
++(BOOL)isDeviceSupportFeature:(FITCLOUDDEVICEFEATURE)feature;
 
 @end
 

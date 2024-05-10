@@ -118,6 +118,84 @@ typedef NS_ENUM(NSInteger, FITCLOUDCHIPVENDOR)
     FITCLOUDCHIPVENDOR_NORDIC = 2,                 //Nordic
 };
 
+#pragma mark - the watch common features define
+
+/// the watch common features define
+typedef NS_ENUM(NSInteger, FITCLOUDDEVICEFEATURE)
+{
+    /// ANCS, display messages also on watch when iOS device received remote or local notifications
+    FITCLOUDDEVICEFEATURE_ANCS,
+    /// Shake the smart watch to control the iPhone for taking photograph
+    FITCLOUDDEVICEFEATURE_SHAKEFORPHOTOGRAPH,
+    /// Find the smart watch, the user can find the smart watch from the app side, the smart watch will vibrate when found
+    FITCLOUDDEVICEFEATURE_FINDWATCH,
+    /// Find iPhone, the user can find iPhone from the smart watch side, the iPhone will vibrate and play a reminder sound when found
+    FITCLOUDDEVICEFEATURE_FINDIPHONE,
+    /// Restore the smart watch to factory settings, the user can restore the smart watch to factory settings from the app side
+    FITCLOUDDEVICEFEATURE_RESTORETOFACTORYSETTINGS,
+    /// Reboot the smart watch device, the user can reboot the smart watch from the app side
+    FITCLOUDDEVICEFEATURE_REBOOTDEVICE,
+    /// Turn off, the user can turn of the smart watch from the app side
+    FITCLOUDDEVICEFEATURE_TURNOFF,
+    
+    /// Alarm clock
+    FITCLOUDDEVICEFEATURE_ALARMCLOCK,
+    /// Schedules, something like alarm clock but with rich schedule types
+    FITCLOUDDEVICEFEATURE_SCHEDULES,
+    /// Habits
+    FITCLOUDDEVICEFEATURE_HABITS,
+    /// Medals
+    FITCLOUDDEVICEFEATURE_MEDALS,
+    /// Favorite contacts
+    FITCLOUDDEVICEFEATURE_FAVORITECONTACTS,
+    /// Emergency contacts
+    FITCLOUDDEVICEFEATURE_EMERGENCYCONTACTS,
+    
+    /// Weather, set the watch weather information via the app
+    FITCLOUDDEVICEFEATURE_WEATHER,
+    
+    /// Women health, help women to record information and events related to menstruation, pregnancy preparation, and pregnancy
+    FITCLOUDDEVICEFEATURE_WOMENHEALTH,
+    
+    
+    /// Upload watchface to the watch via OTA
+    FITCLOUDDEVICEFEATURE_WATCHFACEOTA,
+    /// DIY the watchface background, preview and the datetime position and then upload watchface to the watch via OTA
+    FITCLOUDDEVICEFEATURE_WATCHFACEDIYANDOTA,
+    /// Edit and change the watchface modulars via the app, for example, the watchface has 4 modulars which have their own styles, through this, you can change specific modular's style from one to another.
+    FITCLOUDDEVICEFEATURE_WACHFACEMODULAREDIT,
+    /// Upload workout module file to the watch via OTA, for example, you can upload `Outdoor Run` workout module to the watch, for usual, these workout module files are downloaded from the cloud server.
+    FITCLOUDDEVICEFEATURE_WORKOUTOTA,
+    /// Upload music to the watch via OTA
+    FITCLOUDDEVICEFEATURE_MUSICOTA,
+    /// Upload photos to the watch via OTA
+    FITCLOUDDEVICEFEATURE_PHOTOALBUMOTA,
+    /// Upload ebooks to the watch via OTA
+    FITCLOUDDEVICEFEATURE_EBOOKOTA,
+    /// Upload ga,es to the watch via OTA
+    FITCLOUDDEVICEFEATURE_GAMEOTA,
+    
+    /// The motion sensing game
+    FITCLOUDDEVICEFEATURE_MOTIONSENSINGGAME,
+
+    /// Turn-by-turn Navigation, the users plan their routes and navigate on the app, while also broadcasting navigation information on the smart watch side
+    FITCLOUDDEVICEFEATURE_TURNBYTURNNAVIGATION,
+    /// GPS accelerate, app can upload GPS epo files to the smart watch for accelerating the watch GPS satellite search speed
+    FITCLOUDDEVICEFEATURE_GPSACCELERATE,
+    
+
+    /// Cricket match, display live cricket match informations on the smart watch
+    FITCLOUDDEVICEFEATURE_CRICKETMATCH,
+    /// Ernie bot
+    FITCLOUDDEVICEFEATURE_ERNIEBOT,
+    
+    /// Wallet，the money receive qrcode
+    FITCLOUDDEVICEFEATURE_MONEYRECEIVEQRCODE,
+    /// The business card qrcode
+    FITCLOUDDEVICEFEATURE_BUSINESSCARDQRCODE,
+    /// The nucleic acid qrcode
+    FITCLOUDDEVICEFEATURE_NUCLEICACIDQRCODE,
+};
 
 #pragma mark -手表设备能力
 
