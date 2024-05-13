@@ -156,6 +156,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICEFEATURE)
     
     /// Women health, help women to record information and events related to menstruation, pregnancy preparation, and pregnancy
     FITCLOUDDEVICEFEATURE_WOMENHEALTH,
+    /// Lovers feature, interactions between lovers
+    FITCLOUDDEVICEFEATURE_LOVERS,
     
     
     /// Upload watchface to the watch via OTA
@@ -256,6 +258,8 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE)
     FITCLOUDHARDWARE_ALLOWSYNCWATCHMANUALMEASUREDATA = 1 << 22, //手表手动测量数据同步
     FITCLOUDHARDWARE_SHOULDDISABLESLEEPFEATURE = 1 << 23,       //禁用睡眠功能
     FITCLOUDHARDWARE_GPS = 1 << 24,                    //GPS模块
+    FITCLOUDHARDWARE_8773 = 1 << 26,                   //8773平台
+    FITCLOUDHARDWARE_568X = 1 << 27,                   //568X平台
 };
 
 #pragma mark - 手表显示

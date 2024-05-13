@@ -358,4 +358,10 @@
 /// 是否支持静息心率
 @property(nonatomic, readonly) BOOL withRestingHR;
 
+/// 是否支持情侣功能
+@property(nonatomic, readonly) BOOL withLoversFeature;
+
+/// 是否可以直接DFU，而不进入DFU模式
+@property(nonatomic, readonly) BOOL canDirectDFUWithoutEnterDFUMode;
+
 @end
