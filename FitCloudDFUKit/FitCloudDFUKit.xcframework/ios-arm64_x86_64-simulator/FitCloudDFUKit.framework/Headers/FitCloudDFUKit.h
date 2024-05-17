@@ -8,13 +8,14 @@
 //  框架名称:FitCloudDFUKit.framework
 //  框架功能:iOS framework for FitCloud Smart Bracelet Device Firmware Upgrade, which is responsible for the upgrade of bracelet firmware. FitCloud智能手环固件升级的iOS框架，负责手环固件升级等功能的封装。
 //  修改记录:
-//     pcjbird    2024-05-15  Version:1.3.1-beta.20 Build:20240515001
+//     pcjbird    2024-05-17  Version:1.3.1-beta.21 Build:20240517001
 //                            1.Realtek音乐推送支持
 //                            2.Realtek电子书/相册推送支持
 //                            3.重命名日志回调函数
 //                            4.新增终止固件升级功能
 //                            5.更新Realtek固件升级SDK，支持8773型号芯片
 //                            6.更新Realtek固件升级SDK，解决蓝牙关闭不及时回调错误的问题
+//                            7.Realtek升级程序设置回调完成前不等待断连动作
 //
 //     pcjbird    2022-12-30  Version:1.3.0 Build:202212300001
 //                            1.更新错误码翻译
