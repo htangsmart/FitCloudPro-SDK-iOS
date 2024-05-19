@@ -154,6 +154,9 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICEFEATURE)
     /// Weather, set the watch weather information via the app
     FITCLOUDDEVICEFEATURE_WEATHER,
     
+    /// Personalized reminder, you can add some custom reminders due to your self, such as watering flowers, walking a dog and so on
+    FITCLOUDDEVICEFEATURE_PERSONALIZEDREMINDER,
+    
     /// Women health, help women to record information and events related to menstruation, pregnancy preparation, and pregnancy
     FITCLOUDDEVICEFEATURE_WOMENHEALTH,
     /// Lovers feature, interactions between lovers
@@ -205,13 +208,13 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICEFEATURE)
 typedef NS_ENUM(NSInteger, FITCLOUDDEVICECAPACITY)
 {
     ///支持的最大闹钟数量
-    FITCLOUDDEVICECAPACITY_ALARMSCOUNT = 0x02,
+    FITCLOUDDEVICECAPACITY_ALARMCLOCKCOUNT = 0x02,
     ///支持的最大日程数量
-    FITCLOUDDEVICECAPACITY_SCHEDULESCOUNT = 0x03,
+    FITCLOUDDEVICECAPACITY_SCHEDULECOUNT = 0x03,
     ///支持的最大常用联系人数量
-    FITCLOUDDEVICECAPACITY_FAVORITECONTACTSCOUNT = 0x04,
+    FITCLOUDDEVICECAPACITY_FAVORITECONTACTCOUNT = 0x04,
     ///支持的天气种类数量，目前支持的数量有13/16
-    FITCLOUDDEVICECAPACITY_WEATHERSCOUNT = 0x05,
+    FITCLOUDDEVICECAPACITY_WEATHERCOUNT = 0x05,
     ///支持喝水个性化提醒功能
     FITCLOUDDEVICECAPACITY_WATERDRINKPERSONALIZEDREMINDERFEATURE = 0x06,
     ///支持久坐个性化提醒功能
