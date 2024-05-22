@@ -1594,6 +1594,7 @@ typedef NS_OPTIONS(UInt32, FITCLOUDMN)
     FITCLOUDMN_GMAIL = 1 << 24,                 //Gmail通知
     FITCLOUDMN_OUTLOOK = 1 << 25,               //Outlook通知
     FITCLOUDMN_WHATSUPBUSINESS = 1 << 26,       //WHATSAPP BUSINESS通知
+    FITCLOUDMN_FASTRACK = 1 << 27,              //Fastrack
     FITCLOUDMN_OTHER = ((UInt32)1) << 31,       //其他APP通知
 };
 
