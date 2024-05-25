@@ -74,7 +74,7 @@
 		</data>
 		<key>Headers/FitCloudECard.h</key>
 		<data>
-		KIdhSg4qBI3+kPakN4mPyp0KO64=
+		MFxanxDVB7RESuwBxDZCwj5pAOY=
 		</data>
 		<key>Headers/FitCloudEmergencyContactObject.h</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		hZUsWU6NkzsN6YTewxMa0K+7f98=
+		wfKTgiwRxx97JjftymIzQCAYvms=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lazbVT/hoGicYjNj4nyqLltPOXs=
+		5L4+nbgmIfM3WFY/OH3hiDDpnt4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -494,11 +494,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KIdhSg4qBI3+kPakN4mPyp0KO64=
+			MFxanxDVB7RESuwBxDZCwj5pAOY=
 			</data>
 			<key>hash2</key>
 			<data>
-			dH8uw3L08ACjibWMY5CvNl5ah5AUD7V08meNnJYRbG0=
+			osdPOWSf8Qe1GQKQuZlbjU6fVCryovTefzn1xHhQ8DE=
 			</data>
 		</dict>
 		<key>Headers/FitCloudEmergencyContactObject.h</key>
@@ -703,11 +703,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hZUsWU6NkzsN6YTewxMa0K+7f98=
+			wfKTgiwRxx97JjftymIzQCAYvms=
 			</data>
 			<key>hash2</key>
 			<data>
-			FGaqlqx1K1w8J0MgwFVekvfnsdjg8fViqefzUWdXqrk=
+			oGW5LFPz/wGLIPgsBo3fHxoJHslXBZ19SVK2oAXCc5M=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>

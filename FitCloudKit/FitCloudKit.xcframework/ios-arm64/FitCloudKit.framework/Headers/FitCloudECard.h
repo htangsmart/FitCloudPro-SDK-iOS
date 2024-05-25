@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// the electronic card id
 @property(nonatomic, assign, readonly) NSInteger eCardId;
 
-/// the electronic card label or title, max to 30 bytes
+/// the electronic card label or title, max to 32 bytes
 @property(nonatomic, strong, readonly) NSString* label;
 
 /// the QRCode content
