@@ -1649,4 +1649,31 @@ typedef NS_ENUM(Byte, FITCLOUDPERSONALIZEDREMINDTIMETYPE)
     FITCLOUDPERSONALIZEDREMINDTIMETYPE_MOMENT = 0x01,
 };
 
+#pragma mark - 情侣
+
+/// lover message
+typedef NS_ENUM(Byte, FITCLOUDLOVERMESSAGE)
+{
+    /// I Miss you
+    FITCLOUDLOVERMESSAGE_IMISSYOU = 0x01,
+};
+
+/// the lovers bonding notification
+typedef NS_ENUM(NSInteger, FITCLOUDLOVERSBONDINGNOTIFICATION)
+{
+    /// bonding success
+    FITCLOUDLOVERSBONDINGNOTIFICATION_BONDINGSUCCESS = 0x01,
+    /// bonding cancelled
+    FITCLOUDLOVERSBONDINGNOTIFICATION_BONDINGCANCELLED = 0x02,
+};
+
+/// the lovers message send result
+typedef NS_ENUM(NSInteger, FITCLOUDLOVERSMESSAGESENDRESULT)
+{
+    /// send failed
+    FITCLOUDLOVERSMESSAGESENDRESULT_FAILED = 0x00,
+    /// send succeed
+    FITCLOUDLOVERSMESSAGESENDRESULT_SUCCEED = 0x01,
+};
+
 #endif /* FitCloudKitDefines_h */

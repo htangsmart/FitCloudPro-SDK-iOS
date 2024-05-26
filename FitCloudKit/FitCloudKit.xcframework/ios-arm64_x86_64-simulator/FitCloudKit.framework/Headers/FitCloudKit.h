@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-05-25  Version:1.2.9-beta.114 Build:20240525001
+//     pcjbird    2024-05-26  Version:1.2.9-beta.115 Build:20240526001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -64,6 +64,7 @@
 //                            52.新增硬件平台标志, @see FITCLOUDHARDWARE_8773, FITCLOUDHARDWARE_568X
 //                            53.电子卡包名称最大长度修改成32字节
 //                            54.修正传音厂商标识
+//                            55.新增情侣功能, @see [FitCloudKit isDeviceSupportFeature:FITCLOUDDEVICEFEATURE_LOVERS]
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1011,6 +1012,32 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - block: 结果回调
 +(void)getWomenHealthSettingWithBlock:(FitCloudWomenHealthSettingResultBlock _Nullable )block;
+
+#pragma mark 情侣功能
+
+/// Send lovers bonding notification to the device
+/// - Parameters:
+///   - notification: lovers bonding notification
+///   - completion: the completion callback
++(void)sendLoversBondingNotifcation:(FITCLOUDLOVERSBONDINGNOTIFICATION)notification completion:(FitCloudResultBlock _Nullable)completion;
+
+/// Callback the lovers message send result
+/// - Parameters:
+///   - result: the lovers message send result
+///   - completion: the completion callback
++(void)callbackLoversMessageSendResult:(FITCLOUDLOVERSMESSAGESENDRESULT)result completion:(FitCloudResultBlock _Nullable)completion;
+
+/// Set the love memorial day
+/// - Parameters:
+///   - loveMemorialDay: the love memorial day
+///   - completion: the completion callback
++(void)setLoveMemorialDay:(NSDate*)loveMemorialDay completion:(FitCloudResultBlock _Nullable)completion;
+
+/// Received the lover message
+/// - Parameters:
+///   - message: the lover message
+///   - completion: the completion callback
++(void)receivedLoverMessage:(NSString*)message completion:(FitCloudResultBlock _Nullable) completion;
 
 
 #pragma mark 锁屏设置

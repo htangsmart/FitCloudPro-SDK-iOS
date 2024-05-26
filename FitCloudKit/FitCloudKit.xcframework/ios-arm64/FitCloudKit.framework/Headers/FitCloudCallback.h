@@ -693,6 +693,11 @@ typedef void (^FitCloudNewOTAEnvironmentCheckCompletion)(BOOL succeed, NSError* 
 ///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
 -(void) OnERNIEBotVoiceStopWithDecodedVoiceData:(NSData*)voiceData;
 
+/// 手表发送情侣消息，通过APP发给对方
+/// - Parameters:
+///   - loverMessage: 情侣消息
+-(void) OnLoverMessage:(FITCLOUDLOVERMESSAGE)loverMessage;
+
 /**
  *@brief 通知App开始发起支付宝Iot认证
  */
