@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-05-26  Version:1.2.9-beta.116 Build:20240526001
+//     pcjbird    2024-05-27  Version:1.2.9-beta.117 Build:20240527001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -63,7 +63,7 @@
 //                            51.新增直接DFU升级(DFU升级不进入DFU模式), 直接拿[FitCloudKit directDFUPeripheral]外设传入FitCloudDFUKit, 仅特定客户手表可用
 //                            52.新增硬件平台标志, @see FITCLOUDHARDWARE_8773, FITCLOUDHARDWARE_568X
 //                            53.电子卡包名称最大长度修改成32字节
-//                            54.修正传音厂商标识
+//                            54.修正传音厂商标识，支持传音MAC地址解析
 //                            55.新增情侣功能, @see [FitCloudKit isDeviceSupportFeature:FITCLOUDDEVICEFEATURE_LOVERS]
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
