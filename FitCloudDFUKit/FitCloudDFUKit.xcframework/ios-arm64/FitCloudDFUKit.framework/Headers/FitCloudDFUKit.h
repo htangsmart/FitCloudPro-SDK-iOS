@@ -182,6 +182,16 @@ typedef NS_ENUM(NSInteger, FITCLOUDDFUCHIPVENDOR)
  */
 +(void) startWithPeripheral:(CBPeripheral *) peripheral firmware:(NSString*)firmware chipVendor:(FITCLOUDDFUCHIPVENDOR)chipVendor silentMode:(BOOL)silentMode;
 
+/**
+ * @brief 开始固件升级
+ * @param peripheral 固件升级的蓝牙外设
+ * @param firmware 新版本固件文件路径,注意是 file path, 不是 file url
+ * @param chipVendor 芯片供应商
+ * @param silentMode 是否为静默模式，普通固件升级使用非静默模式，UI升级/表盘升级使用静默模式
+ * @param reportSuccessBeforeDisconnect 是否在断开连接前回调升级成功
+ */
++(void) startWithPeripheral:(CBPeripheral *) peripheral firmware:(NSString*)firmware chipVendor:(FITCLOUDDFUCHIPVENDOR)chipVendor silentMode:(BOOL)silentMode reportSuccessBeforeDisconnect:(BOOL)reportSuccessBeforeDisconnect;
+
 /// 终止固件升级
 +(void) abortIfNeeded;
 
