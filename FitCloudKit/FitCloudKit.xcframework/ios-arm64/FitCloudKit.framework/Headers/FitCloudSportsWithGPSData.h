@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, readonly) NSInteger steps;
 
+/// 卡路里，单位：小卡(cal)
+@property(nonatomic, readonly) NSInteger calorie;
 
 /**
  * @brief 心率
