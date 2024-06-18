@@ -1261,18 +1261,16 @@ typedef NS_ENUM(NSInteger, ERNIEBOTRESULTTYPE)
 
 #pragma mark - 表盘相关
 
-/**
- * @brief 表盘Item标志
-*/
-typedef NS_ENUM(Byte, WATCHFACEITEMFLAG)
+/// 表盘位类型
+typedef NS_ENUM(Byte, WATCHFACESLOTTYPE)
 {
-    WATCHFACEITEMFLAG_BUILTIN = 0x00,                               //当前表盘编号位置为内置，不可推送的
-    WATCHFACEITEMFLAG_ALLOWPUSH = 0x10,                             //当前表盘编号位置可推送表盘，可根据表盘编号获取缩略图显示
-    WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE1 = 0x20,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式1
-    WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE2 = 0x21,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式2
-    WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE3 = 0x22,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式3
-    WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE4 = 0x23,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式4
-    WATCHFACEITEMFLAG_THUMBNAIL_CUSTOMSTYPE5 = 0x24,                //当前表盘编号位置可推送表盘，缩略图显示自定义表盘样式5
+    WATCHFACESLOTTYPE_BUILTIN = 0x00,                               //当前表盘位置为内置，不可推送的
+    WATCHFACESLOTTYPE_ALLOWPUSH = 0x10,                             //当前表盘位置可推送表盘，可根据表盘编号获取缩略图显示
+    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE1 = 0x20,                //当前表盘位置可推送表盘，缩略图显示自定义表盘样式1
+    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE2 = 0x21,                //当前表盘位置可推送表盘，缩略图显示自定义表盘样式2
+    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE3 = 0x22,                //当前表盘位置可推送表盘，缩略图显示自定义表盘样式3
+    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE4 = 0x23,                //当前表盘位置可推送表盘，缩略图显示自定义表盘样式4
+    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE5 = 0x24,                //当前表盘位置可推送表盘，缩略图显示自定义表盘样式5
 };
 
 /**

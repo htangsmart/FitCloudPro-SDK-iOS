@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-06-18  Version:1.2.9-beta.127 Build:20240618001
+//     pcjbird    2024-06-18  Version:1.2.9-beta.128 Build:20240618002
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -71,6 +71,8 @@
 //                            59.表盘尺寸支持385*320方
 //                            60.更新新OTA错误码
 //                            61.为防止用户的资料比较离谱导致手表算法问题，针对用户输入的资料进行修正再传给手表
+//                            62.优化切换表盘，及修改其对应的组件样式API
+//                            63.优化手表返回的手表表盘UI信息
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -994,14 +996,15 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: 结果回调
 +(void)getWatchfaceUIInformationWithBlock:(FitCloudWatchfaceUIInfoResultBlock _Nullable)block;
 
-#pragma mark 设置表盘模块化信息
 
-/// 设置表盘模块化信息
+#pragma mark 切换表盘，并修改该表盘对应的所有模块(组件)样式
+
+/// 切换表盘，并修改该表盘对应的所有模块(组件)样式
 /// - Parameters:
-///   - position: 表盘位置，有效值0～10，调用该接口会切换表盘到该位置
-///   - modules: 模块化信息，如果为nil，则只是切表盘，否则同时修改组件
-///   - block: 结果回调
-+(void)setWatchfacePostion:(NSInteger) position modules:(NSArray<FitCloudWatchfaceModule*>* _Nullable)modules completion:(FitCloudResultBlock _Nullable)block;
+///   - slotIndex: 表盘位置索引，有效值0～10，将表盘切换到该索引的位置
+///   - styleArray: 模块(组件)样式数组，假设该表盘对应4个组件，则该数组包含4个元素，每个元素对应该组件要切换到的样式，样式类型对应WATCHFACEMODULESTYLE的定义，若果该参数设置为nil，则仅切换表盘位置，否则同时修改其所有组件样式
+///   - completion: 结果回调
++(void)toggleWatchfaceWithSlotIndex:(NSInteger)slotIndex modulesStyleArray:(NSArray<NSNumber*>* _Nullable)styleArray completion:(FitCloudResultBlock)completion;
 
 
 #pragma mark 女性健康设置

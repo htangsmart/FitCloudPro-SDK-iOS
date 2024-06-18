@@ -150,7 +150,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		be7uHGxCWDb0XCWQMqu7W2YLrus=
+		JScXW1fktyby2wUq7W5CYTSdT7U=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		vDZYKskh0IwCkczgWQn0Z5OiO7M=
+		JIdYH8hy/uKleIsuUe75vIjr0S4=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -262,11 +262,11 @@
 		</data>
 		<key>Headers/FitCloudWatchUIInfo.h</key>
 		<data>
-		riw3rdWRzQa8yFPEgw0luyIjK5I=
+		aX43RZPLeDUNyy4ZgC0ZRUD6u2Q=
 		</data>
 		<key>Headers/FitCloudWatchfaceUIInfo.h</key>
 		<data>
-		w5qfFI9CZMe/h2fbjAioPvjMzLQ=
+		TqRKK++oFDQt1Aq7fuyu3CO1P+U=
 		</data>
 		<key>Headers/FitCloudWeatherObject.h</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IEjoulo3SNQhutRy6saU+pM8fJg=
+		syF/ZtE0ECrWzRMdkv8u5n23w6s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -703,11 +703,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			be7uHGxCWDb0XCWQMqu7W2YLrus=
+			JScXW1fktyby2wUq7W5CYTSdT7U=
 			</data>
 			<key>hash2</key>
 			<data>
-			Rlcdon/xN+MnnKPclBr/mTD+eAnXqcfLlujNI2/KkJk=
+			hX8qUwKRhucymP9nfRv6JYmkFw0rT/FMK7nHxrp0QdU=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -725,11 +725,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vDZYKskh0IwCkczgWQn0Z5OiO7M=
+			JIdYH8hy/uKleIsuUe75vIjr0S4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Po845lUhhSUhThAukyJFCQ7zE22/iImLivAGcBtWaJ4=
+			6CvfdyLhbKA/jNX+lX3g/MMPUYCXkNSStJR0+TgYodI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
@@ -1011,22 +1011,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			riw3rdWRzQa8yFPEgw0luyIjK5I=
+			aX43RZPLeDUNyy4ZgC0ZRUD6u2Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			g07tLbX3LU2dqnLYnSJKdix3anVScGYo6DIGu7rzVy0=
+			o6iyfq5L+BBjxWvax+DmXWh+2C8PKo6PWVciSK7yENg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudWatchfaceUIInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			w5qfFI9CZMe/h2fbjAioPvjMzLQ=
+			TqRKK++oFDQt1Aq7fuyu3CO1P+U=
 			</data>
 			<key>hash2</key>
 			<data>
-			6lXtg2FnqZDFiIByh5k3rVqhLAkTtOo9lanrvq58yJM=
+			D9EpxGTmlvNyJjuwl+8lXiJrC7u3FylrvEloibwFM3k=
 			</data>
 		</dict>
 		<key>Headers/FitCloudWeatherObject.h</key>

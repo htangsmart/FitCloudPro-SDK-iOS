@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
 
 /**
@@ -14,92 +15,51 @@
  */
 @interface FitCloudWatchfaceModule : NSObject
 
-/**
- * @brief 模块样式
- */
-@property(nonatomic, readonly) WATCHFACEMODULESTYLE moduleStyle;
+/// 模块当前样式
+@property(nonatomic, readonly) WATCHFACEMODULESTYLE currentStyle;
 
-+(FitCloudWatchfaceModule*) moduleWithStyle:(WATCHFACEMODULESTYLE)moduleStyle;
+/// 最大支持的样式数量
+@property(nonatomic, readonly) UInt16 maxStyleCount;
 
-@end
 
-/**
- * @brief 表盘模块坐标定位
- */
-@interface FitCloudWatchfaceModuleLocation: NSObject
-
-/**
- * @brief 坐标x
- */
+/// x坐标
 @property(nonatomic, readonly) UInt16 x;
-/**
- * @brief 坐标y
- */
+
+/// y坐标
 @property(nonatomic, readonly) UInt16 y;
-/**
- * @brief 宽度
- */
+
+/// 宽度
 @property(nonatomic, readonly) UInt16 width;
-/**
- * @brief 高度
- */
+
+/// 高度
 @property(nonatomic, readonly) UInt16 height;
 
-@end
-
-/**
- * @brief 表盘模块信息
- */
-@interface FitCloudWatchfaceModuleInfo: NSObject
-
-/**
- * @brief 支持的样式数量
- */
-@property(nonatomic, readonly) UInt16 supportedStyleCount;
-
-/**
- * @brief 位置及大小信息
- */
-@property(nonatomic, readonly, strong) FitCloudWatchfaceModuleLocation* location;
 
 @end
 
-/**
- * @brief FitCloud 表盘 Item
- */
-@interface FitCloudWatchfaceItem : NSObject
+///表盘位
+@interface FitCloudWatchfaceSlot : NSObject
 
-/**
- * @brief 标志
- */
-@property(nonatomic, readonly) WATCHFACEITEMFLAG flag;
+/// 位置类型
+@property(nonatomic, readonly) WATCHFACESLOTTYPE slotType;
 
-/**
- * @brief 编号
- */
-@property(nonatomic, readonly) UInt32 watchfaceIndex;
+/// 当前表盘位置表盘编号
+@property(nonatomic, readonly) UInt32 watchfaceNo;
 
-/**
- * @brief 版本
- */
+/// 当前表盘位置表盘版本号
 @property(nonatomic, readonly) UInt16 watchfaceVersion;
 
-/**
- * @brief 最大可推送表盘的大小，单位：kB
- */
+/// 最大可推送表盘的大小，单位：kB
 @property(nonatomic, readonly) NSInteger maxAllowPushBinFileSize;
 
-/**
- * @brief 所有模块(组件)
- * @Note 仅当 allowWatchfaceModular 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
- */
-@property(nonatomic, strong, readonly) NSArray<FitCloudWatchfaceModule*>* modules;
+/// 当前表盘位置表盘包含的组件
+///
+/// 仅当 allowWatchfaceModular 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
+@property(nonatomic, strong, readonly) NSArray<FitCloudWatchfaceModule*>* watchfaceModules;
 
-/**
- * @brief 所有模块(组件)信息
- * @Note 仅当 allowWatchfaceModular 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
- */
-@property(nonatomic, strong, readonly) NSArray<FitCloudWatchfaceModuleInfo*>* moduleInfos;
+/// 位置类型描述
+-(NSString *)slotDescription;
+
 @end
 
 /**
@@ -120,7 +80,7 @@
 /**
  * @brief 当前表盘编号
 */
-@property(nonatomic, readonly) UInt32 watchfaceIndex;
+@property(nonatomic, readonly) UInt32 watchfaceNo;
 
 /**
  * @brief 当前表盘版本号
@@ -132,7 +92,7 @@
  * @brief 当前显示的表盘所在的位置
  * @Note 仅当 allowWatchFaceUpgrade 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
 */
-@property(nonatomic, readonly) UInt16 displayedWFPosition;
+@property(nonatomic, readonly) UInt16 slotIndexOfCurrentWatchface;
 
 /**
  * @brief LCD像素与形状
@@ -174,16 +134,19 @@
 */
 @property(nonatomic, readonly) UInt8 lcd;
 
-/**
- * @brief 表盘生成工具版本
-*/
+/// 表盘生成工具版本
 @property(nonatomic, readonly, strong) NSString* toolVersion;
 
-/**
- * @brief 表盘列表
- * @Note 仅当 allowWatchFaceUpgrade 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
-*/
-@property(nonatomic, readonly, strong) NSArray<FitCloudWatchfaceItem*>*items;
+/// 表盘位列表
+/// @Note 仅当 allowWatchFaceUpgrade 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
+@property(nonatomic, readonly, strong) NSArray<FitCloudWatchfaceSlot*>*slots;
+
+
+/// 当前表盘是否为圆形表盘
+-(BOOL) isRound;
+
+/// 当前表盘分辨率
+-(CGSize) screenResolution;
 
 @end
 
