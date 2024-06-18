@@ -12,7 +12,7 @@
 /**
  * @brief 用户Profile
  */
-@interface FitCloudUserProfileObject : NSObject<NSCoding>
+@interface FitCloudUserProfileObject : NSObject<NSCoding, NSCopying>
 
 /**
  * @brief 性别
