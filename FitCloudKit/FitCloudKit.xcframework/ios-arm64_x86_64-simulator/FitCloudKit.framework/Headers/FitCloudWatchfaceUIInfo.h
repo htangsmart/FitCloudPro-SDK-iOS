@@ -57,6 +57,9 @@
 /// 仅当 allowWatchfaceModular 为 TRUE 且 allowMultiWatchfacePush 为 TRUE 时有效
 @property(nonatomic, strong, readonly) NSArray<FitCloudWatchfaceModule*>* watchfaceModules;
 
+/// 该表盘位是否隐藏
+@property(nonatomic, readonly) BOOL hidden;
+
 /// 位置类型描述
 -(NSString *)slotDescription;
 
