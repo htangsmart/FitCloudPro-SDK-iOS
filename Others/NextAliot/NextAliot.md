@@ -80,7 +80,7 @@
 
 ```
 
-### 实现 FitCloudKitCallback 的对应的部分
+### 实现 FitCloudCallback 的对应的部分 （FitCloudKit）
 
 ```objc
 /**
