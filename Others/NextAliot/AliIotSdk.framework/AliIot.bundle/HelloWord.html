@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>调用原生方法</title>
+    <style type="text/css">
+            
+            button {
+                margin-top: 100px;
+                margin-left: 50px;
+                border:2px solid orange;
+                width: 40%;
+                height: 100px;
+                vertical-align: middle;
+                font-size:40px;
+            }
+        </style>
+
+    <script>
+        function addCollect() {
+            let param = {
+                channel:"TO APP",
+                action:"addCollect",
+                params:{
+                    page:1,
+                    pageSize:100,
+                },
+            };
+            window.webkit.messageHandlers.IH5CurrentH5ToSdk.postMessage(param);
+        }
+        function getDirList() {
+            let param = {
+                channel:"TO APP",
+                action:"getDirList",
+                params:"map",
+            };
+            window.webkit.messageHandlers.IH5CurrentH5ToSdk.postMessage(param);
+        }
+        function deleteFile() {
+            let param = {
+                channel:"TO APP",
+                action:"deleteFile",
+                params:"20240204105419.txt",
+            };
+            window.webkit.messageHandlers.IH5CurrentH5ToSdk.postMessage(param);
+        }
+        function saveFile() {
+            let param = {
+                channel:"TO APP",
+                action:"saveFile",
+                params:"1111",
+            };
+            window.webkit.messageHandlers.IH5CurrentH5ToSdk.postMessage(param);
+        }
+        function fileReName() {
+            let param = {
+                channel:"TO APP",
+                action:"fileReName",
+                params:{
+                    file:"20240204105458.txt",
+                    newFile:"1.txt",
+                },
+            };
+            window.webkit.messageHandlers.IH5CurrentH5ToSdk.postMessage(param);
+        }
+        function downloadFile(){
+            let param = {
+                channel:"TO APP",
+                action:"downloadFile",
+                params:"https://iotx-luban-wearable-daily-new.oss-cn-zhangjiakou.aliyuncs.com/wearable/watchface/tmp/watch_77194_1_20230516.bin",
+            };
+            window.webkit.messageHandlers.IH5CurrentH5ToSdk.postMessage(param);
+        }
+        function sendMapToDevice(){
+            let param = {
+                channel:"TO SDK",
+                action:"sendMapToDevice",
+                params:"watch_77194_1_20230516.bin",
+            };
+            window.webkit.messageHandlers.IH5CurrentH5ToSdk.postMessage(param);
+        }
+        function getNetStatus(){
+            let param = {
+                channel:"TO SDK",
+                action:"getNetWorkState",
+                params:"",
+            };
+            window.webkit.messageHandlers.IH5CurrentH5ToSdk.postMessage(param);
+        }
+        
+        function IH5CurrentSdkToH5(str) {
+            document.getElementById("p1").innerHTML=str;
+        }
+        function add(s1){
+            document.getElementById("p1").innerHTML=s1;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getDirList()" >遍历目录</button>
+    <button onclick="deleteFile()" >删除文件</button>
+    <button onclick="saveFile()" >保存文件</button>
+    <button onclick="fileReName()" >文件重命名</button>
+    <button onclick="IH5CurrentSdkToH5(123)" >文件重命名</button>
+    <button onclick="downloadFile()" >下载地图</button>
+    <button onclick="sendMapToDevice()" >推送地图到设备</button>
+    <button onclick="getNetStatus()" >获取网络状态</button>
+    <p id="p1">Hello World!</p>
+</body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--    <head>-->
+<!--        <meta charset="UTF-8">-->
+<!--    </head>-->
+<!--    <body>-->
+<!--        <div style="margin-top: 100px">-->
+<!--            <h1>Objective-C和JavaScript交互的那些事</h1>-->
+<!--            <input type="button" value="CallCamera" onclick="callCamera()">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <input type="button" value="Share" onclick="callShare()">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <input type="button" value="CallBack" onclick="web.callBack()">-->
+<!--                </div>-->
+<!--       -->
+<!--      -->
+<!--        <script>-->
+<!--            var callShare = function() {-->
+<!--                -->
+<!--                  web.share("123","123");-->
+<!--            }-->
+<!--        -->
+<!--        -->
+<!--        var shareCallback = function(){-->
+<!--            alert('share回调success');-->
+<!--        }-->
+<!--     -->
+<!--        function callCamera(){-->
+<!--            alert('callCamera调用success');-->
+<!--        }-->
+<!--        -->
+<!--        function callBack(s1,s2){-->
+<!--            return s1+s2;-->
+<!--        }-->
+<!--        </script>-->
+<!--    </body>-->
+<!--</html>-->

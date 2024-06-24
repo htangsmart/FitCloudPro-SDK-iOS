@@ -1,0 +1,12 @@
+ framework module AliIotConnectKit_Private {
+      module OC {
+          private header "iotMqtt.h"
+          private header "AFHttpHelper_C.h"
+          private header "MqttManager_C.h"
+           
+//         export *
+     }
+//     umbrella "ThirdLib"
+//     module * {export *}
+}
+

@@ -1,0 +1,6 @@
+framework module FitCloudAliIotSdk {
+  umbrella header "FitCloudAliIotSdk.h"
+  export *
+
+  module * { export * }
+}

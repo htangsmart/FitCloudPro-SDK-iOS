@@ -1,0 +1,11 @@
+framework module AliIotSdk {
+  umbrella header "AliIotSdk.h"
+  export *
+
+  module * { export * }
+}
+
+module AliIotSdk.Swift {
+  header "AliIotSdk-Swift.h"
+  requires objc
+}
