@@ -95,6 +95,22 @@ NSString* hardwareInfo = [firmware description];
 }];
 ```
 
+- platform
+
+```objc
+NSString* platform = @"gui";
+FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+FitCloudFirmwareVersionObject* firmware = allConfig ? allConfig.firmware : nil;
+if(firmware && firmware.hardwareSupported & FITCLOUDHARDWARE_8773)
+{
+    platform = @"gui-8773";
+}
+else if(firmware && firmware.hardwareSupported & FITCLOUDHARDWARE_568X)
+{
+    platform = @"gui-5681";
+}
+```
+
 #### 调用 FitCloudDFUKit 将表盘文件推送到手表
 
 [参看 Github 上 FitCloudDFUKit 的相关文档。](https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudDFUKit/README.md)
