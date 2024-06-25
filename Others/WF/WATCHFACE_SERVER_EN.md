@@ -99,6 +99,8 @@ NSString* hardwareInfo = [firmware description];
 }];
 ```
 
+- platform
+
 ```objc
 NSString* platform = @"gui";
 FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
