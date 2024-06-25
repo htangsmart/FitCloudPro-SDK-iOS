@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <LogMate/LogMate.h>
-#import <FitCloudAliIotSdk/FitCloudAliIotSdkCallback.h>
+#import <FitCloudAliIotSdk/FitCloudAliotCallback.h>
 
 //! Project version number for FitCloudAliIotSdk.
 FOUNDATION_EXPORT double FitCloudAliIotSdkVersionNumber;
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - callback: the sdk callback receive object, which can process the sdk callback data
 /// - Returns:
 ///  FitCloudAliIotSdk
-+(instancetype _Nonnull)initWithCustomerName:(NSString* _Nonnull)customerName callback:(id<FitCloudAliIotSdkCallback> _Nonnull) callback;
++(instancetype _Nonnull)initWithCustomerName:(NSString* _Nonnull)customerName callback:(id<FitCloudAliotCallback> _Nonnull) callback;
 
 #pragma mark Start the AliIot Auth
 

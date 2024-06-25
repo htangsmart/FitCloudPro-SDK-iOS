@@ -1,5 +1,5 @@
 //
-//  FitCloudAliIotSdkCallback.h
+//  FitCloudAliotCallback.h
 //  FitCloudAliIotSdk
 //
 //  Created by pcjbird on 6/24/24.
@@ -9,7 +9,7 @@
 #define FitCloudAliIotSdkCallback_h
 #import <Foundation/Foundation.h>
 
-@protocol FitCloudAliIotSdkCallback<NSObject>
+@protocol FitCloudAliotCallback<NSObject>
 
 /// On received Aliot data from server.
 /// > Important: Please invoke `+(void) sendAliotData:(NSData*)aliotData withBlock:(FitCloudResultBlock _Nullable)block` to send the data to the smartwatch

@@ -42,7 +42,7 @@
 }
 ```
 
-### 实现 FitCloudAliIotSdkCallback
+### 实现 FitCloudAliotCallback
 
 ```objc
 
