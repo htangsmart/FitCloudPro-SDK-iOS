@@ -99,6 +99,20 @@ NSString* hardwareInfo = [firmware description];
 }];
 ```
 
+```objc
+NSString* platform = @"gui";
+FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+FitCloudFirmwareVersionObject* firmware = allConfig ? allConfig.firmware : nil;
+if(firmware && firmware.hardwareSupported & FITCLOUDHARDWARE_8773)
+{
+    platform = @"gui-8773";
+}
+else if(firmware && firmware.hardwareSupported & FITCLOUDHARDWARE_568X)
+{
+    platform = @"gui-5681";
+}
+```
+
 ### ❖ Invoke FitCloudDFUKit to push the watchface bin file to the watch
 
 [Visit document for FitCloudDFUKit at Github](https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudDFUKit/README_EN.md)
@@ -177,10 +191,11 @@ API：http://fitcloud.hetangsmart.com/public/dial/customgui
 Feature：Query the watchface tempate matching the current watch.
 Parameters：
 
-| Param       | Type   | Requried | Description                |
-| ----------- | ------ | -------- | -------------------------- |
-| lcd         | int    | Y        | lcd screen resolution flag |
-| toolVersion | String | Y        | watchface tool version     |
+| Param       | Type   | Requried | Description                                      |
+| ----------- | ------ | -------- | ------------------------------------------------ |
+| lcd         | int    | Y        | lcd screen resolution flag                       |
+| toolVersion | String | Y        | watchface tool version                           |
+| platform    | String | N        | platform type: gui,gui-5681,gui-8773 default:gui |
 
 Result：
 
