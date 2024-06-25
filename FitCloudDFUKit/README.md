@@ -1,34 +1,33 @@
-# 和唐智能手表固件升级（FitCloudDFUKit）iOS开发指南
+# 和唐智能手表固件升级（FitCloudDFUKit）iOS 开发指南
 
 ## 简介 / Summary
-* 什么是和唐智能手环固件升级 SDK ? 
-  
-  >###### 和唐智能手环固件升级 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件负责手环固件升级等功能的封装，旨在方便合作伙伴定制自己的智能手环应用。       
 
+- 什么是和唐智能手环固件升级 SDK ?
 
-* 适用范围
+  > ###### 和唐智能手环固件升级 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件负责手环固件升级等功能的封装，旨在方便合作伙伴定制自己的智能手环应用。
+
+- 适用范围
 
   ```
   需要个性化定制自己的 iOS 智能手环 APP 的合作伙伴。
   ```
 
-* 兼容性
-  
-  ###### 1. iOS 9.0及以上操作系统；
-  
-  ###### 2. 支持armv7/i386/x86_64/arm64指令集；
-  
-  ###### 3. 支持Bitcode；
-  
- 
+- 兼容性
+
+  ###### 1. iOS 9.0 及以上操作系统；
+
+  ###### 2. 支持 armv7/i386/x86_64/arm64 指令集；
+
+  ###### 3. 支持 Bitcode；
+
 ## 特性 / Features
- 
+
 1. 手环固件升级(不包括空中升级远程下载固件的部分)；
 
- 
 ## 版本 / Releases
 
-版本V1.3.0 Build202212300001
+版本 V1.3.0 Build202212300001
+
 ```
   发布日期：2022年12月30日
   功能更新：
@@ -37,21 +36,23 @@
   3.新增越南语
 ```
 
-版本V1.2.9 Build202206300001
+版本 V1.2.9 Build202206300001
+
 ```
   发布日期：2022年06月30日
   功能更新：
   1.升级Realtek固件升级程序，修复固件升级依旧慢的问题
 ```
 
-版本V1.2.8 Build202206060001
+版本 V1.2.8 Build202206060001
+
 ```
   发布日期：2022年06月06日
   功能更新：
   1.升级Realtek固件升级程序，修复固件升级慢的问题
 ```
 
-版本V1.2.7 Build202206010001
+版本 V1.2.7 Build202206010001
 
 ```
   发布日期：2022年06月01日
@@ -59,7 +60,7 @@
   1. 修正OnStartDFUSuccess没有回调的问题
 ```
 
-版本V1.2.6 Build202201260001
+版本 V1.2.6 Build202201260001
 
 ```
   发布日期：2022年01月26日
@@ -69,7 +70,7 @@
   3.新增印地语
 ```
 
-版本V1.2.5 Build202112180001
+版本 V1.2.5 Build202112180001
 
 ```
   发布日期：2021年12月18日
@@ -77,7 +78,7 @@
   1、升级Realtek固件升级程序，修复固件升级慢的问题。
 ```
 
-版本V1.2.4 Build202108230001
+版本 V1.2.4 Build202108230001
 
 ```
   发布日期：2021年08月23日
@@ -85,7 +86,7 @@
   1、修正表盘推送可能失败的问题。
 ```
 
-版本V1.2.3 Build202108040001
+版本 V1.2.3 Build202108040001
 
 ```
   发布日期：2021年08月04日
@@ -93,7 +94,7 @@
   1、修正iOS11.4系统固件升级失败的问题。
 ```
 
-版本V1.2.2 Build202106040001
+版本 V1.2.2 Build202106040001
 
 ```
   发布日期：2021年06月04日
@@ -101,7 +102,7 @@
   1、Nordic固件升级支持。
 ```
 
-版本V1.2.1 Build202102250001
+版本 V1.2.1 Build202102250001
 
 ```
   发布日期：2021年02月25日
@@ -109,7 +110,7 @@
   1、升级Realtek固件升级程序，支持8762D平台。
 ```
 
-版本V1.2.0 Build202009280001
+版本 V1.2.0 Build202009280001
 
 ```
   发布日期：2020年09月28日
@@ -117,7 +118,7 @@
   1、新增土耳其语/乌克兰语。
 ```
 
-版本V1.1.9 Build202008140001
+版本 V1.1.9 Build202008140001
 
 ```
   发布日期：2020年08月14日
@@ -125,7 +126,7 @@
   1、新增克罗地亚语/阿尔巴尼亚语。
 ```
 
-版本V1.1.8 Build202007100001
+版本 V1.1.8 Build202007100001
 
 ```
   发布日期：2020年07月10日
@@ -133,7 +134,7 @@
   1、修正繁体中文翻译。
 ```
 
-版本V1.0.7 Build201911220001
+版本 V1.0.7 Build201911220001
 
 ```
   发布日期：2019年11月22日
@@ -141,7 +142,7 @@
   1、新增斯洛伐克语。
 ```
 
-版本V1.0.6 Build201911210001
+版本 V1.0.6 Build201911210001
 
 ```
   发布日期：2019年11月21日
@@ -150,7 +151,7 @@
   2、提升升级过程可靠性。
 ```
 
-版本V1.0.5 Build201910180001
+版本 V1.0.5 Build201910180001
 
 ```
   发布日期：2019年10月18日
@@ -158,7 +159,7 @@
   1、 修正UI文件升级过程有可能无法进入静默模式的问题。
 ```
 
-版本V1.0.4 Build201910160001
+版本 V1.0.4 Build201910160001
 
 ```
   发布日期：2019年10月16日
@@ -166,7 +167,7 @@
   1、 修正iOS13闪退的问题。
 ```
 
-版本V1.0.3 Build201909300001
+版本 V1.0.3 Build201909300001
 
 ```
   发布日期：2019年09月30日
@@ -174,7 +175,7 @@
   1、 支持UI文件升级。
 ```
 
-版本V1.0.0 Build201905010001
+版本 V1.0.0 Build201905010001
 
 ```
   发布日期：2019年05月01日
@@ -195,41 +196,42 @@ pod 'FitCloudDFUKit'
 ```
 
 如果你想集成 beta 测试版，则 Podfile 文件中应该使用如下配置：
+
 ```
 pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 ```
 
 方法二：从 Github 上下载 `FitCloudDFUKit`，手动集成到您的项目中。
 
-1. FitCloudDFUKit SDK开发包含：
-  
-  * FitCloudDFUKit.xcframework   静态库，智能手环固件升级开发套件核心framework
-  
-  * FitCloudDFUKit.bundle     智能手环固件升级开发套件核心资源包
+1. FitCloudDFUKit SDK 开发包含：
 
-  * RTKLEFoundation.xcframework
+- FitCloudDFUKit.xcframework 静态库，智能手环固件升级开发套件核心 framework
 
-  * RTKOTASDK.xcframework
+- FitCloudDFUKit.bundle 智能手环固件升级开发套件核心资源包
 
-  * RTKLocalPlaybackSDK.xcframework
-  
-2. 将framework添加到项目中;
-3. 将bundle资源包添加到项目中;
+- RTKLEFoundation.xcframework
+
+- RTKOTASDK.xcframework
+
+- RTKLocalPlaybackSDK.xcframework
+
+2. 将 framework 添加到项目中;
+3. 将 bundle 资源包添加到项目中;
 4. 添加其他系统依赖库支持：
 
-    * CoreGraphics.framework
-    
-    * CoreBluetooth.framework
-5. 在Podfile中添加
-   
+   - CoreGraphics.framework
+
+   - CoreBluetooth.framework
+
+5. 在 Podfile 中添加
+
    pod 'iOSDFULibrary', '4.11.0'
 
- 
 ## 设置隐私权限
+
 在项目的`Info.plist`中设置以下隐私权限使用描述，实际描述内容各项目自行设置
 
 ![蓝牙隐私权限](media/privacy_bluetooth.png)
-
 
 ## 引用头文件
 
@@ -237,7 +239,7 @@ pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.gi
 #import <FitCloudDFUKit/FitCloudDFUKit.h>
 ```
 
-## 初始化SDK
+## 初始化 SDK
 
 ```objc
 [FitCloudDFUKit setDebugMode:YES];
@@ -319,7 +321,7 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 [FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:silentMode];
 ```
 
-## 普通固件升级/UI固件升级/表盘推送/运动推送
+## 普通固件升级/UI 固件升级/表盘推送/运动推送
 
 **Step 1**
 
@@ -335,6 +337,7 @@ FITCLOUDDFUCHIPVENDOR chipVendor = FITCLOUDDFUCHIPVENDOR_REALTEK;
 启动升级，silentMode 参数代表不同类型的升级。
 
 普通固件升级:
+
 ```
 BOOL silentMode = FALSE;
 if([FitCloudKit allConfig].firmware.hardwareSupported & FITCLOUDHARDWARE_DFUSHOULDSILENTMODE)
@@ -343,11 +346,14 @@ if([FitCloudKit allConfig].firmware.hardwareSupported & FITCLOUDHARDWARE_DFUSHOU
 }
 ```
 
-UI固件升级/表盘推送/运动推送:
+UI 固件升级/表盘推送/运动推送:
+
 ```
 BOOL silentMode = YES;
 ```
+
 之后调用：
+
 ```objc
 [FitCloudDFUKit startWithPeripheral:dfuPeripheral firmware:self.selectedPath chipVendor:chipVendor silentMode:silentMode];
 ```
@@ -376,7 +382,7 @@ BOOL silentMode = YES;
 
 如果您是对接我们表盘服务器的客户，您可能需要从 SDK 里获得一些参数传给我们的服务器，当然获得这项能力您需要联系我们的商务。
 
-* hardwareInfo
+- hardwareInfo
 
 ```objc
 FitCloudAllConfigObject *allConfig = [FitCloudKit allConfig];
@@ -384,7 +390,7 @@ FitCloudFirmwareVersionObject* firmware = allconfig.firmware;
 NSString* hardwareInfo = [firmware description];
 ```
 
-* lcd
+- lcd
 
 ```objc
 [FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
@@ -392,12 +398,28 @@ NSString* hardwareInfo = [firmware description];
 }];
 ```
 
-* toolVersion
+- toolVersion
 
 ```objc
 [FitCloudKit getWatchfaceUIInformationWithBlock:^(BOOL succeed, FitCloudWatchfaceUIInfo* faceUI, NSError* error) {
     NSString* toolVersion = faceUI.toolVersion;
 }];
+```
+
+- platform
+
+```objc
+NSString* platform = @"gui";
+FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+FitCloudFirmwareVersionObject* firmware = allConfig ? allConfig.firmware : nil;
+if(firmware && firmware.hardwareSupported & FITCLOUDHARDWARE_8773)
+{
+    platform = @"gui-8773";
+}
+else if(firmware && firmware.hardwareSupported & FITCLOUDHARDWARE_568X)
+{
+    platform = @"gui-5681";
+}
 ```
 
 ## 音乐推送
@@ -406,24 +428,18 @@ NSString* hardwareInfo = [firmware description];
 
 ## FAQ
 
->Q: 现在支持哪些芯片厂商的固件升级？
+> Q: 现在支持哪些芯片厂商的固件升级？
 >
->A: SDK 已经集成了 `Realtek` 和 `Nordic` 厂商的固件升级程序，但由于目前所有手环其实只使用了 `Realtek` 的芯片，因此在实际使用过程中，您目前只会使用到 `Realtek` 芯片的固件升级。
+> A: SDK 已经集成了 `Realtek` 和 `Nordic` 厂商的固件升级程序，但由于目前所有手环其实只使用了 `Realtek` 的芯片，因此在实际使用过程中，您目前只会使用到 `Realtek` 芯片的固件升级。
 
 <!-- more -->
 
->Q: 普通固件升级与UI升级有什么不同？
+> Q: 普通固件升级与 UI 升级有什么不同？
 >
->A: 通常没有界面的固件升级称之为普通固件升级，涉及界面升级则为UI升级，当然推送表盘属于UI升级。
-
-
+> A: 通常没有界面的固件升级称之为普通固件升级，涉及界面升级则为 UI 升级，当然推送表盘属于 UI 升级。
 
 ## 技术支持
 
 和唐智能
 
 戴工 / iOS Developer
-
-
-
-

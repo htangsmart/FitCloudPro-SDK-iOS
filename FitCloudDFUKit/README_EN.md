@@ -408,6 +408,22 @@ NSString* hardwareInfo = [firmware description];
 }];
 ```
 
+- platform
+
+```objc
+NSString* platform = @"gui";
+FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
+FitCloudFirmwareVersionObject* firmware = allConfig ? allConfig.firmware : nil;
+if(firmware && firmware.hardwareSupported & FITCLOUDHARDWARE_8773)
+{
+    platform = @"gui-8773";
+}
+else if(firmware && firmware.hardwareSupported & FITCLOUDHARDWARE_568X)
+{
+    platform = @"gui-5681";
+}
+```
+
 ## MUSIC PUSH
 
 - [MUSIC PUSH](../Others/Music/MUSIC_EN.md)
