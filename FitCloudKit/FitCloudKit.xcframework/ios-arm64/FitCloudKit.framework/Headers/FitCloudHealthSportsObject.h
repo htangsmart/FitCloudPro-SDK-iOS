@@ -340,7 +340,7 @@
 /**
  * @brief 运动类型
  */
-@property(nonatomic, assign) FITCLOUDSPORTSTYPE genre;
+@property(nonatomic, assign) UInt16 workoutType;
 
 /**
  * @brief 运动时长(秒)

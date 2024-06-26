@@ -16,7 +16,7 @@
 /**
  * @brief 运动模式类型
  */
-@property(nonatomic, readonly) FITCLOUDSPORTSTYPE sport;
+@property(nonatomic, readonly) UInt16 workoutType;
 
 /**
  * @brief 是否支持推送
