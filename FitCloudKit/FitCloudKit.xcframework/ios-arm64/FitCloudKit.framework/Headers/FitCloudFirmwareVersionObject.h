@@ -87,67 +87,67 @@
 
 /**
  * @brief 是否支持表盘升级
-*/
+ */
 @property(nonatomic, readonly) BOOL allowWatchFaceUpgrade;
 
 /**
  * @brief 是否支持勿扰模式(Do Not Disturb Mode)
-*/
+ */
 @property(nonatomic, readonly) BOOL allowDNDMode;
 
 /**
  * @brief 是否支持获取最新的测量数据(Latest Measurement Data)
-*/
+ */
 @property(nonatomic, readonly) BOOL allowRetrieveLatestMeasurementData;
 
 /**
  * @brief 是否支持TP升级功能
-*/
+ */
 @property(nonatomic, readonly) BOOL allowTP;
 
 /**
  * @brief 是否使用新的睡眠数据格式
-*/
+ */
 @property(nonatomic, readonly) BOOL newSleepDataFormat;
 
 /**
  * @brief 是否为假心电
-*/
+ */
 @property(nonatomic, readonly) BOOL isFakeECG;
 
 /**
  * @brief 是否支持常用联系人
-*/
+ */
 @property(nonatomic, readonly) BOOL allowFavContacts;
 
 /**
  * @brief 是否支持防护提醒
-*/
+ */
 @property(nonatomic, readonly) BOOL allowProtectionReminder;
 
 /**
  * @brief 是否支持设置健康监测间隔时间，指手表定时自动监测健康数据，并非单次实时监测
-*/
+ */
 @property(nonatomic, readonly) BOOL allowSetHealthMonitorInterval;
 
 /**
  * @brief 是否支持设置久坐提醒间隔时间
-*/
+ */
 @property(nonatomic, readonly) BOOL allowSetLSRInterval;
 
 /**
  * @brief 是否支持天气预报(该手表支持实时天气 + 未来几天的天气预报)
-*/
+ */
 @property(nonatomic, readonly) BOOL allowWeatherForecast;
 
 /**
  * @brief 是否支持洗手提醒
-*/
+ */
 @property(nonatomic, readonly) BOOL allowHandWashReminder;
 
 /**
  * @brief 是否支持将天气推送开关的状态状态同步给手表，当该标志位为true时，app可以将当前天气推送开关的状态同步给手表
-*/
+ */
 @property(nonatomic, readonly) BOOL allowWeatherPushSwitchStatusSync;
 
 /**
@@ -363,5 +363,8 @@
 
 /// 是否可以直接DFU，而不进入DFU模式
 @property(nonatomic, readonly) BOOL canDirectDFUWithoutEnterDFUMode;
+
+/// 是否支持设置24小时天气信息
+@property(nonatomic, readonly) BOOL with24HrWeather;
 
 @end

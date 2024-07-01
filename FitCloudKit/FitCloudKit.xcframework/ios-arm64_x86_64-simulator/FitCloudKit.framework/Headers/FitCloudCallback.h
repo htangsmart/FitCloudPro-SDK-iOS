@@ -68,6 +68,7 @@
 #import <FitCloudKit/FitCloudRestingHRValue.h>
 #import <FitCloudKit/FitCloudEmergencyContactObject.h>
 #import <FitCloudKit/FitCloudPersonalizedReminderObject.h>
+#import <FitCloudKit/FitCloudHourWeatherObject.h>
 
 /// FitCloud调用结果回调
 /// - Parameters:

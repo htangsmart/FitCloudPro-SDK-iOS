@@ -597,9 +597,10 @@ typedef NS_ENUM(NSInteger, FITCLOUDUSERBINDSTATUS)
  */
 typedef NS_ENUM(Byte, FITCLOUDSLEEPQUALITY)
 {
-    FITCLOUDSLEEPQUALITY_ASLEEP = 0x01,                   //深睡/熟睡
-    FITCLOUDSLEEPQUALITY_INBED = 0x02,                    //浅睡眠/躺在床上
+    FITCLOUDSLEEPQUALITY_DEEP = 0x01,                     //深睡/熟睡
+    FITCLOUDSLEEPQUALITY_LIGHT = 0x02,                    //浅睡眠/躺在床上
     FITCLOUDSLEEPQUALITY_AWAKE = 0x03,                    //清醒
+    FITCLOUDSLEEPQUALITY_REM = 0x04,                      //快速眼动
 };
 
 
@@ -1145,6 +1146,48 @@ typedef NS_ENUM(NSInteger, FITCLOUDLOVERSMESSAGESENDRESULT)
     FITCLOUDLOVERSMESSAGESENDRESULT_FAILED = 0x00,
     /// send succeed
     FITCLOUDLOVERSMESSAGESENDRESULT_SUCCEED = 0x01,
+};
+
+
+#pragma mark - 天气
+
+/// 天气类型
+typedef NS_ENUM(Byte, WEATHERTYPE)
+{
+    /// 晴天
+    WEATHERTYPE_SUNNY = 0x01,
+    /// 多云
+    WEATHERTYPE_CLOUDY = 0x02,
+    /// 阴天
+    WEATHERTYPE_OVERCAST = 0x03,
+    /// 阵雨
+    WEATHERTYPE_SHOWERS = 0x04,
+    /// 雷阵雨、雷阵雨伴有冰雹
+    WEATHERTYPE_THUNDERSHOWERSWITHHAIL = 0x05,
+    /// 小雨
+    WEATHERTYPE_LIGHTRAIN = 0x06,
+    /// 中雨(moderate rain)、大雨(heavy rain)、暴雨(rainstorm)
+    WEATHERTYPE_MHSRAIN = 0x07,
+    /// 雨夹雪、冻雨
+    WEATHERTYPE_SLEET = 0x08,
+    /// 小雪
+    WEATHERTYPE_LIGHTSNOW = 0x09,
+    /// 大雪、暴雪
+    WEATHERTYPE_HEAVYSNOW = 0x0a,
+    /// 沙尘暴、浮沉
+    WEATHERTYPE_SANDSTORM = 0x0b,
+    /// 雾、雾霾
+    WEATHERTYPE_FOGORHAZE = 0x0c,
+    /// 风、龙卷风、飓风
+    WEATHERTYPE_WINDY = 0x0d,
+    /// 晚间多云
+    WEATHERTYPE_CLOUDYINEVENING = 0x0e,
+    /// 晚间晴朗
+    WEATHERTYPE_CLEARINEVENING = 0x0f,
+    /// 晚间阵雨
+    WEATHERTYPE_EVENINGSHOWERS = 0x10,
+    /// 未知天气
+    WEATHERTYPE_UNKNOWN = 0xff,
 };
 
 #endif /* FitCloudKitDefines_h */
