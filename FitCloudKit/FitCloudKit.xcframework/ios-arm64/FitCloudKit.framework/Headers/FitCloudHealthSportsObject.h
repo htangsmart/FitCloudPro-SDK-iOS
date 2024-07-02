@@ -337,40 +337,41 @@
  */
 @interface FitCloudSportsItemObject : FitCloudManualSyncItemObject
 
-/**
- * @brief 运动类型
- */
+/// 运动类型
 @property(nonatomic, assign) UInt16 workoutType;
 
-/**
- * @brief 运动时长(秒)
- */
+/// 运动时长(秒)
 @property(nonatomic, assign) UInt16  duration;
 
-/**
- * @brief 步数
- */
+/// 步数
 @property(nonatomic, assign) UInt16 steps;
 
-/**
- * @brief 距离(米)
- */
+/// 距离(米)
 @property(nonatomic, assign) UInt16 distance;
 
-/**
- * @brief 卡路里(小卡)
- */
-@property(nonatomic, assign) UInt16 calory;
+/// 卡路里(小卡)
+@property(nonatomic, assign) UInt16 calorie;
 
-/**
- * @brief 配速(min/km)
- */
+/// 配速(min/km)
 @property(nonatomic, assign) UInt16 pace;
 
-/**
- * @brief 运动心率(次/min)
- */
-@property(nonatomic, assign) UInt8  hr_excercise;
+/// 运动心率(次/min)
+@property(nonatomic, assign) UInt8  hrExcercise;
+
+/// 泳姿   1: 自由泳 2:蛙泳 3:仰泳 4:蝶泳
+@property(nonatomic, assign) UInt8 swimStyle;
+
+/// 游泳趟数
+@property(nonatomic, assign) UInt16 swimTrips;
+
+/// 游泳划水次数
+@property(nonatomic, assign) UInt16 swimStrokes;
+
+/// 游泳划水频率
+@property(nonatomic, assign) UInt16 swimStrokeFreq;
+
+/// 游泳效率
+@property(nonatomic, assign) UInt16 swolf;
 
 @end
 
