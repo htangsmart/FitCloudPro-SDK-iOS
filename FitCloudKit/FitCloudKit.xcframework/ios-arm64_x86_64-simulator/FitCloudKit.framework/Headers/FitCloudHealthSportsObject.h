@@ -359,19 +359,19 @@
 @property(nonatomic, assign) UInt8  hrExcercise;
 
 /// 泳姿   1: 自由泳 2:蛙泳 3:仰泳 4:蝶泳
-@property(nonatomic, assign) UInt8 swimStyle;
+@property(nonatomic, strong) NSNumber* swimStyle;
 
 /// 游泳趟数
-@property(nonatomic, assign) UInt16 swimTrips;
+@property(nonatomic, strong) NSNumber* swimTrips;
 
 /// 游泳划水次数
-@property(nonatomic, assign) UInt16 swimStrokes;
+@property(nonatomic, strong) NSNumber* swimStrokes;
 
 /// 游泳划水频率
-@property(nonatomic, assign) UInt16 swimStrokeFreq;
+@property(nonatomic, strong) NSNumber* swimStrokeFreq;
 
 /// 游泳效率
-@property(nonatomic, assign) UInt16 swolf;
+@property(nonatomic, strong) NSNumber* swolf;
 
 @end
 

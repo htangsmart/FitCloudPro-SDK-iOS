@@ -74,7 +74,7 @@
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - error: 错误信息
-typedef void (^FitCloudResultBlock)(BOOL succeed, NSError* error);
+typedef void (^FitCloudResultHandler)(BOOL succeed, NSError* error);
 
 /// FitCloud进度回调
 /// - Parameters:

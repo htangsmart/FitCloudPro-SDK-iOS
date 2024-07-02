@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// the weather type
 @property(nonatomic, assign)WEATHERTYPE weathertype;
 
-/// the temperature
+/// the temperature，unit: °C
 @property(nonatomic, assign)SInt8 temperature;
 
 /// the wind scale
