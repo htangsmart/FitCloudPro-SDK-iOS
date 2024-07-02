@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/RTKOTABin.h</key>
 		<data>
-		uTiuEJt3ZXxDZnwwOWPIP7TXASg=
+		p9v8lMxjJ3co98HSgV3JjNFGqP8=
 		</data>
 		<key>Headers/RTKOTADeviceInfo.h</key>
 		<data>
-		dhGMKayMMmH/bA1XwqY3XljVhhM=
+		hTxP28vH80nk96KmGuFJPKWALp4=
 		</data>
 		<key>Headers/RTKOTAError.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Pq1XQdZzGXsqRQmFyRWd9vpTsLg=
+		BuJxkEot3Puxe1hI8nNum/6vNSc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -160,22 +160,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uTiuEJt3ZXxDZnwwOWPIP7TXASg=
+			p9v8lMxjJ3co98HSgV3JjNFGqP8=
 			</data>
 			<key>hash2</key>
 			<data>
-			b+7q/taStr1duTqEpqcSrHZzWDZAcij7YlvApBCItJQ=
+			1GzF9VBKfZ9gehKCq6TyiR07ko+ft8INkcD7nBk8Abo=
 			</data>
 		</dict>
 		<key>Headers/RTKOTADeviceInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dhGMKayMMmH/bA1XwqY3XljVhhM=
+			hTxP28vH80nk96KmGuFJPKWALp4=
 			</data>
 			<key>hash2</key>
 			<data>
-			MphR+rA1H+6GsTrkBV+T0HcT1S6G8Iya6v5RqKrOGYc=
+			tbRosq0FELefEU3Vz8xFCwb2IYLFgrTq9wZfbKen9Nk=
 			</data>
 		</dict>
 		<key>Headers/RTKOTAError.h</key>

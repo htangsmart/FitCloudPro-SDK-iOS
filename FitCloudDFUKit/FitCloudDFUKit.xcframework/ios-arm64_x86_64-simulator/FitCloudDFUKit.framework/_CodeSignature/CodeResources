@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/FitCloudDFUKit.h</key>
 		<data>
-		phVWMVR4vgLR7miYJKCheDqNUw4=
+		wjtUgr31LoSiTpCMQI4JAuoa6mE=
 		</data>
 		<key>Headers/FitCloudDFULogLevel.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lOTfz092bvVZEZjtfiPEIvLOM1g=
+		eTU6CdwIF0UXLw/LH2yorenchac=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,11 +66,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			phVWMVR4vgLR7miYJKCheDqNUw4=
+			wjtUgr31LoSiTpCMQI4JAuoa6mE=
 			</data>
 			<key>hash2</key>
 			<data>
-			np10chrhGuZdh9dMxIvNTH+hmjEnedRWjRopn1c/W24=
+			mPeMDbotEl6v0ozeXm0F7jJQ4mK24+shjjGMO1YLLJI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudDFULogLevel.h</key>
