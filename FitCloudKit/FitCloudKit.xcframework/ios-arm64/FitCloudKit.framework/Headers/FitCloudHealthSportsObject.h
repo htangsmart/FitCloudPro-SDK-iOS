@@ -362,7 +362,7 @@
 @property(nonatomic, strong) NSNumber* swimStyle;
 
 /// 游泳趟数
-@property(nonatomic, strong) NSNumber* swimTrips;
+@property(nonatomic, strong) NSNumber* swimLaps;
 
 /// 游泳划水次数
 @property(nonatomic, strong) NSNumber* swimStrokes;
