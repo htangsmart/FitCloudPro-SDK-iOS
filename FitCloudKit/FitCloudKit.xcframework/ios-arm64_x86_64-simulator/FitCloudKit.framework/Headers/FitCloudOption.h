@@ -29,10 +29,6 @@
  */
 @property(nonatomic, assign) NSTimeInterval secsCommandTimeOut;
 
-/**
- * @brief 蓝牙包传输间隔，默认0.015s=15ms
- */
-@property(nonatomic, assign) NSTimeInterval secsPacketUnitInterval;
 
 /**
  * @brief 是否应该自动扫描连接， 默认否
