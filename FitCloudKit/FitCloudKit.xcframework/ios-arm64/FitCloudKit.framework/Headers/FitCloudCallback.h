@@ -567,6 +567,14 @@ typedef void (^FitCloudPersonalizedRemindersQueryCompletion)(BOOL success, NSArr
 ///   - error: error information
 typedef void (^FitCloudNewOTAEnvironmentCheckCompletion)(BOOL succeed, NSError* error);
 
+/// FitCloud GPS firmware information query result callback
+/// - Parameters:
+///   - success: query success
+///   - firmwareVersion: the GPS firmware version
+///   - allowOTA: whether allow ota
+///   - error: error information
+typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* firmwareVersion, BOOL allowOTA, NSError* error);
+
 /**
  *@brief FitCloudKit 回调协议
  */

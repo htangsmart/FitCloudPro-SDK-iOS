@@ -364,6 +364,11 @@
 /// 是否可以直接DFU，而不进入DFU模式
 @property(nonatomic, readonly) BOOL canDirectDFUWithoutEnterDFUMode;
 
+/// 是否支持芯与物GPS
+///
+/// 芯与物是一家芯片设计公司，https://www.icoe-tech.com/
+@property(nonatomic, readonly) BOOL withICOEGPS;
+
 /// 是否支持设置24小时天气信息
 @property(nonatomic, readonly) BOOL with24HrWeather;
 
