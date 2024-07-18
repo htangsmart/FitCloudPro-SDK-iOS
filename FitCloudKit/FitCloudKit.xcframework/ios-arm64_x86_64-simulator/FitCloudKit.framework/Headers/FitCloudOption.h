@@ -31,6 +31,13 @@
 
 
 /**
+ * @brief 蓝牙包传输间隔，单位：毫秒，默认20ms
+ * 最小不得小于15ms
+ */
+@property(nonatomic, assign) NSInteger milliSecsPacketUnitInterval;
+
+
+/**
  * @brief 是否应该自动扫描连接， 默认否
  */
 @property(nonatomic, assign) BOOL    shouldAutoConnect;
