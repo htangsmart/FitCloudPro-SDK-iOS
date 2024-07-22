@@ -158,7 +158,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		Q8oHXMod9Q4wj6n/AH+pqOyMZSU=
+		0VhyyV6QPtb7idLhd9N0ZX6iHaI=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		ggzFAtQgdscv3Ld2CbKgbQfRbhA=
+		iaiDgj7M9P+dspv3L2w2Xt0T2tQ=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -302,7 +302,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		P6ktNy6F35iMchh+0xvHkRyDCj0=
+		2ZuDEFQB4qMYeSx1QGtzplpeBS8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -733,11 +733,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Q8oHXMod9Q4wj6n/AH+pqOyMZSU=
+			0VhyyV6QPtb7idLhd9N0ZX6iHaI=
 			</data>
 			<key>hash2</key>
 			<data>
-			F0NZhz2NWzdZ96YoWN0OU9gg8KSZOQvbGXIFvnVmRKI=
+			jRY5jmTH9jcI7ZlpwdR0y/JfoyfVtZmnAaKbJkve9t0=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -755,11 +755,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ggzFAtQgdscv3Ld2CbKgbQfRbhA=
+			iaiDgj7M9P+dspv3L2w2Xt0T2tQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			5kxXtNLlavdqPS8+MeG/sBYo2qkaX+mWlt7yhA9Xz0w=
+			4IovdqIyh+HxwC0Azebie2SolScCuCajCGWUrPBfwic=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>

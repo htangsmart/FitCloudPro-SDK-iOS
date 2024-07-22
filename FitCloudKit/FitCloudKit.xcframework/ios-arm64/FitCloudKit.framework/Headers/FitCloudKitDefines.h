@@ -9,6 +9,8 @@
 #ifndef FitCloudKitDefines_h
 #define FitCloudKitDefines_h
 
+#import <Foundation/Foundation.h>
+
 #pragma mark - 错误码相关
 
 /// FitCloudKit 错误码作用域
@@ -1040,7 +1042,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDINTEVALHEALTHMONITORINGITEM)
 #pragma mark - 消息通知定义
 
 /// 消息通知定义(Message Notification)
-typedef NS_OPTIONS(UInt32, FITCLOUDMN)
+typedef NS_OPTIONS(UInt64, FITCLOUDMN)
 {
     FITCLOUDMN_NONE = 0,                        //无消息通知
     FITCLOUDMN_CALL = 1,                        //电话通知
@@ -1074,7 +1076,23 @@ typedef NS_OPTIONS(UInt32, FITCLOUDMN)
     FITCLOUDMN_TITANSMARTWORLD = 1 << 28,       //Titan Smart World通知
     FITCLOUDMN_GPAY = 1 << 29,                  //GPAY通知
     FITCLOUDMN_AMAZON = 1 << 30,                //Amazon通知
-    FITCLOUDMN_OTHER = ((UInt32)1) << 31,       //其他APP通知
+    FITCLOUDMN_OTHER = ((UInt64)1) << 31,                 //其他APP通知
+    FITCLOUDMN_PHONEPE = ((UInt64)1) << 32,               //PhonePe通知
+    FITCLOUDMN_HINGE = ((UInt64)1) << 33,                 //Hinge通知
+    FITCLOUDMN_FLIPKART = ((UInt64)1) << 34,              //Flipkart通知
+    FITCLOUDMN_MYNTRA = ((UInt64)1) << 35,                //Myntra通知
+    FITCLOUDMN_MEESHO = ((UInt64)1) << 36,                //Meesho通知
+    FITCLOUDMN_ZIVAME = ((UInt64)1) << 37,                //Zivame通知
+    FITCLOUDMN_AJIO = ((UInt64)1) << 38,                  //Ajio通知
+    FITCLOUDMN_URBANIC = ((UInt64)1) << 39,               //Urbanic通知
+    FITCLOUDMN_NYKAA = ((UInt64)1) << 40,                 //Nykaa通知
+    FITCLOUDMN_HEALTHIFYME = ((UInt64)1) << 41,           //Healthifyme通知
+    FITCLOUDMN_CULTFIT = ((UInt64)1) << 42,               //Cultfit通知
+    FITCLOUDMN_FLO = ((UInt64)1) << 43,                   //Flo通知
+    FITCLOUDMN_BUMBLE = ((UInt64)1) << 44,                //Bumble通知
+    FITCLOUDMN_UBER = ((UInt64)1) << 45,                  //Uber通知
+    FITCLOUDMN_SWIGGY = ((UInt64)1) << 46,                //Swiggy通知
+    FITCLOUDMN_ZOMATO = ((UInt64)1) << 47,                //Zomato通知
 };
 
 
