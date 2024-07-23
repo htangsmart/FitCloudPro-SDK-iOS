@@ -63,6 +63,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// whether the feature supported
 +(BOOL)isFeatureSupported;
 
+#pragma mark Check whether is ICOE GPS
+
+/// Check whether is ICOE GPS
+///
+/// Should invoke when the smart watch device is ready
+///
+/// - Returns:
+/// whether is ICOE GPS
++(BOOL)isICOE;
+
 #pragma mark Set up GPS location info
 
 /// Request the current location and notify the watch device, you should invoke `setGPSLocationInfoRequestService:` to set the location info request service.

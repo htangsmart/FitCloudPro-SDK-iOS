@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/EPOFilesDownloadService.h</key>
 		<data>
-		kWN+sZkloJVAPvLGy3wm/iGhxnU=
+		KuVOu+9MeiDJCW4bFEpFJf9HA3c=
 		</data>
 		<key>Headers/FitCloudGPSAccelerate.h</key>
 		<data>
-		RpzA09tIE1DyjA2vc2pMf/3wcfA=
+		/mkoxRf3H/wLb/88dg6AzZtFjj0=
 		</data>
 		<key>Headers/FitCloudGPSAccelerateDefines.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZXlv3MoH3H5hU+n3q9Yjh+FlIKM=
+		eWTiJtXNjkNhvTa12DmcSbkJypI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,22 +35,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kWN+sZkloJVAPvLGy3wm/iGhxnU=
+			KuVOu+9MeiDJCW4bFEpFJf9HA3c=
 			</data>
 			<key>hash2</key>
 			<data>
-			ntaueTlB759MXAiszMXg7NY2n8ZmsVLAY1ZFvmgagYU=
+			F8WJAUfrLRmN/FYgGbLW0NcRvLJsYKS+oZi8xdO5GoI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSAccelerate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RpzA09tIE1DyjA2vc2pMf/3wcfA=
+			/mkoxRf3H/wLb/88dg6AzZtFjj0=
 			</data>
 			<key>hash2</key>
 			<data>
-			tf09rM8dWvqIR1YGEG6bBtMzPuWROsnFj/PnxI1B8wc=
+			wheOrh3GhQ6nPpW0tyV3bfp1tZi+hhAyHlk613j0YZE=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSAccelerateDefines.h</key>

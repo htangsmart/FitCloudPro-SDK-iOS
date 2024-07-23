@@ -1,12 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FitCloudOTAGenKit
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FitCloudOTAGenKit
 import Foundation
 import Swift
 import UIKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 @objc public enum OTAImageType : Swift.Int, Swift.CaseIterable {
   case invalid = -1
   case patch = 0
@@ -36,6 +36,40 @@ import _StringProcessing
     get
   }
 }
+@objc public class ICOEEPOFile : ObjectiveC.NSObject, Foundation.NSCoding {
+  @objc public var fileType: FitCloudOTAGenKit.EPOFileType
+  @objc public var filePath: Swift.String
+  @objc public init(fileType: FitCloudOTAGenKit.EPOFileType, filePath: Swift.String)
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc public enum EPOFileType : Swift.Int, Swift.CaseIterable {
+  case invalid = -1
+  case GPS = 0
+  case GLONASS = 1
+  case GALILEO = 2
+  case BDS = 3
+  case IRNSS = 4
+  case QZSS = 5
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [FitCloudOTAGenKit.EPOFileType]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [FitCloudOTAGenKit.EPOFileType] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension FitCloudOTAGenKit.EPOFileType : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
 @objc public enum LogLevel : Swift.Int {
   case verbose = 0
   case debug = 1
@@ -57,7 +91,6 @@ extension FitCloudOTAGenKit.LogLevel : Swift.CustomStringConvertible {
   @objc func log(_ logLevel: FitCloudOTAGenKit.LogLevel, _ message: Swift.String)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class FitCloudOTAGenService : ObjectiveC.NSObject {
-  @objc public class func createGpsEpoBin(_ epoFilePaths: [Swift.String], _ outputDirectory: Swift.String, _ logProvider: (any FitCloudOTAGenKit.Loggable)? = nil) throws -> Swift.String
   @objc deinit
 }
 @objc public enum ParamsError : Swift.Int, Swift.Error {
@@ -82,9 +115,16 @@ extension FitCloudOTAGenKit.LogLevel : Swift.CustomStringConvertible {
     get
   }
 }
+extension FitCloudOTAGenKit.FitCloudOTAGenService {
+  @objc dynamic public class func createGpsEpoBin(_ epoFilePaths: [Swift.String], _ outputDirectory: Swift.String, _ logProvider: (any FitCloudOTAGenKit.Loggable)? = nil) throws -> Swift.String
+  @objc dynamic public class func createICOEGpsEpoBin(_ epoFiles: [FitCloudOTAGenKit.ICOEEPOFile], _ outputDirectory: Swift.String, _ logProvider: (any FitCloudOTAGenKit.Loggable)? = nil) throws -> Swift.String
+}
 extension FitCloudOTAGenKit.OTAImageType : Swift.Equatable {}
 extension FitCloudOTAGenKit.OTAImageType : Swift.Hashable {}
 extension FitCloudOTAGenKit.OTAImageType : Swift.RawRepresentable {}
+extension FitCloudOTAGenKit.EPOFileType : Swift.Equatable {}
+extension FitCloudOTAGenKit.EPOFileType : Swift.Hashable {}
+extension FitCloudOTAGenKit.EPOFileType : Swift.RawRepresentable {}
 extension FitCloudOTAGenKit.LogLevel : Swift.Equatable {}
 extension FitCloudOTAGenKit.LogLevel : Swift.Hashable {}
 extension FitCloudOTAGenKit.LogLevel : Swift.RawRepresentable {}

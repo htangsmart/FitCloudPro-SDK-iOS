@@ -1016,12 +1016,1024 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FitCloudOTAGenKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ICOEEPOFile",
+        "printedName": "ICOEEPOFile",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fileType",
+            "printedName": "fileType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EPOFileType",
+                "printedName": "FitCloudOTAGenKit.EPOFileType",
+                "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(py)fileType",
+            "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC8fileTypeAA07EPOFileG0Ovp",
+            "moduleName": "FitCloudOTAGenKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(im)fileType",
+                "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC8fileTypeAA07EPOFileG0Ovg",
+                "moduleName": "FitCloudOTAGenKit",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(im)setFileType:",
+                "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC8fileTypeAA07EPOFileG0Ovs",
+                "moduleName": "FitCloudOTAGenKit",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FitCloudOTAGenKit11ICOEEPOFileC8fileTypeAA07EPOFileG0OvM",
+                "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC8fileTypeAA07EPOFileG0OvM",
+                "moduleName": "FitCloudOTAGenKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "filePath",
+            "printedName": "filePath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(py)filePath",
+            "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC8filePathSSvp",
+            "moduleName": "FitCloudOTAGenKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(im)filePath",
+                "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC8filePathSSvg",
+                "moduleName": "FitCloudOTAGenKit",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(im)setFilePath:",
+                "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC8filePathSSvs",
+                "moduleName": "FitCloudOTAGenKit",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FitCloudOTAGenKit11ICOEEPOFileC8filePathSSvM",
+                "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC8filePathSSvM",
+                "moduleName": "FitCloudOTAGenKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(fileType:filePath:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ICOEEPOFile",
+                "printedName": "FitCloudOTAGenKit.ICOEEPOFile",
+                "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EPOFileType",
+                "printedName": "FitCloudOTAGenKit.EPOFileType",
+                "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(im)initWithFileType:filePath:",
+            "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC8fileType0F4PathAcA07EPOFileG0O_SStcfc",
+            "moduleName": "FitCloudOTAGenKit",
+            "objc_name": "initWithFileType:filePath:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FitCloudOTAGenKit.ICOEEPOFile?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ICOEEPOFile",
+                    "printedName": "FitCloudOTAGenKit.ICOEEPOFile",
+                    "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(im)initWithCoder:",
+            "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "FitCloudOTAGenKit",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "Convenience",
+              "AccessControl",
+              "Required",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(im)encodeWithCoder:",
+            "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC6encode4withySo7NSCoderC_tF",
+            "moduleName": "FitCloudOTAGenKit",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(py)description",
+            "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC11descriptionSSvp",
+            "moduleName": "FitCloudOTAGenKit",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(im)description",
+                "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC11descriptionSSvg",
+                "moduleName": "FitCloudOTAGenKit",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ICOEEPOFile",
+                "printedName": "FitCloudOTAGenKit.ICOEEPOFile",
+                "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(im)init",
+            "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileCACycfc",
+            "moduleName": "FitCloudOTAGenKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile",
+        "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC",
+        "moduleName": "FitCloudOTAGenKit",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "FitCloudOTAGenKit",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FitCloudOTAGenKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EPOFileType",
+        "printedName": "EPOFileType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "invalid",
+            "printedName": "invalid",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudOTAGenKit.EPOFileType.Type) -> FitCloudOTAGenKit.EPOFileType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EPOFileType",
+                        "printedName": "FitCloudOTAGenKit.EPOFileType",
+                        "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType@EPOFileTypeInvalid",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO7invalidyA2CmF",
+            "moduleName": "FitCloudOTAGenKit",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "GPS",
+            "printedName": "GPS",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudOTAGenKit.EPOFileType.Type) -> FitCloudOTAGenKit.EPOFileType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EPOFileType",
+                        "printedName": "FitCloudOTAGenKit.EPOFileType",
+                        "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType@EPOFileTypeGPS",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO3GPSyA2CmF",
+            "moduleName": "FitCloudOTAGenKit",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "GLONASS",
+            "printedName": "GLONASS",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudOTAGenKit.EPOFileType.Type) -> FitCloudOTAGenKit.EPOFileType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EPOFileType",
+                        "printedName": "FitCloudOTAGenKit.EPOFileType",
+                        "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType@EPOFileTypeGLONASS",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO7GLONASSyA2CmF",
+            "moduleName": "FitCloudOTAGenKit",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "GALILEO",
+            "printedName": "GALILEO",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudOTAGenKit.EPOFileType.Type) -> FitCloudOTAGenKit.EPOFileType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EPOFileType",
+                        "printedName": "FitCloudOTAGenKit.EPOFileType",
+                        "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType@EPOFileTypeGALILEO",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO7GALILEOyA2CmF",
+            "moduleName": "FitCloudOTAGenKit",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "BDS",
+            "printedName": "BDS",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudOTAGenKit.EPOFileType.Type) -> FitCloudOTAGenKit.EPOFileType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EPOFileType",
+                        "printedName": "FitCloudOTAGenKit.EPOFileType",
+                        "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType@EPOFileTypeBDS",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO3BDSyA2CmF",
+            "moduleName": "FitCloudOTAGenKit",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "IRNSS",
+            "printedName": "IRNSS",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudOTAGenKit.EPOFileType.Type) -> FitCloudOTAGenKit.EPOFileType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EPOFileType",
+                        "printedName": "FitCloudOTAGenKit.EPOFileType",
+                        "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType@EPOFileTypeIRNSS",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO5IRNSSyA2CmF",
+            "moduleName": "FitCloudOTAGenKit",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "QZSS",
+            "printedName": "QZSS",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudOTAGenKit.EPOFileType.Type) -> FitCloudOTAGenKit.EPOFileType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EPOFileType",
+                        "printedName": "FitCloudOTAGenKit.EPOFileType",
+                        "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType@EPOFileTypeQZSS",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO4QZSSyA2CmF",
+            "moduleName": "FitCloudOTAGenKit",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FitCloudOTAGenKit.EPOFileType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17FitCloudOTAGenKit11EPOFileTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "FitCloudOTAGenKit",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FitCloudOTAGenKit11EPOFileTypeO8rawValueSivp",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO8rawValueSivp",
+            "moduleName": "FitCloudOTAGenKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FitCloudOTAGenKit11EPOFileTypeO8rawValueSivg",
+                "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO8rawValueSivg",
+                "moduleName": "FitCloudOTAGenKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[FitCloudOTAGenKit.EPOFileType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EPOFileType",
+                    "printedName": "FitCloudOTAGenKit.EPOFileType",
+                    "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FitCloudOTAGenKit11EPOFileTypeO8allCasesSayACGvpZ",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO8allCasesSayACGvpZ",
+            "moduleName": "FitCloudOTAGenKit",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FitCloudOTAGenKit.EPOFileType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EPOFileType",
+                        "printedName": "FitCloudOTAGenKit.EPOFileType",
+                        "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FitCloudOTAGenKit11EPOFileTypeO8allCasesSayACGvgZ",
+                "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO8allCasesSayACGvgZ",
+                "moduleName": "FitCloudOTAGenKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FitCloudOTAGenKit11EPOFileTypeO11descriptionSSvp",
+            "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO11descriptionSSvp",
+            "moduleName": "FitCloudOTAGenKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FitCloudOTAGenKit11EPOFileTypeO11descriptionSSvg",
+                "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO11descriptionSSvg",
+                "moduleName": "FitCloudOTAGenKit",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType",
+        "mangledName": "$s17FitCloudOTAGenKit11EPOFileTypeO",
+        "moduleName": "FitCloudOTAGenKit",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FitCloudOTAGenKit.EPOFileType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EPOFileType",
+                        "printedName": "FitCloudOTAGenKit.EPOFileType",
+                        "usr": "c:@M@FitCloudOTAGenKit@E@EPOFileType"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          }
         ]
       },
       {
@@ -1534,12 +2546,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "FitCloudOTAGenKit.Loggable?",
+                "printedName": "(any FitCloudOTAGenKit.Loggable)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Loggable",
-                    "printedName": "FitCloudOTAGenKit.Loggable",
+                    "printedName": "any FitCloudOTAGenKit.Loggable",
                     "usr": "c:@M@FitCloudOTAGenKit@objc(pl)Loggable"
                   }
                 ],
@@ -1548,15 +2560,79 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@FitCloudOTAGenKit@objc(cs)FitCloudOTAGenService(cm)createGpsEpoBin:::error:",
+            "usr": "c:@CM@FitCloudOTAGenKit@objc(cs)FitCloudOTAGenService(cm)createGpsEpoBin:::error:",
             "mangledName": "$s17FitCloudOTAGenKit0abC7ServiceC15createGpsEpoBinySSSaySSG_SSAA8Loggable_pSgtKFZ",
             "moduleName": "FitCloudOTAGenKit",
             "static": true,
             "declAttributes": [
+              "Dynamic",
               "AccessControl",
               "ObjC",
               "RawDocComment"
             ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createICOEGpsEpoBin",
+            "printedName": "createICOEGpsEpoBin(_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[FitCloudOTAGenKit.ICOEEPOFile]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ICOEEPOFile",
+                    "printedName": "FitCloudOTAGenKit.ICOEEPOFile",
+                    "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any FitCloudOTAGenKit.Loggable)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Loggable",
+                    "printedName": "any FitCloudOTAGenKit.Loggable",
+                    "usr": "c:@M@FitCloudOTAGenKit@objc(pl)Loggable"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@FitCloudOTAGenKit@objc(cs)FitCloudOTAGenService(cm)createICOEGpsEpoBin:::error:",
+            "mangledName": "$s17FitCloudOTAGenKit0abC7ServiceC19createICOEGpsEpoBinySSSayAA11ICOEEPOFileCG_SSAA8Loggable_pSgtKFZ",
+            "moduleName": "FitCloudOTAGenKit",
+            "static": true,
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
           }
@@ -2112,6 +3188,16 @@
             "mangledName": "$s10Foundation26_ObjectiveCBridgeableErrorP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FitCloudOTAGenKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       }
     ],
     "json_format_version": 8
@@ -2132,62 +3218,6 @@
       "value": "[0x0000, 0xc0c1, 0xc181, 0x0140, 0xc301, 0x03c0, 0x0280, 0xc241, 0xc601, 0x06c0, 0x0780, 0xc741, 0x0500, 0xc5c1, 0xc481, 0x0440, 0xcc01, 0x0cc0, 0x0d80, 0xcd41, 0x0f00, 0xcfc1, 0xce81, 0x0e40, 0x0a00, 0xcac1, 0xcb81, 0x0b40, 0xc901, 0x09c0, 0x0880, 0xc841, 0xd801, 0x18c0, 0x1980, 0xd941, 0x1b00, 0xdbc1, 0xda81, 0x1a40, 0x1e00, 0xdec1, 0xdf81, 0x1f40, 0xdd01, 0x1dc0, 0x1c80, 0xdc41, 0x1400, 0xd4c1, 0xd581, 0x1540, 0xd701, 0x17c0, 0x1680, 0xd641, 0xd201, 0x12c0, 0x1380, 0xd341, 0x1100, 0xd1c1, 0xd081, 0x1040, 0xf001, 0x30c0, 0x3180, 0xf141, 0x3300, 0xf3c1, 0xf281, 0x3240, 0x3600, 0xf6c1, 0xf781, 0x3740, 0xf501, 0x35c0, 0x3480, 0xf441, 0x3c00, 0xfcc1, 0xfd81, 0x3d40, 0xff01, 0x3fc0, 0x3e80, 0xfe41, 0xfa01, 0x3ac0, 0x3b80, 0xfb41, 0x3900, 0xf9c1, 0xf881, 0x3840, 0x2800, 0xe8c1, 0xe981, 0x2940, 0xeb01, 0x2bc0, 0x2a80, 0xea41, 0xee01, 0x2ec0, 0x2f80, 0xef41, 0x2d00, 0xedc1, 0xec81, 0x2c40, 0xe401, 0x24c0, 0x2580, 0xe541, 0x2700, 0xe7c1, 0xe681, 0x2640, 0x2200, 0xe2c1, 0xe381, 0x2340, 0xe101, 0x21c0, 0x2080, 0xe041, 0xa001, 0x60c0, 0x6180, 0xa141, 0x6300, 0xa3c1, 0xa281, 0x6240, 0x6600, 0xa6c1, 0xa781, 0x6740, 0xa501, 0x65c0, 0x6480, 0xa441, 0x6c00, 0xacc1, 0xad81, 0x6d40, 0xaf01, 0x6fc0, 0x6e80, 0xae41, 0xaa01, 0x6ac0, 0x6b80, 0xab41, 0x6900, 0xa9c1, 0xa881, 0x6840, 0x7800, 0xb8c1, 0xb981, 0x7940, 0xbb01, 0x7bc0, 0x7a80, 0xba41, 0xbe01, 0x7ec0, 0x7f80, 0xbf41, 0x7d00, 0xbdc1, 0xbc81, 0x7c40, 0xb401, 0x74c0, 0x7580, 0xb541, 0x7700, 0xb7c1, 0xb681, 0x7640, 0x7200, 0xb2c1, 0xb381, 0x7340, 0xb101, 0x71c0, 0x7080, 0xb041, 0x5000, 0x90c1, 0x9181, 0x5140, 0x9301, 0x53c0, 0x5280, 0x9241, 0x9601, 0x56c0, 0x5780, 0x9741, 0x5500, 0x95c1, 0x9481, 0x5440, 0x9c01, 0x5cc0, 0x5d80, 0x9d41, 0x5f00, 0x9fc1, 0x9e81, 0x5e40, 0x5a00, 0x9ac1, 0x9b81, 0x5b40, 0x9901, 0x59c0, 0x5880, 0x9841, 0x8801, 0x48c0, 0x4980, 0x8941, 0x4b00, 0x8bc1, 0x8a81, 0x4a40, 0x4e00, 0x8ec1, 0x8f81, 0x4f40, 0x8d01, 0x4dc0, 0x4c80, 0x8c41, 0x4400, 0x84c1, 0x8581, 0x4540, 0x8701, 0x47c0, 0x4680, 0x8641, 0x8201, 0x42c0, 0x4380, 0x8341, 0x4100, 0x81c1, 0x8081, 0x4040]"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/CRCUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 442,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/CRCUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 835,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/CRCUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 859,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/CRCUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1374,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/CRCUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1457,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/CRCUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1522,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/CRCUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1589,
-      "length": 4,
-      "value": "0xff"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/CRCUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1617,
-      "length": 1,
-      "value": "1"
-    },
-    {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
       "kind": "IntegerLiteral",
       "offset": 231,
@@ -2440,130 +3470,11 @@
       "value": "16"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 1589,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 1632,
-      "length": 8,
-      "value": "[0x2792]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 1684,
-      "length": 8,
-      "value": "[0x2793]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 1730,
-      "length": 8,
-      "value": "[0x27a0]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 1783,
-      "length": 64,
-      "value": "[0x27a1, 0x27a5, 0x27a6, 0x27a7, 0x27a8, 0x27a9, 0x27aa, 0x27ab]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 1885,
-      "length": 8,
-      "value": "[0x27a2]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 1933,
-      "length": 8,
-      "value": "[0x27a3]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 1993,
-      "length": 8,
-      "value": "[0x27af]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 2047,
-      "length": 8,
-      "value": "[0x27bf]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 2100,
-      "length": 80,
-      "value": "[0x27c0, 0x27c1, 0x27c2, 0x27c3, 0x27c4, 0x27c5, 0x27c6, 0x27c7, 0x27c8, 0x27c9]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 2233,
-      "length": 8,
-      "value": "[0x27cf]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 2283,
-      "length": 80,
-      "value": "[0x27d0, 0x27d1, 0x27d2, 0x27d3, 0x27d4, 0x27d5, 0x27d6, 0x27d7, 0x27d8, 0x27d9]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 2415,
-      "length": 8,
-      "value": "[0x27df]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 2466,
-      "length": 8,
-      "value": "[0x27e9]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 2524,
-      "length": 8,
-      "value": "[0x3000]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 2580,
-      "length": 8,
-      "value": "[0x3001]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 2641,
-      "length": 8,
-      "value": "[0xfefe]"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/OTAImageType.swift",
-      "kind": "Array",
-      "offset": 2700,
-      "length": 8,
-      "value": "[0xfeff]"
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/ICOEEPOFile.swift",
+      "kind": "StringLiteral",
+      "offset": 145,
+      "length": 11,
+      "value": "\"FitCloudOTAGenKit.ICOEEPOFile\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
@@ -2594,95 +3505,102 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1016,
-      "length": 87,
-      "value": "\"[\""
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 227,
+      "length": 2,
+      "value": "-1"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1026,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 291,
       "length": 1,
-      "value": "\"\""
+      "value": "0"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1035,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 377,
       "length": 1,
-      "value": "\"] \""
+      "value": "1"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1064,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 457,
       "length": 1,
-      "value": "\" \""
+      "value": "2"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1076,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 526,
       "length": 1,
-      "value": "\" (line \""
+      "value": "3"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1090,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 596,
       "length": 1,
-      "value": "\") \""
+      "value": "4"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1102,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 664,
       "length": 1,
-      "value": "\"\""
+      "value": "5"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1129,
-      "length": 59,
-      "value": "\"[\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1139,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 227,
       "length": 1,
-      "value": "\"\""
+      "value": "-1"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1148,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 291,
       "length": 1,
-      "value": "\"] \""
+      "value": "0"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1161,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 377,
       "length": 1,
-      "value": "\" (line \""
+      "value": "1"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1175,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 457,
       "length": 1,
-      "value": "\") \""
+      "value": "2"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/LogProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1187,
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 526,
       "length": 1,
-      "value": "\"\""
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 596,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Defines\/EPOFileType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 664,
+      "length": 1,
+      "value": "5"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
@@ -2694,72 +3612,9 @@
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
       "kind": "IntegerLiteral",
-      "offset": 869,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 881,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 952,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 975,
-      "length": 6,
-      "value": "0x27a1"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1007,
-      "length": 6,
-      "value": "0x27a5"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1023,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
       "offset": 1244,
       "length": 1,
       "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1366,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1378,
-      "length": 1,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1445,
-      "length": 6,
-      "value": "0x27c0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
@@ -2769,48 +3624,6 @@
       "value": "0"
     },
     {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1798,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1810,
-      "length": 1,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1877,
-      "length": 6,
-      "value": "0x27d0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2265,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2378,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Utils\/OTAImageUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2486,
-      "length": 1,
-      "value": "0"
-    },
-    {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
       "kind": "IntegerLiteral",
       "offset": 198,
@@ -2879,629 +3692,6 @@
       "offset": 352,
       "length": 1,
       "value": "4"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
-      "kind": "StringLiteral",
-      "offset": 509,
-      "length": 9,
-      "value": "\"verbose\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
-      "kind": "StringLiteral",
-      "offset": 559,
-      "length": 7,
-      "value": "\"debug\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
-      "kind": "StringLiteral",
-      "offset": 605,
-      "length": 6,
-      "value": "\"info\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
-      "kind": "StringLiteral",
-      "offset": 654,
-      "length": 9,
-      "value": "\"warning\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
-      "kind": "StringLiteral",
-      "offset": 704,
-      "length": 7,
-      "value": "\"error\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 1179,
-      "length": 38,
-      "value": "\"开始检查epo文件是否存在...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1301,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 1451,
-      "length": 41,
-      "value": "\"epo文件：\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 1478,
-      "length": 9,
-      "value": "\" 不存在...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 1616,
-      "length": 41,
-      "value": "\"开始检查输出目录是否存在...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1699,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 1827,
-      "length": 53,
-      "value": "\"输出目录不存在，开始尝试创建目录...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1980,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2045,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 2086,
-      "length": 65,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 2105,
-      "length": 42,
-      "value": "\"不是目录，尝试移除并重新创建...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2315,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 2379,
-      "length": 26,
-      "value": "\"开始合并epo文件...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2515,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 2864,
-      "length": 16,
-      "value": "\"yyyyMMddHHmmss\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 2957,
-      "length": 27,
-      "value": "\"gps_epo_\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 2979,
-      "length": 1,
-      "value": "\".bin\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 3147,
-      "length": 80,
-      "value": "\"epo文件合并完成，合成后文件路径：\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 3223,
-      "length": 3,
-      "value": "\"...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 3336,
-      "length": 38,
-      "value": "\"开始写入OTA头的数据长度...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3595,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3908,
-      "length": 2,
-      "value": "50"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4027,
-      "length": 2,
-      "value": "50"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4084,
-      "length": 4,
-      "value": "1024"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4138,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4263,
-      "length": 2,
-      "value": "66"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4382,
-      "length": 2,
-      "value": "66"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 4470,
-      "length": 32,
-      "value": "\"开始写入OTA镜像类型...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4604,
-      "length": 2,
-      "value": "61"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4723,
-      "length": 2,
-      "value": "61"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4822,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4880,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5005,
-      "length": 3,
-      "value": "516"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5125,
-      "length": 3,
-      "value": "516"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 5223,
-      "length": 34,
-      "value": "\"开始写入MP头数据长度...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5359,
-      "length": 3,
-      "value": "520"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5479,
-      "length": 3,
-      "value": "520"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5584,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 5666,
-      "length": 29,
-      "value": "\"开始写入CRC校验值...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5775,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5906,
-      "length": 3,
-      "value": "524"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6038,
-      "length": 3,
-      "value": "524"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6202,
-      "length": 3,
-      "value": "740"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6409,
-      "length": 3,
-      "value": "740"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6470,
-      "length": 3,
-      "value": "360"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6476,
-      "length": 3,
-      "value": "391"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6503,
-      "length": 4,
-      "value": "0xff"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6516,
-      "length": 2,
-      "value": "32"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6732,
-      "length": 4,
-      "value": "1520"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6865,
-      "length": 4,
-      "value": "1520"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7062,
-      "length": 4,
-      "value": "1520"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7286,
-      "length": 4,
-      "value": "1520"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7513,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7612,
-      "length": 3,
-      "value": "524"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7744,
-      "length": 3,
-      "value": "524"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7908,
-      "length": 3,
-      "value": "740"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8115,
-      "length": 3,
-      "value": "740"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8176,
-      "length": 3,
-      "value": "360"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8182,
-      "length": 3,
-      "value": "391"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8209,
-      "length": 4,
-      "value": "0xff"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8222,
-      "length": 2,
-      "value": "32"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8264,
-      "length": 3,
-      "value": "360"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8270,
-      "length": 3,
-      "value": "360"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8297,
-      "length": 4,
-      "value": "0x00"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8310,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8527,
-      "length": 4,
-      "value": "1520"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8672,
-      "length": 4,
-      "value": "1520"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8889,
-      "length": 4,
-      "value": "1520"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9133,
-      "length": 4,
-      "value": "1520"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9384,
-      "length": 3,
-      "value": "518"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9504,
-      "length": 3,
-      "value": "518"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9587,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9597,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9617,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9643,
-      "length": 4,
-      "value": "0xFF"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9666,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9694,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9699,
-      "length": 4,
-      "value": "0xFF"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9754,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 9834,
-      "length": 77,
-      "value": "\"GPS文件生成成功，crc值：\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 9885,
-      "length": 6,
-      "value": "\"%04X\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 9907,
-      "length": 3,
-      "value": "\"...\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 10150,
-      "length": 40,
-      "value": "\"GPS文件路径：\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/FitCloudOTAGenService.swift",
-      "kind": "StringLiteral",
-      "offset": 10186,
-      "length": 3,
-      "value": "\"...\""
     }
   ]
 }

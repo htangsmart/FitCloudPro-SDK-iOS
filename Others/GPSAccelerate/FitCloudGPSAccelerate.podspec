@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'FitCloudGPSAccelerate'
   s.summary      = 'GPSAccelerate'
-  s.version      = '1.0.0-beta.1'
+  s.version      = '1.0.1-beta.1'
   s.description      = <<-DESC
   The FitCloud GPS accelerate.
   DESC
