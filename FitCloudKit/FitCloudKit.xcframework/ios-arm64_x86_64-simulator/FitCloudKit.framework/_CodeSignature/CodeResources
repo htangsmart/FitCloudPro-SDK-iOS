@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/FitCloudAllConfigObject.h</key>
 		<data>
-		2gS2lj+YxG7QRla+GX4c2WFDmQY=
+		/gqpPq2SngzZ18Z9/jAcj9HMbcs=
 		</data>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Headers/FitCloudBPRObject.h</key>
 		<data>
-		0EEcA7XHJWsjAq9pEW2LY1ToUQ0=
+		OKhDdxUVE+dj+fuK8H7GWd03NQk=
 		</data>
 		<key>Headers/FitCloudBatteryInfoObject.h</key>
 		<data>
-		EQ+DQKyRnImVIyrFN+P/JQaUa3s=
+		AXdhvwtiN0GWhyMdw5n6IsGk6LM=
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
@@ -82,11 +82,11 @@
 		</data>
 		<key>Headers/FitCloudEvent.h</key>
 		<data>
-		bcobLhhC+mQoccwVh68ArYVPv/0=
+		vkQ2buiLp8obOWxkeA/RwRJa+4E=
 		</data>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
-		jmusAf/s3IqcUIC4OOwQtgE9eLU=
+		GoBKTPWK+M2cjP9Q/5Dt53KD97M=
 		</data>
 		<key>Headers/FitCloudGPSData.h</key>
 		<data>
@@ -158,11 +158,11 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		TrD8EqE10TdmVdc4GDQRtDEV1pU=
+		4HyF3W/9JsiAVq/T6TVouPzVLyI=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
-		sOqU4NYosewvzM4NlLldZXFPq38=
+		FbxdYNrh9gtMHa0keb2zZzIo6aw=
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
@@ -174,7 +174,7 @@
 		</data>
 		<key>Headers/FitCloudLatestHealthMeasurementDataObject.h</key>
 		<data>
-		fgsVBwbGVSP5W3Uj36LW/yYriSM=
+		/a0k2k7EmhESJtLTgrsdbKSGg58=
 		</data>
 		<key>Headers/FitCloudLockScreenSetting.h</key>
 		<data>
@@ -302,7 +302,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gGzDrGw9k51OWwACj4CMUa0Etv4=
+		AUiui4IgVrxv98n40U5SDDXtWBY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -326,11 +326,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2gS2lj+YxG7QRla+GX4c2WFDmQY=
+			/gqpPq2SngzZ18Z9/jAcj9HMbcs=
 			</data>
 			<key>hash2</key>
 			<data>
-			RPahfpxF8Uxertbf5yTfhsWUk1+hmGNI0gS/iGknkfQ=
+			4lPo620PhoVJap4LHoUIZyfLGir7KLxxQca1P1bXf5o=
 			</data>
 		</dict>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
@@ -348,22 +348,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0EEcA7XHJWsjAq9pEW2LY1ToUQ0=
+			OKhDdxUVE+dj+fuK8H7GWd03NQk=
 			</data>
 			<key>hash2</key>
 			<data>
-			UNGoh2fvYH4CJRD/kibQgrpGpbgMFh6xKpHrsN8sh7w=
+			IlfGXpu3lhohen/GUDU2HPAJGlfc2pEKvTvieq9THgU=
 			</data>
 		</dict>
 		<key>Headers/FitCloudBatteryInfoObject.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EQ+DQKyRnImVIyrFN+P/JQaUa3s=
+			AXdhvwtiN0GWhyMdw5n6IsGk6LM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Uz6CJUb0HA/XlY7E3TRsY9Ws/pWCUMqYdRZ7JQjfuok=
+			uMLQYM9Vggf/T0sEQ5D1NJWH/jz/GJD5W8hbtjT4SJ4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCallback.h</key>
@@ -524,22 +524,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bcobLhhC+mQoccwVh68ArYVPv/0=
+			vkQ2buiLp8obOWxkeA/RwRJa+4E=
 			</data>
 			<key>hash2</key>
 			<data>
-			eEL8hhAfY1ijpfzEqogcoJd6q5vr3zUPCFlJGHffy3I=
+			RYW1SWeqw3g84bH6Gm2+pm0zhVpfdPdynQg0m15aLfc=
 			</data>
 		</dict>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jmusAf/s3IqcUIC4OOwQtgE9eLU=
+			GoBKTPWK+M2cjP9Q/5Dt53KD97M=
 			</data>
 			<key>hash2</key>
 			<data>
-			TYfUQqMoKCdRy9246+YKKN+3HkbTChWtJDA45CAJJI8=
+			I01nM1jzQ2UCpygO7amE5NKzy6hNCHg7SmNjZv6JLuk=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSData.h</key>
@@ -733,22 +733,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TrD8EqE10TdmVdc4GDQRtDEV1pU=
+			4HyF3W/9JsiAVq/T6TVouPzVLyI=
 			</data>
 			<key>hash2</key>
 			<data>
-			n27ziAhKfzjmaJvghimkO93wVdQkZRkjU5b9bXUgCSI=
+			wknCSDW/CG/k73aqzVjTE2+45Q357x9ISQkJ4auDwgU=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sOqU4NYosewvzM4NlLldZXFPq38=
+			FbxdYNrh9gtMHa0keb2zZzIo6aw=
 			</data>
 			<key>hash2</key>
 			<data>
-			gbPIV7IXTbgP7kd6o1bdD0+koWuWqHzwF6oaeSyDvqA=
+			cU3zsA0TaGzww/V2r/y1JFYGryb9yEacvDXu1jCo3Jo=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitDefines.h</key>
@@ -777,11 +777,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fgsVBwbGVSP5W3Uj36LW/yYriSM=
+			/a0k2k7EmhESJtLTgrsdbKSGg58=
 			</data>
 			<key>hash2</key>
 			<data>
-			3IrPYmCVI/gcpecXxQlJfZa8gBacBQh8oAmne4HvW0Q=
+			va9sGup2453hA+825596qIZfp2iCwGGZSwlWehDhme8=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLockScreenSetting.h</key>

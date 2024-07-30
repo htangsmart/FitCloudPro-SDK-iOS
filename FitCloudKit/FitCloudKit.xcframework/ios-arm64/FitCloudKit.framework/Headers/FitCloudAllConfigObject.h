@@ -27,12 +27,12 @@
 #import <FitCloudKit/FitCloudCapacity.h>
 
 /**
- * @brief 手环所有配置信息（用于手环绑定时一次性获取）
+ * @brief 手表所有配置信息（用于手表绑定时一次性获取）
  */
 @interface FitCloudAllConfigObject : NSObject<NSCoding>
 
 /**
- * @brief 手环软硬件版本信息
+ * @brief 手表软硬件版本信息
  */
 @property(nonatomic, strong)FitCloudFirmwareVersionObject* firmware;
 
@@ -42,12 +42,12 @@
 @property(nonatomic, assign)FITCLOUDMN mnSetting;
 
 /**
- * @brief 手环表盘所有功能项显示状态设置
+ * @brief 手表表盘所有功能项显示状态设置
  */
 @property(nonatomic, assign)FITCLOUDSCREENDISPLAY sdSetting;
 
 /**
- * @brief 手环偏好
+ * @brief 手表偏好
  */
 @property(nonatomic, assign)FITCLOUDPREFER prefer;
 

@@ -10,7 +10,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 /**
- * @brief 手环最新的测量数据
+ * @brief 手表最新的测量数据
 */
 @interface FitCloudLatestHealthMeasurementDataObject : NSObject<NSCoding>
 

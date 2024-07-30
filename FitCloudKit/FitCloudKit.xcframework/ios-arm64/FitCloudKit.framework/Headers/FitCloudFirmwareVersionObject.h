@@ -10,7 +10,7 @@
 #import "FitCloudKitDefines.h"
 
 /**
- * @brief 手环软硬件版本信息
+ * @brief 手表软硬件版本信息
  */
 @interface FitCloudFirmwareVersionObject : NSObject<NSCoding>
 
@@ -20,7 +20,7 @@
 @property(nonatomic, strong, readonly) NSString* projectNo;
 
 /**
- * @brief 手环底层patch版本号
+ * @brief 手表底层patch版本号
  */
 @property(nonatomic, strong, readonly) NSString* patchVersion;
 
@@ -30,7 +30,7 @@
 @property(nonatomic, strong, readonly) NSString* flashVersion;
 
 /**
- * @brief 手环固件版本号
+ * @brief 手表固件版本号
  */
 @property(nonatomic, strong, readonly) NSString* firmwareVersion;
 
@@ -40,12 +40,12 @@
 @property(nonatomic, strong, readonly) NSString* sequenceNo;
 
 /**
- * @brief 手环表盘支持的页面
+ * @brief 手表表盘支持的页面
  */
 @property(nonatomic, readonly)FITCLOUDSCREENDISPLAY screenDisplaySupported;
 
 /**
- * @brief 手环硬件支持的功能，手机APP根据该项判断在手机APP上是否显示或使用该功能
+ * @brief 手表硬件支持的功能，手机APP根据该项判断在手机APP上是否显示或使用该功能
  */
 @property(nonatomic, readonly) FITCLOUDHARDWARE hardwareSupported;
 

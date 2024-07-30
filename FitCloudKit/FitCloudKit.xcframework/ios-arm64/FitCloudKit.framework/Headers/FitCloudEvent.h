@@ -17,55 +17,55 @@
 /// object=>CBCentralManager
 extern NSString *const FITCLOUDEVENT_CENTRALMANAGER_DIDUPDATESTATE_NOTIFY;
 
-/// 发现新的外设(手环)通知 
+/// 发现新的外设(手表)通知 
 ///
 /// object=>FitCloudPeripheral
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCOVERED_NOTIFY;
 
-/// 发现的外设(手环)更新通知 
+/// 发现的外设(手表)更新通知 
 ///
 /// object=>FitCloudPeripheral
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCOVERED_UPDATED_NOTIFY;
 
-/// 外设(手环)扫描停止通知
+/// 外设(手表)扫描停止通知
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_SCANSTOP_NOTIFY;
 
-/// 外设(手环)开始连接通知 
+/// 外设(手表)开始连接通知 
 ///
 /// object=>CBPeripheral
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECTING_NOTIFY;
 
-/// 外设(手环)连接成功通知 
+/// 外设(手表)连接成功通知 
 ///
 /// object=>CBPeripheral
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECTED_NOTIFY;
 
-/// 外设(手环)DFU模式回连成功通知 
+/// 外设(手表)DFU模式回连成功通知 
 ///
 /// object=>CBPeripheral
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_RECONNECTEDWITHDFUMODE_NOTIFY;
 
-/// 外设(手环)连接失败通知 
+/// 外设(手表)连接失败通知 
 ///
 /// object=>CBPeripheral userInfo=>@{@"error" : error}
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY;
 
-/// 外设(手环)断开连接通知 
+/// 外设(手表)断开连接通知 
 ///
 /// object=>CBPeripheral userInfo=>@{@"error" : error}
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCONNECT_NOTIFY;
 
-/// 外设(手环)更新名称通知 
+/// 外设(手表)更新名称通知 
 ///
 /// object=>CBPeripheral
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DIDUPDATENAME_NOTIFIY;
 
-/// 外设(手环)更新RSSI通知 
+/// 外设(手表)更新RSSI通知 
 ///
 /// object=>CBPeripheral userInfo=>@{@"RSSI":rssi, @"error" : error}
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DIDUPDATERSSI_NOTIFIY;
 
-/// 外设(手环)写特征准备就绪通知 
+/// 外设(手表)写特征准备就绪通知 
 ///
 /// object=>CBPeripheral
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY;
@@ -103,29 +103,29 @@ extern NSString *const FITCLOUDEVENT_LOGINUSEROBJECT_BEGIN_NOTIFY;
 /// userInfo=>{@"result":@(YES/NO), @"error" : error}
 extern NSString *const FITCLOUDEVENT_LOGINUSEROBJECT_RESULT_NOTIFY;
 
-/// 手环被其他手机绑定或者已被解绑通知(maybe bound by different userid)
+/// 手表被其他手机绑定或者已被解绑通知(maybe bound by different userid)
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY;
 
-/// 开始获取手环所有配置通知
+/// 开始获取手表所有配置通知
 extern NSString *const FITCLOUDEVENT_GETALLCONFIG_BEGIN_NOTIFY;
 
-/// 获取手环所有配置结果通知 
+/// 获取手表所有配置结果通知 
 ///
 /// userInfo=>{@"result":@(YES/NO), @"error" : error}
 extern NSString *const FITCLOUDEVENT_GETALLCONFIG_RESULT_NOTIFY;
 
-/// 绑定<登录>初始化(绑定<登录>/获取所有手环配置 必要流程)结果通知 
+/// 绑定<登录>初始化(绑定<登录>/获取所有手表配置 必要流程)结果通知 
 ///
 /// userInfo=>{@"result":@(YES/NO), @"error" : error}
 extern NSString *const FITCLOUDEVENT_INITIALIZE_RESULT_NOTIFY;
 
-/// 绑定<登录>初始化成功后手环开始完成一些准备同步操作开始通知
+/// 绑定<登录>初始化成功后手表开始完成一些准备同步操作开始通知
 extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_BEGIN_NOTIFY;
 
-/// 绑定<登录>初始化成功后手环开始完成一些准备同步操作结束通知
+/// 绑定<登录>初始化成功后手表开始完成一些准备同步操作结束通知
 extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_END_NOTIFY;
 
-/// 手环电量信息通知 
+/// 手表电量信息通知 
 ///
 /// object=>FitCloudBatteryInfoObject
 extern NSString *const FITCLOUDEVENT_BATTERYINFO_NOTIFY;

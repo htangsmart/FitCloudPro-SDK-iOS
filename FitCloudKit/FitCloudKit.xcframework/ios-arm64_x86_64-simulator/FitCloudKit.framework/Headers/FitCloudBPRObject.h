@@ -24,7 +24,7 @@
 @property(nonatomic, assign) UInt8 systolic;
 
 /**
- * @brief 是否启用以上设定的值(舒张压/收缩压)参与手环血压算法的运算
+ * @brief 是否启用以上设定的值(舒张压/收缩压)参与手表血压算法的运算
  */
 @property(nonatomic, assign) BOOL   on;
 

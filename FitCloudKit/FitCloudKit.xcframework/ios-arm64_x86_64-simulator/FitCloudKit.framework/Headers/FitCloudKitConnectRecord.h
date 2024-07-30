@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 /**
- * @brief FitCloudKit 手环连接配对记录
+ * @brief FitCloudKit 手表连接配对记录
  */
 @interface FitCloudKitConnectRecord : NSObject<NSCoding>
 
 /**
- * @brief 手环名称
+ * @brief 手表名称
  */
 @property(nonatomic, strong) NSString* name;
 

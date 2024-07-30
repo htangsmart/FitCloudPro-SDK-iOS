@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- * @brief 手环充电状态
+ * @brief 手表充电状态
  */
 typedef NS_ENUM(Byte, BATTERYSTATE)
 {
