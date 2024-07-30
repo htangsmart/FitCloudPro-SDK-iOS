@@ -1093,6 +1093,7 @@ typedef NS_OPTIONS(UInt64, FITCLOUDMN)
     FITCLOUDMN_UBER = ((UInt64)1) << 45,                  //Uber通知
     FITCLOUDMN_SWIGGY = ((UInt64)1) << 46,                //Swiggy通知
     FITCLOUDMN_ZOMATO = ((UInt64)1) << 47,                //Zomato通知
+    FITCLOUDMN_TIRA = ((UInt64)1) << 48,                  //Tira通知
 };
 
 

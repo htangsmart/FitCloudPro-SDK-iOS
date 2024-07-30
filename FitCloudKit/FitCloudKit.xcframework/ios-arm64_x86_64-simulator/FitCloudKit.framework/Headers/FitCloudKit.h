@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-07-22  Version:1.2.9-beta.158 Build:20240722002
+//     pcjbird    2024-07-30  Version:1.2.9-beta.159 Build:20240730001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -81,6 +81,7 @@
 //                            69.表盘尺寸支持194*368方
 //                            70.芯与物GPS支持
 //                            71.ANCS通知扩展
+//                            72.耳机仓项目支持
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1504,6 +1505,31 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - completion: 结果回调
 +(void) queryRestingHRWithCompletion:(FitCloudRestingHRQueryCompletion _Nullable)completion;
+
+
+#pragma mark - 耳机仓
+
+/// 设置耳机仓歌词颜色(Set earbud case lyrics color)
+/// - Parameters:
+///   - lyricsColor: 歌词颜色(lyrics color)
+///   - completion: the completion callback
++(void)setEarbudCaseLyricsColor:(UIColor*)lyricsColor withCompletion:(FitCloudResultHandler _Nullable)completion;
+
+/// 查询耳机仓歌词颜色(Query earbud case lyrics color)
+/// - Parameters:
+///   - completion: the completion callback
++(void)queryEarbudCaseLyricsColorWithCompletion:(void(^_Nullable)(BOOL success, UIColor*_Nullable lyricsColor, NSError*_Nullable error))completion;
+
+/// 设置耳机仓充电壁纸是否常亮(Set earbud case charging wallpaper whether always bright)
+/// - Parameters:
+///   - alwaysBright: 是否常亮
+///   - completion: the completion callback
++(void)setEarbudCaseChargingWallpaperAlwaysBright:(BOOL)alwaysBright withCompletion:(FitCloudResultHandler _Nullable)completion;
+
+/// 查询耳机仓充电壁纸是否常亮(Query earbud case charging wallpaper whether always bright)
+/// - Parameters:
+///   - completion: the completion callback
++(void)queryEarbudCaseChargingWallpaperWhetherAlwaysBrightWithCompletion:(void(^_Nullable)(BOOL success, BOOL alwaysBright, NSError*_Nullable error))completion;
 
 @end
 
