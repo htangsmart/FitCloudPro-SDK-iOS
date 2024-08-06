@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-07-30  Version:1.2.9-beta.161 Build:20240730003
+//     pcjbird    2024-08-06  Version:1.2.9-beta.162 Build:20240806001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -46,7 +46,7 @@
 //                            34.设备能力类型新增设备支持的天气种类数量
 //                            35.新增设置和查询运动极限心率，仅特定项目可用
 //                            36.新增猎声相关软件版本信息查询功能，仅该客户可用，版本信息数据由客户自行解析, @see FitCloudKit+Haylou.h
-//                            37.新增文心一言支持, @see withERNIEBot
+//                            37.新增大模型支持, @see withLLM
 //                            38.新增猎声手表SN信息查询功能，仅该客户可用, @see FitCloudKit+Haylou.h
 //                            39.修改绑定API，新增随机码，没有随机码是填nil
 //                            40.绑定失败错误新增`手表需要恢复出厂设置才能绑定`
@@ -1699,18 +1699,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// 文心一言
-@interface FitCloudKit (ERNIEBot)
+/// 大模型
+@interface FitCloudKit (LLM)
 
-#pragma mark 发送文心一言结果
+#pragma mark 发送大模型结果
 
-/// 发送文心一言结果
+/// 发送大模型结果
 /// - Parameters:
 ///   - text: 结果
 ///   - isEnd: 是否结束
 ///   - resultType: 文案类型
 ///   - completion: 结果回调
-+(void) sendERNIEBotResult:(NSString*)text isEnd:(BOOL)isEnd resultType:(ERNIEBOTRESULTTYPE)resultType completion:(FitCloudResultHandler _Nullable) completion;
++(void) sendLLMResult:(NSString*)text isEnd:(BOOL)isEnd resultType:(LLMRESULTTYPE)resultType completion:(FitCloudResultHandler _Nullable) completion;
 
 @end
 

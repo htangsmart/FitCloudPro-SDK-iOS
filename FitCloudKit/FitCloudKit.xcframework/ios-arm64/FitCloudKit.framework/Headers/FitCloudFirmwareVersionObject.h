@@ -340,8 +340,8 @@
 /// 是否支持新OTA
 @property(nonatomic, readonly) BOOL withNewOTA;
 
-/// 是否支持文心一言
-@property(nonatomic, readonly) BOOL withERNIEBot;
+/// 是否支持大模型
+@property(nonatomic, readonly) BOOL withLLM;
 
 /// 是否支持个性化提醒(高级提醒)
 @property(nonatomic, readonly) BOOL withPersonalizedReminder;
@@ -374,5 +374,8 @@
 
 /// 是否使用数据同步记录的间隔的数值作为数据项增加的数据长度
 @property(nonatomic, readonly) BOOL useDataSyncRecordIntervalAsItemAdditionalDataLength;
+
+/// 大模型类型
+@property(nonatomic, readonly) LLMTYPE llmType;
 
 @end

@@ -15,7 +15,7 @@
 @property(nonatomic, strong, readonly, nullable) NSString* macAddr;
 
 /// 是否为下一代厂商名称
-@property(nonatomic, readonly) BOOL nextManufacturerName;
+@property(nonatomic, readonly) BOOL isNextManufacturerName;
 
 /// 是否允许同时连接通话蓝牙
 @property(nonatomic, readonly) BOOL allowConnectWithBT;

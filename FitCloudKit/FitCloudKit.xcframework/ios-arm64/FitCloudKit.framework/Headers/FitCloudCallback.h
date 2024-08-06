@@ -694,13 +694,13 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* f
  */
 -(void) OnAlexaVoiceDecodedWithData:(NSData*)voiceData;
 
-/// 文心一言语音传输开始
--(void) OnERNIEBotVoiceBegin;
+/// 大模型语音传输开始
+-(void) OnLLMVoiceBegin;
 
-/// 文心一言语音传输结束，并返回请求的语音数据，该数据已经经过解码
+/// 大模型语音传输结束，并返回请求的语音数据，该数据已经经过解码
 /// - Parameters:
 ///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
--(void) OnERNIEBotVoiceStopWithDecodedVoiceData:(NSData*)voiceData;
+-(void) OnLLMVoiceStopWithDecodedVoiceData:(NSData*)voiceData;
 
 /// 手表发送情侣消息，通过APP发给对方
 /// - Parameters:

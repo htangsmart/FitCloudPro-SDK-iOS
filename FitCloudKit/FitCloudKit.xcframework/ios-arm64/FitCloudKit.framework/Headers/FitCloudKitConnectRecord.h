@@ -21,7 +21,7 @@
 /**
  * @brief 是否为下一代厂商名称
  */
-@property(nonatomic, assign) BOOL nextManufacturerName;
+@property(nonatomic, assign) BOOL isNextManufacturerName;
 
 /**
  * @brief 是否允许同时连接通话蓝牙
