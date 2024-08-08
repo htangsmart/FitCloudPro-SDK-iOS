@@ -15,13 +15,13 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2.9-beta.163</string>
+	<string>1.2.9-beta.164</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>iPhoneOS</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>20240806002</string>
+	<string>20240808001</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>

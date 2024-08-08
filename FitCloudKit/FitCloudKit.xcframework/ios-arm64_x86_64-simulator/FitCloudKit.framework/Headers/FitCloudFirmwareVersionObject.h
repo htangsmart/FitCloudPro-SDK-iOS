@@ -378,4 +378,7 @@
 /// 大模型类型
 @property(nonatomic, readonly) LLMTYPE llmType;
 
+/// 是否应该隐藏心率加强测量
+@property(nonatomic, readonly) BOOL shouldHideEnhancedHeartRateMeasurement;
+
 @end

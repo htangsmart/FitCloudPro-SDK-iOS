@@ -373,6 +373,27 @@
 /// 游泳效率
 @property(nonatomic, strong) NSNumber* swolf;
 
+///跳绳-触发次数
+@property(nonatomic, strong) NSNumber* jumpRopeTriggerCount;
+
+///跳绳-中断次数
+@property(nonatomic, strong) NSNumber* jumpRopeBreakCount;
+
+///跳绳-连续次数
+@property(nonatomic, strong) NSNumber* jumpRopeConsecutiveCount;
+
+///椭圆机-触发次数
+@property(nonatomic, strong) NSNumber* ellipticalTrainerTriggerCount;
+
+///椭圆机-触发频率
+@property(nonatomic, strong) NSNumber* ellipticalTrainerTriggersPerMinute;
+
+///划船机-触发次数
+@property(nonatomic, strong) NSNumber* rowingMachingTriggerCount;
+
+///划船机-触发频率
+@property(nonatomic, strong) NSNumber* rowingMachingTriggersPerMinute;
+
 @end
 
 /**
