@@ -575,9 +575,7 @@ typedef void (^FitCloudNewOTAEnvironmentCheckCompletion)(BOOL succeed, NSError* 
 ///   - error: error information
 typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* firmwareVersion, BOOL allowOTA, NSError* error);
 
-/**
- *@brief FitCloudKit 回调协议
- */
+/// FitCloudKit 回调协议
 @protocol FitCloudCallback<NSObject>
 
 @optional
@@ -585,113 +583,95 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* f
 /// 手表请求查找手机
 -(void) OnFindiPhoneEvent;
 
-/**
- *@brief 手表请求查找手机停止
- */
+/// 手表请求查找手机停止
 -(void) OnStopFindiPhoneEvent;
 
-/**
- *@brief 手表请求天气信息
- *@param block 天气信息回调
- */
+/// 手表请求天气信息
+/// - Parameters:
+///   - block: 天气信息回调
 -(void) OnRequestWeatherWithCallback:(FitCloudWeatherCallbackBlock)block;
 
-/**
- *@brief 实时健康测量结果
- *@param records 数据
- */
+/// 实时健康测量结果
+/// - Parameters:
+///   - records:数据
 -(void) OnRealTimeHealthMeasuringData:(NSArray<FitCloudRealTimeHealthMeasuringResultObject*>*)records;
 
-/**
- *@brief 心电实时测量结果
- *@param ecgDataArray 数据
- *@param interval 采样间隔, 单位：毫秒(ms)
- */
+/// 心电实时测量结果
+/// - Parameters:
+///   -  ecgDataArray: 数据
+///   - interval: 采样间隔, 单位：毫秒(ms)
 -(void) OnRealTimeECGData:(NSArray<NSNumber*>*) ecgDataArray interval:(NSInteger) interval;
 
-/**
- *@brief 心电实时测量结束
- */
+/// 心电实时测量结束
 -(void) OnRealTimeECGStop;
 
-/**
- *@brief 手表报告GPS互联运动状态
- *@param status GPS互联运动状态
- */
+/// 手表报告GPS互联运动状态
+/// - Parameters:
+///   -  status: GPS互联运动状态
 -(void) OnGPSConnectWatchStatus:(FitCloudSportsWithGPSActionParams*) status;
 
-/**
- *@brief 手表GPS互联实时运动数据
- *@param sportsData 数据
- */
+/// 手表GPS互联实时运动数据
+/// - Parameters:
+///   -  sportsData: 数据
 -(void) OnGPSConnectSportsData:(FitCloudSportsWithGPSData*)sportsData;
 
-/**
- *@brief 手表控制手机拍照
- */
+/// 手表控制手机拍照
 -(void)OnTakePhotoCtrl;
 
-/**
- *@brief 手表通知App退出拍照
-*/
+/// 手表通知App退出拍照
 -(void)OnExitCamera;
 
-/**
- *@brief 唤醒APP相机功能
- */
+/// 唤醒APP相机功能
 -(void)OnWakeUpCamera;
 
-/**
- *@brief 收到手表的活跃通知(当前手表与手机连接还活跃着)
- */
+/// 请求拍照实时预览图
+/// - Parameters:
+///   - width: 宽度
+///   - height: 高度
+///   - rotation: 旋转角度，支持的角度有 0°，90°，180°，270°
+///   - bufferSize: 图片Buffer大小限制
+-(void)OnRequestCameraLivePreviewWithWidth:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation bufferSize:(NSInteger)bufferSize;
+
+/// 收到手表的活跃通知(当前手表与手机连接还活跃着)
 -(void) OnBraceletAlive;
 
-/**
- *@brief 收到手表SOS请求
- */
+/// 收到手表SOS请求
 -(void) OnSOS;
 
-/**
- *@brief 启停第三方外设
- *@param peripheral 第三方外设
- *@param action 启停操作
- */
+/// 启停第三方外设
+/// - Parameters:
+///   -  peripheral: 第三方外设
+///   -  action: 启停操作
 -(void) OnThirdPartyPeripheral:(THIRDPARTYPERIPHERAL)peripheral action:(THIRDPARTYPERIPHERALACTION)action;
 
-/**
- *@brief 通知App收到Alexa语音开始请求
- *@param completion 结果回调
- */
+/// 通知App收到Alexa语音开始请求
+/// - Parameters:
+///   -  completion: 结果回调
 -(void) OnAlexaVoiceStartRequestWithCompletion:(FitCloudAlexaVoiceStartRequestCompletion)completion;
 
-/**
- *@brief Alexa请求的原始语音数据
- *@param rawData 原始数据
- */
+/// Alexa请求的原始语音数据
+/// - Parameters:
+///   -  rawData: 原始数据
 -(void) OnAlexaVoiceRawPartialData:(NSData*)rawData;
 
-/**
- *@brief Alexa语音原始数据传输完成
- *@param length 长度
- *@param crc crc
- */
+/// Alexa语音原始数据传输完成
+/// - Parameters:
+///   -  length: 长度
+///   -  crc: crc
 -(void) OnAlexaVoiceFinish:(NSInteger)length crc:(NSInteger) crc;
 
-/**
- *@brief Alexa语音原始数据校验错误
- *@param error 校验错误
- */
+
+/// Alexa语音原始数据校验错误
+/// - Parameters:
+///   - error: 校验错误
 -(void) OnAlexaVoiceCheckWithError:(ALEXACHECKERROR)error;
 
-/**
- *@brief Alexa语音数据接收完毕，开始解码
- */
+/// Alexa语音数据接收完毕，开始解码
 -(void) OnAlexaVoiceDecodeBegin;
 
-/**
- *@brief Alexa请求的语音数据，该数据已经经过解码
- *@param voiceData 语音数据
- */
+/// Alexa请求的语音数据，该数据已经经过解码
+/// - Parameters:
+///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
 -(void) OnAlexaVoiceDecodedWithData:(NSData*)voiceData;
 
 /// 大模型语音传输开始
@@ -707,50 +687,36 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* f
 ///   - loverMessage: 情侣消息
 -(void) OnLoverMessage:(FITCLOUDLOVERMESSAGE)loverMessage;
 
-/**
- *@brief 通知App开始发起支付宝Iot认证
- */
+/// 通知App开始发起支付宝Iot认证
 -(void) OnNotifyAppToAliotAuth;
 
-/**
- *@brief 支付宝Iot数据回调
- *@param aliotData 支付宝Iot数据
- *@param totalPacks 总数据包个数
- *@param packIndex 当前第几个数据包，下标从0开始
- *@param expectedTotalBytes 支付宝Iot数据总长度，即几个数据包加起来的总长度
- */
+/// 支付宝Iot数据回调
+/// - Parameters:
+///   - aliotData: 支付宝Iot数据
+///   - totalPacks: 总数据包个数
+///   - packIndex: 当前第几个数据包，下标从0开始
+///   - expectedTotalBytes: 支付宝Iot数据总长度，即几个数据包加起来的总长度
 -(void) OnAliotData:(NSData*)aliotData totalPacks:(NSInteger)totalPacks packIndex:(NSInteger)packIndex expectedTotalBytes:(NSInteger)expectedTotalBytes;
 
 
-/**
- *@brief 网易云音乐桥接准备完毕
- */
+/// 网易云音乐桥接准备完毕
 -(void) OnNetEaseCloudMusicBridgeReady;
 
-/**
- *@brief 网易云音乐桥接数据回调
- *@param data 网易云音乐桥接数据
- */
+/// 网易云音乐桥接数据回调
+/// - Parameters:
+///   - data: 网易云音乐桥接数据
 -(void) OnNetEaseCloudMusicBridgeData:(NSData*)data;
 
-/**
- * @brief 手表请求创维光伏数据
- */
+/// 手表请求创维光伏数据
 -(void) OnRequestSkyworthPV;
 
-/**
- * @brief 手表请求板球比赛数据
- */
+/// 手表请求板球比赛数据
 -(void) OnRequestCricketMatchData;
 
-/**
- * @brief 手表请求GPS数据
- */
+/// 手表请求GPS数据
 -(void) OnRequestGPSData;
 
-/**
- * @brief 手表通知GPS文件升级代码，升级中的范围：0~100 ，升级成功：101，升级失败：255
- */
+/// 手表通知GPS文件升级代码，升级中的范围：0~100 ，升级成功：101，升级失败：255
 -(void) OnGPSFileUpgradeCode:(NSInteger)code;
 
 /// GSensor数据
@@ -763,16 +729,13 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* f
 /// 手表端通知退出导航
 -(void) OnExitNaviFromWatchNotify;
 
-/**
- * @brief 睡眠调试数据
- */
+/// 睡眠调试数据
 -(void) OnSleepDebugData:(FitCloudSleepDebugData*)sleepDebugData;
 
-/**
- *@brief 记录日志数据
- *@param message 日志信息
- *@param level 日志等级
- */
+/// 会调日志数据
+/// - Parameters:
+///   - message: 日志信息
+///   - level: 日志等级
 -(void) OnLogMessage:(NSString*)message level:(FITCLOUDKITLOGLEVEL)level;
 @end
 
