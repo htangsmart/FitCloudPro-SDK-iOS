@@ -8,7 +8,7 @@
 //  框架名称:FitCloudWFKit.framework
 //  框架功能:iOS framework help you creating watchface with fitcloud smart watch easily. FitCloud 智能手表表盘创建辅助框架，旨在帮助您轻松创建属于您自己的表盘文件。
 //  修改记录:
-//     pcjbird    2024-06-12 Version:1.1.7-beta.8 Build:20240612001
+//     pcjbird    2024-08-14 Version:1.1.7-beta.9 Build:20240814001
 //                            1.SDK健壮性优化
 //                            2.新增创建手表照片推送文件功能
 //                            3.新增8773自定义表盘生成支持
@@ -84,9 +84,7 @@ FOUNDATION_EXPORT const unsigned char FitCloudWFKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <FitCloudWFKit/PublicHeader.h>
 
-/**
- * @brief 日志等级
-*/
+/// 日志等级
 typedef NS_ENUM(NSInteger, FCWKLOGLEVEL) {
     FCWKLOGLEVEL_DEBUG = 0,
     FCWKLOGLEVEL_VERBOSE,
@@ -100,9 +98,7 @@ typedef NS_ENUM(NSInteger, FCWKLOGLEVEL) {
     FCWKLOGLEVEL_MUTE = FCWKLOGLEVEL_MAX
 };
 
-/**
- * @brief 日期时间在表盘上的位置
- */
+/// 日期时间在表盘上的位置
 typedef NS_ENUM(NSInteger, FITCLOUDWATCHFACEDTPOSITION)
 {
     FITCLOUDWATCHFACEDTPOSITION_TOP = 0,         //上方

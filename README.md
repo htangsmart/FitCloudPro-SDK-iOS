@@ -34,7 +34,7 @@
 
 ![Pod Version](http://img.shields.io/badge/pod-v1.1.6-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.1.7%20beta.8-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.1.7%20beta.9-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek-blueviolet)
 
 - [中文文档(Chinese Doc)](FitCloudWFKit/README.md)
