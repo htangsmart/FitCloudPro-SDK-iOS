@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-08-14  Version:1.2.9-beta.167 Build:20240814001
+//     pcjbird    2024-08-21  Version:1.2.9-beta.168 Build:20240821001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -85,6 +85,7 @@
 //                            73.新增支持跳绳/椭圆机/划船机相关运动扩展数据的同步
 //                            74.新增支持屏蔽心率加强测量
 //                            75.支持传音Infinix项目女性健康相关功能
+//                            76.支持获取手表端调试日志，仅部分手表支持
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1699,6 +1700,18 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - errorCode: 错误码
 ///   - block: 结果回调
 +(void)sendAlexaResult:(NSString*)text with:(ALEXAINVOKEERROR)errorCode withBlock:(FitCloudResultHandler _Nullable )block;
+
+@end
+
+/// FitCloudKit DeviceLog Module
+@interface FitCloudKit (DeviceLogs)
+
+#pragma mark Request Device Debug Logs
+
+/// Request Device Debug Logs
+/// - Parameters:
+///   - completion: the completion callback
++(void)requestDeviceDebugLogsDataWithCompletion:(void(^_Nullable)(BOOL success, NSData* _Nullable logsData, NSError* _Nullable error))completion;
 
 @end
 
