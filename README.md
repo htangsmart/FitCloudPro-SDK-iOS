@@ -11,7 +11,7 @@
 
 - [中文文档(Chinese Doc)](FitCloudKit/README.md)
 - [英文文档(English Doc)](FitCloudKit/README_EN.md)
-- [CHANGELOG](FitCloudKit/CHANGELOG.md)
+- [更新日志(CHANGELOG)](FitCloudKit/CHANGELOG.md)
 
 # 2. FitCloudDFUKit
 
