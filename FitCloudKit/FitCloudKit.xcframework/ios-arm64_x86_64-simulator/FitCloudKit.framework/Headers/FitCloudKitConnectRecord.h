@@ -8,49 +8,39 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- * @brief FitCloudKit 手表连接配对记录
- */
+NS_ASSUME_NONNULL_BEGIN
+
+/// FitCloudKit 手表连接配对记录
 @interface FitCloudKitConnectRecord : NSObject<NSCoding>
 
-/**
- * @brief 手表名称
- */
+/// The name of the watch
 @property(nonatomic, strong) NSString* name;
 
-/**
- * @brief 是否为下一代厂商名称
- */
+/// 是否为下一代厂商名称
 @property(nonatomic, assign) BOOL isNextManufacturerName;
 
-/**
- * @brief 是否允许同时连接通话蓝牙
- */
+/// 是否允许同时连接通话蓝牙
 @property(nonatomic, assign) BOOL allowConnectWithBT;
 
-/**
- * @brief UUID
- */
-@property(nonatomic, strong) NSUUID*   uuid;
+/// UUID
+@property(nonatomic, strong, nullable) NSUUID*   uuid;
 
-/**
- * @brief 最后配对时间
- */
-@property(nonatomic, strong) NSDate*   time;
+/// Mac addr，如果厂商自定义了广播数据，这里返回nil
+@property(nonatomic, strong, nullable) NSString* macAddr;
 
-/**
- * @brief 是否应该自动连接
- */
+/// 最后配对时间
+@property(nonatomic, strong) NSDate* time;
+
+/// 是否应该自动连接
 @property(nonatomic, assign) BOOL      shouldAutoConnect;
 
-/**
- * @brief 绑定的 userId
- */
-@property(nonatomic, strong) NSString* bindUserId;
+/// 绑定的 userId
+@property(nonatomic, strong, nullable) NSString* bindUserId;
 
-/**
- * @brief 绑定时间
- */
-@property(nonatomic, strong) NSDate*   bindTime;
+/// 绑定时间
+@property(nonatomic, strong, nullable) NSDate*   bindTime;
+
 
 @end
+
+NS_ASSUME_NONNULL_END
