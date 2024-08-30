@@ -33,6 +33,7 @@
 @end
 
 
+
 /**
  * @brief 手表手动同步记录对象基类
  */
@@ -355,9 +356,6 @@
 /// 配速(min/km)
 @property(nonatomic, assign) UInt16 pace;
 
-/// 运动心率(次/min)
-@property(nonatomic, assign) UInt8  hrExcercise;
-
 /// 泳姿   1: 自由泳 2:蛙泳 3:仰泳 4:蝶泳
 @property(nonatomic, strong) NSNumber* swimStyle;
 
@@ -396,6 +394,18 @@
 
 @end
 
+@interface FitCloudBPMDataModel: NSObject
+
+/// 采样时刻
+@property(nonatomic, strong) NSDate* moment;
+
+/// 心率(次/min)
+///
+/// > Important: Returns nil when invalid
+@property(nonatomic, strong, nullable) NSNumber* value;
+
+@end
+
 /**
  * @brief 手表运动模式运动数据记录
  */
@@ -404,13 +414,16 @@
 /**
  * @brief 手表独立GPS运动，该字段关联对应的GPS数据
  */
-@property(nonatomic, strong) NSString* gpsDataAssociateKey;
+@property(nonatomic, strong, nullable) NSString* gpsDataAssociateKey;
 
 /// 当手表支持独立GPS运动且支持指定展示数据是表示展示数据信息
 /// the workout display configurations
 ///
 /// @see `WORKOUTDATAITEMDISPLAY`,  if want to display `WORKOUTDATAITEMDISPLAY_DURATION` and `WORKOUTDATAITEMDISPLAY_AVG_BPM`, the displayConfig string should be `"1,2"`, and so on.
-@property(nonatomic, strong) NSString* displayConfig;
+@property(nonatomic, strong, nullable) NSString* displayConfig;
+
+/// 运动心率数据
+@property(nonatomic, strong, nullable) NSArray<FitCloudBPMDataModel*>* bpmDataArray;
 
 @end
 

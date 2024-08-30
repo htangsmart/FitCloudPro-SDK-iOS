@@ -128,4 +128,7 @@
 /// 设备能力信息，仅当支持查询设备能力的手表有效
 @property(nonatomic, strong) NSArray<FitCloudCapacity*>* deviceCapacities;
 
+/// 每分钟运动动态心率的数量
+@property(nonatomic, strong, nullable) NSNumber* exerciseBPMDataPerMinute;
+
 @end
