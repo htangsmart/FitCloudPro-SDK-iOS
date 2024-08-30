@@ -1,5 +1,10 @@
 # CHANGELOG
 
+
+## V1.2.9-beta.172 build20240830002 (2024-08-30)
+
+1.  Add callbacks to notify the app when the smartwatch enters or exits the LLM functionality.
+
 ## V1.2.9-beta.171 build20240830001 (2024-08-30)
 
 1.  The exercise heart rate data is provided in a separate data list. Now `hrExcercise` has been removed from old item data model.

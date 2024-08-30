@@ -682,6 +682,12 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* f
 ///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
 -(void) OnLLMVoiceStopWithDecodedVoiceData:(NSData*)voiceData;
 
+/// 手表进入大模型界面
+-(void) OnWatchSideEnterLLM;
+
+/// 手表退出大模型界面
+-(void) OnWatchSideExitLLM;
+
 /// 手表发送情侣消息，通过APP发给对方
 /// - Parameters:
 ///   - loverMessage: 情侣消息
