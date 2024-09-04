@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.173 build20240904001 (2024-09-04)
+
+1.  Fixed some logging print errors.
 
 ## V1.2.9-beta.172 build20240830002 (2024-08-30)
 
