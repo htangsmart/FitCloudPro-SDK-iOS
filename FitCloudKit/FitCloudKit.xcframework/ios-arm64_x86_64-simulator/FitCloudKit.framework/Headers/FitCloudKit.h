@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-09-05  Version:1.2.9-beta.175 Build:20240909001
+//     pcjbird    2024-09-10  Version:1.2.9-beta.176 Build:20240910001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -92,6 +92,8 @@
 //                            80.新增回调，当手表端进入或退出大语言模型功能的时候通知APP
 //                            81.解决了在多个设备之间切换时连接的一些问题
 //                            82.表盘尺寸支持360*360方/296*240方
+//                            83.引入新的API`+(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;` 以允许主程序仅通过一个API调用来连接和绑定手表设备。
+//                            84.将FitCloudKitConnectRecord中的`time`属性重命名为`latestConnectTime`，并将`bindTime`属性命名为`userBindTime`
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -396,22 +398,29 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - peripheral: 手表设备
 +(void)connect:(CBPeripheral * _Nonnull )peripheral;
 
-
 /// 连接手表设备
 /// - Parameters:
 ///   - peripheral: 手表设备
 ///   - btMode: 是否使用一键双连同时连接经典蓝牙(BT)
 +(void)connect:(CBPeripheral * _Nonnull )peripheral btMode:(BOOL)btMode;
 
-/// 尝试连接已知的外部设备
+/// 连接并绑定手表设备
 /// - Parameters:
-///   - record: 已知的外部设备
+///   - peripheral: 手表设备
+///   - userId: 用户Id
+///   - randomCode: 随机码，如果没有，则填 nil，仅部分项目有该功能
+///   - btMode: 是否使用一键双连同时连接经典蓝牙(BT)
++(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;
+
+/// 尝试连接历史手表设备
+/// - Parameters:
+///   - record: 历史手表设备
 +(void)tryConnect:(FitCloudKitConnectRecord* _Nonnull )record;
 
-/// 断开外部设备连接
+/// 断开手表设备连接
 +(void)disconnect;
 
-/// 忽略当前已连接未绑定/绑定失败的设备
+/// 忽略当前已连接未绑定/绑定失败的手表设备
 /// - Parameters:
 ///   - silent: YES则不会打印相关日志
 +(void)ignoreConnectedPeripheral:(BOOL)silent;

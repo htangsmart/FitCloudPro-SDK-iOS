@@ -27,7 +27,7 @@
 @property(nonatomic, assign) NSInteger milliSecsPacketUnitInterval;
 
 
-/// 是否应该自动扫描连接， 默认否
+/// 启动APP后是否应该自动连接上一次连接的手表设备， 默认否
 @property(nonatomic, assign) BOOL    shouldAutoConnect;
 
 /// 手表语言偏好，默认：FITCLOUDLANGUAGE_NOTSET

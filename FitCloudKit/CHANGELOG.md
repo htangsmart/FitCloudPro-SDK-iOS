@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.2.9-beta.176 build20240910001 (2024-09-10)
+    1. Introduce the API `+(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;` to allow the owner app connect and bind the watch device with just one API call.
+    2. Rename the `time` property in FitCloudKitConnectRecord to `latestConnectTime` and the `bindTime` property to `userBindTime`.
+
 ## V1.2.9-beta.175 build20240909001 (2024-09-09)
     1. Resolved some issues with connections when switching between multiple devices.
     2. The watch face size supports 360x360 square and 296x240 square.

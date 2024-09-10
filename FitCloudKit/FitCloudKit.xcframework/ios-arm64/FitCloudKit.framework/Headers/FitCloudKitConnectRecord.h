@@ -23,22 +23,22 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) BOOL allowConnectWithBT;
 
 /// UUID
-@property(nonatomic, strong, nullable) NSUUID*   uuid;
+@property(nonatomic, strong, nullable) NSUUID* uuid;
 
 /// Mac addr，如果厂商自定义了广播数据，这里返回nil
 @property(nonatomic, strong, nullable) NSString* macAddr;
 
-/// 最后配对时间
-@property(nonatomic, strong) NSDate* time;
+/// 最后连接时间
+@property(nonatomic, strong) NSDate* latestConnectTime;
 
 /// 是否应该自动连接
 @property(nonatomic, assign) BOOL      shouldAutoConnect;
 
-/// 绑定的 userId
+/// 绑定的用户Id
 @property(nonatomic, strong, nullable) NSString* bindUserId;
 
-/// 绑定时间
-@property(nonatomic, strong, nullable) NSDate*   bindTime;
+/// 用户绑定时间
+@property(nonatomic, strong, nullable) NSDate*   userBindTime;
 
 
 @end
