@@ -2,7 +2,7 @@
 
 #### FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 
-#### The iOS framework for the FitCloudPro smartwatch, responsible for encapsulating functions such as communication with the watch device.
+#### The iOS framework for the FitCloudPro smartwatch, which is responsible for encapsulating features such as communication with the watch device.
 
 ![Pod Version](http://img.shields.io/badge/pod-v1.2.8-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
@@ -17,7 +17,7 @@
 
 #### FitCloudPro 智能手表的 iOS 框架，负责手表固件升级/UI 升级/表盘升级/运动推送/音乐推送等功能的封装。
 
-#### The iOS framework for the FitCloudPro smartwatch, which is responsible for encapsulating functions such as watch firmware DFU, UI DFU, watchface DFU, watch sports DFU, music Push, and more.
+#### The iOS framework for the FitCloudPro smartwatch, which is responsible for encapsulating features such as watch firmware DFU, UI DFU, watchface DFU, watch sports DFU, music Push, and more.
 
 
 ![Pod Version](http://img.shields.io/badge/pod-v1.3.0-blue)
