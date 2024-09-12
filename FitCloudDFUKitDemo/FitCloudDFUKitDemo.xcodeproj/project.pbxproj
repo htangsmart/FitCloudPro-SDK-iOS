@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8914A09A2C9294620083122E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8914A0992C9294620083122E /* AppDelegate.swift */; };
+		8914A09C2C9294620083122E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8914A09B2C9294620083122E /* SceneDelegate.swift */; };
+		8914A09E2C9294620083122E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8914A09D2C9294620083122E /* ViewController.swift */; };
+		8914A0A12C9294620083122E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8914A0A02C9294620083122E /* Base */; };
+		8914A0A32C9294630083122E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8914A0A22C9294630083122E /* Assets.xcassets */; };
+		8914A0A62C9294630083122E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8914A0A52C9294630083122E /* Base */; };
+		8914A0AE2C9295A80083122E /* app_MP_sdk###00_1.0.0.0_b389efdd-ad8edcd3f87de3fc44ecbb93f6cf110f.bin in Resources */ = {isa = PBXBuildFile; fileRef = 8914A0AD2C9295A80083122E /* app_MP_sdk###00_1.0.0.0_b389efdd-ad8edcd3f87de3fc44ecbb93f6cf110f.bin */; };
+		8CC6EA8AD49D4B782CFC746D /* libPods-FitCloudDFUKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E979CD5F994E0FDD1DE54E65 /* libPods-FitCloudDFUKitDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2EAFC1B0D6147753BA87BB9D /* Pods-FitCloudDFUKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudDFUKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-FitCloudDFUKitDemo/Pods-FitCloudDFUKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8914A0962C9294620083122E /* FitCloudDFUKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudDFUKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8914A0992C9294620083122E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8914A09B2C9294620083122E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8914A09D2C9294620083122E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8914A0A02C9294620083122E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8914A0A22C9294630083122E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8914A0A52C9294630083122E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8914A0A72C9294630083122E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8914A0AD2C9295A80083122E /* app_MP_sdk###00_1.0.0.0_b389efdd-ad8edcd3f87de3fc44ecbb93f6cf110f.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "app_MP_sdk###00_1.0.0.0_b389efdd-ad8edcd3f87de3fc44ecbb93f6cf110f.bin"; sourceTree = "<group>"; };
+		E979CD5F994E0FDD1DE54E65 /* libPods-FitCloudDFUKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitCloudDFUKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0972F73300C9022C594E9F /* Pods-FitCloudDFUKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudDFUKitDemo.release.xcconfig"; path = "Target Support Files/Pods-FitCloudDFUKitDemo/Pods-FitCloudDFUKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8914A0932C9294620083122E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CC6EA8AD49D4B782CFC746D /* libPods-FitCloudDFUKitDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8914A08D2C9294620083122E = {
+			isa = PBXGroup;
+			children = (
+				8914A0982C9294620083122E /* FitCloudDFUKitDemo */,
+				8914A0972C9294620083122E /* Products */,
+				CF7D93EB87E364E9CE381E39 /* Pods */,
+				C6A5616B6732D5D89BBD204B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8914A0972C9294620083122E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8914A0962C9294620083122E /* FitCloudDFUKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8914A0982C9294620083122E /* FitCloudDFUKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8914A0992C9294620083122E /* AppDelegate.swift */,
+				8914A09B2C9294620083122E /* SceneDelegate.swift */,
+				8914A09D2C9294620083122E /* ViewController.swift */,
+				8914A09F2C9294620083122E /* Main.storyboard */,
+				8914A0A22C9294630083122E /* Assets.xcassets */,
+				8914A0A42C9294630083122E /* LaunchScreen.storyboard */,
+				8914A0A72C9294630083122E /* Info.plist */,
+				8914A0AD2C9295A80083122E /* app_MP_sdk###00_1.0.0.0_b389efdd-ad8edcd3f87de3fc44ecbb93f6cf110f.bin */,
+			);
+			path = FitCloudDFUKitDemo;
+			sourceTree = "<group>";
+		};
+		C6A5616B6732D5D89BBD204B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E979CD5F994E0FDD1DE54E65 /* libPods-FitCloudDFUKitDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF7D93EB87E364E9CE381E39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2EAFC1B0D6147753BA87BB9D /* Pods-FitCloudDFUKitDemo.debug.xcconfig */,
+				EA0972F73300C9022C594E9F /* Pods-FitCloudDFUKitDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8914A0952C9294620083122E /* FitCloudDFUKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8914A0AA2C9294630083122E /* Build configuration list for PBXNativeTarget "FitCloudDFUKitDemo" */;
+			buildPhases = (
+				EAA69ABFD08C471DD636F465 /* [CP] Check Pods Manifest.lock */,
+				8914A0922C9294620083122E /* Sources */,
+				8914A0932C9294620083122E /* Frameworks */,
+				8914A0942C9294620083122E /* Resources */,
+				0B477E4926BE91ED7D73BB93 /* [CP] Embed Pods Frameworks */,
+				41A65B94BFF42A91D78522F5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitCloudDFUKitDemo;
+			productName = FitCloudDFUKitDemo;
+			productReference = 8914A0962C9294620083122E /* FitCloudDFUKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8914A08E2C9294620083122E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					8914A0952C9294620083122E = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 8914A0912C9294620083122E /* Build configuration list for PBXProject "FitCloudDFUKitDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8914A08D2C9294620083122E;
+			productRefGroup = 8914A0972C9294620083122E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8914A0952C9294620083122E /* FitCloudDFUKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8914A0942C9294620083122E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8914A0A32C9294630083122E /* Assets.xcassets in Resources */,
+				8914A0AE2C9295A80083122E /* app_MP_sdk###00_1.0.0.0_b389efdd-ad8edcd3f87de3fc44ecbb93f6cf110f.bin in Resources */,
+				8914A0A62C9294630083122E /* Base in Resources */,
+				8914A0A12C9294620083122E /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B477E4926BE91ED7D73BB93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudDFUKitDemo/Pods-FitCloudDFUKitDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudDFUKitDemo/Pods-FitCloudDFUKitDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitCloudDFUKitDemo/Pods-FitCloudDFUKitDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41A65B94BFF42A91D78522F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudDFUKitDemo/Pods-FitCloudDFUKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudDFUKitDemo/Pods-FitCloudDFUKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitCloudDFUKitDemo/Pods-FitCloudDFUKitDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAA69ABFD08C471DD636F465 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitCloudDFUKitDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8914A0922C9294620083122E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8914A09E2C9294620083122E /* ViewController.swift in Sources */,
+				8914A09A2C9294620083122E /* AppDelegate.swift in Sources */,
+				8914A09C2C9294620083122E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8914A09F2C9294620083122E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8914A0A02C9294620083122E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8914A0A42C9294630083122E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8914A0A52C9294630083122E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8914A0A82C9294630083122E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8914A0A92C9294630083122E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8914A0AB2C9294630083122E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EAFC1B0D6147753BA87BB9D /* Pods-FitCloudDFUKitDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitCloudDFUKitDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudDFUKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8914A0AC2C9294630083122E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA0972F73300C9022C594E9F /* Pods-FitCloudDFUKitDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitCloudDFUKitDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudDFUKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8914A0912C9294620083122E /* Build configuration list for PBXProject "FitCloudDFUKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8914A0A82C9294630083122E /* Debug */,
+				8914A0A92C9294630083122E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8914A0AA2C9294630083122E /* Build configuration list for PBXNativeTarget "FitCloudDFUKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8914A0AB2C9294630083122E /* Debug */,
+				8914A0AC2C9294630083122E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8914A08E2C9294620083122E /* Project object */;
+}
