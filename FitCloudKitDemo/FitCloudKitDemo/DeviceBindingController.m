@@ -229,7 +229,7 @@
         [strongSelf.view layoutIfNeeded];
     }completion:^(BOOL finished) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [FitCloudKit bindUserObject:USER_ID abortIfExist:YES block:^(BOOL succeed, NSError *error) {
+            [FitCloudKit bindUserObject:USER_ID randomCode:nil abortIfExist:YES block:^(BOOL succeed, NSError *error) {
             }];
         });
         [UIView animateWithDuration:1.45 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -260,7 +260,7 @@
         self.subTitleLabel.text = NSLocalizedString(@"Please keep the smart watch nearby your iPhone.", nil);
         self.bindingImageView.hidden = NO;
         self.resultView.alpha = 0.0f;
-        [FitCloudKit bindUserObject:USER_ID abortIfExist:NO block:^(BOOL succeed, NSError *error) {
+        [FitCloudKit bindUserObject:USER_ID randomCode:nil abortIfExist:NO block:^(BOOL succeed, NSError *error) {
         }];
     }
     else
