@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-09-13  Version:1.2.9-beta.179 Build:20240913002
+//     pcjbird    2024-09-18  Version:1.2.9-beta.180 Build:20240913003
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -94,6 +94,7 @@
 //                            82.表盘尺寸支持360*360方/296*240方
 //                            83.引入新的API`+(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;` 以允许主程序仅通过一个API调用来连接和绑定手表设备。
 //                            84.将FitCloudKitConnectRecord中的`time`属性重命名为`latestConnectTime`，并将`bindTime`属性命名为`userBindTime`
+//                            85.新增手表微信支付认证功能
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1355,8 +1356,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 发送网易云音乐桥接数据
 /// - Parameters:
-///   - data: 发送网易云音乐桥接数据
+///   - data: 网易云音乐桥接数据
 +(void) sendNetEaseBridgeData:(NSData*)data;
+
+
+#pragma mark 发送手表微信支付认证桥接数据
+
+/// 发送手表微信支付认证桥接数据
+/// - Parameters:
+///   - data: 手表微信支付认证桥接数据
++(void) sendWPAuthBridgeData:(NSData*)data;
 
 #pragma mark 发送创维光伏数据
 

@@ -713,6 +713,17 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* f
 ///   - data: 网易云音乐桥接数据
 -(void) OnNetEaseCloudMusicBridgeData:(NSData*)data;
 
+/// 通知App开始发起手表支付认证
+/// - Parameters:
+///   - macAddr: 手表Mac地址
+///   - bluetoothName: 蓝牙名称
+-(void) OnNotifyAppToWPAuthWithMacAddr:(NSString*)macAddr bluetoothName:(NSString*)bluetoothName;
+
+/// 微信手表支付认证桥接数据回调
+/// - Parameters:
+///   - data: 微信手表支付认证桥接数据
+-(void) OnWPAuthBridgeData:(NSData*)data;
+
 /// 手表请求创维光伏数据
 -(void) OnRequestSkyworthPV;
 
