@@ -1,7 +1,10 @@
 # CHANGELOG
 
+## V1.2.9-beta.178 build20240913001 (2024-09-13)
+    1. If the alarm clock label length exceeds 32 bytes, the SDK will automatically truncate it to meet the length limit.
+    
 ## V1.2.9-beta.177 build20240911001 (2024-09-11)
-    1. When you invoke `+(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;` to connect and bind the watch device, if you have previously connected the watch device, the SDK will remove this historical connection record.
+    1. When you invoke `+(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;` to connect and bind the watch device, if you have previously connected the watch device, the SDK will remove this historical connection record first.
 
 ## V1.2.9-beta.176 build20240910001 (2024-09-10)
     1. Introduce the API `+(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;` to allow the owner app connect and bind the watch device with just one API call.
