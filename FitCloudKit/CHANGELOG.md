@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.179 build20240913002 (2024-09-13)
+    1. Resolve the issue of incorrect response to obtaining independent settings commands for health periodic monitoring.
+
 ## V1.2.9-beta.178 build20240913001 (2024-09-13)
     1. If the alarm clock label length exceeds 32 bytes, the SDK will automatically truncate it to meet the length limit.
     
