@@ -39,4 +39,10 @@
 /// 是否已经跟系统配对
 @property(nonatomic, assign) BOOL  paired;
 
+/// 主项目号
+@property(nonatomic, strong, nullable) NSString* mainProjNo;
+
+/// 子项目号
+@property(nonatomic, strong, nullable) NSString* subProjNo;
+
 @end

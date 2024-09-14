@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.181 build20240914001 (2024-09-14)
+    1. Add the `mainProjNo` and `subProjNo` property for FitCloudPeripheral and FitCloudManufacturer.
+    
 ## V1.2.9-beta.180 build20240913003 (2024-09-13)
     1. Add WPAuth bridge data features for authenticating WeChat Pay on the watch device.
     

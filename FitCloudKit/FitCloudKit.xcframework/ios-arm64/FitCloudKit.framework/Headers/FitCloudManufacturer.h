@@ -23,6 +23,12 @@
 /// 厂商是否自定义了广播数据
 @property(nonatomic, readonly) BOOL isCustomizedAdvData;
 
+/// 主项目号
+@property(nonatomic, strong, nullable, readonly) NSString* mainProjNo;
+
+/// 子项目号
+@property(nonatomic, strong, nullable, readonly) NSString* subProjNo;
+
 /// 从广播数据获取厂商信息
 /// - Parameters:
 ///   - advertisementData: 广播数据
