@@ -40,6 +40,20 @@ NS_ASSUME_NONNULL_BEGIN
 /// 用户绑定时间
 @property(nonatomic, strong, nullable) NSDate*   userBindTime;
 
+/// 项目号
+@property(nonatomic, strong, nullable) NSString* formatedProjNo;
+
+/// 固件版本号
+@property(nonatomic, strong, nullable) NSString* formatedFirmwareVersion;
+
+/// UI版本
+@property(nonatomic, strong, nullable) NSString* uiVersion;
+
+/// 屏幕分辨率
+@property(nonatomic, strong, nullable) NSValue* screenResolution;
+
+/// 屏幕形状，0：方形  1: 圆形  nil:未知
+@property(nonatomic, strong, nullable) NSNumber* screenShape;
 
 @end
 

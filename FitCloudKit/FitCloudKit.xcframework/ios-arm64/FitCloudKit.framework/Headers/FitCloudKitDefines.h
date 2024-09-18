@@ -1235,4 +1235,16 @@ typedef NS_ENUM(Byte, WEATHERTYPE)
     WEATHERTYPE_UNKNOWN = 0xff,
 };
 
+#pragma mark - 手表连接标志
+
+typedef NS_ENUM(NSInteger, FITCLOUDWATCHCONNECTIONFLAG)
+{
+    /// 无
+    FITCLOUDWATCHCONNECTIONFLAG_NONE = 0,
+    /// 绑定连接
+    FITCLOUDWATCHCONNECTIONFLAG_CONNECT = 1,
+    /// 回连
+    FITCLOUDWATCHCONNECTIONFLAG_RECONNECT = 2,
+};
+
 #endif /* FitCloudKitDefines_h */
