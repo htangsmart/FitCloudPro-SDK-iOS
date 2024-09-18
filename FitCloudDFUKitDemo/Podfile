@@ -15,3 +15,12 @@ target 'FitCloudDFUKitDemo' do
   pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 end
 
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == 'FitCloudDFUKit'
+      `xcrun -sdk iphoneos bitcode_strip -r Pods/FitCloudDFUKit/FitCloudDFUKit/RTKLEFoundation.xcframework/ios-arm64/RTKLEFoundation.framework/RTKLEFoundation -o Pods/FitCloudDFUKit/FitCloudDFUKit/RTKLEFoundation.xcframework/ios-arm64/RTKLEFoundation.framework/RTKLEFoundation`
+      `xcrun -sdk iphoneos bitcode_strip -r Pods/FitCloudDFUKit/FitCloudDFUKit/RTKLocalPlaybackSDK.xcframework/ios-arm64/RTKLocalPlaybackSDK.framework/RTKLocalPlaybackSDK -o Pods/FitCloudDFUKit/FitCloudDFUKit/RTKLocalPlaybackSDK.xcframework/ios-arm64/RTKLocalPlaybackSDK.framework/RTKLocalPlaybackSDK`
+      `xcrun -sdk iphoneos bitcode_strip -r Pods/FitCloudDFUKit/FitCloudDFUKit/RTKOTASDK.xcframework/ios-arm64/RTKOTASDK.framework/RTKOTASDK -o Pods/FitCloudDFUKit/FitCloudDFUKit/RTKOTASDK.xcframework/ios-arm64/RTKOTASDK.framework/RTKOTASDK`
+    end
+  end
+end
