@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.183 build20240918002 (2024-09-18)
+    1. Resolved some issues with workout bpmDataArray.
+    
 ## V1.2.9-beta.182 build20240918001 (2024-09-18)
     1. Add the `formatedProjNo`, `formatedFirmwareVersion`, `uiVersion`, `screenResolution` and `screenShape` property for FitCloudKitConnectRecord.
     2. Introduce the API `+(FITCLOUDWATCHCONNECTIONFLAG) connectionFlag;` to indicate whether the current connection is established when the watch device is bound or in the process of reconnecting.
