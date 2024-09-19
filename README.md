@@ -37,11 +37,12 @@
 
 ![Pod Version](http://img.shields.io/badge/pod-v1.1.6-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.1.7%20beta.9-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.1.7%20beta.10-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek-blueviolet)
 
 - [中文文档(Chinese Doc)](FitCloudWFKit/README.md)
 - [英文文档(English Doc)](FitCloudWFKit/README_EN.md)
+- [更新日志(CHANGELOG)](FitCloudWFKit/CHANGELOG.md)
 
 # 4. FitCloudNWFKit (适用于 Nordic 芯片/for Nordic chip)
 
