@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-09-18  Version:1.2.9-beta.183 Build:20240918002
+//     pcjbird    2024-09-20  Version:1.2.9-beta.184 Build:20240920001
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -563,14 +563,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// dfu外设，仅仅当处于dfu模式，且处于连接状态时有效
 /// - Returns:
 /// dfu 外设
-+(CBPeripheral*)  dfuPeripheral;
++(CBPeripheral* _Nullable)  dfuPeripheral;
 
 #pragma mark 使用不进入DFU模式, 直接DFU升级, 使用该外设
 
 /// dfu外设，仅仅需要直接DFU升级的客户使用(升级不进入DFU模式)，且处于连接状态时有效
 /// - Returns:
 /// dfu 外设
-+(CBPeripheral*)  directDFUPeripheral;
++(CBPeripheral* _Nullable)  directDFUPeripheral;
 
 #pragma mark 芯片提供商
 
