@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.187 build20240920004 (2024-09-20)
+    1. Optimize the timing for sending the `FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY` event.
+                        
 ## V1.2.9-beta.186 build20240920003 (2024-09-20)
     1. Add more debug logs.
     
