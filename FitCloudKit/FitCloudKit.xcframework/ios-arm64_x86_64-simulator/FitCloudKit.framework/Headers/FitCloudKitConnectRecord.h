@@ -55,6 +55,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 屏幕形状，0：方形  1: 圆形  nil:未知
 @property(nonatomic, strong, nullable) NSNumber* screenShape;
 
+/// 广播数据厂商数据
+@property(nonatomic, strong, nullable) NSString* advDataManufacturerData;
+
+/// 广播数据
+@property(nonatomic, strong, nullable) NSString* advData;
+
 @end
 
 NS_ASSUME_NONNULL_END

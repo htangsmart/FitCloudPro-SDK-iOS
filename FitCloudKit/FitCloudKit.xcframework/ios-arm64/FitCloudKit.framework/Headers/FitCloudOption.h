@@ -50,6 +50,9 @@
 /// >Important: 必须是相对于NSDocumentDirectory的路径，不支持保存到其他的目录
 @property(nonatomic, copy) NSString* preferredDocSavingRelativePath;
 
+/// 是否仅扫描发现已知厂商的蓝牙设备，默认为YES
+@property(nonatomic, assign) BOOL onlyDiscoverRecognizedManufacturers;
+
 /// 默认选项
 + (instancetype)defaultOption;
 
