@@ -713,7 +713,7 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* f
 ///   - data: 网易云音乐桥接数据
 -(void) OnNetEaseCloudMusicBridgeData:(NSData*)data;
 
-/// 通知App开始发起手表支付认证
+/// 通知App开始发起手表微信支付认证
 /// - Parameters:
 ///   - macAddr: 手表Mac地址
 ///   - bluetoothName: 蓝牙名称

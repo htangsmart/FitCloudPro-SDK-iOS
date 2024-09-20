@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.185 build20240920002 (2024-09-20)
+    1. Optimize the discovering priority of Bluetooth characteristics.
+    
 ## V1.2.9-beta.184 build20240920001 (2024-09-20)
     1. Adjust the internal timing of automatic binding and login command calls within the SDK after the watch device is connected.
     2. Optimize the processing of the random code when binding the watch device.
