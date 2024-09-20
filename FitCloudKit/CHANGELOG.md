@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.186 build20240920003 (2024-09-20)
+    1. Add more debug logs.
+    
 ## V1.2.9-beta.185 build20240920002 (2024-09-20)
     1. Optimize the discovering priority of Bluetooth characteristics.
     
