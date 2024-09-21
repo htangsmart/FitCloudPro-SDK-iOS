@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FitCloudHourWeatherObject : NSObject
 
 /// the weather type
-@property(nonatomic, assign)WEATHERTYPE weathertype;
+@property(nonatomic, assign)Byte weatherType;
 
 /// the temperature，unit: °C
 @property(nonatomic, assign)SInt8 temperature;

@@ -18,7 +18,7 @@
 @property(nonatomic, assign)SInt8 max;
 
 /// 天气类型
-@property(nonatomic, assign)WEATHERTYPE weathertype;
+@property(nonatomic, assign)Byte weatherType;
 
 @end
 
@@ -35,7 +35,7 @@
 @property(nonatomic, assign)SInt8 max;
 
 /// 天气类型
-@property(nonatomic, assign)WEATHERTYPE weathertype;
+@property(nonatomic, assign)Byte weatherType;
 
 /// 城市名称，最多支持64个字节，超过会被截取
 @property(nonatomic, strong)NSString* city;

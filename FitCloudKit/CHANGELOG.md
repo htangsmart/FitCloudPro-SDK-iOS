@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.2.9-beta.189 build20240921001 (2024-09-21)
+    1. Rename the `weathertype` property in FitCloudWeatherObject, FitCloudWeatherForecast and FitCloudHourWeatherObject to `weatherType`, and change its type from `WEATHERTYPE` to `Byte`. 
+       Now, allow different customers to use their own weather types. And our app will utilize `FITCLOUDWEATHERTYPE` as weather types.
+
 ## V1.2.9-beta.188 build20240920005 (2024-09-20)
     1. Add options to discover all Bluetooth devices, including those from unknown manufacturers.
 
