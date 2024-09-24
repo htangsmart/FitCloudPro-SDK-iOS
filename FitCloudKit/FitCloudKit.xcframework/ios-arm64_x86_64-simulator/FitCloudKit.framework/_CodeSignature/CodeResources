@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/FitCloudAllConfigObject.h</key>
 		<data>
-		K+DLPQ5zhJCmDtWnFAAVY9glNM4=
+		Q8k5/HMBf7cTkz4mTStzwksqk5A=
 		</data>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		jtYBxCUakJu/QXLT7ZP8qt+ifNk=
+		0pwDUaRhMm7IHaQmGJcZJe8vn3c=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -306,7 +306,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		C1TjbKMwWZGf48/yiGgfV8fKx24=
+		r46JaeRv3zg0lqvJJHHIBlItzf8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -330,11 +330,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			K+DLPQ5zhJCmDtWnFAAVY9glNM4=
+			Q8k5/HMBf7cTkz4mTStzwksqk5A=
 			</data>
 			<key>hash2</key>
 			<data>
-			8ZR2esKppzdQHxYAsEnH7sDB2By9YYKDifQb7pp8+pQ=
+			HESoz5kRp4e88NUnA0m71qKGT/RTNLwHqWFnac88TNM=
 			</data>
 		</dict>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
@@ -748,11 +748,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jtYBxCUakJu/QXLT7ZP8qt+ifNk=
+			0pwDUaRhMm7IHaQmGJcZJe8vn3c=
 			</data>
 			<key>hash2</key>
 			<data>
-			7P/pfhshD40OR3wkCgQJKP8WuAJphgmBHVtUFv13KFA=
+			IkcUfT5hhqKNqzP00iz8dsNgw6odSXKoBPeZ5xPtFU0=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>

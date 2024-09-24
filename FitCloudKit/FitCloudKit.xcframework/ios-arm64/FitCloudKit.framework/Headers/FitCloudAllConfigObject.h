@@ -131,4 +131,7 @@
 /// 每分钟运动动态心率的数量
 @property(nonatomic, strong, nullable) NSNumber* exerciseBPMDataPerMinute;
 
+/// 天气映射客户编号
+@property(nonatomic, strong, nullable) NSNumber* weatherMapVendorId;
+
 @end

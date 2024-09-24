@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.191 build20240924001 (2024-09-24)
+   1. Add customer ID information for mapping weather types when the watch device returns its configurations. If nil, `FITCLOUDWEATHERTYPE` will be used as the weather types.
+
 ## V1.2.9-beta.190 build20240923001 (2024-09-23)
    1. Fixed the issue with setting and querying the lyrics color for the earphone case.
 
