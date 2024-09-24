@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.192 build20240924002 (2024-09-24)
+   1. Add features to start and stop laser measurements, as well as to query the status of laser measurements. 
+
 ## V1.2.9-beta.191 build20240924001 (2024-09-24)
    1. Add customer ID information for mapping weather types when the watch device returns its configurations. If nil, `FITCLOUDWEATHERTYPE` will be used as the weather types.
 

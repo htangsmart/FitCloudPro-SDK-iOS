@@ -9,7 +9,7 @@
 //  框架功能:iOS framework for fitCloud smart watch, which is responsible for the communication with the watch.
 //          FitCloud 智能手表的 iOS 框架，负责与智能手表设备通信等功能的封装。
 //  修改记录:
-//     pcjbird    2024-09-24  Version:1.2.9-beta.191 Build:20240924001
+//     pcjbird    2024-09-24  Version:1.2.9-beta.192 Build:20240924002
 //                            1.新增创维光伏数据支持, @see withSkyworthPV
 //                            2.新增一些调试日志
 //                            3.板球比赛数据指令支持, @see withCricketMatch
@@ -95,6 +95,7 @@
 //                            83.引入新的API`+(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;` 以允许主程序仅通过一个API调用来连接和绑定手表设备。
 //                            84.将FitCloudKitConnectRecord中的`time`属性重命名为`latestConnectTime`，并将`bindTime`属性命名为`userBindTime`
 //                            85.新增手表微信支付认证功能
+//                            86.新增启动和停止激光测量功能，同时支持查询激光测量状态
 //
 //     pcjbird    2023-05-30  Version:1.2.8 Build:202305300001
 //                            1.表盘尺寸支持410*502方/416*416圆/240*288方
@@ -1562,6 +1563,26 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - completion: the completion callback
 +(void)queryEarbudCaseChargingWallpaperWhetherAlwaysBrightWithCompletion:(void(^_Nullable)(BOOL success, BOOL alwaysBright, NSError*_Nullable error))completion;
+
+#pragma mark - 激光测量
+
+/// 开始激光测量
+/// - Parameters:
+///   - durationInSeconds: 测量时长，单位：秒，时长范围1～255
+///   - completion: the completion callback
+///
+/// >Important: the valid measurement duration is from 1s to 255s
++(void)startLaserMeasurementWithDuration:(NSInteger)durationInSeconds completion:(void (^__nullable)(BOOL succeed, NSError* error))completion;
+
+/// 结束激光测量
+/// - Parameters:
+///   - completion: the completion callback
++(void)stopLaserMeasurementWithCompletion:(void (^__nullable)(BOOL succeed, NSError* error))completion;
+
+/// 查询激光测量状态
+/// - Parameters:
+///   - completion: the completion callback
++(void)queryLaserMeasurementStatusWithCompletion:(void (^__nullable)(BOOL succeed, FITCLOUDWEARINGSTATUS wearingStatus, FITCLOUDLASERMEASUREMENTSTATUS measurementStatus, NSError* error))completion;
 
 @end
 
