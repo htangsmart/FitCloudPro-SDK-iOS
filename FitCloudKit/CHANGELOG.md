@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.193 build20240926001 (2024-09-26)
+   1. Update the `mainProjNo` and `subProjNo` property in FitCloudPeripheral and FitCloudManufacturer to return uppercase string.
+
 ## V1.2.9-beta.192 build20240924002 (2024-09-24)
    1. Add features to start and stop laser measurements, as well as to query the status of laser measurements. 
 
