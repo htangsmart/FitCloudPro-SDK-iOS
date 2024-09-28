@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.194 build20240928001 (2024-09-28)
+   1. Add error codes localization in North Korean.
+
 ## V1.2.9-beta.193 build20240926001 (2024-09-26)
    1. Update the `mainProjNo` and `subProjNo` property in FitCloudPeripheral and FitCloudManufacturer to return uppercase string.
 
