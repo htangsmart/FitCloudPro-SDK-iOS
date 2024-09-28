@@ -1,19 +1,19 @@
 # CHANGELOG
 
 ## V1.2.9-beta.194 build20240928001 (2024-09-28)
-   1. Add error codes localization in North Korean.
+    1. Add error codes localization in North Korean.
 
 ## V1.2.9-beta.193 build20240926001 (2024-09-26)
-   1. Update the `mainProjNo` and `subProjNo` property in FitCloudPeripheral and FitCloudManufacturer to return uppercase string.
+    1. Update the `mainProjNo` and `subProjNo` property in FitCloudPeripheral and FitCloudManufacturer to return uppercase string.
 
 ## V1.2.9-beta.192 build20240924002 (2024-09-24)
-   1. Add features to start and stop laser measurements, as well as to query the status of laser measurements. 
+    1. Add features to start and stop laser measurements, as well as to query the status of laser measurements. 
 
 ## V1.2.9-beta.191 build20240924001 (2024-09-24)
-   1. Add customer ID information for mapping weather types when the watch device returns its configurations. If nil, `FITCLOUDWEATHERTYPE` will be used as the weather types.
+    1. Add customer ID information for mapping weather types when the watch device returns its configurations. If nil, `FITCLOUDWEATHERTYPE` will be used as the weather types.
 
 ## V1.2.9-beta.190 build20240923001 (2024-09-23)
-   1. Fixed the issue with setting and querying the lyrics color for the earphone case.
+    1. Fixed the issue with setting and querying the lyrics color for the earphone case.
 
 ## V1.2.9-beta.189 build20240921001 (2024-09-21)
     1. Rename the `weathertype` property in FitCloudWeatherObject, FitCloudWeatherForecast and FitCloudHourWeatherObject to `weatherType`, and change its type from `WEATHERTYPE` to `Byte`. 
