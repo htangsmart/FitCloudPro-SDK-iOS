@@ -22,11 +22,12 @@
 
 ![Pod Version](http://img.shields.io/badge/pod-v1.3.0-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.1%20beta.24-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.1%20beta.25-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek%20%7C%20nordic-blueviolet)
 
 - [中文文档(Chinese Doc)](FitCloudDFUKit/README.md)
 - [英文文档(English Doc)](FitCloudDFUKit/README_EN.md)
+- [更新日志(CHANGELOG)](FitCloudDFUKit/CHANGELOG.md)
 
 # 3. FitCloudWFKit (适用于 Realtek 芯片/for Realtek chip)
 
