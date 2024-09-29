@@ -4,7 +4,7 @@
 
 #### The iOS framework for the FitCloudPro smartwatch, which is responsible for encapsulating features such as communication with the watch device.
 
-![Pod Version](http://img.shields.io/badge/pod-v1.2.8-blue)
+![Pod Version](http://img.shields.io/badge/pod-v1.2.9-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
 ![GitHub release](http://img.shields.io/badge/release-v1.2.9-blue)
 ![GitHub release](http://img.shields.io/badge/release%20date-2024.09.30-green)
@@ -21,7 +21,7 @@
 
 #### The iOS framework for the FitCloudPro smartwatch, which is responsible for encapsulating features such as watch firmware DFU, UI DFU, watchface DFU, watch sports DFU, music Push, and more.
 
-![Pod Version](http://img.shields.io/badge/pod-v1.3.0-blue)
+![Pod Version](http://img.shields.io/badge/pod-v1.3.1-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
 ![GitHub release](http://img.shields.io/badge/release-v1.3.1-blue)
 ![GitHub release](http://img.shields.io/badge/release%20date-2024.09.30-green)
@@ -38,7 +38,7 @@
 
 #### The iOS framework for the FitCloudPro smartwatch, which is designed to assist you in easily customizing your own watchface files.
 
-![Pod Version](http://img.shields.io/badge/pod-v1.1.6-blue)
+![Pod Version](http://img.shields.io/badge/pod-v1.1.7-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
 ![GitHub release](http://img.shields.io/badge/release-v1.1.7-blue)
 ![GitHub release](http://img.shields.io/badge/release%20date-2024.09.30-green)
