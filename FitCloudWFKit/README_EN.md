@@ -1,17 +1,18 @@
 # FitCloudWFKit iOS Development Guide
 
 ## Summary
-* What is FitCloudWFKit?
 
-  >###### iOS framework help you customize watchface for fitcloud smart watch easily.
+- What is FitCloudWFKit?
 
-* Scope
+  > ###### iOS framework help you customize watchface for fitcloud smart watch easily.
+
+- Scope
 
   ```
   Partners who need to customize their own iOS smartwatch APP.
   ```
 
-* Compatibility
+- Compatibility
 
   ###### 1. iOS 8.0 and Above；
 
@@ -19,14 +20,27 @@
 
   ###### 3. Bitcode；
 
-
 ## Features
 
 1. Create customized watchface bin file base the template one;
 2. Modify watchface push index.
 
-
 ## Releases
+
+V1.1.7 Build20240930001
+
+```
+  Release Date：2024-09-30
+  Features：
+  1. Optimized SDK robustness.
+  2. Added functionality to create watch photo push files.
+  3. Added support for custom watch face generation for 8773.
+  4. Added support for custom watch face generation for 568X.
+  5. Added ability to modify the push position for 568X game notifications.
+  6. Added ability to modify the push position for 568X sports notifications.
+  7. Fixed issue where corner cutting was incorrect when image dimensions did not match watch dimensions.
+  8. Fixed issue where custom watch face background and preview images could not be correctly generated on 568X platform when the screen width was odd.
+```
 
 V1.1.6 Build202212300001
 
@@ -178,17 +192,19 @@ pod 'FitCloudWFKit'
 ```
 
 If you want to integrate beta FitCloudWFKit, you should use the following configuration in the podfile file:
+
 ```
 pod 'FitCloudWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 ```
 
-Method 2: download from making ` FitCloudWFKit `, manual integrated into your project.
+Method 2: download from making `FitCloudWFKit`, manual integrated into your project.
 
 1. FitCloudWFKit SDK includes:
-    * FitCloudWFKit.xcframework  
-      static library, smart watch development kit core framework
-    * FitCloudWFKit.bundle   
-      smart watch development kit core resource package
+
+   - FitCloudWFKit.xcframework  
+     static library, smart watch development kit core framework
+   - FitCloudWFKit.bundle  
+     smart watch development kit core resource package
 
 2. Add the framework to the project;
 
@@ -196,16 +212,15 @@ Method 2: download from making ` FitCloudWFKit `, manual integrated into your pr
 
 4. Add support for other system dependency libraries:
 
-    * CoreGraphics framework
-    * CoreBluetooth framework
-    * UIKit framework
-    * Accelerate framework
+   - CoreGraphics framework
+   - CoreBluetooth framework
+   - UIKit framework
+   - Accelerate framework
+
 5. add `-ObjC` link flag
    add`-ObjC` link flag at `Other Linker Flags` in `Build Settings` as following:
 
-
    ![ObjC Other Link Flag](media/build_settings.png)
-
 
 ## Import Header File
 
@@ -224,7 +239,7 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
 
 [FitCloudWFKit createWithTemplateBin:templateBinPath isNextGUI:isNextGUI rewriteNextGUIWatchfaceNo:nil bkImage:resolvedBKImage bkCornerRadius:0 preview:resolvedPreviewImage dtPosition:_watchfaceStyle.dtPosition progress:^(CGFloat progress, NSString * _Nullable message) {
     XLOG_INFO(@"progress:%@%%, tip:%@", [NumberFormatUtil roundString:@(progress*100) withMaximumFractionDigits:1], message);
-    
+
 } logging:^(FCWKLOGLEVEL level, NSString * _Nullable message) {
     message = [[message stringByReplacingOccurrencesOfString:@"<" withString:@"["] stringByReplacingOccurrencesOfString:@">" withString:@"]"];
     if(level == FCWKLOGLEVEL_INFO)
@@ -247,12 +262,13 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
     else
     {
         XLOG_ERROR(@"create watchface failure with error: %@", error.localizedDescription);
-        
+
     }
 }];
 ```
 
 ## Change the push index of the watchface
+
 ```objc
 NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEFAULT_20200618142928_MP-cc0c13932ab8ca2f89301678993cfdeb" ofType:@"bin"];
 
@@ -278,11 +294,10 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
     else
     {
         XLOG_ERROR(@"modify push index failure with error: %@", error.localizedDescription);
-        
+
     }
 }];
 ```
-
 
 ## Other Settings and Operations
 
@@ -290,9 +305,9 @@ see detail comments in `<FitCloudWFKit/FitCloudWFKit.h>` header file.
 
 ## FAQ
 
->Q: What is the watchface template bin file, how to get it？
+> Q: What is the watchface template bin file, how to get it？
 >
->A: The template Bin file is the basis of the custom watchface. Different models and sizes of watch template Bin files are different. You need to store these template Bin files on your own server, and then download the specific template Bin file according to the watch information before proceeding. Process, you can contact our business to provide follow-up support.
+> A: The template Bin file is the basis of the custom watchface. Different models and sizes of watch template Bin files are different. You need to store these template Bin files on your own server, and then download the specific template Bin file according to the watch information before proceeding. Process, you can contact our business to provide follow-up support.
 
 ## Technical Support
 

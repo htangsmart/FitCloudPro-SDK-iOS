@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.1.7 build20240930001 (2024-09-30)
+    1. Release FitCloudWFKit V1.1.7 build20240930001.
+    
 ## V1.1.7-beta.11 build20240928001 (2024-09-28)
     1. Add error codes localization in North Korean.
 

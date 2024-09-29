@@ -1,34 +1,48 @@
-# 和唐智能手表表盘开发套件（FitCloudWFKit）iOS开发指南
+# 和唐智能手表表盘开发套件（FitCloudWFKit）iOS 开发指南
 
 ## 简介 / Summary
-* 什么是和唐智能手表表盘 SDK ?
 
-  >###### 和唐智能手表表盘 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件旨在帮助您轻松自定义属于您自己的表盘文件。       
+- 什么是和唐智能手表表盘 SDK ?
 
+  > ###### 和唐智能手表表盘 SDK 是提供给和唐的合作伙伴的开发套件，该开发套件旨在帮助您轻松自定义属于您自己的表盘文件。
 
-* 适用范围
+- 适用范围
 
   ```
   需要个性化定制自己的 iOS 智能手表 APP 的合作伙伴。
   ```
 
-* 兼容性
+- 兼容性
 
-  ###### 1. iOS 8.0及以上操作系统；
+  ###### 1. iOS 8.0 及以上操作系统；
 
-  ###### 2. 支持armv7/i386/x86_64/arm64指令集；
+  ###### 2. 支持 armv7/i386/x86_64/arm64 指令集；
 
-  ###### 3. 支持Bitcode；
-
+  ###### 3. 支持 Bitcode；
 
 ## 特性 / Features
 
-1. 根据模版Bin文件生成新的自定义表盘Bin文件；
+1. 根据模版 Bin 文件生成新的自定义表盘 Bin 文件；
 2. 修改表盘推送位置；
 
 ## 版本 / Releases
 
-版本V1.1.6 Build202212300001
+版本 V1.1.7 Build20240930001
+
+```
+  发布日期：2024年09月30日
+  功能更新：
+  1.SDK健壮性优化
+  2.新增创建手表照片推送文件功能
+  3.新增8773自定义表盘生成支持
+  4.新增568X自定义表盘生成支持
+  5.新增修改568X游戏推送位置
+  6.新增修改568X手表运动推送位置
+  7.修复传入图片尺寸与手表尺寸不匹配的情况下，圆角裁切不正确的问题
+  8.修复当屏幕宽度为奇数时，568X平台无法正确生成自定义表盘背景和预览图像的问题
+```
+
+版本 V1.1.6 Build202212300001
 
 ```
   发布日期：2022年12月30日
@@ -36,7 +50,7 @@
   1、 更新错误码翻译。
 ```
 
-版本V1.1.5 Build202205190001
+版本 V1.1.5 Build202205190001
 
 ```
   发布日期：2022年05月19日
@@ -45,7 +59,7 @@
   2、 bitcode支持。
 ```
 
-版本V1.1.4 Build202201240001
+版本 V1.1.4 Build202201240001
 
 ```
   发布日期：2022年01月24日
@@ -53,7 +67,7 @@
   1、 修正修改游戏皮肤推送位置不正确的问题。
 ```
 
-版本V1.1.3 Build202111030001
+版本 V1.1.3 Build202111030001
 
 ```
   发布日期：2021年11月03日
@@ -61,7 +75,7 @@
   1、 新增修改手表运动的推送位置。
 ```
 
-版本V1.1.2 Build202106170001
+版本 V1.1.2 Build202106170001
 
 ```
   发布日期：2021年06月17日
@@ -69,7 +83,7 @@
   1、 新增修改游戏皮肤的推送位置。
 ```
 
-版本V1.1.1 Build202106160001
+版本 V1.1.1 Build202106160001
 
 ```
   发布日期：2021年06月16日
@@ -77,7 +91,7 @@
   1、 Next GUI 表盘图片存储优化。
 ```
 
-版本V1.1.0 Build202106050001
+版本 V1.1.0 Build202106050001
 
 ```
   发布日期：2021年06月05日
@@ -85,7 +99,7 @@
   1、 Next GUI 支持修改表盘编号。
 ```
 
-版本V1.0.9 Build202106010001
+版本 V1.0.9 Build202106010001
 
 ```
   发布日期：2021年06月01日
@@ -93,7 +107,7 @@
   1、 修正 Next GUI 自定义表盘生成圆角处理的问题。
 ```
 
-版本V1.0.8 Build202105260001
+版本 V1.0.8 Build202105260001
 
 ```
   发布日期：2021年05月26日
@@ -101,7 +115,7 @@
   1、 Next GUI 自定义表盘生成支持。
 ```
 
-版本V1.0.7 Build202102020001
+版本 V1.0.7 Build202102020001
 
 ```
   发布日期：2021年02月02日
@@ -109,7 +123,7 @@
   1、 自定义表盘增加文件大小信息的日志打印。
 ```
 
-版本V1.0.6 Build202101280002
+版本 V1.0.6 Build202101280002
 
 ```
   发布日期：2021年01月28日
@@ -117,7 +131,7 @@
   1、 新增修改表盘的推送位置。
 ```
 
-版本V1.0.5 Build202009280001
+版本 V1.0.5 Build202009280001
 
 ```
   发布日期：2020年09月28日
@@ -125,7 +139,7 @@
   1、 新增土耳其语/乌克兰语。
 ```
 
-版本V1.0.4 Build202008210001
+版本 V1.0.4 Build202008210001
 
 ```
   发布日期：2020年08月21日
@@ -133,7 +147,7 @@
   1、 支持设置圆角，缩略图的圆角会根据背景圆角大小按比例自动缩放。
 ```
 
-版本V1.0.3 Build202008140001
+版本 V1.0.3 Build202008140001
 
 ```
   发布日期：2020年08月14日
@@ -141,7 +155,7 @@
   1、 新增克罗地亚语/阿尔巴尼亚语。
 ```
 
-版本V1.0.2 Build202007180001
+版本 V1.0.2 Build202007180001
 
 ```
   发布日期：2020年07月18日
@@ -149,7 +163,7 @@
   1、 rename to FitCloudWFKit。
 ```
 
-版本V1.0.1 Build202007160001
+版本 V1.0.1 Build202007160001
 
 ```
   发布日期：2020年07月16日
@@ -157,7 +171,7 @@
   1、 自动裁剪背景图/预览图。
 ```
 
-版本V1.0.0 Build202007100001
+版本 V1.0.0 Build202007100001
 
 ```
   发布日期：2020年07月10日
@@ -178,34 +192,35 @@ pod 'FitCloudWFKit'
 ```
 
 如果你想集成 beta 测试版，则 Podfile 文件中应该使用如下配置：
+
 ```
 pod 'FitCloudWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 ```
 
 方法二：从 Github 上下载 `FitCloudWFKit`，手动集成到您的项目中。
 
-1. FitCloudWFKit SDK开发包含：
+1. FitCloudWFKit SDK 开发包含：
 
-  * FitCloudWFKit.xcframework   静态库，智能手表开发套件核心framework
+- FitCloudWFKit.xcframework 静态库，智能手表开发套件核心 framework
 
-  * FitCloudWFKit.bundle     智能手环开发套件核心资源包
+- FitCloudWFKit.bundle 智能手环开发套件核心资源包
 
-2. 将framework添加到项目中;
-3. 将bundle资源包添加到项目中;
+2. 将 framework 添加到项目中;
+3. 将 bundle 资源包添加到项目中;
 4. 添加其他系统依赖库支持：
 
-    * CoreGraphics.framework
+   - CoreGraphics.framework
 
-    * CoreBluetooth.framework
+   - CoreBluetooth.framework
 
-    * UIKit.framework
+   - UIKit.framework
 
-    * Accelerate.framework
+   - Accelerate.framework
+
 5. 添加 `-ObjC` 链接标志
    在项目的 `Build Settings` 的 `Other Linker Flags` 中添加 `-ObjC` 链接标志，如下图所示：
 
    ![ObjC Other Link Flag](media/build_settings.png)
-
 
 ## 引用头文件
 
@@ -224,7 +239,7 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
 
 [FitCloudWFKit createWithTemplateBin:templateBinPath isNextGUI:isNextGUI rewriteNextGUIWatchfaceNo:nil bkImage:resolvedBKImage bkCornerRadius:0 preview:resolvedPreviewImage dtPosition:_watchfaceStyle.dtPosition progress:^(CGFloat progress, NSString * _Nullable message) {
     XLOG_INFO(@"progress:%@%%, tip:%@", [NumberFormatUtil roundString:@(progress*100) withMaximumFractionDigits:1], message);
-    
+
 } logging:^(FCWKLOGLEVEL level, NSString * _Nullable message) {
     message = [[message stringByReplacingOccurrencesOfString:@"<" withString:@"["] stringByReplacingOccurrencesOfString:@">" withString:@"]"];
     if(level == FCWKLOGLEVEL_INFO)
@@ -247,12 +262,13 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
     else
     {
         XLOG_ERROR(@"create watchface failure with error: %@", error.localizedDescription);
-        
+
     }
 }];
 ```
 
 ## 修改表盘推送位置
+
 ```objc
 NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEFAULT_20200618142928_MP-cc0c13932ab8ca2f89301678993cfdeb" ofType:@"bin"];
 
@@ -278,11 +294,10 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
     else
     {
         XLOG_ERROR(@"modify push index failure with error: %@", error.localizedDescription);
-        
+
     }
 }];
 ```
-
 
 ## 其他设置和操作
 
@@ -290,11 +305,9 @@ NSString* templateBinPath = [[NSBundle mainBundle] pathForResource:@"240USER_DEF
 
 ## FAQ
 
->Q: 什么是模版Bin文件，在什么地方获取？
+> Q: 什么是模版 Bin 文件，在什么地方获取？
 >
->A: 模版Bin文件是自定义表盘的基础，不同型号不同尺寸的手表模版Bin文件都不相同，您需要在自己的服务器上存放这些模版Bin文件，然后根据手表信息下载特定的模版Bin文件后再进行后续流程，您可以联系我们的商务提供后续的支持。
-
-
+> A: 模版 Bin 文件是自定义表盘的基础，不同型号不同尺寸的手表模版 Bin 文件都不相同，您需要在自己的服务器上存放这些模版 Bin 文件，然后根据手表信息下载特定的模版 Bin 文件后再进行后续流程，您可以联系我们的商务提供后续的支持。
 
 ## 技术支持
 
