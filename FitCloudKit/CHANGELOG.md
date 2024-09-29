@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9 build20240930001 (2024-09-30)
+    1. Release FitCloudKit V1.2.9 build20240930001.
+
 ## V1.2.9-beta.195 build20240929001 (2024-09-29)
     1. Correct the lcd No.32 screen's shape from square to ellipse.
     

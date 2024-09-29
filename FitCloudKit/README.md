@@ -42,6 +42,99 @@
 
 ## 版本 / Releases
 
+版本 V1.2.9 Build20240930001
+
+```
+  发布日期：2024年09月30日
+  功能更新：
+    1.新增创维光伏数据支持, @see withSkyworthPV
+    2.新增一些调试日志
+    3.板球比赛数据指令支持, @see withCricketMatch
+    4.新增同步指定时间到手表支持
+    5.GPS&EPO支持, @see withGPSEpo
+    6.网易云音乐支持
+    7.表盘尺寸支持228x460方
+    8.新增习惯养成类型
+    9.新增获取手表的支持的日程类型列表 @see canGetSupportedSchedules
+    10.支持设置和获取勋章列表 @see withMedals
+    11.体感游戏支持 @see withMotionSensingGame
+    12.修改习惯养成协议
+    13.表盘尺寸支持390x390圆
+    14.新增导航信息同步支持,@see naviGuideSupported
+    15.表盘尺寸支持390x450方
+    16.表盘尺寸支持286x240方
+    17.新增相册推送支持,@see allowPhotoPush
+    18.新增电子书推送支持,@see allowEBookPush
+    19.新增小睡支持,@see withSnooze
+    20.新增快速眼动支持,@see withREM
+    21.新增超过10个常用联系人支持,@see allowHugeCountFavContacts
+    22.新增电子卡包功能
+    23.表盘尺寸支持192x490方
+    24.新增心率监测时间段是否支持跨天标识,@see allowHeartRateMonitoringAcrossDays
+    25.新增设备能力查询支持,@see allowQueryDeviceCapacities, allConfig.deviceCapacities
+    26.新增获取运动训练展示数据项信息,@see withDisplayConfigInWorkoutData
+    27.FitCloudOption新增是否自动同步系统语言选项,@see autoSyncSystemLang
+    28.新OTA升级支持, @see withNewOTA
+    29.进入DFU模式新增返回错误类型 `FITCLOUDKITERROR_DFUNOTALLOWFORPOWERSAVINGMODE`
+    30.新增健康定时监测独立开关设置和查询功能, @see allowSingleHTMSettings
+    31.新增静态心率/动态心率过低报警功能, @see withHRLowAlarm
+    32.天气设置新增紫外线指数设置功能
+    33.新增猎声定制天气类型 @see FITCLOUDWEATHERTYPE_CLOUDYINEVENING/FITCLOUDWEATHERTYPE_CLEARINEVENING/FITCLOUDWEATHERTYPE_EVENINGSHOWERS
+    34.设备能力类型新增设备支持的天气种类数量
+    35.新增设置和查询运动极限心率，仅特定项目可用
+    36.新增猎声相关软件版本信息查询功能，仅该客户可用，版本信息数据由客户自行解析, @see FitCloudKit+Haylou.h
+    37.新增大模型支持, @see withLLM
+    38.新增猎声手表SN信息查询功能，仅该客户可用, @see FitCloudKit+Haylou.h
+    39.修改绑定API，新增随机码，没有随机码是填nil
+    40.绑定失败错误新增`手表需要恢复出厂设置才能绑定`
+    41.新增查询手表当前语言设置功能
+    42.新增手表端执行了停止查找手表操作通知, @see FITCLOUDEVENT_WATCHSIDE_PERFORM_STOP_FIND_WATCH_ACTION_NOTIFY
+    43.修改停止查找手表API名称，新增停止查找手表功能
+    44.每日运动目标新增设置运动时长目标
+    45.新增设置紧急联系人功能, @see withEmergencyContact
+    46.新增静息心率查询功能, @see withRestingHR
+    47.新增设置个性化提醒功能, @see withPersonalizedReminder, @see FITCLOUDDEVICECAPACITY
+    48.健康总数据以及计步数据新增运动时长数据
+    49.消息通知新增Gmail/Outlook/WhatsApp Business
+    50.天气设置修改能见度精度到米
+    51.新增直接DFU升级(DFU升级不进入DFU模式), 直接拿`[FitCloudKit directDFUPeripheral]`外设传入FitCloudDFUKit, 仅特定客户手表可用
+    52.新增硬件平台标志, @see FITCLOUDHARDWARE_8773, FITCLOUDHARDWARE_568X
+    53.电子卡包名称最大长度修改成32字节
+    54.修正传音厂商标识，支持传音MAC地址解析
+    55.新增情侣功能, @see `[FitCloudKit isDeviceSupportFeature:FITCLOUDDEVICEFEATURE_LOVERS]`
+    56.新增GPS互联运动卡路里数据返回
+    57.新OTA新增帧重传机制
+    58.表盘尺寸支持320x172方
+    59.表盘尺寸支持385x320方
+    60.更新新OTA错误码
+    61.为防止用户的资料比较离谱导致手表算法问题，针对用户输入的资料进行修正再传给手表
+    62.优化切换表盘，及修改其对应的组件样式API
+    63.优化手表返回的手表表盘UI信息
+    64.删除SDK里的运动类型定义，由APP层处理对应的运动类型，运动类型映射表找对接的商务或者产品经理要
+    65.新增支持返回快速眼动(REM)类型的睡眠数据
+    66.新增支持设置24小时天气信息，仅部分手表支持
+    67.新增泳池游泳和开放水域游泳运动数据同步
+    68.表盘尺寸支持480x480圆
+    69.表盘尺寸支持194x368方
+    70.芯与物GPS支持
+    71.ANCS通知扩展
+    72.耳机仓项目支持
+    73.新增支持跳绳/椭圆机/划船机相关运动扩展数据的同步
+    74.新增支持屏蔽心率加强测量
+    75.支持传音Infinix项目女性健康相关功能
+    76.支持获取手表端调试日志，仅部分手表支持
+    77.`FitCloudKitConnectRecord` 新增MAC地址
+    78.引入事件“FITCLOUDEVENT_WATCHSIDE_TERMINATED_THE_MEASUREMENT_INITIALIZED_BY_THE_APPSIDE_NOTIFY”，表示手表端已手动终止APP端发起的测量。
+    79.运动心率数据在单独的数据列表中提供。 @see bpmDataArray
+    80.新增回调，当手表端进入或退出大语言模型功能的时候通知APP
+    81.解决了在多个设备之间切换时连接的一些问题
+    82.表盘尺寸支持360x360方/296x240方
+    83.引入新的API`+(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;` 以允许主程序仅通过一个API调用来连接和绑定手表设备。
+    84.将FitCloudKitConnectRecord中的`time`属性重命名为`latestConnectTime`，并将`bindTime`属性命名为`userBindTime`
+    85.新增手表微信支付认证功能
+    86.新增启动和停止激光测量功能，同时支持查询激光测量状态
+```
+
 版本 V1.2.8 Build202305300001
 
 ```

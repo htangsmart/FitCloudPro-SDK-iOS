@@ -42,6 +42,99 @@
 
 ## Releases
 
+V1.2.9 Build20240930001
+
+```
+  Release Date：2024-09-30
+  Features：
+    1. Added support for Skyworth PV data, @see withSkyworthPV.
+    2. Added some debugging logs.
+    3. Supported cricket match data commands, @see withCricketMatch.
+    4. Added support for synchronizing specified time to the watch.
+    5. GPS & EPO support, @see withGPSEpo.
+    6. Supported NetEase Cloud Music.
+    7. Watch face size support for 228x460 square.
+    8. Added habit formation types.
+    9. Added command to get the list of supported schedule types for the watch, @see canGetSupportedSchedules.
+    10. Supported setting and getting the medal list, @see withMedals.
+    11. Supported motion-sensing games, @see withMotionSensingGame.
+    12. Modified habit formation protocol.
+    13. Watch face size support for 390x390 circular.
+    14. Added navigation information synchronization support, @see naviGuideSupported.
+    15. Watch face size support for 390x450 square.
+    16. Watch face size support for 286x240 square.
+    17. Added support for album push, @see allowPhotoPush.
+    18. Added support for eBook push, @see allowEBookPush.
+    19. Added snooze support, @see withSnooze.
+    20. Added REM sleep support, @see withREM.
+    21. Supported more than 10 frequently used contacts, @see allowHugeCountFavContacts.
+    22. Added e-wallet functionality.
+    23. Watch face size support for 192x490 square.
+    24. Added indicator for whether heart rate monitoring spans across days, @see allowHeartRateMonitoringAcrossDays.
+    25. Added support for querying device capabilities, @see allowQueryDeviceCapacities, allConfig.deviceCapacities.
+    26. Added method to get workout display data item information, @see withDisplayConfigInWorkoutData.
+    27. Added FitCloudOption for automatic system language synchronization, @see autoSyncSystemLang.
+    28. New OTA upgrade support, @see withNewOTA.
+    29. Entering DFU mode now returns error type `FITCLOUDKITERROR_DFUNOTALLOWFORPOWERSAVINGMODE`.
+    30. Added independent switch settings and query functionality for health monitoring timing, @see allowSingleHTMSettings.
+    31. Added static and dynamic heart rate low alarm functionality, @see withHRLowAlarm.
+    32. Weather settings now include UV index functionality.
+    33. Added customized weather types for LiSheng, @see FITCLOUDWEATHERTYPE_CLOUDYINEVENING/FITCLOUDWEATHERTYPE_CLEARINEVENING/FITCLOUDWEATHERTYPE_EVENINGSHOWERS.
+    34. Added the number of weather types supported by the device capabilities.
+    35. Added support for setting and querying extreme heart rates for specific projects.
+    36. Added software version information query for LiSheng, only available for that client, version data to be parsed by the client, @see FitCloudKit+Haylou.h.
+    37. Added support for large models, @see withLLM.
+    38. Added query functionality for LiSheng watch SN information, only available for that client, @see FitCloudKit+Haylou.h.
+    39. Modified binding API, added random code; if there is no random code, fill in nil.
+    40. New binding failure error: "The watch needs to be reset to factory settings to bind."
+    41. Added functionality to query the current language setting of the watch.
+    42. Added notification for the watch performing the stop find watch action, @see FITCLOUDEVENT_WATCHSIDE_PERFORM_STOP_FIND_WATCH_ACTION_NOTIFY.
+    43. Modified stop find watch API name; added stop find watch functionality.
+    44. Daily exercise goal now includes setting exercise duration target.
+    45. Added functionality to set emergency contacts, @see withEmergencyContact.
+    46. Added resting heart rate query functionality, @see withRestingHR.
+    47. Added functionality to set personalized reminders, @see withPersonalizedReminder, @see FITCLOUDDEVICECAPACITY.
+    48. Health data and step data now include exercise duration data.
+    49. Message notifications now include Gmail/Outlook/WhatsApp Business.
+    50. Weather settings modified visibility precision to meters.
+    51. Added direct DFU upgrade (DFU upgrade without entering DFU mode); directly use `[FitCloudKit directDFUPeripheral]` to pass peripherals to FitCloudDFUKit, available only for specific client watches.
+    52. Added hardware platform flags, @see FITCLOUDHARDWARE_8773, FITCLOUDHARDWARE_568X.
+    53. The maximum length for e-wallet names has been changed to 32 bytes.
+    54. Corrected the vendor identifier for Transsion, supporting MAC address parsing.
+    55. Added couple functionality, @see `[FitCloudKit isDeviceSupportFeature:FITCLOUDDEVICEFEATURE_LOVERS]`.
+    56. Supported returning calorie data for GPS interconnected exercises.
+    57. New OTA added frame retransmission mechanism.
+    58. Watch face size support for 320x172 square.
+    59. Watch face size support for 385x320 square.
+    60. Updated new OTA error codes.
+    61. To prevent unrealistic user data causing algorithm issues, user input will be corrected before being sent to the watch.
+    62. Optimized switching watch faces and modifying corresponding component style APIs.
+    63. Optimized the watch's return of watch face UI information.
+    64. Removed exercise type definitions from SDK, to be handled at the app level; for exercise type mapping table, contact the corresponding business or product manager.
+    65. Added support for returning REM sleep data.
+    66. Added support for setting 24-hour weather information, only some watches support this.
+    67. Added support for pool swimming and open water swimming exercise data synchronization.
+    68. Watch face size support for 480x480 circular.
+    69. Watch face size support for 194x368 square.
+    70. Chip and object GPS support.
+    71. ANCS notification extension.
+    72. Headphone case project support.
+    73. Added support for synchronizing jump rope/elliptical/rowing machine related exercise extended data.
+    74. Added support for shielding enhanced heart rate measurement.
+    75. Supported female health features for Transsion Infinix projects.
+    76. Supported obtaining debugging logs from the watch, only some watches support this.
+    77. `FitCloudKitConnectRecord` now includes MAC address.
+    78. Introduced event “FITCLOUDEVENT_WATCHSIDE_TERMINATED_THE_MEASUREMENT_INITIALIZED_BY_THE_APPSIDE_NOTIFY,” indicating the watch has manually terminated a measurement initiated by the app.
+    79. Exercise heart rate data is provided in a separate data list, @see bpmDataArray.
+    80. Added callback to notify the app when the watch enters or exits large language model functionality.
+    81. Resolved some connection issues when switching between multiple devices.
+    82. Watch face size support for 360x360 square/296x240 square.
+    83. Introduced new API `+(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;` to allow the main program to connect and bind the watch device with a single API call.
+    84. Renamed the `time` property in FitCloudKitConnectRecord to `latestConnectTime`, and renamed the `bindTime` property to `userBindTime`.
+    85. Added WeChat payment certification functionality for the watch.
+    86. Added functionality to start and stop laser measurement, and to query the laser measurement status.
+```
+
 V1.2.8 Build202305300001
 
 ```
