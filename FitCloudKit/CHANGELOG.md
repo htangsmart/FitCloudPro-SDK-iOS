@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.2.9-beta.195 build20240929001 (2024-09-29)
+    1. Correct the lcd No.32 screen's shape from square to ellipse.
+    
 ## V1.2.9-beta.194 build20240928001 (2024-09-28)
     1. Add error codes localization in North Korean.
 
