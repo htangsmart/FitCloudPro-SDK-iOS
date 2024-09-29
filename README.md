@@ -57,6 +57,8 @@
 
 ![Pod Version](http://img.shields.io/badge/pod-v1.0.1-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
+![GitHub release](http://img.shields.io/badge/release-v1.0.1-blue)
+![GitHub release](http://img.shields.io/badge/release%20date-2022.05.19-green)
 ![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.0.2%20beta.1-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-nordic-blueviolet)
 
