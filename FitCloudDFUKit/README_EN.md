@@ -26,6 +26,22 @@
 
 ## Releases
 
+V1.3.1 Build20240930001
+
+```
+  Release Date：2024-09-30
+  Features：
+  1. Added support for Realtek music push.
+  2. Added support for Realtek eBook/photo push.
+  3. Renamed log callback functions.
+  4. Added functionality to terminate firmware upgrades.
+  5. Updated Realtek firmware upgrade SDK to support 8773 model chips.
+  6. Updated Realtek firmware upgrade SDK to resolve issues with delayed Bluetooth off callbacks.
+  7. Added option to not wait for disconnect action before callback completion for Realtek upgrade programs.
+  8. Updated Realtek firmware upgrade SDK to fix previous firmware upgrade errors for certain chip platforms and corrected the Realtek version number (previously incorrectly filled by the manufacturer).
+  9. Adapted for Xcode 16.
+```
+
 V1.3.0 Build202212300001
 
 ```

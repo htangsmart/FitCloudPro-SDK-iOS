@@ -23,7 +23,9 @@
 
 ![Pod Version](http://img.shields.io/badge/pod-v1.3.0-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.1%20beta.25-brightgreen)
+![GitHub release](http://img.shields.io/badge/release-v1.3.1-blue)
+![GitHub release](http://img.shields.io/badge/release%20date-2024.09.30-green)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.1-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek%20%7C%20nordic-blueviolet)
 
 - [中文文档(Chinese Doc)](FitCloudDFUKit/README.md)
