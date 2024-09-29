@@ -69,7 +69,7 @@ V1.2.9 Build20240930001
     20. Added REM sleep support, @see withREM.
     21. Supported more than 10 frequently used contacts, @see allowHugeCountFavContacts.
     22. Added e-wallet functionality.
-    23. Watch face size support for 192x490 square.
+    23. Watch face size support for 192x490 ellipse.
     24. Added indicator for whether heart rate monitoring spans across days, @see allowHeartRateMonitoringAcrossDays.
     25. Added support for querying device capabilities, @see allowQueryDeviceCapacities, allConfig.deviceCapacities.
     26. Added method to get workout display data item information, @see withDisplayConfigInWorkoutData.
