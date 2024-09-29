@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
     s.social_media_url = 'http://www.hetangsmart.com'
     s.requires_arc     = true
     s.documentation_url = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudWFKit/README.md'
+    s.changelog = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitClouWFdKit/CHANGELOG.md'
     s.screenshot       = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/raw/master/FitCloudWFKit/logo.png'
 
     s.platform         = :ios, '8.0'
