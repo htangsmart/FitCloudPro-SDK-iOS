@@ -69,7 +69,7 @@
     20.新增快速眼动支持,@see withREM
     21.新增超过10个常用联系人支持,@see allowHugeCountFavContacts
     22.新增电子卡包功能
-    23.表盘尺寸支持192x490方
+    23.表盘尺寸支持192x490椭圆
     24.新增心率监测时间段是否支持跨天标识,@see allowHeartRateMonitoringAcrossDays
     25.新增设备能力查询支持,@see allowQueryDeviceCapacities, allConfig.deviceCapacities
     26.新增获取运动训练展示数据项信息,@see withDisplayConfigInWorkoutData
