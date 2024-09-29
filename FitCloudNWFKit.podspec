@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.requires_arc     = true
     s.documentation_url = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudNWFKit/README.md'
     s.changelog = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudNWFKit/CHANGELOG.md'
-    s.screenshot       = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/raw/master/FitCloudNWFKit/logo.png'
+    s.screenshot       = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudNWFKit/logo.png'
 
     s.platform         = :ios, '9.0'
     s.frameworks       = 'Foundation'
