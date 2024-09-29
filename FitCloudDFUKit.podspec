@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.requires_arc     = true
     s.documentation_url = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudDFUKit/README.md'
     s.changelog = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudDFUKit/CHANGELOG.md'
-    s.screenshot       = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/raw/master/FitCloudDFUKit/logo.png'
+    s.screenshot       = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudDFUKit/logo.png'
 
     s.platform         = :ios, '9.0'
     s.frameworks       = 'Foundation', 'CoreBluetooth', 'CoreGraphics'
