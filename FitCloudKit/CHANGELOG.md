@@ -1,7 +1,7 @@
 # CHANGELOG
 
 ## V1.3.0-beta.1 build20241008001 (2024-10-08)
-    1. Add events to notify changes in the workout status on the watch side.
+    1. Add events to notify changes of the workout status on the watch side.
     
 ## V1.2.9 build20240930001 (2024-09-30)
     1. Release FitCloudKit V1.2.9 build20240930001.
