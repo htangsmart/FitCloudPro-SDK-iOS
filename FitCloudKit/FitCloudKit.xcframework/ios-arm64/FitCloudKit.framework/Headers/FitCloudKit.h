@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-09-30  Version:1.2.9 Build:20240930001
+//      pcjbird    2024-10-08  Version:1.3.0-beta.1 Build:20241008001
 
 
 #import <Foundation/Foundation.h>
@@ -108,6 +108,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark 扫描到的外设(手表)列表
 
 /// 扫描到的外设(手表)列表
+/// - Returns:
+/// 扫描到的蓝牙外设
 +(NSArray<FitCloudPeripheral *>*_Nonnull)discoveredPeripherals;
 
 #pragma mark 蓝牙中心设备(Central)状态
@@ -1327,7 +1329,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 手动同步历史运动健康数据
 /// - Parameters:
-///   - option: 选项，默认 FITCLOUDDATASYNCOPTION_LEGACY
+///   - option: 选项，默认 `FITCLOUDDATASYNCOPTION_LEGACY`
 ///   - progress: 进度回调
 ///   - block: 结果回调
 +(void)manualSyncDataWithOption:(FITCLOUDDATASYNCOPTION) option progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block;

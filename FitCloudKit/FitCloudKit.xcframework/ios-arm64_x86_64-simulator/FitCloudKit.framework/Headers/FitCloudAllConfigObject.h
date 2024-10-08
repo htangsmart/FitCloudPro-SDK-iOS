@@ -34,7 +34,7 @@
 /**
  * @brief 手表软硬件版本信息
  */
-@property(nonatomic, strong)FitCloudFirmwareVersionObject* firmware;
+@property(nonatomic, strong, nullable)FitCloudFirmwareVersionObject* firmware;
 
 /**
  * @brief 消息通知设置

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// FitCloud 外部设备 (通常指智能手表)
 @interface FitCloudPeripheral : NSObject
 
@@ -46,3 +48,5 @@
 @property(nonatomic, strong, nullable) NSString* subProjNo;
 
 @end
+
+NS_ASSUME_NONNULL_END

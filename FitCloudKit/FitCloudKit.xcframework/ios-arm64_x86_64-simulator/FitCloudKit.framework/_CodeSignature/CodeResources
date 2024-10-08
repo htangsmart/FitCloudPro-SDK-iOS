@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/FitCloudAllConfigObject.h</key>
 		<data>
-		Q8k5/HMBf7cTkz4mTStzwksqk5A=
+		T2Q0wR0LXBsbReDNqVv57CrNCOo=
 		</data>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Headers/FitCloudEvent.h</key>
 		<data>
-		qSXZuodPm6/wh+8Ee8YiBIX44SQ=
+		7EyXcbOHJpr6u9Bbfd+IjZMS3cI=
 		</data>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		8KPuFVpyePODR0m+29jdxp2PUBY=
+		xIp7ygXgigKy+vjvyBxrT98iguI=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -202,7 +202,7 @@
 		</data>
 		<key>Headers/FitCloudPeripheral.h</key>
 		<data>
-		dZMZ+YXaiKSBDoYagw9Xs+Wr4BA=
+		7kxc5A67PVmN2FrPGgSs1EmcY+U=
 		</data>
 		<key>Headers/FitCloudPersonalizedReminderObject.h</key>
 		<data>
@@ -306,7 +306,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lZ5CTY3n+eirMRRKKV4yAXk60gA=
+		aQcgtWzXRNjA37aicEpMPY0ohP8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -330,11 +330,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Q8k5/HMBf7cTkz4mTStzwksqk5A=
+			T2Q0wR0LXBsbReDNqVv57CrNCOo=
 			</data>
 			<key>hash2</key>
 			<data>
-			HESoz5kRp4e88NUnA0m71qKGT/RTNLwHqWFnac88TNM=
+			C1FVXEbPiZG4NpkmG4QdsCvbpv7Z0DvjwQ+fEIkXoXc=
 			</data>
 		</dict>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
@@ -528,11 +528,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qSXZuodPm6/wh+8Ee8YiBIX44SQ=
+			7EyXcbOHJpr6u9Bbfd+IjZMS3cI=
 			</data>
 			<key>hash2</key>
 			<data>
-			LRzTssL9tHk0s/bBs/2jCPQwi/oKZgdGm+wfhhdPSJE=
+			mTOCU1yism+0dUSNqPBQBrBqib0/Bwhwg+MGip4YR0k=
 			</data>
 		</dict>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
@@ -748,11 +748,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8KPuFVpyePODR0m+29jdxp2PUBY=
+			xIp7ygXgigKy+vjvyBxrT98iguI=
 			</data>
 			<key>hash2</key>
 			<data>
-			+/h8c92ZDb3vqb6Wl+mbeFfq0Yah2KwcC5kccUkNTPE=
+			6XlZod8a2XFkeDE8XR2PeP3/xZby7jyxEbahSQMkMeg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -858,11 +858,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dZMZ+YXaiKSBDoYagw9Xs+Wr4BA=
+			7kxc5A67PVmN2FrPGgSs1EmcY+U=
 			</data>
 			<key>hash2</key>
 			<data>
-			/FrjhaYU44pFDLV/qCZrx1z8B0oBotSJJLzuT6CzgeY=
+			/oGiF/8E1R6OozQnIQ318DjHmS/1yX9iEvYpkq2yQ8Y=
 			</data>
 		</dict>
 		<key>Headers/FitCloudPersonalizedReminderObject.h</key>
