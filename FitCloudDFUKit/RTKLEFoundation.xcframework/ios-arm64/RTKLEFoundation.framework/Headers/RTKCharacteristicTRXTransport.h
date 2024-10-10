@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Specifies how long a packet is assumed to be send to remote.
 ///
 /// This value is only used for unreliably send. The default value is `0.02` in seconds.
-@property NSTimeInterval elapsedTime;
+@property NSTimeInterval elapsedTime DEPRECATED_MSG_ATTRIBUTE("No longer useful for iOS 11 and above");
 
 @end
 
