@@ -40,8 +40,22 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// This method will get called, if the manager is listening connection events, which is started by call ``RTKProfileConnectionManager/startMonitoringNewConnectionWithAccessory`` or ``RTKProfileConnectionManager/startMonitoringNewConnectionWithPeripheral``. If a qualified `GATT` peripheral is connected, the connection is of ``RTKConnectionUponGATT`` type. If a qualified iAP accessory is connected, the connection is of ``RTKConnectionUponiAP`` type.
 - (void)profileManager:(RTKProfileConnectionManager *)manager
-didDetectNewConnectedConnection:(RTKProfileConnection *)connection;
+didDetectNewConnectedConnection:(RTKProfileConnection *)connection DEPRECATED_MSG_ATTRIBUTE("Use -profileManager:didDetectConnectionOf: instead");
 
+/// Tells the delegate that a connection with a qualified device that is connected just now.
+///
+/// - Parameter manager: The manager that reports this event.
+/// - Parameter connection: The connection that a device is connected with manager.
+///
+/// This method will get called, if the manager is listening connection events, which is started by call ``RTKProfileConnectionManager/startMonitoringNewConnectionWithAccessory`` or ``RTKProfileConnectionManager/startMonitoringNewConnectionWithPeripheral``. If a qualified `GATT` peripheral is connected, the connection is of ``RTKConnectionUponGATT`` type. If a qualified iAP accessory is connected, the connection is of ``RTKConnectionUponiAP`` type.
+- (void)profileManager:(RTKProfileConnectionManager *)manager
+didDetectConnectionOf:(RTKProfileConnection *)connection;
+
+/// Tells the delegate that a connection with a qualified device is disconnected.
+///
+/// This method is called only after you did start monitoring connection event use ``RTKProfileConnectionManager/startMonitoringNewConnectionWithAccessory`` or ``RTKProfileConnectionManager/startMonitoringNewConnectionWithPeripheral``.
+- (void)profileManager:(RTKProfileConnectionManager *)manager
+didDetectDisconnectionOf:(RTKProfileConnection *)connection;
 
 /// Tells the delegate that a connection with a qualified device that is discovered just now while scanning.
 ///
@@ -145,7 +159,7 @@ didDiscoverPeripheralOfConnection:(RTKProfileConnection *)connection
 
 /// Begins to receive notifications of connection or disconnection events of qualified iAP accessories.
 ///
-/// The profile manager calls ``RTKProfileConnectionManagerDelegate/profileManager:didDetectNewConnectedConnection:`` on its delegate if a qualified accessory is connected.
+/// The profile manager calls ``RTKProfileConnectionManagerDelegate/profileManager:didDetectConnectionOf:`` on its delegate if a qualified accessory is connected, and calls ``RTKProfileConnectionManagerDelegate/profileManager:didDetectDisconnectionOf:`` when a qualified accessory is disconnected.
 - (void)startMonitoringNewConnectionWithAccessory;
 
 
@@ -155,13 +169,13 @@ didDiscoverPeripheralOfConnection:(RTKProfileConnection *)connection
 
 /// Begins to receive notifications of connection or disconnection events of qualified GATT peripherals.
 ///
-/// The profile manager calls ``RTKProfileConnectionManagerDelegate/profileManager:didDetectNewConnectedConnection:`` on its delegate object if a qualified GATT peripheral is connected.
+/// The profile manager calls ``RTKProfileConnectionManagerDelegate/profileManager:didDetectConnectionOf:`` on its delegate object if a qualified GATT peripheral is connected, and calls ``RTKProfileConnectionManagerDelegate/profileManager:didDetectDisconnectionOf:`` when a qualified GATT peripheral is disconnected.
 ///
 /// The ``GATTAvailable`` should be `YES` when call this method.
 - (void)startMonitoringNewConnectionWithPeripheral;
 
 
-/// Stops receiving notifications of connection or disconnection events of qualified `GATT` peripherals.
+/// Stops receiving notifications of connection or disconnection events of qualified `GATT` peripherals and iAP accessories.
 ///
 /// The ``GATTAvailable`` should be `YES` when call this method.
 - (void)stopMonitoringNewConnectionWithPeripheral;
