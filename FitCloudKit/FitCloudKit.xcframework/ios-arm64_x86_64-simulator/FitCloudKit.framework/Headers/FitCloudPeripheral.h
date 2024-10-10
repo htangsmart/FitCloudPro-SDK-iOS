@@ -21,13 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong)CBPeripheral *peripheral;
 
 /// advertisementData
-@property(nonatomic, strong)NSDictionary *advertisementData;
+@property(nonatomic, strong, nullable)NSDictionary *advertisementData;
 
 /// RSSI
-@property(nonatomic, strong)NSNumber *RSSI;
+@property(nonatomic, strong, nullable)NSNumber *RSSI;
 
 /// mac地址，如果厂商自定义了广播数据，这里返回nil
-@property(nonatomic, strong, readonly) NSString* macAddr;
+@property(nonatomic, strong, readonly, nullable) NSString* macAddr;
 
 /// 是否为下一代厂商名称
 @property(nonatomic, readonly) BOOL isNextManufacturerName;

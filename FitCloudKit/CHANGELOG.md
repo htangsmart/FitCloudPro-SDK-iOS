@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.3 build20241010002 (2024-10-10)
+
+- Resolved some issues with workout bpmDataArray.
+
 ## V1.3.0-beta.2 build20241010001 (2024-10-10)
 
 - Fixed the issue with setting and querying the lyrics color for the earphone case.

@@ -1,9 +1,10 @@
 # RELEASES
 
-## pcjbird 2024-10-10 Version:1.3.0-beta.2 Build:20241010001
+## pcjbird 2024-10-10 Version:1.3.0-beta.3 Build:20241010002
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
+- Resolved some issues with workout bpmDataArray.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 
