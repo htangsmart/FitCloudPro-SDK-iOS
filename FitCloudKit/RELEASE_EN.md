@@ -1,0 +1,358 @@
+# RELEASES
+
+## pcjbird 2024-10-10 Version:1.3.0-beta.2 Build:20241010001
+
+- Add events to notify changes of the workout status on the watch side.
+- Fixed the issue with setting and querying the lyrics color for the earphone case.
+
+## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
+
+- Added support for Skyworth PV data, @see withSkyworthPV.
+- Added some debugging logs.
+- Supported cricket match data commands, @see withCricketMatch.
+- Added support for synchronizing specified time to the watch.
+- GPS & EPO support, @see withGPSEpo.
+- Supported NetEase Cloud Music.
+- Watch face size support for 228x460 square.
+- Added habit formation types.
+- Added command to get the list of supported schedule types for the watch, @see canGetSupportedSchedules.
+- Supported setting and getting the medal list, @see withMedals.
+- Supported motion-sensing games, @see withMotionSensingGame.
+- Modified habit formation protocol.
+- Watch face size support for 390x390 circular.
+- Added navigation information synchronization support, @see naviGuideSupported.
+- Watch face size support for 390x450 square.
+- Watch face size support for 286x240 square.
+- Added support for album push, @see allowPhotoPush.
+- Added support for eBook push, @see allowEBookPush.
+- Added snooze support, @see withSnooze.
+- Added REM sleep support, @see withREM.
+- Supported more than 10 frequently used contacts, @see allowHugeCountFavContacts.
+- Added e-wallet functionality.
+- Watch face size support for 192x490 ellipse.
+- Added indicator for whether heart rate monitoring spans across days, @see allowHeartRateMonitoringAcrossDays.
+- Added support for querying device capabilities, @see allowQueryDeviceCapacities, allConfig.deviceCapacities.
+- Added method to get workout display data item information, @see withDisplayConfigInWorkoutData.
+- Added FitCloudOption for automatic system language synchronization, @see autoSyncSystemLang.
+- New OTA upgrade support, @see withNewOTA.
+- Entering DFU mode now returns error type `FITCLOUDKITERROR_DFUNOTALLOWFORPOWERSAVINGMODE`.
+- Added independent switch settings and query functionality for health monitoring timing, @see allowSingleHTMSettings.
+- Added static and dynamic heart rate low alarm functionality, @see withHRLowAlarm.
+- Weather settings now include UV index functionality.
+- Added customized weather types for LiSheng, @see FITCLOUDWEATHERTYPE_CLOUDYINEVENING/FITCLOUDWEATHERTYPE_CLEARINEVENING/FITCLOUDWEATHERTYPE_EVENINGSHOWERS.
+- Added the number of weather types supported by the device capabilities.
+- Added support for setting and querying extreme heart rates for specific projects.
+- Added software version information query for LiSheng, only available for that client, version data to be parsed by the client, @see FitCloudKit+Haylou.h.
+- Added support for large models, @see withLLM.
+- Added query functionality for LiSheng watch SN information, only available for that client, @see FitCloudKit+Haylou.h.
+- Modified binding API, added random code; if there is no random code, fill in nil.
+- New binding failure error: "The watch needs to be reset to factory settings to bind."
+- Added functionality to query the current language setting of the watch.
+- Added notification for the watch performing the stop find watch action, @see FITCLOUDEVENT_WATCHSIDE_PERFORM_STOP_FIND_WATCH_ACTION_NOTIFY.
+- Modified stop find watch API name; added stop find watch functionality.
+- Daily exercise goal now includes setting exercise duration target.
+- Added functionality to set emergency contacts, @see withEmergencyContact.
+- Added resting heart rate query functionality, @see withRestingHR.
+- Added functionality to set personalized reminders, @see withPersonalizedReminder, @see FITCLOUDDEVICECAPACITY.
+- Health data and step data now include exercise duration data.
+- Message notifications now include Gmail/Outlook/WhatsApp Business.
+- Weather settings modified visibility precision to meters.
+- Added direct DFU upgrade (DFU upgrade without entering DFU mode); directly use `[FitCloudKit directDFUPeripheral]` to pass peripherals to FitCloudDFUKit, available only for specific client watches.
+- Added hardware platform flags, @see FITCLOUDHARDWARE_8773, FITCLOUDHARDWARE_568X.
+- The maximum length for e-wallet names has been changed to 32 bytes.
+- Corrected the vendor identifier for Transsion, supporting MAC address parsing.
+- Added couple functionality, @see `[FitCloudKit isDeviceSupportFeature:FITCLOUDDEVICEFEATURE_LOVERS]`.
+- Supported returning calorie data for GPS interconnected exercises.
+- New OTA added frame retransmission mechanism.
+- Watch face size support for 320x172 square.
+- Watch face size support for 385x320 square.
+- Updated new OTA error codes.
+- To prevent unrealistic user data causing algorithm issues, user input will be corrected before being sent to the watch.
+- Optimized switching watch faces and modifying corresponding component style APIs.
+- Optimized the watch's return of watch face UI information.
+- Removed exercise type definitions from SDK, to be handled at the app level; for exercise type mapping table, contact the corresponding business or product manager.
+- Added support for returning REM sleep data.
+- Added support for setting 24-hour weather information, only some watches support this.
+- Added support for pool swimming and open water swimming exercise data synchronization.
+- Watch face size support for 480x480 circular.
+- Watch face size support for 194x368 square.
+- Chip and object GPS support.
+- ANCS notification extension.
+- Headphone case project support.
+- Added support for synchronizing jump rope/elliptical/rowing machine related exercise extended data.
+- Added support for shielding enhanced heart rate measurement.
+- Supported female health features for Transsion Infinix projects.
+- Supported obtaining debugging logs from the watch, only some watches support this.
+- `FitCloudKitConnectRecord` now includes MAC address.
+- Introduced event “FITCLOUDEVENT_WATCHSIDE_TERMINATED_THE_MEASUREMENT_INITIALIZED_BY_THE_APPSIDE_NOTIFY,” indicating the watch has manually terminated a measurement initiated by the app.
+- Exercise heart rate data is provided in a separate data list, @see bpmDataArray.
+- Added callback to notify the app when the watch enters or exits large language model functionality.
+- Resolved some connection issues when switching between multiple devices.
+- Watch face size support for 360x360 square/296x240 square.
+- Introduced new API `+(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;` to allow the main program to connect and bind the watch device with a single API call.
+- Renamed the `time` property in FitCloudKitConnectRecord to `latestConnectTime`, and renamed the `bindTime` property to `userBindTime`.
+- Added WeChat payment certification functionality for the watch.
+- Added functionality to start and stop laser measurement, and to query the laser measurement status.
+
+## pcjbird 2023-05-30 Version:1.2.8 Build:202305300001
+
+- Watch face size support for 410x502 square/416x416 circular/240x288 square.
+- Added custom label functionality, @see withCustomLabels.
+- Supported Alipay IoT, @see allowAliot.
+- Bluetooth connection supports setting whether to use one-click dual connection with classic Bluetooth (BT), @see allowConnectWithBT.
+- Added method to obtain relevant manufacturer information and parameters through broadcast data, @see FitCloudManufacturer.
+- Supported GPS data transmission for watch exercise, @see FitCloudGPSRecordObject.
+- Watch face size support for 340x340 circular.
+- Added specified supported payment codes and business cards; only the specified payment codes and business cards should be displayed in the App's push entrance, @see specifySupportedMoneyReceiveAndBusinessQRCode.
+- Modified habit formation commands.
+- Added power-saving mode settings, @see withPowerSavingMode & allowPowerSavingModePeriod.
+- Added timestamp parameter for daily goal settings.
+- Adjusted Alipay IoT security certification commands.
+- Modified automatic login logs; userId now supports String.
+- Modified command parsing for getting watch UI information, compatible with firmware versions.
+- Updated and added a large number of exercise type definitions.
+- Improved SDK stability.
+
+## pcjbird 2022-12-30 Version:1.2.7 Build:202212300001
+
+- Added functionality to disable the sleep module.
+- Added nucleic acid code push functionality, @see allowNucleicAcidQRCode.
+- Weather now includes atmospheric pressure/wind strength/visibility information.
+- Added commands related to habit formation, @see allowHabits.
+- Added payment codes: Paytm/PhonePe/GPay/BHTM, added business cards: Email/Phone/LinkedIn, @see showAdditionalQRCodeTransfer.
+- Added notification to the watch when phone ringing playback ends, compatible with Bluetooth call watches.
+- Added command to get daily exercise goals.
+- Optimized obtaining MTU values for peripherals.
+
+## pcjbird 2022-09-20 Version:1.2.6 Build:202209200001
+
+- Fixed GPS interconnection motion command issues.
+- Added true blood pressure measurement based on barometric pump (supported by some watches).
+- Manual measurement data synchronization supported by some watches.
+- SOS request initiation supported by some watches.
+- Added support for starting and stopping third-party peripherals.
+- Added vibration parameter settings for watch startup.
+- Added command to delete messages stored on the watch.
+- Added command to cancel the current message display on the watch.
+- Added game lock settings.
+- Login/binding command added iOS system version flag.
+- Added retrieval of up to three highest game records (supported by some watches).
+- Fixed true blood pressure data synchronization issues.
+- Modified GPS interconnection commands.
+- Added game ranking trend settings (supported by some watches).
+- Updated SDK alarm clock list cache when retrieving alarm clock list.
+- Updated SDK error code translations.
+- Handled exercise health data to prevent data loss.
+- Added flag to disable modular watch face in the app @see disableWatchfaceModularInApp.
+- Added watch face size support of 240x296 square.
+- Improved SDK stability.
+
+## pcjbird 2022-01-26 Version:1.2.5 Build:202201260001
+
+- Added definitions for cricket, free exercise, strength training, indoor walking, indoor cycling, dumbbells, dancing, hula hoop, golf, long jump, sit-ups, and volleyball.
+- Added watch GPS interconnection sports.
+- Added wake-up APP camera function (use with caution due to defects).
+- Added blood pressure and heart rate alarm function device support checks.
+- Added watch preference setting for achieving exercise goals (steps/distance/calories) reminders.
+- Fixed issues with large amounts of data for common contact commands.
+- Fixed potential crashes when turning off Bluetooth during OTA.
+- Added support for payment codes and business card QR code pushing.
+- Fixed unbinding when the watch disconnects; it may reconnect when the watch is near the phone.
+- Fixed issues with Bluetooth disconnect during ECG measurement possibly causing incorrect reconnections.
+- Added audio Bluetooth name return when call watch binding fails.
+- Added Hindi language support.
+
+## pcjbird 2021-10-12 Version:1.2.4 Build:202110120001
+
+- Added flag for supporting game skin push.
+- Added flag for supporting notifications from Apple Music, Zoom & TikTok.
+- Added flag for supporting QR code connection.
+- Added hardware identifier `FITCLOUDHARDWARE_DFUSHOULDSILENTMODE`.
+- Added definitions for Tetris, Sudoku, and quiz games.
+- Added reasons for binding failure in QR code binding project (watch actively canceled / watch timeout).
+- Added methods to get/set screen time, brightness, vibration, etc.
+- Added flag to disable custom watch face functionality.
+- Added callback for when the watch leaves the Find Phone feature interface.
+- Added preference setting for watch vibration when Bluetooth disconnects.
+- Fixed issues with synchronizing ECG data when the watch disconnects.
+- Added methods to retrieve original screen resolution information (LCD width/height, circular screen, corner size, etc.), supported by some firmware.
+- Expanded Nordic platform watch face numbering to 3 bytes.
+- Fixed issue where only 3 game skins could be retrieved.
+- Modified maximum file size calculation rules for watch faces/game skins.
+- Modified weather hardware function flag definitions.
+- Added flag for whether the watch supports exercise modes (DIY) firmware push.
+- Added methods to get the list of supported exercise mode types for devices/current exercise mode type list, supported by some watches.
+
+## pcjbird 2021-07-20 Version:1.2.3 Build:202107200001
+
+- Added pressure index measurement, supported by some watches.
+- Fixed issues with schedule setting commands.
+- Fixed issues with lock screen password setting commands.
+- Added watch face size support for 280x240 square / 200x320 square / 368x448 square / 320x390 square.
+- Added modular (component-based) watch face support.
+- Fixed issues with schedule retrieval commands.
+- Supported custom setting of watch language. @note: If you wish to set the watch's language during SDK initialization, @see watchPreferLang for FitCloudOption. If you want to change the watch's language dynamically while the app is running, call setSmartWatchLanguage:completion:. Additionally, the original syncSystemLanguageWithBlock will also be affected; if you customize the watch language, the original syncSystemLanguageWithBlock will also sync the customized watch language setting.
+- Added setting to allow watch to set schedule, only effective when the watch supports schedule functionality.
+- Supported conversion of self-scanned peripherals to connectable peripherals.
+- Updated GUI structure-related protocol.
+- Next-generation vendor names supported, confirming that the filtering of the Bluetooth name's first letter "H" is not needed.
+- Fixed issue where changing watch faces could result in the loss of watch face module information.
+- Multi-watch face push supports getting each watch face's maximum push firmware size in kB.
+- Supported Nordic chips.
+- Added methods to get the types of games supported by the watch, supported by some watches.
+- Added methods to retrieve game skin information for all games on the watch, supported by some watches.
+- Added watch face size support for 172x320 square / 454x454 circular / 128x220 square.
+- Added `+(void)ignoreConnectedPeripheral:(BOOL)silent;` adding silent parameter.
+- Added `FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY` notification, suggesting users enter system settings to remove pairing information with the watch, kill the App process, and restart the App. Refer to its definition for specifics. @note: This notification may be sent continuously, and the application layer needs to avoid prompting users repeatedly to prevent confusion.
+
+## pcjbird 2021-02-05 Version:1.2.2 Build:202102050001
+
+- Added weather push switch, supported by some watches.
+- Added notification for the watch APP's location service status.
+- Added handwashing reminder feature.
+- Added watch face size support for 240x280 square.
+- Data parsing abnormal handling; entries that are too large are discarded and no longer parsed.
+- Added lock screen password setting, supported by some watches.
+- Added schedule reminder setting, supported by some watches.
+- Added notifications for Hike and YouTube, supported by some watches.
+- Added watch face size support for 348x442 square.
+- Multi-watch face push information retrieval supported.
+- Added definitions for exercise types.
+
+## pcjbird 2020-10-30 Version:1.2.1 Build:202010300001
+
+- FitCloudOption supports preferSystemLocale option; when set to TRUE, the watch will sync the iOS system language setting, otherwise, it will sync the current APP's language setting, defaulting to FALSE. @note: Due to system limitations, if you manually modify the APP's language, this option will also become ineffective.
+- Fixed issues with incorrect sleep debug data responses.
+- Supported setting health monitoring intervals, requires watch support, @see allowSetHealthMonitorInterval.
+- Supported setting sedentary reminder intervals, requires watch support, @see allowSetLSRInterval.
+- Supported setting weather forecasts, requires watch support, @see allowWeatherForecast.
+- Added weather update time, adjusted maximum supported days for weather forecasts to 14 days.
+- Fixed issues with incorrect health monitoring/sedentary reminder interval settings.
+- Fixed issues with incorrect watch flag parsing.
+- Added Albanian language support.
+- Added Turkish and Ukrainian language support.
+- Fixed issues with syncing Korean language to the watch.
+- Patch: When allowShowAdditionalReminder flag is true, allowShowMailReminder/allowShowTelegramAndViberReminder are forced to true.
+
+## pcjbird 2020-07-18 Version:1.2.0 Build:202007180001
+
+- Supported notification for the watch to exit camera mode.
+- Added female health feature.
+- Added protective reminder feature.
+- Fixed issues with Hungarian language not syncing to the watch.
+- Added method to set custom field key1 for broadcast data, specific to Huashida.
+- Fixed issues with incorrect age setting during user profile setup.
+- Added method to retrieve today's sleep debug data.
+- Fixed issues with incorrect age setting.
+- Added latest health measurement data including temperature data (requires watch support for temperature).
+- Added related notes on new watch face size support.
+- Supported setting all localized languages defined by the SDK to the watch.
+
+## pcjbird 2020-05-15 Version:1.1.9 Build:202005150001
+
+- Supported temperature measurement, supported by some watches.
+
+## pcjbird 2020-04-25 Version:1.1.8 Build:202004250001
+
+- Fixed potential issues where unbinding might not disconnect properly.
+- Fixed issues where the watch disconnecting during automatic login might lead to notifications about being bound to another phone or already unbound.
+- Fixed issues where timeout during command execution could result in missing the next command.
+- Fixed timeout issues when syncing large amounts of health data.
+- Cleared battery information after unbinding.
+- Supported common contacts, supported by some watches.
+- Added exercise modes including elliptical, yoga, table tennis, and jump rope.
+- Fixed issues with incorrect logic handling when ECG startup fails.
+- Fixed issues where connection timeout would not execute timeout logic.
+
+## pcjbird 2020-02-25 Version:1.1.7 Build:202002250001
+
+- Added Slovak and Hungarian language support.
+- Fixed issues with sleep data quality possibly returning illegal values.
+- Canceled automatic unbinding logic, added notifications for the watch being bound by another phone or already unbound @see FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY.
+- All callbacks and notifications are now called in the Global Queue; if you want to update the UI in the callback or notification, be sure to switch to the Main Queue.
+- External calls to disconnect will not automatically reconnect.
+- Added FITCLOUDUSERBINDSTATUS_KICKEDOUT user binding status.
+- Added FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY notification.
+- Added support for the new sleep format @see newSleepDataFormat.
+- Log information supports viewing the complete data for large packets.
+- The watch actively changes settings (e.g., wrist raise wake-up, notification settings, etc.) will update to the App as needed @see FITCLOUDEVENT_WATCHCONFIG_REMOTE_MANUAL_CHANGED_NOTIFY.
+- Modified methods for retrieving watch face information.
+- Other improvements.
+
+## pcjbird 2019-11-21 Version:1.1.6 Build:201911210001
+
+- Fixed issues with the watch face UI information interface not responding correctly.
+- After unbinding the user, canceled the automatic reconnection of the current watch connection record.
+- Optimized the watch connection initialization process to prevent unexpected reconnections.
+- Adjusted watch hardware-related information to be read-only.
+- The UserId of the bound user has been changed from integer to string type.
+- Added methods to retrieve the last health measurement data (heart rate/blood oxygen/blood pressure), supported by some watches, @see allowRetrieveLatestMeasurementData.
+- Modified methods to enter and exit firmware upgrade mode; now you must manually call to enter and exit firmware upgrade mode before and after every firmware upgrade operation, applicable to both regular firmware upgrades and watch face pushes.
+- Added DFU mode reconnection success notification, typically used for waiting for watch face pushes/normal firmware upgrades after the watch restarts.
+- Improved SDK stability.
+
+## pcjbird 2019-11-13 Version:1.1.5 Build:201911130001
+
+- Added Do Not Disturb mode (supported by some watches @see allowDNDMode).
+
+## pcjbird 2019-10-24 Version:1.1.4 Build:201910240001
+
+- Real-time measurement moment modified to second precision.
+- Fixed issues with synchronizing data moments not exceeding the current synchronization time.
+
+## pcjbird 2019-10-16 Version:1.1.3 Build:201910160001
+
+- Step data now incorporates distance & calorie new algorithms.
+- Added methods to retrieve the last binding time of the user.
+- Added settings for heart rate and blood pressure alarms.
+- Added options for Snapchat message reminders.
+- Device scanning cancels device name filtering.
+- Real-time ECG measurement added logic for the watch to end actively.
+- Added methods to retrieve watch face UI information.
+- Added methods to retrieve cached broadcast data from the watch.
+- Added notifications for Bluetooth name changes and Bluetooth RSSI changes.
+- Improved SDK stability.
+- Avoid ambiguity; `+(NSArray<FitCloudPeripheral *>*_Nonnull)peripherals` changed to `+(NSArray<FitCloudPeripheral *>*_Nonnull)discoveredPeripherals`.
+
+## pcjbird 2019-08-19 Version:1.1.2 Build:201908190002
+
+- Fixed issues with the timing of Bluetooth connection start notifications.
+
+## pcjbird 2019-08-19 Version:1.1.1 Build:201908190001
+
+- Fixed issues where unbinding the watch did not clear the previous bound watch's MAC address.
+- Added notifications for the start and end of basic synchronization operations after binding/login success.
+- Fixed issues with SDK initialization options shouldAutoConnect not functioning.
+
+## pcjbird 2019-08-12 Version:1.1.0 Build:201908120001
+
+- Supported background Bluetooth data synchronization.
+
+## pcjbird 2019-07-21 Version:1.0.9 Build:201907210001
+
+- Supported retrieval of current SDK version information.
+
+## pcjbird 2019-07-20 Version:1.0.8 Build:201907200001
+
+- Fixed issues where setting the iPhone calendar to a Buddhist or Japanese calendar caused failure in syncing time with the watch.
+- Optimized watch reconnection mechanism.
+
+## pcjbird 2019-06-28 Version:1.0.7 Build:201906280001
+
+- Fixed issues where unable to retrieve notification settings.
+
+## pcjbird 2019-06-27 Version:1.0.6 Build:201906270001
+
+- Added MAC address data for external devices discovered during scanning.
+
+## pcjbird 2019-06-25 Version:1.0.5 Build:201906250001
+
+- Modified support for setting exercise goals.
+
+## pcjbird 2019-05-17 Version:1.0.4 Build:201905170001
+
+- Added supported languages for the watch.
+
+## pcjbird 2019-05-01 Version:1.0.3 Build:201905010001
+
+- First release of the SDK version.
