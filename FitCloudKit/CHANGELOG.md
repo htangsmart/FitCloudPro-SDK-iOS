@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.5 build20241011002 (2024-10-11)
+
+- Resolved some issues with querying the information of single type health automatic monitoring settings from the watch.
+
 ## V1.3.0-beta.4 build20241011001 (2024-10-11)
 
 - Rename the API `+(void)manualSyncDataWithOption:(FITCLOUDDATASYNCOPTION)option progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block;` to `+(void)manualSyncDataWithOption:(FITCLOUDDATASYNCOPTION)option progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block finished:(FitCloudDataManualSyncFinishBlock _Nullable)finished;`.

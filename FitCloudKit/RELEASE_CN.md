@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-10-11 Version:1.3.0-beta.4 Build:20241011001
+## pcjbird 2024-10-11 Version:1.3.0-beta.5 Build:20241011002
 
 - 添加事件以通知手表端运动(锻炼)状态的变化。
 - 修复了设置和查询耳机仓歌词颜色的问题。
@@ -8,6 +8,7 @@
 - 重命名 API `+(void)manualSyncDataWithOption:(FITCLOUDDATASYNCOPTION)option progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block;` 为 `+(void)manualSyncDataWithOption:(FITCLOUDDATASYNCOPTION)option progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block finished:(FitCloudDataManualSyncFinishBlock _Nullable)finished;`, 新增同步任务结束回调，区别于数据结果回调。
 - 重命名 API `+(void)manualSingleSyncDataWithOption:(FITCLOUDDATASYNCOPTION) option dataKey:(MANUALSINGLESYNCKEY)syncKey progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block;` 为 `+(void)manualSingleSyncDataWithOption:(FITCLOUDDATASYNCOPTION) option dataKey:(MANUALSINGLESYNCKEY)syncKey progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block finished:(FitCloudDataManualSyncFinishBlock _Nullable)finished;`, 新增同步任务结束回调，区别于数据结果回调。
 - 优化一些数据同步的调试日志。
+- 修复了从手表查询单类型健康自动监测设置信息的返回数据的一些问题。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 
