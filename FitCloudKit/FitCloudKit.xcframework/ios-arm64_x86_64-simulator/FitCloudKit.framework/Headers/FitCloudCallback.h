@@ -321,6 +321,9 @@ typedef void (^FitCloudDataManualSyncProgress)(CGFloat progress, NSString* tip);
  */
 typedef void (^FitCloudDataManualSyncResultBlock)(BOOL succeed, NSString* userId, NSArray<FitCloudManualSyncRecordObject*>*records, NSError* error);
 
+/// FitCloud 手表历史运动健康数据手动同步结束回调
+typedef void(^FitCloudDataManualSyncFinishBlock)(void);
+
 /**
  *@brief FitCloud 请求当日运动健康数据调用结果回调
  *@param succeed 是否成功

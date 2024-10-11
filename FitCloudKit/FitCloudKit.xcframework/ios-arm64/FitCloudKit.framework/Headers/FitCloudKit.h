@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-10-10  Version:1.3.0-beta.3 Build:20241010002
+//      pcjbird    2024-10-11  Version:1.3.0-beta.4 Build:20241011001
 
 
 #import <Foundation/Foundation.h>
@@ -1332,7 +1332,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - option: 选项，默认 `FITCLOUDDATASYNCOPTION_LEGACY`
 ///   - progress: 进度回调
 ///   - block: 结果回调
-+(void)manualSyncDataWithOption:(FITCLOUDDATASYNCOPTION) option progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block;
+///   - finished: 结束回调，如果你希望在数据同步结束后执行一些其他指令，请在这里操作
++(void)manualSyncDataWithOption:(FITCLOUDDATASYNCOPTION)option progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block finished:(FitCloudDataManualSyncFinishBlock _Nullable)finished;
 
 #pragma mark 请求当天睡眠调试数据
 

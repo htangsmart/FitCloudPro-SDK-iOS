@@ -28,7 +28,8 @@ typedef NS_ENUM(Byte, MANUALSINGLESYNCKEY)
 ///   - syncKey: 同步Key
 ///   - progress: 进度回调
 ///   - block: 结果回调
-+(void)manualSingleSyncDataWithOption:(FITCLOUDDATASYNCOPTION) option dataKey:(MANUALSINGLESYNCKEY)syncKey progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block;
+///   - finished: 结束回调，如果你希望在数据同步结束后执行一些其他指令，请在这里操作
++(void)manualSingleSyncDataWithOption:(FITCLOUDDATASYNCOPTION) option dataKey:(MANUALSINGLESYNCKEY)syncKey progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block finished:(FitCloudDataManualSyncFinishBlock _Nullable)finished;
 
 @end
 
