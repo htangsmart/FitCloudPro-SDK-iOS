@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.6 build20241012001 (2024-10-12)
+
+- Add event `FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY` to notify that the watchface corresponding to a specific watchface Id was removed on the watch side.
+
 ## V1.3.0-beta.5 build20241011002 (2024-10-11)
 
 - Resolved some issues with querying the information of single type health automatic monitoring settings from the watch.

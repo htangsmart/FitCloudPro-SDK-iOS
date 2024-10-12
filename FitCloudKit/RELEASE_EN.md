@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-10-11 Version:1.3.0-beta.5 Build:20241011002
+## pcjbird 2024-10-12 Version:1.3.0-beta.6 Build:20241012001
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -9,6 +9,7 @@
 - Rename the API `+(void)manualSingleSyncDataWithOption:(FITCLOUDDATASYNCOPTION) option dataKey:(MANUALSINGLESYNCKEY)syncKey progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block;` to `+(void)manualSingleSyncDataWithOption:(FITCLOUDDATASYNCOPTION) option dataKey:(MANUALSINGLESYNCKEY)syncKey progress:(FitCloudDataManualSyncProgress _Nullable)progress block:(FitCloudDataManualSyncResultBlock _Nullable )block finished:(FitCloudDataManualSyncFinishBlock _Nullable)finished;`.
 - Optimize some data sync debug logs.
 - Resolved some issues with querying the information of single type health automatic monitoring settings from the watch.
+- Add event `FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY` to notify that the watchface corresponding to a specific watchface Id was removed on the watch side.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

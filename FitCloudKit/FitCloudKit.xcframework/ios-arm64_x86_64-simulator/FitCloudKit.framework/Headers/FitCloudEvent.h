@@ -199,6 +199,10 @@ extern NSString *const FITCLOUDEVENT_WATCHSIDE_PERFORM_STOP_FIND_WATCH_ACTION_NO
 /// 手表端提前结束由APP端启动的测量(实时测量)
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_TERMINATED_THE_MEASUREMENT_INITIALIZED_BY_THE_APPSIDE_NOTIFY;
 
-
+/// 手表表盘删除通知
+///
+/// userInfo=>{@"watchfaceId":@(watchfaceId)}
+/// watchfaceId 类型 NSInteger
+extern NSString *const FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY;
 
 #endif /* FitCloudEvent_h */
