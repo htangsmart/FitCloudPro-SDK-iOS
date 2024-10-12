@@ -201,8 +201,7 @@ extern NSString *const FITCLOUDEVENT_WATCHSIDE_TERMINATED_THE_MEASUREMENT_INITIA
 
 /// 手表表盘删除通知
 ///
-/// userInfo=>{@"watchfaceId":@(watchfaceId)}
-/// watchfaceId 类型 NSInteger
+/// object =>@(watchfaceId) ,watchfaceId 类型 NSInteger
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY;
 
 #endif /* FitCloudEvent_h */
