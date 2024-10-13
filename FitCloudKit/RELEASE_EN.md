@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-10-13 Version:1.3.0-beta.7 Build:20241013001
+## pcjbird 2024-10-13 Version:1.3.0-beta.8 Build:20241013002
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -11,6 +11,7 @@
 - Resolved some issues with querying the information of single type health automatic monitoring settings from the watch.
 - Add event `FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY` to notify that the watchface corresponding to a specific watchface Id was removed on the watch side.
 - Rename the `onlyDiscoverRecognizedManufacturers` property in FitCloudOption to `onlyDiscoverKnownManufacturers`.
+- Optimize some logic in the watch device connection.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 
