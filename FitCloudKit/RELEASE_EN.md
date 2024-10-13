@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-10-13 Version:1.3.0-beta.9 Build:20241013003
+## pcjbird 2024-10-13 Version:1.3.0-beta.10 Build:20241014001
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -13,6 +13,7 @@
 - Rename the `onlyDiscoverRecognizedManufacturers` property in FitCloudOption to `onlyDiscoverKnownManufacturers`.
 - Optimize some logic in the watch device connection.
 - When app launch, remove the invalid connect records which does not bind any account id.
+- Mark that the connection record has been unbound, instead of clearing its account binding information.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

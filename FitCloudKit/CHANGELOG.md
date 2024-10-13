@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.10 build20241014001 (2024-10-14)
+
+- Mark that the connection record has been unbound, instead of clearing its account binding information.
+
 ## V1.3.0-beta.9 build20241013003 (2024-10-13)
 
 - When app launch, remove the invalid connect records which does not bind any account id.

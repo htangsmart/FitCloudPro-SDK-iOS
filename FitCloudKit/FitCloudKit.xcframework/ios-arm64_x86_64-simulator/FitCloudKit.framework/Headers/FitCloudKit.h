@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-10-13  Version:1.3.0-beta.9 Build:20241013003
+//      pcjbird    2024-10-14  Version:1.3.0-beta.10 Build:20241014001
 
 
 #import <Foundation/Foundation.h>
@@ -1299,9 +1299,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 用户解绑
 /// - Parameters:
-///   - shouldDisconnectIfSuccess: 解绑成功后是否需要自动断开连接
+///   - shouldDisconnectWhenSuccess: 解绑成功后是否应该自动断开连接
 ///   - block: 结果回调
-+(void)unbindUserObject:(BOOL) shouldDisconnectIfSuccess block:(FitCloudResultHandler _Nullable )block;
++(void)unbindUserObject:(BOOL) shouldDisconnectWhenSuccess block:(FitCloudResultHandler _Nullable )block;
 
 @end
 

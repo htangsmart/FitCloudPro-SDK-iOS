@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong, nullable) NSString* macAddr;
 
 /// 最后连接时间
-@property(nonatomic, strong) NSDate* latestConnectTime;
+@property(nonatomic, strong) NSDate* lastConnectTime;
 
 /// 是否应该自动连接
 @property(nonatomic, assign) BOOL      shouldAutoConnect;
@@ -39,6 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 用户绑定时间
 @property(nonatomic, strong, nullable) NSDate*   userBindTime;
+
+/// 是否已经解绑
+@property(nonatomic, assign) BOOL      isAlreadyUnbind;
 
 /// 项目号
 @property(nonatomic, strong, nullable) NSString* formatedProjNo;
