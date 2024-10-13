@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-10-12 Version:1.3.0-beta.6 Build:20241012001
+## pcjbird 2024-10-13 Version:1.3.0-beta.7 Build:20241013001
 
 - 添加事件以通知手表端运动(锻炼)状态的变化。
 - 修复了设置和查询耳机仓歌词颜色的问题。
@@ -10,6 +10,7 @@
 - 优化一些数据同步的调试日志。
 - 修复了从手表查询单类型健康自动监测设置信息的返回数据的一些问题。
 - 添加`FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY`事件通知手表上对应表盘编号的表盘已被删除。
+- 将 FitCloudOption 的属性 `onlyDiscoverRecognizedManufacturers` 重命名为 `onlyDiscoverKnownManufacturers`。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

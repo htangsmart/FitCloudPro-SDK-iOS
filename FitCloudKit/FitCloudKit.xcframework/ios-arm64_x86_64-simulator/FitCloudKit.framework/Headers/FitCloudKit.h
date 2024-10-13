@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-10-12  Version:1.3.0-beta.6 Build:20241012001
+//      pcjbird    2024-10-13  Version:1.3.0-beta.7 Build:20241013001
 
 
 #import <Foundation/Foundation.h>
@@ -27,36 +27,41 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// FitCloud智能手表iOS框架
+/// FitCloudPro Ble Watch SDK
 @interface FitCloudKit : NSObject
 
-#pragma mark 版本信息
+#pragma mark Version
 
-/// SDK版本号
+/// SDK version
 /// - Returns:
-/// SDK 版本号
+/// SDK version
 +(NSString*) sdkVersion;
 
-/// SDK Build 版本号
+/// SDK build version
 /// - Returns:
-/// SDK Build 版本号
+/// SDK build version
 +(NSString*) sdkBuild;
 
+/// SDK release date
+/// - Returns:
+/// SDK release date
++(NSString*) sdkReleaseDate;
 
-#pragma mark 初始化/扫描/连接
 
-/// 初始化
+#pragma mark Initialize/Scan/Connect
+
+/// Initialize the SDK
 /// - Parameters:
-///   - option: 选项, 传nil则使用默认选项
-///   - callback 回调类，主要用于接受处理手表的请求命令或事件
+///   - option: initialize option, if nil will use the default option.
+///   - callback: the sdk callback handler
 /// - Returns:
 ///  FitCloudKit
 +(instancetype _Nonnull)initWithOption:(FitCloudOption* _Nullable)option callback:(id<FitCloudCallback> _Nullable)callback;
 
-/// 扫描手表设备
+/// Scan the watch devices
 +(void)scanPeripherals;
 
-/// 停止扫描手表设备
+/// Stop scan the watch devices
 +(void)stopScan;
 
 /// 如果您使用自己的扫描方法，将您的外设转换成可连接的外设
@@ -511,7 +516,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 健康定时监测独立设置
 /// - Parameters:
-///   - htmlSingleSettings: 健康定时监测独立设置信息，可以单个类型单独设置也可以多个类型一起设置
+///   - htmSingleSettings: 健康定时监测独立设置信息，可以单个类型单独设置也可以多个类型一起设置
 ///   - completion: 结果回调
 +(void) setSingleHealthTimingMonitoring:(NSArray<FitCloudHTMSingleObject*>*) htmSingleSettings completion:(FitCloudResultHandler _Nullable )completion;
 

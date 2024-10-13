@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.7 build20241013001 (2024-10-13)
+- Add more debug logs.
+- Rename the `onlyDiscoverRecognizedManufacturers` property in FitCloudOption to `onlyDiscoverKnownManufacturers`.
+
 ## V1.3.0-beta.6 build20241012001 (2024-10-12)
 
 - Add event `FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY` to notify that the watchface corresponding to a specific watchface Id was removed on the watch side.
