@@ -1,10 +1,16 @@
 # CHANGELOG
 
+## V1.3.0-beta.9 build20241013003 (2024-10-13)
+
+- When app launch, remove the invalid connect records which does not bind any account id.
+
 ## V1.3.0-beta.8 build20241013002 (2024-10-13)
+
 - Add more debug logs.
 - Optimize some logic in the watch device connection.
 
 ## V1.3.0-beta.7 build20241013001 (2024-10-13)
+
 - Add more debug logs.
 - Rename the `onlyDiscoverRecognizedManufacturers` property in FitCloudOption to `onlyDiscoverKnownManufacturers`.
 
