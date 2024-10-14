@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-10-14  Version:1.3.0-beta.10 Build:20241014001
+//      pcjbird    2024-10-14  Version:1.3.0-beta.11 Build:20241014002
 
 
 #import <Foundation/Foundation.h>
@@ -89,12 +89,14 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - btMode: 是否使用一键双连同时连接经典蓝牙(BT)
 +(void)connectAndBind:(CBPeripheral * _Nonnull )peripheral userId:(NSString* _Nonnull)userId randomCode:(NSString* _Nullable)randomCode btMode:(BOOL)btMode;
 
-/// 尝试连接历史手表设备
+/// Try to connect the historical watch device
 /// - Parameters:
-///   - record: 历史手表设备
+///   - record: the historical watch device
+///
+/// >Warning: Please do not attempt to connect the watch device which has already been unbound.
 +(void)tryConnect:(FitCloudKitConnectRecord* _Nonnull )record;
 
-/// 断开手表设备连接
+/// Disconnect the current watch device
 +(void)disconnect;
 
 /// 忽略当前已连接未绑定/绑定失败的手表设备

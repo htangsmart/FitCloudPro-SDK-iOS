@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.11 build20241014002 (2024-10-14)
+
+- When attempting to connect to a watch device marked as unbound, a warning will be issued indicating the possibility of connection failure.
+
 ## V1.3.0-beta.10 build20241014001 (2024-10-14)
 
 - Mark that the connection record has been unbound, instead of clearing its account binding information.
