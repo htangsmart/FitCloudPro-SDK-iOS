@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.12 build20241019001 (2024-10-19)
+
+- Enhance the watch device scanning process so that even after uninstalling and reinstalling the current app, the mac address of the watch device can still be obtained during scanning if the watch device was previously connected via bluetooth broadcast scanning with the current app.
+
 ## V1.3.0-beta.11 build20241014002 (2024-10-14)
 
 - When attempting to connect to a watch device marked as unbound, a warning will be issued indicating the possibility of connection failure.
