@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-10-19 Version:1.3.0-beta.12 Build:20241019001
+## pcjbird 2024-10-19 Version:1.3.0-beta.13 Build:20241019002
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -16,6 +16,7 @@
 - Mark that the connection record has been unbound, instead of clearing its account binding information.
 - When attempting to connect to a watch device marked as unbound, a warning will be issued indicating the possibility of connection failure.
 - Enhance the watch device scanning process so that even after uninstalling and reinstalling the current app, the mac address of the watch device can still be obtained during scanning if the watch device was previously connected via bluetooth broadcast scanning with the current app.
+- Update the return values of the `FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY` event from the `object` parameter to the `userInfo` parameter.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

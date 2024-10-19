@@ -189,8 +189,8 @@ extern NSString *const FITCLOUDEVENT_WATCHFACE_TOGGLED_NOTIFY;
 /// 手表心率测量结果通知
 ///
 /// userInfo=>{@"timestamp":timestamp, @"hrValue" : @(hrValue)}
-/// timestamp 类型 NSDate
-/// hrValue 类型 NSInteger
+/// - timestamp 类型 NSDate
+/// - hrValue 类型 NSInteger
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_HEARTRATE_MEASURE_RESULT_NOTIFY;
 
 /// 手表端主动通知停止查找手表
@@ -201,7 +201,9 @@ extern NSString *const FITCLOUDEVENT_WATCHSIDE_TERMINATED_THE_MEASUREMENT_INITIA
 
 /// 手表表盘删除通知
 ///
-/// object =>@(watchfaceId) ,watchfaceId 类型 NSInteger
+/// userInfo=>{@"watchfaceNo":@(watchfaceNo), @"slotIndex" : @(slotIndex)}
+/// - watchfaceNo 类型 NSInteger
+/// - slotIndex 类型 NSInteger, from 0~7
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY;
 
 #endif /* FitCloudEvent_h */

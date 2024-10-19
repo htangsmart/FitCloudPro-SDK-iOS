@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.13 build20241019002 (2024-10-19)
+
+- Update the return values of the `FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY` event from the `object` parameter to the `userInfo` parameter.
+
 ## V1.3.0-beta.12 build20241019001 (2024-10-19)
 
 - Enhance the watch device scanning process so that even after uninstalling and reinstalling the current app, the mac address of the watch device can still be obtained during scanning if the watch device was previously connected via bluetooth broadcast scanning with the current app.
