@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.15 build20241020002 (2024-10-20)
+
+- The workout data of elliptical machine/rowing machine supports returning data for the maximum trigger frequency and minimum trigger frequency.
+
 ## V1.3.0-beta.14 build20241020001 (2024-10-20)
 
 - Introduce new APIs for the Muslim prayer features, including setting prayer alarm clock, providing islamic calendar events to the watch device, and configuring the kaaba data.

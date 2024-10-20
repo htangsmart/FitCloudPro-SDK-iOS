@@ -386,11 +386,23 @@
 ///椭圆机-触发频率
 @property(nonatomic, strong) NSNumber* ellipticalTrainerTriggersPerMinute;
 
+///椭圆机-最大触发频率
+@property(nonatomic, strong) NSNumber* maxEllipticalTrainerTriggersPerMinute;
+
+///椭圆机-最小触发频率
+@property(nonatomic, strong) NSNumber* minEllipticalTrainerTriggersPerMinute;
+
 ///划船机-触发次数
 @property(nonatomic, strong) NSNumber* rowingMachingTriggerCount;
 
 ///划船机-触发频率
 @property(nonatomic, strong) NSNumber* rowingMachingTriggersPerMinute;
+
+///划船机-最大触发频率
+@property(nonatomic, strong) NSNumber* maxRowingMachingTriggersPerMinute;
+
+///划船机-最小触发频率
+@property(nonatomic, strong) NSNumber* minRowingMachingTriggersPerMinute;
 
 @end
 
