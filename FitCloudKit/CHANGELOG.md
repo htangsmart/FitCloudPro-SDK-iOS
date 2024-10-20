@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.14 build20241020001 (2024-10-20)
+
+- Introduce new APIs for the Muslim prayer features, including setting prayer alarm clock, providing islamic calendar events to the watch device, and configuring the kaaba data.
+
 ## V1.3.0-beta.13 build20241019002 (2024-10-19)
 
 - Update the return values of the `FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY` event from the `object` parameter to the `userInfo` parameter.

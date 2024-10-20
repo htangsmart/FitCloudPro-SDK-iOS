@@ -69,6 +69,10 @@
 #import <FitCloudKit/FitCloudEmergencyContactObject.h>
 #import <FitCloudKit/FitCloudPersonalizedReminderObject.h>
 #import <FitCloudKit/FitCloudHourWeatherObject.h>
+#import <FitCloudKit/FitCloudMuslimPrayerAlarmClockModel.h>
+#import <FitCloudKit/FitCloudIslamicDateModel.h>
+#import <FitCloudKit/FitCloudIslamicEventModel.h>
+#import <FitCloudKit/FitCloudKaabaModel.h>
 
 /// FitCloud调用结果回调
 /// - Parameters:
@@ -748,6 +752,16 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* f
 
 /// 手表端通知退出导航
 -(void) OnExitNaviFromWatchNotify;
+
+/// 手表端请求当前回历节日信息
+///
+/// > The watch side request the current islamic events information
+-(void) OnRequestCurrentIslamicEvents;
+
+/// 手表端请求克尔白数据
+///
+/// > The watch side request the kaaba data information
+-(void) OnRequestKaabaData;
 
 /// 睡眠调试数据
 -(void) OnSleepDebugData:(FitCloudSleepDebugData*)sleepDebugData;

@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-10-19  Version:1.3.0-beta.13 Build:20241019002
+//      pcjbird    2024-10-20  Version:1.3.0-beta.14 Build:20241020001
 
 
 #import <Foundation/Foundation.h>
@@ -1262,6 +1262,26 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - completion: the completion callback
 +(void)queryLaserMeasurementStatusWithCompletion:(void (^__nullable)(BOOL succeed, FITCLOUDWEARINGSTATUS wearingStatus, FITCLOUDLASERMEASUREMENTSTATUS measurementStatus, NSError* error))completion;
+
+#pragma mark - Muslim prayer
+
+/// Set the muslim prayer alarm clock
+/// - Parameters:
+///   - alarmClock: the alarm clock
+///   - completion: the completion callback
++(void)setMuslimPrayerAlarmClock:(FitCloudMuslimPrayerAlarmClockModel*)alarmClock completion:(void (^__nullable)(BOOL succeed, NSError* error))completion;
+
+/// Set the current islamic events information
+/// - Parameters:
+///   - events: the islamic events
+///   - completion: the completion callback
++(void)setCurrentIslamicEvents:(NSArray<FitCloudIslamicEventModel*>*)events completion:(void (^__nullable)(BOOL succeed, NSError* error))completion;
+
+/// Set the kaaba data information
+/// - Parameters:
+///   - events: the kaaba data
+///   - completion: the completion callback
++(void)setKaabaData:(FitCloudKaabaModel*)kaabaData completion:(void (^__nullable)(BOOL succeed, NSError* error))completion;
 
 @end
 
