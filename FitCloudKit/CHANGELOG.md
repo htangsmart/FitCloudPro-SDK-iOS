@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.16 build20241021001 (2024-10-21)
+
+- Fix the automatic reconnect issue, when the app attemp to disconnect the watch device which is already disconnected but remains in the auto-connect pool.
+
 ## V1.3.0-beta.15 build20241020002 (2024-10-20)
 
 - The workout data of elliptical machine/rowing machine supports returning data for the maximum trigger frequency and minimum trigger frequency.

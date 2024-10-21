@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-10-20 Version:1.3.0-beta.15 Build:20241020002
+## pcjbird 2024-10-21 Version:1.3.0-beta.16 Build:20241021001
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -19,6 +19,7 @@
 - Update the return values of the `FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY` event from the `object` parameter to the `userInfo` parameter.
 - Introduce new APIs for the Muslim prayer features, including setting prayer alarm clock, providing islamic calendar events to the watch device, and configuring the kaaba data.
 - The workout data of elliptical machine/rowing machine supports returning data for the maximum trigger frequency and minimum trigger frequency.
+- Fix the automatic reconnect issue, when the app attemp to disconnect the watch device which is already disconnected but remains in the auto-connect pool.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 
