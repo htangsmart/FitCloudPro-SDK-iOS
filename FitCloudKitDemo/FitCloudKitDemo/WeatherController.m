@@ -33,7 +33,7 @@
         FitCloudWeatherObject *weather_callback = [FitCloudWeatherObject new];
         weather_callback.temperature = 30;
         weather_callback.min = weather_callback.max = weather_callback.temperature;
-        weather_callback.weathertype = WEATHERTYPE_SUNNY;
+        weather_callback.weatherType = FITCLOUDWEATHERTYPE_SUNNY;
         weather_callback.city = @"深圳";
         __weak typeof(self) weakSelf = self;
         [FitCloudKit syncWeather:weather_callback block:^(BOOL succeed, NSError *error) {

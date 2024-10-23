@@ -76,6 +76,8 @@
             return;
         }
         XLOG_WARNING(@"%@", APP_LOG_STRING(@"当前没有可同步的数据。"));
+    } finished:^{
+        XLOG_WARNING(@"%@", APP_LOG_STRING(@"数据同步任务已结束。"));
     }];
 }
 

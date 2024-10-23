@@ -9,6 +9,29 @@
 /* Begin PBXBuildFile section */
 		7217CE3FFC6FFDF025355DC3 /* libPods-FitCloudKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1577722496F42A93B414DFF /* libPods-FitCloudKitDemo.a */; };
 		8902EA55230C2B97003FF418 /* DemoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8902EA54230C2B97003FF418 /* DemoListController.m */; };
+		8905EBFD2CC913DA0067EFA3 /* MuslimPrayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8905EBFC2CC913DA0067EFA3 /* MuslimPrayerController.m */; };
+		8905EC002CC919BF0067EFA3 /* MuslimPrayerParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 8905EBFF2CC919BF0067EFA3 /* MuslimPrayerParams.m */; };
+		8905EC032CC925920067EFA3 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC022CC925920067EFA3 /* App.swift */; };
+		8905EC1F2CC926EA0067EFA3 /* MathUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC092CC926EA0067EFA3 /* MathUtilities.swift */; };
+		8905EC202CC926EA0067EFA3 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC0D2CC926EA0067EFA3 /* Coordinates.swift */; };
+		8905EC212CC926EA0067EFA3 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC102CC926EA0067EFA3 /* Prayer.swift */; };
+		8905EC222CC926EA0067EFA3 /* CalculationMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC0B2CC926EA0067EFA3 /* CalculationMethod.swift */; };
+		8905EC232CC926EA0067EFA3 /* SolarCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC052CC926EA0067EFA3 /* SolarCoordinates.swift */; };
+		8905EC242CC926EA0067EFA3 /* Minute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC162CC926EA0067EFA3 /* Minute.swift */; };
+		8905EC252CC926EA0067EFA3 /* CalculationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC0C2CC926EA0067EFA3 /* CalculationParameters.swift */; };
+		8905EC262CC926EA0067EFA3 /* Madhab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC0F2CC926EA0067EFA3 /* Madhab.swift */; };
+		8905EC272CC926EA0067EFA3 /* AdhanObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC192CC926EA0067EFA3 /* AdhanObjc.swift */; };
+		8905EC282CC926EA0067EFA3 /* PrayerAdjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC112CC926EA0067EFA3 /* PrayerAdjustment.swift */; };
+		8905EC292CC926EA0067EFA3 /* PrayerTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC1B2CC926EA0067EFA3 /* PrayerTimes.swift */; };
+		8905EC2A2CC926EA0067EFA3 /* DateUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC082CC926EA0067EFA3 /* DateUtilities.swift */; };
+		8905EC2B2CC926EA0067EFA3 /* Shafaq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC132CC926EA0067EFA3 /* Shafaq.swift */; };
+		8905EC2C2CC926EA0067EFA3 /* SunnahTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC1D2CC926EA0067EFA3 /* SunnahTimes.swift */; };
+		8905EC2D2CC926EA0067EFA3 /* SolarTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC062CC926EA0067EFA3 /* SolarTime.swift */; };
+		8905EC2E2CC926EA0067EFA3 /* Rouding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC122CC926EA0067EFA3 /* Rouding.swift */; };
+		8905EC2F2CC926EA0067EFA3 /* Astronomical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC042CC926EA0067EFA3 /* Astronomical.swift */; };
+		8905EC302CC926EA0067EFA3 /* Qibla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC1C2CC926EA0067EFA3 /* Qibla.swift */; };
+		8905EC312CC926EA0067EFA3 /* HighLatitudeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC0E2CC926EA0067EFA3 /* HighLatitudeRule.swift */; };
+		8905EC322CC926EA0067EFA3 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905EC152CC926EA0067EFA3 /* Angle.swift */; };
 		891FA8D6231A98AD0097E996 /* SedentaryRemindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891FA8D5231A98AD0097E996 /* SedentaryRemindController.m */; };
 		891FA8D9231AAAA20097E996 /* DrinkRemindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891FA8D8231AAAA20097E996 /* DrinkRemindController.m */; };
 		891FA8DC231AAE030097E996 /* HealthMonitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891FA8DB231AAE030097E996 /* HealthMonitorController.m */; };
@@ -23,7 +46,6 @@
 		89A438B222B0D19700555B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B122B0D19700555B98 /* AppDelegate.m */; };
 		89A438B522B0D19700555B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438B422B0D19700555B98 /* ViewController.m */; };
 		89A438B822B0D19700555B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A438B622B0D19700555B98 /* Main.storyboard */; };
-		89A438BA22B0D19900555B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A438B922B0D19900555B98 /* Assets.xcassets */; };
 		89A438BD22B0D19900555B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A438BB22B0D19900555B98 /* LaunchScreen.storyboard */; };
 		89A438C022B0D19900555B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438BF22B0D19900555B98 /* main.m */; };
 		89A438C822B0DA9500555B98 /* AppDelegate+FitCloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A438C722B0DA9500555B98 /* AppDelegate+FitCloudKit.m */; };
@@ -39,6 +61,7 @@
 		89C5156023085958000BD54C /* MoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5155D23085958000BD54C /* MoView.m */; };
 		89C5156123085958000BD54C /* MoCurveLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5155E23085958000BD54C /* MoCurveLayer.m */; };
 		89EA5159230ED2A200EDC1F0 /* MessageReminderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EA5158230ED2A200EDC1F0 /* MessageReminderController.m */; };
+		89F130222CC910EC005C838B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89F130212CC910EC005C838B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +69,33 @@
 		4674C6148BD9C164A509FD6C /* Pods-FitCloudKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-FitCloudKitDemo/Pods-FitCloudKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8902EA53230C2B97003FF418 /* DemoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoListController.h; sourceTree = "<group>"; };
 		8902EA54230C2B97003FF418 /* DemoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoListController.m; sourceTree = "<group>"; };
+		8905EBFB2CC913DA0067EFA3 /* MuslimPrayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuslimPrayerController.h; sourceTree = "<group>"; };
+		8905EBFC2CC913DA0067EFA3 /* MuslimPrayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuslimPrayerController.m; sourceTree = "<group>"; };
+		8905EBFE2CC919BF0067EFA3 /* MuslimPrayerParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuslimPrayerParams.h; sourceTree = "<group>"; };
+		8905EBFF2CC919BF0067EFA3 /* MuslimPrayerParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuslimPrayerParams.m; sourceTree = "<group>"; };
+		8905EC012CC925920067EFA3 /* FitCloudKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitCloudKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		8905EC022CC925920067EFA3 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		8905EC042CC926EA0067EFA3 /* Astronomical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronomical.swift; sourceTree = "<group>"; };
+		8905EC052CC926EA0067EFA3 /* SolarCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarCoordinates.swift; sourceTree = "<group>"; };
+		8905EC062CC926EA0067EFA3 /* SolarTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarTime.swift; sourceTree = "<group>"; };
+		8905EC082CC926EA0067EFA3 /* DateUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilities.swift; sourceTree = "<group>"; };
+		8905EC092CC926EA0067EFA3 /* MathUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtilities.swift; sourceTree = "<group>"; };
+		8905EC0B2CC926EA0067EFA3 /* CalculationMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethod.swift; sourceTree = "<group>"; };
+		8905EC0C2CC926EA0067EFA3 /* CalculationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationParameters.swift; sourceTree = "<group>"; };
+		8905EC0D2CC926EA0067EFA3 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		8905EC0E2CC926EA0067EFA3 /* HighLatitudeRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighLatitudeRule.swift; sourceTree = "<group>"; };
+		8905EC0F2CC926EA0067EFA3 /* Madhab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Madhab.swift; sourceTree = "<group>"; };
+		8905EC102CC926EA0067EFA3 /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
+		8905EC112CC926EA0067EFA3 /* PrayerAdjustment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerAdjustment.swift; sourceTree = "<group>"; };
+		8905EC122CC926EA0067EFA3 /* Rouding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rouding.swift; sourceTree = "<group>"; };
+		8905EC132CC926EA0067EFA3 /* Shafaq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shafaq.swift; sourceTree = "<group>"; };
+		8905EC152CC926EA0067EFA3 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
+		8905EC162CC926EA0067EFA3 /* Minute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minute.swift; sourceTree = "<group>"; };
+		8905EC182CC926EA0067EFA3 /* Adhan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Adhan.h; sourceTree = "<group>"; };
+		8905EC192CC926EA0067EFA3 /* AdhanObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdhanObjc.swift; sourceTree = "<group>"; };
+		8905EC1B2CC926EA0067EFA3 /* PrayerTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimes.swift; sourceTree = "<group>"; };
+		8905EC1C2CC926EA0067EFA3 /* Qibla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qibla.swift; sourceTree = "<group>"; };
+		8905EC1D2CC926EA0067EFA3 /* SunnahTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunnahTimes.swift; sourceTree = "<group>"; };
 		891FA8D4231A98AD0097E996 /* SedentaryRemindController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SedentaryRemindController.h; sourceTree = "<group>"; };
 		891FA8D5231A98AD0097E996 /* SedentaryRemindController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SedentaryRemindController.m; sourceTree = "<group>"; };
 		891FA8D7231AAAA20097E996 /* DrinkRemindController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinkRemindController.h; sourceTree = "<group>"; };
@@ -74,7 +124,6 @@
 		89A438B322B0D19700555B98 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		89A438B422B0D19700555B98 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		89A438B722B0D19700555B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		89A438B922B0D19900555B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89A438BC22B0D19900555B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89A438BE22B0D19900555B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89A438BF22B0D19900555B98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +154,7 @@
 		89C5155F23085958000BD54C /* MoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoView.h; sourceTree = "<group>"; };
 		89EA5157230ED2A200EDC1F0 /* MessageReminderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageReminderController.h; sourceTree = "<group>"; };
 		89EA5158230ED2A200EDC1F0 /* MessageReminderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageReminderController.m; sourceTree = "<group>"; };
+		89F130212CC910EC005C838B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1577722496F42A93B414DFF /* libPods-FitCloudKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitCloudKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +170,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8905EC072CC926EA0067EFA3 /* Astronomy */ = {
+			isa = PBXGroup;
+			children = (
+				8905EC042CC926EA0067EFA3 /* Astronomical.swift */,
+				8905EC052CC926EA0067EFA3 /* SolarCoordinates.swift */,
+				8905EC062CC926EA0067EFA3 /* SolarTime.swift */,
+			);
+			path = Astronomy;
+			sourceTree = "<group>";
+		};
+		8905EC0A2CC926EA0067EFA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8905EC082CC926EA0067EFA3 /* DateUtilities.swift */,
+				8905EC092CC926EA0067EFA3 /* MathUtilities.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8905EC142CC926EA0067EFA3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8905EC0B2CC926EA0067EFA3 /* CalculationMethod.swift */,
+				8905EC0C2CC926EA0067EFA3 /* CalculationParameters.swift */,
+				8905EC0D2CC926EA0067EFA3 /* Coordinates.swift */,
+				8905EC0E2CC926EA0067EFA3 /* HighLatitudeRule.swift */,
+				8905EC0F2CC926EA0067EFA3 /* Madhab.swift */,
+				8905EC102CC926EA0067EFA3 /* Prayer.swift */,
+				8905EC112CC926EA0067EFA3 /* PrayerAdjustment.swift */,
+				8905EC122CC926EA0067EFA3 /* Rouding.swift */,
+				8905EC132CC926EA0067EFA3 /* Shafaq.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8905EC172CC926EA0067EFA3 /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				8905EC152CC926EA0067EFA3 /* Angle.swift */,
+				8905EC162CC926EA0067EFA3 /* Minute.swift */,
+			);
+			path = Units;
+			sourceTree = "<group>";
+		};
+		8905EC1E2CC926EA0067EFA3 /* Adan */ = {
+			isa = PBXGroup;
+			children = (
+				8905EC072CC926EA0067EFA3 /* Astronomy */,
+				8905EC0A2CC926EA0067EFA3 /* Extensions */,
+				8905EC142CC926EA0067EFA3 /* Models */,
+				8905EC172CC926EA0067EFA3 /* Units */,
+				8905EC182CC926EA0067EFA3 /* Adhan.h */,
+				8905EC192CC926EA0067EFA3 /* AdhanObjc.swift */,
+				8905EC1B2CC926EA0067EFA3 /* PrayerTimes.swift */,
+				8905EC1C2CC926EA0067EFA3 /* Qibla.swift */,
+				8905EC1D2CC926EA0067EFA3 /* SunnahTimes.swift */,
+			);
+			path = Adan;
+			sourceTree = "<group>";
+		};
 		89A438A422B0D19700555B98 = {
 			isa = PBXGroup;
 			children = (
@@ -182,16 +292,22 @@
 				898ADEB5231EB6DA00342172 /* WeatherController.m */,
 				89A891AA2A56B08F0073CEBA /* WomenHealthController.h */,
 				89A891AB2A56B08F0073CEBA /* WomenHealthController.m */,
+				8905EBFB2CC913DA0067EFA3 /* MuslimPrayerController.h */,
+				8905EBFC2CC913DA0067EFA3 /* MuslimPrayerController.m */,
 				89C515552308499D000BD54C /* DeviceCell.h */,
 				89C515562308499D000BD54C /* DeviceCell.m */,
+				8905EBFE2CC919BF0067EFA3 /* MuslimPrayerParams.h */,
+				8905EBFF2CC919BF0067EFA3 /* MuslimPrayerParams.m */,
+				8905EC022CC925920067EFA3 /* App.swift */,
+				89F130212CC910EC005C838B /* Assets.xcassets */,
 				89A438B622B0D19700555B98 /* Main.storyboard */,
-				89A438B922B0D19900555B98 /* Assets.xcassets */,
 				89A438BB22B0D19900555B98 /* LaunchScreen.storyboard */,
 				89A438BE22B0D19900555B98 /* Info.plist */,
 				89A438BF22B0D19900555B98 /* main.m */,
 				89C515462308370B000BD54C /* InfoPlist.strings */,
 				89C5154323083707000BD54C /* Localizable.strings */,
 				89A438C922B0DB6000555B98 /* FitCloudKitDemo-Prefix.pch */,
+				8905EC012CC925920067EFA3 /* FitCloudKitDemo-Bridging-Header.h */,
 			);
 			path = FitCloudKitDemo;
 			sourceTree = "<group>";
@@ -199,6 +315,7 @@
 		89C5154923083B22000BD54C /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				8905EC1E2CC926EA0067EFA3 /* Adan */,
 				89C5155B23085958000BD54C /* MoLoading */,
 				89C5154A23083B22000BD54C /* LocalizedLabel */,
 				89C5154D23083B22000BD54C /* LocalizedButton */,
@@ -285,6 +402,7 @@
 				TargetAttributes = {
 					89A438AC22B0D19700555B98 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1600;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -319,9 +437,9 @@
 			files = (
 				89A438BD22B0D19900555B98 /* LaunchScreen.storyboard in Resources */,
 				89C5154123083707000BD54C /* Localizable.strings in Resources */,
-				89A438BA22B0D19900555B98 /* Assets.xcassets in Resources */,
 				89A438B822B0D19700555B98 /* Main.storyboard in Resources */,
 				89C515442308370B000BD54C /* InfoPlist.strings in Resources */,
+				89F130222CC910EC005C838B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +495,7 @@
 				89A438B522B0D19700555B98 /* ViewController.m in Sources */,
 				89A438C822B0DA9500555B98 /* AppDelegate+FitCloudKit.m in Sources */,
 				89A891AC2A56B08F0073CEBA /* WomenHealthController.m in Sources */,
+				8905EC032CC925920067EFA3 /* App.swift in Sources */,
 				891FA8D6231A98AD0097E996 /* SedentaryRemindController.m in Sources */,
 				89C5155023083B22000BD54C /* LocalizedLabel.m in Sources */,
 				893B4499231D54870057EC21 /* RealtimeMeasureController.m in Sources */,
@@ -387,6 +506,26 @@
 				89EA5159230ED2A200EDC1F0 /* MessageReminderController.m in Sources */,
 				891FA8D9231AAAA20097E996 /* DrinkRemindController.m in Sources */,
 				893B449C231D5C260057EC21 /* DailyGoalSettingController.m in Sources */,
+				8905EC1F2CC926EA0067EFA3 /* MathUtilities.swift in Sources */,
+				8905EC202CC926EA0067EFA3 /* Coordinates.swift in Sources */,
+				8905EC212CC926EA0067EFA3 /* Prayer.swift in Sources */,
+				8905EC222CC926EA0067EFA3 /* CalculationMethod.swift in Sources */,
+				8905EC232CC926EA0067EFA3 /* SolarCoordinates.swift in Sources */,
+				8905EC242CC926EA0067EFA3 /* Minute.swift in Sources */,
+				8905EC252CC926EA0067EFA3 /* CalculationParameters.swift in Sources */,
+				8905EC262CC926EA0067EFA3 /* Madhab.swift in Sources */,
+				8905EC272CC926EA0067EFA3 /* AdhanObjc.swift in Sources */,
+				8905EC282CC926EA0067EFA3 /* PrayerAdjustment.swift in Sources */,
+				8905EC292CC926EA0067EFA3 /* PrayerTimes.swift in Sources */,
+				8905EC2A2CC926EA0067EFA3 /* DateUtilities.swift in Sources */,
+				8905EC2B2CC926EA0067EFA3 /* Shafaq.swift in Sources */,
+				8905EC2C2CC926EA0067EFA3 /* SunnahTimes.swift in Sources */,
+				8905EC2D2CC926EA0067EFA3 /* SolarTime.swift in Sources */,
+				8905EC2E2CC926EA0067EFA3 /* Rouding.swift in Sources */,
+				8905EC2F2CC926EA0067EFA3 /* Astronomical.swift in Sources */,
+				8905EC302CC926EA0067EFA3 /* Qibla.swift in Sources */,
+				8905EC312CC926EA0067EFA3 /* HighLatitudeRule.swift in Sources */,
+				8905EC322CC926EA0067EFA3 /* Angle.swift in Sources */,
 				8975895F231169FE0005C1A2 /* AlarmController.m in Sources */,
 				89C5155A2308579F000BD54C /* DeviceBindingController.m in Sources */,
 				89C51554230840B2000BD54C /* DeviceSearchListController.m in Sources */,
@@ -396,8 +535,10 @@
 				89C5156023085958000BD54C /* MoView.m in Sources */,
 				892ADC8D2313FB6B00934A08 /* WristWakeUpController.m in Sources */,
 				891FA8DC231AAE030097E996 /* HealthMonitorController.m in Sources */,
+				8905EBFD2CC913DA0067EFA3 /* MuslimPrayerController.m in Sources */,
 				89C5155123083B22000BD54C /* LocalizedButton.m in Sources */,
 				891FA8DF231AB3D20097E996 /* ScreenDispayController.m in Sources */,
+				8905EC002CC919BF0067EFA3 /* MuslimPrayerParams.m in Sources */,
 				8902EA55230C2B97003FF418 /* DemoListController.m in Sources */,
 				89C5156123085958000BD54C /* MoCurveLayer.m in Sources */,
 			);
@@ -562,6 +703,7 @@
 			baseConfigurationReference = 4674C6148BD9C164A509FD6C /* Pods-FitCloudKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -574,6 +716,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FitCloudKitDemo/FitCloudKitDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -583,6 +728,7 @@
 			baseConfigurationReference = 1511A057B1CD59EA0B4E8EED /* Pods-FitCloudKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -595,6 +741,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FitCloudKitDemo/FitCloudKitDemo-Bridging-Header.h";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

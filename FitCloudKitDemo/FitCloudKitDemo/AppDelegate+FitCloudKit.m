@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate+FitCloudKit.h"
+#import "MuslimPrayerParams.h"
+#import "FitCloudKitDemo-Swift.h"
+#import <FitCloudKit/FitCloudKit.h>
 
 @implementation AppDelegate (FitCloudKit)
 
@@ -76,6 +79,30 @@
 {
     XLOG_INFO(@"收到手环与手机连接活跃通知...");
     //the App can actively synchronize the movement health data of the bracelet to achieve the function of background synchronization data. Please add it according to the specific project needs. Note that frequent synchronization data in the background may affect the power consumption of the bracelet device.
+}
+
+/// 手表端请求当前回历节日信息
+///
+/// > The watch side request the current islamic events information
+-(void) OnRequestCurrentIslamicEvents
+{
+    XLOG_INFO(@"手表请求回历节日信息...");
+}
+
+/// 手表端请求克尔白数据
+///
+/// > The watch side request the kaaba data information
+-(void) OnRequestKaabaData
+{
+    XLOG_INFO(@"手表请求克尔白数据...");
+    /*BACoordinates *coordinates = [[BACoordinates alloc] initWithLatitude:35.78056 longitude:-78.6389];
+    BAQibla* kaaba = [[BAQibla alloc] initWithCoordinates:coordinates];
+    FitCloudKaabaModel* ka = [FitCloudKaabaModel new];
+    ka.locationServiceState = APPLOCATIONSERVICESTATE_AVAILABLE;
+    ka.azimuthAngle = kaaba.a*/
+    [FitCloudKit setKaabaData:[MuslimPrayerParams instance].kaaba completion:^(BOOL succeed, NSError * _Nonnull error) {
+        
+    }];
 }
 
 /**

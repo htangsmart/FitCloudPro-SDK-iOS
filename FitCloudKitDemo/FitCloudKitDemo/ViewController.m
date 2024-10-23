@@ -142,6 +142,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         if(self.indicator.isAnimating)[self.indicator stopAnimating];
         self.btnConnectDevice.hidden = FALSE;
+        self.btnRemoveDevice.hidden = NO;
         self.connectStatus.text = NSLocalizedString(@"Disconnected", nil);
         self.connectStatus.textColor = RGB(0x9A, 0x9A, 0x9A);
     });
