@@ -381,4 +381,10 @@
 /// 是否应该隐藏心率加强测量
 @property(nonatomic, readonly) BOOL shouldHideEnhancedHeartRateMeasurement;
 
+/// 是否支持穆斯林朝拜功能
+@property(nonatomic, readonly) BOOL withMuslimPrayer;
+
+/// 是否支持删除表盘功能
+@property(nonatomic, readonly) BOOL allowDeleteWatchface;
+
 @end

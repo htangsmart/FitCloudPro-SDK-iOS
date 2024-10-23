@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.0-beta.19 build20241023003 (2024-10-23)
+
+- Add check whether the watch device support the Muslim prayer commands.
+- Add check whether the watch device support the watchface deletion commands.
+
 ## V1.3.0-beta.18 build20241023002 (2024-10-23)
 
 - Add app location permission information for Muslim prayer kaaba data.

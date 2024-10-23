@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-10-23  Version:1.3.0-beta.18 Build:20241023002
+//      pcjbird    2024-10-23  Version:1.3.0-beta.19 Build:20241023003
 
 
 #import <Foundation/Foundation.h>
@@ -1281,7 +1281,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Set the current islamic events information
 /// - Parameters:
-///   - events: the islamic events
+///   - events: the islamic events, with maximum 6 events
 ///   - completion: the completion callback
 +(void)setCurrentIslamicEvents:(NSArray<FitCloudIslamicEventModel*>*)events completion:(void (^__nullable)(BOOL succeed, NSError* error))completion;
 
