@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-10-23 Version:1.3.0-beta.17 Build:20241023001
+## pcjbird 2024-10-23 Version:1.3.0-beta.18 Build:20241023002
 
 - 添加事件以通知手表端运动(锻炼)状态的变化。
 - 修复了设置和查询耳机仓歌词颜色的问题。
@@ -21,6 +21,8 @@
 - 椭圆机/划船机的训练数据支持返回最大触发频率和最小触发频率的数据。
 - 修复当应用尝试断开手表设备但该设备已经断开连接且仍保留在自动连接池中时，仍然会自动重新连接的问题。
 - 修复了某些项目中解析从手表设备同步的数据时出现的一些问题。
+- 为朝拜克尔白数据添加应用程序位置权限信息。
+- 引入新的API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion`用于删除手表端的表盘。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

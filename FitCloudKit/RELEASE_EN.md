@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-10-23 Version:1.3.0-beta.17 Build:20241023001
+## pcjbird 2024-10-23 Version:1.3.0-beta.18 Build:20241023002
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -21,6 +21,8 @@
 - The workout data of elliptical machine/rowing machine supports returning data for the maximum trigger frequency and minimum trigger frequency.
 - Fix the automatic reconnect issue, when the app attemp to disconnect the watch device which is already disconnected but remains in the auto-connect pool.
 - Fix some issue with parsing data synced from the watch device in some of the projects.
+- Add app location permission information for Muslim prayer kaaba data.
+- Introduce the new API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion` to delete the watchface on the watch side.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

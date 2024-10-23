@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.0-beta.18 build20241023002 (2024-10-23)
+
+- Add app location permission information for Muslim prayer kaaba data.
+- Introduce the new API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion` to delete the watchface on the watch side.
+
 ## V1.3.0-beta.17 build20241023001 (2024-10-23)
 
 - Fix some issue with parsing data synced from the watch device in some of the projects.

@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudKitDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// The kaaba data model
 @interface FitCloudKaabaModel : NSObject
+
+/// The location service state
+@property(nonatomic, assign) APPLOCATIONSERVICESTATE locationServiceState;
 
 /// the azimuth angle from -180 to 180
 ///
