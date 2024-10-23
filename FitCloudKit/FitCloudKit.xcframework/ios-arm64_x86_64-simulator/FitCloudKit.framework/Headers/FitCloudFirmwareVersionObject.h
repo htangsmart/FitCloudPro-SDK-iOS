@@ -372,8 +372,8 @@
 /// 是否支持设置24小时天气信息
 @property(nonatomic, readonly) BOOL with24HrWeather;
 
-/// 是否使用数据同步记录的间隔的数值作为数据项增加的数据长度
-@property(nonatomic, readonly) BOOL useDataSyncRecordIntervalAsItemAdditionalDataLength;
+/// 是否将运动ITEM间隔值解析成运动ITEM的数据长度
+@property(nonatomic, readonly) BOOL useWorkoutRecordIntervalAsItemDataLength;
 
 /// 大模型类型
 @property(nonatomic, readonly) LLMTYPE llmType;

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.17 build20241023001 (2024-10-23)
+
+- Fix some issue with parsing data synced from the watch device in some of the projects.
+
 ## V1.3.0-beta.16 build20241021001 (2024-10-21)
 
 - Fix the automatic reconnect issue, when the app attemp to disconnect the watch device which is already disconnected but remains in the auto-connect pool.
