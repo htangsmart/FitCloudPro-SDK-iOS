@@ -24,7 +24,7 @@
 - Add app location permission information for Muslim prayer kaaba data.
 - Introduce the new API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion` to delete the watchface on the watch side.
 - Add the connect timeout SDK option, when you initially attempt to manually connect to the peripheral, a connection timeout in seconds is applied. If this timeout is reached, a connection failure error will be returned. Subsequently, the SDK will attempt to reconnect silently.
-- Rename the SDK option `shouldAutoConnect` to `shouldAutoReconnectWhenAppLaunch`.
+- Rename the SDK init option `shouldAutoConnect` to `shouldAutoReconnectWhenAppLaunch`.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 
