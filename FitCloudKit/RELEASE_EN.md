@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-10-23 Version:1.3.0-beta.19 Build:20241023003
+## pcjbird 2024-10-24 Version:1.3.0-beta.20 Build:20241024001
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -23,6 +23,8 @@
 - Fix some issue with parsing data synced from the watch device in some of the projects.
 - Add app location permission information for Muslim prayer kaaba data.
 - Introduce the new API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion` to delete the watchface on the watch side.
+- Add the connect timeout SDK option, when you initially attempt to manually connect to the peripheral, a connection timeout in seconds is applied. If this timeout is reached, a connection failure error will be returned. Subsequently, the SDK will attempt to reconnect silently.
+- Rename the SDK option `shouldAutoConnect` to `shouldAutoReconnectWhenAppLaunch`.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

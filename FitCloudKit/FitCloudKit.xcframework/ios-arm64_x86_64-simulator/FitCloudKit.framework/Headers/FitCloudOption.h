@@ -22,6 +22,13 @@
 /// > Important: The default value is 10s
 @property(nonatomic, assign) NSTimeInterval secsScanTimeOut;
 
+/// The connect timeout time in seconds
+///
+/// > Important: The default value is 5s
+///
+/// When you initially attempt to manually connect to the peripheral, a connection timeout in seconds is applied. If this timeout is reached, a connection failure error will be returned. Subsequently, the SDK will attempt to reconnect silently.
+@property(nonatomic, assign) NSTimeInterval secsConnectTimeOut;
+
 /// The command timeout time in seconds
 ///
 /// > Important: The default value is 10s
@@ -32,10 +39,10 @@
 /// > Important: The default value is 20ms, and minimum interval should not be less than 15ms.
 @property(nonatomic, assign) NSInteger milliSecsPacketUnitInterval;
 
-/// Whether should automatically connect to the last paired watch device when the app launch
+/// Whether should automatically reconnect to the last paired watch device when the app launch
 ///
 /// > Important: The default value is NO.
-@property(nonatomic, assign) BOOL    shouldAutoConnect;
+@property(nonatomic, assign) BOOL shouldAutoReconnectWhenAppLaunch;
 
 /// The watch device language preference.
 ///

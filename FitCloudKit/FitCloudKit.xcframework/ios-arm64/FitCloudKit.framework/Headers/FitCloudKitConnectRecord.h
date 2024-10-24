@@ -31,8 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 最后连接时间
 @property(nonatomic, strong) NSDate* lastConnectTime;
 
-/// 是否应该自动连接
-@property(nonatomic, assign) BOOL      shouldAutoConnect;
+/// 是否应该自动回连
+@property(nonatomic, assign) BOOL      shouldAutoReconnect;
 
 /// 绑定的用户Id
 @property(nonatomic, strong, nullable) NSString* bindUserId;
