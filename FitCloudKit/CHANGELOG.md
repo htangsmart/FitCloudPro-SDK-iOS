@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.23 build20241024004 (2024-10-24)
+
+- Optimize some logic in the watch device connection.
+
 ## V1.3.0-beta.22 build20241024003 (2024-10-24)
 
 - Fix some issue with Muslim prayer commands.
