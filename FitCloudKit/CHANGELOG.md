@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.22 build20241024003 (2024-10-24)
+
+- Fix some issue with Muslim prayer commands.
+
 ## V1.3.0-beta.21 build20241024002 (2024-10-24)
 
 - Add more debug logs.
