@@ -3,6 +3,7 @@
 ## V1.3.0-beta.24 build20241024005 (2024-10-24)
 
 - Fix some issue with WPAuth commands.
+- Fix some issue with SDK init option `secsConnectTimeOut`.
 
 ## V1.3.0-beta.23 build20241024004 (2024-10-24)
 
@@ -18,7 +19,7 @@
 
 ## V1.3.0-beta.20 build20241024001 (2024-10-24)
 
-- Add the connect timeout SDK option, when you initially attempt to manually connect to the peripheral, a connection timeout in seconds is applied. If this timeout is reached, a connection failure error will be returned. Subsequently, the SDK will attempt to reconnect silently.
+- Add SDK init option `secsConnectTimeOut`, when you initially attempt to manually connect to the peripheral, a connection timeout in seconds is applied. If this timeout is reached, a connection failure error will be returned. Subsequently, the SDK will attempt to reconnect silently.
 - Rename the SDK init option `shouldAutoConnect` to `shouldAutoReconnectWhenAppLaunch`.
 
 ## V1.3.0-beta.19 build20241023003 (2024-10-23)

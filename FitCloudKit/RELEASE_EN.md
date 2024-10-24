@@ -23,7 +23,7 @@
 - Fix some issue with parsing data synced from the watch device in some of the projects.
 - Add app location permission information for Muslim prayer kaaba data.
 - Introduce the new API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion` to delete the watchface on the watch side.
-- Add the connect timeout SDK option, when you initially attempt to manually connect to the peripheral, a connection timeout in seconds is applied. If this timeout is reached, a connection failure error will be returned. Subsequently, the SDK will attempt to reconnect silently.
+- Add SDK init option `secsConnectTimeOut`, when you initially attempt to manually connect to the peripheral, a connection timeout in seconds is applied. If this timeout is reached, a connection failure error will be returned. Subsequently, the SDK will attempt to reconnect silently.
 - Rename the SDK init option `shouldAutoConnect` to `shouldAutoReconnectWhenAppLaunch`.
 - Fix some issue with WPAuth commands.
 
