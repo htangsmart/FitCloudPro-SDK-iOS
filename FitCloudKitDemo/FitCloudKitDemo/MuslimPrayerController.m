@@ -77,7 +77,7 @@
     alarmClock.timeForAsr = prayerTimes.asr;
     alarmClock.timeForMaghrib = prayerTimes.maghrib;
     alarmClock.timeForIsha = prayerTimes.isha;
-    
+    XLOG_INFO(@"朝拜闹钟:%@", prayerTimes);
     [FitCloudKit setMuslimPrayerAlarmClock:alarmClock completion:^(BOOL succeed, NSError * _Nonnull error) {
         
     }];
