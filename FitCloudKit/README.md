@@ -586,7 +586,7 @@ pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
 ```objc
 FitCloudOption *option = [FitCloudOption defaultOption];
 option.debugMode = NO;
-option.shouldAutoConnect = YES;
+option.shouldAutoReconnectWhenAppLaunch = YES;
 self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
 ```
 
