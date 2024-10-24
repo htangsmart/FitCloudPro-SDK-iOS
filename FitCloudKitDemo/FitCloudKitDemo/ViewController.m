@@ -178,6 +178,10 @@
             result = [userInfo boolValueForKey:@"result" default:NO];
         }
         self.progressTip.text = result ? NSLocalizedString(@"Login User Object Success", nil) : NSLocalizedString(@"Login User Object Failure", nil);
+        if(!result)
+        {
+            self.btnRemoveDevice.hidden = NO;
+        }
     });
 }
 

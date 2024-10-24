@@ -160,6 +160,8 @@
 -(void) OnRequestCurrentIslamicEvents
 {
     XLOG_INFO(@"手表请求回历节日信息...");
+    
+    XLOG_INFO(@"回历节日信息:%@", [[self getIslamicEvents] debugDescription]);
     [FitCloudKit setCurrentIslamicEvents:[self getIslamicEvents] completion:^(BOOL succeed, NSError * _Nonnull error) {
         
     }];
@@ -176,6 +178,8 @@
     FitCloudKaabaModel* ka = [FitCloudKaabaModel new];
     ka.locationServiceState = APPLOCATIONSERVICESTATE_AVAILABLE;
     ka.azimuthAngle = kaaba.a*/
+    
+    XLOG_INFO(@"克尔白信息:%@", [[MuslimPrayerParams instance].kaaba debugDescription]);
     [FitCloudKit setKaabaData:[MuslimPrayerParams instance].kaaba completion:^(BOOL succeed, NSError * _Nonnull error) {
         
     }];
