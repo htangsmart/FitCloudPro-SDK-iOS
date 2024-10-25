@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-10-24 Version:1.3.0-beta.24 Build:20241024005
+## pcjbird 2024-10-25 Version:1.3.0-beta.25 Build:20241025001
 
 - 添加事件以通知手表端运动(锻炼)状态的变化。
 - 修复了设置和查询耳机仓歌词颜色的问题。
@@ -26,6 +26,7 @@
 - 添加连接超时选项，当您最初尝试手动连接到手表设备时，将应用以秒为单位的连接超时。如果达到此超时，将返回连接失败错误。随后，SDK将尝试以静默方式重新连接。
 - 将 SDK 初始化选项 `shouldAutoConnect` 重命名为 `shouldAutoReconnectWhenAppLaunch`。
 - 修复微信支付指令发送的一些问题。
+- 引入新的API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion`用于删除手表端对应表盘位置的表盘。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

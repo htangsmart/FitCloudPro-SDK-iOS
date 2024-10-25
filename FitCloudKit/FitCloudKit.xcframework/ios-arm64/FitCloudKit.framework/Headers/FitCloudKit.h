@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-10-24  Version:1.3.0-beta.24 Build:20241024005
+//      pcjbird    2024-10-25  Version:1.3.0-beta.25 Build:20241025001
 
 
 #import <Foundation/Foundation.h>
@@ -735,6 +735,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - watchfaceNo: the watchface No.
 ///   - completion: the completion callback
 +(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion;
+
+/// Delete the watchface with slot index
+/// - Parameters:
+///   - slotIndex: the slot index, 0～10
+///   - completion: the completion callback
++(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion;
 
 
 #pragma mark 女性健康设置

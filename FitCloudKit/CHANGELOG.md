@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.25 build20241025001 (2024-10-25)
+
+- Introduce the new API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion` to delete the watchface with slot index on the watch side.
+
 ## V1.3.0-beta.24 build20241024005 (2024-10-24)
 
 - Fix some issue with WPAuth commands.
