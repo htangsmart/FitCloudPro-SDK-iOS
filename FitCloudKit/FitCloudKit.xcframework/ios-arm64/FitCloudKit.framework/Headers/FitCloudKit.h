@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-10-25  Version:1.3.0-beta.25 Build:20241025001
+//      pcjbird    2024-10-26  Version:1.3.0-beta.26 Build:20241026001
 
 
 #import <Foundation/Foundation.h>
@@ -1433,6 +1433,14 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - state: APP相机状态（前台/后台）
 ///   - block: 结果回调
 +(void)notifyAppCameraState:(APPCAMERASTATE)state withBlock:(FitCloudResultHandler _Nullable )block;
+
+#pragma mark APP通知手表切换前后摄像头是否成功
+
+/// APP通知手表切换前后摄像头是否成功
+/// - Parameters:
+///   - success: APP切换前后摄像头是否成功
+///   - completion: 结果回调
++(void)notifyAppToggleCameraResult:(BOOL)success completion:(FitCloudResultHandler _Nullable )completion;
 
 #pragma mark 通知手表第三方外设启停操作结果
 

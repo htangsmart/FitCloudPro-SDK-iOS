@@ -763,6 +763,9 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* f
 /// > The watch side request the kaaba data information
 -(void) OnRequestKaabaData;
 
+/// The watch device request to toggle the iPhone camera
+-(void) OnRequestToggleCamera;
+
 /// 睡眠调试数据
 -(void) OnSleepDebugData:(FitCloudSleepDebugData*)sleepDebugData;
 
