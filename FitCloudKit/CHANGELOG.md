@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.27 build20241030001 (2024-10-30)
+
+- Fix some issues with historical connection records, especially when users modify their phone time.
+
 ## V1.3.0-beta.26 build20241026001 (2024-10-26)
 
 - Introduce the new APIs for toggling iPhone camera requests from the watch side.

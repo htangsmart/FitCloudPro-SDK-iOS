@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-10-26 Version:1.3.0-beta.26 Build:20241026001
+## pcjbird 2024-10-30 Version:1.3.0-beta.27 Build:20241030001
 
 - 添加事件以通知手表端运动(锻炼)状态的变化。
 - 修复了设置和查询耳机仓歌词颜色的问题。
@@ -28,6 +28,7 @@
 - 修复微信支付指令发送的一些问题。
 - 引入新的API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion`用于删除手表端对应表盘位置的表盘。
 - 引入新的API，用于从手表端切换iPhone摄像头请求。
+- 修复历史连接记录的一些问题, 特别当用户修改了手机时间。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

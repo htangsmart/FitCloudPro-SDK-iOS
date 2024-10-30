@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-10-26 Version:1.3.0-beta.26 Build:20241026001
+## pcjbird 2024-10-30 Version:1.3.0-beta.27 Build:20241030001
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -28,6 +28,7 @@
 - Fix some issue with WPAuth commands.
 - Introduce the new API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion` to delete the watchface with slot index on the watch side.
 - Introduce the new APIs for toggling iPhone camera requests from the watch side.
+- Fix some issues with historical connection records, especially when users modify their phone time.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 
