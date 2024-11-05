@@ -156,12 +156,12 @@ typedef void (^FitCloudFirmwareVersionResultBlock)(BOOL succeed, FitCloudFirmwar
 ///   - error: 错误信息
 typedef void (^FitCloudMNSettingResultBlock)(BOOL succeed, FITCLOUDMN mnSetting, NSError* error);
 
-/**
- *@brief FitCloud 获取手表表盘所有功能项显示状态调用结果回调
- *@param succeed 是否成功
- *@param sdSetting 手表表盘所有功能项显示状态
- *@param error 错误信息
- */
+
+/// FitCloud 获取手表表盘所有功能项显示状态调用结果回调
+/// - Parameters:
+///   - succeed 是否成功
+///   - sdSetting 手表表盘所有功能项显示状态
+///   - error 错误信息
 typedef void (^FitCloudSDSettingResultBlock)(BOOL succeed, FITCLOUDSCREENDISPLAY sdSetting, NSError* error);
 
 /**
@@ -752,6 +752,15 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString* f
 
 /// 手表端通知退出导航
 -(void) OnExitNaviFromWatchNotify;
+
+
+/// 请求地图导航快照
+/// - Parameters:
+///   - width: 宽度
+///   - height: 高度
+///   - rotation: 旋转角度，支持的角度有 0°，90°，180°，270°
+///   - bufferSize: 图片Buffer大小限制
+-(void)OnRequestMapNavigationSnapshotWithWidth:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation bufferSize:(NSInteger)bufferSize;
 
 /// 手表端请求当前回历节日信息
 ///

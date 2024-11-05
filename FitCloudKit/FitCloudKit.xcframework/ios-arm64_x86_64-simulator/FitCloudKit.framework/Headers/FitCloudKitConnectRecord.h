@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// FitCloudKit 手表连接配对记录
-@interface FitCloudKitConnectRecord : NSObject<NSCoding>
+@interface FitCloudKitConnectRecord : NSObject<NSCoding, NSCopying>
 
 /// The name of the watch
 @property(nonatomic, strong) NSString* name;

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.28 build20241105001 (2024-11-05)
+
+- Introduce the new APIs for handling the map navigation snapshot request from the watch side.
+
 ## V1.3.0-beta.27 build20241030001 (2024-10-30)
 
 - Fix some issues with historical connection records, especially when users modify their phone time.
