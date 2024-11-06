@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.30 build20241106002 (2024-11-06)
+
+- Change the camera live preview commands to align with the watch device side.
+
 ## V1.3.0-beta.29 build20241106001 (2024-11-06)
 
 - Rename some map navigation APIs.
