@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-11-05  Version:1.3.0-beta.28 Build:20241105001
+//      pcjbird    2024-11-06  Version:1.3.0-beta.29 Build:20241106001
 
 
 #import <Foundation/Foundation.h>
@@ -1152,42 +1152,42 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - map: the navigation map
 ///   - naviType: navi type
-///   - block: completion callback
-+(void) onNaviStartWithMap:(FITCLOUDROUTEPLANMAPPROVIDER)map type:(FITCLOUDROUTEPLANNAVITYPE) naviType withBlock:(FitCloudResultHandler _Nullable)block;
+///   - completion: completion callback
++(void) onNaviStartWithMap:(FITCLOUDROUTEPLANMAPPROVIDER)map type:(FITCLOUDROUTEPLANNAVITYPE) naviType withCompletion:(FitCloudResultHandler _Nullable)completion;
 
 /// The navigation guide kind callback
 /// - Parameters:
 ///   - guideKind: the guide kind
-///   - block: completion callback
-+(void) onNaviGuideKind:(FITCLOUDROUTEPLANGUIDEKIND)guideKind withBlock:(FitCloudResultHandler _Nullable)block;
+///   - completion: completion callback
++(void) onNaviGuideKind:(FITCLOUDROUTEPLANGUIDEKIND)guideKind withCompletion:(FitCloudResultHandler _Nullable)completion;
 
 /// The navigation guide text callback
 /// - Parameters:
 ///   - guideText: the guide text
-///   - block: completion callback
-+(void) onNaviGuideText:(NSString*)guideText withBlock:(FitCloudResultHandler _Nullable)block;
+///   - completion: completion callback
++(void) onNaviGuideText:(NSString*)guideText withCompletion:(FitCloudResultHandler _Nullable)completion;
 
 /// The remain time for navigation update callback
 /// - Parameters:
 ///   - remainTime: the remain time in seconds
-///   - block: completion callback
-+(void) onNaviRemainTimeUpdate:(NSInteger)remainTime withBlock:(FitCloudResultHandler _Nullable)block;
+///   - completion: completion callback
++(void) onNaviRemainTimeUpdate:(NSInteger)remainTime withCompletion:(FitCloudResultHandler _Nullable)completion;
 
 /// The remain distance for navigation update callback
 /// - Parameters:
 ///   - remainDistance: the remain distance in meters
-///   - block: completion callback
-+(void) onNaviRemainDistanceUpdate:(NSInteger)remainDistance withBlock:(FitCloudResultHandler _Nullable)block;
+///   - completion: completion callback
++(void) onNaviRemainDistanceUpdate:(NSInteger)remainDistance withCompletion:(FitCloudResultHandler _Nullable)completion;
 
 /// The navigation arrive destination callback
 /// - Parameters:
-///   - block: completion callback
-+(void) onNaviArriveDestwithBlock:(FitCloudResultHandler _Nullable)block;
+///   - completion: completion callback
++(void) onNaviArriveDestination:(NSString* _Nullable)destination withCompletion:(FitCloudResultHandler _Nullable)completion;
 
 /// The naviagation exit callback
 /// - Parameters:
-///   - block: completion callback
-+(void) onNaviExitwithBlock:(FitCloudResultHandler _Nullable)block;
+///   - completion: completion callback
++(void) onNaviExitWithCompletion:(FitCloudResultHandler _Nullable)completion;
 
 #pragma mark 电子卡包
 

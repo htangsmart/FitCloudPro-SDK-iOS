@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.0-beta.29 build20241106001 (2024-11-06)
+
+- Rename some map navigation APIs.
+- Upon reaching the destination during navigation, now allow sending the endpoint name to the watch side.
+
 ## V1.3.0-beta.28 build20241105001 (2024-11-05)
 
 - Introduce the new APIs for handling the map navigation snapshot request from the watch side.
