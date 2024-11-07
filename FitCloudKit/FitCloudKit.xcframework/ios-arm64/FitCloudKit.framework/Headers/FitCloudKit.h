@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-11-06  Version:1.3.0-beta.30 Build:20241106002
+//      pcjbird    2024-11-07  Version:1.3.0-beta.31 Build:20241107001
 
 
 #import <Foundation/Foundation.h>
@@ -1509,7 +1509,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 发送拍照实时预览图JPG图片数据
 /// - Parameters:
 ///   - data: 相机实时预览图JPG图片数据
-+(void) sendCameraLivePreviewData:(NSData*)data;
+///   - userInfo: 用户附加信息
++(void) sendCameraLivePreviewData:(NSData*)data userInfo:(NSDictionary* _Nullable)userInfo;
 
 @end
 
@@ -1521,7 +1522,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 发送地图导航快照JPG图片数据
 /// - Parameters:
 ///   - data: 地图导航快照JPG图片数据
-+(void) sendMapNavigationSnapshotData:(NSData*)data;
+///   - userInfo: 用户附加信息
++(void) sendMapNavigationSnapshotData:(NSData*)data userInfo:(NSDictionary* _Nullable)userInfo;
 
 @end
 

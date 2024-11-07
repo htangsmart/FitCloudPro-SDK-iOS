@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.31 build20241107001 (2024-11-07)
+
+- Optimize the camera live preview and the map navigation snapshot commands.
+
 ## V1.3.0-beta.30 build20241106002 (2024-11-06)
 
 - Change the camera live preview commands to align with the watch device side.
