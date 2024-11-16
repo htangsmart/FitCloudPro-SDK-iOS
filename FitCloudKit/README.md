@@ -42,7 +42,7 @@
 
 ## 版本 / Releases
 
-[版本更新日志](RELEASE_CN.md)
+- [版本更新日志](RELEASE_CN.md)
 
 ## 获取 APPID 和 APPKEY
 
