@@ -42,7 +42,7 @@
 
 ## Releases
 
-- [RELEASES](RELEASE_EN.md)
+- [RELEASES NOTES](RELEASE_EN.md)
 
 ## APPID & APPKEY
 
