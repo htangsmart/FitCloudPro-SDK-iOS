@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.32 build20241116001 (2024-11-16)
+
+- Some code and comment optimizations.
+
 ## V1.3.0-beta.31 build20241107001 (2024-11-07)
 
 - Optimize the camera live preview and the map navigation snapshot commands.
