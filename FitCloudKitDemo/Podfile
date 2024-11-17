@@ -12,7 +12,7 @@ target 'FitCloudKitDemo' do
 
   # Pods for FitCloudKitDemo
   pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
-  pod 'XLFacility', git: 'https://github.com/pcjbird/XLFacility.git', :modular_headers => true
+  pod 'XLFacility', :modular_headers => true
   pod 'iOSLogBrowserSDK'
   pod 'YYCategories'
   pod 'Toast'
