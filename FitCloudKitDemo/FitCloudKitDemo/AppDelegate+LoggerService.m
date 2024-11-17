@@ -7,17 +7,7 @@
 //
 
 #import "AppDelegate+LoggerService.h"
-#if __has_include(<QuickTraceiOSLogger/QuickTraceiOSLogger.h>)
-#import <QuickTraceiOSLogger/QuickTraceiOSLogger.h>
-#else
-#import "QuickTraceiOSLogger.h"
-#endif
-
-#if __has_include(<XLFacility/XLStandardLogger.h>)
-#import <XLFacility/XLStandardLogger.h>
-#else
-#import "XLStandardLogger.h"
-#endif
+#import <iOSLogBrowserSDK/iOSLogBrowserSDK.h>
 
 @implementation AppDelegate (LoggerService)
 
@@ -26,12 +16,11 @@
     {
         [[XLStandardLogger sharedOutputLogger] setFormat:XLLoggerFormatString_NSLog];
         [[XLStandardLogger sharedErrorLogger] setFormat:XLLoggerFormatString_NSLog];
-        
     }
     
     {
-        [QuickiOSLogServer start];
-        XLOG_INFO(@"%@", APP_LOG_STRING(@"您正在使用 iOS 远程日志查看服务！"));
+        [iOSLogBrowserSDK startWithOption:nil];
+        XLOG_INFO(@"您正在使用 iOS 局域网日志查看服务！");
     }
 }
 
