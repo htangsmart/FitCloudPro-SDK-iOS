@@ -14,11 +14,6 @@
 -(void) loggerServiceConfig
 {
     {
-        [[XLStandardLogger sharedOutputLogger] setFormat:XLLoggerFormatString_NSLog];
-        [[XLStandardLogger sharedErrorLogger] setFormat:XLLoggerFormatString_NSLog];
-    }
-    
-    {
         [iOSLogBrowserSDK startWithOption:nil];
         XLOG_INFO(@"您正在使用 iOS 局域网日志查看服务！");
     }
