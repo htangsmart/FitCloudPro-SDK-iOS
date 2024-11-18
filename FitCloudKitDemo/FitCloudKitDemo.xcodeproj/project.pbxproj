@@ -707,7 +707,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20241025001;
 				DEVELOPMENT_TEAM = "";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FitCloudKitDemo/FitCloudKitDemo-Prefix.pch";
 				INFOPLIST_FILE = FitCloudKitDemo/Info.plist;
@@ -734,7 +733,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20241025001;
 				DEVELOPMENT_TEAM = "";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FitCloudKitDemo/FitCloudKitDemo-Prefix.pch";
 				INFOPLIST_FILE = FitCloudKitDemo/Info.plist;

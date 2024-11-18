@@ -22,6 +22,7 @@
 
 #define RGB(r, g, b)                        [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:1.f]
 
+#import <XLFacility/XLFacilityMacros.h>
 #import <iOSLogBrowserSDK/iOSLogBrowserSDK.h>
 #import <FitCloudKit/FitCloudKit.h>
 #import <YYCategories/YYCategories.h>

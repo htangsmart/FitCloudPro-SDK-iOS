@@ -12,14 +12,9 @@ target 'FitCloudKitDemo' do
 
   # Pods for FitCloudKitDemo
   pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
-  pod 'XLFacility', :modular_headers => true
+  pod 'XLFacility', git: 'https://github.com/pcjbird/XLFacility.git'
   pod 'iOSLogBrowserSDK'
   pod 'YYCategories'
   pod 'Toast'
   end
 
-post_install do |installer|
-  installer.pods_project.build_configurations.each do |config|
-    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
-  end
-end
