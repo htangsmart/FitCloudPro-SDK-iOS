@@ -174,7 +174,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		W9txw5QYZWja1lOWYpo1H1/P/F4=
+		mI2ps31jokQPtq/0rOTPvKr3GoM=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Headers/FitCloudWatchfaceUIInfo.h</key>
 		<data>
-		75LwP0eZKXP8W7vssTbHKGGh9ns=
+		Xruu9SDrv9LvuNsjrJ2R0Zi7q+g=
 		</data>
 		<key>Headers/FitCloudWeatherObject.h</key>
 		<data>
@@ -322,7 +322,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ieXgktitBkdOWZJWg79QPFvL9O8=
+		n5wmBv534dyQ0mlhszceUSK6VFM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -797,11 +797,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			W9txw5QYZWja1lOWYpo1H1/P/F4=
+			mI2ps31jokQPtq/0rOTPvKr3GoM=
 			</data>
 			<key>hash2</key>
 			<data>
-			A5mbcE+xuVwJbF8JY/liEUNkFzxcAW0F46KfY22rFtU=
+			POoUEKuSXMo3cQm/qY+gNNmPes6ahsbMQ/Clhy6lA4s=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -1127,11 +1127,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			75LwP0eZKXP8W7vssTbHKGGh9ns=
+			Xruu9SDrv9LvuNsjrJ2R0Zi7q+g=
 			</data>
 			<key>hash2</key>
 			<data>
-			AQ+Xqz4HjStxAqiZdpXXPhOPPaSgoEBwYMpLsnYwC0w=
+			WUstsCd7r8W+mkMfrfIeh7gfz4xxKWhJutXAK5BE90g=
 			</data>
 		</dict>
 		<key>Headers/FitCloudWeatherObject.h</key>

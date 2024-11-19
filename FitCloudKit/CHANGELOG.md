@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.33 build20241119001 (2024-11-19)
+
+- Add support for watchface size 240x320 square and 184x276 square.
+
 ## V1.3.0-beta.32 build20241116001 (2024-11-16)
 
 - Some code and comment optimizations.

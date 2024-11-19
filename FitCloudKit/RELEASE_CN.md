@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-11-16 Version:1.3.0-beta.32 Build:20241116001
+## pcjbird 2024-11-19 Version:1.3.0-beta.33 Build:20241119001
 
 - 添加事件以通知手表端运动(锻炼)状态的变化。
 - 修复了设置和查询耳机仓歌词颜色的问题。
@@ -12,24 +12,25 @@
 - 添加`FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY`事件通知手表上对应表盘编号的表盘已被删除。
 - 将 FitCloudOption 的属性 `onlyDiscoverRecognizedManufacturers` 重命名为 `onlyDiscoverKnownManufacturers`。
 - 优化手表设备连接中的一些逻辑。
-- 应用程序启动时，删除未绑定任何帐户id的无效连接记录。
+- 应用程序启动时，删除未绑定任何帐户 id 的无效连接记录。
 - 修改解绑时逻辑为标记连接记录已解除绑定，而不是清除其帐户绑定信息。
 - 当尝试连接标记为已解绑的手表设备时，将发出警告，指出连接失败的可能性。
-- 优化手表设备扫描过程，这样即使在卸载和重新安装当前应用程序后，如果手表设备之前通过蓝牙广播扫描与当前应用程序连接，在扫描过程中仍然可以获得手表设备的mac地址。
+- 优化手表设备扫描过程，这样即使在卸载和重新安装当前应用程序后，如果手表设备之前通过蓝牙广播扫描与当前应用程序连接，在扫描过程中仍然可以获得手表设备的 mac 地址。
 - 将`FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY`事件的返回值从`object`参数修改为`userInfo`参数。
-- 为穆斯林祈祷功能引入新的API，包括设置祈祷闹钟、向手表设备提供伊斯兰日历事件以及克尔白信息数据。
+- 为穆斯林祈祷功能引入新的 API，包括设置祈祷闹钟、向手表设备提供伊斯兰日历事件以及克尔白信息数据。
 - 椭圆机/划船机的训练数据支持返回最大触发频率和最小触发频率的数据。
 - 修复当应用尝试断开手表设备但该设备已经断开连接且仍保留在自动连接池中时，仍然会自动重新连接的问题。
 - 修复了某些项目中解析从手表设备同步的数据时出现的一些问题。
 - 为朝拜克尔白数据添加应用程序位置权限信息。
-- 引入新的API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion`用于删除手表端的表盘。
-- 添加连接超时选项，当您最初尝试手动连接到手表设备时，将应用以秒为单位的连接超时。如果达到此超时，将返回连接失败错误。随后，SDK将尝试以静默方式重新连接。
+- 引入新的 API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion`用于删除手表端的表盘。
+- 添加连接超时选项，当您最初尝试手动连接到手表设备时，将应用以秒为单位的连接超时。如果达到此超时，将返回连接失败错误。随后，SDK 将尝试以静默方式重新连接。
 - 将 SDK 初始化选项 `shouldAutoConnect` 重命名为 `shouldAutoReconnectWhenAppLaunch`。
 - 修复微信支付指令发送的一些问题。
-- 引入新的API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion`用于删除手表端对应表盘位置的表盘。
-- 引入新的API，用于从手表端切换iPhone摄像头请求。
+- 引入新的 API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion`用于删除手表端对应表盘位置的表盘。
+- 引入新的 API，用于从手表端切换 iPhone 摄像头请求。
 - 修复历史连接记录的一些问题, 特别当用户修改了手机时间。
-- 引入新的API以处理来自手表端的地图导航快照请求。
+- 引入新的 API 以处理来自手表端的地图导航快照请求。
+- 表盘尺寸支持 240x320 方，184x276 方。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

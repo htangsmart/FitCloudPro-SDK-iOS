@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-11-16 Version:1.3.0-beta.32 Build:20241116001
+## pcjbird 2024-11-19 Version:1.3.0-beta.33 Build:20241119001
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -30,6 +30,7 @@
 - Introduce the new APIs for toggling iPhone camera requests from the watch side.
 - Fix some issues with historical connection records, especially when users modify their phone time.
 - Introduce the new APIs for handling the map navigation snapshot request from the watch side.
+- Add support for watchface size 240x320 square and 184x276 square.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 
