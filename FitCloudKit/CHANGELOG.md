@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.34 build20241120001 (2024-11-20)
+
+- New OTA start command added information about the file type to be upgraded.
+
 ## V1.3.0-beta.33 build20241119001 (2024-11-19)
 
 - Add support for watchface size 240x320 square and 184x276 square.
