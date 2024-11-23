@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-11-23 Version:1.3.0-beta.35 Build:20241123001
+## pcjbird 2024-11-23 Version:1.3.0-beta.36 Build:20241123002
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -32,6 +32,7 @@
 - Introduce the new APIs for handling the map navigation snapshot request from the watch side.
 - Add support for watchface size 240x320 square and 184x276 square.
 - New OTA start command added information about the file type to be upgraded.
+- Introduce the new API `+(void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion` to delete the GPS epo file on the watch side.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

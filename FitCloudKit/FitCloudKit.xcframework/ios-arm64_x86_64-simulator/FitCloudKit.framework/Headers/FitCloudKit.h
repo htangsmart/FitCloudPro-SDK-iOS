@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-11-23  Version:1.3.0-beta.35 Build:20241123001
+//      pcjbird    2024-11-23  Version:1.3.0-beta.36 Build:20241123002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1127,6 +1127,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - block: 结果回调
 + (void)prepareGPSFileUpgradeWithCompletion:(FitCloudResultHandler _Nullable)block;
+
+#pragma mark 删除手表上的GPS epo文件
+
+/// 删除手表上的GPS epo文件
+/// - Parameters:
+///   - completion: 结果回调
++ (void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion;
 
 #pragma mark 导航信息同步
 

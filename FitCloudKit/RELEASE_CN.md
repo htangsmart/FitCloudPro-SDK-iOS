@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-11-23 Version:1.3.0-beta.35 Build:20241123001
+## pcjbird 2024-11-23 Version:1.3.0-beta.36 Build:20241123002
 
 - 添加事件以通知手表端运动(锻炼)状态的变化。
 - 修复了设置和查询耳机仓歌词颜色的问题。
@@ -32,6 +32,7 @@
 - 引入新的 API 以处理来自手表端的地图导航快照请求。
 - 表盘尺寸支持 240x320 方，184x276 方。
 - 新 OTA 升级启动指令增加了待升级文件类型信息。
+- 引入新的 API `+(void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion` 以删除手表端的 GPS epo 文件。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 
