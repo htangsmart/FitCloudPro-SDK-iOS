@@ -17,7 +17,7 @@
 /// - Parameters:
 ///   - completion: the completion callback
 ///
-/// > Warning: Please do not invoke when in automatic connecting process, usually invoke before bind or when receive FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY event
+/// > Warning: Please do not invoke when in automatic connecting process, usually invoke before bind or when receive `FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY` event
 +(void) queryHuashengdaWatchWhetherRestoredToFactorySettingsWithCompletion:(void(^_Nullable)(BOOL success, BOOL restored, NSError* _Nullable error))completion;
 
 

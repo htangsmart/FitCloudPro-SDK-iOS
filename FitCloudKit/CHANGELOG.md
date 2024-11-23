@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.0-beta.35 build20241123001 (2024-11-23)
+
+- Fixed some issues with the watch device feature flags and capability indicators.
+- Optimized some error description translations.
+
 ## V1.3.0-beta.34 build20241120001 (2024-11-20)
 
 - New OTA start command added information about the file type to be upgraded.
