@@ -73,6 +73,7 @@
 #import <FitCloudKit/FitCloudIslamicDateModel.h>
 #import <FitCloudKit/FitCloudIslamicEventModel.h>
 #import <FitCloudKit/FitCloudKaabaModel.h>
+#import <FitCloudKit/FitCloudTaskModel.h>
 
 /// FitCloud调用结果回调
 /// - Parameters:
@@ -119,6 +120,13 @@ typedef void (^FitCloudAlarmsResultBlock)(BOOL succeed, NSArray<FitCloudAlarmObj
 ///   - list: 日程列表
 ///   - error: 错误信息
 typedef void (^FitCloudSchedulesResultBlock)(BOOL succeed, NSArray<FitCloudScheduleObject *> *list, NSError *error);
+
+/// FitCloud 获取任务列表调用结果回调
+/// - Parameters:
+///   - succeed: 是否成功
+///   - list: 任务列表
+///   - error: 错误信息
+typedef void (^FitCloudTaskQueryCompletion)(BOOL succeed, NSArray<FitCloudTaskModel *> *tasks, NSError *error);
 
 /// FitCloud 获取常用联系人列表调用结果回调
 /// - Parameters:

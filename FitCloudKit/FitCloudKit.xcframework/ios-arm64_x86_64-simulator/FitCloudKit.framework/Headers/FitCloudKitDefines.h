@@ -264,6 +264,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICECAPACITY) {
     FITCLOUDDEVICECAPACITY_CUSTOMIZEDPERSONALIZEDREMINDERFEATURE = 0x09,
     /// 支持的自定义个性化提醒数量
     FITCLOUDDEVICECAPACITY_CUSTOMIZEDPERSONALIZEDREMINDERCOUNT = 0x0a,
+    /// 支持的最大我的任务数量
+    FITCLOUDDEVICECAPACITY_MYTASKCOUNT = 0x1d,
 };
 
 #pragma mark - 手表硬件
@@ -592,6 +594,94 @@ typedef NS_OPTIONS(Byte, FITCLOUDSCHEDULECYCLE) {
     FITCLOUDSCHEDULECYCLE_SAT = 1 << 5,
     /// 周日循环
     FITCLOUDSCHEDULECYCLE_SUN = 1 << 6,
+};
+
+#pragma mark - 任务相关
+
+/// 任务定义
+///
+/// 定义了不同类型的任务选项,用于设置和管理任务提醒
+typedef NS_OPTIONS(Byte, FITCLOUDTASK) {
+    /// 喝水任务
+    FITCLOUDTASK_DRINK = 0,
+    /// 闹钟任务
+    FITCLOUDTASK_ALARM = 1,
+    /// 久坐任务
+    FITCLOUDTASK_SEDENTARY = 2,
+    /// 刷牙任务
+    FITCLOUDTASK_TEETHBRUSH = 3,
+    /// 早餐任务
+    FITCLOUDTASK_BREAKFAST = 4,
+    /// 家庭作业任务
+    FITCLOUDTASK_HOMEWORK = 5,
+    /// 午餐任务
+    FITCLOUDTASK_LUNCH = 6,
+    /// 运动任务
+    FITCLOUDTASK_SPORTS = 7,
+    /// 起床任务
+    FITCLOUDTASK_GETUP = 8,
+    /// 睡觉任务
+    FITCLOUDTASK_GOTOBED = 9,
+    /// 上学任务
+    FITCLOUDTASK_GOTOSCHOOL = 10,
+    /// 回家任务
+    FITCLOUDTASK_GOHOME = 11,
+    /// 阅读任务
+    FITCLOUDTASK_READ = 12,
+    /// 洗澡任务
+    FITCLOUDTASK_BATH = 13,
+    /// 聚会任务
+    FITCLOUDTASK_PARTY = 14,
+    /// 游戏任务
+    FITCLOUDTASK_GAME = 15,
+    /// 露营任务
+    FITCLOUDTASK_CAMP = 16,
+    /// 音乐任务
+    FITCLOUDTASK_MUSIC = 17,
+    /// 绘画任务
+    FITCLOUDTASK_DRAW = 18,
+    /// 跳舞任务
+    FITCLOUDTASK_DANCE = 19,
+    /// 摄影任务
+    FITCLOUDTASK_PHOTOGRAPHY = 20,
+    /// 遛狗任务
+    FITCLOUDTASK_WALKTHEDOG = 21,
+    /// 电影任务
+    FITCLOUDTASK_MOVIE = 22,
+};
+
+/// 定义任务的循环周期
+///
+/// 使用位掩码来表示一周中的不同日期组合。可以通过按位或运算组合多个日期。
+typedef NS_OPTIONS(Byte, FITCLOUDTASKCYCLE) {
+    /// 不循环,仅当天有效
+    FITCLOUDTASKCYCLE_NONE = 0,
+    /// 周一循环
+    FITCLOUDTASKCYCLE_MON = 1,
+    /// 周二循环
+    FITCLOUDTASKCYCLE_TUE = 1 << 1,
+    /// 周三循环
+    FITCLOUDTASKCYCLE_WED = 1 << 2,
+    /// 周四循环
+    FITCLOUDTASKCYCLE_THUR = 1 << 3,
+    /// 周五循环
+    FITCLOUDTASKCYCLE_FRI = 1 << 4,
+    /// 周六循环
+    FITCLOUDTASKCYCLE_SAT = 1 << 5,
+    /// 周日循环
+    FITCLOUDTASKCYCLE_SUN = 1 << 6,
+};
+
+/// 任务状态定义
+///
+/// 定义任务在不同阶段的状态
+typedef NS_ENUM(Byte, FITCLOUDTASKSTATUS) {
+    /// 待开始
+    FITCLOUDTASKSTATUS_TOBESTARTED = 0,
+    /// 进行中
+    FITCLOUDTASKSTATUS_INPROGRESS = 1,
+    /// 已完成
+    FITCLOUDTASKSTATUS_DONE = 2,
 };
 
 #pragma mark - 习惯相关
@@ -1350,6 +1440,8 @@ typedef NS_OPTIONS(UInt64, FITCLOUDMN) {
     FITCLOUDMN_ZOMATO = ((UInt64)1) << 47,
     /// Tira通知
     FITCLOUDMN_TIRA = ((UInt64)1) << 48,
+    /// Zalo通知
+    FITCLOUDMN_ZALO = ((UInt64)1) << 49,
 };
 
 #pragma mark - 内置个性化提醒定义(高级提醒)

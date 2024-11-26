@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-11-23  Version:1.3.0-beta.36 Build:20241123002
+//      pcjbird    2024-11-26  Version:1.3.0-beta.37 Build:20241126001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -348,6 +348,21 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - block: 结果回调
 + (void)getSchedulesWithBlock:(FitCloudSchedulesResultBlock _Nullable)block;
+
+#pragma mark 设置任务列表
+
+/// 设置任务（将手机上的任务列表同步到手表）
+/// - Parameters:
+///   - tasks: 任务列表
+///   - completion: 结果回调
++ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks completion:(FitCloudResultHandler _Nullable)completion;
+
+#pragma mark 获取任务列表
+
+/// 获取任务列表（获取手表上的任务列表）
+/// - Parameters:
+///   - completion: 结果回调
++ (void)queryTasksWithCompletion:(FitCloudTaskQueryCompletion _Nullable)completion;
 
 #pragma mark 设置常用联系人
 

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.0-beta.37 build20241126001 (2024-11-26)
+
+- Support `My Task` related commands for Huashengda.
+- Added `FITCLOUDMN_ZALO` notification definition.
+- Change the logic for parsing the new OTA module upgrade confirmation command as an error code when the data length is 1.
+
 ## V1.3.0-beta.36 build20241123002 (2024-11-23)
 
 - Introduce the new API `+(void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion` to delete the GPS epo file on the watch side.
