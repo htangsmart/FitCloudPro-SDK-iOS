@@ -1,8 +1,10 @@
 # RELEASES
 
-## V1.1.8-beta.1 build20241123001 (2024-11-23)
+## V1.1.8-beta.2 build20241128001 (2024-11-28)
 
 - Optimized file generation path to improve compatibility.
+- Improved and enhanced code documentation and comments.
+- Optimized the image resizing method.
 
 ## pcjbird 2024-09-30 Version:1.1.7 Build:20240930001
 

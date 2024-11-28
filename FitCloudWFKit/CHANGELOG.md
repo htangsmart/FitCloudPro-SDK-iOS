@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.1.8-beta.2 build20241128001 (2024-11-28)
+
+- Improved and enhanced code documentation and comments.
+- Optimized the image resizing method.
+
 ## V1.1.8-beta.1 build20241123001 (2024-11-23)
 
 - Optimized file generation path to improve compatibility.
