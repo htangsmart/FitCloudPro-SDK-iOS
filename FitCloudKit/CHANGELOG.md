@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.41 build20241204003 (2024-12-04)
+
+- Fixed the issue with reading the GPS EPO upgrade file type for ICOE.
+
 ## V1.3.0-beta.40 build20241204002 (2024-12-04)
 
 - Optimized some error description translations.
