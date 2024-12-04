@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.39 build20241204001 (2024-12-04)
+
+- Optimized some error description translations.
+
 ## V1.3.0-beta.38 build20241130001 (2024-11-30)
 
 - Optimized some error description translations.

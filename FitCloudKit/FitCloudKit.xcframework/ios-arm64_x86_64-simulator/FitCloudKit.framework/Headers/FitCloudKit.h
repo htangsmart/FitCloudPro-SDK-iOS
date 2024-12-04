@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-11-30  Version:1.3.0-beta.38 Build:20241130001
+//      pcjbird    2024-12-04  Version:1.3.0-beta.39 Build:20241204001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -61,29 +61,29 @@ NS_ASSUME_NONNULL_BEGIN
 /// Stop scan the watch devices
 + (void)stopScan;
 
-/// 如果您使用自己的扫描方法，将您的外设转换成可连接的外设
+/// Converts a peripheral discovered by your own scanning method into a connectable peripheral
 /// - Parameters:
-///   - peripheral: 您自己扫描的外设
-///   - completion: 转换结果
+///   - peripheral: The peripheral discovered by your scanning
+///   - completion: The completion handler called with the conversion result
 + (void)translatePeripheral:(CBPeripheral *_Nonnull)peripheral toConnectablePeripheralCompletion:(void (^_Nullable)(BOOL success, NSError *_Nullable error, CBPeripheral *_Nullable connectablePeripheral))completion;
 
-/// 连接手表设备
+/// Connects to a watch device
 /// - Parameters:
-///   - peripheral: 手表设备
+///   - peripheral: The watch device peripheral to connect to
 + (void)connect:(CBPeripheral *_Nonnull)peripheral;
 
-/// 连接手表设备
+/// Connects to a watch device with optional BT mode
 /// - Parameters:
-///   - peripheral: 手表设备
-///   - btMode: 是否使用一键双连同时连接经典蓝牙(BT)
+///   - peripheral: The watch device peripheral to connect to
+///   - btMode: Whether to simultaneously connect classic Bluetooth (BT) using one-key dual connection
 + (void)connect:(CBPeripheral *_Nonnull)peripheral btMode:(BOOL)btMode;
 
-/// 连接并绑定手表设备
+/// Connects and binds to a watch device
 /// - Parameters:
-///   - peripheral: 手表设备
-///   - userId: 用户Id
-///   - randomCode: 随机码，如果没有，则填 nil，仅部分项目有该功能
-///   - btMode: 是否使用一键双连同时连接经典蓝牙(BT)
+///   - peripheral: The watch device peripheral to connect to
+///   - userId: The user ID for binding
+///   - randomCode: Optional random code for binding (only used in some projects, pass nil if not needed)
+///   - btMode: Whether to simultaneously connect classic Bluetooth (BT) using one-key dual connection
 + (void)connectAndBind:(CBPeripheral *_Nonnull)peripheral userId:(NSString *_Nonnull)userId randomCode:(NSString *_Nullable)randomCode btMode:(BOOL)btMode;
 
 /// Try to connect the historical watch device
@@ -96,129 +96,129 @@ NS_ASSUME_NONNULL_BEGIN
 /// Disconnect the current watch device
 + (void)disconnect;
 
-/// 忽略当前已连接未绑定/绑定失败的手表设备
+/// Ignore the currently connected but unbound/binding failed watch device
 /// - Parameters:
-///   - silent: YES则不会打印相关日志
+///   - silent: If YES, related logs will not be printed
 + (void)ignoreConnectedPeripheral:(BOOL)silent;
 
-#pragma mark 请求打开蓝牙来允许连接到配件
+#pragma mark Request to turn on Bluetooth to allow connection to accessories
 
-/// 请求打开蓝牙来允许连接到配件
+/// Request to turn on Bluetooth to allow connection to accessories
 ///
-/// 仅仅当系统蓝牙关闭时有效
+/// Only valid when system Bluetooth is turned off
 + (void)requestShowBluetoothPowerAlert;
 
-#pragma mark 扫描到的外设(手表)列表
+#pragma mark List of discovered peripherals (watches)
 
-/// 扫描到的外设(手表)列表
-/// - Returns:
-/// 扫描到的蓝牙外设
+/// List of discovered peripherals (watches)
+/// - Returns: Discovered Bluetooth peripherals
 + (NSArray<FitCloudPeripheral *> *_Nonnull)discoveredPeripherals;
 
-#pragma mark 蓝牙中心设备(Central)状态
+#pragma mark Bluetooth central device state
 
-/// 蓝牙中心设备(Central)状态
+/// Bluetooth central device state
 + (FITCLOUDBLECENTRALSTATE)bleState;
 
-#pragma mark 蓝牙是否已连接
+#pragma mark Whether Bluetooth is connected
 
-/// 蓝牙是否已连接
+/// Whether Bluetooth is connected
 + (BOOL)connected;
 
-#pragma mark 蓝牙是否正在连接
+#pragma mark Whether Bluetooth is connecting
 
-/// 蓝牙是否正在连接
+/// Whether Bluetooth is connecting
 + (BOOL)connecting;
 
-#pragma mark 蓝牙外部设备是否初始化/准备完毕(是否可以执行与蓝牙外设的相关操作)
+#pragma mark Whether the Bluetooth peripheral device is initialized/ready (whether operations with the Bluetooth peripheral can be performed)
 
-/// 蓝牙外部设备是否初始化/准备完毕(是否可以执行与蓝牙外设的相关操作)
+/// Whether the Bluetooth peripheral device is initialized/ready (whether operations with the Bluetooth peripheral can be performed)
 + (BOOL)deviceReady;
 
-#pragma mark 手表准备连接后的准备工作是否已完成
+#pragma mark Whether the preparation work after watch connection is completed
 
-/// 手表准备连接后的准备工作是否已完成
+/// Whether the preparation work after watch connection is completed
 + (BOOL)devicePrepareWorkFinished;
 
-#pragma mark 蓝牙外部设备是否初始化/准备完毕且当前处于空闲状态(是否可以执行与蓝牙外设的相关操作)
+#pragma mark Whether the Bluetooth peripheral device is initialized/ready and currently idle (whether operations with the Bluetooth peripheral can be performed)
 
-/// 蓝牙外部设备是否初始化/准备完毕且当前处于空闲状态(是否可以执行与蓝牙外设的相关操作)
+/// Whether the Bluetooth peripheral device is initialized/ready and currently idle (whether operations with the Bluetooth peripheral can be performed)
 + (BOOL)deviceIdle;
 
-#pragma mark 当前是否允许手动同步运动健康数据
+#pragma mark Whether manual synchronization of exercise and health data is currently allowed
 
-/// 当前是否允许手动同步运动健康数据
+/// Whether manual synchronization of exercise and health data is currently allowed
 + (BOOL)canSyncData;
 
-#pragma mark 用户绑定状态
+#pragma mark User binding status
 
-/// 用户绑定状态
+/// User binding status
 + (FITCLOUDUSERBINDSTATUS)userBindStatus;
 
-#pragma mark 连接标志
-/// 连接标志
+#pragma mark Connection flag
+
+/// Connection flag
 + (FITCLOUDWATCHCONNECTIONFLAG)connectionFlag;
 
-#pragma mark 手表Mac地址
+#pragma mark Watch device MAC address
 
-/// 手表Mac地址
+/// Watch device MAC address
 + (NSString *_Nullable)macAddr;
 
-#pragma mark 手表当前所有配置信息
+#pragma mark Current configuration information of the watch
 
-/// 手表当前所有配置信息
+/// Current configuration information of the watch
 + (FitCloudAllConfigObject *_Nullable)allConfig;
 
-#pragma mark 手表当前电量信息
+#pragma mark Current battery information of the watch
 
-/// 手表当前电量信息
+/// Current battery information of the watch
 + (FitCloudBatteryInfoObject *_Nullable)batteryInfo;
 
-#pragma mark 手表闹钟列表
+#pragma mark Watch alarm list
 
-/// 手表闹钟列表
+/// Watch alarm list
 + (NSArray<FitCloudAlarmObject *> *_Nullable)alarmlist;
 
-#pragma mark 手表日程列表
+#pragma mark Watch schedule list
 
-/// 手表日程列表
+/// Watch schedule list
 + (NSArray<FitCloudScheduleObject *> *_Nullable)schedulelist;
 
-#pragma mark 手表常用联系人列表
+#pragma mark Watch favorite contacts list
 
-/// 手表常用联系人列表
+/// Watch favorite contacts list
 + (NSArray<FitCloudContactObject *> *_Nullable)favoriteContacts;
 
-#pragma mark 手表习惯养成列表
+#pragma mark Watch habit formation list
 
-/// 手表习惯养成列表
+/// Watch habit formation list
 + (NSArray<FitCloudHabitObject *> *_Nullable)habits;
 
-#pragma mark 手表勋章列表
+#pragma mark Watch medal list
 
-/// 手表勋章列表
+/// Watch medal list
 + (NSArray<FitCloudMedal *> *_Nullable)medals;
 
-#pragma mark 最后连接的手表信息
+#pragma mark Last connected watch information
 
-/// 最后连接的手表信息
+/// Last connected watch information
 + (FitCloudKitConnectRecord *_Nullable)lastConnectPeripheral;
 
-#pragma mark 手表连接历史
+#pragma mark Watch connection history
 
-/// 手表连接历史
+/// Watch connection history
 + (NSArray<FitCloudKitConnectRecord *> *_Nonnull)historyPeripherals;
 
-#pragma mark 删除手表连接历史
+#pragma mark Delete watch connection history
 
-/// 删除手表连接历史
+/// Delete watch connection history
 /// - Parameters:
 ///   - uuid: peripheral uuid
 + (void)removePeripheralHistoryWithUUID:(NSString *_Nonnull)uuid;
 
-#pragma mark 清除手表连接历史
+#pragma mark Clear watch connection history
 
-/// 清除手表连接历史
+/// Clear watch connection history
 + (void)clearPeripheralHistory;
 
 @end
@@ -226,53 +226,47 @@ NS_ASSUME_NONNULL_BEGIN
 /// FitCloud Upgrade Module
 @interface FitCloudKit (Upgrade)
 
-#pragma mark 当前是否为DFU模式
+#pragma mark Checks if the device is currently in DFU mode
 
-/// 当前是否为DFU模式
-/// - Returns:
-/// 是否为DFU模式
+/// Checks if the device is currently in DFU mode
+/// - Returns: A boolean value indicating whether the device is in DFU mode
 + (BOOL)isCurrentDFUMode;
 
-#pragma mark dfu外设
+#pragma mark DFU Peripheral
 
-/// dfu外设，仅仅当处于dfu模式，且处于连接状态时有效
-/// - Returns:
-/// dfu 外设
+/// Gets the DFU peripheral. Only valid when in DFU mode and connected.
+/// - Returns: The DFU peripheral if available, otherwise nil
 + (CBPeripheral *_Nullable)dfuPeripheral;
 
-#pragma mark 使用不进入DFU模式, 直接DFU升级, 使用该外设
+#pragma mark Direct DFU Peripheral
 
-/// dfu外设，仅仅需要直接DFU升级的客户使用(升级不进入DFU模式)，且处于连接状态时有效
-/// - Returns:
-/// dfu 外设
+/// Gets the direct DFU peripheral for clients who need direct DFU upgrade without entering DFU mode. Only valid when connected.
+/// - Returns: The direct DFU peripheral if available, otherwise nil
 + (CBPeripheral *_Nullable)directDFUPeripheral;
 
-#pragma mark 芯片提供商
+#pragma mark Chip Vendor
 
-/// 当前芯片提供商
+/// Gets the current chip vendor
+/// - Returns: The chip vendor type
 + (FITCLOUDCHIPVENDOR)chipVendor;
 
-#pragma mark 准备进入固件升级模式
+#pragma mark Enter DFU Mode
 
-/// 准备进入固件升级模式
-/// - Parameters:
-///   - block: 结果回调
+/// Prepares to enter firmware upgrade (DFU) mode
+/// - Parameter block: A completion handler called when the operation completes
 + (void)enterDFUModeWithBlock:(FitCloudEnterDFUModeResultBlock _Nullable)block;
 
-#pragma mark 退出固件升级模式
+#pragma mark Exit DFU Mode
 
-/// 退出固件升级模式
-/// - Parameters:
-///   - block: 结果回调
+/// Exits firmware upgrade (DFU) mode
+/// - Parameter block: A completion handler called when the operation completes
 + (void)exitDFUModeWithBlock:(FitCloudExitDFUModeResultBlock _Nullable)block;
 
-#pragma mark 判断设备是否支持指定的常用功能
+#pragma mark Device Feature Support
 
-/// 判断设备是否支持指定的常用功能
-/// - Parameters:
-///   - feature: 功能
-/// - Returns:
-/// 是否支持该功能
+/// Checks if the device supports a specific feature
+/// - Parameter feature: The feature to check for support
+/// - Returns: A boolean value indicating whether the feature is supported
 + (BOOL)isDeviceSupportFeature:(FITCLOUDDEVICEFEATURE)feature;
 
 @end
@@ -280,459 +274,460 @@ NS_ASSUME_NONNULL_BEGIN
 /// FitCloud Setting Module
 @interface FitCloudKit (Setting)
 
-#pragma mark 同步系统时间
+#pragma mark Sync System Time
 
-/// 同步系统时间（将手表的时间同步成跟手机的系统时间一致）
+/// Synchronizes the watch time with the system time
 /// - Parameters:
-///  - block: 同步结果回调
+///   - block: The completion handler called when the sync completes
 + (void)syncSystemTimeWithBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 同步指定时间到手表
+#pragma mark Sync Specific Time
 
-/// 同步指定时间到手表
-///  - Parameters:
-///   - block: 同步结果回调
+/// Synchronizes a specific time to the watch
+/// - Parameters:
+///   - time: The time to sync
+///   - block: The completion handler called when the sync completes
 + (void)syncTimeToWatch:(NSDate *)time block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 同步天气信息
+#pragma mark Sync Weather
 
-/// 同步天气信息
+/// Synchronizes weather information to the watch
 /// - Parameters:
-///  - weather: 天气信息
-///  - block: 同步结果回调
+///   - weather: The weather information
+///   - block: The completion handler called when the sync completes
 + (void)syncWeather:(FitCloudWeatherObject *_Nonnull)weather block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 设置24小时天气信息
+#pragma mark Set 24-Hour Weather
 
-/// 设置24小时天气信息
+/// Sets 24-hour weather forecast information
 /// - Parameters:
-///   - weathers: 小时天气列表，从指定时间戳开始之后按顺序排列的小时天气信息
-///   - timestamp: 时间戳
-///   - completion: 结果回调
+///   - weathers: Array of hourly weather forecasts, ordered sequentially from the specified timestamp
+///   - timestamp: The starting timestamp
+///   - completion: The completion handler called when the operation completes
 + (void)set24HoursWeather:(NSArray<FitCloudHourWeatherObject *> *_Nonnull)weathers timestamp:(NSDate *_Nonnull)timestamp completion:(FitCloudResultHandler _Nullable)completion;
 
-#pragma mark 设置闹钟列表
+#pragma mark Set Alarms
 
-/// 设置闹钟（将手机上的闹钟列表同步到手表）
+/// Synchronizes the alarm list from phone to watch
 /// - Parameters:
-///   - alarms: 闹钟列表
-///   - block: 结果回调
+///   - alarms: The array of alarms
+///   - block: The completion handler called when the sync completes
 + (void)setAlarms:(NSArray<FitCloudAlarmObject *> *_Nullable)alarms block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取闹钟列表
+#pragma mark Get Alarms
 
-/// 获取闹钟列表（获取手表上的闹钟列表）
+/// Retrieves the alarm list from the watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the alarm list
 + (void)getAlarmsWithBlock:(FitCloudAlarmsResultBlock _Nullable)block;
 
-#pragma mark 设置是否允许手表设置日程
+#pragma mark Set Allow Watch Schedule Settings
 
-/// 设置是否允许手表设置日程
+/// Sets whether the watch is allowed to configure schedules
 /// - Parameters:
-///  - allow: 是否允许手表设置日程
-///  - block: 结果回调
+///   - allow: Whether to allow watch schedule settings
+///   - block: The completion handler called when the operation completes
 + (void)setAllowWatchScheduleSettings:(BOOL)allow completion:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 设置日程列表
+#pragma mark Set Schedules
 
-/// 设置日程（将手机上的日程列表同步到手表）
+/// Synchronizes the schedule list from phone to watch
 /// - Parameters:
-///   - schedules: 日程列表
-///   - block: 结果回调
+///   - schedules: The array of schedules
+///   - block: The completion handler called when the sync completes
 + (void)setSchedules:(NSArray<FitCloudScheduleObject *> *_Nullable)schedules block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取日程列表
+#pragma mark Get Schedules
 
-/// 获取日程列表（获取手表上的日程列表）
+/// Retrieves the schedule list from the watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the schedule list
 + (void)getSchedulesWithBlock:(FitCloudSchedulesResultBlock _Nullable)block;
 
-#pragma mark 设置任务列表
+#pragma mark Set Tasks
 
-/// 设置任务（将手机上的任务列表同步到手表）
+/// Synchronizes the task list from phone to watch
 /// - Parameters:
-///   - tasks: 任务列表
-///   - completion: 结果回调
+///   - tasks: The array of tasks
+///   - completion: The completion handler called when the sync completes
 + (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks completion:(FitCloudResultHandler _Nullable)completion;
 
-#pragma mark 获取任务列表
+#pragma mark Get Tasks
 
-/// 获取任务列表（获取手表上的任务列表）
+/// Retrieves the task list from the watch
 /// - Parameters:
-///   - completion: 结果回调
+///   - completion: The completion handler called with the task list
 + (void)queryTasksWithCompletion:(FitCloudTaskQueryCompletion _Nullable)completion;
 
-#pragma mark 设置常用联系人
+#pragma mark Set Favorite Contacts
 
-/// 设置常用联系人（将手机上的常用联系人列表同步到手表）
+/// Synchronizes the favorite contacts list from phone to watch
 /// - Parameters:
-///   - contacts: 常用联系人列表
-///   - block: 结果回调
+///   - contacts: The array of favorite contacts
+///   - block: The completion handler called when the sync completes
 + (void)setFavContacts:(NSArray<FitCloudContactObject *> *_Nullable)contacts block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取常用联系人
+#pragma mark Get Favorite Contacts
 
-/// 获取常用联系人列表（获取手表上的常用联系人列表）
+/// Retrieves the favorite contacts list from the watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the contacts list
 + (void)getFavContactsWithBlock:(FitCloudFavContactsResultBlock _Nullable)block;
 
-#pragma mark 设置手表紧急联系人
+#pragma mark Set Emergency Contacts
 
-/// 设置手表紧急联系人
+/// Sets emergency contacts on the watch
 /// - Parameters:
-///   - contacts: 紧急联系人
-///   - on: 是否启用紧急联系人
-///   - completion: 结果回调
+///   - contacts: The array of emergency contacts
+///   - on: Whether to enable emergency contacts
+///   - completion: The completion handler called when the operation completes
 + (void)setEmergencyContacts:(NSArray<FitCloudEmergencyContactObject *> *_Nullable)contacts on:(BOOL)on completion:(FitCloudResultHandler _Nullable)completion;
 
-#pragma mark 获取手表紧急联系人
+#pragma mark Get Emergency Contacts
 
-/// 获取手表紧急联系人
+/// Retrieves emergency contacts from the watch
 /// - Parameters:
-///   - completion: 结果回调
+///   - completion: The completion handler called with the emergency contacts
 + (void)queryEmergencyContactsWithCompletion:(FitCloudEmergencyContactsQueryCompletion _Nullable)completion;
 
-#pragma mark 设置习惯养成列表
+#pragma mark Set Habits
 
-/// 设置习惯养成列表（将手机上的习惯养成列表同步到手表）
+/// Synchronizes the habit list from phone to watch
 /// - Parameters:
-///   - habits: 习惯养成列表
-///   - block: 结果回调
+///   - habits: The array of habits
+///   - block: The completion handler called when the sync completes
 + (void)setHabits:(NSArray<FitCloudHabitObject *> *_Nullable)habits block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取习惯养成列表
+#pragma mark Get Habits
 
-/// 获取习惯养成列表（获取手表上的习惯养成列表）
-///  - Parameters:
-///    - block: 结果回调
+/// Retrieves the habit list from the watch
+/// - Parameters:
+///   - block: The completion handler called with the habit list
 + (void)getHabitsWithBlock:(FitCloudHabitsResultBlock _Nullable)block;
 
-#pragma mark 设置User Profile
+#pragma mark Set User Profile
 
-/// 设置 User Profile
+/// Sets the user profile
 /// - Parameters:
-///   - profile: user profile
-///   - block: 结果回调
+///   - profile: The user profile
+///   - block: The completion handler called when the operation completes
 + (void)setUserProfile:(FitCloudUserProfileObject *_Nonnull)profile block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 设置自定义标签
+#pragma mark Set Custom Labels
 
-/// 设置自定义标签
+/// Sets custom labels
 /// - Parameters:
-///   - labels: 自定义标签
-///   - block: 结果回调
+///   - labels: The custom labels
+///   - block: The completion handler called when the operation completes
 + (void)setCustomLabels:(FitCloudCustomLabelsObject *_Nonnull)labels block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 设定每日运动目标
+#pragma mark Set Daily Goals
 
-/// 设定每日运动目标
-///  - Parameters:
-///    - stepcount: 步数目标, 单位：步数
-///    - distance: 距离目标, 单位：厘米(cm)
-///    - calorie: 卡路里, 单位：小卡(cal)
-///    - duration: 运动时长，单位：分钟(Min)
-///    - timestamp: 时间戳，传nil，则默认为当前时间
-///    - block: 结果回调
+/// Sets daily fitness goals
+/// - Parameters:
+///   - stepcount: Step count goal in steps
+///   - distance: Distance goal in centimeters
+///   - calorie: Calorie goal in calories
+///   - duration: Exercise duration goal in minutes
+///   - timestamp: Timestamp (defaults to current time if nil)
+///   - block: The completion handler called when the operation completes
 + (void)setDailyGoalWithStepCount:(UInt32)stepcount distance:(UInt32)distance calorie:(UInt32)calorie duration:(UInt16)duration timestamp:(NSDate *_Nullable)timestamp block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取每日运动目标
+#pragma mark Get Daily Goals
 
-/// 获取每日运动目标
+/// Retrieves daily fitness goals
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the daily goals
 + (void)getDailyGoalWithBlock:(FitCloudDailyGoalResultBlock _Nullable)block;
 
-#pragma mark 获取手表软硬件版本信息
+#pragma mark Get Firmware Version
 
-/// 获取手表软硬件版本信息
+/// Retrieves the watch's firmware and hardware version information
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the version information
 + (void)getFirmwareVersionWithBlock:(FitCloudFirmwareVersionResultBlock _Nullable)block;
 
-#pragma mark 设置消息通知开关
+#pragma mark Set Message Notifications
 
-/// 设置消息通知开关
+/// Configures message notification settings
 /// - Parameters:
-///   - mnSetting: 消息通知设置信息
-///   - block: 结果回调
+///   - mnSetting: The message notification settings
+///   - block: The completion handler called when the operation completes
 + (void)setMessageNotification:(FITCLOUDMN)mnSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取消息通知开关设置
+#pragma mark Get Message Notifications
 
-/// 获取消息通知开关设置信息
+/// Retrieves message notification settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the notification settings
 + (void)getMessageNotificationSettingWithBlock:(FitCloudMNSettingResultBlock _Nullable)block;
 
-#pragma mark 设置手表表盘所有功能项显示状态
+#pragma mark Set Screen Display
 
-/// 设置手表表盘所有功能项显示状态
+/// Configures display settings for all watch face features
 /// - Parameters:
-///   - display: 手表表盘所有功能项显示状态信息
-///   - block: 结果回调
+///   - display: The screen display settings
+///   - block: The completion handler called when the operation completes
 + (void)setScreenDisplay:(FITCLOUDSCREENDISPLAY)display block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取手表表盘所有功能项显示状态
+#pragma mark Get Screen Display
 
-/// 获取手表表盘所有功能项显示状态
+/// Retrieves display settings for all watch face features
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the display settings
 + (void)getScreenDisplaySettingWithBlock:(FitCloudSDSettingResultBlock _Nullable)block;
 
-#pragma mark 设置手表偏好
+#pragma mark Set Watch Preferences
 
-/// 设置手表偏好
+/// Sets watch preferences
 /// - Parameters:
-///   - prefer: 手表偏好
-///   - block: 结果回调
+///   - prefer: The watch preferences
+///   - block: The completion handler called when the operation completes
 + (void)setFitCloudPrefer:(FITCLOUDPREFER)prefer block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取手表偏好设置
+#pragma mark Get Watch Preferences
 
-/// 获取手表偏好设置
+/// Retrieves watch preferences
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the preferences
 + (void)getFitCloudPreferWithBlock:(FitCloudPreferResultBlock _Nullable)block;
 
-#pragma mark 获取手表电量以及充电状态信息
+#pragma mark Get Battery Info
 
-/// 获取手表电量以及充电状态信息
+/// Retrieves battery level and charging status information
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the battery information
 + (void)getBatteryInfoWithBlock:(FitCloudBatteryInfoResultBlock _Nullable)block;
 
-#pragma mark 如果空闲则请求更新手表电量信息
+#pragma mark Request Battery Update
 
-/// 如果空闲则请求更新手表电量信息
+/// Requests a battery information update if the device is idle
 + (void)requestUpdateBatteryInfoIfIdle;
 
-#pragma mark 健康定时监测设置
+#pragma mark Set Health Monitoring
 
-/// 健康定时监测设置
+/// Configures health timing monitor settings
 /// - Parameters:
-///   - htmSetting: 健康定时监测设置
-///   - block: 结果回调
+///   - htmSetting: The health timing monitor settings
+///   - block: The completion handler called when the operation completes
 + (void)setHealthTimingMonitor:(FitCloudHTMObject *_Nonnull)htmSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取健康定时监测设置
+#pragma mark Get Health Monitoring
 
-/// 获取健康定时监测设置
+/// Retrieves health timing monitor settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the monitor settings
 + (void)getHealthTimingMonitorSettingWithBlock:(FitCloudHealthTimingMonitorResultBlock _Nullable)block;
 
-#pragma mark 健康定时监测独立设置
+#pragma mark Set Individual Health Monitoring
 
-/// 健康定时监测独立设置
+/// Configures individual health timing monitor settings
 /// - Parameters:
-///   - htmSingleSettings: 健康定时监测独立设置信息，可以单个类型单独设置也可以多个类型一起设置
-///   - completion: 结果回调
+///   - htmSingleSettings: Array of individual monitor settings
+///   - completion: The completion handler called when the operation completes
 + (void)setSingleHealthTimingMonitoring:(NSArray<FitCloudHTMSingleObject *> *)htmSingleSettings completion:(FitCloudResultHandler _Nullable)completion;
 
-#pragma mark 获取健康定时监测独立设置
+#pragma mark Get Individual Health Monitoring
 
-/// 获取健康定时监测独立设置
+/// Retrieves individual health timing monitor settings
 /// - Parameters:
-///   - completion: 结果回调
+///   - completion: The completion handler called with the individual monitor settings
 + (void)getSingleHealthTimingMonitoringSettingsWithCompletion:(FitCloudHealthTimingMonitoringSingleSettingsResultBlock _Nullable)completion;
 
-#pragma mark 久坐提醒设置
+#pragma mark Set Sedentary Reminder
 
-/// 久坐提醒设置
+/// Configures sedentary reminder settings
 /// - Parameters:
-///   - lsrSetting: 久坐提醒设置
-///   - block: 结果回调
+///   - lsrSetting: The sedentary reminder settings
+///   - block: The completion handler called when the operation completes
 + (void)setSedentaryRemind:(FitCloudLSRObject *_Nonnull)lsrSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取久坐提醒设置
+#pragma mark Get Sedentary Reminder
 
-/// 获取久坐提醒设置
+/// Retrieves sedentary reminder settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the reminder settings
 + (void)getSedentaryRemindSettingWithBlock:(FitCloudLongSitRemindResultBlock _Nullable)block;
 
-#pragma mark 喝水提醒设置
+#pragma mark Set Drink Reminder
 
-/// 喝水提醒设置
+/// Configures drink reminder settings
 /// - Parameters:
-///   - drSetting: 喝水提醒设置
-///   - block: 结果回调
+///   - drSetting: The drink reminder settings
+///   - block: The completion handler called when the operation completes
 + (void)setDrinkRemind:(FitCloudDRObject *_Nonnull)drSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取喝水提醒设置
+#pragma mark Get Drink Reminder
 
-/// 获取喝水提醒设置
+/// Retrieves drink reminder settings
 /// - Parameters:
-///   -  block: 结果回调
+///   - block: The completion handler called with the reminder settings
 + (void)getDrinkRemindSettingWithBlock:(FitCloudDrinkRemindResultBlock _Nullable)block;
 
-#pragma mark 个性化提醒
+#pragma mark Set Personalized Reminder
 
-/// Set the personalized reminder, If the reminderId already exist, it will be replaced
+/// Sets a personalized reminder, replacing any existing reminder with the same ID
 /// - Parameters:
-///   - remind: the remind
-///   - completion: the completion callback
+///   - remind: The personalized reminder
+///   - completion: The completion handler called when the operation completes
 + (void)setPersonalizedRemind:(FitCloudPersonalizedReminderObject *_Nonnull)remind completion:(FitCloudResultHandler _Nullable)completion;
 
-#pragma mark 查询个性化提醒
+#pragma mark Query Personalized Reminders
 
-/// Query the personalized reminders array
+/// Retrieves all personalized reminders
 /// - Parameters:
-///   - completion: the completion callback
+///   - completion: The completion handler called with the reminders array
 + (void)queryPersonalizedRemindersWithCompletion:(FitCloudPersonalizedRemindersQueryCompletion _Nullable)completion;
 
-#pragma mark 删除个性化提醒
+#pragma mark Remove Personalized Reminders
 
-/// Remove the personalized reminders with id array
+/// Removes personalized reminders by their IDs
 /// - Parameters:
-///   - idArray: the reminder id array
-///   - completion: the completion callback
+///   - idArray: Array of reminder IDs to remove
+///   - completion: The completion handler called when the operation completes
 + (void)removePersonalizedRemindersWithIdArray:(NSArray<NSNumber *> *_Nonnull)idArray completion:(FitCloudResultHandler _Nullable)completion;
 
-#pragma mark 防护提醒设置
+#pragma mark Set Protection Reminder
 
-/// 防护提醒设置
+/// Configures protection reminder settings
 /// - Parameters:
-///   - prSetting: 防护提醒设置
-///   - block: 结果回调
+///   - prSetting: The protection reminder settings
+///   - block: The completion handler called when the operation completes
 + (void)setProtectionRemind:(FitCloudPRObject *_Nonnull)prSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取防护提醒设置
+#pragma mark Get Protection Reminder
 
-/// 获取防护提醒设置
+/// Retrieves protection reminder settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the reminder settings
 + (void)getProtectionRemindSettingWithBlock:(FitCloudProtectionRemindResultBlock _Nullable)block;
 
-#pragma mark 洗手提醒设置
+#pragma mark Set Hand Wash Reminder
 
-/// 洗手提醒设置
+/// Configures hand wash reminder settings
 /// - Parameters:
-///   - hwrSetting: 洗手提醒设置
-///   - block: 结果回调
+///   - hwrSetting: The hand wash reminder settings
+///   - block: The completion handler called when the operation completes
 + (void)setHandWashRemind:(FitCloudHandWashRemindObject *_Nonnull)hwrSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取洗手提醒设置
+#pragma mark Get Hand Wash Reminder
 
-/// 获取洗手提醒设置
+/// Retrieves hand wash reminder settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the reminder settings
 + (void)getHandWashRemindSettingWithBlock:(FitCloudHandWashRemindResultBlock _Nullable)block;
 
-#pragma mark 抬腕唤醒设置
+#pragma mark Set Wrist Wake Up
 
-/// 抬腕唤醒设置
+/// Configures wrist wake up settings
 /// - Parameters:
-///   - wwuSetting: 抬腕唤醒设置
-///   - block: 结果回调
+///   - wwuSetting: The wrist wake up settings
+///   - block: The completion handler called when the operation completes
 + (void)setWristWakeUp:(FitCloudWWUObject *_Nonnull)wwuSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取抬腕唤醒设置
+#pragma mark Get Wrist Wake Up
 
-/// 获取抬腕唤醒设置
+/// Retrieves wrist wake up settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the wake up settings
 + (void)getWristWakeUpSettingWithBlock:(FitCloudWristWakeUpResultBlock _Nullable)block;
 
-#pragma mark 参考血压设置
+#pragma mark Set Blood Pressure Reference
 
-/// 参考血压设置
+/// Configures blood pressure reference settings
 /// - Parameters:
-///   - bprSetting: 血压参考范围设置信息
-///   - block: 结果回调
+///   - bprSetting: The blood pressure reference settings
+///   - block: The completion handler called when the operation completes
 + (void)setBloodPressureRefer:(FitCloudBPRObject *_Nonnull)bprSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取参考血压设置
+#pragma mark Get Blood Pressure Reference
 
-/// 获取参考血压设置
+/// Retrieves blood pressure reference settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the reference settings
 + (void)getBloodPressureReferSettingWithBlock:(FitCloudBloodPressureReferResultBlock _Nullable)block;
 
-#pragma mark 心率报警设置
+#pragma mark Set Heart Rate Alarm
 
-/// 心率报警设置
+/// Configures heart rate alarm settings
 /// - Parameters:
-///   - hrAlarmSetting: 心率报警设置
-///   - block: 结果回调
+///   - hrAlarmSetting: The heart rate alarm settings
+///   - block: The completion handler called when the operation completes
 + (void)setHRAlarm:(FitCloudHRAlarmObject *_Nonnull)hrAlarmSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取心率报警设置
+#pragma mark Get Heart Rate Alarm
 
-/// 获取心率报警设置
+/// Retrieves heart rate alarm settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the alarm settings
 + (void)getHRAlarmSettingWithBlock:(FitCloudHRAlarmResultBlock _Nullable)block;
 
-#pragma mark 血压报警设置
+#pragma mark Set Blood Pressure Alarm
 
-/// 血压报警设置
+/// Configures blood pressure alarm settings
 /// - Parameters:
-///   - bpAlarmSetting: 血压报警设置
-///   - block: 结果回调
+///   - bpAlarmSetting: The blood pressure alarm settings
+///   - block: The completion handler called when the operation completes
 + (void)setBPAlarm:(FitCloudBPAlarmObject *_Nonnull)bpAlarmSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取血压报警设置
+#pragma mark Get Blood Pressure Alarm
 
-/// 获取血压报警设置
+/// Retrieves blood pressure alarm settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the alarm settings
 + (void)getBPAlarmSettingWithBlock:(FitCloudBPAlarmResultBlock _Nullable)block;
 
-#pragma mark 勿扰模式设置
+#pragma mark Set Do Not Disturb
 
-/// 勿扰模式设置
+/// Configures Do Not Disturb mode settings
 /// - Parameters:
-///   - dndSetting: 勿扰模式设置
-///   - block: 结果回调
+///   - dndSetting: The Do Not Disturb settings
+///   - block: The completion handler called when the operation completes
 + (void)setDND:(FitCloudDNDSetting *_Nonnull)dndSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取勿扰模式设置
+#pragma mark Get Do Not Disturb
 
-/// 获取勿扰模式设置
+/// Retrieves Do Not Disturb mode settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the DND settings
 + (void)getDNDSettingWithBlock:(FitCloudDNDSettingResultBlock _Nullable)block;
 
-#pragma mark 省电模式设置
+#pragma mark Set Power Saving
 
-/// 省电模式设置
-///  - Parameters:
-///    - settings: 省电模式设置
-///    - block: 结果回调
+/// Configures power saving mode settings
+/// - Parameters:
+///   - settings: The power saving settings
+///   - block: The completion handler called when the operation completes
 + (void)setPowerSavingSettings:(FitCloudPowerSavingSetting *_Nonnull)settings block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取省电模式设置
+#pragma mark Get Power Saving
 
-/// 获取省电模式设置
+/// Retrieves power saving mode settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the power saving settings
 + (void)getPowerSavingSettingWithBlock:(FitCloudPowerSavingSettingResultBlock _Nullable)block;
 
-#pragma mark 获取手表UI信息
+#pragma mark Get Watch UI Information
 
-/// 获取手表UI信息
-///  - Parameters:
-///    - block: 结果回调
+/// Retrieves watch UI information
+/// - Parameters:
+///   - block: The completion handler called with the UI information
 + (void)getWatchUIInformationWithBlock:(FitCloudWatchUIInfoResultBlock _Nullable)block;
 
-#pragma mark 获取表盘UI信息
+#pragma mark Get Watch Face UI Information
 
-/// 获取表盘UI信息
+/// Retrieves watch face UI information
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the watch face UI information
 + (void)getWatchfaceUIInformationWithBlock:(FitCloudWatchfaceUIInfoResultBlock _Nullable)block;
 
-#pragma mark 切换表盘，并修改该表盘对应的所有模块(组件)样式
+#pragma mark Toggle Watch Face
 
-/// 切换表盘，并修改该表盘对应的所有模块(组件)样式
+/// Switches to a watch face and modifies all its module styles
 /// - Parameters:
-///   - slotIndex: 表盘位置索引，有效值0～10，将表盘切换到该索引的位置
-///   - styleArray: 模块(组件)样式数组，假设该表盘对应4个组件，则该数组包含4个元素，每个元素对应该组件要切换到的样式，样式类型对应WATCHFACEMODULESTYLE的定义，若果该参数设置为nil，则仅切换表盘位置，否则同时修改其所有组件样式
-///   - completion: 结果回调
+///   - slotIndex: The target slot index (0-10) to switch to
+///   - styleArray: Array of module styles to apply. Pass nil to only switch watch face without modifying styles
+///   - completion: The completion handler called when the operation completes
 + (void)toggleWatchfaceWithSlotIndex:(NSInteger)slotIndex modulesStyleArray:(NSArray<NSNumber *> *_Nullable)styleArray completion:(FitCloudResultHandler)completion;
 
 #pragma mark Delete the watchface
@@ -749,22 +744,22 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: the completion callback
 + (void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion;
 
-#pragma mark 女性健康设置
+#pragma mark Women's Health Settings
 
-/// 女性健康设置
+/// Configures women's health settings
 /// - Parameters:
-///   - whSetting: 女性健康设置信息
-///   - block: 结果回调
+///   - whSetting: The women's health settings information
+///   - block: The completion handler called when the operation completes
 + (void)setWomenHealthConfig:(FitCloudWomenHealthSetting *_Nonnull)whSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取女性健康设置
+#pragma mark Get Women's Health Settings
 
-/// 获取女性健康设置
+/// Retrieves women's health settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the women's health settings
 + (void)getWomenHealthSettingWithBlock:(FitCloudWomenHealthSettingResultBlock _Nullable)block;
 
-#pragma mark 情侣功能
+#pragma mark Lovers Features
 
 /// Send lovers bonding notification to the device
 /// - Parameters:
@@ -790,367 +785,339 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: the completion callback
 + (void)receivedLoverMessage:(NSString *)message completion:(FitCloudResultHandler _Nullable)completion;
 
-#pragma mark GPS固件信息
+#pragma mark GPS Firmware Information
 
 /// Query GPS firmware information
+/// - Parameters:
+///   - completion: The completion handler called with the GPS firmware information
 + (void)queryGPSFirmwareInfoWithCompletion:(FitCloudGPSFirmwareInfoQueryCompletion _Nullable)completion;
 
-#pragma mark 锁屏设置
+#pragma mark Lock Screen Settings
 
-/// 锁屏设置
+/// Configure lock screen settings
 /// - Parameters:
-///   - lockScreenSetting: 锁屏设置
-///   - block: 结果回调
+///   - lockScreenSetting: The lock screen settings to apply
+///   - block: The completion handler called when the operation completes
 + (void)setLockScreenSetting:(FitCloudLockScreenSetting *_Nonnull)lockScreenSetting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark APP主动点击退出睡眠
+#pragma mark Exit Sleep Mode
 
-/// APP主动点击退出睡眠
+/// Actively exit sleep mode from the app
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called when the operation completes
 + (void)exitSleepWithBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 同步系统语言
+#pragma mark System Language Sync
 
-/// 同步系统语言，将手表的时间同步成跟手机的系统语言一致
+/// Synchronize the watch language with the system language
 ///
-/// 如果你自定义设定了手表语言将同步您的设定
+/// If you have set a custom watch language, it will sync to your setting
 /// - Parameters:
-///   - block: 同步结果回调
+///   - block: The completion handler called when the sync completes
 + (void)syncSystemLanguageWithBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 自定义设置手表语言
+#pragma mark Custom Watch Language
 
-/// 自定义设置手表语言
+/// Set a custom language for the watch
 /// - Parameters:
-///   - lang: 语言
-///   - block: 结果回调
+///   - lang: The language to set
+///   - block: The completion handler called when the operation completes
 + (void)setSmartWatchLanguage:(FITCLOUDLANGUAGE)lang completion:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 查询手表语言设置
+#pragma mark Query Watch Language
 
-/// 查询手表语言
+/// Query the current watch language setting
 /// - Parameters:
-///   - completion: 查询结果回调
+///   - completion: The completion handler called with the current language setting
 + (void)querySmartWatchLanguageWithCompletion:(FitCloudLanguageQueryCompletion _Nullable)completion;
 
-#pragma mark 获取手表支持的游戏类型
+#pragma mark Supported Games
 
-/// 获取手表支持的游戏类型
+/// Get the list of games supported by the watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the supported games
 + (void)getSupportedGamesWithBlock:(FitCloudSupportedGamesResultBlock _Nullable)block;
 
-#pragma mark 获取游戏最高三个游戏记录
+#pragma mark Top 3 Game Records
 
-/// 获取游戏最高三个游戏记录
-///  - Parameters:
-///    - block: 结果回调
+/// Get the top 3 records across all games
+/// - Parameters:
+///   - block: The completion handler called with the top 3 records
 + (void)getTop3RankGameRecordsWithBlock:(FitCloudTop3RankGameRecordsResultBlock _Nullable)block;
 
-#pragma mark 获取单个游戏最高三个游戏记录
+#pragma mark Single Game Top 3 Records
 
-/// 获取单个游戏最高三个游戏记录
+/// Get the top 3 records for a specific game
 /// - Parameters:
-///   - gameNo: 游戏编号
-///   - block: 结果回调
+///   - gameNo: The game number to query
+///   - block: The completion handler called with the top 3 records
 + (void)getSingleGameTop3RankGameRecords:(NSInteger)gameNo withBlock:(FitCloudTop3RankGameRecordsResultBlock _Nullable)block;
 
-#pragma mark 获取手表所有游戏的皮肤信息
+#pragma mark Game Skins
 
-/// 获取手表所有游戏的皮肤信息
+/// Get skin information for all games on the watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the game skin information
 + (void)getAllGameSkinsWithBlock:(FitCloudAllGameSkinsResultBlock _Nullable)block;
 
-#pragma mark 设置游戏排名趋势
+#pragma mark Game Ranking Trends
 
-/// 设置游戏排名趋势
+/// Set game ranking trends
 /// - Parameters:
-///   - trendsArray: 排名趋势数组，最多60
-///   - block: 结果回调
+///   - trendsArray: Array of ranking trends, maximum 60 entries
+///   - block: The completion handler called when the operation completes
 + (void)setGameRankingTrendsArray:(NSArray<FitCloudGameRankingTrend *> *)trendsArray completion:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取亮屏时长、亮度、振动等信息
+#pragma mark Screen and Vibration Settings
 
-/// 获取亮屏时长、亮度、振动等信息
+/// Get screen duration, brightness, vibration and other settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the settings information
 + (void)getScreenAndVibrateSettingsWithBlock:(FitCloudScreenAndVibrateSettingsResultBlock _Nullable)block;
 
-#pragma mark 获取屏幕分辨率相关信息
+#pragma mark Screen Resolution
 
-/// 获取屏幕分辨率相关信息
+/// Get screen resolution information
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the resolution information
 + (void)getScreenResolutionWithBlock:(FitCloudScreenResolutionResultBlock _Nullable)block;
 
-#pragma mark 获取相册推送功能参数信息
+#pragma mark Photo Push Parameters
 
-/// 获取相册推送功能参数信息
+/// Get photo album push feature parameters
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the parameters
 + (void)getPhotoPushParamsWithBlock:(FitCloudPhotoAlbumParamsResultBlock _Nullable)block;
 
-#pragma mark 获取设备可支持的运动模式类型列表
+#pragma mark Supported Sports Modes
 
-/// 获取设备可支持的运动模式类型列表
+/// Get the list of sports modes supported by the device
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the supported sports modes
 + (void)getSupportedWatchSportsWithBlock:(FitCloudSupportedWatchSportsResultBlock _Nullable)block;
 
-#pragma mark 获取设备当前运动模式类型列表
+#pragma mark Current Sports Modes
 
-/// 获取设备当前运动模式类型列表
+/// Get the current list of sports modes on the device
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the current sports modes
 + (void)getCurrentWatchSportsWithBlock:(FitCloudCurrentWatchSportsResultBlock _Nullable)block;
 
-#pragma mark 获取手表指定支持的收款码和名片码功能列表
+#pragma mark QR Code Features
 
-/// 获取手表指定支持的收款码和名片码功能列表
+/// Get the list of supported payment and business card QR code features
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the supported features
 + (void)getWatchSpecifiedSupportedMoneyReceiveAndBusinessQRCodeFeaturesWithBlock:(FitCloudQRCodeFeaturesResultBlock _Nullable)block;
 
-#pragma mark 设置勋章列表
+#pragma mark Medal Management
 
-/// 设置勋章列表（将手机上的勋章列表同步到手表）
+/// Set medal list (sync medals from phone to watch)
 /// - Parameters:
-///   - medals: 勋章列表
-///   - block: 结果回调
+///   - medals: The array of medals to sync
+///   - block: The completion handler called when the operation completes
 + (void)setMedals:(NSArray<FitCloudMedal *> *_Nullable)medals block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取勋章列表
-
-/// 获取勋章列表（获取手表上的勋章列表）
+/// Get medal list from the watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the medal list
 + (void)getMedalsWithBlock:(FitCloudMedalsResultBlock _Nullable)block;
 
-#pragma mark 获取支持的日程类型列表
+#pragma mark Schedule Types
 
-/// 获取支持的日程类型列表（获取手表上支持的日程类型列表）
+/// Get supported schedule types from the watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the supported schedule types
 + (void)getSupportedSchedulesWithBlock:(FitCloudSupportedSchedulesResultBlock _Nullable)block;
 
-#pragma mark 设置亮屏时长、亮度、振动等信息
+#pragma mark Screen and Vibration Configuration
 
-/// 设置亮屏时长、亮度、振动等信息
+/// Configure screen duration, brightness, vibration and other settings
 /// - Parameters:
-///   - screenSettings: 亮屏时长、亮度等信息
-///   - vibrateSettings: 马达振动信息
-///   - block: 结果回调
+///   - screenSettings: The screen settings to apply
+///   - vibrateSettings: The vibration settings to apply
+///   - block: The completion handler called when the operation completes
 + (void)setScreenSettings:(FitCloudScreenSetting *)screenSettings vibrateSettings:(FitCloudVibrateSetting *)vibrateSettings completion:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 查找手表 (查找成功则手表会震动或发出提醒声)
+#pragma mark Find Watch
 
-/// 查找手表 (查找成功则手表会震动或发出提醒声)
+/// Find watch (triggers vibration or sound alert on success)
 /// - Parameters:
-///   - comletion: 结果回调
+///   - comletion: The completion handler called when the operation completes
 + (void)findWatchWithCompletion:(FitCloudResultHandler _Nullable)comletion;
 
-#pragma mark 停止查找手表
-
-/// 停止查找手表
+/// Stop finding watch
 /// - Parameters:
-///   - comletion: 结果回调
+///   - comletion: The completion handler called when the operation completes
 + (void)stopFindWatchWithCompletion:(FitCloudResultHandler _Nullable)comletion;
 
-#pragma mark 一键恢复出厂设置
+#pragma mark Factory Reset
 
-/// 一键恢复出厂设置
+/// Restore watch to factory settings
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called when the operation completes
 + (void)restoreAsFactorySettingsWithBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 手表关机
+#pragma mark Power Management
 
-/// 手表关机
+/// Turn off the watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called when the operation completes
 + (void)turnOffWithBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 重启手表
-
-/// 重启手表
+/// Reboot the watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called when the operation completes
 + (void)rebootWithBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 设置广播数据自定义字段 key1
+#pragma mark Custom Broadcast Key
 
-/// 设置广播数据自定义字段 key1
+/// Set custom broadcast data field key1
 /// - Parameters:
-///   - keyData: 自定义字段的key，注意keyData必须为6个字节，且需要自己管理字节序，SDK会将设置的值直接发送给手表
-///   - block: 结果回调
+///   - keyData: Custom key data, must be 6 bytes and byte order must be managed by caller
+///   - block: The completion handler called when the operation completes
 + (void)setCustomBroadcastKey:(NSData *)keyData withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark APP通知手表当前APP的定位服务状态
+#pragma mark Location Services
 
-/// APP通知手表当前APP的定位服务状态
+/// Notify watch of current app location service status
 /// - Parameters:
-///   - state: APP定位服务状态
-///   - block: 结果回调
+///   - state: The app location service state
+///   - block: The completion handler called when the operation completes
 + (void)notifyAppLocServiceState:(APPLOCATIONSERVICESTATE)state withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 推送收款码或名片二维码
+#pragma mark QR Code Push
 
-/// 推送收款码或名片二维码
+/// Push payment or business card QR code
 /// - Parameters:
-///   - qrcode: 类型
-///   - content: 二维码内容
-///   - block: 结果回调
+///   - qrcode: The QR code type
+///   - content: The QR code content
+///   - block: The completion handler called when the operation completes
 + (void)sendQRCode:(FITCLOUDQRCODE)qrcode content:(NSString *)content withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 设置手表启动震动参数
+#pragma mark Watch Launch Vibration
 
-/// 设置手表启动震动参数
+/// Set watch launch vibration parameters
 /// - Parameters:
-///   - param: 参数
-///   - block: 结果回调
+///   - param: The vibration parameters
+///   - block: The completion handler called when the operation completes
 + (void)setWatchLaunchVibrateParam:(FitCloudWatchLaunchVibrateSetting *)param withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 删除手表上存储的消息
+#pragma mark Message Management
 
-/// 删除手表上存储的消息
+/// Delete stored messages from watch
 /// - Parameters:
-///   - deleteIndex: 删除索引 0～n-1，0代表最新的一条  当 shouldDeleteAll 为 false 时有效
-///   - shouldDeleteAll: 是否应该删除所有
-///   - block: 结果回调
+///   - deleteIndex: Index to delete (0 to n-1, 0 is newest), valid when shouldDeleteAll is false
+///   - shouldDeleteAll: Whether to delete all messages
+///   - block: The completion handler called when the operation completes
 + (void)deleteWatchMessageWithIndex:(NSInteger)deleteIndex shouldDeleteAll:(BOOL)shouldDeleteAll withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 取消手表当前消息显示
-
-/// 取消手表当前消息显示
+/// Dismiss current message display on watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called when the operation completes
 + (void)dismissCurrentWatchMessageWithBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 游戏锁设置
+#pragma mark Game Lock
 
-/// 游戏锁设置
+/// Configure game lock settings
 /// - Parameters:
-///   - setting: 游戏锁设置
-///   - block: 结果回调
+///   - setting: The game lock settings to apply
+///   - block: The completion handler called when the operation completes
 + (void)setGamePasscodeSetting:(FitCloudGamePasscodeSetting *_Nonnull)setting block:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 通知手表查找手机响铃播放完毕
+#pragma mark Find Phone
 
-/// 通知手表查找手机响铃播放完毕
+/// Notify watch that find phone ring playback has ended
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called when the operation completes
 + (void)notifyAppFindiPhoneRingPlayEndWithBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 发送支付宝Iot数据
+#pragma mark Third-party Integration
 
-/// 发送支付宝Iot数据
+/// Send Alipay IoT data
 /// - Parameters:
-///   - aliotData: 支付宝Iot数据
-///   - block: 结果回调
+///   - aliotData: The Alipay IoT data
+///   - block: The completion handler called when the operation completes
 + (void)sendAliotData:(NSData *)aliotData withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 发送网易云音乐桥接数据
-
-/// 发送网易云音乐桥接数据
+/// Send NetEase Cloud Music bridge data
 /// - Parameters:
-///   - data: 网易云音乐桥接数据
+///   - data: The NetEase Cloud Music bridge data
 + (void)sendNetEaseBridgeData:(NSData *)data;
 
-#pragma mark 发送手表微信支付认证桥接数据
-
-/// 发送手表微信支付认证桥接数据
+/// Send WeChat Pay authentication bridge data
 /// - Parameters:
-///   - data: 手表微信支付认证桥接数据
+///   - data: The WeChat Pay authentication bridge data
 + (void)sendWPAuthBridgeData:(NSData *)data;
 
-#pragma mark 发送创维光伏数据
-
-/// 发送创维光伏数据
+/// Send Skyworth PV data
 /// - Parameters:
-///   - stations: 光伏电站数据，最多支持6个电站，超过的自动忽略
-///   - block: 结果回调
+///   - stations: PV power station data, maximum 6 stations (extras ignored)
+///   - block: The completion handler called when the operation completes
 + (void)sendSkyworthPVData:(NSArray<SkyworthPVPowerStationObject *> *)stations withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 发送即将到来的板球比赛数据
+#pragma mark Cricket Match Data
 
-/// 发送即将到来的板球比赛数据
+/// Send upcoming cricket match data
 /// - Parameters:
-///   - matches: 比赛数据，目前最多支持两个
-///   - block: 结果回调
+///   - matches: Match data, maximum 2 matches
+///   - block: The completion handler called when the operation completes
 + (void)sendUpcomingCricketMatchData:(NSArray<FitCloudCricketUpcomingMatch *> *)matches withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 发送正在进行的板球比赛数据
-
-/// 发送正在进行的板球比赛数据
+/// Send live cricket match data
 /// - Parameters:
-///   - matches: 比赛数据，目前最多支持两个
-///   - block: 结果回调
+///   - matches: Match data, maximum 2 matches
+///   - block: The completion handler called when the operation completes
 + (void)sendLiveCricketMatchData:(NSArray<FitCloudCricketLiveMatch *> *)matches withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 发送已经结束的板球比赛数据
-
-/// 发送已经结束的板球比赛数据
+/// Send ended cricket match data
 /// - Parameters:
-///   - matches: 比赛数据，目前最多支持两个
-///   - block: 结果回调
+///   - matches: Match data, maximum 2 matches
+///   - block: The completion handler called when the operation completes
 + (void)sendEndedCricketMatchData:(NSArray<FitCloudCricketEndedMatch *> *)matches withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 设置板球比分列表顺序
-
-/// 设置板球比分列表顺序
+/// Set cricket match score list order
 /// - Parameters:
-///   - match1order:  比赛1顺序
-///   - match2order:  比赛2顺序
-///   - block: 结果回调
+///   - match1order: Match 1 order
+///   - match2order: Match 2 order
+///   - block: The completion handler called when the operation completes
 + (void)sendCricketMatchScoreListOrderWith:(FitCloudCricketMatchScoreOrder *)match1order match2order:(FitCloudCricketMatchScoreOrder *)match2order withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 设置当前手机所在位置的GPS数据
+#pragma mark GPS Data Management
 
-/// 设置当前手机所在位置的GPS数据
+/// Set current phone GPS location data
 /// - Parameters:
-///   - gpsData: GPS数据
-///   - block: 结果回调
+///   - gpsData: The GPS data
+///   - block: The completion handler called when the operation completes
 + (void)sendGPSData:(FitCloudGPSData *)gpsData withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 获取手表上的GPS文件状态
-
-/// 获取手表上的GPS文件状态
+/// Get GPS file status from watch
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the GPS file state
 + (void)getWatchGPSFileStateWithBlock:(FitCloudWatchGPSFileStateResultBlock _Nullable)block;
 
-#pragma mark 判断GPS文件是否过期
-
-/// 判断GPS文件是否过期
+/// Check if GPS file is outdated
 /// - Parameters:
-///   - filePath: GPS文件路径
-///   - error: 错误信息
+///   - filePath: Path to GPS file
+///   - error: Error information if check fails
 + (BOOL)gpsFileOutdated:(NSString *)filePath error:(NSError **)error;
 
-#pragma mark 获取当前是否允许推送GPS文件
-
-/// 获取当前是否允许推送GPS文件
+/// Check if GPS file push is currently allowed
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called with the push permission status
 + (void)getGPSFileCanPushWithBlock:(FitCloudGPSFileCanPushResultBlock _Nullable)block;
 
-#pragma mark 准备GPS文件升级
-
-/// 准备GPS文件升级
+/// Prepare for GPS file upgrade
 /// - Parameters:
-///   - block: 结果回调
+///   - block: The completion handler called when preparation completes
 + (void)prepareGPSFileUpgradeWithCompletion:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark 删除手表上的GPS epo文件
-
-/// 删除手表上的GPS epo文件
+/// Delete GPS EPO file from watch
 /// - Parameters:
-///   - completion: 结果回调
+///   - completion: The completion handler called when deletion completes
 + (void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion;
 
-#pragma mark 导航信息同步
+#pragma mark Navigation
 
 /// The navigation start callback
 /// - Parameters:
@@ -1541,32 +1508,32 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// 新OTA
+/// New OTA Module
 @interface FitCloudKit (NewOTA)
 
-#pragma mark 检查手表新OTA升级环境，比如是否有充足的电量等
+#pragma mark Check Watch New OTA Environment
 
-/// 检查手表新OTA升级环境，比如是否有充足的电量等
+/// Check if the watch environment supports new OTA upgrade, such as sufficient battery level
 /// - Parameters:
-///   - completion: 结果回调
+///   - completion: The completion handler called with the environment check result
 + (void)checkNewOTAEnvironmentWithCompletion:(FitCloudNewOTAEnvironmentCheckCompletion)completion;
 
-#pragma mark 传输新OTA升级文件
+#pragma mark Send New OTA File
 
-/// 传输新OTA升级文件
-/// 尽量在后台线程调用该方法
+/// Send new OTA upgrade file
+/// This method should be called on a background thread if possible
 /// - Parameters:
-///   - newOTAFilePath: 新OTA升级文件路径
-///   - startConfirmResult: 升级启动结果回调，即启动OTA升级是否成功
-///   - progress: 传输进度回调
-///   - completion: 结果回调
+///   - newOTAFilePath: The path to the new OTA upgrade file
+///   - startConfirmResult: The callback for upgrade start confirmation, indicating whether OTA upgrade started successfully
+///   - progress: The callback for transfer progress updates
+///   - completion: The completion handler called when the transfer completes
 + (void)sendNewOTA:(NSString *)newOTAFilePath startConfirmResult:(FitCloudNewOTAStartConfirmResultBlock _Nullable)startConfirmResult progress:(FitCloudNewOTAProgressBlock _Nullable)progress completion:(FitCloudNewOTACompletionBlock _Nullable)completion;
 
-#pragma mark 取消传输新OTA升级文件
+#pragma mark Cancel New OTA File Transfer
 
-/// 取消传输新OTA升级文件
+/// Cancel the ongoing new OTA file transfer if needed
 /// - Parameters:
-///   - completion: 完成回调
+///   - completion: The completion handler called when the cancellation completes
 + (void)cancelSendTheNewOTAIfNeededWithCompletion:(FitCloudNewOTACancelCompletionBlock _Nullable)completion;
 
 @end
