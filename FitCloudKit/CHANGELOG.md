@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.42 build20241205001 (2024-12-05)
+
+- Optimized the parsing of workout BPM data.
+
 ## V1.3.0-beta.41 build20241204003 (2024-12-04)
 
 - Fixed the issue with reading the GPS EPO upgrade file type for ICOE.
