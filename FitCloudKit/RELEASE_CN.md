@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-12-05 Version:1.3.0-beta.42 Build:20241205001
+## pcjbird 2024-12-05 Version:1.3.0-beta.43 Build:20241205002
 
 - 修复了设置和查询耳机仓歌词颜色的问题。
 - 修复运动心率的一些问题。
@@ -34,6 +34,7 @@
 - 引入新的 API `+(void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion` 以删除手表端的 GPS epo 文件。
 - 支持华盛达`我的任务`相关指令。
 - 新增`FITCLOUDMN_ZALO`通知定义。
+- 新增 `FITCLOUDEVENT_COMMAND_EXEC_TIMEOUT_NOTIFY` 事件用于通知指令执行超时。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

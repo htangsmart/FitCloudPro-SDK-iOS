@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-12-05 Version:1.3.0-beta.42 Build:20241205001
+## pcjbird 2024-12-05 Version:1.3.0-beta.43 Build:20241205002
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -35,6 +35,7 @@
 - Introduce the new API `+(void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion` to delete the GPS epo file on the watch side.
 - Support `My Task` related commands for Huashengda.
 - Added `FITCLOUDMN_ZALO` notification definition.
+- Add the `FITCLOUDEVENT_COMMAND_EXEC_TIMEOUT_NOTIFY` event to notify that the command execution timed out.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

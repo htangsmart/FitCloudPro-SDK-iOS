@@ -206,4 +206,11 @@ extern NSString *const FITCLOUDEVENT_WATCHSIDE_TERMINATED_THE_MEASUREMENT_INITIA
 /// - slotIndex 类型 NSInteger, from 0~7
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY;
 
+/// 指令超时通知
+///
+/// userInfo=>{@"cmd":@(cmd), @"key" : @(key)}
+/// - cmd 类型 NSInteger
+/// - key 类型 NSInteger
+extern NSString *const FITCLOUDEVENT_COMMAND_EXEC_TIMEOUT_NOTIFY;
+
 #endif /* FitCloudEvent_h */

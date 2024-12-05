@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.43 build20241205002 (2024-12-05)
+
+- Add the `FITCLOUDEVENT_COMMAND_EXEC_TIMEOUT_NOTIFY` event to notify that the command execution timed out.
+
 ## V1.3.0-beta.42 build20241205001 (2024-12-05)
 
 - Optimized the parsing of workout BPM data.
