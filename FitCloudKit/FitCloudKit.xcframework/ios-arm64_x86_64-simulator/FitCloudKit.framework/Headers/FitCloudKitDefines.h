@@ -936,6 +936,16 @@ typedef NS_ENUM(NSInteger, LLMTYPE) {
     LLMTYPE_ERNIEBOT = 1,
 };
 
+#pragma mark - 翻译
+
+/// 翻译文本类型
+typedef NS_ENUM(NSInteger, TRANSLATETEXTTYPE) {
+    /// 原文
+    TRANSLATETEXTTYPE_ORIGINAL = 0x00,
+    /// 译文
+    TRANSLATETEXTTYPE_TRANSLATION = 0x01,
+};
+
 #pragma mark - 表盘相关
 
 /// 表盘位类型

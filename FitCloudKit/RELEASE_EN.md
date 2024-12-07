@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-12-07 Version:1.3.0-beta.44 Build:20241207001
+## pcjbird 2024-12-07 Version:1.3.0-beta.45 Build:20241207002
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -36,6 +36,7 @@
 - Support `My Task` related commands for Huashengda.
 - Added `FITCLOUDMN_ZALO` notification definition.
 - Add the `FITCLOUDEVENT_COMMAND_EXEC_TIMEOUT_NOTIFY` event to notify that the command execution timed out.
+- Add support for translation features.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

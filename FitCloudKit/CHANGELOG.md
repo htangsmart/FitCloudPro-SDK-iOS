@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.45 build20241207002 (2024-12-07)
+
+- Add support for translation features.
+
 ## V1.3.0-beta.44 build20241207001 (2024-12-07)
 
 - Add the `FITCLOUDKITERROR_CONNECTIONTIMEOUT` error definition.

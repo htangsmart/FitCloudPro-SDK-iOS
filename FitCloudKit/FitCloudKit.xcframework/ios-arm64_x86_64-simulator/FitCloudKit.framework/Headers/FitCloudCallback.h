@@ -655,6 +655,17 @@ typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString *f
 /// 手表退出大模型界面
 - (void)OnWatchSideExitLLM;
 
+/// Notifies that voice translation has started
+/// - Note: Called when the watch begins recording voice for translation
+- (void)onTranslateVoiceBegin;
+
+/// Notifies that voice translation has completed with decoded voice data and language settings
+/// - Parameters:
+///   - voiceData: The decoded voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
+///   - sourceLang: The source language for translation
+///   - targetLang: The target language to translate into
+- (void)onTranslateVoiceStopWithDecodedVoiceData:(NSData *)voiceData sourceLanguage:(FITCLOUDLANGUAGE)sourceLang targetLanguage:(FITCLOUDLANGUAGE)targetLang;
+
 /// 手表发送情侣消息，通过APP发给对方
 /// - Parameters:
 ///   - loverMessage: 情侣消息

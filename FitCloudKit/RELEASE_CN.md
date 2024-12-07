@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-12-07 Version:1.3.0-beta.44 Build:20241207001
+## pcjbird 2024-12-07 Version:1.3.0-beta.45 Build:20241207002
 
 - 修复了设置和查询耳机仓歌词颜色的问题。
 - 修复运动心率的一些问题。
@@ -35,6 +35,7 @@
 - 支持华盛达`我的任务`相关指令。
 - 新增`FITCLOUDMN_ZALO`通知定义。
 - 新增 `FITCLOUDEVENT_COMMAND_EXEC_TIMEOUT_NOTIFY` 事件用于通知指令执行超时。
+- 添加翻译功能支持。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-12-07  Version:1.3.0-beta.44 Build:20241207001
+//      pcjbird    2024-12-07  Version:1.3.0-beta.45 Build:20241207002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1467,6 +1467,23 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - resultType: 文案类型
 ///   - completion: 结果回调
 + (void)sendLLMResult:(NSString *)text isEnd:(BOOL)isEnd resultType:(LLMRESULTTYPE)resultType completion:(FitCloudResultHandler _Nullable)completion;
+
+@end
+
+/// Translation
+@interface FitCloudKit (Translate)
+
+#pragma mark Send Translation Result
+
+/// Send translation result
+/// - Parameters:
+///   - text: The translation result text
+///   - isEnd: Whether this is the final result
+///   - textType: The type of text content
+///             - TRANSLATETEXTTYPE_ORIGINAL: Original text content
+///             - TRANSLATETEXTTYPE_TRANSLATION: Translated text content
+///   - completion: The completion handler called when sending completes
++ (void)sendTranslationText:(NSString *)text isEnd:(BOOL)isEnd resultType:(TRANSLATETEXTTYPE)textType completion:(FitCloudResultHandler _Nullable)completion;
 
 @end
 
