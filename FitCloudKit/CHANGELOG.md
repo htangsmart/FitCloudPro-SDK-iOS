@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.44 build20241207001 (2024-12-07)
+
+- Add the `FITCLOUDKITERROR_CONNECTIONTIMEOUT` error definition.
+
 ## V1.3.0-beta.43 build20241205002 (2024-12-05)
 
 - Add the `FITCLOUDEVENT_COMMAND_EXEC_TIMEOUT_NOTIFY` event to notify that the command execution timed out.
