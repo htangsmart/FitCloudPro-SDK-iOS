@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.46 build20241209001 (2024-12-09)
+
+- Optimized some error return information.
+
 ## V1.3.0-beta.45 build20241207002 (2024-12-07)
 
 - Add support for translation features.
