@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.47 build20241211001 (2024-12-11)
+
+- Restored error messages for low battery OTA failures in Bulgarian, Ukrainian and Urdu languages.
+
 ## V1.3.0-beta.46 build20241209001 (2024-12-09)
 
 - Optimized some error return information.
