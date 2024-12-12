@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.48 build20241212001 (2024-12-12)
+
+- Fixed the command ID that notifies the app when the smartwatch enters or exits the LLM functionality.
+
 ## V1.3.0-beta.47 build20241211001 (2024-12-11)
 
 - Restored error messages for low battery OTA failures in Bulgarian, Ukrainian and Urdu languages.
