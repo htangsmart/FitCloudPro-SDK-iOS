@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.49 build20241212002 (2024-12-12)
+
+- Modified command IDs related to translation functionality.
+
 ## V1.3.0-beta.48 build20241212001 (2024-12-12)
 
 - Fixed the command ID that notifies the app when the smartwatch enters or exits the LLM functionality.
