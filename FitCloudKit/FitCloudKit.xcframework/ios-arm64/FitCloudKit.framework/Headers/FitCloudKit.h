@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-12-12  Version:1.3.0-beta.49 Build:20241212002
+//      pcjbird    2024-12-17  Version:1.3.0-beta.50 Build:20241217001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -163,6 +163,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Watch device MAC address
 + (NSString *_Nullable)macAddr;
+
+#pragma mark GPS Module Firmware Version
+
+/// GPS Module Firmware Version
++ (NSString *_Nullable)moduleGPSFirmwareVersion;
+
+#pragma mark 4G Modem Module Firmware Version
+
+/// 4G Modem Module Firmware Version
++ (NSString *_Nullable)module4GModemFirmwareVersion;
 
 #pragma mark Current configuration information of the watch
 
@@ -785,12 +795,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: the completion callback
 + (void)receivedLoverMessage:(NSString *)message completion:(FitCloudResultHandler _Nullable)completion;
 
-#pragma mark GPS Firmware Information
+#pragma mark Other Modules Firmware Version
 
-/// Query GPS firmware information
+/// Query other modules firmware version
 /// - Parameters:
-///   - completion: The completion handler called with the GPS firmware information
-+ (void)queryGPSFirmwareInfoWithCompletion:(FitCloudGPSFirmwareInfoQueryCompletion _Nullable)completion;
+///   - completion: The completion handler called with the firmware version
++ (void)queryOtherModulesFirmwareVersionsWithCompletion:(FitCloudOtherModulesFirmwareVersionQueryCompletion _Nullable)completion;
 
 #pragma mark Lock Screen Settings
 

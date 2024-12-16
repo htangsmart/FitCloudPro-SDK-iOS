@@ -74,6 +74,7 @@
 #import <FitCloudKit/FitCloudIslamicEventModel.h>
 #import <FitCloudKit/FitCloudKaabaModel.h>
 #import <FitCloudKit/FitCloudTaskModel.h>
+#import <FitCloudKit/FitCloudFirmwareModuleVersionModel.h>
 
 /// FitCloud调用结果回调
 /// - Parameters:
@@ -535,13 +536,12 @@ typedef void (^FitCloudPersonalizedRemindersQueryCompletion)(BOOL success, NSArr
 ///   - error: error information
 typedef void (^FitCloudNewOTAEnvironmentCheckCompletion)(BOOL succeed, NSError *error);
 
-/// FitCloud GPS firmware information query result callback
+/// The smart watch other modules firmware version query completion block
 /// - Parameters:
-///   - success: query success
-///   - firmwareVersion: the GPS firmware version
-///   - allowOTA: whether allow ota
+///   - succeed: whether query success
+///   - firmwareVersions: array of firmware module version models
 ///   - error: error information
-typedef void (^FitCloudGPSFirmwareInfoQueryCompletion)(BOOL success, NSString *firmwareVersion, BOOL allowOTA, NSError *error);
+typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed, NSArray<FitCloudFirmwareModuleVersionModel *> *firmwareVersions, NSError *error);
 
 /// FitCloudKit 回调协议
 @protocol FitCloudCallback <NSObject>

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.50 build20241217001 (2024-12-17)
+
+- Add the `queryOtherModulesFirmwareVersionsWithCompletion:` API to query the firmware version of other modules.
+
 ## V1.3.0-beta.49 build20241212002 (2024-12-12)
 
 - Modified command IDs related to translation functionality.
