@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.52 build20241220002 (2024-12-20)
+
+- Optimized the translation feature related log printing.
+
 ## V1.3.0-beta.51 build20241220001 (2024-12-20)
 
 - Optimized the handling of ending reception for LLM voice data and translation voice data to prevent repeated command sending from the watch side.
