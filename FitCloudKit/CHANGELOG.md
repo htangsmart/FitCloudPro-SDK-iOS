@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.0-beta.51 build20241220001 (2024-12-20)
+
+- Optimized the handling of ending reception for LLM voice data and translation voice data to prevent repeated command sending from the watch side.
+
 ## V1.3.0-beta.50 build20241217001 (2024-12-17)
 
 - Add the `queryOtherModulesFirmwareVersionsWithCompletion:` API to query the firmware version of other modules.
