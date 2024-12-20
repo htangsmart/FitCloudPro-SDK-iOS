@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.53 build20241220003 (2024-12-20)
+
+- Added the original opus voice data return for LLM voice data and translation voice data.
+
 ## 1.3.0-beta.52 build20241220002 (2024-12-20)
 
 - Optimized the translation feature related log printing.

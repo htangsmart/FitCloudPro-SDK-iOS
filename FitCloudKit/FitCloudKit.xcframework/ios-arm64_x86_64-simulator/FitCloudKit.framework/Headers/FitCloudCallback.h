@@ -646,8 +646,9 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 
 /// 大模型语音传输结束，并返回请求的语音数据，该数据已经经过解码
 /// - Parameters:
+///   - opusVoiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
 ///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
-- (void)OnLLMVoiceStopWithDecodedVoiceData:(NSData *)voiceData;
+- (void)OnLLMVoiceStopWithOpusVoiceData:(NSData *)opusVoiceData decodedVoiceData:(NSData *)voiceData;
 
 /// 手表进入大模型界面
 - (void)OnWatchSideEnterLLM;
@@ -661,10 +662,11 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 
 /// Notifies that voice translation has completed with decoded voice data and language settings
 /// - Parameters:
+///   - opusVoiceData: The opus encoded voice data
 ///   - voiceData: The decoded voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
 ///   - sourceLang: The source language for translation
 ///   - targetLang: The target language to translate into
-- (void)onTranslateVoiceStopWithDecodedVoiceData:(NSData *)voiceData sourceLanguage:(FITCLOUDLANGUAGE)sourceLang targetLanguage:(FITCLOUDLANGUAGE)targetLang;
+- (void)onTranslateVoiceStopWithOpusVoiceData:(NSData *)opusVoiceData decodedVoiceData:(NSData *)voiceData sourceLanguage:(FITCLOUDLANGUAGE)sourceLang targetLanguage:(FITCLOUDLANGUAGE)targetLang;
 
 /// 手表发送情侣消息，通过APP发给对方
 /// - Parameters:
