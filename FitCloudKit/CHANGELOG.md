@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.55 build20241223002 (2024-12-23)
+
+- Fixed an issue where setting favorite contacts would fail when contact names contained certain special characters.
+
 ## 1.3.0-beta.54 build20241223001 (2024-12-23)
 
 - Filter out known invalid GPS points at the SDK layer.
