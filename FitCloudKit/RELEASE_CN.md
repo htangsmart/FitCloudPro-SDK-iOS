@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-12-20 Version:1.3.0-beta.53 Build:20241220003
+## pcjbird 2024-12-23 Version:1.3.0-beta.54 Build:20241223001
 
 - 修复了设置和查询耳机仓歌词颜色的问题。
 - 修复运动心率的一些问题。
@@ -38,6 +38,7 @@
 - 添加翻译功能支持。
 - 新增查询其他模块固件版本功能，@see `+(void)queryOtherModulesFirmwareVersionsWithCompletion:(FitCloudOtherModulesFirmwareVersionQueryCompletion _Nullable)completion`
 - 大模型语音数据以及翻译语音数据新增返回原始的 opus 编码语音数据。
+- 在 SDK 层过滤掉一些已知非法的 GPS 点。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

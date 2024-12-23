@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-12-20 Version:1.3.0-beta.53 Build:20241220003
+## pcjbird 2024-12-23 Version:1.3.0-beta.54 Build:20241223001
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -39,6 +39,7 @@
 - Add support for translation features.
 - Add the `queryOtherModulesFirmwareVersionsWithCompletion:` API to query the firmware version of other modules.
 - Added the original opus voice data return for LLM voice data and translation voice data.
+- Filter out known invalid GPS points at the SDK layer.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.54 build20241223001 (2024-12-23)
+
+- Filter out known invalid GPS points at the SDK layer.
+
 ## 1.3.0-beta.53 build20241220003 (2024-12-20)
 
 - Added the original opus voice data return for LLM voice data and translation voice data.
