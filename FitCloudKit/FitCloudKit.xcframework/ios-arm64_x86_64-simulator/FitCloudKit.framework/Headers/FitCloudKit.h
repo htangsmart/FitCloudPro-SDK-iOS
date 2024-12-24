@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-12-23  Version:1.3.0-beta.55 Build:20241223002
+//      pcjbird    2024-12-24  Version:1.3.0-beta.56 Build:20241224001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1494,6 +1494,13 @@ NS_ASSUME_NONNULL_BEGIN
 ///             - TRANSLATETEXTTYPE_TRANSLATION: Translated text content
 ///   - completion: The completion handler called when sending completes
 + (void)sendTranslationText:(NSString *)text isEnd:(BOOL)isEnd resultType:(TRANSLATETEXTTYPE)textType completion:(FitCloudResultHandler _Nullable)completion;
+
+#pragma mark Report Device MAC Address Translation Feature Not Registered
+
+/// Report to watch that current MAC address is not registered with translation service provider
+/// - Parameters:
+///   - completion: The completion handler
++ (void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion;
 
 @end
 

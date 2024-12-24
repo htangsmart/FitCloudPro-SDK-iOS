@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.56 build20241224001 (2024-12-24)
+
+- Introduce the API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion` to notify the watch device that the current MAC address is not registered with the translation service provider.
+
 ## 1.3.0-beta.55 build20241223002 (2024-12-23)
 
 - Fixed an issue where setting favorite contacts would fail when contact names contained certain special characters.
