@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.1.8-beta.3 build20241224001 (2024-12-24)
+
+- Added support for image rotation processing on the 568X(9X) platform.
+
 ## V1.1.8-beta.2 build20241128001 (2024-11-28)
 
 - Improved and enhanced code documentation and comments.

@@ -1,10 +1,11 @@
 # RELEASES
 
-## V1.1.8-beta.2 build20241128001 (2024-11-28)
+## V1.1.8-beta.3 build20241224001 (2024-12-24)
 
 - Optimized file generation path to improve compatibility.
 - Improved and enhanced code documentation and comments.
 - Optimized the image resizing method.
+- Added support for image rotation processing on the 568X(9X) platform.
 
 ## pcjbird 2024-09-30 Version:1.1.7 Build:20240930001
 
