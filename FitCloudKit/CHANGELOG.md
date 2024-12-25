@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.57 build20241225001 (2024-12-25)
+
+- Modified APIs related to camera preview and map navigation snapshot.
+
 ## 1.3.0-beta.56 build20241224001 (2024-12-24)
 
 - Introduce the API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion` to notify the watch device that the current MAC address is not registered with the translation service provider.

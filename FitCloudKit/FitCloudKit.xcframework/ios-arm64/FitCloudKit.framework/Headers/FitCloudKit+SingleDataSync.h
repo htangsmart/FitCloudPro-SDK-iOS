@@ -24,7 +24,7 @@ typedef NS_ENUM(Byte, MANUALSINGLESYNCKEY)
 
 /// 手动同步历史运动健康数据
 /// - Parameters:
-///   - option: 选项，默认 FITCLOUDDATASYNCOPTION_LEGACY
+///   - option: 选项，默认 `FITCLOUDDATASYNCOPTION_LEGACY`
 ///   - syncKey: 同步Key
 ///   - progress: 进度回调
 ///   - block: 结果回调

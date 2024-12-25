@@ -598,7 +598,8 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - height: 高度
 ///   - rotation: 旋转角度，支持的角度有 0°，90°，180°，270°
 ///   - bufferSize: 图片Buffer大小限制
-- (void)OnRequestCameraLivePreviewWithWidth:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation bufferSize:(NSInteger)bufferSize;
+///   - divisionCount: 图片需要在垂直方向上按该数量进行等分后传给手表，有效范围：1～n
+- (void)OnRequestCameraLivePreviewWithWidth:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation bufferSize:(NSInteger)bufferSize divisionCount:(NSInteger)divisionCount;
 
 /// 收到手表的活跃通知(当前手表与手机连接还活跃着)
 - (void)OnBraceletAlive;
@@ -731,7 +732,8 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - height: 高度
 ///   - rotation: 旋转角度，支持的角度有 0°，90°，180°，270°
 ///   - bufferSize: 图片Buffer大小限制
-- (void)OnRequestMapNavigationSnapshotWithWidth:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation bufferSize:(NSInteger)bufferSize;
+///   - divisionCount: 图片需要在垂直方向上按该数量进行等分后传给手表，有效范围：1～n
+- (void)OnRequestMapNavigationSnapshotWithWidth:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation bufferSize:(NSInteger)bufferSize divisionCount:(NSInteger)divisionCount;
 
 /// 手表端请求当前回历节日信息
 ///
