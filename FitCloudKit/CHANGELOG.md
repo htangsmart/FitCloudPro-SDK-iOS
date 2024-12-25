@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.58 build20241225002 (2024-12-25)
+
+- Enhanced the SDK stability.
+
 ## 1.3.0-beta.57 build20241225001 (2024-12-25)
 
 - Modified APIs related to camera preview and map navigation snapshot.
