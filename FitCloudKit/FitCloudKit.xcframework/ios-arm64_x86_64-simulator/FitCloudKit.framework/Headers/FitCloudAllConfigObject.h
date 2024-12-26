@@ -26,112 +26,77 @@
 #import <FitCloudKit/FitCloudPowerSavingSetting.h>
 #import <FitCloudKit/FitCloudCapacity.h>
 
-/**
- * @brief 手表所有配置信息（用于手表绑定时一次性获取）
- */
-@interface FitCloudAllConfigObject : NSObject<NSCoding>
+NS_ASSUME_NONNULL_BEGIN
 
-/**
- * @brief 手表软硬件版本信息
- */
-@property(nonatomic, strong, nullable)FitCloudFirmwareVersionObject* firmware;
+/// 手表所有配置信息（用于手表绑定时一次性获取）
+@interface FitCloudAllConfigObject : NSObject <NSCoding>
 
-/**
- * @brief 消息通知设置
- */
-@property(nonatomic, assign)FITCLOUDMN mnSetting;
+/// 手表软硬件版本信息
+@property(nonatomic, strong, nullable) FitCloudFirmwareVersionObject *firmware;
 
-/**
- * @brief 手表表盘所有功能项显示状态设置
- */
-@property(nonatomic, assign)FITCLOUDSCREENDISPLAY sdSetting;
+/// 消息通知设置
+@property(nonatomic, assign) FITCLOUDMN mnSetting;
 
-/**
- * @brief 手表偏好
- */
-@property(nonatomic, assign)FITCLOUDPREFER prefer;
+/// 手表表盘所有功能项显示状态设置
+@property(nonatomic, assign) FITCLOUDSCREENDISPLAY sdSetting;
 
-/**
- * @brief 健康定时监测设置
- */
-@property(nonatomic, strong)FitCloudHTMObject* htmSetting;
+/// 手表偏好
+@property(nonatomic, assign) FITCLOUDPREFER prefer;
 
-/**
- * @brief 健康定时监测独立设置
- */
-@property(nonatomic, strong)NSArray<FitCloudHTMSingleObject*>* htmSingleSettings;
+/// 健康定时监测设置
+@property(nonatomic, strong, nullable) FitCloudHTMObject *htmSetting;
 
-/**
- * @brief 久坐提醒设置
- */
-@property(nonatomic, strong)FitCloudLSRObject* lsrSetting;
+/// 健康定时监测独立设置
+@property(nonatomic, strong, nullable) NSArray<FitCloudHTMSingleObject *> *htmSingleSettings;
 
-/**
- * @brief 喝水提醒设置
- */
-@property(nonatomic, strong)FitCloudDRObject* drSetting;
+/// 久坐提醒设置
+@property(nonatomic, strong, nullable) FitCloudLSRObject *lsrSetting;
 
-/**
- * @brief 血压参考范围及私人模式开关设置
- */
-@property(nonatomic, strong)FitCloudBPRObject* bprSetting;
+/// 喝水提醒设置
+@property(nonatomic, strong, nullable) FitCloudDRObject *drSetting;
 
-/**
- * @brief 抬腕唤醒设置
- */
-@property(nonatomic, strong)FitCloudWWUObject* wwuSetting;
-    
-/**
- * @brief 心率预警设置
- */
-@property(nonatomic, strong)FitCloudHRAlarmObject* hrAlarmSetting;
+/// 血压参考范围及私人模式开关设置
+@property(nonatomic, strong, nullable) FitCloudBPRObject *bprSetting;
 
-/**
- * @brief 血压预警设置
- */
-@property(nonatomic, strong)FitCloudBPAlarmObject* bpAlarmSetting;
-    
-/**
- * @brief 勿扰模式设置
- */
-@property(nonatomic, strong)FitCloudDNDSetting* dndSetting;
+/// 抬腕唤醒设置
+@property(nonatomic, strong, nullable) FitCloudWWUObject *wwuSetting;
 
-/**
- * @brief 女性设置
- */
-@property(nonatomic, strong)FitCloudWomenHealthSetting* womenHealthSetting;
+/// 心率预警设置
+@property(nonatomic, strong, nullable) FitCloudHRAlarmObject *hrAlarmSetting;
 
+/// 血压预警设置
+@property(nonatomic, strong, nullable) FitCloudBPAlarmObject *bpAlarmSetting;
 
-/**
- * @brief 防护提醒设置
- */
-@property(nonatomic, strong)FitCloudPRObject* prSetting;
+/// 勿扰模式设置
+@property(nonatomic, strong, nullable) FitCloudDNDSetting *dndSetting;
 
-/**
- * @brief 洗手提醒设置
- */
-@property(nonatomic, strong)FitCloudHandWashRemindObject* hwrSetting;
+/// 女性设置
+@property(nonatomic, strong, nullable) FitCloudWomenHealthSetting *womenHealthSetting;
 
-/**
- * @brief 屏幕设置
- */
-@property(nonatomic, strong)FitCloudScreenSetting* screenSetting;
+/// 防护提醒设置
+@property(nonatomic, strong, nullable) FitCloudPRObject *prSetting;
 
-/**
- * @brief 振动设置
- */
-@property(nonatomic, strong) FitCloudVibrateSetting* vibrateSetting;
+/// 洗手提醒设置
+@property(nonatomic, strong, nullable) FitCloudHandWashRemindObject *hwrSetting;
+
+/// 屏幕设置
+@property(nonatomic, strong, nullable) FitCloudScreenSetting *screenSetting;
+
+/// 振动设置
+@property(nonatomic, strong, nullable) FitCloudVibrateSetting *vibrateSetting;
 
 /// 省电模式设置
-@property(nonatomic, strong) FitCloudPowerSavingSetting* powerSavingSetting;
+@property(nonatomic, strong, nullable) FitCloudPowerSavingSetting *powerSavingSetting;
 
 /// 设备能力信息，仅当支持查询设备能力的手表有效
-@property(nonatomic, strong) NSArray<FitCloudCapacity*>* deviceCapacities;
+@property(nonatomic, strong, nullable) NSArray<FitCloudCapacity *> *deviceCapacities;
 
 /// 每分钟运动动态心率的数量
-@property(nonatomic, strong, nullable) NSNumber* exerciseBPMDataPerMinute;
+@property(nonatomic, strong, nullable) NSNumber *exerciseBPMDataPerMinute;
 
 /// 天气映射客户编号
-@property(nonatomic, strong, nullable) NSNumber* weatherMapVendorId;
+@property(nonatomic, strong, nullable) NSNumber *weatherMapVendorId;
 
 @end
+
+NS_ASSUME_NONNULL_END

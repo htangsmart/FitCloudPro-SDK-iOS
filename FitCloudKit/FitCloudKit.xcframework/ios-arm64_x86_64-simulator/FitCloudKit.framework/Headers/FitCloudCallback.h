@@ -58,8 +58,8 @@
 #import <FitCloudKit/FitCloudCricketUpcomingMatch.h>
 #import <FitCloudKit/FitCloudCricketLiveMatch.h>
 #import <FitCloudKit/FitCloudCricketEndedMatch.h>
-#import <FitCloudKit/FitCloudGPSData.h>
-#import <FitCloudKit/FitCloudGPSEpoTimestamp.h>
+#import <FitCloudKit/FitCloudLocationDataModel.h>
+#import <FitCloudKit/FitCloudGPSFileExpireTimeModel.h>
 #import <FitCloudKit/FitCloudCricketMatchScoreOrder.h>
 #import <FitCloudKit/FitCloudMedal.h>
 #import <FitCloudKit/FitCloudPhotoAlbumParams.h>
@@ -417,27 +417,6 @@ typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSStri
 ///   - error: 错误信息
 typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber *> *supported, NSError *error);
 
-/// FitCloud GPS epo 时间戳回调
-/// - Parameters:
-///   - succeed: 是否成功
-///   - timestamp: 时间戳
-///   - error: 错误信息
-typedef void (^FitCloudGPSEPOTimestampResultBlock)(BOOL succeed, FitCloudGPSEpoTimestamp *timestamp, NSError *error);
-
-/// FitCloud 手表 GPS 文件状态回调
-/// - Parameters:
-///   - succeed: 是否成功
-///   - fileState: 手表GPS文件状态
-///   - error: 错误信息
-typedef void (^FitCloudWatchGPSFileStateResultBlock)(BOOL succeed, FITCLOUDWATCHGPSFILESTATE fileState, NSError *error);
-
-/// FitCloud GPS 文件是否允许推送回调
-/// - Parameters:
-///   - succeed: 是否成功
-///   - canPush: 是否允许推送
-///   - error: 错误信息
-typedef void (^FitCloudGPSFileCanPushResultBlock)(BOOL succeed, BOOL canPush, NSError *error);
-
 /// FitCloud 勋章列表回调
 /// - Parameters:
 ///   - succeed: 是否成功
@@ -710,8 +689,8 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// 手表请求板球比赛数据
 - (void)OnRequestCricketMatchData;
 
-/// 手表请求GPS数据
-- (void)OnRequestGPSData;
+/// 手表请求GPS定位数据
+- (void)onRequestGPSLocationData;
 
 /// 手表通知GPS文件升级代码，升级中的范围：0~100 ，升级成功：101，升级失败：255
 - (void)OnGPSFileUpgradeCode:(NSInteger)code;

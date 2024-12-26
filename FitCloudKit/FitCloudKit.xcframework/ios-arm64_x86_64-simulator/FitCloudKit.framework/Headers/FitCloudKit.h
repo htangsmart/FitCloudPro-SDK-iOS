@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-12-25  Version:1.3.0-beta.58 Build:20241225002
+//      pcjbird    2024-12-26  Version:1.3.0-beta.59 Build:20241226001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1093,39 +1093,59 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: The completion handler called when the operation completes
 + (void)sendCricketMatchScoreListOrderWith:(FitCloudCricketMatchScoreOrder *)match1order match2order:(FitCloudCricketMatchScoreOrder *)match2order withBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark GPS Data Management
+#pragma mark GPS Related Features
 
-/// Set current phone GPS location data
+/// Report GPS location data to the watch
 /// - Parameters:
-///   - gpsData: The GPS data
-///   - block: The completion handler called when the operation completes
-+ (void)sendGPSData:(FitCloudGPSData *)gpsData withBlock:(FitCloudResultHandler _Nullable)block;
+///   - locationDataModel: The GPS location data model
+///   - completion: A completion block called when the operation finishes. Parameters:
+///     - succeed: Whether the operation was successful
+///     - error: Error information if operation fails, nil on success
++ (void)reportGPSLocationData:(FitCloudLocationDataModel *)locationDataModel withCompletion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
 
-/// Get GPS file status from watch
-/// - Parameters:
-///   - block: The completion handler called with the GPS file state
-+ (void)getWatchGPSFileStateWithBlock:(FitCloudWatchGPSFileStateResultBlock _Nullable)block;
+#pragma mark GPS File Related Features
 
-/// Check if GPS file is outdated
-/// - Parameters:
-///   - filePath: Path to GPS file
-///   - error: Error information if check fails
-+ (BOOL)gpsFileOutdated:(NSString *)filePath error:(NSError **)error;
+/// GPS File refers to GPS EPO (Extended Prediction Orbit) file, which contains
+/// satellite orbital data to enable faster GPS positioning and acquisition.
 
-/// Check if GPS file push is currently allowed
+/// Check if the GPS file at the specified path has expired
 /// - Parameters:
-///   - block: The completion handler called with the push permission status
-+ (void)getGPSFileCanPushWithBlock:(FitCloudGPSFileCanPushResultBlock _Nullable)block;
+///   - filePath: The path to the GPS file to check
+///   - error: On failure, contains error information about why the check failed
+/// - Returns: `true` if the GPS file has expired, `false` if it has not expired
+///
+/// - Experiment: This method helps you to check the expiration status of a GPS EPO (Extended Prediction Orbit) file stored locally on the iPhone device.
++ (BOOL)isGPSFileExpired:(NSString *)filePath error:(NSError **)error;
 
-/// Prepare for GPS file upgrade
+/// Query whether the watch device currently allows GPS file upload
 /// - Parameters:
-///   - block: The completion handler called when preparation completes
-+ (void)prepareGPSFileUpgradeWithCompletion:(FitCloudResultHandler _Nullable)block;
+///   - completion: A completion handler called with the query result. Parameters:
+///     - success: Whether the query was successful
+///     - allowUpload: Whether GPS file upload is currently allowed
+///     - error: Error information if query fails
++ (void)queryWhetherWatchDeviceAllowsUploadGPSFileNowWithCompletion:(void (^_Nullable)(BOOL success, BOOL allowUpload, NSError *_Nullable error))completion;
 
-/// Delete GPS EPO file from watch
+/// Query current GPS file state on watch device
 /// - Parameters:
-///   - completion: The completion handler called when deletion completes
-+ (void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion;
+///   - completion: A completion handler called with the query result. Parameters:
+///     - success: Whether the query was successful
+///     - state: The GPS file state (unknown/not exist/good/need update/expired)
+///     - error: Error information if query fails
++ (void)queryGPSFileStateOnWatchDeviceWithCompletion:(void (^_Nullable)(BOOL success, FITCLOUDWATCHGPSFILESTATE state, NSError *_Nullable error))completion;
+
+/// Enter GPS file upload mode on the watch device
+/// - Parameters:
+///   - completion: A completion handler called with the result. Parameters:
+///     - success: Whether entering upload mode was successful
+///     - error: Error information if operation fails, nil on success
++ (void)enterGPSFileUploadModeWithCompletion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
+
+/// Delete the GPS file on the watch device
+/// - Parameters:
+///   - completion: A completion handler called with the result. Parameters:
+///     - success: Whether the operation was successful
+///     - error: Error information if operation fails, nil on success
++ (void)deleteGPSFileOnWatchDeviceWithCompletion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
 
 #pragma mark Navigation
 

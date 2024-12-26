@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.59 build20241226001 (2024-12-26)
+
+- Renamed several APIs related to GPS file operations.
+
 ## 1.3.0-beta.58 build20241225002 (2024-12-25)
 
 - Enhanced the SDK stability.

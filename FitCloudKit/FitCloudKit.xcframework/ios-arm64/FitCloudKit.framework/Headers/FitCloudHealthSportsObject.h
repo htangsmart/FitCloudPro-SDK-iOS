@@ -10,582 +10,439 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 #pragma mark - 手表手动同步对象基类
 
-
+/// 手表手动同步对象基类
 @interface FitCloudManualSyncItemObject : NSObject
 
-/**
- * @brief 采样时刻
- */
-@property(nonatomic, strong) NSDate* moment;
+/// 采样时刻
+@property(nonatomic, strong) NSDate *moment;
 
-/**
- * @brief 是否为手表手动测量
- */
+/// 是否为手表手动测量
 @property(nonatomic, assign) BOOL manualAtWatch;
 
-/**
- * @brief 是否为真血压
- */
+/// 是否为真血压
 @property(nonatomic, assign) BOOL baseOnPneumaticpump;
 
 @end
 
-
-
-/**
- * @brief 手表手动同步记录对象基类
- */
+/// 手表手动同步记录对象基类
 @interface FitCloudManualSyncRecordObject<__covariant ObjectType> : NSObject
 
-/**
- * @brief 开始时间
- */
-@property(nonatomic, strong) NSDate* begin;
+/// 开始时间
+@property(nonatomic, strong) NSDate *begin;
 
-/**
- * @brief 采样时间 (单位：秒)
- */
+/// 采样时间
+/// - Note: 单位：秒
 @property(nonatomic, assign) NSTimeInterval interval;
 
-/**
- * @brief 详细条目
- */
-@property(nonatomic, strong) NSArray<ObjectType>* items;
+/// 详细条目
+@property(nonatomic, strong) NSArray<ObjectType> *items;
 
 @end
 
 #pragma mark - 计步
 
-/**
- * @brief 手表计步数据条目
- */
+/// 手表计步数据条目
 @interface FitCloudStepItemObject : FitCloudManualSyncItemObject
 
-/**
- * @brief 步数
- */
+/// 步数
 @property(nonatomic, assign) UInt16 steps;
 
-/**
- * @brief 距离，单位(cm)
- * @note 该字段只有当距离&卡路里新算法时有效
- */
+/// 距离
+/// - Note: 单位(cm)，该字段只有当距离&卡路里新算法时有效
 @property(nonatomic, assign) UInt16 distance;
 
-/**
- * @brief 卡路里，单位(小卡 cal)
- * @note 该字段只有当距离&卡路里新算法时有效
- */
+/// 卡路里
+/// - Note: 单位(小卡 cal)，该字段只有当距离&卡路里新算法时有效
 @property(nonatomic, assign) UInt16 calory;
 
-/// 运动时长，单位：分钟
-/// 该字段仅部分设备有效, @see shouldStepItemWithDuration
+/// 运动时长
+/// - Note: 单位：分钟，该字段仅部分设备有效
+/// # See Also
+/// ``shouldStepItemWithDuration``
 @property(nonatomic, assign) UInt16 duration;
 
 @end
 
-
-/**
- * @brief 手表计步数据记录
- */
-@interface FitCloudStepRecordObject : FitCloudManualSyncRecordObject<FitCloudStepItemObject*>
-
+/// 手表计步数据记录
+@interface FitCloudStepRecordObject : FitCloudManualSyncRecordObject <FitCloudStepItemObject *>
 
 @end
 
 #pragma mark - 睡眠
 
-/**
- * @brief 手表睡眠数据条目
- */
+/// 手表睡眠数据条目
 @interface FitCloudSleepItemObject : FitCloudManualSyncItemObject
 
-/**
- * @brief 睡眠质量
- */
+/// 睡眠质量
 @property(nonatomic, assign) FITCLOUDSLEEPQUALITY quality;
 
 @end
 
-/**
- * @brief 手表睡眠数据记录
- */
-@interface FitCloudSleepRecordObject : FitCloudManualSyncRecordObject<FitCloudSleepItemObject*>
+/// 手表睡眠数据记录
+@interface FitCloudSleepRecordObject : FitCloudManualSyncRecordObject <FitCloudSleepItemObject *>
 
 @end
 
 #pragma mark - 心率
 
-/**
- * @brief 手表心率(Heart Rate)数据条目
- */
+/// 手表心率(Heart Rate)数据条目
 @interface FitCloudHRItemObject : FitCloudManualSyncItemObject
 
-
-/**
- * @brief 心率值(次/分钟)
- */
-@property(nonatomic, assign) UInt8    value;
+/// 心率值
+/// - Note: 单位：次/分钟
+@property(nonatomic, assign) UInt8 value;
 
 @end
 
-/**
- * @brief 手表心率(Heart Rate)数据记录
- */
-@interface FitCloudHRRecordObject : FitCloudManualSyncRecordObject<FitCloudHRItemObject*>
+/// 手表心率(Heart Rate)数据记录
+@interface FitCloudHRRecordObject : FitCloudManualSyncRecordObject <FitCloudHRItemObject *>
 
 @end
-
 
 #pragma mark - 血压
 
-/**
- * @brief 手表血压(Blood Pressure)数据条目
- */
+/// 手表血压(Blood Pressure)数据条目
 @interface FitCloudBPItemObject : FitCloudManualSyncItemObject
 
-/**
- *@brief 舒张压
- */
+/// 舒张压
 @property(nonatomic, assign) UInt8 diastolic;
 
-/**
- *@brief 收缩压
- */
+/// 收缩压
 @property(nonatomic, assign) UInt8 systolic;
 
-/**
- *@brief 心率，如果是真血压
- */
+/// 心率，如果是真血压
 @property(nonatomic, assign) UInt8 heartRateIfBaseOnPneumaticpump;
 
-
 @end
 
-/**
- * @brief 手表血压(Blood Pressure)数据记录
- */
-@interface FitCloudBPRecordObject : FitCloudManualSyncRecordObject<FitCloudBPItemObject*>
+/// 手表血压(Blood Pressure)数据记录
+@interface FitCloudBPRecordObject : FitCloudManualSyncRecordObject <FitCloudBPItemObject *>
 
 @end
-
 
 #pragma mark - 血氧
 
-/**
- * @brief 手表血氧(Blood Oxygen)数据条目
- */
+/// 手表血氧(Blood Oxygen)数据条目
 @interface FitCloudBOItemObject : FitCloudManualSyncItemObject
 
-/**
- * @brief 血氧值
- */
-@property(nonatomic, assign) UInt8      value;
+/// 血氧值
+@property(nonatomic, assign) UInt8 value;
 
 @end
 
-/**
- * @brief 手表血氧(Blood Oxygen)数据记录
- */
-@interface FitCloudBORecordObject : FitCloudManualSyncRecordObject<FitCloudBOItemObject*>
+/// 手表血氧(Blood Oxygen)数据记录
+@interface FitCloudBORecordObject : FitCloudManualSyncRecordObject <FitCloudBOItemObject *>
 
 @end
 
 #pragma mark - 心电
 
-/**
- * @brief 手表心电数据条目
- */
+/// 手表心电数据条目
 @interface FitCloudECGItemObject : FitCloudManualSyncItemObject
 
-/**
- * @brief 心电值
- */
+/// 心电值
 @property(nonatomic, assign) UInt16 value;
 
 @end
 
-/**
- * @brief 手表心电数据记录
- */
-@interface FitCloudECGRecordObject : FitCloudManualSyncRecordObject<FitCloudECGItemObject*>
+/// 手表心电数据记录
+@interface FitCloudECGRecordObject : FitCloudManualSyncRecordObject <FitCloudECGItemObject *>
 
 @end
 
 #pragma mark - 呼吸频率
 
-/**
- * @brief 手表呼吸频率(Breathe Rate)数据条目
- */
+/// 手表呼吸频率(Breathe Rate)数据条目
 @interface FitCloudBRItemObject : FitCloudManualSyncItemObject
 
-/**
- * @brief 呼吸频率
- */
-@property(nonatomic, assign) UInt8  value;
+/// 呼吸频率
+@property(nonatomic, assign) UInt8 value;
 
 @end
 
-/**
- * @brief 手表呼吸频率(Breathe Rate)数据记录
- */
-@interface FitCloudBRRecordObject : FitCloudManualSyncRecordObject<FitCloudBRItemObject*>
-
+/// 手表呼吸频率(Breathe Rate)数据记录
+@interface FitCloudBRRecordObject : FitCloudManualSyncRecordObject <FitCloudBRItemObject *>
 
 @end
 
 #pragma mark - 体温
 
-/**
- * @brief 手表体温(Body Temperature)数据条目
- */
+/// 手表体温(Body Temperature)数据条目
 @interface FitCloudBTItemObject : FitCloudManualSyncItemObject
 
-/**
- * @brief 腕温，单位：摄氏度
- */
-@property(nonatomic, assign) CGFloat  wrist;
+/// 腕温
+/// - Note: 单位：摄氏度
+@property(nonatomic, assign) CGFloat wrist;
 
-/**
- * @brief 体温，单位：摄氏度
- */
-@property(nonatomic, assign) CGFloat  body;
+/// 体温
+/// - Note: 单位：摄氏度
+@property(nonatomic, assign) CGFloat body;
 
 @end
 
-/**
- * @brief 手表体温(Body Temperature)数据记录
- */
-@interface FitCloudBTRecordObject : FitCloudManualSyncRecordObject<FitCloudBTItemObject*>
-
+/// 手表体温(Body Temperature)数据记录
+@interface FitCloudBTRecordObject : FitCloudManualSyncRecordObject <FitCloudBTItemObject *>
 
 @end
-
 
 #pragma mark - 压力
 
-/**
- * @brief 压力指数(Stress Index)数据条目
- */
+/// 压力指数(Stress Index)数据条目
 @interface FitCloudStressIndexItemObject : FitCloudManualSyncItemObject
 
-/**
- * @brief 压力指数
- */
-@property(nonatomic, assign) UInt8  stressIndex;
-
+/// 压力指数
+@property(nonatomic, assign) UInt8 stressIndex;
 
 @end
 
-/**
- * @brief 手表压力指数(Stress Index)数据记录
- */
-@interface FitCloudStressIndexRecordObject : FitCloudManualSyncRecordObject<FitCloudStressIndexItemObject*>
-
+/// 手表压力指数(Stress Index)数据记录
+@interface FitCloudStressIndexRecordObject : FitCloudManualSyncRecordObject <FitCloudStressIndexItemObject *>
 
 @end
-
 
 #pragma mark - 游戏记录
 
-/**
- * @brief 游戏记录数据条目
- */
+/// 游戏记录数据条目
 @interface FitCloudGameItemObject : FitCloudManualSyncItemObject
 
-/**
- * @brief 游戏类型
- */
-@property(nonatomic, assign) FITCLOUDGAME  category;
+/// 游戏类型
+@property(nonatomic, assign) FITCLOUDGAME category;
 
-/**
- * @brief 游戏开始时间
- */
-@property(nonatomic, strong) NSDate* begin;
+/// 游戏开始时间
+@property(nonatomic, strong) NSDate *begin;
 
-/**
- * @brief 游戏持续时长，单位：s
- */
+/// 游戏持续时长
+/// - Note: 单位：s
 @property(nonatomic, assign) NSInteger duration;
 
-/**
- * @brief 游戏分数
- */
+/// 游戏分数
 @property(nonatomic, assign) NSInteger score;
 
-/**
- * @brief 等级关卡
- */
+/// 等级关卡
 @property(nonatomic, assign) NSInteger level;
-
 
 @end
 
-/**
- * @brief 游戏记录数据
- */
-@interface FitCloudGameRecordObject : FitCloudManualSyncRecordObject<FitCloudGameItemObject*>
-
+/// 游戏记录数据
+@interface FitCloudGameRecordObject : FitCloudManualSyncRecordObject <FitCloudGameItemObject *>
 
 @end
 
 #pragma mark - 运动模式
 
-/**
- * @brief 手表运动模式运动数据条目
- */
+/// 手表运动模式运动数据条目
 @interface FitCloudSportsItemObject : FitCloudManualSyncItemObject
 
 /// 运动类型
 @property(nonatomic, assign) UInt16 workoutType;
 
-/// 运动时长(秒)
-@property(nonatomic, assign) UInt16  duration;
+/// 运动时长
+/// - Note: 单位：秒
+@property(nonatomic, assign) UInt16 duration;
 
 /// 步数
 @property(nonatomic, assign) UInt16 steps;
 
-/// 距离(米)
+/// 距离
+/// - Note: 单位：米
 @property(nonatomic, assign) UInt16 distance;
 
-/// 卡路里(小卡)
+/// 卡路里
+/// - Note: 单位：小卡
 @property(nonatomic, assign) UInt16 calorie;
 
-/// 配速(min/km)
+/// 配速
+/// - Note: 单位：min/km
 @property(nonatomic, assign) UInt16 pace;
 
-/// 泳姿   1: 自由泳 2:蛙泳 3:仰泳 4:蝶泳
-@property(nonatomic, strong) NSNumber* swimStyle;
+/// 泳姿
+/// - Note: 1: 自由泳 2:蛙泳 3:仰泳 4:蝶泳
+@property(nonatomic, strong, nullable) NSNumber *swimStyle;
 
 /// 游泳趟数
-@property(nonatomic, strong) NSNumber* swimLaps;
+@property(nonatomic, strong, nullable) NSNumber *swimLaps;
 
 /// 游泳划水次数
-@property(nonatomic, strong) NSNumber* swimStrokes;
+@property(nonatomic, strong, nullable) NSNumber *swimStrokes;
 
 /// 游泳划水频率
-@property(nonatomic, strong) NSNumber* swimStrokeFreq;
+@property(nonatomic, strong, nullable) NSNumber *swimStrokeFreq;
 
 /// 游泳效率
-@property(nonatomic, strong) NSNumber* swolf;
+@property(nonatomic, strong, nullable) NSNumber *swolf;
 
-///跳绳-触发次数
-@property(nonatomic, strong) NSNumber* jumpRopeTriggerCount;
+/// 跳绳-触发次数
+@property(nonatomic, strong, nullable) NSNumber *jumpRopeTriggerCount;
 
-///跳绳-中断次数
-@property(nonatomic, strong) NSNumber* jumpRopeBreakCount;
+/// 跳绳-中断次数
+@property(nonatomic, strong, nullable) NSNumber *jumpRopeBreakCount;
 
-///跳绳-连续次数
-@property(nonatomic, strong) NSNumber* jumpRopeConsecutiveCount;
+/// 跳绳-连续次数
+@property(nonatomic, strong, nullable) NSNumber *jumpRopeConsecutiveCount;
 
-///椭圆机-触发次数
-@property(nonatomic, strong) NSNumber* ellipticalTrainerTriggerCount;
+/// 椭圆机-触发次数
+@property(nonatomic, strong, nullable) NSNumber *ellipticalTrainerTriggerCount;
 
-///椭圆机-触发频率
-@property(nonatomic, strong) NSNumber* ellipticalTrainerTriggersPerMinute;
+/// 椭圆机-触发频率
+@property(nonatomic, strong, nullable) NSNumber *ellipticalTrainerTriggersPerMinute;
 
-///椭圆机-最大触发频率
-@property(nonatomic, strong) NSNumber* maxEllipticalTrainerTriggersPerMinute;
+/// 椭圆机-最大触发频率
+@property(nonatomic, strong, nullable) NSNumber *maxEllipticalTrainerTriggersPerMinute;
 
-///椭圆机-最小触发频率
-@property(nonatomic, strong) NSNumber* minEllipticalTrainerTriggersPerMinute;
+/// 椭圆机-最小触发频率
+@property(nonatomic, strong, nullable) NSNumber *minEllipticalTrainerTriggersPerMinute;
 
-///划船机-触发次数
-@property(nonatomic, strong) NSNumber* rowingMachingTriggerCount;
+/// 划船机-触发次数
+@property(nonatomic, strong, nullable) NSNumber *rowingMachingTriggerCount;
 
-///划船机-触发频率
-@property(nonatomic, strong) NSNumber* rowingMachingTriggersPerMinute;
+/// 划船机-触发频率
+@property(nonatomic, strong, nullable) NSNumber *rowingMachingTriggersPerMinute;
 
-///划船机-最大触发频率
-@property(nonatomic, strong) NSNumber* maxRowingMachingTriggersPerMinute;
+/// 划船机-最大触发频率
+@property(nonatomic, strong, nullable) NSNumber *maxRowingMachingTriggersPerMinute;
 
-///划船机-最小触发频率
-@property(nonatomic, strong) NSNumber* minRowingMachingTriggersPerMinute;
+/// 划船机-最小触发频率
+@property(nonatomic, strong, nullable) NSNumber *minRowingMachingTriggersPerMinute;
 
 @end
 
-@interface FitCloudBPMDataModel: NSObject
+/// 心率数据模型
+@interface FitCloudBPMDataModel : NSObject
 
 /// 采样时刻
-@property(nonatomic, strong) NSDate* moment;
+@property(nonatomic, strong) NSDate *moment;
 
-/// 心率(次/min)
-///
-/// > Important: Returns nil when invalid
-@property(nonatomic, strong, nullable) NSNumber* value;
+/// 心率
+/// - Note: 单位：次/min
+/// - Important: Returns nil when invalid
+@property(nonatomic, strong, nullable) NSNumber *value;
 
 @end
 
-/**
- * @brief 手表运动模式运动数据记录
- */
-@interface FitCloudSportsRecordObject : FitCloudManualSyncRecordObject<FitCloudSportsItemObject*>
+/// 手表运动模式运动数据记录
+@interface FitCloudSportsRecordObject : FitCloudManualSyncRecordObject <FitCloudSportsItemObject *>
 
-/**
- * @brief 手表独立GPS运动，该字段关联对应的GPS数据
- */
-@property(nonatomic, strong, nullable) NSString* gpsDataAssociateKey;
+/// 手表独立GPS运动，该字段关联对应的GPS数据
+@property(nonatomic, strong, nullable) NSString *gpsDataAssociateKey;
 
 /// 当手表支持独立GPS运动且支持指定展示数据是表示展示数据信息
-/// the workout display configurations
-///
-/// @see `WORKOUTDATAITEMDISPLAY`,  if want to display `WORKOUTDATAITEMDISPLAY_DURATION` and `WORKOUTDATAITEMDISPLAY_AVG_BPM`, the displayConfig string should be `"1,2"`, and so on.
-@property(nonatomic, strong, nullable) NSString* displayConfig;
+/// - Note: if want to display `WORKOUTDATAITEMDISPLAY_DURATION` and `WORKOUTDATAITEMDISPLAY_AVG_BPM`, the displayConfig string should be `"1,2"`, and so on.
+@property(nonatomic, strong, nullable) NSString *displayConfig;
 
 /// 运动心率数据
-@property(nonatomic, strong, nullable) NSArray<FitCloudBPMDataModel*>* bpmDataArray;
+@property(nonatomic, strong, nullable) NSArray<FitCloudBPMDataModel *> *bpmDataArray;
 
 @end
-
 
 #pragma mark - GPS数据
 
-/**
- * @brief 手表运动模式运动GPS数据条目
- */
+/// 手表运动模式运动GPS数据条目
 @interface FitCloudGPSItemObject : FitCloudManualSyncItemObject
 
-/**
- * @brief 经度
- */
+/// 经度
 @property(nonatomic, assign) CGFloat longitude;
 
-
-/**
- * @brief 纬度
- */
+/// 纬度
 @property(nonatomic, assign) CGFloat latitude;
 
-/**
- * @brief 海拔,单位：m
- */
+/// 海拔
+/// - Note: 单位：m
 @property(nonatomic, assign) UInt16 altitude;
 
-
-/**
- * @brief 卫星数量（个数）
- */
-@property(nonatomic, assign) UInt8  satellitesCount;
+/// 卫星数量
+/// - Note: 单位：个数
+@property(nonatomic, assign) UInt8 satellitesCount;
 
 /// 是否为一段的起点
-@property(nonatomic, assign) BOOL   isStartingPoint;
+@property(nonatomic, assign) BOOL isStartingPoint;
 
 @end
 
-/**
- * @brief 手表运动模式运动GPS数据记录
- */
-@interface FitCloudGPSRecordObject : FitCloudManualSyncRecordObject<FitCloudGPSItemObject*>
+/// 手表运动模式运动GPS数据记录
+@interface FitCloudGPSRecordObject : FitCloudManualSyncRecordObject <FitCloudGPSItemObject *>
 
-/**
- * @brief 手表独立GPS运动Key
- */
-@property(nonatomic, strong) NSString* gpsDataKey;
+/// 手表独立GPS运动Key
+@property(nonatomic, strong) NSString *gpsDataKey;
 
 @end
 
 #pragma mark - 健康实时测量
 
-/**
- * @brief 实时健康测量项定义
- */
-typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM)
-{
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_NONE = 0,                        //无
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_HEARTRATE = 1,                   //心率
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODOXYGEN = 1 << 1,            //血氧
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODPRESSURE = 1 << 2,          //血压
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_BREATHERATE = 1 << 3,            //呼吸频率
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_ECG = 1 << 4,                    //心电
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_BODYTEMPERATURE = 1 << 5,        //体温
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_STRESSINDEX = 1 << 6,            //压力指数
+/// 实时健康测量项定义
+typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM) {
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_NONE = 0,                 // 无
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_HEARTRATE = 1,            // 心率
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODOXYGEN = 1 << 1,     // 血氧
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODPRESSURE = 1 << 2,   // 血压
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_BREATHERATE = 1 << 3,     // 呼吸频率
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_ECG = 1 << 4,             // 心电
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_BODYTEMPERATURE = 1 << 5, // 体温
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_STRESSINDEX = 1 << 6,     // 压力指数
 };
 
-/**
- * @brief 实时健康测量参数
- */
-@interface FitCloudRealTimeHealthMeasuringParam : NSObject<NSCoding>
+/// 实时健康测量参数
+@interface FitCloudRealTimeHealthMeasuringParam : NSObject <NSCoding>
 
-/**
- * @brief 测量项
- */
+/// 测量项
 @property(nonatomic, assign) FITCLOUDREALTIMEMHEALTHEASUREITEM item;
 
-/**
- * @brief 实时测量时间间隔(单位：秒)
- */
+/// 实时测量时间间隔
+/// - Note: 单位：秒
 @property(nonatomic, assign) UInt8 interval;
 
-/**
- * @brief 单次实时测量最长时间限制(单位：分钟)
- */
+/// 单次实时测量最长时间限制
+/// - Note: 单位：分钟
 @property(nonatomic, assign) UInt8 maxMeasuringMinutes;
 
 @end
 
-/**
- * @brief 实时健康测量返回的数据
- */
+/// 实时健康测量返回的数据
 @interface FitCloudRealTimeHealthMeasuringResultObject : NSObject
 
-/**
-* @brief 采样时刻
-*/
-@property(nonatomic, strong) NSDate* moment;
+/// 采样时刻
+@property(nonatomic, strong) NSDate *moment;
 
-/**
- * @brief 心率
- */
+/// 心率
 @property(nonatomic, assign) UInt8 heartRate;
 
-/**
- * @brief 血氧
- */
+/// 血氧
 @property(nonatomic, assign) UInt8 bloodOxygen;
 
-/**
- *@brief 舒张压
- */
+/// 舒张压
 @property(nonatomic, assign) UInt8 diastolic;
 
-/**
- *@brief 收缩压
- */
+/// 收缩压
 @property(nonatomic, assign) UInt8 systolic;
 
-/**
- * @brief 呼吸频率
- */
-@property(nonatomic, assign) UInt8  breatheRate;
+/// 呼吸频率
+@property(nonatomic, assign) UInt8 breatheRate;
 
-/**
- * @brief 体温测量状态  0:正常状态，数据正常返回中； 1:测量结束，正常结束时间结束； 2:测量结束，未佩戴手表；3:测量结束，体温过高；4:测量结束，体温过低；
- */
-@property(nonatomic, assign) UInt8  temperatureFlag;
+/// 体温测量状态
+/// - Note: 0:正常状态，数据正常返回中； 1:测量结束，正常结束时间结束； 2:测量结束，未佩戴手表；3:测量结束，体温过高；4:测量结束，体温过低；
+@property(nonatomic, assign) UInt8 temperatureFlag;
 
-/**
- * @brief 腕温，单位：摄氏度
- */
-@property(nonatomic, assign) CGFloat  wrist;
+/// 腕温
+/// - Note: 单位：摄氏度
+@property(nonatomic, assign) CGFloat wrist;
 
-/**
- * @brief 体温，单位：摄氏度
- */
-@property(nonatomic, assign) CGFloat  body;
+/// 体温
+/// - Note: 单位：摄氏度
+@property(nonatomic, assign) CGFloat body;
 
-/**
- * @brief 压力，当手表支持压力指数时有效
- */
-@property(nonatomic, assign) UInt8  stressIndex;
+/// 压力
+/// - Note: 当手表支持压力指数时有效
+@property(nonatomic, assign) UInt8 stressIndex;
 
 @end
 
 #pragma mark - 每日运动健康数据
 
 /// 每日运动健康数据
-@interface FitCloudDailyHealthAndSportsDataObject : NSObject<NSCoding>
+@interface FitCloudDailyHealthAndSportsDataObject : NSObject <NSCoding>
 
 /// 累计步数
 @property(nonatomic, assign) NSUInteger steps;
@@ -618,3 +475,5 @@ typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM)
 @property(nonatomic, assign) UInt16 durationInMinutes;
 
 @end
+
+NS_ASSUME_NONNULL_END
