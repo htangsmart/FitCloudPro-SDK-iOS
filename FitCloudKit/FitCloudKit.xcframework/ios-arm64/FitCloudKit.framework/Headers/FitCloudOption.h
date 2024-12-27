@@ -15,7 +15,7 @@
 /// Whether it is in debug mode.
 ///
 /// > Important: Debug mode will print logs to the Xcode console, otherwise logs will be received by the FitCloudCallback. Default is non-debug mode.
-@property(nonatomic, assign) BOOL  debugMode;
+@property(nonatomic, assign) BOOL debugMode;
 
 /// The scan timeout time in seconds
 ///
@@ -51,18 +51,18 @@
 
 /// Whether to prioritize syncing the iOS system language to the watch device.
 ///
-/// > Important: The default value is NO. When you manually change the app's localization language settings, it is not possible to prioritize syncing the iOS system language to the watch due to system limitations.
-@property(nonatomic, assign) BOOL    preferSystemLocale;
+/// > Important: The default value is NO. When you manually change the app's localization language settings, it is not possible to prioritize syncing the iOS system language to the watch due to Apple's Per-App Language Settings.
+@property(nonatomic, assign) BOOL preferSyncSystemLang;
 
-/// Whether to automatically synchronize the iOS system time to the watch device.
+/// Whether to automatically synchronize the iOS system time to the watch device when connected to the watch.
 ///
 /// > Important: The default value is YES.
 @property(nonatomic, assign) BOOL autoSyncSystemTime;
 
-/// Whether to automatically synchronize the iOS system language to the watch device.
+/// Whether to automatically synchronize the user language to the watch device when connected to the watch.
 ///
 /// > Important: The default value is YES.
-@property(nonatomic, assign) BOOL autoSyncSystemLang;
+@property(nonatomic, assign) BOOL autoSyncUserLanguage;
 
 /// Whether prefer to use WriteWithoutResponse
 ///
@@ -72,7 +72,7 @@
 /// Preferred document saving path, relative to NSDocumentDirectory.
 ///
 /// > Important: The default value is empty string. The path must be relative to NSDocumentDirectory and does not support saving to other directories.
-@property(nonatomic, copy) NSString* preferredDocSavingRelativePath;
+@property(nonatomic, copy) NSString *preferredDocSavingRelativePath;
 
 /// Whether to only scan and discover Bluetooth devices from known manufacturers.
 ///

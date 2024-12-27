@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.60 build20241227001 (2024-12-27)
+
+- Renamed several APIs related to language synchronization.
+
 ## 1.3.0-beta.59 build20241226001 (2024-12-26)
 
 - Renamed several APIs related to GPS file operations.

@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-12-26  Version:1.3.0-beta.59 Build:20241226001
+//      pcjbird    2024-12-27  Version:1.3.0-beta.60 Build:20241227001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -817,29 +817,48 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: The completion handler called when the operation completes
 + (void)exitSleepWithBlock:(FitCloudResultHandler _Nullable)block;
 
-#pragma mark System Language Sync
+#pragma mark Synchronize the user language to the watch device
 
-/// Synchronize the watch language with the system language
-///
-/// If you have set a custom watch language, it will sync to your setting
+/// Synchronize the user language to the watch device
 /// - Parameters:
-///   - block: The completion handler called when the sync completes
-+ (void)syncSystemLanguageWithBlock:(FitCloudResultHandler _Nullable)block;
+///   - completion: A completion handler called with the result. Parameters:
+///     - success: Whether the sync was successful
+///     - error: Error information if sync fails, nil on success
+/// - Warning: This method is only available if `watchPreferLang` of the FitCloudOption is not set to a specific language (e.g. `FITCLOUDLANGUAGE_ENGLISH`) during FitCloudKit initialization.
+///
+/// Priority order:
+///    1. `watchPreferLang` of the FitCloudOption
+///    2. iOS system language, if `preferSyncSystemLang` of the FitCloudOption is YES, may not effective for Apple's Per-App Language Settings.
+///    3. App language
++ (void)syncUserLanguageToWatchWithCompletion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
 
-#pragma mark Custom Watch Language
+#pragma mark Synchronize a specific language to the watch device
 
-/// Set a custom language for the watch
+/// Synchronize a specific language to the watch device
 /// - Parameters:
 ///   - lang: The language to set
-///   - block: The completion handler called when the operation completes
-+ (void)setSmartWatchLanguage:(FITCLOUDLANGUAGE)lang completion:(FitCloudResultHandler _Nullable)block;
+///   - completion: A completion handler called with the result. Parameters:
+///     - success: Whether the sync was successful
+///     - error: Error information if sync fails, nil on success
+/// - Warning: This method will change the `watchPreferLang` of the FitCloudOption to the specified language if the language is different from the current, and then synchronize the language to the watch device.
++ (void)syncSpecificLanguageToWatch:(FITCLOUDLANGUAGE)lang completion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
 
-#pragma mark Query Watch Language
+#pragma mark Query the current language of the watch device
 
-/// Query the current watch language setting
+/// Query the current language of the watch device
 /// - Parameters:
-///   - completion: The completion handler called with the current language setting
-+ (void)querySmartWatchLanguageWithCompletion:(FitCloudLanguageQueryCompletion _Nullable)completion;
+///   - completion: A completion handler called with the result. Parameters:
+///     - success: Whether the query was successful
+///     - lang: The current language of the watch device
+///     - error: Error information if query fails, nil on success
++ (void)queryWatchLanguageWithCompletion:(void (^_Nullable)(BOOL success, FITCLOUDLANGUAGE lang, NSError *_Nullable error))completion;
+
+#pragma mark - Watch language utilities
+
+/// Get the Chinese display name for a language
+/// - Parameter language: The language enum value
+/// - Returns: The Chinese display name of the language
++ (NSString *)cnDisplayNameOfWatchLanguage:(FITCLOUDLANGUAGE)language;
 
 #pragma mark Supported Games
 

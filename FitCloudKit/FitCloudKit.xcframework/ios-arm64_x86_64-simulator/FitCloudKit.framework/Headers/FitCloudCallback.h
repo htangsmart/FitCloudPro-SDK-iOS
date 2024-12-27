@@ -480,13 +480,6 @@ typedef void (^FitCloudNewOTACompletionBlock)(BOOL success, CGFloat avgSpeed, NS
 ///   - error: error information
 typedef void (^FitCloudNewOTACancelCompletionBlock)(BOOL success, NSError *error);
 
-/// The smart watch language query completion block
-/// - Parameters:
-///   - success: whether query success
-///   - lang: the smart watch language
-///   - error: error information
-typedef void (^FitCloudLanguageQueryCompletion)(BOOL success, FITCLOUDLANGUAGE lang, NSError *error);
-
 /// The smart watch emergency contacts query completion block
 /// - Parameters:
 ///   - success: whether query success
