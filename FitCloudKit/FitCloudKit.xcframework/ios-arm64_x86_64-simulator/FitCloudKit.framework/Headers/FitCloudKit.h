@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-12-27  Version:1.3.0-beta.60 Build:20241227001
+//      pcjbird    2024-12-28  Version:1.3.0-beta.61 Build:20241228001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -856,7 +856,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Watch language utilities
 
 /// Get the Chinese display name for a language
-/// - Parameter language: The language enum value
+/// - Parameters:
+///   - language: The watch language
 /// - Returns: The Chinese display name of the language
 + (NSString *)cnDisplayNameOfWatchLanguage:(FITCLOUDLANGUAGE)language;
 

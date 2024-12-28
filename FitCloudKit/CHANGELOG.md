@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.3.0-beta.61 build20241228001 (2024-12-28)
+
+- Added support for JPG slice transfer interval, with a minimum value of 15ms.
+- Added new API to query the serial number of Transsion Infinix watches.
+
 ## 1.3.0-beta.60 build20241227001 (2024-12-27)
 
 - Renamed several APIs related to language synchronization.
