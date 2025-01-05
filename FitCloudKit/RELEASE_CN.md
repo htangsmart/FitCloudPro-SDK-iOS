@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-12-28 Version:1.3.0-beta.61 Build:20241228001
+## pcjbird 2025-01-05 Version:1.3.0-beta.62 Build:20250105001
 
 - 修复了设置和查询耳机仓歌词颜色的问题。
 - 修复运动心率的一些问题。
@@ -42,6 +42,7 @@
 - 修复常用联系人名称中包含某些特殊字符时导致设置常用联系人失败的问题。
 - 新增 API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion` 以通知手表设备当前 MAC 地址未在翻译能力提供商处注册。
 - 重命名了与语言同步相关的 API。
+- 修改了一些关于手表设备在 GPS 文件升级过程中向手表写入 GPS 文件时回调 App 的 API。
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

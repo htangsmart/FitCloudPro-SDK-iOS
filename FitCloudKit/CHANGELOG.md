@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.62 build20250105001 (2025-01-05)
+
+- Changed several APIs related to callbacks to the App when writing GPS files to the watch device during GPS file upgrade process.
+
 ## 1.3.0-beta.61 build20241228001 (2024-12-28)
 
 - Added support for JPG slice transfer interval, with a minimum value of 15ms.

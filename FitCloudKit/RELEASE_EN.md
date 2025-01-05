@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-12-28 Version:1.3.0-beta.61 Build:20241228001
+## pcjbird 2025-01-05 Version:1.3.0-beta.62 Build:20250105001
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -43,6 +43,7 @@
 - Fixed an issue where setting favorite contacts would fail when contact names contained certain special characters.
 - Introduce the API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion` to notify the watch device that the current MAC address is not registered with the translation service provider.
 - Renamed several APIs related to language synchronization.
+- Changed several APIs related to callbacks to the App when writing GPS files to the watch device during GPS file upgrade process.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

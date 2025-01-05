@@ -685,8 +685,16 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// 手表请求GPS定位数据
 - (void)onRequestGPSLocationData;
 
-/// 手表通知GPS文件升级代码，升级中的范围：0~100 ，升级成功：101，升级失败：255
-- (void)OnGPSFileUpgradeCode:(NSInteger)code;
+/// Notifies the progress of writing GPS file to watch after uploading GPS file to watch during GPS file upgrade process
+/// - Parameters:
+///   - progress: The writing progress, ranging from 0 to 100
+- (void)onWritingGPSFileToWatchProgress:(NSInteger)progress;
+
+/// Notifies that GPS file has been successfully written to watch after uploading GPS file to watch during GPS file upgrade process
+- (void)onWritingGPSFileToWatchSuccess;
+
+/// Notifies that GPS file writing to watch has failed
+- (void)onWritingGPSFileToWatchFailed;
 
 /// GSensor数据
 /// - Parameters:

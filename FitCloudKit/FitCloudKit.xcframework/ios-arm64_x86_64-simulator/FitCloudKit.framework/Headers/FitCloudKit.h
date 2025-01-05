@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2024-12-28  Version:1.3.0-beta.61 Build:20241228001
+//      pcjbird    2025-01-05  Version:1.3.0-beta.62 Build:20250105001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1144,6 +1144,14 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - allowUpload: Whether GPS file upload is currently allowed
 ///     - error: Error information if query fails
 + (void)queryWhetherWatchDeviceAllowsUploadGPSFileNowWithCompletion:(void (^_Nullable)(BOOL success, BOOL allowUpload, NSError *_Nullable error))completion;
+
+/// Queries the expiration time of the GPS file on the watch device
+/// - Parameters:
+///   - completion: A completion handler called when the query finishes
+///   - success: Whether the query was successful
+///   - expireTimeModel: The expiration time model containing GPS week number and time of week, nil if query failed
+///   - error: An error object that indicates why the query failed, or nil if successful
++ (void)queryGPSFileOnWatchDeviceExpireTimeWithCompletion:(void (^_Nullable)(BOOL success, FitCloudGPSFileExpireTimeModel *_Nullable expireTimeModel, NSError *_Nullable error))completion;
 
 /// Query current GPS file state on watch device
 /// - Parameters:
