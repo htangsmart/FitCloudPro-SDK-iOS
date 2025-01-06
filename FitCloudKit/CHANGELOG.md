@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.63 build20250106001 (2025-01-06)
+
+- Changed the logic of querying the state of the GPS file on the watch device: If the validity period is less than 3 days, it is considered that the GPS file needs to be updated.
+
 ## 1.3.0-beta.62 build20250105001 (2025-01-05)
 
 - Changed several APIs related to callbacks to the App when writing GPS files to the watch device during GPS file upgrade process.
