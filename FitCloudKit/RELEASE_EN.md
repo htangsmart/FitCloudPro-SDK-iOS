@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-01-06 Version:1.3.0-beta.63 Build:20250106001
+## pcjbird 2025-01-08 Version:1.3.0-beta.64 Build:20250108001
 
 - Add events to notify changes of the workout status on the watch side.
 - Fixed the issue with setting and querying the lyrics color for the earphone case.
@@ -45,6 +45,7 @@
 - Renamed several APIs related to language synchronization.
 - Changed several APIs related to callbacks to the App when writing GPS files to the watch device during GPS file upgrade process.
 - Changed the logic of querying the state of the GPS file on the watch device: If the validity period is less than 3 days, it is considered that the GPS file needs to be updated.
+- Fixed a potential crash issue that could occur when client apps do not integrate the FitCloudKit.bundle resource bundle.
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 

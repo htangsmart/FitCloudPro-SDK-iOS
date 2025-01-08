@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.64 build20250108001 (2025-01-08)
+
+- Fixed a potential crash issue that could occur when client apps do not integrate the FitCloudKit.bundle resource bundle.
+
 ## 1.3.0-beta.63 build20250106001 (2025-01-06)
 
 - Changed the logic of querying the state of the GPS file on the watch device: If the validity period is less than 3 days, it is considered that the GPS file needs to be updated.
