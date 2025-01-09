@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.65 build20250109001 (2025-01-09)
+
+- Enhanced the stability of the SDK.
+
 ## 1.3.0-beta.64 build20250108001 (2025-01-08)
 
 - Fixed a potential crash issue that could occur when client apps do not integrate the FitCloudKit.bundle resource bundle.
