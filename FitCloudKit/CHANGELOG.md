@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.3.0-beta.67 build20250110002 (2025-01-10)
+
+- Rename the `FitCloudDailyGoalObject` property `caloryGoal` to `calorieGoal`.
+- Enhanced the stability of the SDK.
+
 ## 1.3.0-beta.66 build20250110001 (2025-01-10)
 
 - Fixed an issue where the API for querying female health feature support on Transsion Infinix devices was returning incorrect results.

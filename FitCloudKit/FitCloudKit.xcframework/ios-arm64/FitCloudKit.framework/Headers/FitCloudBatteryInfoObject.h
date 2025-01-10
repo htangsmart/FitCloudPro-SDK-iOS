@@ -8,32 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- * @brief 手表充电状态
- */
-typedef NS_ENUM(Byte, BATTERYSTATE)
-{
-    BATTERYSTATE_NORMAL = 0,         //未充电
-    BATTERYSTATE_CHARGING = 1,       //充电中
+/// The charging state of the watch
+typedef NS_ENUM(Byte, BATTERYSTATE) {
+    BATTERYSTATE_NORMAL = 0,   // Not charging
+    BATTERYSTATE_CHARGING = 1, // Charging
 };
 
-/**
- * @brief 手表电量以及充电状态信息
- */
-@interface FitCloudBatteryInfoObject : NSObject
+/// Information about the watch battery level and charging status
+@interface FitCloudBatteryInfoObject : NSObject <NSCopying>
 
-/**
- * @brief 手表充电状态
- */
+/// The charging state of the watch
 @property(nonatomic, assign) BATTERYSTATE state;
 
-/**
- * @brief 电量格数
- */
+/// The battery level in bars/grids
 @property(nonatomic, assign) UInt8 value;
 
-/**
- * @brief 电量百分比  范围：0～100
- */
+/// The battery level percentage (range: 0-100)
 @property(nonatomic, assign) UInt8 percent;
 @end

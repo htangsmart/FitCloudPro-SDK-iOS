@@ -8,35 +8,29 @@
 
 #import <Foundation/Foundation.h>
 
-
+/// Daily goal object
 @interface FitCloudDailyGoalObject : NSObject
 
 + (instancetype _Nullable)new NS_UNAVAILABLE;
 - (instancetype _Nullable)init NS_UNAVAILABLE;
 
-/**
- * @brief 步数目标，单位：步数
- */
-@property (nonatomic, readonly) UInt32 stepCountGoal;
+/// The step count goal
+/// - Note: Unit is steps
+@property(nonatomic, readonly) UInt32 stepCountGoal;
 
-/**
- * @brief 距离目标，单位：厘米(cm)
- */
-@property (nonatomic, readonly) UInt32 distanceGoal;
+/// The distance goal
+/// - Note: Unit is centimeters (cm)
+@property(nonatomic, readonly) UInt32 distanceGoal;
 
+/// The calorie goal
+/// - Note: Unit is calories (cal)
+@property(nonatomic, readonly) UInt32 calorieGoal;
 
-/**
- * @brief 卡路里目标，单位：小卡(cal)
- */
-@property (nonatomic, readonly) UInt32 caloryGoal;
+/// The exercise duration goal
+/// - Note: Unit is minutes
+@property(nonatomic, readonly) UInt16 durationGoal;
 
-/// 运动时长目标，单位：分钟
-@property (nonatomic, readonly) UInt16 durationGoal;
-
-/**
- * @brief 时间戳
- */
-@property (nonatomic, strong, readonly) NSDate* _Nullable timestamp;
+/// The timestamp when this goal was set
+@property(nonatomic, strong, readonly) NSDate *_Nullable timestamp;
 
 @end
-

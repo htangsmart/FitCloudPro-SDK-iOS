@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/FitCloudBatteryInfoObject.h</key>
 		<data>
-		AXdhvwtiN0GWhyMdw5n6IsGk6LM=
+		7jK8bM8z7PjrVnPoXl53aRtUuNs=
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Headers/FitCloudDailyGoalObject.h</key>
 		<data>
-		4RVzssBkEpN7G8v5EK3IGN//Vyw=
+		IWg3+oJiqAqBCelnzP7OPEntgu0=
 		</data>
 		<key>Headers/FitCloudECGDefines.h</key>
 		<data>
@@ -174,7 +174,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		khQK8CwompbhnIY2kklr4z3tvsQ=
+		YUeYdcqJkvMVh7+uYmX3jzfFypc=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -330,7 +330,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QtcCmcMlvko2pVp7QMyMFMV3O/0=
+		vi1r85TfBaI947at0xOnMDz1eVM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -387,11 +387,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AXdhvwtiN0GWhyMdw5n6IsGk6LM=
+			7jK8bM8z7PjrVnPoXl53aRtUuNs=
 			</data>
 			<key>hash2</key>
 			<data>
-			uMLQYM9Vggf/T0sEQ5D1NJWH/jz/GJD5W8hbtjT4SJ4=
+			t69vxjAVfpSArENLCVRSK6JuXSz7bLygsRQyYBi4cg0=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCallback.h</key>
@@ -508,11 +508,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4RVzssBkEpN7G8v5EK3IGN//Vyw=
+			IWg3+oJiqAqBCelnzP7OPEntgu0=
 			</data>
 			<key>hash2</key>
 			<data>
-			RDKPpveM7iXpdrg3+h4bqpjerTd3QueuL8cDOqZr+eI=
+			5p2/OnvhQul/1tEwGJn6HkUUEX+tt1wDcW7MAxtqxJg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudECGDefines.h</key>
@@ -805,11 +805,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			khQK8CwompbhnIY2kklr4z3tvsQ=
+			YUeYdcqJkvMVh7+uYmX3jzfFypc=
 			</data>
 			<key>hash2</key>
 			<data>
-			VRoohRwfuyGNmbZg2vT+c46HdSULfr60USQelIx1iVM=
+			pFYLfAQ8A+h89fDrRIqQx3BaG/I6wWWFLrlgytncZOE=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
