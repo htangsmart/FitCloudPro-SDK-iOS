@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.3.0-beta.66 build20250110001 (2025-01-10)
+
+- Fixed an issue where the API for querying female health feature support on Transsion Infinix devices was returning incorrect results.
+- Enhanced the stability of the SDK.
+
 ## 1.3.0-beta.65 build20250109001 (2025-01-09)
 
 - Enhanced the stability of the SDK.
