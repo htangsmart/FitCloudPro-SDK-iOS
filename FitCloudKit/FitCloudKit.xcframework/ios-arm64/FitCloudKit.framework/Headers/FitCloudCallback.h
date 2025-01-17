@@ -126,8 +126,9 @@ typedef void (^FitCloudSchedulesResultBlock)(BOOL succeed, NSArray<FitCloudSched
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - list: 任务列表
+///   - totalCoinsEarned: 总金币数
 ///   - error: 错误信息
-typedef void (^FitCloudTaskQueryCompletion)(BOOL succeed, NSArray<FitCloudTaskModel *> *tasks, NSError *error);
+typedef void (^FitCloudTaskQueryCompletion)(BOOL succeed, NSArray<FitCloudTaskModel *> *tasks, NSNumber *totalCoinsEarned, NSError *error);
 
 /// FitCloud 获取常用联系人列表调用结果回调
 /// - Parameters:

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.68 build20250117001 (2025-01-17)
+
+- Add the `totalCoinsEarned` parameter to the `My Task` API.
+
 ## 1.3.0-beta.67 build20250110002 (2025-01-10)
 
 - Rename the `FitCloudDailyGoalObject` property `caloryGoal` to `calorieGoal`.

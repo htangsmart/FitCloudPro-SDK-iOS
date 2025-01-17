@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-01-10  Version:1.3.0-beta.67 Build:20250110002
+//      pcjbird    2025-01-17  Version:1.3.0-beta.68 Build:20250117001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -359,8 +359,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Synchronizes the task list from phone to watch
 /// - Parameters:
 ///   - tasks: The array of tasks
+///   - totalCoinsEarned: The total coins earned
 ///   - completion: The completion handler called when the sync completes
-+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks completion:(FitCloudResultHandler _Nullable)completion;
++ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudResultHandler _Nullable)completion;
 
 #pragma mark Get Tasks
 
