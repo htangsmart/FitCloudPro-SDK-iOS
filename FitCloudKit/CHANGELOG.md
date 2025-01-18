@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.3.0-beta.69 build20250118001 (2025-01-18)
+
+- Add the `querySupportedWorkoutOnWatchWithCompletion:` API to query the supported workout types on the watch device.
+- Add the `queryWorkoutSlotsOnWatchWithCompletion:` API to query the workout slots on the watch device.
+
 ## 1.3.0-beta.68 build20250117001 (2025-01-17)
 
 - Add the `totalCoinsEarned` parameter to the `My Task` API.

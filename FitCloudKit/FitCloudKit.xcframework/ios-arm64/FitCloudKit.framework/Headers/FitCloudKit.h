@@ -10,11 +10,12 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-01-17  Version:1.3.0-beta.68 Build:20250117001
+//      pcjbird    2025-01-18  Version:1.3.0-beta.69 Build:20250118001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import <FitCloudKit/FitCloudModels.h>
 #import <FitCloudKit/FitCloudEvent.h>
 #import <FitCloudKit/FitCloudCallback.h>
 #import <FitCloudKit/FitCloudOption.h>
@@ -164,15 +165,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// Watch device MAC address
 + (NSString *_Nullable)macAddr;
 
-#pragma mark GPS Module Firmware Version
+#pragma mark GPS Firmware Version
 
-/// GPS Module Firmware Version
-+ (NSString *_Nullable)moduleGPSFirmwareVersion;
+/// GPS Firmware Version
++ (NSString *_Nullable)gpsFirmwareVersion;
 
-#pragma mark 4G Modem Module Firmware Version
+#pragma mark 4G Modem Firmware Version
 
-/// 4G Modem Module Firmware Version
-+ (NSString *_Nullable)module4GModemFirmwareVersion;
+/// 4G Modem Firmware Version
++ (NSString *_Nullable)modem4gFirmwareVersion;
 
 #pragma mark Current configuration information of the watch
 
@@ -920,19 +921,25 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: The completion handler called with the parameters
 + (void)getPhotoPushParamsWithBlock:(FitCloudPhotoAlbumParamsResultBlock _Nullable)block;
 
-#pragma mark Supported Sports Modes
+#pragma mark Query the supported workout types on the watch
 
-/// Get the list of sports modes supported by the device
+/// Query the supported workout types on the watch
 /// - Parameters:
-///   - block: The completion handler called with the supported sports modes
-+ (void)getSupportedWatchSportsWithBlock:(FitCloudSupportedWatchSportsResultBlock _Nullable)block;
+///   - completion: A completion handler called with the result. Parameters:
+///     - success: Whether the query was successful
+///     - workoutTypesArray: The array of supported workout types, nil if query fails
+///     - error: Error information if query fails, nil on success
++ (void)querySupportedWorkoutOnWatchWithCompletion:(void (^_Nullable)(BOOL success, NSArray<NSNumber *> *_Nullable workoutTypesArray, NSError *_Nullable error))completion;
 
-#pragma mark Current Sports Modes
+#pragma mark Query the workout slots on the watch
 
-/// Get the current list of sports modes on the device
+/// Query the workout slots on the watch
 /// - Parameters:
-///   - block: The completion handler called with the current sports modes
-+ (void)getCurrentWatchSportsWithBlock:(FitCloudCurrentWatchSportsResultBlock _Nullable)block;
+///   - completion: A completion handler called with the result. Parameters:
+///     - success: Whether the query was successful
+///     - workoutSlots: The array of workout slots, nil if query fails
+///     - error: Error information if query fails, nil on success
++ (void)queryWorkoutSlotsOnWatchWithCompletion:(void (^_Nullable)(BOOL success, NSArray<FitCloudWorkoutSlot *> *_Nullable workoutSlots, NSError *_Nullable error))completion;
 
 #pragma mark QR Code Features
 

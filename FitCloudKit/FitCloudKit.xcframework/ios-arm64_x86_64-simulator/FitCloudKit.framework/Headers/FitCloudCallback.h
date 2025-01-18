@@ -42,7 +42,6 @@
 #import <FitCloudKit/FitCloudScreenSetting.h>
 #import <FitCloudKit/FitCloudVibrateSetting.h>
 #import <FitCloudKit/FitCloudScreenResolution.h>
-#import <FitCloudKit/FitCloudWatchSportModeObject.h>
 #import <FitCloudKit/FitCloudSportsWithGPSData.h>
 #import <FitCloudKit/FitCloudSportsWithGPSActionParams.h>
 #import <FitCloudKit/FitCloudSportsWithGPSAppClientData.h>
@@ -359,19 +358,6 @@ typedef void (^FitCloudScreenAndVibrateSettingsResultBlock)(BOOL succeed, FitClo
 ///   - error: 错误信息
 typedef void (^FitCloudScreenResolutionResultBlock)(BOOL succeed, FitCloudScreenResolution *screenResolution, NSError *error);
 
-/// FitCloud 请求获取设备可支持的运动模式类型列表回调
-/// - Parameters:
-///   - succeed: 是否成功
-///   - sports: 设备可支持的运动模式类型列表
-///   - error: 错误信息
-typedef void (^FitCloudSupportedWatchSportsResultBlock)(BOOL succeed, NSArray<NSNumber *> *sports, NSError *error);
-
-/// FitCloud 请求获取设备当前运动模式类型列表回调
-/// - Parameters:
-///   - succeed: 是否成功
-///   - sports: 设备当前运动模式类型列表
-///   - error: 错误信息
-typedef void (^FitCloudCurrentWatchSportsResultBlock)(BOOL succeed, NSArray<FitCloudWatchSportModeObject *> *sports, NSError *error);
 
 /// FitCloud 请求手表UI信息结果回调
 /// - Parameters:

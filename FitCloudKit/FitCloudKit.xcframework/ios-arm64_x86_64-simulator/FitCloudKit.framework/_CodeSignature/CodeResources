@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
-		Pq8nvKcskoM06LaELiFZq1wyQBc=
+		RTs+LKvONwmeXAU8//Jd5/BA62I=
 		</data>
 		<key>Headers/FitCloudCapacity.h</key>
 		<data>
@@ -174,7 +174,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		/jazG+PYAu9EA5V42ENYeDkrU2Q=
+		vCsfG1w7fYMrfxejUU3vQ0IJg5A=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -207,6 +207,10 @@
 		<key>Headers/FitCloudMedal.h</key>
 		<data>
 		hU8N70YJ1iRj8kSllDJ7xXo94bw=
+		</data>
+		<key>Headers/FitCloudModels.h</key>
+		<data>
+		hB5MfC6e9sCSYFkiIRZ9Y4mzeD4=
 		</data>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
 		<data>
@@ -292,17 +296,13 @@
 		<data>
 		sqQ0YzJdYf1PxBLmeO0MEXshxs4=
 		</data>
-		<key>Headers/FitCloudWatchSportModeObject.h</key>
-		<data>
-		ygGARPjK4WCtv+Ota49Og4zldGk=
-		</data>
 		<key>Headers/FitCloudWatchUIInfo.h</key>
 		<data>
 		aX43RZPLeDUNyy4ZgC0ZRUD6u2Q=
 		</data>
 		<key>Headers/FitCloudWatchfaceUIInfo.h</key>
 		<data>
-		Xruu9SDrv9LvuNsjrJ2R0Zi7q+g=
+		RVvjRa7+zpICHGYHLqP3AaPYzrk=
 		</data>
 		<key>Headers/FitCloudWeatherObject.h</key>
 		<data>
@@ -311,6 +311,10 @@
 		<key>Headers/FitCloudWomenHealthSetting.h</key>
 		<data>
 		eOrbUPBFL9OXhG55cKX4qDXxZkg=
+		</data>
+		<key>Headers/FitCloudWorkoutSlot.h</key>
+		<data>
+		LAVj9z0vo+IA3niV78XiSH9mzss=
 		</data>
 		<key>Headers/SkyworthPVPowerStationObject.h</key>
 		<data>
@@ -330,7 +334,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vdX7XFa02d9tJG1I3J0UZME5idg=
+		dlq+cWNhs1c0qN/vthtVMvGOWaM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -398,11 +402,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Pq8nvKcskoM06LaELiFZq1wyQBc=
+			RTs+LKvONwmeXAU8//Jd5/BA62I=
 			</data>
 			<key>hash2</key>
 			<data>
-			AxGmEWERjvf6P8DDoUvymaHrzpbQg02wd3+FXTIkGPk=
+			tXUA7EWbqiC1QGyPD2aLZTcd9yVOCrr8YMApsdV7tK0=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCapacity.h</key>
@@ -805,11 +809,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/jazG+PYAu9EA5V42ENYeDkrU2Q=
+			vCsfG1w7fYMrfxejUU3vQ0IJg5A=
 			</data>
 			<key>hash2</key>
 			<data>
-			qfavMrnVF0fbFzY7sEQjQQHILNsu6xHtB3yJ864sJq8=
+			u/QlAzINU4gyKdLd1OUBVuE9JK7BKpmUI0Xt6gwmTdM=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -898,6 +902,17 @@
 			<key>hash2</key>
 			<data>
 			IiEa65pBpfT4MbKM0lpy3v4v5gSSxnpd0HzpLmey53M=
+			</data>
+		</dict>
+		<key>Headers/FitCloudModels.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hB5MfC6e9sCSYFkiIRZ9Y4mzeD4=
+			</data>
+			<key>hash2</key>
+			<data>
+			RcmAFALbrbAK0GWsLka+LH6G1o8JAWOddTlc5WkU3Ik=
 			</data>
 		</dict>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
@@ -1131,17 +1146,6 @@
 			FN5OagRSmep8cuPJAxWoZNQuYr9n/HCuAuiOorj2uiY=
 			</data>
 		</dict>
-		<key>Headers/FitCloudWatchSportModeObject.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ygGARPjK4WCtv+Ota49Og4zldGk=
-			</data>
-			<key>hash2</key>
-			<data>
-			Wb1M7YCebhYS9V+GU+UW2mzpBejWYeXod8rHVUDPmiA=
-			</data>
-		</dict>
 		<key>Headers/FitCloudWatchUIInfo.h</key>
 		<dict>
 			<key>hash</key>
@@ -1157,11 +1161,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Xruu9SDrv9LvuNsjrJ2R0Zi7q+g=
+			RVvjRa7+zpICHGYHLqP3AaPYzrk=
 			</data>
 			<key>hash2</key>
 			<data>
-			WUstsCd7r8W+mkMfrfIeh7gfz4xxKWhJutXAK5BE90g=
+			CcmXUk4t9OIY1H0I/FrtCITHMnwWMyuXc2pYhKGSpEI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudWeatherObject.h</key>
@@ -1184,6 +1188,17 @@
 			<key>hash2</key>
 			<data>
 			cdjIM5b22fsUVC7XEbfa9GPShBEHVKAimvs8SGrFqO0=
+			</data>
+		</dict>
+		<key>Headers/FitCloudWorkoutSlot.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LAVj9z0vo+IA3niV78XiSH9mzss=
+			</data>
+			<key>hash2</key>
+			<data>
+			VZa5ab5tKqiAf0bFdERmlKIJj16P+6lTV4C4TkefeB4=
 			</data>
 		</dict>
 		<key>Headers/SkyworthPVPowerStationObject.h</key>

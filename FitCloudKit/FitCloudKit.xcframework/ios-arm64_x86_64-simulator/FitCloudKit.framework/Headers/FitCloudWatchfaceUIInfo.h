@@ -38,6 +38,9 @@
 /// 表盘位
 @interface FitCloudWatchfaceSlot : NSObject
 
+/// 位置索引
+@property(nonatomic, readonly) NSUInteger slotIndex;
+
 /// 位置类型
 @property(nonatomic, readonly) WATCHFACESLOTTYPE slotType;
 
