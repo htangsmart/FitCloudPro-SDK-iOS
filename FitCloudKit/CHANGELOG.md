@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0-beta.70 build20250118002 (2025-01-18)
+
+- Enhanced the stability of the SDK.
+
 ## 1.3.0-beta.69 build20250118001 (2025-01-18)
 
 - Add the `querySupportedWorkoutOnWatchWithCompletion:` API to query the supported workout types on the watch device.
