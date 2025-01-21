@@ -10,59 +10,66 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// FitCloudKit 手表连接配对记录
-@interface FitCloudKitConnectRecord : NSObject<NSCoding, NSCopying>
+/// A record of watch connection and pairing information
+@interface FitCloudKitConnectRecord : NSObject <NSCoding, NSCopying>
 
 /// The name of the watch
-@property(nonatomic, strong) NSString* name;
+@property(nonatomic, strong) NSString *name;
 
-/// 是否为下一代厂商名称
+/// Whether it uses next generation manufacturer name
 @property(nonatomic, assign) BOOL isNextManufacturerName;
 
-/// 是否允许同时连接通话蓝牙
+/// Whether to allow simultaneous connection with Bluetooth calling
 @property(nonatomic, assign) BOOL allowConnectWithBT;
 
-/// UUID
-@property(nonatomic, strong, nullable) NSUUID* uuid;
+/// The UUID of the watch
+@property(nonatomic, strong, nullable) NSUUID *uuid;
 
-/// Mac addr，如果厂商自定义了广播数据，这里返回nil
-@property(nonatomic, strong, nullable) NSString* macAddr;
+/// The MAC address of the watch. Returns nil if manufacturer has custom advertisement data
+@property(nonatomic, strong, nullable) NSString *macAddr;
 
-/// 最后连接时间
-@property(nonatomic, strong) NSDate* lastConnectTime;
+/// The last connection time
+@property(nonatomic, strong) NSDate *lastConnectTime;
 
-/// 是否应该自动回连
-@property(nonatomic, assign) BOOL      shouldAutoReconnect;
+/// Whether the watch should automatically reconnect
+@property(nonatomic, assign) BOOL shouldAutoReconnect;
 
-/// 绑定的用户Id
-@property(nonatomic, strong, nullable) NSString* bindUserId;
+/// The bound user ID
+@property(nonatomic, strong, nullable) NSString *bindUserId;
 
-/// 用户绑定时间
-@property(nonatomic, strong, nullable) NSDate*   userBindTime;
+/// The time when user binding occurred
+@property(nonatomic, strong, nullable) NSDate *userBindTime;
 
-/// 是否已经解绑
-@property(nonatomic, assign) BOOL      isAlreadyUnbind;
+/// Whether the watch has been unbound
+@property(nonatomic, assign) BOOL isAlreadyUnbind;
 
-/// 项目号
-@property(nonatomic, strong, nullable) NSString* formatedProjNo;
+/// The project number
+/// - Returns:
+/// The project number string, e.g. "51B2"
+@property(nonatomic, strong, nullable) NSString *formatedProjNo;
 
-/// 固件版本号
-@property(nonatomic, strong, nullable) NSString* formatedFirmwareVersion;
+/// Short firmware version
+/// - Returns:
+/// Short firmware version string, e.g. "1.08"
+@property(nonatomic, strong, nullable) NSString *formatedFirmwareVersion;
 
-/// UI版本
-@property(nonatomic, strong, nullable) NSString* uiVersion;
+/// The UI version
+@property(nonatomic, strong, nullable) NSString *uiVersion;
 
-/// 屏幕分辨率
-@property(nonatomic, strong, nullable) NSValue* screenResolution;
+/// The screen resolution
+@property(nonatomic, strong, nullable) NSValue *screenResolution;
 
-/// 屏幕形状，0：方形  1: 圆形  nil:未知
-@property(nonatomic, strong, nullable) NSNumber* screenShape;
+/// The screen shape
+/// - 0: Rectangle
+/// - 1: Circle
+/// - nil: Unknown
+@property(nonatomic, strong, nullable) NSNumber *screenShape;
 
-/// 广播数据厂商数据
-@property(nonatomic, strong, nullable) NSString* advDataManufacturerData;
+/// The manufacturer data from advertisement data
+@property(nonatomic, strong, nullable) NSString *advDataManufacturerData;
 
-/// 广播数据
-@property(nonatomic, strong, nullable) NSString* advData;
+/// The advertisement data
+@property(nonatomic, strong, nullable) NSString *advData;
 
 @end
 

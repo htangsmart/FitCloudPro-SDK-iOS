@@ -4,11 +4,11 @@
 
 #### The iOS framework for the FitCloudPro smartwatch, which is responsible for encapsulating features such as communication with the watch device.
 
-![Pod Version](http://img.shields.io/badge/pod-v1.2.9-blue)
+![Pod Version](http://img.shields.io/badge/pod-v1.3.0-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![GitHub release](http://img.shields.io/badge/release-v1.2.9-blue)
-![GitHub release](http://img.shields.io/badge/release%20date-2024.09.30-green)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.0%20beta.70-brightgreen)
+![GitHub release](http://img.shields.io/badge/release-v1.3.0-blue)
+![GitHub release](http://img.shields.io/badge/release%20date-2025.01.21-green)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.0-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek%20%7C%20nordic-blueviolet)
 
 - [中文文档(Chinese Doc)](FitCloudKit/README.md)

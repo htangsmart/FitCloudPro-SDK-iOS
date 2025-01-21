@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-01-18  Version:1.3.0-beta.70 Build:20250118002
+//      pcjbird    2025-01-21  Version:1.3.0 Build:20250121001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -164,6 +164,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Watch device MAC address
 + (NSString *_Nullable)macAddr;
+
+#pragma mark Firmware Version
+
+/// Full firmware version of the watch in format XXXX.XXXX.XXX (Project.Patch.Firmware)
+/// - Returns:
+/// Full firmware version string, e.g. "51B2.0000.108"
++ (NSString *_Nullable)firmwareFullVersion;
+
+/// Short firmware version of the watch in format X.XX
+/// - Returns:
+/// Short firmware version string, e.g. "1.08"
++ (NSString *_Nullable)firmwareShortVersion;
 
 #pragma mark GPS Firmware Version
 

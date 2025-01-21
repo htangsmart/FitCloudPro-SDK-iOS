@@ -1,82 +1,86 @@
 # CHANGELOG
 
-## 1.3.0-beta.70 build20250118002 (2025-01-18)
+## V1.3.0 build20250121001 (2025-01-21)
+
+- Release FitCloudKit V1.3.0 build20250121001.
+
+## V1.3.0-beta.70 build20250118002 (2025-01-18)
 
 - Enhanced the stability of the SDK.
 
-## 1.3.0-beta.69 build20250118001 (2025-01-18)
+## V1.3.0-beta.69 build20250118001 (2025-01-18)
 
 - Add the `querySupportedWorkoutOnWatchWithCompletion:` API to query the supported workout types on the watch device.
 - Add the `queryWorkoutSlotsOnWatchWithCompletion:` API to query the workout slots on the watch device.
 
-## 1.3.0-beta.68 build20250117001 (2025-01-17)
+## V1.3.0-beta.68 build20250117001 (2025-01-17)
 
 - Add the `totalCoinsEarned` parameter to the `My Task` API.
 
-## 1.3.0-beta.67 build20250110002 (2025-01-10)
+## V1.3.0-beta.67 build20250110002 (2025-01-10)
 
 - Rename the `FitCloudDailyGoalObject` property `caloryGoal` to `calorieGoal`.
 - Enhanced the stability of the SDK.
 
-## 1.3.0-beta.66 build20250110001 (2025-01-10)
+## V1.3.0-beta.66 build20250110001 (2025-01-10)
 
 - Fixed an issue where the API for querying female health feature support on Transsion Infinix devices was returning incorrect results.
 - Enhanced the stability of the SDK.
 
-## 1.3.0-beta.65 build20250109001 (2025-01-09)
+## V1.3.0-beta.65 build20250109001 (2025-01-09)
 
 - Enhanced the stability of the SDK.
 
-## 1.3.0-beta.64 build20250108001 (2025-01-08)
+## V1.3.0-beta.64 build20250108001 (2025-01-08)
 
 - Fixed a potential crash issue that could occur when client apps do not integrate the FitCloudKit.bundle resource bundle.
 
-## 1.3.0-beta.63 build20250106001 (2025-01-06)
+## V1.3.0-beta.63 build20250106001 (2025-01-06)
 
 - Changed the logic of querying the state of the GPS file on the watch device: If the validity period is less than 3 days, it is considered that the GPS file needs to be updated.
 
-## 1.3.0-beta.62 build20250105001 (2025-01-05)
+## V1.3.0-beta.62 build20250105001 (2025-01-05)
 
 - Changed several APIs related to callbacks to the App when writing GPS files to the watch device during GPS file upgrade process.
 
-## 1.3.0-beta.61 build20241228001 (2024-12-28)
+## V1.3.0-beta.61 build20241228001 (2024-12-28)
 
 - Added support for JPG slice transfer interval, with a minimum value of 15ms.
 - Added new API to query the serial number of Transsion Infinix watches.
 
-## 1.3.0-beta.60 build20241227001 (2024-12-27)
+## V1.3.0-beta.60 build20241227001 (2024-12-27)
 
 - Renamed several APIs related to language synchronization.
 
-## 1.3.0-beta.59 build20241226001 (2024-12-26)
+## V1.3.0-beta.59 build20241226001 (2024-12-26)
 
 - Renamed several APIs related to GPS file operations.
 
-## 1.3.0-beta.58 build20241225002 (2024-12-25)
+## V1.3.0-beta.58 build20241225002 (2024-12-25)
 
 - Enhanced the SDK stability.
 
-## 1.3.0-beta.57 build20241225001 (2024-12-25)
+## V1.3.0-beta.57 build20241225001 (2024-12-25)
 
 - Modified APIs related to camera preview and map navigation snapshot.
 
-## 1.3.0-beta.56 build20241224001 (2024-12-24)
+## V1.3.0-beta.56 build20241224001 (2024-12-24)
 
 - Introduce the API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion` to notify the watch device that the current MAC address is not registered with the translation service provider.
 
-## 1.3.0-beta.55 build20241223002 (2024-12-23)
+## V1.3.0-beta.55 build20241223002 (2024-12-23)
 
 - Fixed an issue where setting favorite contacts would fail when contact names contained certain special characters.
 
-## 1.3.0-beta.54 build20241223001 (2024-12-23)
+## V1.3.0-beta.54 build20241223001 (2024-12-23)
 
 - Filter out known invalid GPS points at the SDK layer.
 
-## 1.3.0-beta.53 build20241220003 (2024-12-20)
+## V1.3.0-beta.53 build20241220003 (2024-12-20)
 
 - Added the original opus voice data return for LLM voice data and translation voice data.
 
-## 1.3.0-beta.52 build20241220002 (2024-12-20)
+## V1.3.0-beta.52 build20241220002 (2024-12-20)
 
 - Optimized the translation feature related log printing.
 
