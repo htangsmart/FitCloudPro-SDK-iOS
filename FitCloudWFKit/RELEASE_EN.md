@@ -1,6 +1,6 @@
 # RELEASES
 
-## V1.1.8-beta.3 build20241224001 (2024-12-24)
+## pcjbird 2025-01-30 Version:1.1.8 Build:20250130001
 
 - Optimized file generation path to improve compatibility.
 - Improved and enhanced code documentation and comments.

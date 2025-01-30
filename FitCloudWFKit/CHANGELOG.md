@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.1.8 build20250130001 (2025-01-30)
+
+- Release FitCloudWFKit V1.1.8 build20250130001.
+
 ## V1.1.8-beta.3 build20241224001 (2024-12-24)
 
 - Added support for image rotation processing on the 568X(9X) platform.
