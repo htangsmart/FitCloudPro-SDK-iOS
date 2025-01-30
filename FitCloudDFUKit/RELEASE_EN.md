@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2024-10-10 V1.3.2-beta.1 build20241010001
+## pcjbird 2025-01-30 V1.3.2 build20250130001
 
 - Bump `RTKLEFoundation.xcframework` and `RTKOTASDK.xcframework` from `1.12.0` to `1.12.1` to fix some crash issue and optimize the data sending mechanism.
 

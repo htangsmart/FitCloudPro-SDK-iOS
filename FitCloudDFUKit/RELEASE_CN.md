@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2024-10-10 Version:1.3.2-beta.1 Build:20241010001
+## pcjbird 2025-01-30 Version:1.3.2 Build:20250130001
 
 - 将`RTKLEFoundation.xcframework`和`RTKOTASDK.xcframeframework`从`1.12.0`升级到`1.12.1`，以修复一些崩溃问题并优化数据发送机制。
 
