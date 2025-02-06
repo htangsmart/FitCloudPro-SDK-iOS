@@ -1,5 +1,9 @@
 # RELEASES
 
+## pcjbird 2025-02-06 Version:1.1.9 Build:20250206001
+
+- Fixed issue for image rotation processing on the 568X(9X) platform.
+
 ## pcjbird 2025-01-30 Version:1.1.8 Build:20250130001
 
 - Optimized file generation path to improve compatibility.
