@@ -1,5 +1,9 @@
 # 版本更新日志
 
+## pcjbird 2025-02-12 Version:1.3.1-beta.1 Build:20250212001
+
+- 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
+
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
 - 修复了设置和查询耳机仓歌词颜色的问题。

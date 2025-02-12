@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.1 build20250212001 (2025-02-12)
+
+- Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
+
 ## V1.3.0 build20250121001 (2025-01-21)
 
 - Release FitCloudKit V1.3.0 build20250121001.

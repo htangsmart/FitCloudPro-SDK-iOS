@@ -293,4 +293,7 @@
 /// 是否支持拍照预览功能
 @property(nonatomic, readonly) BOOL withCameraPreview;
 
+/// 是否支持显示气压
+@property(nonatomic, readonly) BOOL withBarometricPressure;
+
 @end

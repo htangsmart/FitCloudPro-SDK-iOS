@@ -1,5 +1,9 @@
 # RELEASES
 
+## pcjbird 2025-02-12 Version:1.3.1-beta.1 Build:20250212001
+
+- Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
+
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
 - Add events to notify changes of the workout status on the watch side.
