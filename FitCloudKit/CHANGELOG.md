@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.2 build20250213001 (2025-02-13)
+
+- Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
+
 ## V1.3.1-beta.1 build20250212001 (2025-02-12)
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
