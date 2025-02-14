@@ -296,4 +296,7 @@
 /// 是否支持显示气压
 @property(nonatomic, readonly) BOOL withBarometricPressure;
 
+/// 是否支持查询传音(Infinix)手表序列号(EUID, Equipment Unique Identifier)
+@property(nonatomic, readonly) BOOL allowQueryTranssionInfinixSerialNumber;
+
 @end

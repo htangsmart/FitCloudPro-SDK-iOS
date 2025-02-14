@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.3 build20250214001 (2025-02-14)
+
+- Introduce the `allowQueryTranssionInfinixSerialNumber` flag to indicate whether supports querying EUID (Equipment Unique Identifier) for `Transsion Infinix` devices.
+
 ## V1.3.1-beta.2 build20250213001 (2025-02-13)
 
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
