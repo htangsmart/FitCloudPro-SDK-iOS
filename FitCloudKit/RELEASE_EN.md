@@ -1,10 +1,11 @@
 # RELEASES
 
-## pcjbird 2025-02-14 Version:1.3.1-beta.3 Build:20250214001
+## pcjbird 2025-02-14 Version:1.3.1-beta.4 Build:20250214002
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
 - Introduce the `allowQueryTranssionInfinixSerialNumber` flag to indicate whether supports querying EUID (Equipment Unique Identifier) for `Transsion Infinix` devices.
+- Introduce the `taskId` property to `FitCloudTaskModel`.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

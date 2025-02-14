@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// A model representing a task in FitCloud
 @interface FitCloudTaskModel : NSObject
 
+/// The task Id
+@property(nonatomic, assign) UInt8 taskId;
+
 /// The type of task
 /// - Note: See ``FITCLOUDTASK`` for available task types
 @property(nonatomic, assign) FITCLOUDTASK taskType;

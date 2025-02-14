@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.4 build20250214002 (2025-02-14)
+
+- Introduce the `taskId` property to `FitCloudTaskModel`.
+
 ## V1.3.1-beta.3 build20250214001 (2025-02-14)
 
 - Introduce the `allowQueryTranssionInfinixSerialNumber` flag to indicate whether supports querying EUID (Equipment Unique Identifier) for `Transsion Infinix` devices.
