@@ -1,0 +1,871 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E718284A2FC87EA931351A9 /* libPods-FitCloudSwiftDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 639B5FE52685D78C8848378F /* libPods-FitCloudSwiftDemo.a */; };
+		899433722D65C8B500B86640 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899433682D65C8B500B86640 /* AppDelegate.swift */; };
+		899433732D65C8B500B86640 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8994336F2D65C8B500B86640 /* SceneDelegate.swift */; };
+		899433742D65C8B500B86640 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899433702D65C8B500B86640 /* ViewController.swift */; };
+		899433752D65C8B500B86640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899433692D65C8B500B86640 /* Assets.xcassets */; };
+		89CBFA7D2D65CF81008E7B50 /* FitCloudProSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA7C2D65CF81008E7B50 /* FitCloudProSDK.swift */; };
+		89CBFA7F2D65EC59008E7B50 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA7E2D65EC59008E7B50 /* App.swift */; };
+		89CBFA992D6600AE008E7B50 /* DeviceBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA8E2D6600AE008E7B50 /* DeviceBindingController.m */; };
+		89CBFA9A2D6600AE008E7B50 /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA902D6600AE008E7B50 /* DeviceCell.m */; };
+		89CBFA9B2D6600AE008E7B50 /* DrinkRemindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA942D6600AE008E7B50 /* DrinkRemindController.m */; };
+		89CBFA9C2D6600AE008E7B50 /* DeviceSearchListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA922D6600AE008E7B50 /* DeviceSearchListController.m */; };
+		89CBFA9D2D6600AE008E7B50 /* AlarmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA882D6600AE008E7B50 /* AlarmController.m */; };
+		89CBFA9E2D6600AE008E7B50 /* MessageReminderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA982D6600AE008E7B50 /* MessageReminderController.m */; };
+		89CBFA9F2D6600AE008E7B50 /* DemoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA8C2D6600AE008E7B50 /* DemoListController.m */; };
+		89CBFAA02D6600AE008E7B50 /* HealthMonitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA962D6600AE008E7B50 /* HealthMonitorController.m */; };
+		89CBFAA12D6600AE008E7B50 /* DailyGoalSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA8A2D6600AE008E7B50 /* DailyGoalSettingController.m */; };
+		89CBFAB62D6600BC008E7B50 /* MuslimPrayerParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAA52D6600BC008E7B50 /* MuslimPrayerParams.m */; };
+		89CBFAB72D6600BC008E7B50 /* WristWakeUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAB52D6600BC008E7B50 /* WristWakeUpController.m */; };
+		89CBFAB82D6600BC008E7B50 /* MuslimPrayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAA32D6600BC008E7B50 /* MuslimPrayerController.m */; };
+		89CBFAB92D6600BC008E7B50 /* UnitPreferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAAD2D6600BC008E7B50 /* UnitPreferController.m */; };
+		89CBFABA2D6600BC008E7B50 /* RealtimeMeasureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAA72D6600BC008E7B50 /* RealtimeMeasureController.m */; };
+		89CBFABB2D6600BC008E7B50 /* ScreenDispayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAA92D6600BC008E7B50 /* ScreenDispayController.m */; };
+		89CBFABC2D6600BC008E7B50 /* SedentaryRemindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAAB2D6600BC008E7B50 /* SedentaryRemindController.m */; };
+		89CBFABD2D6600BC008E7B50 /* UserProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAAF2D6600BC008E7B50 /* UserProfileController.m */; };
+		89CBFABE2D6600BC008E7B50 /* WeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAB12D6600BC008E7B50 /* WeatherController.m */; };
+		89CBFABF2D6600BC008E7B50 /* WomenHealthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAB32D6600BC008E7B50 /* WomenHealthController.m */; };
+		89CBFAE82D6600DD008E7B50 /* DateUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAC42D6600DD008E7B50 /* DateUtilities.swift */; };
+		89CBFAE92D6600DD008E7B50 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAD12D6600DD008E7B50 /* Angle.swift */; };
+		89CBFAEA2D6600DD008E7B50 /* Shafaq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFACF2D6600DD008E7B50 /* Shafaq.swift */; };
+		89CBFAEB2D6600DD008E7B50 /* SolarCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAC12D6600DD008E7B50 /* SolarCoordinates.swift */; };
+		89CBFAEC2D6600DD008E7B50 /* Minute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAD22D6600DD008E7B50 /* Minute.swift */; };
+		89CBFAED2D6600DD008E7B50 /* MathUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAC52D6600DD008E7B50 /* MathUtilities.swift */; };
+		89CBFAEE2D6600DD008E7B50 /* Madhab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFACB2D6600DD008E7B50 /* Madhab.swift */; };
+		89CBFAEF2D6600DD008E7B50 /* SolarTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAC22D6600DD008E7B50 /* SolarTime.swift */; };
+		89CBFAF02D6600DD008E7B50 /* HighLatitudeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFACA2D6600DD008E7B50 /* HighLatitudeRule.swift */; };
+		89CBFAF12D6600DD008E7B50 /* CalculationMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAC72D6600DD008E7B50 /* CalculationMethod.swift */; };
+		89CBFAF22D6600DD008E7B50 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFACC2D6600DD008E7B50 /* Prayer.swift */; };
+		89CBFAF32D6600DD008E7B50 /* SunnahTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAD92D6600DD008E7B50 /* SunnahTimes.swift */; };
+		89CBFAF42D6600DD008E7B50 /* MoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAE42D6600DD008E7B50 /* MoView.m */; };
+		89CBFAF52D6600DD008E7B50 /* Qibla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAD82D6600DD008E7B50 /* Qibla.swift */; };
+		89CBFAF62D6600DD008E7B50 /* PrayerAdjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFACD2D6600DD008E7B50 /* PrayerAdjustment.swift */; };
+		89CBFAF72D6600DD008E7B50 /* AdhanObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAD52D6600DD008E7B50 /* AdhanObjc.swift */; };
+		89CBFAF82D6600DD008E7B50 /* MoCurveLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAE22D6600DD008E7B50 /* MoCurveLayer.m */; };
+		89CBFAF92D6600DD008E7B50 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAC92D6600DD008E7B50 /* Coordinates.swift */; };
+		89CBFAFA2D6600DD008E7B50 /* CalculationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAC82D6600DD008E7B50 /* CalculationParameters.swift */; };
+		89CBFAFB2D6600DD008E7B50 /* LocalizedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFADC2D6600DD008E7B50 /* LocalizedButton.m */; };
+		89CBFAFC2D6600DD008E7B50 /* LocalizedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFADF2D6600DD008E7B50 /* LocalizedLabel.m */; };
+		89CBFAFD2D6600DD008E7B50 /* Rouding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFACE2D6600DD008E7B50 /* Rouding.swift */; };
+		89CBFAFE2D6600DD008E7B50 /* PrayerTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAD72D6600DD008E7B50 /* PrayerTimes.swift */; };
+		89CBFAFF2D6600DD008E7B50 /* Astronomical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFAC02D6600DD008E7B50 /* Astronomical.swift */; };
+		89CBFB012D660135008E7B50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CBFB002D660135008E7B50 /* UIKit.framework */; };
+		89CBFB042D660608008E7B50 /* DataSyncSwiftDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFB032D660608008E7B50 /* DataSyncSwiftDemo.swift */; };
+		89CBFB0F2D661D70008E7B50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB0E2D661D70008E7B50 /* Main.storyboard */; };
+		89CBFB112D661D76008E7B50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB102D661D76008E7B50 /* LaunchScreen.storyboard */; };
+		89CBFB162D661D94008E7B50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB122D661D94008E7B50 /* InfoPlist.strings */; };
+		89CBFB172D661D94008E7B50 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB132D661D94008E7B50 /* Localizable.strings */; };
+		89CBFB1B2D661E67008E7B50 /* OTADemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFB1A2D661E67008E7B50 /* OTADemoController.swift */; };
+		89CBFB1D2D661E78008E7B50 /* CloudWatchfaceDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFB1C2D661E78008E7B50 /* CloudWatchfaceDemoController.swift */; };
+		89CBFB1F2D661E89008E7B50 /* DIYWatchfaceDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFB1E2D661E89008E7B50 /* DIYWatchfaceDemoController.swift */; };
+		89CBFB242D66385E008E7B50 /* e063fe4164204cff8326c7ca08e3f2fe.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB232D66385E008E7B50 /* e063fe4164204cff8326c7ca08e3f2fe.bin */; };
+		89CBFB262D66E186008E7B50 /* 5140b9f6ad95.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB252D66E186008E7B50 /* 5140b9f6ad95.bin */; };
+		89CBFB2A2D66F10E008E7B50 /* 3679a6588f34.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB272D66F10E008E7B50 /* 3679a6588f34.bin */; };
+		89CBFB2B2D66F10E008E7B50 /* test_360_preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB292D66F10E008E7B50 /* test_360_preview.png */; };
+		89CBFB2C2D66F10E008E7B50 /* test_360_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB282D66F10E008E7B50 /* test_360_bg.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F523A375FF6E576B01DEFF6 /* Pods-FitCloudSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		639B5FE52685D78C8848378F /* libPods-FitCloudSwiftDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitCloudSwiftDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		899433402D65C69200B86640 /* FitCloudSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		899433682D65C8B500B86640 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		899433692D65C8B500B86640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8994336A2D65C8B500B86640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8994336F2D65C8B500B86640 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		899433702D65C8B500B86640 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89CBFA7C2D65CF81008E7B50 /* FitCloudProSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitCloudProSDK.swift; sourceTree = "<group>"; };
+		89CBFA7E2D65EC59008E7B50 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		89CBFA802D65ED58008E7B50 /* FitCloudSwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitCloudSwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		89CBFA872D6600AE008E7B50 /* AlarmController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmController.h; sourceTree = "<group>"; };
+		89CBFA882D6600AE008E7B50 /* AlarmController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmController.m; sourceTree = "<group>"; };
+		89CBFA892D6600AE008E7B50 /* DailyGoalSettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyGoalSettingController.h; sourceTree = "<group>"; };
+		89CBFA8A2D6600AE008E7B50 /* DailyGoalSettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyGoalSettingController.m; sourceTree = "<group>"; };
+		89CBFA8B2D6600AE008E7B50 /* DemoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoListController.h; sourceTree = "<group>"; };
+		89CBFA8C2D6600AE008E7B50 /* DemoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoListController.m; sourceTree = "<group>"; };
+		89CBFA8D2D6600AE008E7B50 /* DeviceBindingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceBindingController.h; sourceTree = "<group>"; };
+		89CBFA8E2D6600AE008E7B50 /* DeviceBindingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceBindingController.m; sourceTree = "<group>"; };
+		89CBFA8F2D6600AE008E7B50 /* DeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
+		89CBFA902D6600AE008E7B50 /* DeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
+		89CBFA912D6600AE008E7B50 /* DeviceSearchListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceSearchListController.h; sourceTree = "<group>"; };
+		89CBFA922D6600AE008E7B50 /* DeviceSearchListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceSearchListController.m; sourceTree = "<group>"; };
+		89CBFA932D6600AE008E7B50 /* DrinkRemindController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinkRemindController.h; sourceTree = "<group>"; };
+		89CBFA942D6600AE008E7B50 /* DrinkRemindController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinkRemindController.m; sourceTree = "<group>"; };
+		89CBFA952D6600AE008E7B50 /* HealthMonitorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthMonitorController.h; sourceTree = "<group>"; };
+		89CBFA962D6600AE008E7B50 /* HealthMonitorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthMonitorController.m; sourceTree = "<group>"; };
+		89CBFA972D6600AE008E7B50 /* MessageReminderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageReminderController.h; sourceTree = "<group>"; };
+		89CBFA982D6600AE008E7B50 /* MessageReminderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageReminderController.m; sourceTree = "<group>"; };
+		89CBFAA22D6600BC008E7B50 /* MuslimPrayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuslimPrayerController.h; sourceTree = "<group>"; };
+		89CBFAA32D6600BC008E7B50 /* MuslimPrayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuslimPrayerController.m; sourceTree = "<group>"; };
+		89CBFAA42D6600BC008E7B50 /* MuslimPrayerParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuslimPrayerParams.h; sourceTree = "<group>"; };
+		89CBFAA52D6600BC008E7B50 /* MuslimPrayerParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuslimPrayerParams.m; sourceTree = "<group>"; };
+		89CBFAA62D6600BC008E7B50 /* RealtimeMeasureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealtimeMeasureController.h; sourceTree = "<group>"; };
+		89CBFAA72D6600BC008E7B50 /* RealtimeMeasureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealtimeMeasureController.m; sourceTree = "<group>"; };
+		89CBFAA82D6600BC008E7B50 /* ScreenDispayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenDispayController.h; sourceTree = "<group>"; };
+		89CBFAA92D6600BC008E7B50 /* ScreenDispayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenDispayController.m; sourceTree = "<group>"; };
+		89CBFAAA2D6600BC008E7B50 /* SedentaryRemindController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SedentaryRemindController.h; sourceTree = "<group>"; };
+		89CBFAAB2D6600BC008E7B50 /* SedentaryRemindController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SedentaryRemindController.m; sourceTree = "<group>"; };
+		89CBFAAC2D6600BC008E7B50 /* UnitPreferController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitPreferController.h; sourceTree = "<group>"; };
+		89CBFAAD2D6600BC008E7B50 /* UnitPreferController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitPreferController.m; sourceTree = "<group>"; };
+		89CBFAAE2D6600BC008E7B50 /* UserProfileController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProfileController.h; sourceTree = "<group>"; };
+		89CBFAAF2D6600BC008E7B50 /* UserProfileController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserProfileController.m; sourceTree = "<group>"; };
+		89CBFAB02D6600BC008E7B50 /* WeatherController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherController.h; sourceTree = "<group>"; };
+		89CBFAB12D6600BC008E7B50 /* WeatherController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherController.m; sourceTree = "<group>"; };
+		89CBFAB22D6600BC008E7B50 /* WomenHealthController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WomenHealthController.h; sourceTree = "<group>"; };
+		89CBFAB32D6600BC008E7B50 /* WomenHealthController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WomenHealthController.m; sourceTree = "<group>"; };
+		89CBFAB42D6600BC008E7B50 /* WristWakeUpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WristWakeUpController.h; sourceTree = "<group>"; };
+		89CBFAB52D6600BC008E7B50 /* WristWakeUpController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WristWakeUpController.m; sourceTree = "<group>"; };
+		89CBFAC02D6600DD008E7B50 /* Astronomical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronomical.swift; sourceTree = "<group>"; };
+		89CBFAC12D6600DD008E7B50 /* SolarCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarCoordinates.swift; sourceTree = "<group>"; };
+		89CBFAC22D6600DD008E7B50 /* SolarTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarTime.swift; sourceTree = "<group>"; };
+		89CBFAC42D6600DD008E7B50 /* DateUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilities.swift; sourceTree = "<group>"; };
+		89CBFAC52D6600DD008E7B50 /* MathUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtilities.swift; sourceTree = "<group>"; };
+		89CBFAC72D6600DD008E7B50 /* CalculationMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethod.swift; sourceTree = "<group>"; };
+		89CBFAC82D6600DD008E7B50 /* CalculationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationParameters.swift; sourceTree = "<group>"; };
+		89CBFAC92D6600DD008E7B50 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		89CBFACA2D6600DD008E7B50 /* HighLatitudeRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighLatitudeRule.swift; sourceTree = "<group>"; };
+		89CBFACB2D6600DD008E7B50 /* Madhab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Madhab.swift; sourceTree = "<group>"; };
+		89CBFACC2D6600DD008E7B50 /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
+		89CBFACD2D6600DD008E7B50 /* PrayerAdjustment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerAdjustment.swift; sourceTree = "<group>"; };
+		89CBFACE2D6600DD008E7B50 /* Rouding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rouding.swift; sourceTree = "<group>"; };
+		89CBFACF2D6600DD008E7B50 /* Shafaq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shafaq.swift; sourceTree = "<group>"; };
+		89CBFAD12D6600DD008E7B50 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
+		89CBFAD22D6600DD008E7B50 /* Minute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minute.swift; sourceTree = "<group>"; };
+		89CBFAD42D6600DD008E7B50 /* Adhan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Adhan.h; sourceTree = "<group>"; };
+		89CBFAD52D6600DD008E7B50 /* AdhanObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdhanObjc.swift; sourceTree = "<group>"; };
+		89CBFAD72D6600DD008E7B50 /* PrayerTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimes.swift; sourceTree = "<group>"; };
+		89CBFAD82D6600DD008E7B50 /* Qibla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qibla.swift; sourceTree = "<group>"; };
+		89CBFAD92D6600DD008E7B50 /* SunnahTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunnahTimes.swift; sourceTree = "<group>"; };
+		89CBFADB2D6600DD008E7B50 /* LocalizedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizedButton.h; sourceTree = "<group>"; };
+		89CBFADC2D6600DD008E7B50 /* LocalizedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizedButton.m; sourceTree = "<group>"; };
+		89CBFADE2D6600DD008E7B50 /* LocalizedLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizedLabel.h; sourceTree = "<group>"; };
+		89CBFADF2D6600DD008E7B50 /* LocalizedLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizedLabel.m; sourceTree = "<group>"; };
+		89CBFAE12D6600DD008E7B50 /* MoCurveLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoCurveLayer.h; sourceTree = "<group>"; };
+		89CBFAE22D6600DD008E7B50 /* MoCurveLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoCurveLayer.m; sourceTree = "<group>"; };
+		89CBFAE32D6600DD008E7B50 /* MoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoView.h; sourceTree = "<group>"; };
+		89CBFAE42D6600DD008E7B50 /* MoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoView.m; sourceTree = "<group>"; };
+		89CBFB002D660135008E7B50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		89CBFB022D660201008E7B50 /* FitCloudSwiftDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitCloudSwiftDemo-Prefix.pch"; sourceTree = "<group>"; };
+		89CBFB032D660608008E7B50 /* DataSyncSwiftDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSyncSwiftDemo.swift; sourceTree = "<group>"; };
+		89CBFB0E2D661D70008E7B50 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		89CBFB102D661D76008E7B50 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89CBFB142D661D94008E7B50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		89CBFB152D661D94008E7B50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		89CBFB182D661DF9008E7B50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		89CBFB192D661DF9008E7B50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		89CBFB1A2D661E67008E7B50 /* OTADemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTADemoController.swift; sourceTree = "<group>"; };
+		89CBFB1C2D661E78008E7B50 /* CloudWatchfaceDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudWatchfaceDemoController.swift; sourceTree = "<group>"; };
+		89CBFB1E2D661E89008E7B50 /* DIYWatchfaceDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYWatchfaceDemoController.swift; sourceTree = "<group>"; };
+		89CBFB232D66385E008E7B50 /* e063fe4164204cff8326c7ca08e3f2fe.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = e063fe4164204cff8326c7ca08e3f2fe.bin; sourceTree = "<group>"; };
+		89CBFB252D66E186008E7B50 /* 5140b9f6ad95.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 5140b9f6ad95.bin; sourceTree = "<group>"; };
+		89CBFB272D66F10E008E7B50 /* 3679a6588f34.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 3679a6588f34.bin; sourceTree = "<group>"; };
+		89CBFB282D66F10E008E7B50 /* test_360_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_360_bg.png; sourceTree = "<group>"; };
+		89CBFB292D66F10E008E7B50 /* test_360_preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_360_preview.png; sourceTree = "<group>"; };
+		CA40CD2328A4F44CA511AD27 /* Pods-FitCloudSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8994333D2D65C69200B86640 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E718284A2FC87EA931351A9 /* libPods-FitCloudSwiftDemo.a in Frameworks */,
+				89CBFB012D660135008E7B50 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72AF6BBBAA5CAFAC15F8A0A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFB002D660135008E7B50 /* UIKit.framework */,
+				639B5FE52685D78C8848378F /* libPods-FitCloudSwiftDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		899433372D65C69200B86640 = {
+			isa = PBXGroup;
+			children = (
+				899433712D65C8B500B86640 /* FitCloudSwiftDemo */,
+				899433412D65C69200B86640 /* Products */,
+				FE8D622E9AC5B118AEA36CE6 /* Pods */,
+				72AF6BBBAA5CAFAC15F8A0A5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		899433412D65C69200B86640 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				899433402D65C69200B86640 /* FitCloudSwiftDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		899433712D65C8B500B86640 /* FitCloudSwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFB202D6626D6008E7B50 /* CloudWatchfaces */,
+				89CBFB212D6626D6008E7B50 /* DIYWatchfaces */,
+				89CBFB222D6626D6008E7B50 /* Firmwares */,
+				89CBFB0B2D661D2B008E7B50 /* Localizations */,
+				89CBFAE62D6600DD008E7B50 /* Vendors */,
+				899433682D65C8B500B86640 /* AppDelegate.swift */,
+				899433692D65C8B500B86640 /* Assets.xcassets */,
+				8994336A2D65C8B500B86640 /* Info.plist */,
+				89CBFB102D661D76008E7B50 /* LaunchScreen.storyboard */,
+				89CBFB0E2D661D70008E7B50 /* Main.storyboard */,
+				8994336F2D65C8B500B86640 /* SceneDelegate.swift */,
+				899433702D65C8B500B86640 /* ViewController.swift */,
+				89CBFA7C2D65CF81008E7B50 /* FitCloudProSDK.swift */,
+				89CBFA872D6600AE008E7B50 /* AlarmController.h */,
+				89CBFA882D6600AE008E7B50 /* AlarmController.m */,
+				89CBFA892D6600AE008E7B50 /* DailyGoalSettingController.h */,
+				89CBFA8A2D6600AE008E7B50 /* DailyGoalSettingController.m */,
+				89CBFA8B2D6600AE008E7B50 /* DemoListController.h */,
+				89CBFA8C2D6600AE008E7B50 /* DemoListController.m */,
+				89CBFB032D660608008E7B50 /* DataSyncSwiftDemo.swift */,
+				89CBFA8D2D6600AE008E7B50 /* DeviceBindingController.h */,
+				89CBFA8E2D6600AE008E7B50 /* DeviceBindingController.m */,
+				89CBFA8F2D6600AE008E7B50 /* DeviceCell.h */,
+				89CBFA902D6600AE008E7B50 /* DeviceCell.m */,
+				89CBFA912D6600AE008E7B50 /* DeviceSearchListController.h */,
+				89CBFA922D6600AE008E7B50 /* DeviceSearchListController.m */,
+				89CBFA932D6600AE008E7B50 /* DrinkRemindController.h */,
+				89CBFA942D6600AE008E7B50 /* DrinkRemindController.m */,
+				89CBFA952D6600AE008E7B50 /* HealthMonitorController.h */,
+				89CBFA962D6600AE008E7B50 /* HealthMonitorController.m */,
+				89CBFA972D6600AE008E7B50 /* MessageReminderController.h */,
+				89CBFA982D6600AE008E7B50 /* MessageReminderController.m */,
+				89CBFAA22D6600BC008E7B50 /* MuslimPrayerController.h */,
+				89CBFAA32D6600BC008E7B50 /* MuslimPrayerController.m */,
+				89CBFAA42D6600BC008E7B50 /* MuslimPrayerParams.h */,
+				89CBFAA52D6600BC008E7B50 /* MuslimPrayerParams.m */,
+				89CBFAA62D6600BC008E7B50 /* RealtimeMeasureController.h */,
+				89CBFAA72D6600BC008E7B50 /* RealtimeMeasureController.m */,
+				89CBFAA82D6600BC008E7B50 /* ScreenDispayController.h */,
+				89CBFAA92D6600BC008E7B50 /* ScreenDispayController.m */,
+				89CBFAAA2D6600BC008E7B50 /* SedentaryRemindController.h */,
+				89CBFAAB2D6600BC008E7B50 /* SedentaryRemindController.m */,
+				89CBFAAC2D6600BC008E7B50 /* UnitPreferController.h */,
+				89CBFAAD2D6600BC008E7B50 /* UnitPreferController.m */,
+				89CBFAAE2D6600BC008E7B50 /* UserProfileController.h */,
+				89CBFAAF2D6600BC008E7B50 /* UserProfileController.m */,
+				89CBFAB02D6600BC008E7B50 /* WeatherController.h */,
+				89CBFAB12D6600BC008E7B50 /* WeatherController.m */,
+				89CBFAB22D6600BC008E7B50 /* WomenHealthController.h */,
+				89CBFAB32D6600BC008E7B50 /* WomenHealthController.m */,
+				89CBFAB42D6600BC008E7B50 /* WristWakeUpController.h */,
+				89CBFAB52D6600BC008E7B50 /* WristWakeUpController.m */,
+				89CBFB1A2D661E67008E7B50 /* OTADemoController.swift */,
+				89CBFB1C2D661E78008E7B50 /* CloudWatchfaceDemoController.swift */,
+				89CBFB1E2D661E89008E7B50 /* DIYWatchfaceDemoController.swift */,
+				89CBFA7E2D65EC59008E7B50 /* App.swift */,
+				89CBFA802D65ED58008E7B50 /* FitCloudSwiftDemo-Bridging-Header.h */,
+				89CBFB022D660201008E7B50 /* FitCloudSwiftDemo-Prefix.pch */,
+			);
+			path = FitCloudSwiftDemo;
+			sourceTree = "<group>";
+		};
+		89CBFAC32D6600DD008E7B50 /* Astronomy */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFAC02D6600DD008E7B50 /* Astronomical.swift */,
+				89CBFAC12D6600DD008E7B50 /* SolarCoordinates.swift */,
+				89CBFAC22D6600DD008E7B50 /* SolarTime.swift */,
+			);
+			path = Astronomy;
+			sourceTree = "<group>";
+		};
+		89CBFAC62D6600DD008E7B50 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFAC42D6600DD008E7B50 /* DateUtilities.swift */,
+				89CBFAC52D6600DD008E7B50 /* MathUtilities.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		89CBFAD02D6600DD008E7B50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFAC72D6600DD008E7B50 /* CalculationMethod.swift */,
+				89CBFAC82D6600DD008E7B50 /* CalculationParameters.swift */,
+				89CBFAC92D6600DD008E7B50 /* Coordinates.swift */,
+				89CBFACA2D6600DD008E7B50 /* HighLatitudeRule.swift */,
+				89CBFACB2D6600DD008E7B50 /* Madhab.swift */,
+				89CBFACC2D6600DD008E7B50 /* Prayer.swift */,
+				89CBFACD2D6600DD008E7B50 /* PrayerAdjustment.swift */,
+				89CBFACE2D6600DD008E7B50 /* Rouding.swift */,
+				89CBFACF2D6600DD008E7B50 /* Shafaq.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		89CBFAD32D6600DD008E7B50 /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFAD12D6600DD008E7B50 /* Angle.swift */,
+				89CBFAD22D6600DD008E7B50 /* Minute.swift */,
+			);
+			path = Units;
+			sourceTree = "<group>";
+		};
+		89CBFADA2D6600DD008E7B50 /* Adan */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFAC32D6600DD008E7B50 /* Astronomy */,
+				89CBFAC62D6600DD008E7B50 /* Extensions */,
+				89CBFAD02D6600DD008E7B50 /* Models */,
+				89CBFAD32D6600DD008E7B50 /* Units */,
+				89CBFAD42D6600DD008E7B50 /* Adhan.h */,
+				89CBFAD52D6600DD008E7B50 /* AdhanObjc.swift */,
+				89CBFAD72D6600DD008E7B50 /* PrayerTimes.swift */,
+				89CBFAD82D6600DD008E7B50 /* Qibla.swift */,
+				89CBFAD92D6600DD008E7B50 /* SunnahTimes.swift */,
+			);
+			path = Adan;
+			sourceTree = "<group>";
+		};
+		89CBFADD2D6600DD008E7B50 /* LocalizedButton */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFADB2D6600DD008E7B50 /* LocalizedButton.h */,
+				89CBFADC2D6600DD008E7B50 /* LocalizedButton.m */,
+			);
+			path = LocalizedButton;
+			sourceTree = "<group>";
+		};
+		89CBFAE02D6600DD008E7B50 /* LocalizedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFADE2D6600DD008E7B50 /* LocalizedLabel.h */,
+				89CBFADF2D6600DD008E7B50 /* LocalizedLabel.m */,
+			);
+			path = LocalizedLabel;
+			sourceTree = "<group>";
+		};
+		89CBFAE52D6600DD008E7B50 /* MoLoading */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFAE12D6600DD008E7B50 /* MoCurveLayer.h */,
+				89CBFAE22D6600DD008E7B50 /* MoCurveLayer.m */,
+				89CBFAE32D6600DD008E7B50 /* MoView.h */,
+				89CBFAE42D6600DD008E7B50 /* MoView.m */,
+			);
+			path = MoLoading;
+			sourceTree = "<group>";
+		};
+		89CBFAE62D6600DD008E7B50 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFADA2D6600DD008E7B50 /* Adan */,
+				89CBFADD2D6600DD008E7B50 /* LocalizedButton */,
+				89CBFAE02D6600DD008E7B50 /* LocalizedLabel */,
+				89CBFAE52D6600DD008E7B50 /* MoLoading */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		89CBFB0B2D661D2B008E7B50 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFB122D661D94008E7B50 /* InfoPlist.strings */,
+				89CBFB132D661D94008E7B50 /* Localizable.strings */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		89CBFB202D6626D6008E7B50 /* CloudWatchfaces */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFB252D66E186008E7B50 /* 5140b9f6ad95.bin */,
+			);
+			path = CloudWatchfaces;
+			sourceTree = "<group>";
+		};
+		89CBFB212D6626D6008E7B50 /* DIYWatchfaces */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFB272D66F10E008E7B50 /* 3679a6588f34.bin */,
+				89CBFB282D66F10E008E7B50 /* test_360_bg.png */,
+				89CBFB292D66F10E008E7B50 /* test_360_preview.png */,
+			);
+			path = DIYWatchfaces;
+			sourceTree = "<group>";
+		};
+		89CBFB222D6626D6008E7B50 /* Firmwares */ = {
+			isa = PBXGroup;
+			children = (
+				89CBFB232D66385E008E7B50 /* e063fe4164204cff8326c7ca08e3f2fe.bin */,
+			);
+			path = Firmwares;
+			sourceTree = "<group>";
+		};
+		FE8D622E9AC5B118AEA36CE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F523A375FF6E576B01DEFF6 /* Pods-FitCloudSwiftDemo.debug.xcconfig */,
+				CA40CD2328A4F44CA511AD27 /* Pods-FitCloudSwiftDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8994333F2D65C69200B86640 /* FitCloudSwiftDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899433532D65C69300B86640 /* Build configuration list for PBXNativeTarget "FitCloudSwiftDemo" */;
+			buildPhases = (
+				E3A32E8333BCCA1CD0337520 /* [CP] Check Pods Manifest.lock */,
+				8994333C2D65C69200B86640 /* Sources */,
+				8994333D2D65C69200B86640 /* Frameworks */,
+				8994333E2D65C69200B86640 /* Resources */,
+				02A94E8F14857DE8A639948C /* [CP] Embed Pods Frameworks */,
+				1FAF2D2E8F388759A65DCD2B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitCloudSwiftDemo;
+			productName = FitCloudSwiftDemo;
+			productReference = 899433402D65C69200B86640 /* FitCloudSwiftDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		899433382D65C69200B86640 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					8994333F2D65C69200B86640 = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
+					};
+				};
+			};
+			buildConfigurationList = 8994333B2D65C69200B86640 /* Build configuration list for PBXProject "FitCloudSwiftDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+			);
+			mainGroup = 899433372D65C69200B86640;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 899433412D65C69200B86640 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8994333F2D65C69200B86640 /* FitCloudSwiftDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8994333E2D65C69200B86640 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899433752D65C8B500B86640 /* Assets.xcassets in Resources */,
+				89CBFB112D661D76008E7B50 /* LaunchScreen.storyboard in Resources */,
+				89CBFB162D661D94008E7B50 /* InfoPlist.strings in Resources */,
+				89CBFB2A2D66F10E008E7B50 /* 3679a6588f34.bin in Resources */,
+				89CBFB2B2D66F10E008E7B50 /* test_360_preview.png in Resources */,
+				89CBFB2C2D66F10E008E7B50 /* test_360_bg.png in Resources */,
+				89CBFB172D661D94008E7B50 /* Localizable.strings in Resources */,
+				89CBFB242D66385E008E7B50 /* e063fe4164204cff8326c7ca08e3f2fe.bin in Resources */,
+				89CBFB0F2D661D70008E7B50 /* Main.storyboard in Resources */,
+				89CBFB262D66E186008E7B50 /* 5140b9f6ad95.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02A94E8F14857DE8A639948C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FAF2D2E8F388759A65DCD2B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3A32E8333BCCA1CD0337520 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitCloudSwiftDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8994333C2D65C69200B86640 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CBFA7D2D65CF81008E7B50 /* FitCloudProSDK.swift in Sources */,
+				899433722D65C8B500B86640 /* AppDelegate.swift in Sources */,
+				899433732D65C8B500B86640 /* SceneDelegate.swift in Sources */,
+				89CBFA7F2D65EC59008E7B50 /* App.swift in Sources */,
+				899433742D65C8B500B86640 /* ViewController.swift in Sources */,
+				89CBFA992D6600AE008E7B50 /* DeviceBindingController.m in Sources */,
+				89CBFA9A2D6600AE008E7B50 /* DeviceCell.m in Sources */,
+				89CBFA9B2D6600AE008E7B50 /* DrinkRemindController.m in Sources */,
+				89CBFA9C2D6600AE008E7B50 /* DeviceSearchListController.m in Sources */,
+				89CBFAE82D6600DD008E7B50 /* DateUtilities.swift in Sources */,
+				89CBFAE92D6600DD008E7B50 /* Angle.swift in Sources */,
+				89CBFAEA2D6600DD008E7B50 /* Shafaq.swift in Sources */,
+				89CBFAEB2D6600DD008E7B50 /* SolarCoordinates.swift in Sources */,
+				89CBFB1F2D661E89008E7B50 /* DIYWatchfaceDemoController.swift in Sources */,
+				89CBFAEC2D6600DD008E7B50 /* Minute.swift in Sources */,
+				89CBFAED2D6600DD008E7B50 /* MathUtilities.swift in Sources */,
+				89CBFAEE2D6600DD008E7B50 /* Madhab.swift in Sources */,
+				89CBFAEF2D6600DD008E7B50 /* SolarTime.swift in Sources */,
+				89CBFAF02D6600DD008E7B50 /* HighLatitudeRule.swift in Sources */,
+				89CBFAF12D6600DD008E7B50 /* CalculationMethod.swift in Sources */,
+				89CBFAF22D6600DD008E7B50 /* Prayer.swift in Sources */,
+				89CBFAF32D6600DD008E7B50 /* SunnahTimes.swift in Sources */,
+				89CBFAF42D6600DD008E7B50 /* MoView.m in Sources */,
+				89CBFAF52D6600DD008E7B50 /* Qibla.swift in Sources */,
+				89CBFAF62D6600DD008E7B50 /* PrayerAdjustment.swift in Sources */,
+				89CBFAF72D6600DD008E7B50 /* AdhanObjc.swift in Sources */,
+				89CBFB1D2D661E78008E7B50 /* CloudWatchfaceDemoController.swift in Sources */,
+				89CBFAF82D6600DD008E7B50 /* MoCurveLayer.m in Sources */,
+				89CBFB042D660608008E7B50 /* DataSyncSwiftDemo.swift in Sources */,
+				89CBFAF92D6600DD008E7B50 /* Coordinates.swift in Sources */,
+				89CBFAFA2D6600DD008E7B50 /* CalculationParameters.swift in Sources */,
+				89CBFAFB2D6600DD008E7B50 /* LocalizedButton.m in Sources */,
+				89CBFAFC2D6600DD008E7B50 /* LocalizedLabel.m in Sources */,
+				89CBFAFD2D6600DD008E7B50 /* Rouding.swift in Sources */,
+				89CBFAFE2D6600DD008E7B50 /* PrayerTimes.swift in Sources */,
+				89CBFAFF2D6600DD008E7B50 /* Astronomical.swift in Sources */,
+				89CBFA9D2D6600AE008E7B50 /* AlarmController.m in Sources */,
+				89CBFA9E2D6600AE008E7B50 /* MessageReminderController.m in Sources */,
+				89CBFA9F2D6600AE008E7B50 /* DemoListController.m in Sources */,
+				89CBFAA02D6600AE008E7B50 /* HealthMonitorController.m in Sources */,
+				89CBFAB62D6600BC008E7B50 /* MuslimPrayerParams.m in Sources */,
+				89CBFAB72D6600BC008E7B50 /* WristWakeUpController.m in Sources */,
+				89CBFAB82D6600BC008E7B50 /* MuslimPrayerController.m in Sources */,
+				89CBFAB92D6600BC008E7B50 /* UnitPreferController.m in Sources */,
+				89CBFABA2D6600BC008E7B50 /* RealtimeMeasureController.m in Sources */,
+				89CBFABB2D6600BC008E7B50 /* ScreenDispayController.m in Sources */,
+				89CBFABC2D6600BC008E7B50 /* SedentaryRemindController.m in Sources */,
+				89CBFABD2D6600BC008E7B50 /* UserProfileController.m in Sources */,
+				89CBFB1B2D661E67008E7B50 /* OTADemoController.swift in Sources */,
+				89CBFABE2D6600BC008E7B50 /* WeatherController.m in Sources */,
+				89CBFABF2D6600BC008E7B50 /* WomenHealthController.m in Sources */,
+				89CBFAA12D6600AE008E7B50 /* DailyGoalSettingController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		89CBFB122D661D94008E7B50 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89CBFB142D661D94008E7B50 /* en */,
+				89CBFB182D661DF9008E7B50 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		89CBFB132D661D94008E7B50 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89CBFB152D661D94008E7B50 /* en */,
+				89CBFB192D661DF9008E7B50 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		899433542D65C69300B86640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F523A375FF6E576B01DEFF6 /* Pods-FitCloudSwiftDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20250219001;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FitCloudSwiftDemo/FitCloudSwiftDemo-Prefix.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitCloudSwiftDemo/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "将使用您的蓝牙外设权限用于与手环设备配对";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "将使用您的蓝牙外设权限用于与手环设备配对";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "需要获得相册创建权限用于保存摇一摇拍照照片等";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "选择自定义表盘图片";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FitCloudSwiftDemo/FitCloudSwiftDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		899433552D65C69300B86640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA40CD2328A4F44CA511AD27 /* Pods-FitCloudSwiftDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20250219001;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FitCloudSwiftDemo/FitCloudSwiftDemo-Prefix.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitCloudSwiftDemo/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "将使用您的蓝牙外设权限用于与手环设备配对";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "将使用您的蓝牙外设权限用于与手环设备配对";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "需要获得相册创建权限用于保存摇一摇拍照照片等";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "选择自定义表盘图片";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FitCloudSwiftDemo/FitCloudSwiftDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		899433562D65C69300B86640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		899433572D65C69300B86640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8994333B2D65C69200B86640 /* Build configuration list for PBXProject "FitCloudSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899433562D65C69300B86640 /* Debug */,
+				899433572D65C69300B86640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		899433532D65C69300B86640 /* Build configuration list for PBXNativeTarget "FitCloudSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899433542D65C69300B86640 /* Debug */,
+				899433552D65C69300B86640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 899433382D65C69200B86640 /* Project object */;
+}

@@ -1,0 +1,139 @@
+/* 
+  Localizable.strings
+  FitCloudKitDemo
+
+  Created by pcjbird on 2019/8/17.
+  Copyright © 2019 HetangSmart. All rights reserved.
+*/
+
+"Back" = " 返回";
+
+"Search Device" = "搜索设备";
+"Connect Device" = "连接设备";
+"Remove Device" = "删除设备";
+"More Demo >" = "更多示例>";
+
+"SOC: %@%%" = "剩余电量：%@%%";
+
+"Discovered Devices" = "设备列表";
+"Click to connect and bind the smart watch" = "点击连接设备";
+
+"SYSTEM PAIRED" = "系统已配对";
+"CONNECTED" = "已连接";
+"DISCONNECTED" = "未连接";
+
+"Connecting..." = "正在连接...";
+"Connected" = "已连接";
+"Disconnected" = "未连接";
+
+"Logging On User Object" = "正在登录用户...";
+"Login User Object Success" = "登录用户成功.";
+"Login User Object Failure" = "登录用户失败.";
+"Preparing Work for Smart Watch" = "手表正在完成一些准备工作...";
+"Prepare Work for Smart Watch Finished." = "手表准备工作完成.";
+
+"Binding User Object" = "正在绑定用户...";
+"Bind User Object Success" = "绑定用户成功.";
+"Bind User Object Failure" = "绑定用户失败.";
+"Getting Smart Watch All Config" = "正在获取手表配置信息...";
+"Get Smart Watch All Config Success" = "获取手表配置信息成功.";
+"Get Smart Watch All Config Failure" = "获取手表配置信息失败.";
+
+"Enjoy Now" = "即刻体验";
+"Retry" = "重试";
+"Unbind And Retry" = "解绑并重试";
+"Try Later" = "暂且跳过";
+
+"Binding Smart Watch" = "正在绑定";
+"Please keep the smart watch nearby your iPhone." = "请将手表靠近您的 iPhone 手机";
+"Smart Watch Bind Success" = "绑定成功";
+"Your Smart Watch Complete Bind..." = "您的手表已完成绑定...";
+"Smart Watch Bind Failure" = "绑定失败";
+"Your Smart Watch Complete Failed to Bind..." = "您的手表未能成功绑定...";
+
+"Demos" = "示例";
+"Click to run the demo" = "点击运行示例";
+"View the results in the console." = "请在控制台查看结果。";
+
+"Get Sports Data Today" = "获取今日运动数据";
+"Manual Sync Data" = "手动同步";
+"Message Reminder" = "消息提醒";
+"Alarm" = "闹钟";
+"Sedentary Remind" = "久坐提醒";
+"Drink Remind" = "喝水提醒";
+"Wrist Wake Up" = "抬腕唤醒";
+"Health Monitor Settings" = "健康监控设置";
+"Screen Display" = "屏幕显示";
+"Health Measurement" = "健康测量";
+"Daily Goal Settings" = "每日目标设置";
+"Unit Prefer Settings" = "单位偏好设置";
+"User Profile Settings" = "用户资料设置";
+"Sync Weather" = "同步天气";
+"Women Health" = "女性";
+"Muslim Prayer" = "朝拜";
+
+"Whether Support Mail Reminder" = "手表是否支持邮件提醒";
+"Wheather Support TelegramAndViber Reminder" = "手表是否支持Telegram和Viber提醒";
+"Whether Call Reminder Enabled" = "来电提醒是否开启";
+"Enable Call Reminder" = "开启来电提醒";
+"Disable Call Reminder" = "关闭来电提醒";
+"Enable Call & SMS Reminder at the same time" = "同时开启来电和短信提醒";
+"Disable Call & SMS Reminder at the same time" = "同时关闭来电和短信提醒";
+
+"Op success." = "操作成功。";
+"Op failure." = "操作失败。";
+
+"Alarm List" = "闹钟列表";
+"Add Alarm" = "添加闹钟";
+"Edit Alarm" = "编辑闹钟";
+
+"Fetch Sedentary Remind Settings" = "获取久坐提醒设置";
+"Do Sedentary Remind Settings" = "设置久坐提醒";
+
+"Fetch Drink Remind Settings" = "获取喝水提醒设置";
+"Do Drink Remind Settings" = "喝水提醒设置";
+
+"Fetch Wrist Wake Up Settings" = "获取抬腕唤醒设置";
+"Do Wrist Wake Up Settings" = "设置抬腕唤醒";
+
+"Fetch Health Monitor Settings" = "获取健康监测设置";
+"Do Health Monitor Settings" = "健康监测设置";
+
+"Fetch Supported Screen Display Items" = "获取手表支持的屏幕显示功能";
+"Wheather Support Display Steps" = "手表是否支持显示步数";
+"Wheather Steps Item Current Shown" = "手表当前是否显示步数功能";
+"Enable Steps Item Dispay" = "开启步数功能显示";
+"Disable Steps Item Display" = "关闭步数功能显示";
+
+"Realtime Measurement" = "实时测量";
+"Start Heart Rate Realtime Measurement" = "启动心率实时测量";
+"One Click to Start All Measurement" = "一键测量";
+"Stop the Measurement" = "停止测量";
+
+"Set Daily Goal" = "设置每日目标";
+
+"Do Length & Weight Unit Prefer Settings" = "长度及重量单位偏好设置(公制/英制)";
+"Do Temperature Unit Prefer Settings" = "温度单位偏好设置(摄氏度/华氏度)";
+
+"Do User Profile Settings" = "用户资料设置";
+"Do BloodPressure Rreference Settings" = "血压参考设置";
+
+"OTA" = "固件升级";
+"Starting firmware upgrade" = "开始固件升级";
+"Firmware upgrade in progress" = "固件升级中";
+"Firmware upgrade success" = "固件升级成功";
+"Firmware upgrade failed" = "固件升级失败";
+
+
+"Cloud Watchface" = "云表盘";
+"DIY Watchface" = "自定义表盘";
+"Starting upload the watchface" = "开始同步表盘";
+"Upload the watchface in progress" = "正在同步表盘...";
+"Upload the watchface success" = "表盘同步成功";
+"Upload the watchface failed" = "同步表盘失败";
+
+"Choose a DIY photo" = "选择背景图";
+"Starting DIY and upload" = "开始生成自定义表盘并同步";
+"DIY the watchface in progress" = "正在生成自定义表盘...";
+"DIY the watchface success" = "生成自定义表盘成功...";
+"DIY the watchface failed" = "生成自定义表盘失败...";

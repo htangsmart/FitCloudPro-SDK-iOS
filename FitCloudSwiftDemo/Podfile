@@ -1,0 +1,27 @@
+# Uncomment this line to define a global platform for your project
+
+inhibit_all_warnings!
+
+target 'FitCloudSwiftDemo' do
+  platform :ios, '13.0'
+  workspace 'FitCloudSwiftDemo.xcworkspace'
+  project 'FitCloudSwiftDemo.xcodeproj'
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  #use_frameworks!
+
+  # Pods for FitCloudSwiftDemo
+
+  # FitCloudPro SDKs
+  pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+  pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+  pod 'FitCloudWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+
+  # Log SDKs
+  pod 'XLFacility', git: 'https://github.com/pcjbird/XLFacility.git'
+  pod 'iOSLogBrowserSDK'
+
+  # Other Third party SDKs
+  pod 'YYCategories'
+  pod 'Toast'
+end
+

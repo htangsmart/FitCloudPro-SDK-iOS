@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  FitCloudKitDemo
+
+  Created by pcjbird on 2019/8/17.
+  Copyright © 2019 HetangSmart. All rights reserved.
+*/
+
+"Back" = " Back";
+
+"Search Device" = "Search Device";
+
+"SOC: %@%%" = "SOC: %@%%";
+
+"Discovered Devices" = "Discovered Devices";
+"Click to connect and bind the smart watch" = "Click to connect and bind the smart watch";
+
+"SYSTEM PAIRED" = "SYSTEM PAIRED";
+"CONNECTED" = "CONNECTED";
+"DISCONNECTED" = "DISCONNECTED";
