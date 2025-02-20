@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.5 build20250220001 (2025-02-20)
+
+- Introduce the `clearTranssionInfinixWatchMenstrualCorrectedDataInfoWithCompletion:` API to clear the menstrual corrected data info for `Transsion Infinix` devices.
+- Add `FITCLOUDMN_DINGTALK` definition to support DingTalk notifications.
+
 ## V1.3.1-beta.4 build20250214002 (2025-02-14)
 
 - Introduce the `taskId` property to `FitCloudTaskModel`.

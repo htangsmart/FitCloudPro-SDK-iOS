@@ -1100,7 +1100,7 @@ typedef NS_ENUM(Byte, FITCLOUDQRCODE) {
     /// BHTM收款码
     FITCLOUDQRCODE_MONEYRECEIVE_BHIM = 0x08,
     /// Momo收款码
-    FITCLOUDQRCODE_MONEYRECEIVE_MOMO= 0x09,
+    FITCLOUDQRCODE_MONEYRECEIVE_MOMO = 0x09,
     /// Zalo收款码
     FITCLOUDQRCODE_MONEYRECEIVE_ZALO = 0x0A,
     /// 微信名片
@@ -1462,6 +1462,8 @@ typedef NS_OPTIONS(UInt64, FITCLOUDMN) {
     FITCLOUDMN_TIRA = ((UInt64)1) << 48,
     /// Zalo通知
     FITCLOUDMN_ZALO = ((UInt64)1) << 49,
+    /// 钉钉通知
+    FITCLOUDMN_DINGTALK = ((UInt64)1) << 50,
 };
 
 #pragma mark - 内置个性化提醒定义(高级提醒)

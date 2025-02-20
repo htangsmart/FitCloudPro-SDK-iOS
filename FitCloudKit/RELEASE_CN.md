@@ -1,11 +1,13 @@
 # 版本更新日志
 
-## pcjbird 2025-02-14 Version:1.3.1-beta.4 Build:20250214002
+## pcjbird 2025-02-20 Version:1.3.1-beta.5 Build:20250220001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
 - 添加 `allowQueryTranssionInfinixSerialNumber` 标识，用于判断是否支持查询 `Transsion Infinix` 设备获取序列号。
 - 引入 `taskId` 属性到 `FitCloudTaskModel` 中。
+- 引入 `clearTranssionInfinixWatchMenstrualCorrectedDataInfoWithCompletion:` API 以清除 `Transsion Infinix` 设备的手动设置经期校正数据。
+- 新增 `FITCLOUDMN_DINGTALK` 定义以支持钉钉通知。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
