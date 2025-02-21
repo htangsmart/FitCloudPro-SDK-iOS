@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7E718284A2FC87EA931351A9 /* libPods-FitCloudSwiftDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 639B5FE52685D78C8848378F /* libPods-FitCloudSwiftDemo.a */; };
+		894A982C2D685E8A00627844 /* OTA_8123_V110_14F6_20250210095854_app_all.bin in Resources */ = {isa = PBXBuildFile; fileRef = 894A982B2D685E8A00627844 /* OTA_8123_V110_14F6_20250210095854_app_all.bin */; };
+		894A982E2D68748700627844 /* gui_dial_binfile_watch_1020003_1_20240729_ota.bin in Resources */ = {isa = PBXBuildFile; fileRef = 894A982D2D68748700627844 /* gui_dial_binfile_watch_1020003_1_20240729_ota.bin */; };
+		894A98302D68786200627844 /* gui_dial_binfile_watch_1020000_1_20240903_ota.bin in Resources */ = {isa = PBXBuildFile; fileRef = 894A982F2D68786200627844 /* gui_dial_binfile_watch_1020000_1_20240903_ota.bin */; };
 		899433722D65C8B500B86640 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899433682D65C8B500B86640 /* AppDelegate.swift */; };
 		899433732D65C8B500B86640 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8994336F2D65C8B500B86640 /* SceneDelegate.swift */; };
 		899433742D65C8B500B86640 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899433702D65C8B500B86640 /* ViewController.swift */; };
@@ -76,6 +79,9 @@
 /* Begin PBXFileReference section */
 		1F523A375FF6E576B01DEFF6 /* Pods-FitCloudSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		639B5FE52685D78C8848378F /* libPods-FitCloudSwiftDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitCloudSwiftDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		894A982B2D685E8A00627844 /* OTA_8123_V110_14F6_20250210095854_app_all.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = OTA_8123_V110_14F6_20250210095854_app_all.bin; sourceTree = "<group>"; };
+		894A982D2D68748700627844 /* gui_dial_binfile_watch_1020003_1_20240729_ota.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = gui_dial_binfile_watch_1020003_1_20240729_ota.bin; sourceTree = "<group>"; };
+		894A982F2D68786200627844 /* gui_dial_binfile_watch_1020000_1_20240903_ota.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = gui_dial_binfile_watch_1020000_1_20240903_ota.bin; sourceTree = "<group>"; };
 		899433402D65C69200B86640 /* FitCloudSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899433682D65C8B500B86640 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899433692D65C8B500B86640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -389,6 +395,7 @@
 		89CBFB202D6626D6008E7B50 /* CloudWatchfaces */ = {
 			isa = PBXGroup;
 			children = (
+				894A982D2D68748700627844 /* gui_dial_binfile_watch_1020003_1_20240729_ota.bin */,
 				89CBFB252D66E186008E7B50 /* 5140b9f6ad95.bin */,
 			);
 			path = CloudWatchfaces;
@@ -397,6 +404,7 @@
 		89CBFB212D6626D6008E7B50 /* DIYWatchfaces */ = {
 			isa = PBXGroup;
 			children = (
+				894A982F2D68786200627844 /* gui_dial_binfile_watch_1020000_1_20240903_ota.bin */,
 				89CBFB272D66F10E008E7B50 /* 3679a6588f34.bin */,
 				89CBFB282D66F10E008E7B50 /* test_360_bg.png */,
 				89CBFB292D66F10E008E7B50 /* test_360_preview.png */,
@@ -407,6 +415,7 @@
 		89CBFB222D6626D6008E7B50 /* Firmwares */ = {
 			isa = PBXGroup;
 			children = (
+				894A982B2D685E8A00627844 /* OTA_8123_V110_14F6_20250210095854_app_all.bin */,
 				89CBFB232D66385E008E7B50 /* e063fe4164204cff8326c7ca08e3f2fe.bin */,
 			);
 			path = Firmwares;
@@ -485,9 +494,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				899433752D65C8B500B86640 /* Assets.xcassets in Resources */,
+				894A982E2D68748700627844 /* gui_dial_binfile_watch_1020003_1_20240729_ota.bin in Resources */,
+				894A982C2D685E8A00627844 /* OTA_8123_V110_14F6_20250210095854_app_all.bin in Resources */,
 				89CBFB112D661D76008E7B50 /* LaunchScreen.storyboard in Resources */,
 				89CBFB162D661D94008E7B50 /* InfoPlist.strings in Resources */,
 				89CBFB2A2D66F10E008E7B50 /* 3679a6588f34.bin in Resources */,
+				894A98302D68786200627844 /* gui_dial_binfile_watch_1020000_1_20240903_ota.bin in Resources */,
 				89CBFB2B2D66F10E008E7B50 /* test_360_preview.png in Resources */,
 				89CBFB2C2D66F10E008E7B50 /* test_360_bg.png in Resources */,
 				89CBFB172D661D94008E7B50 /* Localizable.strings in Resources */,

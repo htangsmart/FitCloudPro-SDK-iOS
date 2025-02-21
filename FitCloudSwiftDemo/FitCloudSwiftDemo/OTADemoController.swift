@@ -79,7 +79,7 @@ class OTADemoController: UIViewController {
         
         /// Add a firmware file to your project, and replace the following code with your own firmware file name.
         /// Using an incompatible firmmare file may cause the watch to malfunction.
-        let filename = "-- "  //e063fe4164204cff8326c7ca08e3f2fe
+        let filename = "--"  //e063fe4164204cff8326c7ca08e3f2fe
         let line = #line
         let file = #file
 
