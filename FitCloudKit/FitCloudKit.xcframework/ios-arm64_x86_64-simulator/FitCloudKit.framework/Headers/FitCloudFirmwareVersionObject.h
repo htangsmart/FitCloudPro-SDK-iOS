@@ -299,4 +299,7 @@
 /// 是否支持查询传音(Infinix)手表序列号(EUID, Equipment Unique Identifier)
 @property(nonatomic, readonly) BOOL allowQueryTranssionInfinixSerialNumber;
 
+/// 是否支持切换耳机仓鼠标起始点预设
+@property(nonatomic, readonly) BOOL allowSwitchMouseStartPointPresetForEarphoneCase;
+
 @end

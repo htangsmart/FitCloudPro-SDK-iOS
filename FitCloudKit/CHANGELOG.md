@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.6 build20250222001 (2025-02-22)
+
+- Introduce new APIs to query and set the mouse start point preset for the earbud case.
+
 ## V1.3.1-beta.5 build20250220001 (2025-02-20)
 
 - Introduce the `clearTranssionInfinixWatchMenstrualCorrectedDataInfoWithCompletion:` API to clear the menstrual corrected data info for `Transsion Infinix` devices.

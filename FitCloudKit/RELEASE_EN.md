@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-02-20 Version:1.3.1-beta.5 Build:20250220001
+## pcjbird 2025-02-22 Version:1.3.1-beta.6 Build:20250222001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -8,6 +8,7 @@
 - Introduce the `taskId` property to `FitCloudTaskModel`.
 - Introduce the `clearTranssionInfinixWatchMenstrualCorrectedDataInfoWithCompletion:` API to clear the menstrual corrected data info for `Transsion Infinix` devices.
 - Added `FITCLOUDMN_DINGTALK` definition to support DingTalk notifications.
+- Introduce new APIs to query and set the mouse start point preset for the earbud case.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
