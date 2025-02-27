@@ -275,7 +275,7 @@ class DIYWatchfaceDemoController: UIViewController {
                 return
             }
             
-            let silentMode = firmwareInfo.hardwareSupported.contains(._DFUSHOULDSILENTMODE)
+            let silentMode = true
             FitCloudDFUKit.start(with: peripheral,
                                 firmware: path,
                                 chipVendor: .REALTEK,
