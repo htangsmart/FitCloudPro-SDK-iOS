@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.7 build20250228001 (2025-02-28)
+
+- Changed the mouse start point preset start index range from 1 to 0.
+- Enhanced some SDK logs.
+
 ## V1.3.1-beta.6 build20250222001 (2025-02-22)
 
 - Introduce new APIs to query and set the mouse start point preset for the earbud case.

@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-02-22  Version:1.3.1-beta.6 Build:20250222001
+//      pcjbird    2025-02-28  Version:1.3.1-beta.7 Build:20250228001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1307,7 +1307,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 设置耳机仓鼠标起始点预设(Set earbud case mouse start point preset)
 /// - Parameters:
-///   - preset: 预设, 取值范围从1开始
+///   - preset: 预设, 取值范围从0开始
 ///   - completion: the completion callback
 + (void)setEarbudCaseMouseStartPointPreset:(NSInteger)preset withCompletion:(FitCloudResultHandler _Nullable)completion;
 
@@ -1315,7 +1315,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - completion: the completion callback
 ///     - success: 是否查询成功
-///     - currentPreset: 当前预设，取值范围从1开始
+///     - currentPreset: 当前预设，取值范围从0开始
 ///     - totalPresetsCount: 预设总数
 + (void)queryEarbudCaseMouseStartPointPresetWithCompletion:(void (^_Nullable)(BOOL success, NSInteger currentPreset, NSInteger totalPresetsCount, NSError *_Nullable error))completion;
 
