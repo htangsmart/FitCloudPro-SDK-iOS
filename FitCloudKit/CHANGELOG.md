@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.8 build20250228002 (2025-02-28)
+
+- Changed Transsion Infinix device information query API to retrieve EUID (Equipment Unique Identifier), device model and 4G capability status.
+- Introduce new APIs to allow the watch device query the app-side permissions status.
+
 ## V1.3.1-beta.7 build20250228001 (2025-02-28)
 
 - Changed the mouse start point preset start index range from 1 to 0.

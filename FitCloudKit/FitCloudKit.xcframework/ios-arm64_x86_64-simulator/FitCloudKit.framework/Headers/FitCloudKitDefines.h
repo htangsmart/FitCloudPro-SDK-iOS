@@ -1623,4 +1623,12 @@ typedef NS_ENUM(NSInteger, FITCLOUDFIRMWAREMODULETYPE) {
     FITCLOUDFIRMWAREMODULETYPE_4GMODEM = 0x02,
 };
 
+#pragma mark - App Side Permission Type
+
+/// App side permission type
+typedef NS_ENUM(NSInteger, FITCLOUDAPPSIDEPERMISSIONTYPE) {
+    /// Location permission
+    FITCLOUDAPPSIDEPERMISSIONTYPE_LOCATION = 0x1,
+};
+
 #endif /* FitCloudKitDefines_h */

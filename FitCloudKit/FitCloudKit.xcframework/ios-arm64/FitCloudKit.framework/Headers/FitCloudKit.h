@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-02-28  Version:1.3.1-beta.7 Build:20250228001
+//      pcjbird    2025-02-28  Version:1.3.1-beta.8 Build:20250228002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1358,6 +1358,16 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - events: the kaaba data
 ///   - completion: the completion callback
 + (void)setKaabaData:(FitCloudKaabaModel *)kaabaData completion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
+
+#pragma mark - App Side Permission Status
+
+/// Send app-side permission status array to watch
+/// - Parameters:
+///   - permissionStatusArray: Array of permission status models containing app-side permission information
+///   - completion: A completion handler called when sending completes. Parameters:
+///     - succeed: Whether sending was successful
+///     - error: Error information if sending fails, nil on success
++ (void)sendAppSidePermissionStatusArray:(NSArray<FitCloudAppSidePermissionStatusModel *> *)permissionStatusArray completion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
 
 @end
 

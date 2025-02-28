@@ -12,6 +12,10 @@
 		<data>
 		gRbXf5b59O06bQ/gvyY1Mxdk9Sw=
 		</data>
+		<key>Headers/FitCloudAppSidePermissionStatusModel.h</key>
+		<data>
+		dm5IWNrhRMb11ypXGN9tccXs8Dc=
+		</data>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
 		<data>
 		cv21zSF7S+DHdOGJiO6bSV1w01o=
@@ -26,7 +30,7 @@
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
-		RTs+LKvONwmeXAU8//Jd5/BA62I=
+		syEoiqTxnlKCPAF8SrsJCAkQuhg=
 		</data>
 		<key>Headers/FitCloudCapacity.h</key>
 		<data>
@@ -90,7 +94,7 @@
 		</data>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
-		qtjL4db/fC3Ia6X/NuxY0EuwyQ8=
+		td/YidKhsGvG1Xvj2NO+PeQhwGM=
 		</data>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
 		<data>
@@ -170,11 +174,11 @@
 		</data>
 		<key>Headers/FitCloudKit+TranssionInfinix.h</key>
 		<data>
-		72B9j5M9Szkj5OY5/5j2XVXLaz8=
+		sCGzw0HIB+IJ5te0rOOz8Dfd5fA=
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		lv/3pJQtjud+PfNcBPwh1vot4OE=
+		fWblg6LFdAvLu6kxhtOZ/RQCbJ4=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -182,7 +186,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		s8GmaiD2+/bhgCI/vMMfsLc2lyI=
+		zHa0JzvcuyOXvOsXh60AwWYaNrM=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -210,7 +214,7 @@
 		</data>
 		<key>Headers/FitCloudModels.h</key>
 		<data>
-		hB5MfC6e9sCSYFkiIRZ9Y4mzeD4=
+		6R7KKsNK1DgKXKUENpYErFSBVGs=
 		</data>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
 		<data>
@@ -334,7 +338,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hlVQ2X9pHWNmUy0QTu6gYOnQi18=
+		M3rJkBhmoBWkZ1XneH027mB9s4M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -363,6 +367,17 @@
 			<key>hash2</key>
 			<data>
 			aO/xx3nCOC8/vuIHfaK5LG4vbJvPlbla3Ft0Z7N6Al4=
+			</data>
+		</dict>
+		<key>Headers/FitCloudAppSidePermissionStatusModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dm5IWNrhRMb11ypXGN9tccXs8Dc=
+			</data>
+			<key>hash2</key>
+			<data>
+			rmtKnkRo/eZ62DLOCk4FbnTfDOnm5IylJlNP0N8IUYI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
@@ -402,11 +417,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RTs+LKvONwmeXAU8//Jd5/BA62I=
+			syEoiqTxnlKCPAF8SrsJCAkQuhg=
 			</data>
 			<key>hash2</key>
 			<data>
-			tXUA7EWbqiC1QGyPD2aLZTcd9yVOCrr8YMApsdV7tK0=
+			ZpaqPoftIn+DBYwonjqt9lyZHVFsgpZ5uvRcnRzucO4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCapacity.h</key>
@@ -578,11 +593,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qtjL4db/fC3Ia6X/NuxY0EuwyQ8=
+			td/YidKhsGvG1Xvj2NO+PeQhwGM=
 			</data>
 			<key>hash2</key>
 			<data>
-			F1kSatg0/zanW6vJEXpSA/fLaxHTkfcwscKsNBNEz5A=
+			Cwz/QscvnUPzS1nutigK+b5okvpYZd8oME90cRAwsS4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
@@ -798,22 +813,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			72B9j5M9Szkj5OY5/5j2XVXLaz8=
+			sCGzw0HIB+IJ5te0rOOz8Dfd5fA=
 			</data>
 			<key>hash2</key>
 			<data>
-			J3n7ED99V4slx/+CZdSY5D+NYUYg7xl8+QexEDFBTZA=
+			gXmbMqz18C3fVMt0rNmaagPYm2Eanb8alS1yhiNPjDY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lv/3pJQtjud+PfNcBPwh1vot4OE=
+			fWblg6LFdAvLu6kxhtOZ/RQCbJ4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ql/0ieDAUBb5ZBmptJwosLEIRDcXVYoVMyeZYS4ZD20=
+			CnUPXFJn+/tEYIkghVAgw53mVQGwC+JOYKEyQfVoHQE=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -831,11 +846,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			s8GmaiD2+/bhgCI/vMMfsLc2lyI=
+			zHa0JzvcuyOXvOsXh60AwWYaNrM=
 			</data>
 			<key>hash2</key>
 			<data>
-			k0Id6dmps3BAYAahAx3w9jdvnNkzt4UfzI3jtph+I+I=
+			Cq9g//pvtNu4gE/Pk3lM+giIZPgGLWVKFM2+Ry3xWHA=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
@@ -908,11 +923,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hB5MfC6e9sCSYFkiIRZ9Y4mzeD4=
+			6R7KKsNK1DgKXKUENpYErFSBVGs=
 			</data>
 			<key>hash2</key>
 			<data>
-			RcmAFALbrbAK0GWsLka+LH6G1o8JAWOddTlc5WkU3Ik=
+			vy67FIO7V7pXH6Ow0OgiKLKXwOCb9LDmNE7WylDPx3U=
 			</data>
 		</dict>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>

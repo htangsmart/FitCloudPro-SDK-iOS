@@ -10,6 +10,6 @@
 #define FitCloudModels_h
 
 #import <FitCloudKit/FitCloudWorkoutSlot.h>
-
+#import <FitCloudKit/FitCloudAppSidePermissionStatusModel.h>
 
 #endif /* FitCloudModels_h */

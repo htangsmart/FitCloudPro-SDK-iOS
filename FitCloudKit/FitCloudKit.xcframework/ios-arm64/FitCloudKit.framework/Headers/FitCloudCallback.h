@@ -715,6 +715,8 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// The watch device request to toggle the iPhone camera
 - (void)OnRequestToggleCamera;
 
+- (void)onQueryAppSidePermissionStatus;
+
 /// 睡眠调试数据
 - (void)OnSleepDebugData:(FitCloudSleepDebugData *)sleepDebugData;
 
