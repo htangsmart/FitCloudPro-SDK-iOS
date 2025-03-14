@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.9 build20250314001 (2025-03-14)
+
+- Added support for GoMore algorithm.
+
 ## V1.3.1-beta.8 build20250228002 (2025-02-28)
 
 - Changed Transsion Infinix device information query API to retrieve EUID (Equipment Unique Identifier), device model and 4G capability status.

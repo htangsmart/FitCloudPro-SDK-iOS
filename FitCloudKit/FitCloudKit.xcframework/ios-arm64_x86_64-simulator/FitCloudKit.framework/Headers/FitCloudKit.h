@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-02-28  Version:1.3.1-beta.8 Build:20250228002
+//      pcjbird    2025-03-14  Version:1.3.1-beta.9 Build:20250314001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1368,6 +1368,17 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - succeed: Whether sending was successful
 ///     - error: Error information if sending fails, nil on success
 + (void)sendAppSidePermissionStatusArray:(NSArray<FitCloudAppSidePermissionStatusModel *> *)permissionStatusArray completion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
+
+#pragma mark - Go More Algorithm
+
+/// Send GoMore algorithm key query result to watch
+/// - Parameters:
+///   - code: The return code indicating query result status
+///   - key: The algorithm key string if query successful, nil otherwise
+///   - completion: A completion handler called when sending completes. Parameters:
+///     - succeed: Whether sending was successful
+///     - error: Error information if sending fails, nil on success
++ (void)sendGoMoreAlgorithmKeyQueryResultWithCode:(FITCLOUDGOMOREALGORITHMKEYRETURNCODE)code key:(NSString *_Nullable)key completion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
 
 @end
 

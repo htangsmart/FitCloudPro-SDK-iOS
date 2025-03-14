@@ -358,7 +358,6 @@ typedef void (^FitCloudScreenAndVibrateSettingsResultBlock)(BOOL succeed, FitClo
 ///   - error: 错误信息
 typedef void (^FitCloudScreenResolutionResultBlock)(BOOL succeed, FitCloudScreenResolution *screenResolution, NSError *error);
 
-
 /// FitCloud 请求手表UI信息结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
@@ -715,7 +714,13 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// The watch device request to toggle the iPhone camera
 - (void)OnRequestToggleCamera;
 
+/// On query the permission status of App side
 - (void)onQueryAppSidePermissionStatus;
+
+/// On query the GoMore algorithm key
+/// - Parameters:
+///   - deviceId: The device id
+- (void)onQueryGoMoreAlgorithmKey:(NSString *)deviceId;
 
 /// 睡眠调试数据
 - (void)OnSleepDebugData:(FitCloudSleepDebugData *)sleepDebugData;
