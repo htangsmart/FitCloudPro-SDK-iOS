@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.10 build20250315001 (2025-03-15)
+
+- Enhanced some SDK logs.
+
 ## V1.3.1-beta.9 build20250314001 (2025-03-14)
 
 - Added support for GoMore algorithm.
