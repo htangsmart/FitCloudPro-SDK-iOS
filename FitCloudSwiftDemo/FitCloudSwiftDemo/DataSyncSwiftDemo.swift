@@ -9,9 +9,25 @@ import UIKit
 import FitCloudKit
 
 @objc class DataSyncSwiftDemo: NSObject {
+
+    @objc static func queryTodayActivitySummaryData(withToast toast: (() -> Void)? = nil) {
+        FitCloudKit.requestHealthAndSportsDataToday { succeed, userId, dataObject, error in
+            if let dataObject = dataObject {
+                let log = String(format: "\nToday's Activity Data:\nSteps: %d\nDistance: %d\nCalories: %d\nDeep Sleep: %d\nLight Sleep: %d\nAverage Heart Rate: %d",
+                               dataObject.steps,
+                               dataObject.distance,
+                               dataObject.calorie,
+                               dataObject.deepSleepInMinutes,
+                               dataObject.lightSleepInMinutes,
+                               dataObject.avgBPM)
+                XLOG_INFO(log)
+                toast?()
+            }
+        }
+    }
     
 
-    @objc class func manualSyncData(withToast toast: (() -> Void)? = nil) {
+    @objc static func manualSyncData(withToast toast: (() -> Void)? = nil) {
         
         FitCloudKit.manualSyncData(with: .ALL, progress: { progress, tip in
             XLOG_INFO("Sync Progress: \(Int(progress*100))%%, \(String(describing: tip))")
