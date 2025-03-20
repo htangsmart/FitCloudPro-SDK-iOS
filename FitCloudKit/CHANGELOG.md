@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.12 build20250320002 (2025-03-20)
+
+- Added support for switching between different AI conversation models on the watch device.
+- Fixed some issues with GoMore algorithm commands.
+
 ## V1.3.1-beta.11 build20250320001 (2025-03-20)
 
 - Added additional English comments and documentation.

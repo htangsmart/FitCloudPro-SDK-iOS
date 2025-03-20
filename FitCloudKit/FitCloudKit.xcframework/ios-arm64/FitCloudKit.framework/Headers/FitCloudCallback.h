@@ -600,20 +600,25 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
 - (void)OnAlexaVoiceDecodedWithData:(NSData *)voiceData;
 
-/// 大模型语音传输开始
+/// Notifies that large language model voice transmission has started
 - (void)OnLLMVoiceBegin;
 
-/// 大模型语音传输结束，并返回请求的语音数据，该数据已经经过解码
+/// Notifies that large language model voice transmission has completed and returns the requested voice data after decoding
 /// - Parameters:
-///   - opusVoiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
-///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
+///   - opusVoiceData: Voice data in Opus format, 16000Hz sample rate, mono channel, 16-bit PCM
+///   - voiceData: Decoded voice data, 16000Hz sample rate, mono channel, 16-bit PCM
 - (void)OnLLMVoiceStopWithOpusVoiceData:(NSData *)opusVoiceData decodedVoiceData:(NSData *)voiceData;
 
-/// 手表进入大模型界面
+/// Notifies that watch has entered the large language model interface
 - (void)OnWatchSideEnterLLM;
 
-/// 手表退出大模型界面
+/// Notifies that watch has exited the large language model interface
 - (void)OnWatchSideExitLLM;
+
+/// Notifies the AI conversation model toggled from watch side
+/// - Parameters:
+///   - aiConversationModel: The AI conversation model type
+- (void)onWatchSideToggleAiConversationModel:(FITCLOUDAICONVERSATIONMODEL)aiConversationModel;
 
 /// Notifies that voice translation has started
 /// - Note: Called when the watch begins recording voice for translation

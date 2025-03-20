@@ -71,6 +71,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// The advertisement data
 @property(nonatomic, strong, nullable) NSString *advData;
 
+/// The user-specified AI conversation model
+/// - Returns: A numeric value representing the AI conversation model type as defined in FITCLOUDAICONVERSATIONMODEL.
+///           When nil or FITCLOUDAICONVERSATIONMODEL_UNSPECIFIED is returned, it indicates no specific model has been set.
+@property(nonatomic, strong, nullable) NSNumber *specifiedAiConversationModel;
+
 @end
 
 NS_ASSUME_NONNULL_END

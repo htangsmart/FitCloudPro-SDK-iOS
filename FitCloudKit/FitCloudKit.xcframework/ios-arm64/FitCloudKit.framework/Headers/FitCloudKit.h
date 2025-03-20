@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-03-20  Version:1.3.1-beta.11 Build:20250320001
+//      pcjbird    2025-03-20  Version:1.3.1-beta.12 Build:20250320002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -243,6 +243,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Clear watch connection history
 + (void)clearPeripheralHistory;
+
+#pragma mark
+/// Get the specified AI conversation model
+/// - Returns: The AI conversation model type used for watch interactions
+///
+/// This method returns the AI conversation model type that is currently specified for use with the watch.
+/// The model determines how AI conversations are handled between the watch and connected services.
++ (FITCLOUDAICONVERSATIONMODEL)specifiedAiConversationModel;
 
 @end
 

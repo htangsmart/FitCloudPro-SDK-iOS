@@ -1644,4 +1644,35 @@ typedef NS_ENUM(NSInteger, FITCLOUDGOMOREALGORITHMKEYRETURNCODE) {
     FITCLOUDGOMOREALGORITHMKEYRETURNCODE_APP_IN_BACKGROUND = 0x03,
 };
 
+#pragma mark AI Conversation Model
+
+/// AI conversation model type definitions
+///
+/// Defines different types of AI models supported by the device
+typedef NS_ENUM(NSInteger, FITCLOUDAICONVERSATIONMODEL) {
+    /// Unspecified AI model
+    FITCLOUDAICONVERSATIONMODEL_UNSPECIFIED = -1,
+    
+    /// Doubao AI model
+    FITCLOUDAICONVERSATIONMODEL_DOUBAO = 0x00,
+
+    /// DeepSeek AI model
+    FITCLOUDAICONVERSATIONMODEL_DEEPSEEK = 0x01,
+
+    /// ChatGLM AI model
+    FITCLOUDAICONVERSATIONMODEL_CHATGLM = 0x02,
+
+    /// ERNIE Bot AI model
+    FITCLOUDAICONVERSATIONMODEL_ERNIEBOT = 0x03,
+
+    /// Qwen AI model
+    FITCLOUDAICONVERSATIONMODEL_QWEN = 0x04,
+
+    /// Spark AI model
+    FITCLOUDAICONVERSATIONMODEL_SPARK = 0x05,
+
+    /// Kimi AI model
+    FITCLOUDAICONVERSATIONMODEL_KIMI = 0x06,
+};
+
 #endif /* FitCloudKitDefines_h */

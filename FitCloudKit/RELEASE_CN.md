@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-03-20 Version:1.3.1-beta.11 Build:20250320001
+## pcjbird 2025-03-20 Version:1.3.1-beta.12 Build:20250320002
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -12,6 +12,7 @@
 - 修改传音 Infinix 设备信息查询 API，由原先的仅支持查询 EUID（设备唯一标识符）改为支持获取 EUID（设备唯一标识符）、设备型号和 4G 功能状态。
 - 引入新的 API，允许手表设备查询应用端的权限状态。
 - 新增支持 GoMore 算法。
+- 新增支持在手表设备上切换不同的 AI 对话模型。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-03-15 Version:1.3.1-beta.11 Build:20250320001
+## pcjbird 2025-03-15 Version:1.3.1-beta.12 Build:20250320002
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -12,6 +12,7 @@
 - Changed Transsion Infinix device information query API to retrieve EUID (Equipment Unique Identifier), device model and 4G capability status.
 - Introduce new APIs to allow the watch device query the app-side permissions status.
 - Added support for GoMore algorithm.
+- Added support for switching between different AI conversation models on the watch device.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
