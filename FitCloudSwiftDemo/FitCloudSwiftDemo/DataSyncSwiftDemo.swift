@@ -58,9 +58,53 @@ import FitCloudKit
             /// Samples to access the bpmDataArray of the workout record
             for record in syncRecords {
                 if let currentRecord = record as? FitCloudManualSyncRecordObject<FitCloudSportsItemObject>,
-                   let workoutRecord = currentRecord as? FitCloudSportsRecordObject {
+                   let workoutRecord = currentRecord as? FitCloudSportsRecordObject, let workoutType = workoutRecord.workoutType {
+                    
+                    // Log the type of workout activity (e.g. running, walking, etc.)
+                    // For detailed definitions, see: https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudKit/Workouts.md
+                    XLOG_INFO("Workout type: \(workoutType)")
+                    let begin = workoutRecord.begin
+                    XLOG_INFO("Workout Begin: \(begin)")
+                    // Log the heart rate data array associated with this workout session
                     XLOG_INFO("Found workout record, BPM data: \(String(describing: workoutRecord.bpmDataArray))")
-                
+                    
+                    // Get workout items from the record
+                    let items = workoutRecord.items
+
+                    // Verify if workout items exist
+                    guard !items.isEmpty else {
+                        XLOG_WARNING("No workout items found.")
+                        return
+                    }
+
+                    // Get the end time of the workout from the last item
+                    if let end = items.last?.moment {
+                        // Calculate workout duration
+                        let duration = end.timeIntervalSince(begin)
+                        let hours = Int(duration) / 3600
+                        let minutes = Int(duration) / 60 % 60
+                        let seconds = Int(duration) % 60
+                        XLOG_INFO("Workout End: \(end)")
+                        XLOG_INFO("Workout Duration: \(String(format: "%02d:%02d:%02d", hours, minutes, seconds))")
+                    } else {
+                        XLOG_WARNING("Unable to determine workout end time.")
+                    }
+
+                    // Initialize accumulators for workout statistics
+                    var workoutStats = (steps: 0, calories: 0)
+
+                    // Calculate total steps and calories
+                    items.forEach { item in
+                        workoutStats.steps += Int(item.steps)
+                        workoutStats.calories += Int(item.calorie)
+                    }
+
+                    // Convert calories to kilocalories (1 kcal = 1000 calories)
+                    let kiloCalories = Double(workoutStats.calories) / 1000.0
+
+                    // Log workout summary
+                    XLOG_INFO("Workout Summary - Total Steps: \(workoutStats.steps), Total Calories: \(String(format: "%.2f", kiloCalories))kcal")
+                    
                 }
             }
             
