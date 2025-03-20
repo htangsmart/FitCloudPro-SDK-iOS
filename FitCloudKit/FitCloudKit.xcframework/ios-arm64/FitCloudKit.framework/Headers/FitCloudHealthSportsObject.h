@@ -232,140 +232,145 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-#pragma mark - 运动模式
+#pragma mark - Workout
 
-/// 手表运动模式运动数据条目
+/// A class representing workout data items from the watch's sports mode
 @interface FitCloudSportsItemObject : FitCloudManualSyncItemObject
 
-/// 运动类型
+/// The type of workout being performed
 @property(nonatomic, assign) UInt16 workoutType;
 
-/// 运动时长
-/// - Note: 单位：秒
+/// Duration of the workout
+/// - Note: Unit: seconds
 @property(nonatomic, assign) UInt16 duration;
 
-/// 步数
+/// Number of steps taken during the workout
 @property(nonatomic, assign) UInt16 steps;
 
-/// 距离
-/// - Note: 单位：米
+/// Distance covered during the workout
+/// - Note: Unit: meters
 @property(nonatomic, assign) UInt16 distance;
 
-/// 卡路里
-/// - Note: 单位：小卡
+/// Calories burned during the workout
+/// - Note: Unit: small calories
 @property(nonatomic, assign) UInt16 calorie;
 
-/// 配速
-/// - Note: 单位：min/km
+/// Workout pace
+/// - Note: Unit: minutes per kilometer
 @property(nonatomic, assign) UInt16 pace;
 
-/// 泳姿
-/// - Note: 1: 自由泳 2:蛙泳 3:仰泳 4:蝶泳
+/// Swimming stroke style
+/// - Note: 1: Freestyle, 2: Breaststroke, 3: Backstroke, 4: Butterfly
 @property(nonatomic, strong, nullable) NSNumber *swimStyle;
 
-/// 游泳趟数
+/// Number of swimming laps completed
 @property(nonatomic, strong, nullable) NSNumber *swimLaps;
 
-/// 游泳划水次数
+/// Number of swimming strokes
 @property(nonatomic, strong, nullable) NSNumber *swimStrokes;
 
-/// 游泳划水频率
+/// Swimming stroke frequency
 @property(nonatomic, strong, nullable) NSNumber *swimStrokeFreq;
 
-/// 游泳效率
+/// Swimming efficiency (SWOLF score)
 @property(nonatomic, strong, nullable) NSNumber *swolf;
 
-/// 跳绳-触发次数
+/// Jump rope trigger count
 @property(nonatomic, strong, nullable) NSNumber *jumpRopeTriggerCount;
 
-/// 跳绳-中断次数
+/// Jump rope break count
 @property(nonatomic, strong, nullable) NSNumber *jumpRopeBreakCount;
 
-/// 跳绳-连续次数
+/// Jump rope consecutive count
 @property(nonatomic, strong, nullable) NSNumber *jumpRopeConsecutiveCount;
 
-/// 椭圆机-触发次数
+/// Elliptical trainer trigger count
 @property(nonatomic, strong, nullable) NSNumber *ellipticalTrainerTriggerCount;
 
-/// 椭圆机-触发频率
+/// Elliptical trainer triggers per minute
 @property(nonatomic, strong, nullable) NSNumber *ellipticalTrainerTriggersPerMinute;
 
-/// 椭圆机-最大触发频率
+/// Maximum elliptical trainer triggers per minute
 @property(nonatomic, strong, nullable) NSNumber *maxEllipticalTrainerTriggersPerMinute;
 
-/// 椭圆机-最小触发频率
+/// Minimum elliptical trainer triggers per minute
 @property(nonatomic, strong, nullable) NSNumber *minEllipticalTrainerTriggersPerMinute;
 
-/// 划船机-触发次数
+/// Rowing machine trigger count
 @property(nonatomic, strong, nullable) NSNumber *rowingMachingTriggerCount;
 
-/// 划船机-触发频率
+/// Rowing machine triggers per minute
 @property(nonatomic, strong, nullable) NSNumber *rowingMachingTriggersPerMinute;
 
-/// 划船机-最大触发频率
+/// Maximum rowing machine triggers per minute
 @property(nonatomic, strong, nullable) NSNumber *maxRowingMachingTriggersPerMinute;
 
-/// 划船机-最小触发频率
+/// Minimum rowing machine triggers per minute
 @property(nonatomic, strong, nullable) NSNumber *minRowingMachingTriggersPerMinute;
 
 @end
 
-/// 心率数据模型
+/// Heart rate data model
 @interface FitCloudBPMDataModel : NSObject
 
-/// 采样时刻
+/// Sampling moment
 @property(nonatomic, strong) NSDate *moment;
 
-/// 心率
-/// - Note: 单位：次/min
+/// Heart rate value
+/// - Note: Unit: beats/min
 /// - Important: Returns nil when invalid
 @property(nonatomic, strong, nullable) NSNumber *value;
 
 @end
 
-/// 手表运动模式运动数据记录
+/// A class representing sports record data from the watch's sports mode
 @interface FitCloudSportsRecordObject : FitCloudManualSyncRecordObject <FitCloudSportsItemObject *>
 
-/// 手表独立GPS运动，该字段关联对应的GPS数据
+/// The type of workout being performed
+@property(nonatomic, readonly, nullable) NSNumber *workoutType;
+
+/// The associated GPS data key for independent GPS sports tracking on the watch
+/// - Note: This key links to corresponding GPS data records
 @property(nonatomic, strong, nullable) NSString *gpsDataAssociateKey;
 
-/// 当手表支持独立GPS运动且支持指定展示数据是表示展示数据信息
+/// Configuration string for display data when watch supports independent GPS sports
 /// - Note: if want to display `WORKOUTDATAITEMDISPLAY_DURATION` and `WORKOUTDATAITEMDISPLAY_AVG_BPM`, the displayConfig string should be `"1,2"`, and so on.
 @property(nonatomic, strong, nullable) NSString *displayConfig;
 
-/// 运动心率数据
+/// Array of heart rate data models collected during sports activity
+/// - Note: Contains timestamped BPM readings throughout the workout
 @property(nonatomic, strong, nullable) NSArray<FitCloudBPMDataModel *> *bpmDataArray;
 
 @end
 
-#pragma mark - GPS数据
+#pragma mark - GPS Data
 
-/// 手表运动模式运动GPS数据条目
+/// A class representing GPS data items from the watch's sports mode
 @interface FitCloudGPSItemObject : FitCloudManualSyncItemObject
 
-/// 经度
+/// The longitude coordinate
 @property(nonatomic, assign) CGFloat longitude;
 
-/// 纬度
+/// The latitude coordinate
 @property(nonatomic, assign) CGFloat latitude;
 
-/// 海拔
-/// - Note: 单位：m
+/// The altitude measurement
+/// - Note: Unit: meters
 @property(nonatomic, assign) UInt16 altitude;
 
-/// 卫星数量
-/// - Note: 单位：个数
+/// Number of satellites detected
+/// - Note: Unit: count
 @property(nonatomic, assign) UInt8 satellitesCount;
 
-/// 是否为一段的起点
+/// Indicates if this point is the start of a segment
 @property(nonatomic, assign) BOOL isStartingPoint;
 
 @end
 
-/// 手表运动模式运动GPS数据记录
+/// A class representing GPS data records from the watch's sports mode
 @interface FitCloudGPSRecordObject : FitCloudManualSyncRecordObject <FitCloudGPSItemObject *>
 
-/// 手表独立GPS运动Key
+/// The unique key for independent GPS workout tracking
 @property(nonatomic, strong) NSString *gpsDataKey;
 
 @end

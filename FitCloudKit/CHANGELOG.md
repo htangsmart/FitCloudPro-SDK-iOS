@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.11 build20250320001 (2025-03-20)
+
+- Added additional English comments and documentation.
+
 ## V1.3.1-beta.10 build20250315001 (2025-03-15)
 
 - Enhanced some SDK logs.

@@ -10,207 +10,216 @@
 #define FitCloudEvent_h
 #import <Foundation/Foundation.h>
 
-#pragma mark - FitCloud 事件定义
+#pragma mark - FitCloud Event Definitions
 
-/// CentralManager状态改变通知 
+/// Notification when CentralManager state changes
 ///
-/// object=>CBCentralManager
+/// - Parameter object: CBCentralManager instance
 extern NSString *const FITCLOUDEVENT_CENTRALMANAGER_DIDUPDATESTATE_NOTIFY;
 
-/// 发现新的外设(手表)通知 
+/// Notification when a new peripheral (watch) is discovered
 ///
-/// object=>FitCloudPeripheral
+/// - Parameter object: FitCloudPeripheral instance
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCOVERED_NOTIFY;
 
-/// 发现的外设(手表)更新通知 
+/// Notification when a discovered peripheral (watch) is updated
 ///
-/// object=>FitCloudPeripheral
+/// - Parameter object: FitCloudPeripheral instance
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCOVERED_UPDATED_NOTIFY;
 
-/// 外设(手表)扫描停止通知
+/// Notification when peripheral (watch) scanning stops
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_SCANSTOP_NOTIFY;
 
-/// 外设(手表)开始连接通知 
+/// Notification when peripheral (watch) starts connecting
 ///
-/// object=>CBPeripheral
+/// - Parameter object: CBPeripheral instance
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECTING_NOTIFY;
 
-/// 外设(手表)连接成功通知 
+/// Notification when peripheral (watch) connection succeeds
 ///
-/// object=>CBPeripheral
+/// - Parameter object: CBPeripheral instance
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECTED_NOTIFY;
 
-/// 外设(手表)DFU模式回连成功通知 
+/// Notification when peripheral (watch) reconnects in DFU mode
 ///
-/// object=>CBPeripheral
+/// - Parameter object: CBPeripheral instance
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_RECONNECTEDWITHDFUMODE_NOTIFY;
 
-/// 外设(手表)连接失败通知 
+/// Notification when peripheral (watch) connection fails
 ///
-/// object=>CBPeripheral userInfo=>@{@"error" : error}
+/// - Parameters:
+///   - object: CBPeripheral instance
+///   - userInfo: Dictionary containing error information {@"error" : error}
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_CONNECT_FAILURE_NOTIFY;
 
-/// 外设(手表)断开连接通知 
+/// Notification when peripheral (watch) disconnects
 ///
-/// object=>CBPeripheral userInfo=>@{@"error" : error}
+/// - Parameters:
+///   - object: CBPeripheral instance
+///   - userInfo: Dictionary containing error information {@"error" : error}
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCONNECT_NOTIFY;
 
-/// 外设(手表)更新名称通知 
+/// Notification when peripheral (watch) name updates
 ///
-/// object=>CBPeripheral
+/// - Parameter object: CBPeripheral instance
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DIDUPDATENAME_NOTIFIY;
 
-/// 外设(手表)更新RSSI通知 
+/// Notification when peripheral (watch) RSSI updates
 ///
-/// object=>CBPeripheral userInfo=>@{@"RSSI":rssi, @"error" : error}
+/// - Parameters:
+///   - object: CBPeripheral instance
+///   - userInfo: Dictionary containing RSSI and error information {@"RSSI":rssi, @"error" : error}
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DIDUPDATERSSI_NOTIFIY;
 
-/// 外设(手表)写特征准备就绪通知 
+/// Notification when peripheral (watch) write characteristic is ready
 ///
-/// object=>CBPeripheral
+/// - Parameter object: CBPeripheral instance
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY;
 
-/// 开始绑定用户通知 
+/// Notification when user binding starts
 ///
-/// object => @(UserId)
+/// - Parameter object: UserId as NSNumber
 extern NSString *const FITCLOUDEVENT_BINDUSEROBJECT_BEGIN_NOTIFY;
 
-/// 绑定用户结果通知 
+/// Notification of user binding result
 ///
-/// object => @(UserId) 
-/// userInfo=>{@"result":@(YES/NO), @"error" : error, @"audioBluetooth": bluetoothName}
+/// - Parameters:
+///   - object: UserId as NSNumber
+///   - userInfo: Dictionary containing result, error and bluetooth info {@"result":@(YES/NO), @"error" : error, @"audioBluetooth": bluetoothName}
 extern NSString *const FITCLOUDEVENT_BINDUSEROBJECT_RESULT_NOTIFY;
 
-/// 开始解绑用户通知 
+/// Notification when user unbinding starts
 ///
-/// object => @(UserId)
+/// - Parameter object: UserId as NSNumber
 extern NSString *const FITCLOUDEVENT_UNBINDUSEROBJECT_BEGIN_NOTIFY;
 
-/// 解绑用户结果通知 
+/// Notification of user unbinding result
 ///
-/// object => @(UserId) 
-/// userInfo=>{@"result":@(YES/NO), @"error" : error}
+/// - Parameters:
+///   - object: UserId as NSNumber
+///   - userInfo: Dictionary containing result and error information {@"result":@(YES/NO), @"error" : error}
 extern NSString *const FITCLOUDEVENT_UNBINDUSEROBJECT_RESULT_NOTIFY;
 
-/// 开始登录用户对象通知 
+/// Notification when user login starts
 ///
-/// object => @(UserId)
+/// - Parameter object: UserId as NSNumber
 extern NSString *const FITCLOUDEVENT_LOGINUSEROBJECT_BEGIN_NOTIFY;
 
-/// 用户对象登录结果通知 
+/// Notification of user login result
 ///
-/// object => @(UserId) 
-/// userInfo=>{@"result":@(YES/NO), @"error" : error}
+/// - Parameters:
+///   - object: UserId as NSNumber
+///   - userInfo: Dictionary containing result and error information {@"result":@(YES/NO), @"error" : error}
 extern NSString *const FITCLOUDEVENT_LOGINUSEROBJECT_RESULT_NOTIFY;
 
-/// 手表被其他手机绑定或者已被解绑通知(maybe bound by different userid)
+/// Notification when watch is bound by another phone or unbound
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY;
 
-/// 开始获取手表所有配置通知
+/// Notification when fetching all watch configurations starts
 extern NSString *const FITCLOUDEVENT_GETALLCONFIG_BEGIN_NOTIFY;
 
-/// 获取手表所有配置结果通知 
+/// Notification of fetching all watch configurations result
 ///
-/// userInfo=>{@"result":@(YES/NO), @"error" : error}
+/// - Parameter userInfo: Dictionary containing result and error information {@"result":@(YES/NO), @"error" : error}
 extern NSString *const FITCLOUDEVENT_GETALLCONFIG_RESULT_NOTIFY;
 
-/// 绑定<登录>初始化(绑定<登录>/获取所有手表配置 必要流程)结果通知 
+/// Notification of binding/login initialization result
 ///
-/// userInfo=>{@"result":@(YES/NO), @"error" : error}
+/// - Parameter userInfo: Dictionary containing result and error information {@"result":@(YES/NO), @"error" : error}
 extern NSString *const FITCLOUDEVENT_INITIALIZE_RESULT_NOTIFY;
 
-/// 绑定<登录>初始化成功后手表开始完成一些准备同步操作开始通知
+/// Notification when preparation sync work begins after successful binding/login initialization
 extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_BEGIN_NOTIFY;
 
-/// 绑定<登录>初始化成功后手表开始完成一些准备同步操作结束通知
+/// Notification when preparation sync work ends after successful binding/login initialization
 extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_END_NOTIFY;
 
-/// 手表电量信息通知 
+/// Notification of watch battery information
 ///
-/// object=>FitCloudBatteryInfoObject
+/// - Parameter object: FitCloudBatteryInfoObject instance
 extern NSString *const FITCLOUDEVENT_BATTERYINFO_NOTIFY;
 
-/// 闹钟列表变化通知 
+/// Notification when alarm list changes
 ///
-/// userInfo=>NSArray<FitCloudAlarmObject *>
+/// - Parameter userInfo: Array of FitCloudAlarmObject instances
 extern NSString *const FITCLOUDEVENT_ALARMLIST_CHANGED_NOTIFY;
 
-/// 日程列表变化通知 
+/// Notification when schedule list changes
 ///
-/// userInfo=>NSArray<FitCloudScheduleObject *>
+/// - Parameter userInfo: Array of FitCloudScheduleObject instances
 extern NSString *const FITCLOUDEVENT_SCHEDULELIST_CHANGED_NOTIFY;
 
-/// 常用联系人列表变化通知 
+/// Notification when favorite contacts list changes
 ///
-/// userInfo=>NSArray<FitCloudContactObject *>
+/// - Parameter userInfo: Array of FitCloudContactObject instances
 extern NSString *const FITCLOUDEVENT_FAVCONTACTS_CHANGED_NOTIFY;
 
-/// 习惯养成列表变化通知 
+/// Notification when habits list changes
 ///
-/// userInfo=>NSArray<FitCloudHabitObject *>
+/// - Parameter userInfo: Array of FitCloudHabitObject instances
 extern NSString *const FITCLOUDEVENT_HABITS_CHANGED_NOTIFY;
 
-/// 心电检测启动成功通知  
+/// Notification when ECG detection starts successfully
 ///
-/// object => 采样间隔(单位毫秒) NSNumber*
+/// - Parameter object: Sampling interval in milliseconds as NSNumber
 extern NSString *const FITCLOUDEVENT_ECG_START_SUCCEED_NOTIFY;
 
-/// 心电检测启动失败通知
+/// Notification when ECG detection fails to start
 extern NSString *const FITCLOUDEVENT_ECG_START_FAILURE_NOTIFY;
 
-/// 心电检测结束通知
+/// Notification when ECG detection stops
 extern NSString *const FITCLOUDEVENT_ECG_STOP_NOTIFY;
 
-/// 手表端人为更改配置（例如：抬腕唤醒开关，通知开关等）通知
+/// Notification when watch configuration is manually changed on device
 extern NSString *const FITCLOUDEVENT_WATCHCONFIG_REMOTE_MANUAL_CHANGED_NOTIFY;
 
-/// 手表上的配对信息丢失或与iOS系统上的配对信息不匹配通知，建议用户进入系统设置解除与该手表的配对信息，杀死App进程并重新启动App。
+/// Notification when watch pairing information is lost or mismatched
 ///
-/// 该通知可能连续发送，应用层需要避免重复提示用户，给用户造成困扰
+/// Note: This notification may be sent repeatedly. Applications should avoid showing repeated alerts to users.
 extern NSString *const FITCLOUDEVENT_WATCH_PAIRINGINFO_NOTMATCH_OR_MISSING_NOTIFY;
 
-/// 勋章列表变化通知 
+/// Notification when medal list changes
 ///
-/// userInfo=>NSArray<FitCloudMedal *>
+/// - Parameter userInfo: Array of FitCloudMedal instances
 extern NSString *const FITCLOUDEVENT_MEDALLIST_CHANGED_NOTIFY;
 
-/// 手表端运动结束通知
+/// Notification when workout ends on watch
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_WORKOUT_END_NOTIFY;
 
-/// 手表端运动已暂停通知
+/// Notification when workout is paused on watch
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_WORKOUT_PAUSED_NOTIFY;
 
-/// 手表端运动已开始或已恢复通知
+/// Notification when workout starts or resumes on watch
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_WORKOUT_STARTED_OR_RESUMED_NOTIFY;
 
-/// 手表表盘切换通知
+/// Notification when watch face is toggled
 extern NSString *const FITCLOUDEVENT_WATCHFACE_TOGGLED_NOTIFY;
 
-/// 手表心率测量结果通知
+/// Notification of heart rate measurement result
 ///
-/// userInfo=>{@"timestamp":timestamp, @"hrValue" : @(hrValue)}
-/// - timestamp 类型 NSDate
-/// - hrValue 类型 NSInteger
+/// - Parameter userInfo: Dictionary containing timestamp and heart rate value
+///   - timestamp: NSDate instance
+///   - hrValue: Heart rate value as NSInteger
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_HEARTRATE_MEASURE_RESULT_NOTIFY;
 
-/// 手表端主动通知停止查找手表
+/// Notification when watch initiates stop finding watch action
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_PERFORM_STOP_FIND_WATCH_ACTION_NOTIFY;
 
-/// 手表端提前结束由APP端启动的测量(实时测量)
+/// Notification when watch terminates measurement initialized by app
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_TERMINATED_THE_MEASUREMENT_INITIALIZED_BY_THE_APPSIDE_NOTIFY;
 
-/// 手表表盘删除通知
+/// Notification when watch face is removed
 ///
-/// userInfo=>{@"watchfaceNo":@(watchfaceNo), @"slotIndex" : @(slotIndex)}
-/// - watchfaceNo 类型 NSInteger
-/// - slotIndex 类型 NSInteger, from 0~7
+/// - Parameter userInfo: Dictionary containing watch face information
+///   - watchfaceNo: Watch face number as NSInteger
+///   - slotIndex: Slot index as NSInteger (0-7)
 extern NSString *const FITCLOUDEVENT_WATCHSIDE_WATCHFACE_REMOVED_NOTIFY;
 
-/// 指令超时通知
+/// Notification when command execution times out
 ///
-/// userInfo=>{@"cmd":@(cmd), @"key" : @(key)}
-/// - cmd 类型 NSInteger
-/// - key 类型 NSInteger
+/// - Parameter userInfo: Dictionary containing command information
+///   - cmd: Command as NSInteger
+///   - key: Key as NSInteger
 extern NSString *const FITCLOUDEVENT_COMMAND_EXEC_TIMEOUT_NOTIFY;
 
 #endif /* FitCloudEvent_h */

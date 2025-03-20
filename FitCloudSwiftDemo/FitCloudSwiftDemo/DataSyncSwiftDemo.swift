@@ -60,6 +60,7 @@ import FitCloudKit
                 if let currentRecord = record as? FitCloudManualSyncRecordObject<FitCloudSportsItemObject>,
                    let workoutRecord = currentRecord as? FitCloudSportsRecordObject {
                     XLOG_INFO("Found workout record, BPM data: \(String(describing: workoutRecord.bpmDataArray))")
+                
                 }
             }
             
