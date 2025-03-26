@@ -75,11 +75,13 @@
 #import <FitCloudKit/FitCloudTaskModel.h>
 #import <FitCloudKit/FitCloudFirmwareModuleVersionModel.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// FitCloud调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - error: 错误信息
-typedef void (^FitCloudResultHandler)(BOOL succeed, NSError *error);
+typedef void (^FitCloudResultHandler)(BOOL succeed, NSError * _Nullable error);
 
 /// FitCloud进度回调
 /// - Parameters:
@@ -91,7 +93,7 @@ typedef void (^FitCloudProgressBlock)(CGFloat progress);
 ///   - succeed: 是否成功
 ///   - val: 对象值
 ///   - error: 错误信息
-typedef void (^FitCloudObjectResultBlock)(BOOL succeed, id val, NSError *error);
+typedef void (^FitCloudObjectResultBlock)(BOOL succeed, id  _Nullable val, NSError * _Nullable error);
 
 /// FitCloud进入DFU模式结果回调
 /// - Parameters:
@@ -99,27 +101,27 @@ typedef void (^FitCloudObjectResultBlock)(BOOL succeed, id val, NSError *error);
 ///   - dfuPeripheral: dfu蓝牙外设
 ///   - chipVendor:  蓝牙外设芯片供应商
 ///   - error: 错误信息
-typedef void (^FitCloudEnterDFUModeResultBlock)(BOOL succeed, CBPeripheral *dfuPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError *error);
+typedef void (^FitCloudEnterDFUModeResultBlock)(BOOL succeed, CBPeripheral * _Nullable dfuPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError * _Nullable error);
 
 /// FitCloud退出DFU模式结果回调
 /// - Parameters:
 ///   - succeed: 是否成功进入DFU
 ///   - error: 错误信息
-typedef void (^FitCloudExitDFUModeResultBlock)(BOOL succeed, NSError *error);
+typedef void (^FitCloudExitDFUModeResultBlock)(BOOL succeed, NSError * _Nullable error);
 
 /// FitCloud 获取闹钟列表调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - list: 闹钟列表
 ///   - error: 错误信息
-typedef void (^FitCloudAlarmsResultBlock)(BOOL succeed, NSArray<FitCloudAlarmObject *> *list, NSError *error);
+typedef void (^FitCloudAlarmsResultBlock)(BOOL succeed, NSArray<FitCloudAlarmObject *> * _Nullable list, NSError * _Nullableerror);
 
 /// FitCloud 获取日程列表调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - list: 日程列表
 ///   - error: 错误信息
-typedef void (^FitCloudSchedulesResultBlock)(BOOL succeed, NSArray<FitCloudScheduleObject *> *list, NSError *error);
+typedef void (^FitCloudSchedulesResultBlock)(BOOL succeed, NSArray<FitCloudScheduleObject *> * _Nullable list, NSError * _Nullable error);
 
 /// FitCloud 获取任务列表调用结果回调
 /// - Parameters:
@@ -127,181 +129,181 @@ typedef void (^FitCloudSchedulesResultBlock)(BOOL succeed, NSArray<FitCloudSched
 ///   - list: 任务列表
 ///   - totalCoinsEarned: 总金币数
 ///   - error: 错误信息
-typedef void (^FitCloudTaskQueryCompletion)(BOOL succeed, NSArray<FitCloudTaskModel *> *tasks, NSNumber *totalCoinsEarned, NSError *error);
+typedef void (^FitCloudTaskQueryCompletion)(BOOL succeed, NSArray<FitCloudTaskModel *> * _Nullable tasks, NSNumber * _Nullable totalCoinsEarned, NSError * _Nullable error);
 
 /// FitCloud 获取常用联系人列表调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - list: 常用联系人列表
 ///   - error: 错误信息
-typedef void (^FitCloudFavContactsResultBlock)(BOOL succeed, NSArray<FitCloudContactObject *> *list, NSError *error);
+typedef void (^FitCloudFavContactsResultBlock)(BOOL succeed, NSArray<FitCloudContactObject *> *_Nullable list, NSError * _Nullable error);
 
 /// FitCloud 获取习惯养成列表调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - list: 习惯养成列表
 ///   - error: 错误信息
-typedef void (^FitCloudHabitsResultBlock)(BOOL succeed, NSArray<FitCloudHabitObject *> *list, NSError *error);
+typedef void (^FitCloudHabitsResultBlock)(BOOL succeed, NSArray<FitCloudHabitObject *> *_Nullable list, NSError * _Nullable error);
 
 /// FitCloud 获取手表每日运动目标调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - goal: 运动目标
 ///   - error: 错误信息
-typedef void (^FitCloudDailyGoalResultBlock)(BOOL succeed, FitCloudDailyGoalObject *goal, NSError *error);
+typedef void (^FitCloudDailyGoalResultBlock)(BOOL succeed, FitCloudDailyGoalObject * _Nullable goal, NSError * _Nullable error);
 
 /// FitCloud 获取手表软硬件版本信息调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - version: 版本信息
 ///   - error: 错误信息
-typedef void (^FitCloudFirmwareVersionResultBlock)(BOOL succeed, FitCloudFirmwareVersionObject *version, NSError *error);
+typedef void (^FitCloudFirmwareVersionResultBlock)(BOOL succeed, FitCloudFirmwareVersionObject * _Nullable version, NSError * _Nullable error);
 
 /// FitCloud 获取消息通知设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - mnSetting: 消息通知设置信息
 ///   - error: 错误信息
-typedef void (^FitCloudMNSettingResultBlock)(BOOL succeed, FITCLOUDMN mnSetting, NSError *error);
+typedef void (^FitCloudMNSettingResultBlock)(BOOL succeed, FITCLOUDMN mnSetting, NSError * _Nullable error);
 
 /// FitCloud 获取手表表盘所有功能项显示状态调用结果回调
 /// - Parameters:
 ///   - succeed 是否成功
 ///   - sdSetting 手表表盘所有功能项显示状态
 ///   - error 错误信息
-typedef void (^FitCloudSDSettingResultBlock)(BOOL succeed, FITCLOUDSCREENDISPLAY sdSetting, NSError *error);
+typedef void (^FitCloudSDSettingResultBlock)(BOOL succeed, FITCLOUDSCREENDISPLAY sdSetting, NSError * _Nullable error);
 
 /// FitCloud 获取手表偏好设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - prefer: 手表偏好设置信息
 ///   - error: 错误信息
-typedef void (^FitCloudPreferResultBlock)(BOOL succeed, FITCLOUDPREFER prefer, NSError *error);
+typedef void (^FitCloudPreferResultBlock)(BOOL succeed, FITCLOUDPREFER prefer, NSError * _Nullable error);
 
 /// FitCloud 获取手表电量和充电状态调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - batteryInfo: 手表电量和充电状态信息
 ///   - error: 错误信息
-typedef void (^FitCloudBatteryInfoResultBlock)(BOOL succeed, FitCloudBatteryInfoObject *batteryInfo, NSError *error);
+typedef void (^FitCloudBatteryInfoResultBlock)(BOOL succeed, FitCloudBatteryInfoObject * _Nullable batteryInfo, NSError * _Nullable error);
 
 /// FitCloud 获取健康定时监测设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - htmSetting: 健康定时监测设置
 ///   - error: 错误信息
-typedef void (^FitCloudHealthTimingMonitorResultBlock)(BOOL succeed, FitCloudHTMObject *htmSetting, NSError *error);
+typedef void (^FitCloudHealthTimingMonitorResultBlock)(BOOL succeed, FitCloudHTMObject * _Nullable htmSetting, NSError * _Nullable error);
 
 /// FitCloud 获取健康定时监测独立设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - htmSingleSettings: 健康定时监测独立设置信息
 ///   - error: 错误信息
-typedef void (^FitCloudHealthTimingMonitoringSingleSettingsResultBlock)(BOOL succeed, NSArray<FitCloudHTMSingleObject *> *htmSingleSettings, NSError *error);
+typedef void (^FitCloudHealthTimingMonitoringSingleSettingsResultBlock)(BOOL succeed, NSArray<FitCloudHTMSingleObject *> * _Nullable htmSingleSettings, NSError * _Nullable error);
 
 /// FitCloud 获取久坐提醒设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - lsrSetting: 久坐提醒设置
 ///   - error: 错误信息
-typedef void (^FitCloudLongSitRemindResultBlock)(BOOL succeed, FitCloudLSRObject *lsrSetting, NSError *error);
+typedef void (^FitCloudLongSitRemindResultBlock)(BOOL succeed, FitCloudLSRObject * _Nullable lsrSetting, NSError * _Nullable error);
 
 /// FitCloud 获取喝水提醒设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - drSetting: 喝水提醒设置
 ///   - error: 错误信息
-typedef void (^FitCloudDrinkRemindResultBlock)(BOOL succeed, FitCloudDRObject *drSetting, NSError *error);
+typedef void (^FitCloudDrinkRemindResultBlock)(BOOL succeed, FitCloudDRObject * _Nullable drSetting, NSError * _Nullable error);
 
 /// FitCloud 获取防护提醒设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - prSetting: 防护提醒设置
 ///   - error: 错误信息
-typedef void (^FitCloudProtectionRemindResultBlock)(BOOL succeed, FitCloudPRObject *prSetting, NSError *error);
+typedef void (^FitCloudProtectionRemindResultBlock)(BOOL succeed, FitCloudPRObject * _Nullable prSetting, NSError * _Nullable error);
 
 /// FitCloud 获取洗手提醒设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - hwrSetting: 洗手提醒设置
 ///   - error: 错误信息
-typedef void (^FitCloudHandWashRemindResultBlock)(BOOL succeed, FitCloudHandWashRemindObject *hwrSetting, NSError *error);
+typedef void (^FitCloudHandWashRemindResultBlock)(BOOL succeed, FitCloudHandWashRemindObject * _Nullable hwrSetting, NSError * _Nullable error);
 
 /// FitCloud 获取抬腕唤醒设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - wwuSetting: 抬腕唤醒设置
 ///   - error: 错误信息
-typedef void (^FitCloudWristWakeUpResultBlock)(BOOL succeed, FitCloudWWUObject *wwuSetting, NSError *error);
+typedef void (^FitCloudWristWakeUpResultBlock)(BOOL succeed, FitCloudWWUObject * _Nullable wwuSetting, NSError * _Nullable error);
 
 /// FitCloud 获取血压参考范围设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - dbpSetting: 血压参考范围设置信息
 ///   - error: 错误信息
-typedef void (^FitCloudBloodPressureReferResultBlock)(BOOL succeed, FitCloudBPRObject *dbpSetting, NSError *error);
+typedef void (^FitCloudBloodPressureReferResultBlock)(BOOL succeed, FitCloudBPRObject * _Nullable dbpSetting, NSError * _Nullable error);
 
 /// FitCloud 获取心率报警设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - hrAlarmSetting: 心率报警设置信息
 ///   - error: 错误信息
-typedef void (^FitCloudHRAlarmResultBlock)(BOOL succeed, FitCloudHRAlarmObject *hrAlarmSetting, NSError *error);
+typedef void (^FitCloudHRAlarmResultBlock)(BOOL succeed, FitCloudHRAlarmObject * _Nullable hrAlarmSetting, NSError * _Nullable error);
 
 /// FitCloud 获取血压报警设置调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - bpAlarmSetting: 血压报警设置信息
 ///   - error: 错误信息
-typedef void (^FitCloudBPAlarmResultBlock)(BOOL succeed, FitCloudBPAlarmObject *bpAlarmSetting, NSError *error);
+typedef void (^FitCloudBPAlarmResultBlock)(BOOL succeed, FitCloudBPAlarmObject * _Nullable bpAlarmSetting, NSError * _Nullable error);
 
 /// FitCloud (绑定时)获取手表所有配置信息调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - config: (绑定时)获取手表所有配置信息
 ///   - error: 错误信息
-typedef void (^FitCloudAllConfigWhenBindResultBlock)(BOOL succeed, FitCloudAllConfigObject *config, NSError *error);
+typedef void (^FitCloudAllConfigWhenBindResultBlock)(BOOL succeed, FitCloudAllConfigObject * _Nullable config, NSError * _Nullable error);
 
 /// FitCloud 获取勿扰模式设置信息调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - dndSetting: 勿扰模式设置信息
 ///   - error: 错误信息
-typedef void (^FitCloudDNDSettingResultBlock)(BOOL succeed, FitCloudDNDSetting *dndSetting, NSError *error);
+typedef void (^FitCloudDNDSettingResultBlock)(BOOL succeed, FitCloudDNDSetting * _Nullable dndSetting, NSError *_Nullable error);
 
 /// FitCloud 获取省电模式设置信息调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - setting: 省电模式设置信息
 ///   - error: 错误信息
-typedef void (^FitCloudPowerSavingSettingResultBlock)(BOOL succeed, FitCloudPowerSavingSetting *setting, NSError *error);
+typedef void (^FitCloudPowerSavingSettingResultBlock)(BOOL succeed, FitCloudPowerSavingSetting * _Nullable setting, NSError * _Nullable error);
 
 /// FitCloud 获取女性健康设置信息调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - whSetting: 女性健康设置信息
 ///   - error: 错误信息
-typedef void (^FitCloudWomenHealthSettingResultBlock)(BOOL succeed, FitCloudWomenHealthSetting *whSetting, NSError *error);
+typedef void (^FitCloudWomenHealthSettingResultBlock)(BOOL succeed, FitCloudWomenHealthSetting * _Nullable whSetting, NSError * _Nullable error);
 
 /// FitCloud 手表向APP请求天气信息结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - weather: 天气信息回调
 ///   - error: 错误信息
-typedef void (^FitCloudWeatherCallbackBlock)(BOOL succeed, FitCloudWeatherObject *weather, NSError *error);
+typedef void (^FitCloudWeatherCallbackBlock)(BOOL succeed, FitCloudWeatherObject * _Nullable weather, NSError * _Nullable error);
 
 /// FitCloud 请求手表上待同步的历史运动健康数据长度总和调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - length: 数据长度（字节）
 ///   - error: 错误信息
-typedef void (^FitCloudDataToSyncTotalLengthResultBlock)(BOOL succeed, NSUInteger length, NSError *error);
+typedef void (^FitCloudDataToSyncTotalLengthResultBlock)(BOOL succeed, NSUInteger length, NSError * _Nullable error);
 
 /// FitCloud 手表历史运动健康数据手动同步进度
 /// - Parameters:
 ///   - progress: 进度百分比
 ///   - tip: 进度提示
-typedef void (^FitCloudDataManualSyncProgress)(CGFloat progress, NSString *tip);
+typedef void (^FitCloudDataManualSyncProgress)(CGFloat progress, NSString * _Nullable tip);
 
 /// FitCloud 手表历史运动健康数据手动同步结果回调
 /// - Parameters:
@@ -309,7 +311,7 @@ typedef void (^FitCloudDataManualSyncProgress)(CGFloat progress, NSString *tip);
 ///   - userId: 用户Id
 ///   - records: 记录集合
 ///   - error: 错误信息
-typedef void (^FitCloudDataManualSyncResultBlock)(BOOL succeed, NSString *userId, NSArray<FitCloudManualSyncRecordObject *> *records, NSError *error);
+typedef void (^FitCloudDataManualSyncResultBlock)(BOOL succeed, NSString * _Nullable userId, NSArray<FitCloudManualSyncRecordObject *> * _Nullable records, NSError * _Nullable error);
 
 /// FitCloud 手表历史运动健康数据手动同步结束回调
 typedef void (^FitCloudDataManualSyncFinishBlock)(void);
@@ -320,28 +322,28 @@ typedef void (^FitCloudDataManualSyncFinishBlock)(void);
 ///   - userId: 用户Id
 ///   - dataObject: 当日运动健康数据
 ///   - error: 错误信息
-typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, NSString *userId, FitCloudDailyHealthAndSportsDataObject *dataObject, NSError *error);
+typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, NSString * _Nullable userId, FitCloudDailyHealthAndSportsDataObject * _Nullable dataObject, NSError * _Nullable error);
 
 /// FitCloud 请求当前手表支持的游戏类型结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - games: 游戏列表
 ///   - error: 错误信息
-typedef void (^FitCloudSupportedGamesResultBlock)(BOOL succeed, NSArray<FitCloudGameObject *> *games, NSError *error);
+typedef void (^FitCloudSupportedGamesResultBlock)(BOOL succeed, NSArray<FitCloudGameObject *> * _Nullable games, NSError * _Nullable error);
 
 /// FitCloud 请求游戏最高三个游戏记录结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - records: 游戏记录列表
 ///   - error: 错误信息
-typedef void (^FitCloudTop3RankGameRecordsResultBlock)(BOOL succeed, NSArray<FitCloudGameItemObject *> *records, NSError *error);
+typedef void (^FitCloudTop3RankGameRecordsResultBlock)(BOOL succeed, NSArray<FitCloudGameItemObject *> * _Nullable records, NSError *_Nullable error);
 
 /// FitCloud 请求所有游戏皮肤信息结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - allGameSkins: 游戏皮肤信息列表
 ///   - error: 错误信息
-typedef void (^FitCloudAllGameSkinsResultBlock)(BOOL succeed, NSArray<FitCloudGameSkinObject *> *allGameSkins, NSError *error);
+typedef void (^FitCloudAllGameSkinsResultBlock)(BOOL succeed, NSArray<FitCloudGameSkinObject *> * _Nullable allGameSkins, NSError * _Nullable error);
 
 /// FitCloud 请求亮屏时长、亮度、振动等信息结果回调
 /// - Parameters:
@@ -349,42 +351,42 @@ typedef void (^FitCloudAllGameSkinsResultBlock)(BOOL succeed, NSArray<FitCloudGa
 ///   - screenSettings: 亮屏时长、亮度等信息
 ///   - vibrateSettings: 马达振动信息
 ///   - error: 错误信息
-typedef void (^FitCloudScreenAndVibrateSettingsResultBlock)(BOOL succeed, FitCloudScreenSetting *screenSettings, FitCloudVibrateSetting *vibrateSettings, NSError *error);
+typedef void (^FitCloudScreenAndVibrateSettingsResultBlock)(BOOL succeed, FitCloudScreenSetting * _Nullable screenSettings, FitCloudVibrateSetting * _Nullable vibrateSettings, NSError * _Nullable error);
 
 /// FitCloud 请求屏幕分辨率相关信息回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - screenResolution: 屏幕分辨率相关信息
 ///   - error: 错误信息
-typedef void (^FitCloudScreenResolutionResultBlock)(BOOL succeed, FitCloudScreenResolution *screenResolution, NSError *error);
+typedef void (^FitCloudScreenResolutionResultBlock)(BOOL succeed, FitCloudScreenResolution * _Nullable screenResolution, NSError * _Nullable error);
 
 /// FitCloud 请求手表UI信息结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - watchUI: 手表UI信息
 ///   - error: 错误信息
-typedef void (^FitCloudWatchUIInfoResultBlock)(BOOL succeed, FitCloudWatchUIInfo *watchUI, NSError *error);
+typedef void (^FitCloudWatchUIInfoResultBlock)(BOOL succeed, FitCloudWatchUIInfo * _Nullable watchUI, NSError * _Nullable error);
 
 /// FitCloud 请求表盘UI信息结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - faceUI: 表盘UI信息
 ///   - error: 错误信息
-typedef void (^FitCloudWatchfaceUIInfoResultBlock)(BOOL succeed, FitCloudWatchfaceUIInfo *faceUI, NSError *error);
+typedef void (^FitCloudWatchfaceUIInfoResultBlock)(BOOL succeed, FitCloudWatchfaceUIInfo * _Nullable faceUI, NSError * _Nullable error);
 
 /// FitCloud 请求最新的测量数据结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - dataObject: 最新的测量数据
 ///   - error: 错误信息
-typedef void (^FitCloudLatestHealthMeasurementDataResultBlock)(BOOL succeed, FitCloudLatestHealthMeasurementDataObject *dataObject, NSError *error);
+typedef void (^FitCloudLatestHealthMeasurementDataResultBlock)(BOOL succeed, FitCloudLatestHealthMeasurementDataObject * _Nullable dataObject, NSError * _Nullable error);
 
 /// FitCloud 请求GPS互联当前运动状态结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - currentStatus: 当前运动状态
 ///   - error: 错误信息
-typedef void (^FitCloudGPSConnectSportsCurrentStatusResultBlock)(BOOL succeed, FitCloudSportsWithGPSCurrentStatus *currentStatus, NSError *error);
+typedef void (^FitCloudGPSConnectSportsCurrentStatusResultBlock)(BOOL succeed, FitCloudSportsWithGPSCurrentStatus * _Nullable currentStatus, NSError * _Nullable error);
 
 /// FitCloud Alexa语音开始请求回调
 /// - Parameter result: 回调结果
@@ -394,41 +396,41 @@ typedef void (^FitCloudAlexaVoiceStartRequestCompletion)(ALEXAINVOKEERROR result
 /// - Parameters:
 ///   - result: 回调结果
 ///   - text: 文本回调
-typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSString *text);
+typedef void (^FitCloudAlexaVoiceAmazonCallback)(ALEXAINVOKEERROR result, NSString * _Nullable text);
 
 /// FitCloud 二维码功能列表回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - supported: 支持的二维码功能
 ///   - error: 错误信息
-typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber *> *supported, NSError *error);
+typedef void (^FitCloudQRCodeFeaturesResultBlock)(BOOL succeed, NSArray<NSNumber *> * _Nullable supported, NSError * _Nullable error);
 
 /// FitCloud 勋章列表回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - medals: 勋章
 ///   - error: 错误信息
-typedef void (^FitCloudMedalsResultBlock)(BOOL succeed, NSArray<FitCloudMedal *> *medals, NSError *error);
+typedef void (^FitCloudMedalsResultBlock)(BOOL succeed, NSArray<FitCloudMedal *> * _Nullable medals, NSError * _Nullable error);
 
 /// FitCloud 相册推送功能参数回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - params: 参数
 ///   - error: 错误信息
-typedef void (^FitCloudPhotoAlbumParamsResultBlock)(BOOL succeed, FitCloudPhotoAlbumParams *params, NSError *error);
+typedef void (^FitCloudPhotoAlbumParamsResultBlock)(BOOL succeed, FitCloudPhotoAlbumParams * _Nullable params, NSError * _Nullable error);
 
 /// FitCloud 支持的日程类型回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - supported: 支持的日程类型
 ///   - error: 错误信息
-typedef void (^FitCloudSupportedSchedulesResultBlock)(BOOL succeed, NSArray<NSNumber *> *supported, NSError *error);
+typedef void (^FitCloudSupportedSchedulesResultBlock)(BOOL succeed, NSArray<NSNumber *> * _Nullable supported, NSError * _Nullable error);
 
 /// FitCloud开启GSensor结果回调
 /// - Parameters:
 ///   - succeed: 是否成功开启
 ///   - error: 错误信息
-typedef void (^FitCloudOpenGSensorResultBlock)(BOOL succeed, NSError *error);
+typedef void (^FitCloudOpenGSensorResultBlock)(BOOL succeed, NSError * _Nullable error);
 
 /// The electronic card query result
 /// - Parameters:
@@ -440,13 +442,13 @@ typedef void (^FitCloudOpenGSensorResultBlock)(BOOL succeed, NSError *error);
 ///
 /// - Returns:
 ///   void
-typedef void (^FitCloudECardsResultBlock)(BOOL succeed, NSInteger maxCount, NSInteger maxContentLen, NSArray<FitCloudECard *> *ecards, NSError *error);
+typedef void (^FitCloudECardsResultBlock)(BOOL succeed, NSInteger maxCount, NSInteger maxContentLen, NSArray<FitCloudECard *> * _Nullable ecards, NSError * _Nullable error);
 
 /// The new OTA start confirm result block
 /// - Parameters:
 ///   - success: whether start success
 ///   - error: error information
-typedef void (^FitCloudNewOTAStartConfirmResultBlock)(BOOL success, NSError *error);
+typedef void (^FitCloudNewOTAStartConfirmResultBlock)(BOOL success, NSError * _Nullable error);
 
 /// The new OTA progress block
 /// - Parameters:
@@ -458,13 +460,13 @@ typedef void (^FitCloudNewOTAProgressBlock)(CGFloat progress);
 ///   - success: whether upgrade success
 ///   - avgSpeed: the avg transfer speed, kB/s
 ///   - error: error information
-typedef void (^FitCloudNewOTACompletionBlock)(BOOL success, CGFloat avgSpeed, NSError *error);
+typedef void (^FitCloudNewOTACompletionBlock)(BOOL success, CGFloat avgSpeed, NSError * _Nullable error);
 
 /// The new OTA cancel completion block
 /// - Parameters:
 ///   - success: whether cancel success
 ///   - error: error information
-typedef void (^FitCloudNewOTACancelCompletionBlock)(BOOL success, NSError *error);
+typedef void (^FitCloudNewOTACancelCompletionBlock)(BOOL success, NSError * _Nullable error);
 
 /// The smart watch emergency contacts query completion block
 /// - Parameters:
@@ -472,34 +474,34 @@ typedef void (^FitCloudNewOTACancelCompletionBlock)(BOOL success, NSError *error
 ///   - contacts: the smart watch emergency contacts
 ///   - on: whether enabled
 ///   - error: error information
-typedef void (^FitCloudEmergencyContactsQueryCompletion)(BOOL success, NSArray<FitCloudEmergencyContactObject *> *contacts, BOOL on, NSError *error);
+typedef void (^FitCloudEmergencyContactsQueryCompletion)(BOOL success, NSArray<FitCloudEmergencyContactObject *> * _Nullable contacts, BOOL on, NSError * _Nullable error);
 
 /// The smart watch resting heart rate array query completion block
 /// - Parameters:
 ///   - success: whether query success
 ///   - hrValuesArray: the smart watch  resting heart rate array
 ///   - error: error information
-typedef void (^FitCloudRestingHRQueryCompletion)(BOOL success, NSArray<FitCloudRestingHRValue *> *hrValuesArray, NSError *error);
+typedef void (^FitCloudRestingHRQueryCompletion)(BOOL success, NSArray<FitCloudRestingHRValue *> * _Nullable hrValuesArray, NSError * _Nullable error);
 
 /// The smart watch personalized reminders array query completion block
 /// - Parameters:
 ///   - success: whether query success
 ///   - reminderArray: the smart watch personalized reminders array
 ///   - error: error information
-typedef void (^FitCloudPersonalizedRemindersQueryCompletion)(BOOL success, NSArray<FitCloudPersonalizedReminderObject *> *reminderArray, NSError *error);
+typedef void (^FitCloudPersonalizedRemindersQueryCompletion)(BOOL success, NSArray<FitCloudPersonalizedReminderObject *> * _Nullable reminderArray, NSError * _Nullable error);
 
 /// FitCloud New OTA environment check result callback
 /// - Parameters:
 ///   - succeed: whether new ota environment is available to upgrade
 ///   - error: error information
-typedef void (^FitCloudNewOTAEnvironmentCheckCompletion)(BOOL succeed, NSError *error);
+typedef void (^FitCloudNewOTAEnvironmentCheckCompletion)(BOOL succeed, NSError * _Nullable error);
 
 /// The smart watch other modules firmware version query completion block
 /// - Parameters:
 ///   - succeed: whether query success
 ///   - firmwareVersions: array of firmware module version models
 ///   - error: error information
-typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed, NSArray<FitCloudFirmwareModuleVersionModel *> *firmwareVersions, NSError *error);
+typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed, NSArray<FitCloudFirmwareModuleVersionModel *> * _Nullable firmwareVersions, NSError * _Nullable error);
 
 /// FitCloudKit 回调协议
 @protocol FitCloudCallback <NSObject>
@@ -598,22 +600,28 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// Alexa请求的语音数据，该数据已经经过解码
 /// - Parameters:
 ///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
-- (void)OnAlexaVoiceDecodedWithData:(NSData *)voiceData;
+- (void)OnAlexaVoiceDecodedWithData:(NSData * _Nullable )voiceData;
 
 /// Notifies that large language model voice transmission has started
-- (void)OnLLMVoiceBegin;
+- (void)onLLMVoiceBegin;
+
+/// Notifies that incremental voice data has been received during large language model conversation
+/// - Parameters:
+///   - deltaOpusVoiceData: The incremental voice data in Opus format
+///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
+- (void)onLLMDeltaOpusVoiceData:(NSData * _Nullable )deltaOpusVoiceData decodedDeltaVoiceData:(NSData * _Nullable )deltaVoiceData;
 
 /// Notifies that large language model voice transmission has completed and returns the requested voice data after decoding
 /// - Parameters:
 ///   - opusVoiceData: Voice data in Opus format, 16000Hz sample rate, mono channel, 16-bit PCM
 ///   - voiceData: Decoded voice data, 16000Hz sample rate, mono channel, 16-bit PCM
-- (void)OnLLMVoiceStopWithOpusVoiceData:(NSData *)opusVoiceData decodedVoiceData:(NSData *)voiceData;
+- (void)onLLMVoiceStopWithOpusVoiceData:(NSData * _Nullable )opusVoiceData decodedVoiceData:(NSData * _Nullable )voiceData;
 
 /// Notifies that watch has entered the large language model interface
-- (void)OnWatchSideEnterLLM;
+- (void)onWatchSideEnterLLM;
 
 /// Notifies that watch has exited the large language model interface
-- (void)OnWatchSideExitLLM;
+- (void)onWatchSideExitLLM;
 
 /// Notifies the AI conversation model toggled from watch side
 /// - Parameters:
@@ -624,13 +632,49 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// - Note: Called when the watch begins recording voice for translation
 - (void)onTranslateVoiceBegin;
 
+/// Notifies that incremental voice data has been received during translation
+/// - Parameters:
+///   - deltaOpusVoiceData: The incremental voice data in Opus format
+///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
+///   - sourceLang: The source language for translation
+///   - targetLang: The target language to translate into
+- (void)onTranslateDeltaOpusVoiceData:(NSData * _Nullable )deltaOpusVoiceData decodedDeltaVoiceData:(NSData * _Nullable )deltaVoiceData sourceLanguage:(FITCLOUDLANGUAGE)sourceLang targetLanguage:(FITCLOUDLANGUAGE)targetLang;
+
 /// Notifies that voice translation has completed with decoded voice data and language settings
 /// - Parameters:
 ///   - opusVoiceData: The opus encoded voice data
 ///   - voiceData: The decoded voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
 ///   - sourceLang: The source language for translation
 ///   - targetLang: The target language to translate into
-- (void)onTranslateVoiceStopWithOpusVoiceData:(NSData *)opusVoiceData decodedVoiceData:(NSData *)voiceData sourceLanguage:(FITCLOUDLANGUAGE)sourceLang targetLanguage:(FITCLOUDLANGUAGE)targetLang;
+- (void)onTranslateVoiceStopWithOpusVoiceData:(NSData * _Nullable )opusVoiceData decodedVoiceData:(NSData * _Nullable )voiceData sourceLanguage:(FITCLOUDLANGUAGE)sourceLang targetLanguage:(FITCLOUDLANGUAGE)targetLang;
+
+/// Notifies that ASR (Automatic Speech Recognition) voice recording has started
+/// - Note: Called when the watch begins recording voice for ASR
+- (void)onASRVoiceBegin;
+
+/// Notifies that incremental ASR voice data has been received
+/// - Parameters:
+///   - deltaOpusVoiceData: The incremental voice data in Opus format
+///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
+- (void)onASRDeltaOpusVoiceData:(NSData * _Nullable )deltaOpusVoiceData decodedDeltaVoiceData:(NSData * _Nullable )deltaVoiceData;
+
+/// Notifies that ASR voice recording has completed with decoded voice data
+/// - Parameters:
+///   - opusVoiceData: The opus encoded voice data
+///   - voiceData: The decoded voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
+- (void)onASRVoiceStopWithOpusVoiceData:(NSData * _Nullable )opusVoiceData decodedVoiceData:(NSData * _Nullable )voiceData;
+
+/// Notifies that watch requests to generate an AI watch face based on the given prompt and preview dimensions
+/// - Parameters:
+///   - prompt: The text prompt describing the desired watchface design
+///   - width: The preview image width in pixels
+///   - height: The preview image height in pixels
+- (void)onRequestGenerateAIWatchFaceWithPrompt:(NSString *_Nullable)prompt previewWidth:(NSInteger)width previewHeight:(NSInteger)height;
+
+/// Notifies whether the watch confirms to use this AI-generated watch face photo
+/// - Parameters:
+///   - confirmed: A Boolean value that indicates if the watch confirms to use this AI-generated watch face photo
+- (void)didConfirmAIWatchFacePhoto:(BOOL)confirmed;
 
 /// 手表发送情侣消息，通过APP发给对方
 /// - Parameters:
@@ -646,7 +690,7 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - totalPacks: 总数据包个数
 ///   - packIndex: 当前第几个数据包，下标从0开始
 ///   - expectedTotalBytes: 支付宝Iot数据总长度，即几个数据包加起来的总长度
-- (void)OnAliotData:(NSData *)aliotData totalPacks:(NSInteger)totalPacks packIndex:(NSInteger)packIndex expectedTotalBytes:(NSInteger)expectedTotalBytes;
+- (void)OnAliotData:(NSData * _Nullable )aliotData totalPacks:(NSInteger)totalPacks packIndex:(NSInteger)packIndex expectedTotalBytes:(NSInteger)expectedTotalBytes;
 
 /// 网易云音乐桥接准备完毕
 - (void)OnNetEaseCloudMusicBridgeReady;
@@ -736,5 +780,7 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - level: 日志等级
 - (void)OnLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level;
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif /* FitCloudCallback_h */

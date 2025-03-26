@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-03-20  Version:1.3.1-beta.12 Build:20250320002
+//      pcjbird    2025-03-26  Version:1.3.1-beta.13 Build:20250326001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1612,6 +1612,45 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - completion: The completion handler
 + (void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion;
+
+@end
+
+@interface FitCloudKit (ASR)
+
+/// Send ASR (Automatic Speech Recognition) result to watch
+/// - Parameters:
+///   - text: The ASR result text to send
+///   - completion: A completion handler called when sending completes. Parameters:
+///     - success: Whether sending was successful
+///     - error: Error information if sending fails, nil on success
++ (void)sendASRResult:(NSString *)text completion:(FitCloudResultHandler _Nullable)completion;
+
+@end
+
+@interface FitCloudKit (AIWatchFace)
+
+/// Sends an AI-generated photo to the connected watch device.
+///
+/// Use this method to transfer an AI-generated image to the watch for display. The transfer
+/// progress is reported through the progress handler, and completion status through the completion handler.
+///
+/// - Parameters:
+///   - image: The AI-generated UIImage to send to the watch
+///   - progressHandler: A closure called periodically with transfer progress updates
+///     - progress: The current transfer progress from 0.0 to 1.0
+///   - completion: A closure called when the transfer completes
+///     - succeed: Whether the transfer completed successfully
+///     - avgSpeed: The average transfer speed in bytes per second
+///     - error: An error object if the transfer failed, or nil on success
++ (void)sendAIGeneratedPhoto:(UIImage *)image progress:(void (^_Nullable)(CGFloat progress))progressHandler completion:(void (^_Nullable)(BOOL succeed, CGFloat avgSpeed, NSError *_Nullable error))completion;
+
+/// Send AI photo generation result to watch
+/// - Parameters:
+///   - resultCode: The result code indicating generation status
+///   - completion: A completion handler called when sending completes. Parameters:
+///     - success: Whether sending was successful
+///     - error: Error information if sending fails, nil on success
++ (void)sendAIPhotoGenerationResult:(FITCLOUDAIPHOTOGENRESULT)resultCode completion:(FitCloudResultHandler _Nullable)completion;
 
 @end
 

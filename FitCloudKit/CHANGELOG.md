@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.13 build20250326001 (2025-03-26)
+
+- Added support for AI watch face related features.
+
 ## V1.3.1-beta.12 build20250320002 (2025-03-20)
 
 - Added support for switching between different AI conversation models on the watch device.

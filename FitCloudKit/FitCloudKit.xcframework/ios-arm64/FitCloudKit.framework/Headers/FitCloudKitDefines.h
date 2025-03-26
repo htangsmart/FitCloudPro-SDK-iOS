@@ -1652,7 +1652,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDGOMOREALGORITHMKEYRETURNCODE) {
 typedef NS_ENUM(NSInteger, FITCLOUDAICONVERSATIONMODEL) {
     /// Unspecified AI model
     FITCLOUDAICONVERSATIONMODEL_UNSPECIFIED = -1,
-    
+
     /// Doubao AI model
     FITCLOUDAICONVERSATIONMODEL_DOUBAO = 0x00,
 
@@ -1673,6 +1673,22 @@ typedef NS_ENUM(NSInteger, FITCLOUDAICONVERSATIONMODEL) {
 
     /// Kimi AI model
     FITCLOUDAICONVERSATIONMODEL_KIMI = 0x06,
+};
+
+#pragma mark AI Watch Face Generation Result Codes
+
+/// AI photo generation result codes
+///
+/// Defines the possible result codes when generating AI photo
+typedef NS_ENUM(NSInteger, FITCLOUDAIPHOTOGENRESULT) {
+    /// Generation completed successfully
+    FITCLOUDAIPHOTOGENRESULT_SUCCESS = 0x00,
+
+    /// Failed due to network connection error
+    FITCLOUDAIPHOTOGENRESULT_NETWORK_ERROR = 0x01,
+
+    /// Failed due to unknown reason
+    FITCLOUDAIPHOTOGENRESULT_UNKNOWN_ERROR = 0xff,
 };
 
 #endif /* FitCloudKitDefines_h */
