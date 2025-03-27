@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.14 build20250327001 (2025-03-27)
+
+- Introduced new APIs to support parental control features and functionality.
+- Enhanced the stability of the SDK.
+
 ## V1.3.1-beta.13 build20250326001 (2025-03-26)
 
 - Added support for AI watch face related features.

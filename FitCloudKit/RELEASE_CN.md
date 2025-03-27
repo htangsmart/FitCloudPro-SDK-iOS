@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-03-26 Version:1.3.1-beta.13 Build:20250326001
+## pcjbird 2025-03-27 Version:1.3.1-beta.14 Build:20250327001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -14,6 +14,7 @@
 - 新增支持 GoMore 算法。
 - 新增支持在手表设备上切换不同的 AI 对话模型。
 - 新增 AI 表盘相关功能支持。
+- 引入新的 API 以支持家长控制相关功能。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

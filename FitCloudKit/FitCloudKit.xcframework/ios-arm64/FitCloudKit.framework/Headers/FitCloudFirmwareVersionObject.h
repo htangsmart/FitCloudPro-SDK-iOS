@@ -157,9 +157,7 @@
 /// 是否支持自定义标签
 @property(nonatomic, readonly) BOOL withCustomLabels;
 
-/**
- * @brief 是否指定支持的收款码和名片，仅支持的收款码和名片才应该在App上展示推送入口
- */
+/// 是否指定支持的收款码和名片，仅支持的收款码和名片才应该在App上展示推送入口
 @property(nonatomic, readonly) BOOL specifySupportedMoneyReceiveAndBusinessQRCode;
 
 /// 是否支持省电模式
@@ -306,10 +304,19 @@
 /// 是否支持切换耳机仓鼠标起始点预设
 @property(nonatomic, readonly) BOOL allowSwitchMouseStartPointPresetForEarphoneCase;
 
+/// 是否支持统计手表APP使用次数
+@property(nonatomic, readonly) BOOL allowCountWatchAppUsage;
+
+/// 是否支持统计手表APP使用时长
+@property(nonatomic, readonly) BOOL allowCountWatchAppDuration;
+
 /// 是否支持AI问答模型选择
 @property(nonatomic, readonly) BOOL allowSelectAIModel;
 
 /// 穆斯林朝拜功能朝拜提醒是否支持开关控制
 @property(nonatomic, readonly) BOOL allowControlEnabledOfMuslimPrayerReminder;
+
+/// 是否支持家长模式
+@property(nonatomic, readonly) BOOL withParentalControl;
 
 @end

@@ -11,5 +11,7 @@
 
 #import <FitCloudKit/FitCloudWorkoutSlot.h>
 #import <FitCloudKit/FitCloudAppSidePermissionStatusModel.h>
+#import <FitCloudKit/FitCloudParentControlSettingsModel.h>
+#import <FitCloudKit/FitCloudAppUsageCountStatisticsModel.h>
 
 #endif /* FitCloudModels_h */

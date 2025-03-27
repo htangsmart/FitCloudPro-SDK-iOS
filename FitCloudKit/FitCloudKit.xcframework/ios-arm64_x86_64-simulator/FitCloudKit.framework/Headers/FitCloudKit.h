@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-03-26  Version:1.3.1-beta.13 Build:20250326001
+//      pcjbird    2025-03-27  Version:1.3.1-beta.14 Build:20250327001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1335,17 +1335,17 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: the completion callback
 ///
 /// >Important: the valid measurement duration is from 1s to 255s
-+ (void)startLaserMeasurementWithDuration:(NSInteger)durationInSeconds completion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
++ (void)startLaserMeasurementWithDuration:(NSInteger)durationInSeconds completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
 
 /// 结束激光测量
 /// - Parameters:
 ///   - completion: the completion callback
-+ (void)stopLaserMeasurementWithCompletion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
++ (void)stopLaserMeasurementWithCompletion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
 
 /// 查询激光测量状态
 /// - Parameters:
 ///   - completion: the completion callback
-+ (void)queryLaserMeasurementStatusWithCompletion:(void (^__nullable)(BOOL succeed, FITCLOUDWEARINGSTATUS wearingStatus, FITCLOUDLASERMEASUREMENTSTATUS measurementStatus, NSError *error))completion;
++ (void)queryLaserMeasurementStatusWithCompletion:(void (^__nullable)(BOOL succeed, FITCLOUDWEARINGSTATUS wearingStatus, FITCLOUDLASERMEASUREMENTSTATUS measurementStatus, NSError *_Nullable error))completion;
 
 #pragma mark - Muslim prayer
 
@@ -1353,19 +1353,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - alarmClock: the alarm clock
 ///   - completion: the completion callback
-+ (void)setMuslimPrayerAlarmClock:(FitCloudMuslimPrayerAlarmClockModel *)alarmClock completion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
++ (void)setMuslimPrayerAlarmClock:(FitCloudMuslimPrayerAlarmClockModel *)alarmClock completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
 
 /// Set the current islamic events information
 /// - Parameters:
 ///   - events: the islamic events, with maximum 6 events
 ///   - completion: the completion callback
-+ (void)setCurrentIslamicEvents:(NSArray<FitCloudIslamicEventModel *> *)events completion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
++ (void)setCurrentIslamicEvents:(NSArray<FitCloudIslamicEventModel *> *)events completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
 
 /// Set the kaaba data information
 /// - Parameters:
 ///   - events: the kaaba data
 ///   - completion: the completion callback
-+ (void)setKaabaData:(FitCloudKaabaModel *)kaabaData completion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
++ (void)setKaabaData:(FitCloudKaabaModel *)kaabaData completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
 
 #pragma mark - App Side Permission Status
 
@@ -1375,7 +1375,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: A completion handler called when sending completes. Parameters:
 ///     - succeed: Whether sending was successful
 ///     - error: Error information if sending fails, nil on success
-+ (void)sendAppSidePermissionStatusArray:(NSArray<FitCloudAppSidePermissionStatusModel *> *)permissionStatusArray completion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
++ (void)sendAppSidePermissionStatusArray:(NSArray<FitCloudAppSidePermissionStatusModel *> *)permissionStatusArray completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
 
 #pragma mark - Go More Algorithm
 
@@ -1386,7 +1386,35 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: A completion handler called when sending completes. Parameters:
 ///     - succeed: Whether sending was successful
 ///     - error: Error information if sending fails, nil on success
-+ (void)sendGoMoreAlgorithmKeyQueryResultWithCode:(FITCLOUDGOMOREALGORITHMKEYRETURNCODE)code key:(NSString *_Nullable)key completion:(void (^__nullable)(BOOL succeed, NSError *error))completion;
++ (void)sendGoMoreAlgorithmKeyQueryResultWithCode:(FITCLOUDGOMOREALGORITHMKEYRETURNCODE)code key:(NSString *_Nullable)key completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
+
+#pragma mark - Parent Control
+
+/// Send parent control settings to the watch
+/// - Parameters:
+///   - settings: The parent control settings model containing configuration options
+///   - completion: A completion handler called when sending completes. Parameters:
+///     - succeed: Whether sending was successful
+///     - error: Error information if sending fails, nil on success
++ (void)sendParentControlSettings:(FitCloudParentControlSettingsModel *)settings completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
+
+/// Query parent control settings from the watch
+/// - Parameters:
+///   - completion: A completion handler called when the query completes. Parameters:
+///     - succeed: Whether the query was successful
+///     - settings: The parent control settings if query successful, nil otherwise
+///     - error: Error information if query fails, nil on success
++ (void)queryParentControlSettingsWithCompletion:(void (^__nullable)(BOOL succeed, FitCloudParentControlSettingsModel *_Nullable settings, NSError *_Nullable error))completion;
+
+#pragma mark - App Usage Statistics
+
+/// Query app usage count statistics from the watch
+/// - Parameters:
+///   - completion: A completion handler called when the query completes. Parameters:
+///     - succeed: Whether the query was successful
+///     - statistics: The app usage statistics if query successful, nil otherwise
+///     - error: Error information if query fails, nil on success
++ (void)queryAppUsageCountStatisticsWithCompletion:(void (^__nullable)(BOOL succeed, FitCloudAppUsageCountStatisticsModel *_Nullable statistics, NSError *_Nullable error))completion;
 
 @end
 

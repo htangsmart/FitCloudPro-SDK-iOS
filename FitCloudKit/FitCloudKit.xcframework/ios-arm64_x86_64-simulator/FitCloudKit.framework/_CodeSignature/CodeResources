@@ -16,6 +16,14 @@
 		<data>
 		dm5IWNrhRMb11ypXGN9tccXs8Dc=
 		</data>
+		<key>Headers/FitCloudAppUsageCountModel.h</key>
+		<data>
+		4jzj3wIpRQVZbTUQ/jxU5ZYoRWc=
+		</data>
+		<key>Headers/FitCloudAppUsageCountStatisticsModel.h</key>
+		<data>
+		I0CXbsuLwQV7jG4vST/l3QFVOuk=
+		</data>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
 		<data>
 		cv21zSF7S+DHdOGJiO6bSV1w01o=
@@ -94,7 +102,7 @@
 		</data>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
-		lKm0e1gbB86+63BwAQteea1RwNg=
+		mx3O/1xCybltFTWwfyrYwQiP1p4=
 		</data>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
 		<data>
@@ -178,7 +186,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		vdnMLa5Mf4OT6DyciKSBVfUD3Sc=
+		PbS+TaEwUYyKBJ4cldvnyOZEqvE=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -214,7 +222,7 @@
 		</data>
 		<key>Headers/FitCloudModels.h</key>
 		<data>
-		6R7KKsNK1DgKXKUENpYErFSBVGs=
+		jGJAn8YXX5Ys7XQPmZ8S0bjKCWY=
 		</data>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
 		<data>
@@ -227,6 +235,10 @@
 		<key>Headers/FitCloudPRObject.h</key>
 		<data>
 		89rZUdkEDQ9iT5jFWcrZmumX2cg=
+		</data>
+		<key>Headers/FitCloudParentControlSettingsModel.h</key>
+		<data>
+		qMZj4dBolwzPyy39ONHRkyaRHWg=
 		</data>
 		<key>Headers/FitCloudPeripheral.h</key>
 		<data>
@@ -338,7 +350,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EJfGDginLj497wyFssEXyYsgMk0=
+		PKV5mgOt4VZ7bpKTfa3cvdTABq4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -378,6 +390,28 @@
 			<key>hash2</key>
 			<data>
 			rmtKnkRo/eZ62DLOCk4FbnTfDOnm5IylJlNP0N8IUYI=
+			</data>
+		</dict>
+		<key>Headers/FitCloudAppUsageCountModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4jzj3wIpRQVZbTUQ/jxU5ZYoRWc=
+			</data>
+			<key>hash2</key>
+			<data>
+			q7K2RmeJYWBxa5S0sUfQwMWLdotwfqmLwgtyfCUVl1s=
+			</data>
+		</dict>
+		<key>Headers/FitCloudAppUsageCountStatisticsModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			I0CXbsuLwQV7jG4vST/l3QFVOuk=
+			</data>
+			<key>hash2</key>
+			<data>
+			FNrTOh7KXDeGkY2OUGU7dBU8AmwgPsBxAdb7GBiW6cc=
 			</data>
 		</dict>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
@@ -593,11 +627,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lKm0e1gbB86+63BwAQteea1RwNg=
+			mx3O/1xCybltFTWwfyrYwQiP1p4=
 			</data>
 			<key>hash2</key>
 			<data>
-			80uM8j4O9Z3gXNONbfrx4Qrfj6OSGR7xxcD7+XIs/UE=
+			Dw7Mfvvnk5cLPkoU0ULwAG4RN8eYKu0oHU4JC0/wuxY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
@@ -824,11 +858,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vdnMLa5Mf4OT6DyciKSBVfUD3Sc=
+			PbS+TaEwUYyKBJ4cldvnyOZEqvE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5AG+WejeXEHUv7iyOyrpubbywkw4PZwIClDe6KW0lfY=
+			KlmzL1fIEtJ4oArqCily4nOpi0qS8EGoMQSr8AGgVe4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -923,11 +957,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6R7KKsNK1DgKXKUENpYErFSBVGs=
+			jGJAn8YXX5Ys7XQPmZ8S0bjKCWY=
 			</data>
 			<key>hash2</key>
 			<data>
-			vy67FIO7V7pXH6Ow0OgiKLKXwOCb9LDmNE7WylDPx3U=
+			yyjFg2eNTdDNNbgwMNGEZ6M/urQKsIHtvYc/VS5NVxQ=
 			</data>
 		</dict>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
@@ -961,6 +995,17 @@
 			<key>hash2</key>
 			<data>
 			6DUVQw5csS4DvjC8pEHvpRDq3lT4Oq7rkwe3P/J630I=
+			</data>
+		</dict>
+		<key>Headers/FitCloudParentControlSettingsModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qMZj4dBolwzPyy39ONHRkyaRHWg=
+			</data>
+			<key>hash2</key>
+			<data>
+			mJG/Aq/xnpJXhs3AeTULZDx5j6WZWLuNMvOcpVqnZq8=
 			</data>
 		</dict>
 		<key>Headers/FitCloudPeripheral.h</key>

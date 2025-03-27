@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-03-26 Version:1.3.1-beta.13 Build:20250326001
+## pcjbird 2025-03-27 Version:1.3.1-beta.14 Build:20250327001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -14,6 +14,7 @@
 - Added support for GoMore algorithm.
 - Added support for switching between different AI conversation models on the watch device.
 - Added support for AI watch face related features.
+- Introduced new APIs to support parental control features and functionality.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
