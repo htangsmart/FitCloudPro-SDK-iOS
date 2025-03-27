@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.15 build20250327002 (2025-03-27)
+
+- Added API to reset app usage statistics in parental control features.
+- Added definitions for Huashengda Watch App, see `<FitCloudKit/Huashengda.h>`.
+
 ## V1.3.1-beta.14 build20250327001 (2025-03-27)
 
 - Introduced new APIs to support parental control features and functionality.

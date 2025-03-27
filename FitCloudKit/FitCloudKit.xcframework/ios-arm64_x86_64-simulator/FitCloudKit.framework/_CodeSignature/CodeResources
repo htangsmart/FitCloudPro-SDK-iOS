@@ -186,7 +186,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		PbS+TaEwUYyKBJ4cldvnyOZEqvE=
+		OAO4t462++tEFQQAZvGCp8U3SdA=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -222,7 +222,7 @@
 		</data>
 		<key>Headers/FitCloudModels.h</key>
 		<data>
-		jGJAn8YXX5Ys7XQPmZ8S0bjKCWY=
+		TWd1ELL6NfMWfaDVg2hFvoWrOhU=
 		</data>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
 		<data>
@@ -332,6 +332,10 @@
 		<data>
 		LAVj9z0vo+IA3niV78XiSH9mzss=
 		</data>
+		<key>Headers/Huashengda.h</key>
+		<data>
+		geRx2G2zKNxStOWr+EL3uZixYRY=
+		</data>
 		<key>Headers/SkyworthPVPowerStationObject.h</key>
 		<data>
 		66iYdRnplGa0GunZ2pc1fW0EMGM=
@@ -350,7 +354,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PKV5mgOt4VZ7bpKTfa3cvdTABq4=
+		C6gJRPfyNYQ+R7w8E46Og5S+uNw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -858,11 +862,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PbS+TaEwUYyKBJ4cldvnyOZEqvE=
+			OAO4t462++tEFQQAZvGCp8U3SdA=
 			</data>
 			<key>hash2</key>
 			<data>
-			KlmzL1fIEtJ4oArqCily4nOpi0qS8EGoMQSr8AGgVe4=
+			SiR6TNeLKnArlMk8ZZN1MgWyQ8Xvp8TloU37ftaTB9g=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -957,11 +961,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jGJAn8YXX5Ys7XQPmZ8S0bjKCWY=
+			TWd1ELL6NfMWfaDVg2hFvoWrOhU=
 			</data>
 			<key>hash2</key>
 			<data>
-			yyjFg2eNTdDNNbgwMNGEZ6M/urQKsIHtvYc/VS5NVxQ=
+			6SHNR7YAD99tmg3gbQ67/83gxF7CPYE3xiMft0kSRLw=
 			</data>
 		</dict>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
@@ -1259,6 +1263,17 @@
 			<key>hash2</key>
 			<data>
 			VZa5ab5tKqiAf0bFdERmlKIJj16P+6lTV4C4TkefeB4=
+			</data>
+		</dict>
+		<key>Headers/Huashengda.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			geRx2G2zKNxStOWr+EL3uZixYRY=
+			</data>
+			<key>hash2</key>
+			<data>
+			46DVw8oMqZDkvjAaWP78dq/XBCbR6hb5SlYxuh6TNzM=
 			</data>
 		</dict>
 		<key>Headers/SkyworthPVPowerStationObject.h</key>

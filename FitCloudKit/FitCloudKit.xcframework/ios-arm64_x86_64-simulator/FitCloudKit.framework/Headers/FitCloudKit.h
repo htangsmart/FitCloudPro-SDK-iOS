@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-03-27  Version:1.3.1-beta.14 Build:20250327001
+//      pcjbird    2025-03-27  Version:1.3.1-beta.15 Build:20250327002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1415,6 +1415,13 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - statistics: The app usage statistics if query successful, nil otherwise
 ///     - error: Error information if query fails, nil on success
 + (void)queryAppUsageCountStatisticsWithCompletion:(void (^__nullable)(BOOL succeed, FitCloudAppUsageCountStatisticsModel *_Nullable statistics, NSError *_Nullable error))completion;
+
+/// Reset app usage statistics on the watch, including app usage counts and durations
+/// - Parameters:
+///   - completion: A completion handler called when the reset completes. Parameters:
+///     - succeed: Whether the reset was successful
+///     - error: Error information if reset fails, nil on success
++ (void)resetAppUsageStatisticsWithCompletion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
 
 @end
 

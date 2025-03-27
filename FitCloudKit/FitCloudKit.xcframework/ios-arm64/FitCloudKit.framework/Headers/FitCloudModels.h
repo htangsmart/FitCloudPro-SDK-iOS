@@ -14,4 +14,7 @@
 #import <FitCloudKit/FitCloudParentControlSettingsModel.h>
 #import <FitCloudKit/FitCloudAppUsageCountStatisticsModel.h>
 
+/// Specific client defines
+#import <FitCloudKit/Huashengda.h>
+
 #endif /* FitCloudModels_h */
