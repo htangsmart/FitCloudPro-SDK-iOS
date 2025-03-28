@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.16 build20250328001 (2025-03-28)
+
+- Modified to prevent multiple initializations of FitCloudKit SDK which could lead to unpredictable results.
+- Enhanced some SDK logs.
+
 ## V1.3.1-beta.15 build20250327002 (2025-03-27)
 
 - Added API to reset app usage statistics in parental control features.

@@ -163,6 +163,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDCHIPVENDOR) {
     FITCLOUDCHIPVENDOR_REALTEK = 1,
     /// Nordic
     FITCLOUDCHIPVENDOR_NORDIC = 2,
+    /// Bluetrum
+    FITCLOUDCHIPVENDOR_BLUETRUM = 3,
 };
 
 #pragma mark - the watch common features define
@@ -1213,6 +1215,25 @@ typedef NS_ENUM(SInt8, FITCLOUDWATCHGPSFILESTATE) {
     FITCLOUDWATCHGPSFILESTATE_NEEDUPDATE = 2,
     /// 已过期
     FITCLOUDWATCHGPSFILESTATE_OUTDATED = 3,
+};
+
+#pragma mark -GPS file vendor
+
+/// Represents different GPS file vendors supported by the device.
+///
+/// This enumeration defines the GPS file vendors that can provide GPS assistance data
+/// for the device's location services.
+typedef NS_ENUM(NSInteger, FITCLOUDGPSFILEVENDOR) {
+    /// Unknown GPS file vendor
+    /// - Note: Indicates an unknown GPS file vendor
+    FITCLOUDGPSFILEVENDOR_UNKNOWN = -1,
+    /// The Airoha GPS file vendor (洛达)
+    /// - Note: Provides GPS assistance data in Airoha's proprietary format
+    FITCLOUDGPSFILEVENDOR_AIROHA = 0x00,
+
+    /// The ICOE GPS file vendor (芯与物)
+    /// - Note: Provides GPS assistance data in ICOE's proprietary format
+    FITCLOUDGPSFILEVENDOR_ICOE = 0x01,
 };
 
 #pragma mark -勋章成就等级
