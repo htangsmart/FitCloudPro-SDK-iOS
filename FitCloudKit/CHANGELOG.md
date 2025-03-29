@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.17 build20250329001 (2025-03-29)
+
+- Added support for maximum byte length of AI conversation response text in watch device capabilities.
+
 ## V1.3.1-beta.16 build20250328001 (2025-03-28)
 
 - Modified to prevent multiple initializations of FitCloudKit SDK which could lead to unpredictable results.
