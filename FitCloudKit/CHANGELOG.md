@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.18 build20250331001 (2025-03-31)
+
+- Enhanced some SDK logs.
+
 ## V1.3.1-beta.17 build20250329001 (2025-03-29)
 
 - Added support for maximum byte length of AI conversation response text in watch device capabilities.
