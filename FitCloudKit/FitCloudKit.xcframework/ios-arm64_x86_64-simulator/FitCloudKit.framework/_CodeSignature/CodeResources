@@ -186,7 +186,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		bCpYtnv9nB1HNGIeP6yGniAbQ1A=
+		QXzeidqc44cw+rVdsUoEr6tARrY=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -226,7 +226,7 @@
 		</data>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
 		<data>
-		P7zeNTLXBmbJc2JQ8AkRh8Efdw4=
+		gyOv1eM3licoXQcqPBvNYiuB8jE=
 		</data>
 		<key>Headers/FitCloudOption.h</key>
 		<data>
@@ -354,7 +354,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		D2FRYZpf67XxmD6ad4Gm5wU6+Ns=
+		Fa41D3n58opZ6U95JJwhcCuvyZw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -862,11 +862,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bCpYtnv9nB1HNGIeP6yGniAbQ1A=
+			QXzeidqc44cw+rVdsUoEr6tARrY=
 			</data>
 			<key>hash2</key>
 			<data>
-			RdfSE4UJvbxeSY6fom3EzKnbZ1A7AmLZLhIp8U1JrVE=
+			1N0+HWlo+1Om9dL/6ms4cWB13GDAb6rPMLpuzmMoFgU=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -972,11 +972,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			P7zeNTLXBmbJc2JQ8AkRh8Efdw4=
+			gyOv1eM3licoXQcqPBvNYiuB8jE=
 			</data>
 			<key>hash2</key>
 			<data>
-			2JUkHUJduYrUmRK5HgvGO5XGDpdngKS5BuKpK0Wd62c=
+			vFWilLGeYJ7VHAVOHU9gFD8+wnQAc8asPegCkrL8DFE=
 			</data>
 		</dict>
 		<key>Headers/FitCloudOption.h</key>

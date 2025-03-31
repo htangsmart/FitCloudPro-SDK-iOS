@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-03-31 Version:1.3.1-beta.18 Build:20250331001
+## pcjbird 2025-03-31 Version:1.3.1-beta.19 Build:20250331002
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -17,6 +17,7 @@
 - Introduced new APIs to support parental control features and functionality.
 - Modified to prevent multiple initializations of FitCloudKit SDK which could lead to unpredictable results.
 - Added support for maximum byte length of AI conversation response text in watch device capabilities.
+- Added support for prayer reminder toggle control in Muslim prayer features.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

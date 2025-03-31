@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.19 build20250331002 (2025-03-31)
+
+- Added support for prayer reminder toggle control in Muslim prayer features.
+
 ## V1.3.1-beta.18 build20250331001 (2025-03-31)
 
 - Enhanced some SDK logs.
