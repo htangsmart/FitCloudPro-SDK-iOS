@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.20 build20250401001 (2025-04-01)
+
+- Modified parental controls and app usage count tracking to be independent features that do not affect each other.
+
 ## V1.3.1-beta.19 build20250331002 (2025-03-31)
 
 - Added support for prayer reminder toggle control in Muslim prayer features.
