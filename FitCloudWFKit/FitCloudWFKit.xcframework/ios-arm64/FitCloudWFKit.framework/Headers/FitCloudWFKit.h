@@ -10,7 +10,7 @@
 //         FitCloudPro 智能手表表盘辅助框架， 旨在帮助您轻松自定义属于您自己的表盘文件。
 //
 //  构建版本:
-//      pcjbird    2025-02-06  Version:1.1.9 Build:20250206001
+//      pcjbird    2025-04-04  Version:1.2.0-beta.1 Build:20250404001
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
@@ -155,10 +155,32 @@ typedef void (^FitCloudWatchPhotoCreateResultBlock)(BOOL success, NSString *_Nul
 ///   - bkCornerRadius: The corner radius for the background image
 ///   - preview: The preview image (should be pre-processed, e.g. circular for round watch faces)
 ///   - dtPosition: The position of date and time on the watch face
-///   - progress: A block for reporting creation progress
-///   - logging: A block for logging messages
-///   - completion: A block for handling the creation result
-+ (void)createWithTemplateBin:(NSString *_Nonnull)templateBin isNextGUI:(BOOL)isNextGUI rewriteNextGUIWatchfaceNo:(NSNumber *_Nullable)nextGUIWatchfaceNo bkImage:(UIImage *_Nonnull)bkImage bkCornerRadius:(CGFloat)bkCornerRadius preview:(UIImage *_Nonnull)preview dtPosition:(FITCLOUDWATCHFACEDTPOSITION)dtPosition progress:(FitCloudWatchfaceCreatingProgress _Nullable)progress logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging completion:(FitCloudWatchfaceCreateResultBlock _Nullable)completion;
+///   - dtStyle: The style of date and time, only valid when the watch device support. Let it nil when not supported. (range: 0~5)
+///   - dtColor: The text color of date an time, only valid when the watch device support. Let it nil when not supported.
+///   - progress: A closure that reports creation progress updates
+///     - progress: The completion percentage between 0.0 and 1.0
+///     - message: A descriptive status message
+///   - logging: A closure that handles log messages
+///     - level: The severity level of the message
+///     - message: The log message content
+///   - completion: A closure called when creation finishes
+///     - success: Whether creation succeeded
+///     - resultBinPath: Path to generated binary file
+///     - resultBkImage: Processed background image
+///     - resultPreview: Processed preview image
+///     - error: Error details if creation failed
++ (void)createWithTemplateBin:(NSString *_Nonnull)templateBin
+                    isNextGUI:(BOOL)isNextGUI
+    rewriteNextGUIWatchfaceNo:(NSNumber *_Nullable)nextGUIWatchfaceNo
+                      bkImage:(UIImage *_Nonnull)bkImage
+               bkCornerRadius:(CGFloat)bkCornerRadius
+                      preview:(UIImage *_Nonnull)preview
+                   dtPosition:(FITCLOUDWATCHFACEDTPOSITION)dtPosition
+                      dtStyle:(NSNumber *_Nullable)dtStyle
+                      dtColor:(UIColor *_Nullable)dtColor
+                     progress:(FitCloudWatchfaceCreatingProgress _Nullable)progress
+                      logging:(FitCloudWatchfaceLoggingMessage _Nullable)logging
+                   completion:(FitCloudWatchfaceCreateResultBlock _Nullable)completion;
 
 #pragma mark Modify Watch Face Push Index
 
