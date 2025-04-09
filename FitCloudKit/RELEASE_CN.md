@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-04-01 Version:1.3.1-beta.20 Build:20250401001
+## pcjbird 2025-04-09 Version:1.3.1-beta.21 Build:20250409001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -18,6 +18,7 @@
 - 优化 FitCloudKit SDK 的初始化机制，防止多次初始化可能导致的不可预期结果。
 - 新增手表设备能力支持 AI 对话响应文本的最大字节长度限制。
 - 新增穆斯林祈祷功能中的祈祷提醒开关控制支持。
+- 新增支持将 `豪萨语` 同步为手表显示语言。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

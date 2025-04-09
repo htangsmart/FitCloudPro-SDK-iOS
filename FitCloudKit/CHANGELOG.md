@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.21 build20250409001 (2025-04-09)
+
+- Added support for synchronizing `Hausa` language as watch display language.
+
 ## V1.3.1-beta.20 build20250401001 (2025-04-01)
 
 - Modified parental controls and app usage count tracking to be independent features that do not affect each other.
