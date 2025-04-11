@@ -353,11 +353,11 @@ typedef void (^FitCloudAllGameSkinsResultBlock)(BOOL succeed, NSArray<FitCloudGa
 ///   - error: 错误信息
 typedef void (^FitCloudScreenAndVibrateSettingsResultBlock)(BOOL succeed, FitCloudScreenSetting *_Nullable screenSettings, FitCloudVibrateSetting *_Nullable vibrateSettings, NSError *_Nullable error);
 
-/// FitCloud 请求屏幕分辨率相关信息回调
+/// Callback for requesting screen resolution related information
 /// - Parameters:
-///   - succeed: 是否成功
-///   - screenResolution: 屏幕分辨率相关信息
-///   - error: 错误信息
+///   - succeed: Whether the request was successful
+///   - screenResolution: Screen resolution related information
+///   - error: Error information if request failed
 typedef void (^FitCloudScreenResolutionResultBlock)(BOOL succeed, FitCloudScreenResolution *_Nullable screenResolution, NSError *_Nullable error);
 
 /// FitCloud 请求手表UI信息结果回调

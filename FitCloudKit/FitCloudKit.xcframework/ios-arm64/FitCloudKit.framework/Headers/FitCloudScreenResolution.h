@@ -8,37 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- * @brief 手表屏幕分辨率相关信息
-*/
-@interface FitCloudScreenResolution : NSObject<NSCoding>
+/// A class that represents screen resolution information for a watch device
+@interface FitCloudScreenResolution : NSObject <NSCoding>
 
-/**
- * @brief lcd标志
- */
+/// The LCD identifier value
 @property(nonatomic, readonly) UInt8 lcd;
 
-/**
- * @brief 屏幕形状是否为圆形
- */
+/// A boolean value indicating whether the screen shape is round
 @property(nonatomic, readonly) BOOL round;
 
-
-/**
- * @brief 屏幕宽度
- */
+/// The width of the screen in pixels
 @property(nonatomic, readonly) UInt16 width;
 
-/**
- * @brief 屏幕高度
- */
+/// The height of the screen in pixels
 @property(nonatomic, readonly) UInt16 height;
 
-
-/**
- * @brief 表盘预览图圆角大小
- */
+/// The corner radius of the screen
 @property(nonatomic, readonly) UInt8 cornerRadius;
 
 @end
-

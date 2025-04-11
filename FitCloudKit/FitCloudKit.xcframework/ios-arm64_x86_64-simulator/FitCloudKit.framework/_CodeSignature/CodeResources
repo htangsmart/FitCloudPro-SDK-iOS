@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
-		Q/+P4Wwu8lfkHbxq2/Yz8+94aN0=
+		b3SZr1Fy+wS3PQvNWuBBzGwZt3g=
 		</data>
 		<key>Headers/FitCloudCapacity.h</key>
 		<data>
@@ -186,7 +186,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		2aT1Wo9TK5dOAdageL09trYi48g=
+		2N6jWF7RSe4DfBY62zhIVzrwdHw=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -266,7 +266,7 @@
 		</data>
 		<key>Headers/FitCloudScreenResolution.h</key>
 		<data>
-		8etOoiKxKAi7w1fGlZImU2AHUiM=
+		9ERzVb8eQj8xduimTMeriwF4U44=
 		</data>
 		<key>Headers/FitCloudScreenSetting.h</key>
 		<data>
@@ -354,7 +354,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8qpr9fC2dgtHP9zSHuCCAcjCMWU=
+		cvqT+vslelXCshcYnvYkfm9pmsU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -455,11 +455,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Q/+P4Wwu8lfkHbxq2/Yz8+94aN0=
+			b3SZr1Fy+wS3PQvNWuBBzGwZt3g=
 			</data>
 			<key>hash2</key>
 			<data>
-			/ULlMIRTbDoq1azcU6RxphBoEC6vqGU18cW56XpiG8Q=
+			xQr04/4X42PeUvrtmvEWmKfXJv/SmQqTlfdOm3WxBi0=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCapacity.h</key>
@@ -862,11 +862,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2aT1Wo9TK5dOAdageL09trYi48g=
+			2N6jWF7RSe4DfBY62zhIVzrwdHw=
 			</data>
 			<key>hash2</key>
 			<data>
-			hXRm9T2oH07/mEu6awgS131vsiUX8eEQiVbZDyFqaMY=
+			ShEs6qLTHZKjsP8U2AOwIXjPqfouY4Z5OxMEdZo/MXw=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -1082,11 +1082,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8etOoiKxKAi7w1fGlZImU2AHUiM=
+			9ERzVb8eQj8xduimTMeriwF4U44=
 			</data>
 			<key>hash2</key>
 			<data>
-			3bPYRn2TWtseNrWtB1wXDbEoPwNKB5pSFPic32+wT2E=
+			s+Zow4OWsq1WzYktX5JvdDYt5YZNKw3rVVNhVuUAg9c=
 			</data>
 		</dict>
 		<key>Headers/FitCloudScreenSetting.h</key>

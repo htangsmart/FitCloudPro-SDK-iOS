@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.22 build20250411001 (2025-04-11)
+
+- Added more known manufacturer identifiers.
+
 ## V1.3.1-beta.21 build20250409001 (2025-04-09)
 
 - Added support for synchronizing `Hausa` language as watch display language.
