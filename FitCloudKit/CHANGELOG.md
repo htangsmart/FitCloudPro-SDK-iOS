@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.23 build20250412001 (2025-04-12)
+
+- Modified APIs related to lover features.
+
 ## V1.3.1-beta.22 build20250411001 (2025-04-11)
 
 - Added more known manufacturer identifiers.

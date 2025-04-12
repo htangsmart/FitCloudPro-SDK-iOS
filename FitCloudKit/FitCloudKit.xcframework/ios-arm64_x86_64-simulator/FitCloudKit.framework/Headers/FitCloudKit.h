@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本:
-//      pcjbird    2025-04-11  Version:1.3.1-beta.22 Build:20250411001
+//      pcjbird    2025-04-12  Version:1.3.1-beta.23 Build:20250412001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -810,6 +810,19 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - loveMemorialDay: the love memorial day
 ///   - completion: the completion callback
 + (void)setLoveMemorialDay:(NSDate *)loveMemorialDay completion:(FitCloudResultHandler _Nullable)completion;
+
+/// Set love memorial day reminder settings
+/// - Parameters:
+///   - hour: The hour component of reminder time (0-23), default 10
+///   - minute: The minute component of reminder time (0-59), default 0
+///   - daysInAdvance: Number of days in advance to remind, default 0
+///   - completion: A completion handler called when setting completes. Parameters:
+///     - success: Whether setting was successful
+///     - error: Error information if setting fails, nil on success
++ (void)sendLoveMemorialDayReminderHour:(NSNumber *_Nullable)hour
+                                 minute:(NSNumber *_Nullable)minute
+                          daysInAdvance:(NSNumber *_Nullable)daysInAdvance
+                             completion:(FitCloudResultHandler _Nullable)completion;
 
 /// Received the lover message
 /// - Parameters:
