@@ -3,7 +3,7 @@
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/5/21.
-//  Copyright © 2018年 Zero Status. All rights reserved.
+//  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 
 #ifndef FitCloudCallback_h
@@ -77,35 +77,35 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// FitCloud调用结果回调
+/// FitCloud 调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - error: 错误信息
 typedef void (^FitCloudResultHandler)(BOOL succeed, NSError *_Nullable error);
 
-/// FitCloud进度回调
+/// FitCloud 进度回调
 /// - Parameters:
 ///   - progress: 进度 0～1
 typedef void (^FitCloudProgressBlock)(CGFloat progress);
 
-/// FitCloud调用结果回调
+/// FitCloud 调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - val: 对象值
 ///   - error: 错误信息
 typedef void (^FitCloudObjectResultBlock)(BOOL succeed, id _Nullable val, NSError *_Nullable error);
 
-/// FitCloud进入DFU模式结果回调
+/// FitCloud 进入 DFU 模式结果回调
 /// - Parameters:
-///   - succeed: 是否成功进入DFU
-///   - dfuPeripheral: dfu蓝牙外设
+///   - succeed: 是否成功进入 DFU
+///   - dfuPeripheral: dfu 蓝牙外设
 ///   - chipVendor:  蓝牙外设芯片供应商
 ///   - error: 错误信息
 typedef void (^FitCloudEnterDFUModeResultBlock)(BOOL succeed, CBPeripheral *_Nullable dfuPeripheral, FITCLOUDCHIPVENDOR chipVendor, NSError *_Nullable error);
 
-/// FitCloud退出DFU模式结果回调
+/// FitCloud 退出 DFU 模式结果回调
 /// - Parameters:
-///   - succeed: 是否成功进入DFU
+///   - succeed: 是否成功进入 DFU
 ///   - error: 错误信息
 typedef void (^FitCloudExitDFUModeResultBlock)(BOOL succeed, NSError *_Nullable error);
 
@@ -257,10 +257,10 @@ typedef void (^FitCloudHRAlarmResultBlock)(BOOL succeed, FitCloudHRAlarmObject *
 ///   - error: 错误信息
 typedef void (^FitCloudBPAlarmResultBlock)(BOOL succeed, FitCloudBPAlarmObject *_Nullable bpAlarmSetting, NSError *_Nullable error);
 
-/// FitCloud (绑定时)获取手表所有配置信息调用结果回调
+/// FitCloud (绑定时) 获取手表所有配置信息调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
-///   - config: (绑定时)获取手表所有配置信息
+///   - config: (绑定时) 获取手表所有配置信息
 ///   - error: 错误信息
 typedef void (^FitCloudAllConfigWhenBindResultBlock)(BOOL succeed, FitCloudAllConfigObject *_Nullable config, NSError *_Nullable error);
 
@@ -285,7 +285,7 @@ typedef void (^FitCloudPowerSavingSettingResultBlock)(BOOL succeed, FitCloudPowe
 ///   - error: 错误信息
 typedef void (^FitCloudWomenHealthSettingResultBlock)(BOOL succeed, FitCloudWomenHealthSetting *_Nullable whSetting, NSError *_Nullable error);
 
-/// FitCloud 手表向APP请求天气信息结果回调
+/// FitCloud 手表向 APP 请求天气信息结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - weather: 天气信息回调
@@ -308,7 +308,7 @@ typedef void (^FitCloudDataManualSyncProgress)(CGFloat progress, NSString *_Null
 /// FitCloud 手表历史运动健康数据手动同步结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
-///   - userId: 用户Id
+///   - userId: 用户 Id
 ///   - records: 记录集合
 ///   - error: 错误信息
 typedef void (^FitCloudDataManualSyncResultBlock)(BOOL succeed, NSString *_Nullable userId, NSArray<FitCloudManualSyncRecordObject *> *_Nullable records, NSError *_Nullable error);
@@ -319,7 +319,7 @@ typedef void (^FitCloudDataManualSyncFinishBlock)(void);
 /// FitCloud 请求当日运动健康数据调用结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
-///   - userId: 用户Id
+///   - userId: 用户 Id
 ///   - dataObject: 当日运动健康数据
 ///   - error: 错误信息
 typedef void (^FitCloudHealthAndSportsDataTodayResultBlock)(BOOL succeed, NSString *_Nullable userId, FitCloudDailyHealthAndSportsDataObject *_Nullable dataObject, NSError *_Nullable error);
@@ -360,17 +360,17 @@ typedef void (^FitCloudScreenAndVibrateSettingsResultBlock)(BOOL succeed, FitClo
 ///   - error: Error information if request failed
 typedef void (^FitCloudScreenResolutionResultBlock)(BOOL succeed, FitCloudScreenResolution *_Nullable screenResolution, NSError *_Nullable error);
 
-/// FitCloud 请求手表UI信息结果回调
+/// FitCloud 请求手表 UI 信息结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
-///   - watchUI: 手表UI信息
+///   - watchUI: 手表 UI 信息
 ///   - error: 错误信息
 typedef void (^FitCloudWatchUIInfoResultBlock)(BOOL succeed, FitCloudWatchUIInfo *_Nullable watchUI, NSError *_Nullable error);
 
-/// FitCloud 请求表盘UI信息结果回调
+/// FitCloud 请求表盘 UI 信息结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
-///   - faceUI: 表盘UI信息
+///   - faceUI: 表盘 UI 信息
 ///   - error: 错误信息
 typedef void (^FitCloudWatchfaceUIInfoResultBlock)(BOOL succeed, FitCloudWatchfaceUIInfo *_Nullable faceUI, NSError *_Nullable error);
 
@@ -381,18 +381,18 @@ typedef void (^FitCloudWatchfaceUIInfoResultBlock)(BOOL succeed, FitCloudWatchfa
 ///   - error: 错误信息
 typedef void (^FitCloudLatestHealthMeasurementDataResultBlock)(BOOL succeed, FitCloudLatestHealthMeasurementDataObject *_Nullable dataObject, NSError *_Nullable error);
 
-/// FitCloud 请求GPS互联当前运动状态结果回调
+/// FitCloud 请求 GPS 互联当前运动状态结果回调
 /// - Parameters:
 ///   - succeed: 是否成功
 ///   - currentStatus: 当前运动状态
 ///   - error: 错误信息
 typedef void (^FitCloudGPSConnectSportsCurrentStatusResultBlock)(BOOL succeed, FitCloudSportsWithGPSCurrentStatus *_Nullable currentStatus, NSError *_Nullable error);
 
-/// FitCloud Alexa语音开始请求回调
+/// FitCloud Alexa 语音开始请求回调
 /// - Parameter result: 回调结果
 typedef void (^FitCloudAlexaVoiceStartRequestCompletion)(ALEXAINVOKEERROR result);
 
-/// FitCloud Alexa语音亚马逊处理回调
+/// FitCloud Alexa 语音亚马逊处理回调
 /// - Parameters:
 ///   - result: 回调结果
 ///   - text: 文本回调
@@ -426,7 +426,7 @@ typedef void (^FitCloudPhotoAlbumParamsResultBlock)(BOOL succeed, FitCloudPhotoA
 ///   - error: 错误信息
 typedef void (^FitCloudSupportedSchedulesResultBlock)(BOOL succeed, NSArray<NSNumber *> *_Nullable supported, NSError *_Nullable error);
 
-/// FitCloud开启GSensor结果回调
+/// FitCloud 开启 GSensor 结果回调
 /// - Parameters:
 ///   - succeed: 是否成功开启
 ///   - error: 错误信息
@@ -527,18 +527,18 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// 心电实时测量结果
 /// - Parameters:
 ///   -  ecgDataArray: 数据
-///   - interval: 采样间隔, 单位：毫秒(ms)
+///   - interval: 采样间隔，单位：毫秒 (ms)
 - (void)OnRealTimeECGData:(NSArray<NSNumber *> *)ecgDataArray interval:(NSInteger)interval;
 
 /// 心电实时测量结束
 - (void)OnRealTimeECGStop;
 
-/// 手表报告GPS互联运动状态
+/// 手表报告 GPS 互联运动状态
 /// - Parameters:
-///   -  status: GPS互联运动状态
+///   -  status: GPS 互联运动状态
 - (void)OnGPSConnectWatchStatus:(FitCloudSportsWithGPSActionParams *)status;
 
-/// 手表GPS互联实时运动数据
+/// 手表 GPS 互联实时运动数据
 /// - Parameters:
 ///   -  sportsData: 数据
 - (void)OnGPSConnectSportsData:(FitCloudSportsWithGPSData *)sportsData;
@@ -546,10 +546,10 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// 手表控制手机拍照
 - (void)OnTakePhotoCtrl;
 
-/// 手表通知App退出拍照
+/// 手表通知 App 退出拍照
 - (void)OnExitCamera;
 
-/// 唤醒APP相机功能
+/// 唤醒 APP 相机功能
 - (void)OnWakeUpCamera;
 
 /// 请求拍照实时预览图
@@ -557,14 +557,14 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - width: 宽度
 ///   - height: 高度
 ///   - rotation: 旋转角度，支持的角度有 0°，90°，180°，270°
-///   - bufferSize: 图片Buffer大小限制
+///   - bufferSize: 图片 Buffer 大小限制
 ///   - divisionCount: 图片需要在垂直方向上按该数量进行等分后传给手表，有效范围：1～n
 - (void)OnRequestCameraLivePreviewWithWidth:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation bufferSize:(NSInteger)bufferSize divisionCount:(NSInteger)divisionCount;
 
-/// 收到手表的活跃通知(当前手表与手机连接还活跃着)
+/// 收到手表的活跃通知 (当前手表与手机连接还活跃着)
 - (void)OnBraceletAlive;
 
-/// 收到手表SOS请求
+/// 收到手表 SOS 请求
 - (void)OnSOS;
 
 /// 启停第三方外设
@@ -573,33 +573,33 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   -  action: 启停操作
 - (void)OnThirdPartyPeripheral:(THIRDPARTYPERIPHERAL)peripheral action:(THIRDPARTYPERIPHERALACTION)action;
 
-/// 通知App收到Alexa语音开始请求
+/// 通知 App 收到 Alexa 语音开始请求
 /// - Parameters:
 ///   -  completion: 结果回调
 - (void)OnAlexaVoiceStartRequestWithCompletion:(FitCloudAlexaVoiceStartRequestCompletion)completion;
 
-/// Alexa请求的原始语音数据
+/// Alexa 请求的原始语音数据
 /// - Parameters:
 ///   -  rawData: 原始数据
 - (void)OnAlexaVoiceRawPartialData:(NSData *)rawData;
 
-/// Alexa语音原始数据传输完成
+/// Alexa 语音原始数据传输完成
 /// - Parameters:
 ///   -  length: 长度
 ///   -  crc: crc
 - (void)OnAlexaVoiceFinish:(NSInteger)length crc:(NSInteger)crc;
 
-/// Alexa语音原始数据校验错误
+/// Alexa 语音原始数据校验错误
 /// - Parameters:
 ///   - error: 校验错误
 - (void)OnAlexaVoiceCheckWithError:(ALEXACHECKERROR)error;
 
-/// Alexa语音数据接收完毕，开始解码
+/// Alexa 语音数据接收完毕，开始解码
 - (void)OnAlexaVoiceDecodeBegin;
 
-/// Alexa请求的语音数据，该数据已经经过解码
+/// Alexa 请求的语音数据，该数据已经经过解码
 /// - Parameters:
-///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16位 PCM
+///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16 位 PCM
 - (void)OnAlexaVoiceDecodedWithData:(NSData *_Nullable)voiceData;
 
 /// Notifies that large language model voice transmission has started
@@ -676,20 +676,20 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - confirmed: A Boolean value that indicates if the watch confirms to use this AI-generated watch face photo
 - (void)didConfirmAIWatchFacePhoto:(BOOL)confirmed;
 
-/// 手表发送情侣消息，通过APP发给对方
+/// 手表发送情侣消息，通过 APP 发给对方
 /// - Parameters:
 ///   - loverMessage: 情侣消息
 - (void)OnLoverMessage:(FITCLOUDLOVERMESSAGE)loverMessage;
 
-/// 通知App开始发起支付宝Iot认证
+/// 通知 App 开始发起支付宝 Iot 认证
 - (void)OnNotifyAppToAliotAuth;
 
-/// 支付宝Iot数据回调
+/// 支付宝 Iot 数据回调
 /// - Parameters:
-///   - aliotData: 支付宝Iot数据
+///   - aliotData: 支付宝 Iot 数据
 ///   - totalPacks: 总数据包个数
-///   - packIndex: 当前第几个数据包，下标从0开始
-///   - expectedTotalBytes: 支付宝Iot数据总长度，即几个数据包加起来的总长度
+///   - packIndex: 当前第几个数据包，下标从 0 开始
+///   - expectedTotalBytes: 支付宝 Iot 数据总长度，即几个数据包加起来的总长度
 - (void)OnAliotData:(NSData *_Nullable)aliotData totalPacks:(NSInteger)totalPacks packIndex:(NSInteger)packIndex expectedTotalBytes:(NSInteger)expectedTotalBytes;
 
 /// 网易云音乐桥接准备完毕
@@ -700,9 +700,9 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - data: 网易云音乐桥接数据
 - (void)OnNetEaseCloudMusicBridgeData:(NSData *)data;
 
-/// 通知App开始发起手表微信支付认证
+/// 通知 App 开始发起手表微信支付认证
 /// - Parameters:
-///   - macAddr: 手表Mac地址
+///   - macAddr: 手表 Mac 地址
 ///   - bluetoothName: 蓝牙名称
 - (void)OnNotifyAppToWPAuthWithMacAddr:(NSString *)macAddr bluetoothName:(NSString *)bluetoothName;
 
@@ -717,7 +717,7 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// 手表请求板球比赛数据
 - (void)OnRequestCricketMatchData;
 
-/// 手表请求GPS定位数据
+/// 手表请求 GPS 定位数据
 - (void)onRequestGPSLocationData;
 
 /// Notifies the progress of writing GPS file to watch after uploading GPS file to watch during GPS file upgrade process
@@ -731,11 +731,11 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// Notifies that GPS file writing to watch has failed
 - (void)onWritingGPSFileToWatchFailed;
 
-/// GSensor数据
+/// GSensor 数据
 /// - Parameters:
-///   - xGravity: 对应sensor数据中的X轴加速度
-///   - yGravity: 对应sensor数据中的Y轴加速度
-///   - zGravity: 对应sensor数据中的Z轴加速度
+///   - xGravity: 对应 sensor 数据中的 X 轴加速度
+///   - yGravity: 对应 sensor 数据中的 Y 轴加速度
+///   - zGravity: 对应 sensor 数据中的 Z 轴加速度
 - (void)OnGSensorDataWithXGravity:(SInt16)xGravity yGravity:(SInt16)yGravity zGravity:(SInt16)zGravity;
 
 /// 手表端通知退出导航
@@ -746,19 +746,24 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - width: 宽度
 ///   - height: 高度
 ///   - rotation: 旋转角度，支持的角度有 0°，90°，180°，270°
-///   - bufferSize: 图片Buffer大小限制
+///   - bufferSize: 图片 Buffer 大小限制
 ///   - divisionCount: 图片需要在垂直方向上按该数量进行等分后传给手表，有效范围：1～n
 - (void)OnRequestMapNavigationSnapshotWithWidth:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation bufferSize:(NSInteger)bufferSize divisionCount:(NSInteger)divisionCount;
 
 /// 手表端请求当前回历节日信息
 ///
 /// > The watch side request the current islamic events information
-- (void)OnRequestCurrentIslamicEvents;
+- (void)onRequestCurrentIslamicEvents;
 
 /// 手表端请求克尔白数据
 ///
 /// > The watch side request the kaaba data information
-- (void)OnRequestKaabaData;
+- (void)onRequestKaabaData;
+
+/// 通知穆斯林祈祷设置已更改
+///
+/// > Notifies that the Muslim prayer settings have been changed on the watch side
+- (void)onOraimoMuslimPrayerSettingsChanged;
 
 /// The watch device request to toggle the iPhone camera
 - (void)OnRequestToggleCamera;

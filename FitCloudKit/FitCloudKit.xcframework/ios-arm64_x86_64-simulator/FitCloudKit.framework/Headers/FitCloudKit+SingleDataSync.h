@@ -6,6 +6,7 @@
 //  Copyright © 2023 Zero Status. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKit.h>
 
 /// 单项同步数据类型

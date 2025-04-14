@@ -38,11 +38,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// > Tips: Azan 5
 @property(nonatomic, copy) NSDate *timeForIsha;
 
-/// A Boolean value that determines whether the muslim prayer alarm clock is enabled.
-///
-/// When enabled is true, the prayer alarm clock will notify at the specified prayer times.
-/// When enabled is false, all prayer alarm notifications will be disabled.
-@property(nonatomic, assign) BOOL enabled;
 
 @end
 

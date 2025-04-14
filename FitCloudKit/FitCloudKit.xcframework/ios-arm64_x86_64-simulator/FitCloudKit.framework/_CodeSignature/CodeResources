@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
-		b3SZr1Fy+wS3PQvNWuBBzGwZt3g=
+		yvzsPmLynen7+AaxO02fC/ML58g=
 		</data>
 		<key>Headers/FitCloudCapacity.h</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
-		mx3O/1xCybltFTWwfyrYwQiP1p4=
+		8WqhDx56zl58c6Vu9Bv9T3pQPEs=
 		</data>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
 		<data>
@@ -166,27 +166,31 @@
 		</data>
 		<key>Headers/FitCloudKit+FavContactsWithProgress.h</key>
 		<data>
-		zVaqKD6nAJ/zfrHPozDZ+Hxm19E=
+		o1swEeDTsxzL/JOO35Imf4DrX8o=
 		</data>
 		<key>Headers/FitCloudKit+Haylou.h</key>
 		<data>
-		i9euC72gfiZ9ns5XdJonaeA4UsY=
+		uSSNTcfCtMWI6G6wUcWMhYdOym4=
 		</data>
 		<key>Headers/FitCloudKit+Huashengda.h</key>
 		<data>
-		fL5KNldTfAa5IetW8n8PqxMaRr8=
+		DGY9Hs9Cv9l/TMuZtmmDaTzJ3tg=
 		</data>
 		<key>Headers/FitCloudKit+SingleDataSync.h</key>
 		<data>
-		8XeHQByU8/Le4EBJUb6BgK5RBw8=
+		uaAfyyH2C24aNyXrKA6XI9b3ryo=
 		</data>
 		<key>Headers/FitCloudKit+TranssionInfinix.h</key>
 		<data>
-		sCGzw0HIB+IJ5te0rOOz8Dfd5fA=
+		3O6Wa6fLVi48lHQglpwO4LgNQb8=
+		</data>
+		<key>Headers/FitCloudKit+TranssionOraimo.h</key>
+		<data>
+		49+J/PeFFvEHsPeWaHVnaspD3EI=
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		V5iJV8TyP9BUdCn8EgH2fnKtptM=
+		hmO14C9aCrUEZzI9SG5UaJ8PGtI=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -222,11 +226,11 @@
 		</data>
 		<key>Headers/FitCloudModels.h</key>
 		<data>
-		TWd1ELL6NfMWfaDVg2hFvoWrOhU=
+		37sKra6EI5WXQvQdTQ8i83r/Lj0=
 		</data>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
 		<data>
-		gyOv1eM3licoXQcqPBvNYiuB8jE=
+		7FYWfVdEoo8nStbMqBxoqvund1Q=
 		</data>
 		<key>Headers/FitCloudOption.h</key>
 		<data>
@@ -336,6 +340,14 @@
 		<data>
 		geRx2G2zKNxStOWr+EL3uZixYRY=
 		</data>
+		<key>Headers/OraimoMuslimPrayerAlarmClockModel.h</key>
+		<data>
+		Y/9QZY6MFEmvTLkThFHpvRUrsXE=
+		</data>
+		<key>Headers/OraimoMuslimPrayerSwitchSettingsModel.h</key>
+		<data>
+		XV8zOEd/dv7I3eLRGXB4sHS3ENc=
+		</data>
 		<key>Headers/SkyworthPVPowerStationObject.h</key>
 		<data>
 		66iYdRnplGa0GunZ2pc1fW0EMGM=
@@ -354,7 +366,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7moAoh1nTfaL1dYfmm30aN5Ccso=
+		W+aye3C/f8KbRE4Iuefht8Iniu0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -455,11 +467,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			b3SZr1Fy+wS3PQvNWuBBzGwZt3g=
+			yvzsPmLynen7+AaxO02fC/ML58g=
 			</data>
 			<key>hash2</key>
 			<data>
-			xQr04/4X42PeUvrtmvEWmKfXJv/SmQqTlfdOm3WxBi0=
+			xJD8NdFwRLfEj1LhKGYxLtD7AyxPH/z/dxuogI5gscg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCapacity.h</key>
@@ -631,11 +643,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mx3O/1xCybltFTWwfyrYwQiP1p4=
+			8WqhDx56zl58c6Vu9Bv9T3pQPEs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Dw7Mfvvnk5cLPkoU0ULwAG4RN8eYKu0oHU4JC0/wuxY=
+			vD2i11HA7RV1n4638wL6fFrKdiii0Ut0tGu4eqSK/Js=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
@@ -807,66 +819,77 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zVaqKD6nAJ/zfrHPozDZ+Hxm19E=
+			o1swEeDTsxzL/JOO35Imf4DrX8o=
 			</data>
 			<key>hash2</key>
 			<data>
-			aFCNqbparyJSvW7ok4qeGP4llEzXY4mn+ABTlOgktaA=
+			GQjsTFVX95roKR6XeqmkQYliBubwLwvCchdCDvkXRXI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKit+Haylou.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			i9euC72gfiZ9ns5XdJonaeA4UsY=
+			uSSNTcfCtMWI6G6wUcWMhYdOym4=
 			</data>
 			<key>hash2</key>
 			<data>
-			e1amlvP/vOwsUMpTsGwzY/mblmU9hONu1el8t4J02eo=
+			Jcu7tNLF07GmfwG5YN7f0PaCxZ79Z8B8hoQwForvUZU=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKit+Huashengda.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fL5KNldTfAa5IetW8n8PqxMaRr8=
+			DGY9Hs9Cv9l/TMuZtmmDaTzJ3tg=
 			</data>
 			<key>hash2</key>
 			<data>
-			vZ7cs5ufEOSzrWySf5S0CQDe76f4aYzCnTmnOYLDzFA=
+			ExxqU2LePjBk3fPYXubgGTaDjeIUQsjTjoaZXarSioI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKit+SingleDataSync.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8XeHQByU8/Le4EBJUb6BgK5RBw8=
+			uaAfyyH2C24aNyXrKA6XI9b3ryo=
 			</data>
 			<key>hash2</key>
 			<data>
-			9XoL4bwPaNA/ldOjLkAQirPoHqzzjwaGJ4DZ2xzK/h8=
+			hJOlb6tW2gUeIUNkuJPsO6LC6b5u14XA8/IBElZoXvY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKit+TranssionInfinix.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sCGzw0HIB+IJ5te0rOOz8Dfd5fA=
+			3O6Wa6fLVi48lHQglpwO4LgNQb8=
 			</data>
 			<key>hash2</key>
 			<data>
-			gXmbMqz18C3fVMt0rNmaagPYm2Eanb8alS1yhiNPjDY=
+			Ww4pebQn+KgSER4673LYmE+4MxM46noWfXcF8+uM/no=
+			</data>
+		</dict>
+		<key>Headers/FitCloudKit+TranssionOraimo.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			49+J/PeFFvEHsPeWaHVnaspD3EI=
+			</data>
+			<key>hash2</key>
+			<data>
+			zERv8+h8QwXNpB+PPWjhnof8KBInft0LnUv9mMoigLc=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			V5iJV8TyP9BUdCn8EgH2fnKtptM=
+			hmO14C9aCrUEZzI9SG5UaJ8PGtI=
 			</data>
 			<key>hash2</key>
 			<data>
-			euCBJALmKPq6/NpdqoeocQWwKjBTWYjOtjsQHnU/Mf0=
+			216/PkKzgN0eMhiGciYZpfk7cruaEgciW5nJeTNfhRY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -961,22 +984,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TWd1ELL6NfMWfaDVg2hFvoWrOhU=
+			37sKra6EI5WXQvQdTQ8i83r/Lj0=
 			</data>
 			<key>hash2</key>
 			<data>
-			6SHNR7YAD99tmg3gbQ67/83gxF7CPYE3xiMft0kSRLw=
+			hbAbk8XYJQmQFc9653t/BU8AlKOubLgliHrlbJWtew0=
 			</data>
 		</dict>
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gyOv1eM3licoXQcqPBvNYiuB8jE=
+			7FYWfVdEoo8nStbMqBxoqvund1Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			vFWilLGeYJ7VHAVOHU9gFD8+wnQAc8asPegCkrL8DFE=
+			YlJvT5Aowk7ETFal/37covvWaOcEAt/SxDnvyYgrPLM=
 			</data>
 		</dict>
 		<key>Headers/FitCloudOption.h</key>
@@ -1274,6 +1297,28 @@
 			<key>hash2</key>
 			<data>
 			46DVw8oMqZDkvjAaWP78dq/XBCbR6hb5SlYxuh6TNzM=
+			</data>
+		</dict>
+		<key>Headers/OraimoMuslimPrayerAlarmClockModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Y/9QZY6MFEmvTLkThFHpvRUrsXE=
+			</data>
+			<key>hash2</key>
+			<data>
+			xqoLPwIjJcDpQ3U9XPWygQH+DY5Us6xIFbN+epZrQds=
+			</data>
+		</dict>
+		<key>Headers/OraimoMuslimPrayerSwitchSettingsModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XV8zOEd/dv7I3eLRGXB4sHS3ENc=
+			</data>
+			<key>hash2</key>
+			<data>
+			0GIw8VzA8kJD3Kb1VmbZGmDcNtJBsr985vZMHvzFDL0=
 			</data>
 		</dict>
 		<key>Headers/SkyworthPVPowerStationObject.h</key>

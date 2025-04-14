@@ -9,6 +9,9 @@
 #ifndef FitCloudKit_Huashengda_h
 #define FitCloudKit_Huashengda_h
 
+#import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudKit.h>
+
 @interface FitCloudKit (Huashengda)
 
 #pragma mark - Query whether Huashengda watch is restore to factory settings

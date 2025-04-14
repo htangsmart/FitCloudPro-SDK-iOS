@@ -13,6 +13,8 @@
 #import <FitCloudKit/FitCloudAppSidePermissionStatusModel.h>
 #import <FitCloudKit/FitCloudParentControlSettingsModel.h>
 #import <FitCloudKit/FitCloudAppUsageCountStatisticsModel.h>
+#import <FitCloudKit/OraimoMuslimPrayerAlarmClockModel.h>
+#import <FitCloudKit/OraimoMuslimPrayerSwitchSettingsModel.h>
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.24 build20250415001 (2025-04-15)
+
+- Introduce new APIs for the Transsion Oraimo Muslim prayer features, see `<FitCloudKit/FitCloudKit+TranssionOraimo.h>`.
+
 ## V1.3.1-beta.23 build20250412001 (2025-04-12)
 
 - Modified APIs related to lover features.

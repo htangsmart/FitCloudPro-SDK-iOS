@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-04-12 Version:1.3.1-beta.23 Build:20250412001
+## pcjbird 2025-04-15 Version:1.3.1-beta.24 Build:20250415001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -21,6 +21,7 @@
 - 新增支持将 `豪萨语` 同步为手表显示语言。
 - 新增识别更多的已知厂商标识。
 - 修改情侣功能相关的 API。
+- 引入传音 Oraimo 穆斯林祈祷功能相关的新 API，详见 `<FitCloudKit/FitCloudKit+TranssionOraimo.h>`。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
@@ -49,7 +50,7 @@
 - 修复微信支付指令发送的一些问题。
 - 引入新的 API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion`用于删除手表端对应表盘位置的表盘。
 - 引入新的 API，用于从手表端切换 iPhone 摄像头请求。
-- 修复历史连接记录的一些问题, 特别当用户修改了手机时间。
+- 修复历史连接记录的一些问题，特别当用户修改了手机时间。
 - 引入新的 API 以处理来自手表端的地图导航快照请求。
 - 表盘尺寸支持 240x320 方，184x276 方。
 - 新 OTA 升级启动指令增加了待升级文件类型信息。
@@ -70,11 +71,11 @@
 
 ## pcjbird 2024-09-30 Version:1.2.9 Build:20240930001
 
-- 新增创维光伏数据支持, @see withSkyworthPV
+- 新增创维光伏数据支持，@see withSkyworthPV
 - 新增一些调试日志
-- 板球比赛数据指令支持, @see withCricketMatch
+- 板球比赛数据指令支持，@see withCricketMatch
 - 新增同步指定时间到手表支持
-- GPS&EPO 支持, @see withGPSEpo
+- GPS&EPO 支持，@see withGPSEpo
 - 网易云音乐支持
 - 表盘尺寸支持 228x460 方
 - 新增习惯养成类型
@@ -83,48 +84,48 @@
 - 体感游戏支持 @see withMotionSensingGame
 - 修改习惯养成协议
 - 表盘尺寸支持 390x390 圆
-- 新增导航信息同步支持,@see naviGuideSupported
+- 新增导航信息同步支持，@see naviGuideSupported
 - 表盘尺寸支持 390x450 方
 - 表盘尺寸支持 286x240 方
-- 新增相册推送支持,@see allowPhotoPush
-- 新增电子书推送支持,@see allowEBookPush
-- 新增小睡支持,@see withSnooze
-- 新增快速眼动支持,@see withREM
-- 新增超过 10 个常用联系人支持,@see allowHugeCountFavContacts
+- 新增相册推送支持，@see allowPhotoPush
+- 新增电子书推送支持，@see allowEBookPush
+- 新增小睡支持，@see withSnooze
+- 新增快速眼动支持，@see withREM
+- 新增超过 10 个常用联系人支持，@see allowHugeCountFavContacts
 - 新增电子卡包功能
 - 表盘尺寸支持 192x490 椭圆
-- 新增心率监测时间段是否支持跨天标识,@see allowHeartRateMonitoringAcrossDays
-- 新增设备能力查询支持,@see allowQueryDeviceCapacities, allConfig.deviceCapacities
-- 新增获取运动训练展示数据项信息,@see withDisplayConfigInWorkoutData
-- FitCloudOption 新增是否自动同步系统语言选项,@see autoSyncSystemLang
-- 新 OTA 升级支持, @see withNewOTA
+- 新增心率监测时间段是否支持跨天标识，@see allowHeartRateMonitoringAcrossDays
+- 新增设备能力查询支持，@see allowQueryDeviceCapacities, allConfig.deviceCapacities
+- 新增获取运动训练展示数据项信息，@see withDisplayConfigInWorkoutData
+- FitCloudOption 新增是否自动同步系统语言选项，@see autoSyncSystemLang
+- 新 OTA 升级支持，@see withNewOTA
 - 进入 DFU 模式新增返回错误类型 `FITCLOUDKITERROR_DFUNOTALLOWFORPOWERSAVINGMODE`
-- 新增健康定时监测独立开关设置和查询功能, @see allowSingleHTMSettings
-- 新增静态心率/动态心率过低报警功能, @see withHRLowAlarm
+- 新增健康定时监测独立开关设置和查询功能，@see allowSingleHTMSettings
+- 新增静态心率/动态心率过低报警功能，@see withHRLowAlarm
 - 天气设置新增紫外线指数设置功能
 - 新增猎声定制天气类型 @see FITCLOUDWEATHERTYPE_CLOUDYINEVENING/FITCLOUDWEATHERTYPE_CLEARINEVENING/FITCLOUDWEATHERTYPE_EVENINGSHOWERS
 - 设备能力类型新增设备支持的天气种类数量
 - 新增设置和查询运动极限心率，仅特定项目可用
-- 新增猎声相关软件版本信息查询功能，仅该客户可用，版本信息数据由客户自行解析, @see FitCloudKit+Haylou.h
-- 新增大模型支持, @see withLLM
-- 新增猎声手表 SN 信息查询功能，仅该客户可用, @see FitCloudKit+Haylou.h
+- 新增猎声相关软件版本信息查询功能，仅该客户可用，版本信息数据由客户自行解析，@see FitCloudKit+Haylou.h
+- 新增大模型支持，@see withLLM
+- 新增猎声手表 SN 信息查询功能，仅该客户可用，@see FitCloudKit+Haylou.h
 - 修改绑定 API，新增随机码，没有随机码是填 nil
 - 绑定失败错误新增`手表需要恢复出厂设置才能绑定`
 - 新增查询手表当前语言设置功能
-- 新增手表端执行了停止查找手表操作通知, @see FITCLOUDEVENT_WATCHSIDE_PERFORM_STOP_FIND_WATCH_ACTION_NOTIFY
+- 新增手表端执行了停止查找手表操作通知，@see FITCLOUDEVENT_WATCHSIDE_PERFORM_STOP_FIND_WATCH_ACTION_NOTIFY
 - 修改停止查找手表 API 名称，新增停止查找手表功能
 - 每日运动目标新增设置运动时长目标
-- 新增设置紧急联系人功能, @see withEmergencyContact
-- 新增静息心率查询功能, @see withRestingHR
-- 新增设置个性化提醒功能, @see withPersonalizedReminder, @see FITCLOUDDEVICECAPACITY
+- 新增设置紧急联系人功能，@see withEmergencyContact
+- 新增静息心率查询功能，@see withRestingHR
+- 新增设置个性化提醒功能，@see withPersonalizedReminder, @see FITCLOUDDEVICECAPACITY
 - 健康总数据以及计步数据新增运动时长数据
 - 消息通知新增 Gmail/Outlook/WhatsApp Business
 - 天气设置修改能见度精度到米
-- 新增直接 DFU 升级(DFU 升级不进入 DFU 模式), 直接拿`[FitCloudKit directDFUPeripheral]`外设传入 FitCloudDFUKit, 仅特定客户手表可用
-- 新增硬件平台标志, @see FITCLOUDHARDWARE_8773, FITCLOUDHARDWARE_568X
+- 新增直接 DFU 升级 (DFU 升级不进入 DFU 模式), 直接拿`[FitCloudKit directDFUPeripheral]`外设传入 FitCloudDFUKit, 仅特定客户手表可用
+- 新增硬件平台标志，@see FITCLOUDHARDWARE_8773, FITCLOUDHARDWARE_568X
 - 电子卡包名称最大长度修改成 32 字节
 - 修正传音厂商标识，支持传音 MAC 地址解析
-- 新增情侣功能, @see `[FitCloudKit isDeviceSupportFeature:FITCLOUDDEVICEFEATURE_LOVERS]`
+- 新增情侣功能，@see `[FitCloudKit isDeviceSupportFeature:FITCLOUDDEVICEFEATURE_LOVERS]`
 - 新增 GPS 互联运动卡路里数据返回
 - 新 OTA 新增帧重传机制
 - 表盘尺寸支持 320x172 方
@@ -134,7 +135,7 @@
 - 优化切换表盘，及修改其对应的组件样式 API
 - 优化手表返回的手表表盘 UI 信息
 - 删除 SDK 里的运动类型定义，由 APP 层处理对应的运动类型，运动类型映射表找对接的商务或者产品经理要
-- 新增支持返回快速眼动(REM)类型的睡眠数据
+- 新增支持返回快速眼动 (REM) 类型的睡眠数据
 - 新增支持设置 24 小时天气信息，仅部分手表支持
 - 新增泳池游泳和开放水域游泳运动数据同步
 - 表盘尺寸支持 480x480 圆
@@ -161,8 +162,8 @@
 
 - 表盘尺寸支持 410x502 方/416x416 圆/240x288 方
 - 新增自定义标签功能 @see withCustomLabels
-- 支付宝 Iot 支持, @see allowAliot
-- 蓝牙连接支持设置是否使用一键双连同时连接经典蓝牙(BT), @see allowConnectWithBT
+- 支付宝 Iot 支持，@see allowAliot
+- 蓝牙连接支持设置是否使用一键双连同时连接经典蓝牙 (BT), @see allowConnectWithBT
 - 新增通过广播数据获取相关厂商信息及参数 @see FitCloudManufacturer
 - 手表运动 GPS 数据传输支持 @see FitCloudGPSRecordObject
 - 表盘尺寸支持 340x340 圆
@@ -182,7 +183,7 @@
 - 新增核酸码推送功能 @see allowNucleicAcidQRCode
 - 天气新增大气压强/风力/能见度信息
 - 新增习惯养成相关指令 @see allowHabits
-- 新增收款码：Paytm 收款码/PhonePe 收款码/GPay 收款码/BHTM 收款码，新增名片：Email 名片/Phone 名片/LinkedIn 名片, @see showAdditionalQRCodeTransfer
+- 新增收款码：Paytm 收款码/PhonePe 收款码/GPay 收款码/BHTM 收款码，新增名片：Email 名片/Phone 名片/LinkedIn 名片，@see showAdditionalQRCodeTransfer
 - 新增通知手表查找手机响铃播放完毕，适配蓝牙通话手表
 - 新增获取每日运动目标指令
 - 优化外设 MTU 值获取
@@ -190,7 +191,7 @@
 ## pcjbird 2022-09-20 Version:1.2.6 Build:202209200001
 
 - 修正 GPS 互联运动指令的问题
-- 新增基于气压泵的真血压(部分手表支持)
+- 新增基于气压泵的真血压 (部分手表支持)
 - 部分手表支持手表手动测量数据同步
 - 部分手表支持发起 SOS 请求
 - 新增第三方外设启停操作支持
@@ -199,10 +200,10 @@
 - 新增取消手表当前消息显示
 - 新增游戏锁设置
 - 登录/绑定指令新增 iOS 系统版本标志
-- 新增获取单个游戏最高三个游戏记录(部分手表支持)
+- 新增获取单个游戏最高三个游戏记录 (部分手表支持)
 - 修正真血压数据同步问题
 - GPS 互联指令修改
-- 新增游戏排名趋势设置(部分手表支持)
+- 新增游戏排名趋势设置 (部分手表支持)
 - 获取闹钟闹钟列表更新 SDK 闹钟列表缓存
 - 更新 SDK 错误码翻译
 - 运动健康数据防丢失处理
@@ -216,7 +217,7 @@
 - 新增手表 GPS 互联运动
 - 新增唤醒 APP 相机功能，该功能有缺陷，慎用
 - 新增血压报警&心率报警功能设备支持检查
-- 手表偏好设置新增`FITCLOUDPREFER_REMINDWHENSPORTSGOALACHIEVEMENT`，手表运动(计步/距离/卡路里)目标达成提醒
+- 手表偏好设置新增`FITCLOUDPREFER_REMINDWHENSPORTSGOALACHIEVEMENT`，手表运动 (计步/距离/卡路里) 目标达成提醒
 - 修正常用联系人指令数据量较大时的问题
 - 修正 OTA 过程中关闭蓝牙可能导致闪退的问题
 - 新增收款码和名片二维码推送
@@ -232,18 +233,18 @@
 - 新增是否支持扫码连接标志
 - 添加硬件标识`FITCLOUDHARDWARE_DFUSHOULDSILENTMODE`
 - 新增俄罗斯方块游戏/数独游戏/答题游戏定义
-- 扫码绑定项目新增绑定失败原因(手表主动取消/手表超时未点击确认)
+- 扫码绑定项目新增绑定失败原因 (手表主动取消/手表超时未点击确认)
 - 新增获取/设置亮屏时长、亮度、振动等信息
 - 新增是否应该禁用自定义表盘功能标识
 - 新增手表离开查找手机功能界面回调
 - 手表偏好设置新增蓝牙断开时手表振动选项
 - 修复同步心电数据时手表断开连接导致之后无法回连的问题
-- 新增获取屏幕分辨率原始信息(lcd 宽高/是否圆形屏幕/圆角大小等)指令，仅部分固件支持
+- 新增获取屏幕分辨率原始信息 (lcd 宽高/是否圆形屏幕/圆角大小等) 指令，仅部分固件支持
 - Nordic 平台表盘编号也扩展到 3 个字节
 - 修复游戏皮肤获取只能获取到 3 条的问题
 - 修改表盘/游戏皮肤最大可推送文件的大小计算规则
 - 修改天气硬件功能标志位定义
-- 新增手表是否支持运动模式(DIY)固件推送标识
+- 新增手表是否支持运动模式 (DIY) 固件推送标识
 - 新增获取设备可支持的运动模式类型列表/设备当前运动模式类型列表，仅部分手表支持
 
 ## pcjbird 2021-07-20 Version:1.2.3 Build:202107200001
@@ -252,7 +253,7 @@
 - 修正日程设置指令的问题
 - 修正锁屏密码设置指令的问题
 - 表盘尺寸支持 280x240 方/200x320 方/368x448 方/320x390 方
-- 新增表盘模块化(组件化)支持
+- 新增表盘模块化 (组件化) 支持
 - 修正日程获取指令的问题
 - 支持自定义设定手表语言 @note: 如果你希望 SDK 初始化时就设定好，@see watchPreferLang for FitCloudOption
   如果你希望在 APP 运行中动态改变手表语言设定请调用 setSmartWatchLanguage:completion:
@@ -311,7 +312,7 @@
 - 修正设置用户资料时年龄不正确的问题
 - 新增获取当天睡眠调试数据
 - 修正年龄设置不正确的问题
-- 最新的健康测量数据新增体温数据(需要手表支持体温)
+- 最新的健康测量数据新增体温数据 (需要手表支持体温)
 - 新增新的表盘尺寸的相关注释说明
 - 支持设置 SDK 定义的所有本地化语言至手表
 
@@ -335,14 +336,14 @@
 
 - 新增斯洛伐克语/匈牙利语
 - 修正手表返回的睡眠数据睡眠质量可能为非法值的情况
-- 取消自动解绑逻辑,新增手表被其他手机终端绑定或已经被解绑通知 @see FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY
-- 所有回调以及通知均改成在 Gloal Queue 中调用，如果要在回调或者通知中更新 UI，请务必切换到主队列(Main Queue)
+- 取消自动解绑逻辑，新增手表被其他手机终端绑定或已经被解绑通知 @see FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY
+- 所有回调以及通知均改成在 Gloal Queue 中调用，如果要在回调或者通知中更新 UI，请务必切换到主队列 (Main Queue)
 - 外部调用 disconnect 将不会自动回连
 - 新增 FITCLOUDUSERBINDSTATUS_KICKEDOUT 用户绑定状态
 - 新增 FITCLOUDEVENT_PERIPHERAL_WRITECHARACTERISTIC_READY_NOTIFIY 通知
 - 新增支持新的睡眠格式 @see newSleepDataFormat
 - 日志信息支持查看较大数据包的完整数据
-- 手表端主动更改了开关设置(例如：抬腕唤醒开关，通知开关等)会适时更新到 App 端 @see FITCLOUDEVENT_WATCHCONFIG_REMOTE_MANUAL_CHANGED_NOTIFY
+- 手表端主动更改了开关设置 (例如：抬腕唤醒开关，通知开关等) 会适时更新到 App 端 @see FITCLOUDEVENT_WATCHCONFIG_REMOTE_MANUAL_CHANGED_NOTIFY
 - 表盘信息获取方法修改
 - 其他一些改进
 
@@ -353,14 +354,14 @@
 - 优化手表连接初始化过程，防止意外重连
 - 调整手表硬件相关信息为只读
 - 绑定用户的 UserId 由整型修改成字符串型
-- 新增获取手表最后一次健康测量数据(心率/血氧/血压)，仅部分手表支持，@see allowRetrieveLatestMeasurementData
+- 新增获取手表最后一次健康测量数据 (心率/血氧/血压)，仅部分手表支持，@see allowRetrieveLatestMeasurementData
 - 修改进入和退出固件升级模式方法，现在您在首次固件升级之前以及所有固件升级操作完成之后分别手动调用进入固件升级模式和退出固件升级模式，同时适用于普通固件升级与表盘推送
 - 新增 DFU 模式回连成功通知，这通常用于等待表盘推送/普通固件升级之后手表重启的场景
 - 提升 SDK 稳定性
 
 ## pcjbird 2019-11-13 Version:1.1.5 Build:201911130001
 
-- 新增勿扰模式(仅部分手表支持 @see allowDNDMode)
+- 新增勿扰模式 (仅部分手表支持 @see allowDNDMode)
 
 ## pcjbird 2019-10-24 Version:1.1.4 Build:201910240001
 

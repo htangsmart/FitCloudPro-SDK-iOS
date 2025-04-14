@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-04-12 Version:1.3.1-beta.23 Build:20250412001
+## pcjbird 2025-04-15 Version:1.3.1-beta.24 Build:20250415001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -21,6 +21,7 @@
 - Added support for synchronizing `Hausa` language as watch display language.
 - Added more known manufacturer identifiers.
 - Modified APIs related to lover features.
+- Introduce new APIs for the Transsion Oraimo Muslim prayer features, see `<FitCloudKit/FitCloudKit+TranssionOraimo.h>`.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

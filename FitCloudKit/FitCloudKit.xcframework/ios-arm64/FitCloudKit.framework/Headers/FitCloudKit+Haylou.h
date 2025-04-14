@@ -9,6 +9,7 @@
 #ifndef FitCloudKit_Haylou_h
 #define FitCloudKit_Haylou_h
 
+#import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKit.h>
 
 @interface FitCloudKit (Haylou)

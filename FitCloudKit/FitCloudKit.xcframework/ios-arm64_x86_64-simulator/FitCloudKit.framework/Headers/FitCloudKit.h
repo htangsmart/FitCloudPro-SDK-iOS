@@ -3,14 +3,14 @@
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/4/28.
-//  Copyright © 2018年 Zero Status. All rights reserved.
+//  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 //  框架名称:FitCloudKit.xcframework
 //  框架功能:The iOS framework for the FitCloudPro smartwatch, which is responsible for encapsulating features such as communication with the watch device.
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
-//  构建版本:
-//      pcjbird    2025-04-12  Version:1.3.1-beta.23 Build:20250412001
+//  构建版本：
+//      pcjbird    2025-04-15  Version:1.3.1-beta.24 Build:20250415001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1286,13 +1286,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 其他
 
-/// 设置运动极限心率(Set maximum exercise heart rate)
+/// 设置运动极限心率 (Set maximum exercise heart rate)
 /// - Parameters:
-///   - value: 运动极限心率(maximum exercise heart rate)
+///   - value: 运动极限心率 (maximum exercise heart rate)
 ///   - completion: the completion callback
 + (void)setMaxExerciseHeartRate:(NSInteger)value withCompletion:(FitCloudResultHandler _Nullable)completion;
 
-/// 获取运动极限心率(Query maximum exercise heart rate)
+/// 获取运动极限心率 (Query maximum exercise heart rate)
 /// - Parameters:
 ///   - completion: the completion callback
 + (void)queryMaxExerciseHeartRateWithCompletion:(void (^_Nullable)(BOOL success, NSInteger maxExerciseHeartRate, NSError *_Nullable error))completion;
@@ -1304,39 +1304,39 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 耳机仓
 
-/// 设置耳机仓歌词颜色(Set earbud case lyrics color)
+/// 设置耳机仓歌词颜色 (Set earbud case lyrics color)
 /// - Parameters:
-///   - lyricsColor: 歌词颜色(lyrics color)
+///   - lyricsColor: 歌词颜色 (lyrics color)
 ///   - completion: the completion callback
 + (void)setEarbudCaseLyricsColor:(UIColor *)lyricsColor withCompletion:(FitCloudResultHandler _Nullable)completion;
 
-/// 查询耳机仓歌词颜色(Query earbud case lyrics color)
+/// 查询耳机仓歌词颜色 (Query earbud case lyrics color)
 /// - Parameters:
 ///   - completion: the completion callback
 + (void)queryEarbudCaseLyricsColorWithCompletion:(void (^_Nullable)(BOOL success, UIColor *_Nullable lyricsColor, NSError *_Nullable error))completion;
 
-/// 设置耳机仓充电壁纸是否常亮(Set earbud case charging wallpaper whether always bright)
+/// 设置耳机仓充电壁纸是否常亮 (Set earbud case charging wallpaper whether always bright)
 /// - Parameters:
 ///   - alwaysBright: 是否常亮
 ///   - completion: the completion callback
 + (void)setEarbudCaseChargingWallpaperAlwaysBright:(BOOL)alwaysBright withCompletion:(FitCloudResultHandler _Nullable)completion;
 
-/// 查询耳机仓充电壁纸是否常亮(Query earbud case charging wallpaper whether always bright)
+/// 查询耳机仓充电壁纸是否常亮 (Query earbud case charging wallpaper whether always bright)
 /// - Parameters:
 ///   - completion: the completion callback
 + (void)queryEarbudCaseChargingWallpaperWhetherAlwaysBrightWithCompletion:(void (^_Nullable)(BOOL success, BOOL alwaysBright, NSError *_Nullable error))completion;
 
-/// 设置耳机仓鼠标起始点预设(Set earbud case mouse start point preset)
+/// 设置耳机仓鼠标起始点预设 (Set earbud case mouse start point preset)
 /// - Parameters:
-///   - preset: 预设, 取值范围从0开始
+///   - preset: 预设，取值范围从 0 开始
 ///   - completion: the completion callback
 + (void)setEarbudCaseMouseStartPointPreset:(NSInteger)preset withCompletion:(FitCloudResultHandler _Nullable)completion;
 
-/// 查询耳机仓鼠标起始点预设(Query earbud case mouse start point preset)
+/// 查询耳机仓鼠标起始点预设 (Query earbud case mouse start point preset)
 /// - Parameters:
 ///   - completion: the completion callback
 ///     - success: 是否查询成功
-///     - currentPreset: 当前预设，取值范围从0开始
+///     - currentPreset: 当前预设，取值范围从 0 开始
 ///     - totalPresetsCount: 预设总数
 + (void)queryEarbudCaseMouseStartPointPresetWithCompletion:(void (^_Nullable)(BOOL success, NSInteger currentPreset, NSInteger totalPresetsCount, NSError *_Nullable error))completion;
 
@@ -1344,7 +1344,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 开始激光测量
 /// - Parameters:
-///   - durationInSeconds: 测量时长，单位：秒，时长范围1～255
+///   - durationInSeconds: 测量时长，单位：秒，时长范围 1～255
 ///   - completion: the completion callback
 ///
 /// >Important: the valid measurement duration is from 1s to 255s
@@ -1450,7 +1450,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 检查用户是否已经绑定
 /// - Parameters:
-///   - userId: 用户Id
+///   - userId: 用户 Id
 /// - Returns:
 ///  YES 已经绑定 NO 未绑定
 + (BOOL)isUserAlreadyBound:(NSString *)userId;
@@ -1459,9 +1459,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 绑定用户
 /// - Parameters:
-///   - userId: 用户Id
+///   - userId: 用户 Id
 ///   - randomCode: 随机码，如果没有，则填 nil，仅部分项目有该功能
-///   - bAbort: 如果已经存在绑定用户是否终止，当为FALSE时，自动先解绑并绑定新的用户
+///   - bAbort: 如果已经存在绑定用户是否终止，当为 FALSE 时，自动先解绑并绑定新的用户
 ///   - block: 结果回调
 + (void)bindUserObject:(NSString *)userId randomCode:(NSString *_Nullable)randomCode abortIfExist:(BOOL)bAbort block:(FitCloudResultHandler _Nullable)block;
 
@@ -1524,7 +1524,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 启动/关闭手表GPS互联运动
 
-/// 启动/关闭GPS互联运动
+/// 启动/关闭 GPS 互联运动
 /// - Parameters:
 ///   - params: 参数
 ///   - block: 调用结果回调
@@ -1532,7 +1532,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 通知手表GPS互联运动当前App端运动数据
 
-/// 通知手表GPS互联运动当前App端运动数据
+/// 通知手表 GPS 互联运动当前 App 端运动数据
 /// - Parameters:
 ///   - appClientData: 已运动信息
 ///   - block: 调用结果回调
@@ -1540,21 +1540,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 请求手表GPS互联运动当前状态
 
-/// 请求手表GPS互联运动当前状态
+/// 请求手表 GPS 互联运动当前状态
 /// - Parameters:
 ///   - block: 调用结果回调
 + (void)requestRealTimeGPSConnectSportsCurrentStatusWithBlock:(FitCloudGPSConnectSportsCurrentStatusResultBlock _Nullable)block;
 
 #pragma mark 开启GSensor
 
-/// 开启GSensor
+/// 开启 GSensor
 /// - Parameters:
 ///   - block: 结果回调
 + (void)openGSensorWithBlock:(FitCloudOpenGSensorResultBlock _Nullable)block;
 
 #pragma mark 关闭GSensor
 
-/// 关闭GSensor
+/// 关闭 GSensor
 ///  - Parameters:
 ///    - block: 结果回调
 + (void)closeGSensorWithBlock:(FitCloudResultHandler _Nullable)block;
@@ -1566,17 +1566,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark APP通知手表当前APP的相机状态（前台/后台）
 
-/// APP通知手表当前APP的相机状态（前台/后台）
+/// APP 通知手表当前 APP 的相机状态（前台/后台）
 /// - Parameters:
-///   - state: APP相机状态（前台/后台）
+///   - state: APP 相机状态（前台/后台）
 ///   - block: 结果回调
 + (void)notifyAppCameraState:(APPCAMERASTATE)state withBlock:(FitCloudResultHandler _Nullable)block;
 
 #pragma mark APP通知手表切换前后摄像头是否成功
 
-/// APP通知手表切换前后摄像头是否成功
+/// APP 通知手表切换前后摄像头是否成功
 /// - Parameters:
-///   - success: APP切换前后摄像头是否成功
+///   - success: APP 切换前后摄像头是否成功
 ///   - completion: 结果回调
 + (void)notifyAppToggleCameraResult:(BOOL)success completion:(FitCloudResultHandler _Nullable)completion;
 
@@ -1603,7 +1603,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 发送Alexa结果
 
-/// 发送Alexa结果
+/// 发送 Alexa 结果
 /// - Parameters:
 ///   - text: 结果
 ///   - errorCode: 错误码
@@ -1707,9 +1707,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 发送相机实时预览图JPG图片数据
 
-/// 发送拍照实时预览图JPG图片数据
+/// 发送拍照实时预览图 JPG 图片数据
 /// - Parameters:
-///   - imageDataArray: 相机实时预览图JPG图片数据数组，一张完整的图片需要从上到下按n等份切割后传输给手表
+///   - imageDataArray: 相机实时预览图 JPG 图片数据数组，一张完整的图片需要从上到下按 n 等份切割后传输给手表
 ///   - userInfo: 用户附加信息
 + (void)sendCameraLivePreviewData:(NSArray<NSData *> *)imageDataArray userInfo:(NSDictionary *_Nullable)userInfo;
 
@@ -1720,9 +1720,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 发送相机实时预览图JPG图片数据
 
-/// 发送地图导航快照JPG图片数据
+/// 发送地图导航快照 JPG 图片数据
 /// - Parameters:
-///   - imageDataArray: 地图导航快照JPG图片数据数组，一张完整的图片需要从上到下按n等份切割后传输给手表
+///   - imageDataArray: 地图导航快照 JPG 图片数据数组，一张完整的图片需要从上到下按 n 等份切割后传输给手表
 ///   - userInfo: 用户附加信息
 + (void)sendMapNavigationSnapshotData:(NSArray<NSData *> *)imageDataArray userInfo:(NSDictionary *_Nullable)userInfo;
 
@@ -1735,7 +1735,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// mockup remote command
 /// - Parameters:
-///   - hexData: 十六进制字符串，0x开头
+///   - hexData: 十六进制字符串，0x 开头
 + (void)mockupRemoteCommandWithData:(NSString *)hexData;
 
 @end

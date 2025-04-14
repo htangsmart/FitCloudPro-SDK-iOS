@@ -8,6 +8,7 @@
 
 #ifndef FitCloudKit_FavContactsWithProgress_h
 #define FitCloudKit_FavContactsWithProgress_h
+#import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKit.h>
 
 @interface FitCloudKit (FavContactsWithProgress)

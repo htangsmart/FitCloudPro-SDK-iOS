@@ -10,6 +10,7 @@
 #define FitCloudKit_TranssionInfinix_h
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudKit.h>
 
 @interface FitCloudKit (TranssionInfinix)
 

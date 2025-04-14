@@ -313,8 +313,6 @@
 /// 是否支持AI问答模型选择
 @property(nonatomic, readonly) BOOL allowSelectAIModel;
 
-/// 穆斯林朝拜功能朝拜提醒是否支持开关控制
-@property(nonatomic, readonly) BOOL allowControlEnabledOfMuslimPrayerReminder;
 
 /// 是否支持家长模式
 @property(nonatomic, readonly) BOOL withParentalControl;
