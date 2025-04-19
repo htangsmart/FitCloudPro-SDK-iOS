@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// A record of watch connection and pairing information
-@interface FitCloudKitConnectRecord : NSObject <NSCoding, NSCopying>
+@interface FitCloudKitConnectRecord : NSObject <FitCloudSecureCoding, NSCopying>
 
 /// The name of the watch
 @property(nonatomic, strong) NSString *name;

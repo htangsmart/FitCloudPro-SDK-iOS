@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// 省电模式设置(Power Saving Mode Settings)
-@interface FitCloudPowerSavingSetting : NSObject<NSCoding>
+@interface FitCloudPowerSavingSetting : NSObject<FitCloudSecureCoding>
 
 /// 是否开启
 @property(nonatomic, assign) BOOL on;

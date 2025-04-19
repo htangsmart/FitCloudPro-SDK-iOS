@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 防护提醒设置（Protection Remind）
 */
-@interface FitCloudPRObject : NSObject<NSCoding>
+@interface FitCloudPRObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 是否开启

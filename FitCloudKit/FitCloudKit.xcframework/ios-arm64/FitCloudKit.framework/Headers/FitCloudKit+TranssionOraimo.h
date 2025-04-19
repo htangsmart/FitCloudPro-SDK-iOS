@@ -57,6 +57,14 @@ typedef NS_ENUM(NSInteger, OraimoMuslimPrayerSwitch)
 ///                - error: Error object if the operation failed, nil otherwise
 + (void)sendOraimoMuslimPrayerSwitch:(OraimoMuslimPrayerSwitch)prayerSwitch enableStatus:(BOOL)enabled completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
 
+/// Sends Muslim prayer switch settings to the device
+/// - Parameters:
+///   - settings: A model object containing the Muslim prayer switch settings to be applied
+///   - completion: A completion handler called when the operation completes
+///                - succeed: Boolean indicating whether the operation was successful
+///                - error: Error object if the operation failed, nil otherwise
++ (void)sendOraimoMuslimPrayerSwitchSettings:(OraimoMuslimPrayerSwitchSettingsModel *_Nonnull)settings completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
+
 /// Query the current Muslim prayer switch settings on the device
 /// - Parameter completion: A completion handler called when the query completes
 ///                        - succeed: Boolean indicating whether the query was successful

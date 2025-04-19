@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// 健康定时监测独立设置（Health Timing Monitoring Single Settings）
-@interface FitCloudHTMSingleObject : NSObject<NSCoding>
+@interface FitCloudHTMSingleObject : NSObject<FitCloudSecureCoding>
 
 /// 类型
 @property(nonatomic, assign) FITCLOUDINTEVALHEALTHMONITORINGITEM item;

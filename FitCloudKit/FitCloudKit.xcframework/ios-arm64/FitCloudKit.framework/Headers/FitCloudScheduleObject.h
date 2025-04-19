@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "FitCloudKitDefines.h"
-
+#import <FitCloudKit/FitCloudSecureCoding.h>
 /**
  * @brief 日程
  */
-@interface FitCloudScheduleObject : NSObject<NSCoding>
+@interface FitCloudScheduleObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 类型 (有效值 0～22)

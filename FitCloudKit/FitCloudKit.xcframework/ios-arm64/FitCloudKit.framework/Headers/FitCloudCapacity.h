@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// Capacity
-@interface FitCloudCapacity : NSObject<NSCoding,NSCopying>
+@interface FitCloudCapacity : NSObject<FitCloudSecureCoding,NSCopying>
 
 /// the capacity
 @property(nonatomic, readonly) FITCLOUDDEVICECAPACITY capacity;

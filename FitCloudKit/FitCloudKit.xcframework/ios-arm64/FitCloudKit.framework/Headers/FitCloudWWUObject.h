@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 抬腕唤醒设置（Wrist Wake Up）
  */
-@interface FitCloudWWUObject : NSObject<NSCoding>
+@interface FitCloudWWUObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 是否开启

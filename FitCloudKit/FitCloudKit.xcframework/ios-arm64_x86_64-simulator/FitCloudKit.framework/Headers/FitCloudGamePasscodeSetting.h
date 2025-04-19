@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 游戏锁设置
  */
-@interface FitCloudGamePasscodeSetting : NSObject<NSCoding>
+@interface FitCloudGamePasscodeSetting : NSObject<FitCloudSecureCoding>
 
 + (instancetype _Nullable)new NS_UNAVAILABLE;
 - (instancetype _Nullable)init NS_UNAVAILABLE;

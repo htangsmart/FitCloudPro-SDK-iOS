@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 游戏
 */
-@interface FitCloudGameObject : NSObject<NSCoding>
+@interface FitCloudGameObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 游戏类型

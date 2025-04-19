@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -390,7 +391,7 @@ typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM) {
 };
 
 /// 实时健康测量参数
-@interface FitCloudRealTimeHealthMeasuringParam : NSObject <NSCoding>
+@interface FitCloudRealTimeHealthMeasuringParam : NSObject <FitCloudSecureCoding>
 
 /// 测量项
 @property(nonatomic, assign) FITCLOUDREALTIMEMHEALTHEASUREITEM item;
@@ -447,7 +448,7 @@ typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM) {
 #pragma mark - 每日运动健康数据
 
 /// 每日运动健康数据
-@interface FitCloudDailyHealthAndSportsDataObject : NSObject <NSCoding>
+@interface FitCloudDailyHealthAndSportsDataObject : NSObject <FitCloudSecureCoding>
 
 /// 累计步数
 @property(nonatomic, assign) NSUInteger steps;

@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 健康定时监测设置（Health Timing Monitoring）
  */
-@interface FitCloudHTMObject : NSObject<NSCoding>
+@interface FitCloudHTMObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 是否开启

@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /// A class that represents screen resolution information for a watch device
-@interface FitCloudScreenResolution : NSObject <NSCoding>
+@interface FitCloudScreenResolution : NSObject <FitCloudSecureCoding>
 
 /// The LCD identifier value
 @property(nonatomic, readonly) UInt8 lcd;

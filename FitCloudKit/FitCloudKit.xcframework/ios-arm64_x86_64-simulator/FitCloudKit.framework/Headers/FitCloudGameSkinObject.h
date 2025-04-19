@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 游戏皮肤
 */
-@interface FitCloudGameSkinObject : NSObject<NSCoding>
+@interface FitCloudGameSkinObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 位置索引，从1开始

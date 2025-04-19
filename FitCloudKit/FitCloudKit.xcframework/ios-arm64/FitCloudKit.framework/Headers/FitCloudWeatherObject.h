@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 @interface FitCloudWeatherForecast: NSObject
 
@@ -23,7 +24,7 @@
 @end
 
 /// 天气信息
-@interface FitCloudWeatherObject : NSObject<NSCoding>
+@interface FitCloudWeatherObject : NSObject<FitCloudSecureCoding>
 
 /// 温度，单位：°C
 @property(nonatomic, assign)SInt8 temperature;

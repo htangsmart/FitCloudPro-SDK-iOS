@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 振动设置
  */
-@interface FitCloudVibrateSetting : NSObject<NSCoding>
+@interface FitCloudVibrateSetting : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 当前震动百分比

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.25 build20250419001 (2025-04-19)
+
+- Added support for Xcode 16.3.
+- Added support for configuring all switch settings at once for Transsion Oraimo Muslim prayer features.
+
 ## V1.3.1-beta.24 build20250415001 (2025-04-15)
 
 - Introduce new APIs for the Transsion Oraimo Muslim prayer features, see `<FitCloudKit/FitCloudKit+TranssionOraimo.h>`.

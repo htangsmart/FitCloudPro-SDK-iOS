@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 血压参考范围设置（Blood Pressure Reference）
  */
-@interface FitCloudBPRObject : NSObject<NSCoding>
+@interface FitCloudBPRObject : NSObject<FitCloudSecureCoding>
 
 /**
  *@brief 舒张压

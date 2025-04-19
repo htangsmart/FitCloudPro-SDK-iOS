@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 锁屏设置（Lock Screen Setting）
 */
-@interface FitCloudLockScreenSetting : NSObject<NSCoding>
+@interface FitCloudLockScreenSetting : NSObject<FitCloudSecureCoding>
 
 + (instancetype _Nullable)new NS_UNAVAILABLE;
 - (instancetype _Nullable)init NS_UNAVAILABLE;

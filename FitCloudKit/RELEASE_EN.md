@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-04-15 Version:1.3.1-beta.24 Build:20250415001
+## pcjbird 2025-04-19 Version:1.3.1-beta.25 Build:20250419001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -22,6 +22,8 @@
 - Added more known manufacturer identifiers.
 - Modified APIs related to lover features.
 - Introduce new APIs for the Transsion Oraimo Muslim prayer features, see `<FitCloudKit/FitCloudKit+TranssionOraimo.h>`.
+- Added support for Xcode 16.3.
+- Added support for configuring all switch settings at once for Transsion Oraimo Muslim prayer features.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

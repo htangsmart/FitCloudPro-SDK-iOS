@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 心率报警设置（HR Alarm）
  */
-@interface FitCloudHRAlarmObject : NSObject<NSCoding>
+@interface FitCloudHRAlarmObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 静态心率报警开关是否开启

@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 血压报警设置（BP Alarm）
  */
-@interface FitCloudBPAlarmObject : NSObject<NSCoding>
+@interface FitCloudBPAlarmObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 是否开启

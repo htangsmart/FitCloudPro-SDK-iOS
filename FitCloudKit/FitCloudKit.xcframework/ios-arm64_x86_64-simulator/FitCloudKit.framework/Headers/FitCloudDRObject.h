@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 喝水提醒设置（Drink Remind）
  */
-@interface FitCloudDRObject : NSObject<NSCoding>
+@interface FitCloudDRObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 是否开启

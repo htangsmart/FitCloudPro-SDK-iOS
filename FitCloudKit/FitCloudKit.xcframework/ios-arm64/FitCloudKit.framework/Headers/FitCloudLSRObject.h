@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 久坐提醒设置（Long Sit Remind）
  */
-@interface FitCloudLSRObject : NSObject<NSCoding>
+@interface FitCloudLSRObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 是否开启

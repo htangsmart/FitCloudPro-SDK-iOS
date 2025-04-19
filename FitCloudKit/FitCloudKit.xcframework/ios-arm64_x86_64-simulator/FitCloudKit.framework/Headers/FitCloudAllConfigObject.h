@@ -25,11 +25,12 @@
 #import <FitCloudKit/FitCloudVibrateSetting.h>
 #import <FitCloudKit/FitCloudPowerSavingSetting.h>
 #import <FitCloudKit/FitCloudCapacity.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// 手表所有配置信息（用于手表绑定时一次性获取）
-@interface FitCloudAllConfigObject : NSObject <NSCoding>
+@interface FitCloudAllConfigObject : NSObject <FitCloudSecureCoding>
 
 /// 手表软硬件版本信息
 @property(nonatomic, strong, nullable) FitCloudFirmwareVersionObject *firmware;

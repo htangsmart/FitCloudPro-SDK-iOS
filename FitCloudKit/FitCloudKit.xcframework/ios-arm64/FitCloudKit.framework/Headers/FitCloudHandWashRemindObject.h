@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 洗手提醒设置（Hand Wash Remind）
 */
-@interface FitCloudHandWashRemindObject : NSObject<NSCoding>
+@interface FitCloudHandWashRemindObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 是否开启

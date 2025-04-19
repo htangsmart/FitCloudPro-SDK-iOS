@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-04-15 Version:1.3.1-beta.24 Build:20250415001
+## pcjbird 2025-04-19 Version:1.3.1-beta.25 Build:20250419001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -22,6 +22,8 @@
 - 新增识别更多的已知厂商标识。
 - 修改情侣功能相关的 API。
 - 引入传音 Oraimo 穆斯林祈祷功能相关的新 API，详见 `<FitCloudKit/FitCloudKit+TranssionOraimo.h>`。
+- 适配支持 Xcode 16.3。
+- 新增支持一次性配置传音 Oraimo 穆斯林祈祷功能的所有开关设置。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 勿扰模式设置（Do Not Disturb Mode Setting）
 */
-@interface FitCloudDNDSetting : NSObject<NSCoding>
+@interface FitCloudDNDSetting : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 是否开启(总开关)，当总开关为YES时，全时段勿扰，当总开关为NO时，根据时段开关及勿扰时段确定勿扰设置

@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "FitCloudKitDefines.h"
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 用户Profile
  */
-@interface FitCloudUserProfileObject : NSObject<NSCoding, NSCopying>
+@interface FitCloudUserProfileObject : NSObject<FitCloudSecureCoding, NSCopying>
 
 /**
  * @brief 性别

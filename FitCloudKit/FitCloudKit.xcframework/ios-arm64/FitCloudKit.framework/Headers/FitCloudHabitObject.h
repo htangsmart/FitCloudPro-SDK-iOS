@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FitCloudHabitObject : NSObject<NSCoding>
+@interface FitCloudHabitObject : NSObject<FitCloudSecureCoding>
 
 + (instancetype _Nullable)new NS_UNAVAILABLE;
 - (instancetype _Nullable)init NS_UNAVAILABLE;

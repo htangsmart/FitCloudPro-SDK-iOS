@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "FitCloudKitDefines.h"
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /// 闹钟
-@interface FitCloudAlarmObject : NSObject<NSCoding>
+@interface FitCloudAlarmObject : NSObject<FitCloudSecureCoding>
 
 
 /// 有效值0～7，为-1时SDK自动编号

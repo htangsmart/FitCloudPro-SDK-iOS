@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 ///紧急联系人
-@interface FitCloudEmergencyContactObject : NSObject<NSCoding>
+@interface FitCloudEmergencyContactObject : NSObject<FitCloudSecureCoding>
 
 + (instancetype _Nullable)new NS_UNAVAILABLE;
 - (instancetype _Nullable)init NS_UNAVAILABLE;

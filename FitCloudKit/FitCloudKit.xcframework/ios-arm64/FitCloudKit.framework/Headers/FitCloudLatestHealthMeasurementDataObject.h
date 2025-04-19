@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 手表最新的测量数据
 */
-@interface FitCloudLatestHealthMeasurementDataObject : NSObject<NSCoding>
+@interface FitCloudLatestHealthMeasurementDataObject : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 心率

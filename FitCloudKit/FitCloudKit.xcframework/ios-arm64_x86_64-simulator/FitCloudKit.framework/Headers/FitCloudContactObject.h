@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 
-@interface FitCloudContactObject : NSObject<NSCoding>
+@interface FitCloudContactObject : NSObject<FitCloudSecureCoding>
 
 + (instancetype _Nullable)new NS_UNAVAILABLE;
 - (instancetype _Nullable)init NS_UNAVAILABLE;

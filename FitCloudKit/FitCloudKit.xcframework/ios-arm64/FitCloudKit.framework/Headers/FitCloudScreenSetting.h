@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /**
  * @brief 亮屏时长
  */
-@interface FitCloudBrightScreenDuration: NSObject<NSCoding>
+@interface FitCloudBrightScreenDuration: NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 当前亮屏时长，单位 s
@@ -53,7 +54,7 @@
 /**
  * @brief 抬腕亮屏时长
  */
-@interface FitCloudWristBrightScreenDuration: NSObject<NSCoding>
+@interface FitCloudWristBrightScreenDuration: NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 当前抬腕亮屏时长，单位 s
@@ -95,7 +96,7 @@
 /**
  * @brief 长时间亮屏时长，一般为几分钟到几十分钟，在正常亮屏时间到后保持半暗状态至长时间亮屏时间结束后灭屏，一般在非AMOLED项目使用
  */
-@interface FitCloudLongBrightScreenDuration: NSObject<NSCoding>
+@interface FitCloudLongBrightScreenDuration: NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 当前长时间亮屏时长，单位 s
@@ -143,7 +144,7 @@
  * @brief 常亮屏设置
  * @note 常亮屏是指屏幕亮屏时间到后不灭屏，保持在半暗状态一直亮着，一般在AMOLED屏幕下使用
  */
-@interface FitCloudScreenKeepBrightSetting: NSObject<NSCoding>
+@interface FitCloudScreenKeepBrightSetting: NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 是否支持常亮屏
@@ -160,7 +161,7 @@
 /**
  * @brief 屏幕亮度
  */
-@interface FitCloudScreenBrightness: NSObject<NSCoding>
+@interface FitCloudScreenBrightness: NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 当前屏幕亮度百分比
@@ -202,7 +203,7 @@
 /**
  * @brief 屏幕设置
  */
-@interface FitCloudScreenSetting : NSObject<NSCoding>
+@interface FitCloudScreenSetting : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 亮屏时长

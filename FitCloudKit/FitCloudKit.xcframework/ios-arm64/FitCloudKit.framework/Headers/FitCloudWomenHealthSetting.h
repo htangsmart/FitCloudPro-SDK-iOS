@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
-@interface FitCloudWomenHealthSetting : NSObject<NSCoding>
+@interface FitCloudWomenHealthSetting : NSObject<FitCloudSecureCoding>
 
 /**
  * @brief 模式

@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "FitCloudKitDefines.h"
+#import <FitCloudKit/FitCloudSecureCoding.h>
 
 /// 手表软硬件版本信息
-@interface FitCloudFirmwareVersionObject : NSObject <NSCoding>
+@interface FitCloudFirmwareVersionObject : NSObject <FitCloudSecureCoding>
 
 /// 项目的编号
 @property(nonatomic, strong, readonly) NSString *projectNo;
