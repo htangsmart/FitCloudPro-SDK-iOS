@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.26 build20250424001 (2025-04-24)
+
+- Enhanced the stability of the SDK.
+
 ## V1.3.1-beta.25 build20250419001 (2025-04-19)
 
 - Added support for Xcode 16.3.
