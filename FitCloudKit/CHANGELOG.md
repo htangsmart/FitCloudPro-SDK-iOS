@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.27 build20250424002 (2025-04-24)
+
+- Fixed issues with the Transsion Oraimo Muslim prayer feature APIs.
+
 ## V1.3.1-beta.26 build20250424001 (2025-04-24)
 
 - Enhanced the stability of the SDK.
