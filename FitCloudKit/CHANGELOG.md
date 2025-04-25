@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.28 build20250425001 (2025-04-25)
+
+- Added flag to indicate whether the watch supports Transsion Oraimo Muslim prayer features.
+
 ## V1.3.1-beta.27 build20250424002 (2025-04-24)
 
 - Fixed issues with the Transsion Oraimo Muslim prayer feature APIs.
