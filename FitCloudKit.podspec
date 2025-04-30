@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FitCloudKit'
-  s.version          = '1.3.1-beta.28'
+  s.version          = '1.3.1-beta.29'
   s.summary          = '和唐公司智能手表SDK'
   s.description      = <<-DESC
                       FitCloudPro智能手表iOS开发框架，提供与手表设备通信等功能的封装。

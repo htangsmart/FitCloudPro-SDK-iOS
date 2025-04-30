@@ -10,27 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- *@brief 手表GPS互联运动数据
- */
+/// 手表 GPS 互联运动数据
 @interface FitCloudSportsWithGPSData : NSObject
 
-/**
- * @brief 本次运动启动时间
- */
+/// 本次运动启动时间
 @property(nonatomic, strong, readonly) NSDate* begin;
 
-/**
- * @brief 步数
- */
+/// 步数
 @property(nonatomic, readonly) NSInteger steps;
 
-/// 卡路里，单位：小卡(cal)
+/// 卡路里，单位：小卡 (cal)
 @property(nonatomic, readonly) NSInteger calorie;
 
-/**
- * @brief 心率
- */
+/// 心率
 @property(nonatomic, readonly) UInt8  heartRate;
 
 @end

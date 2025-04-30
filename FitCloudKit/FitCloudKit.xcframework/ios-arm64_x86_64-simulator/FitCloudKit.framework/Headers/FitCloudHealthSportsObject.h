@@ -3,7 +3,7 @@
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/5/30.
-//  Copyright © 2018年 Zero Status. All rights reserved.
+//  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -53,18 +53,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) UInt16 steps;
 
 /// 距离
-/// - Note: 单位(cm)，该字段只有当距离&卡路里新算法时有效
-@property(nonatomic, assign) UInt16 distance;
+/// - Note: 单位 (cm)，该字段只有当距离&卡路里新算法时有效
+@property(nonatomic, strong, nullable) NSNumber* distance;
 
 /// 卡路里
-/// - Note: 单位(小卡 cal)，该字段只有当距离&卡路里新算法时有效
-@property(nonatomic, assign) UInt16 calory;
+/// - Note: 单位 (小卡 cal)，该字段只有当距离&卡路里新算法时有效
+@property(nonatomic, strong, nullable) NSNumber* calorie;
 
 /// 运动时长
 /// - Note: 单位：分钟，该字段仅部分设备有效
 /// # See Also
 /// ``shouldStepItemWithDuration``
-@property(nonatomic, assign) UInt16 duration;
+@property(nonatomic, strong, nullable) NSNumber* duration;
 
 @end
 
@@ -90,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 心率
 
-/// 手表心率(Heart Rate)数据条目
+/// 手表心率 (Heart Rate) 数据条目
 @interface FitCloudHRItemObject : FitCloudManualSyncItemObject
 
 /// 心率值
@@ -99,14 +99,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// 手表心率(Heart Rate)数据记录
+/// 手表心率 (Heart Rate) 数据记录
 @interface FitCloudHRRecordObject : FitCloudManualSyncRecordObject <FitCloudHRItemObject *>
 
 @end
 
 #pragma mark - 血压
 
-/// 手表血压(Blood Pressure)数据条目
+/// 手表血压 (Blood Pressure) 数据条目
 @interface FitCloudBPItemObject : FitCloudManualSyncItemObject
 
 /// 舒张压
@@ -120,14 +120,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// 手表血压(Blood Pressure)数据记录
+/// 手表血压 (Blood Pressure) 数据记录
 @interface FitCloudBPRecordObject : FitCloudManualSyncRecordObject <FitCloudBPItemObject *>
 
 @end
 
 #pragma mark - 血氧
 
-/// 手表血氧(Blood Oxygen)数据条目
+/// 手表血氧 (Blood Oxygen) 数据条目
 @interface FitCloudBOItemObject : FitCloudManualSyncItemObject
 
 /// 血氧值
@@ -135,7 +135,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// 手表血氧(Blood Oxygen)数据记录
+/// 手表血氧 (Blood Oxygen) 数据记录
 @interface FitCloudBORecordObject : FitCloudManualSyncRecordObject <FitCloudBOItemObject *>
 
 @end
@@ -157,7 +157,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 呼吸频率
 
-/// 手表呼吸频率(Breathe Rate)数据条目
+/// 手表呼吸频率 (Breathe Rate) 数据条目
 @interface FitCloudBRItemObject : FitCloudManualSyncItemObject
 
 /// 呼吸频率
@@ -165,14 +165,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// 手表呼吸频率(Breathe Rate)数据记录
+/// 手表呼吸频率 (Breathe Rate) 数据记录
 @interface FitCloudBRRecordObject : FitCloudManualSyncRecordObject <FitCloudBRItemObject *>
 
 @end
 
 #pragma mark - 体温
 
-/// 手表体温(Body Temperature)数据条目
+/// 手表体温 (Body Temperature) 数据条目
 @interface FitCloudBTItemObject : FitCloudManualSyncItemObject
 
 /// 腕温
@@ -185,14 +185,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// 手表体温(Body Temperature)数据记录
+/// 手表体温 (Body Temperature) 数据记录
 @interface FitCloudBTRecordObject : FitCloudManualSyncRecordObject <FitCloudBTItemObject *>
 
 @end
 
 #pragma mark - 压力
 
-/// 压力指数(Stress Index)数据条目
+/// 压力指数 (Stress Index) 数据条目
 @interface FitCloudStressIndexItemObject : FitCloudManualSyncItemObject
 
 /// 压力指数
@@ -200,7 +200,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// 手表压力指数(Stress Index)数据记录
+/// 手表压力指数 (Stress Index) 数据记录
 @interface FitCloudStressIndexRecordObject : FitCloudManualSyncRecordObject <FitCloudStressIndexItemObject *>
 
 @end
@@ -428,7 +428,7 @@ typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM) {
 @property(nonatomic, assign) UInt8 breatheRate;
 
 /// 体温测量状态
-/// - Note: 0:正常状态，数据正常返回中； 1:测量结束，正常结束时间结束； 2:测量结束，未佩戴手表；3:测量结束，体温过高；4:测量结束，体温过低；
+/// - Note: 0:正常状态，数据正常返回中；1:测量结束，正常结束时间结束；2:测量结束，未佩戴手表；3:测量结束，体温过高；4:测量结束，体温过低；
 @property(nonatomic, assign) UInt8 temperatureFlag;
 
 /// 腕温
@@ -453,31 +453,31 @@ typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM) {
 /// 累计步数
 @property(nonatomic, assign) NSUInteger steps;
 
-/// 距离(单位：米)
+/// 距离 (单位：米)
 @property(nonatomic, assign) NSUInteger distance;
 
-/// 卡路里(单位：小卡)
+/// 卡路里 (单位：小卡)
 @property(nonatomic, assign) NSUInteger calorie;
 
-/// 深度睡眠时间(单位：分钟)
+/// 深度睡眠时间 (单位：分钟)
 @property(nonatomic, assign) NSUInteger deepSleepInMinutes;
 
-/// 浅度睡眠时间(单位：分钟)
+/// 浅度睡眠时间 (单位：分钟)
 @property(nonatomic, assign) NSUInteger lightSleepInMinutes;
 
-/// 平均心率(次/分钟)
+/// 平均心率 (次/分钟)
 @property(nonatomic, assign) NSUInteger avgBPM;
 
 /// 尚未保存的步数
 @property(nonatomic, assign) UInt16 bufSteps;
 
-/// 尚未保存的距离(单位：米)
+/// 尚未保存的距离 (单位：米)
 @property(nonatomic, assign) UInt16 bufDistance;
 
-/// 尚未保存的卡路里数据(单位：小卡)
+/// 尚未保存的卡路里数据 (单位：小卡)
 @property(nonatomic, assign) UInt16 bufCalorie;
 
-/// 运动时长(单位：分钟)
+/// 运动时长 (单位：分钟)
 @property(nonatomic, assign) UInt16 durationInMinutes;
 
 @end

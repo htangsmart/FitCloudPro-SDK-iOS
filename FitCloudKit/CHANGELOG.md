@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.1-beta.29 build20250430001 (2025-04-30)
+
+- Optimized the property naming and type definitions for step data.
+- Enhanced the stability of the SDK.
+- Enhanced some SDK logs.
+
 ## V1.3.1-beta.28 build20250425001 (2025-04-25)
 
 - Added flag to indicate whether the watch supports Transsion Oraimo Muslim prayer features.
