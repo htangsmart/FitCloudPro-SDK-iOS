@@ -3,7 +3,7 @@
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/4/29.
-//  Copyright © 2018年 Zero Status. All rights reserved.
+//  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 
 #ifndef FitCloudKitDefines_h
@@ -16,16 +16,16 @@
 /// FitCloudKit 错误码作用域
 #define FITCLOUDKITERRORDOMAIN @"FITCLOUDKITERRORDOMAIN"
 
-/// FitCloudKit 新OTA升级错误码作用域
+/// FitCloudKit 新 OTA 升级错误码作用域
 #define FITCLOUDNEWOTAERRORDOMAIN @"FITCLOUDNEWOTAERRORDOMAIN"
 
 /// FitCloudKit 错误码定义
 typedef NS_ENUM(NSInteger, FITCLOUDKITERROR) {
     /// 未知错误
     FITCLOUDKITERROR_UNKNOWN = 20000,
-    /// 错误的Sequence ID
+    /// 错误的 Sequence ID
     FITCLOUDKITERROR_BADSEQUENCEID = 20001,
-    /// 发送数据包给手表出错,重试达到最大次数
+    /// 发送数据包给手表出错，重试达到最大次数
     FITCLOUDKITERROR_PACKETSENDMAXRETRYTIMES = 20002,
     /// 非法的命令数据包，或格式不正确
     FITCLOUDKITERROR_BADCMDPACKET = 20003,
@@ -39,11 +39,11 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR) {
     FITCLOUDKITERROR_CONNECTIONTIMEOUT = 20007,
     /// 尚未连接到手表设备
     FITCLOUDKITERROR_NOTCONNECTED = 20020,
-    /// 错误的Characteristic(写)
+    /// 错误的 Characteristic(写)
     FITCLOUDKITERROR_BADWRITECHARACTERISTIC = 20021,
     /// 手表初始化尚未完成，尚不能发送通信命令
     FITCLOUDKITERROR_COMMUNICATIONNOTREADY = 20022,
-    /// ANCS未授权，仅iOS13之后可用
+    /// ANCS 未授权，仅 iOS13 之后可用
     FITCLOUDKITERROR_ANCSNOTAUTHORIZED = 20023,
     /// 手表不支持该功能
     FITCLOUDKITERROR_DEVICENOTSUPPORT = 20024,
@@ -55,7 +55,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR) {
     FITCLOUDKITERROR_ARRAYSIZEOVERFLOW = 20027,
     /// 文件不存在
     FITCLOUDKITERROR_FILENOTEXIST = 20028,
-    /// GPS文件不支持获取有效期
+    /// GPS 文件不支持获取有效期
     FITCLOUDKITERROR_GPSFILENOTSUPPORTGETEXPIRETIME = 20029,
     /// 手表已经绑定用户，请先解绑
     FITCLOUDKITERROR_USEROBJECTALREADYBOUND = 30001,
@@ -91,29 +91,29 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR) {
     FITCLOUDKITERROR_WEATHERFEATURENOTSUPPORT = 50001,
     /// 非法的二维码内容
     FITCLOUDKITERROR_BADQRCODE = 50002,
-    /// 二维码内容长度过长，最大长度274字节
+    /// 二维码内容长度过长，最大长度 274 字节
     FITCLOUDKITERROR_QRCODEBADLENGTH = 50003,
     /// 非法的第三方外设
     FITCLOUDKITERROR_BADTHIRDPARTYPERIPHERAL = 50004,
     /// 未能发现待转换的外设
     FITCLOUDKITERROR_TOTRANSLATEPERIPHERALNOTFOUND = 50005,
-    /// 当前不允许进入DFU模式，原因未知
+    /// 当前不允许进入 DFU 模式，原因未知
     FITCLOUDKITERROR_DFUNOTALLOWUNKNOWNREASON = 60000,
-    /// 当前不允许进入DFU模式，手表电量过低
+    /// 当前不允许进入 DFU 模式，手表电量过低
     FITCLOUDKITERROR_DFUNOTALLOWFORBATTERYLOW = 60001,
-    /// 当前已经是DFU模式
+    /// 当前已经是 DFU 模式
     FITCLOUDKITERROR_ALREADYINDFUMODE = 60002,
-    /// 当前不是DFU模式
+    /// 当前不是 DFU 模式
     FITCLOUDKITERROR_NOTDFUMODE = 60003,
-    /// 当前不允许进入DFU模式，手表处于省电模式中
+    /// 当前不允许进入 DFU 模式，手表处于省电模式中
     FITCLOUDKITERROR_DFUNOTALLOWFORPOWERSAVINGMODE = 60004,
-    /// 常用联系人数量达到最大值，最多支持设定10个常用联系人
+    /// 常用联系人数量达到最大值，最多支持设定 10 个常用联系人
     FITCLOUDKITERROR_FAVCONTACTSREACHMAX = 70001,
     /// 当前手表不支持常用联系人
     FITCLOUDKITERROR_FAVCONTACTSNOTSUPPORT = 70002,
-    /// 习惯数量达到最大值，最多支持设定10个习惯养成
+    /// 习惯数量达到最大值，最多支持设定 10 个习惯养成
     FITCLOUDKITERROR_HABITSREACHMAX = 71001,
-    /// 习惯养成名称为空或长度超过限定的32字节
+    /// 习惯养成名称为空或长度超过限定的 32 字节
     FITCLOUDKITERROR_BADHABITNAME = 71002,
     /// 习惯养成习惯开始时间为空
     FITCLOUDKITERROR_BADHABITBEGINDATE = 71003,
@@ -143,7 +143,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITLOGLEVEL) {
 
 #pragma mark - 蓝牙中心设备(Central)状态
 
-/// FitCloudKit 蓝牙中心设备(Central)状态
+/// FitCloudKit 蓝牙中心设备 (Central) 状态
 typedef NS_ENUM(NSInteger, FITCLOUDBLECENTRALSTATE) {
     FITCLOUDBLECENTRALSTATE_UNKNOWN = 0,
     FITCLOUDBLECENTRALSTATE_RESETTING,
@@ -260,7 +260,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICECAPACITY) {
     FITCLOUDDEVICECAPACITY_SCHEDULECOUNT = 0x03,
     /// 支持的最大常用联系人数量
     FITCLOUDDEVICECAPACITY_FAVORITECONTACTCOUNT = 0x04,
-    /// 支持的天气种类数量，目前支持的数量有13/16
+    /// 支持的天气种类数量，目前支持的数量有 13/16
     FITCLOUDDEVICECAPACITY_WEATHERCOUNT = 0x05,
     /// 支持喝水个性化提醒功能
     FITCLOUDDEVICECAPACITY_WATERDRINKPERSONALIZEDREMINDERFEATURE = 0x06,
@@ -274,7 +274,7 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICECAPACITY) {
     FITCLOUDDEVICECAPACITY_CUSTOMIZEDPERSONALIZEDREMINDERCOUNT = 0x0a,
     /// 支持的最大我的任务数量
     FITCLOUDDEVICECAPACITY_MYTASKCOUNT = 0x1d,
-    /// AI对话应答文本支持的最大字节数
+    /// AI 对话应答文本支持的最大字节数
     FITCLOUDDEVICECAPACITY_AICONVERSATIONRESPONSETEXTBYTES = 0x1f,
 };
 
@@ -302,34 +302,34 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE) {
     FITCLOUDHARDWARE_SPORTSMODE = 1 << 6,
     /// 微信运动功能
     FITCLOUDHARDWARE_WECHATSPORTS = 1 << 7,
-    /// 8762C新平台，升级时使用新平台升级库
+    /// 8762C 新平台，升级时使用新平台升级库
     FITCLOUDHARDWARE_8762C = 1 << 8,
     /// 运动模式保存心率数据
-    /// - Note: 1.运动模式的数据item中增加心率，长度会变化，时间间隔也变化，具体看协议文档
-    /// - Note: 2.App上要增加心率曲线
+    /// - Note: 1.运动模式的数据 item 中增加心率，长度会变化，时间间隔也变化，具体看协议文档
+    /// - Note: 2.App 上要增加心率曲线
     FITCLOUDHARDWARE_SHOULDSAVEHEARTRATEWHENSPORTSMODE = 1 << 9,
     /// 体温功能
     FITCLOUDHARDWARE_BODYTEMPERATURE = 1 << 10,
     /// 女性健康功能
     FITCLOUDHARDWARE_WOMENHEALTH = 1 << 11,
     /// 语音识别功能
-    /// - Note: 为1时手表上有语音识别功能，为0则手表上没有语音识别功能
+    /// - Note: 为 1 时手表上有语音识别功能，为 0 则手表上没有语音识别功能
     FITCLOUDHARDWARE_VOICERECOG = 1 << 12,
     /// 压力指数功能
     FITCLOUDHARDWARE_STRESSINDEX = 1 << 13,
     /// 游戏记录功能
     FITCLOUDHARDWARE_GAMERECORDS = 1 << 14,
-    /// Nordic芯片
+    /// Nordic 芯片
     FITCLOUDHARDWARE_NORDIC = 1 << 15,
     /// 固件升级使用静默升级
     FITCLOUDHARDWARE_DFUSHOULDSILENTMODE = 1 << 16,
-    /// 屏幕及马达参数调节(亮屏时长/亮度/马达振动强度)
+    /// 屏幕及马达参数调节 (亮屏时长/亮度/马达振动强度)
     FITCLOUDHARDWARE_SCREENANDVIBRATEPARAM = 1 << 17,
     /// 是否应该禁用自定义表盘功能
     FITCLOUDHARDWARE_SHOULDDISABLEDIYWATCHFACE = 1 << 18,
-    /// 运动模式(DIY)固件推送
+    /// 运动模式 (DIY) 固件推送
     FITCLOUDHARDWARE_SPORTSMODEDIY = 1 << 19,
-    /// 运动模式GPS互联
+    /// 运动模式 GPS 互联
     FITCLOUDHARDWARE_WATCHSPORTSWITHGPSCONNECT = 1 << 20,
     /// 基于气压泵的真血压
     FITCLOUDHARDWARE_BLOODPRESSUREBASEONPNEUMATICPUMP = 1 << 21,
@@ -337,11 +337,11 @@ typedef NS_OPTIONS(UInt32, FITCLOUDHARDWARE) {
     FITCLOUDHARDWARE_ALLOWSYNCWATCHMANUALMEASUREDATA = 1 << 22,
     /// 禁用睡眠功能
     FITCLOUDHARDWARE_SHOULDDISABLESLEEPFEATURE = 1 << 23,
-    /// GPS模块
+    /// GPS 模块
     FITCLOUDHARDWARE_GPS = 1 << 24,
-    /// 8773平台
+    /// 8773 平台
     FITCLOUDHARDWARE_8773 = 1 << 26,
-    /// 568X平台
+    /// 568X 平台
     FITCLOUDHARDWARE_568X = 1 << 27,
 };
 
@@ -362,7 +362,7 @@ typedef NS_OPTIONS(UInt32, FITCLOUDSCREENDISPLAY) {
     FITCLOUDSCREENDISPLAY_BLOODPRESSURE = 1 << 7,       ///< 显示血压数据
     FITCLOUDSCREENDISPLAY_WEATHERFORECAST = 1 << 8,     ///< 显示天气预报信息
     FITCLOUDSCREENDISPLAY_FINDIPHONE = 1 << 9,          ///< 显示查找手机功能
-    FITCLOUDSCREENDISPLAY_MACID = 1 << 10,              ///< 显示手表MAC地址和ID信息
+    FITCLOUDSCREENDISPLAY_MACID = 1 << 10,              ///< 显示手表 MAC 地址和 ID 信息
     FITCLOUDSCREENDISPLAY_UV = 1 << 11,                 ///< 显示紫外线指数
     FITCLOUDSCREENDISPLAY_EARTHMAGNETICFIELD = 1 << 12, ///< 显示地磁场数据
     FITCLOUDSCREENDISPLAY_STOPWATCH = 1 << 13,          ///< 显示秒表功能
@@ -372,7 +372,7 @@ typedef NS_OPTIONS(UInt32, FITCLOUDSCREENDISPLAY) {
 
 /// 手表偏好设置定义
 ///
-/// 定义手表的各种偏好设置选项,包括佩戴习惯、显示格式、单位制等
+/// 定义手表的各种偏好设置选项，包括佩戴习惯、显示格式、单位制等
 typedef NS_OPTIONS(UInt16, FITCLOUDPREFER) {
     /// 无偏好设置
     FITCLOUDPREFER_NONE = 0,
@@ -388,8 +388,8 @@ typedef NS_OPTIONS(UInt16, FITCLOUDPREFER) {
     FITCLOUDPREFER_ENHANCEDDETECTION = 1 << 1,
 
     /// 时间显示格式
-    /// - 0: 24小时制
-    /// - 1: 12小时制
+    /// - 0: 24 小时制
+    /// - 1: 12 小时制
     FITCLOUDPREFER_SHOWAS12HOURS = 1 << 2,
 
     /// 长度单位制式
@@ -412,7 +412,7 @@ typedef NS_OPTIONS(UInt16, FITCLOUDPREFER) {
     /// - 1: 开启
     FITCLOUDPREFER_VIBRATEWHENDISCONNECT = 1 << 6,
 
-    /// 运动目标达成提醒(计步/距离/卡路里)
+    /// 运动目标达成提醒 (计步/距离/卡路里)
     /// - 0: 关闭
     /// - 1: 开启
     FITCLOUDPREFER_REMINDWHENSPORTSGOALACHIEVEMENT = 1 << 7,
@@ -446,11 +446,11 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE) {
 
     FITCLOUDLANGUAGE_DANISH = 0x10,     // 丹麦语
     FITCLOUDLANGUAGE_GREEK = 0x11,      // 希腊语
-    FITCLOUDLANGUAGE_HEBREW = 0x12,     // 希伯来语(以色列)
+    FITCLOUDLANGUAGE_HEBREW = 0x12,     // 希伯来语 (以色列)
     FITCLOUDLANGUAGE_HINDI = 0x13,      // 印度语
     FITCLOUDLANGUAGE_HUN = 0x14,        // 匈牙利语
     FITCLOUDLANGUAGE_INDONESIAN = 0x15, // 印度尼西亚语
-    FITCLOUDLANGUAGE_KOREAN = 0x16,     // 韩语(朝鲜语)
+    FITCLOUDLANGUAGE_KOREAN = 0x16,     // 韩语 (朝鲜语)
     FITCLOUDLANGUAGE_MALAY = 0x17,      // 马来语
     FITCLOUDLANGUAGE_PERSIAN = 0x18,    // 波斯语
     FITCLOUDLANGUAGE_POLISH = 0x19,     // 波兰语
@@ -462,7 +462,7 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE) {
     FITCLOUDLANGUAGE_URDU = 0x1f,       // 乌尔都语
 
     FITCLOUDLANGUAGE_VIETNAMESE = 0x20,   // 越南语
-    FITCLOUDLANGUAGE_CATALAN = 0x21,      // 加泰隆语(西班牙)
+    FITCLOUDLANGUAGE_CATALAN = 0x21,      // 加泰隆语 (西班牙)
     FITCLOUDLANGUAGE_LATVIAN = 0x22,      // 拉脱维亚语
     FITCLOUDLANGUAGE_LITHUANIAN = 0x23,   // 立陶宛语
     FITCLOUDLANGUAGE_NORWEGIAN = 0x24,    // 挪威语
@@ -473,19 +473,19 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE) {
     FITCLOUDLANGUAGE_FILIPINO = 0x29,     // 菲律宾语
     FITCLOUDLANGUAGE_FINNISH = 0x2a,      // 芬兰语
     FITCLOUDLANGUAGE_SOUTHAFRICAN = 0x2b, // 南非语
-    FITCLOUDLANGUAGE_ROMANSH = 0x2c,      // 罗曼什语(瑞士)
+    FITCLOUDLANGUAGE_ROMANSH = 0x2c,      // 罗曼什语 (瑞士)
     FITCLOUDLANGUAGE_BURMESE = 0x2d,      // 缅甸语
     FITCLOUDLANGUAGE_CAMBODIAN = 0x2e,    // 柬埔寨语
     FITCLOUDLANGUAGE_AMHARIC = 0x2f,      // 阿姆哈拉语
 
     FITCLOUDLANGUAGE_BELARUSIAN = 0x30,  // 白俄罗斯语
     FITCLOUDLANGUAGE_ESTONIAN = 0x31,    // 爱沙尼亚语
-    FITCLOUDLANGUAGE_SWAHILI = 0x32,     // 斯瓦希里语(坦桑尼亚)
-    FITCLOUDLANGUAGE_ZULU = 0x33,        // 祖鲁语(南非)
+    FITCLOUDLANGUAGE_SWAHILI = 0x32,     // 斯瓦希里语 (坦桑尼亚)
+    FITCLOUDLANGUAGE_ZULU = 0x33,        // 祖鲁语 (南非)
     FITCLOUDLANGUAGE_AZERBAIJANI = 0x34, // 阿塞拜疆语
-    FITCLOUDLANGUAGE_ARMENIAN = 0x35,    // 亚美尼亚语(亚美尼亚)
-    FITCLOUDLANGUAGE_GEORGIAN = 0x36,    // 格鲁吉亚语(格鲁吉亚)
-    FITCLOUDLANGUAGE_LAO = 0x37,         // 老挝语(老挝)
+    FITCLOUDLANGUAGE_ARMENIAN = 0x35,    // 亚美尼亚语 (亚美尼亚)
+    FITCLOUDLANGUAGE_GEORGIAN = 0x36,    // 格鲁吉亚语 (格鲁吉亚)
+    FITCLOUDLANGUAGE_LAO = 0x37,         // 老挝语 (老挝)
     FITCLOUDLANGUAGE_MONGOLIAN = 0x38,   // 蒙古语
     FITCLOUDLANGUAGE_NEPALI = 0x39,      // 尼泊尔语
     FITCLOUDLANGUAGE_KAZAKH = 0x3a,      // 哈萨克语
@@ -501,7 +501,7 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE) {
     FITCLOUDLANGUAGE_TELUGU = 0x43,     // 泰卢固语
     FITCLOUDLANGUAGE_UZBEK = 0x44,      // 乌兹别克语
     FITCLOUDLANGUAGE_BASQUE = 0x45,     // 巴斯克语
-    FITCLOUDLANGUAGE_BERBER = 0x46,     // 僧伽罗语(斯里兰卡)
+    FITCLOUDLANGUAGE_BERBER = 0x46,     // 僧伽罗语 (斯里兰卡)
     FITCLOUDLANGUAGE_ALBANIAN = 0x47,   // 阿尔巴尼亚语
     FITCLOUDLANGUAGE_HAUSA = 0x48,      // 豪萨语
 
@@ -511,23 +511,23 @@ typedef NS_ENUM(Byte, FITCLOUDLANGUAGE) {
 
 /// 闹钟周期定义
 ///
-/// 定义了闹钟的重复周期选项,可以设置闹钟在一周内的哪些天重复
+/// 定义了闹钟的重复周期选项，可以设置闹钟在一周内的哪些天重复
 typedef NS_OPTIONS(Byte, FITCLOUDALARMCYCLE) {
-    /// 不循环,仅当天有效
+    /// 不循环，仅当天有效
     FITCLOUDALARMCYCLE_NONE = 0,
-    /// 周一(循环)
+    /// 周一 (循环)
     FITCLOUDALARMCYCLE_MON = 1,
-    /// 周二(循环)
+    /// 周二 (循环)
     FITCLOUDALARMCYCLE_TUE = 1 << 1,
-    /// 周三(循环)
+    /// 周三 (循环)
     FITCLOUDALARMCYCLE_WED = 1 << 2,
-    /// 周四(循环)
+    /// 周四 (循环)
     FITCLOUDALARMCYCLE_THUR = 1 << 3,
-    /// 周五(循环)
+    /// 周五 (循环)
     FITCLOUDALARMCYCLE_FRI = 1 << 4,
-    /// 周六(循环)
+    /// 周六 (循环)
     FITCLOUDALARMCYCLE_SAT = 1 << 5,
-    /// 周日(循环)
+    /// 周日 (循环)
     FITCLOUDALARMCYCLE_SUN = 1 << 6,
 };
 
@@ -535,7 +535,7 @@ typedef NS_OPTIONS(Byte, FITCLOUDALARMCYCLE) {
 
 /// 日程定义
 ///
-/// 定义了不同类型的日程选项,用于设置和管理日程提醒
+/// 定义了不同类型的日程选项，用于设置和管理日程提醒
 typedef NS_OPTIONS(Byte, FITCLOUDSCHEDULE) {
     /// 喝水提醒
     FITCLOUDSCHEDULE_DRINK = 0,
@@ -589,7 +589,7 @@ typedef NS_OPTIONS(Byte, FITCLOUDSCHEDULE) {
 ///
 /// 使用位掩码来表示一周中的不同日期组合。可以通过按位或运算组合多个日期。
 typedef NS_OPTIONS(Byte, FITCLOUDSCHEDULECYCLE) {
-    /// 不循环,仅当天有效
+    /// 不循环，仅当天有效
     FITCLOUDSCHEDULECYCLE_NONE = 0,
     /// 周一循环
     FITCLOUDSCHEDULECYCLE_MON = 1,
@@ -611,7 +611,7 @@ typedef NS_OPTIONS(Byte, FITCLOUDSCHEDULECYCLE) {
 
 /// 任务定义
 ///
-/// 定义了不同类型的任务选项,用于设置和管理任务提醒
+/// 定义了不同类型的任务选项，用于设置和管理任务提醒
 typedef NS_OPTIONS(Byte, FITCLOUDTASK) {
     /// 喝水任务
     FITCLOUDTASK_DRINK = 0,
@@ -665,7 +665,7 @@ typedef NS_OPTIONS(Byte, FITCLOUDTASK) {
 ///
 /// 使用位掩码来表示一周中的不同日期组合。可以通过按位或运算组合多个日期。
 typedef NS_OPTIONS(Byte, FITCLOUDTASKCYCLE) {
-    /// 不循环,仅当天有效
+    /// 不循环，仅当天有效
     FITCLOUDTASKCYCLE_NONE = 0,
     /// 周一循环
     FITCLOUDTASKCYCLE_MON = 1,
@@ -703,19 +703,19 @@ typedef NS_ENUM(Byte, FITCLOUDTASKSTATUS) {
 typedef NS_OPTIONS(Byte, FITCLOUDHABITCYCLE) {
     /// 不循环，仅当天有效
     FITCLOUDHABITCYCLE_NONE = 0,
-    /// 周一(循环)
+    /// 周一 (循环)
     FITCLOUDHABITCYCLE_MON = 1,
-    /// 周二(循环)
+    /// 周二 (循环)
     FITCLOUDHABITCYCLE_TUE = 1 << 1,
-    /// 周三(循环)
+    /// 周三 (循环)
     FITCLOUDHABITCYCLE_WED = 1 << 2,
-    /// 周四(循环)
+    /// 周四 (循环)
     FITCLOUDHABITCYCLE_THUR = 1 << 3,
-    /// 周五(循环)
+    /// 周五 (循环)
     FITCLOUDHABITCYCLE_FRI = 1 << 4,
-    /// 周六(循环)
+    /// 周六 (循环)
     FITCLOUDHABITCYCLE_SAT = 1 << 5,
-    /// 周日(循环)
+    /// 周日 (循环)
     FITCLOUDHABITCYCLE_SUN = 1 << 6,
 };
 
@@ -833,9 +833,9 @@ typedef NS_ENUM(Byte, FITCLOUDSLEEPQUALITY) {
 
 #pragma mark - APP相机控制相关
 
-/// APP相机状态定义
+/// APP 相机状态定义
 ///
-/// 定义APP相机的前台/后台状态
+/// 定义 APP 相机的前台/后台状态
 typedef NS_ENUM(Byte, APPCAMERASTATE) {
     /// 前台
     APPCAMERASTATE_FOREGROUND = 0x00,
@@ -871,13 +871,13 @@ typedef NS_ENUM(Byte, PREGNANCYREMINDTYPE) {
 
 #pragma mark - App定位服务相关
 
-/// App定位服务状态定义
+/// App 定位服务状态定义
 ///
-/// 定义App定位服务的各种状态
+/// 定义 App 定位服务的各种状态
 typedef NS_ENUM(Byte, APPLOCATIONSERVICESTATE) {
     /// 正常
     APPLOCATIONSERVICESTATE_AVAILABLE = 0x00,
-    /// APP定位权限受限
+    /// APP 定位权限受限
     APPLOCATIONSERVICESTATE_RESTRICTED = 0x01,
     /// 手机定位功能未开启
     APPLOCATIONSERVICESTATE_DISABLEDWITHIOS = 0x02,
@@ -885,39 +885,39 @@ typedef NS_ENUM(Byte, APPLOCATIONSERVICESTATE) {
 
 #pragma mark - Alexa
 
-/// Alexa校验错误定义
+/// Alexa 校验错误定义
 ///
-/// 定义Alexa校验过程中的各种错误类型
+/// 定义 Alexa 校验过程中的各种错误类型
 typedef NS_ENUM(Byte, ALEXACHECKERROR) {
-    /// VoiceId不匹配
+    /// VoiceId 不匹配
     ALEXACHECKERROR_VOICEIDNOTMATCH = 0x00,
     /// 长度校验失败
     ALEXACHECKERROR_BADLENGTH = 0x01,
-    /// CRC校验失败
+    /// CRC 校验失败
     ALEXACHECKERROR_CRC = 0x02,
 };
 
-/// Alexa调用错误定义
+/// Alexa 调用错误定义
 ///
-/// 定义Alexa调用过程中的各种错误类型
+/// 定义 Alexa 调用过程中的各种错误类型
 typedef NS_ENUM(Byte, ALEXAINVOKEERROR) {
     /// 成功
     ALEXAINVOKEERROR_SUCCESS = 0x00,
-    /// 该国家或者语言不支持Alexa
+    /// 该国家或者语言不支持 Alexa
     ALEXAINVOKEERROR_REGIONNOTSUPPORT = 0x01,
     /// 无网络
     ALEXAINVOKEERROR_NETWORKOFFLINE = 0x02,
     /// 未授权
     ALEXAINVOKEERROR_NOTAUTHED = 0x03,
-    /// APP不支持
+    /// APP 不支持
     ALEXAINVOKEERROR_APPNOTIMPLEMENTED = 0xFE,
     /// 未知错误
     ALEXAINVOKEERROR_UNKOWN = 0xFF,
 };
 
-/// Alexa结果类型定义
+/// Alexa 结果类型定义
 ///
-/// 定义Alexa返回的结果类型
+/// 定义 Alexa 返回的结果类型
 typedef NS_ENUM(Byte, ALEXARESULTTYPE) {
     /// 普通文本
     ALEXARESULTTYPE_TEXT = 0x00,
@@ -927,15 +927,15 @@ typedef NS_ENUM(Byte, ALEXARESULTTYPE) {
 
 #pragma mark - 大模型
 
-/// LLM结果类型
+/// LLM 结果类型
 typedef NS_ENUM(NSInteger, LLMRESULTTYPE) {
-    /// APP自行生成的错误文案
+    /// APP 自行生成的错误文案
     LLMRESULTTYPE_ERRORTEXT = 0x00,
     /// 大模型大模型生成的文案
     LLMRESULTTYPE_LLMTEXT = 0x01,
 };
 
-/// LLM类型
+/// LLM 类型
 typedef NS_ENUM(NSInteger, LLMTYPE) {
     /// 无
     LLMTYPE_NONE = -1,
@@ -961,11 +961,11 @@ typedef NS_ENUM(NSInteger, TRANSLATETEXTTYPE) {
 typedef NS_ENUM(Byte, WATCHFACESLOTTYPE) {
     WATCHFACESLOTTYPE_BUILTIN = 0x00,                // 当前表盘位置为内置，不可推送的
     WATCHFACESLOTTYPE_ALLOWPUSH = 0x10,              // 当前表盘位置可推送表盘，可根据表盘编号获取缩略图显示
-    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE1 = 0x20, // 当前表盘位置可推送表盘，缩略图显示自定义表盘样式1
-    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE2 = 0x21, // 当前表盘位置可推送表盘，缩略图显示自定义表盘样式2
-    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE3 = 0x22, // 当前表盘位置可推送表盘，缩略图显示自定义表盘样式3
-    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE4 = 0x23, // 当前表盘位置可推送表盘，缩略图显示自定义表盘样式4
-    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE5 = 0x24, // 当前表盘位置可推送表盘，缩略图显示自定义表盘样式5
+    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE1 = 0x20, // 当前表盘位置可推送表盘，缩略图显示自定义表盘样式 1
+    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE2 = 0x21, // 当前表盘位置可推送表盘，缩略图显示自定义表盘样式 2
+    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE3 = 0x22, // 当前表盘位置可推送表盘，缩略图显示自定义表盘样式 3
+    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE4 = 0x23, // 当前表盘位置可推送表盘，缩略图显示自定义表盘样式 4
+    WATCHFACESLOTTYPE_THUMBNAIL_CUSTOMSTYPE5 = 0x24, // 当前表盘位置可推送表盘，缩略图显示自定义表盘样式 5
 };
 
 /// 表盘模块样式
@@ -988,7 +988,7 @@ typedef NS_ENUM(Byte, WATCHFACEMODULESTYLE) {
 typedef NS_ENUM(Byte, FITCLOUDGAME) {
     /// 宠物养成类游戏
     FITCLOUDGAME_PETDEV = 0,
-    /// 2048数字游戏
+    /// 2048 数字游戏
     FITCLOUDGAME_2048 = 1,
     /// 糖果消消乐游戏
     FITCLOUDGAME_CANDY = 2,
@@ -1040,7 +1040,7 @@ typedef NS_ENUM(Byte, FITCLOUDGAMERANDINGTREND) {
 
 #pragma mark -手表GPS互联实时运动相关
 
-/// 手表GPS互联实时运动定义
+/// 手表 GPS 互联实时运动定义
 typedef NS_ENUM(UInt16, FITCLOUDSPORTSWITHGPS) {
     /// 无运动
     FITCLOUDSPORTSWITHGPS_NONE = 0x00,
@@ -1054,7 +1054,7 @@ typedef NS_ENUM(UInt16, FITCLOUDSPORTSWITHGPS) {
     FITCLOUDSPORTSWITHGPS_BICYCLING = 0x04,
 };
 
-/// 手表GPS互联实时运动行为定义
+/// 手表 GPS 互联实时运动行为定义
 typedef NS_ENUM(Byte, FITCLOUDSPORTSWITHGPSACTION) {
     /// 结束
     FITCLOUDSPORTSWITHGPSACTION_STOP = 0x00,
@@ -1066,7 +1066,7 @@ typedef NS_ENUM(Byte, FITCLOUDSPORTSWITHGPSACTION) {
     FITCLOUDSPORTSWITHGPSACTION_RESUME = 0x03,
 };
 
-/// 手表GPS互联实时运动状态定义
+/// 手表 GPS 互联实时运动状态定义
 typedef NS_ENUM(Byte, FITCLOUDSPORTSWITHGPSSTATUS) {
     /// 结束
     FITCLOUDSPORTSWITHGPSSTATUS_STOP = 0x00,
@@ -1076,9 +1076,9 @@ typedef NS_ENUM(Byte, FITCLOUDSPORTSWITHGPSSTATUS) {
     FITCLOUDSPORTSWITHGPSSTATUS_PAUSE = 0x02,
 };
 
-/// 手表GPS互联实时运动启动方式定义
+/// 手表 GPS 互联实时运动启动方式定义
 typedef NS_ENUM(Byte, FITCLOUDSPORTSWITHGPSSTARTFROM) {
-    /// 由APP启动
+    /// 由 APP 启动
     FITCLOUDSPORTSWITHGPSSTARTFROM_APP = 0x01,
     /// 由手表启动
     FITCLOUDSPORTSWITHGPSSTARTFROM_WATCH = 0x02,
@@ -1092,49 +1092,49 @@ typedef NS_ENUM(Byte, FITCLOUDQRCODE) {
     FITCLOUDQRCODE_MONEYRECEIVE_WECHAT = 0x01,
     /// 支付宝收款码
     FITCLOUDQRCODE_MONEYRECEIVE_ALIPAY = 0x02,
-    /// PayPal收款码
+    /// PayPal 收款码
     FITCLOUDQRCODE_MONEYRECEIVE_PAYPAL = 0x03,
-    /// QQ收款码
+    /// QQ 收款码
     FITCLOUDQRCODE_MONEYRECEIVE_QQ = 0x04,
-    /// Paytm收款码
+    /// Paytm 收款码
     FITCLOUDQRCODE_MONEYRECEIVE_PAYTM = 0x05,
-    /// PhonePe收款码
+    /// PhonePe 收款码
     FITCLOUDQRCODE_MONEYRECEIVE_PHONEPE = 0x06,
-    /// GPay收款码
+    /// GPay 收款码
     FITCLOUDQRCODE_MONEYRECEIVE_GPAY = 0x07,
-    /// BHTM收款码
+    /// BHTM 收款码
     FITCLOUDQRCODE_MONEYRECEIVE_BHIM = 0x08,
-    /// Momo收款码
+    /// Momo 收款码
     FITCLOUDQRCODE_MONEYRECEIVE_MOMO = 0x09,
-    /// Zalo收款码
+    /// Zalo 收款码
     FITCLOUDQRCODE_MONEYRECEIVE_ZALO = 0x0A,
     /// 微信名片
     FITCLOUDQRCODE_BUSINESSCARD_WECHAT = 0x21,
     /// 支付宝名片
     FITCLOUDQRCODE_BUSINESSCARD_ALIPAY = 0x22,
-    /// QQ名片
+    /// QQ 名片
     FITCLOUDQRCODE_BUSINESSCARD_QQ = 0x23,
-    /// Facebook名片
+    /// Facebook 名片
     FITCLOUDQRCODE_BUSINESSCARD_FACEBOOK = 0x24,
-    /// WhatsApp名片
+    /// WhatsApp 名片
     FITCLOUDQRCODE_BUSINESSCARD_WHATSAPP = 0x25,
-    /// Twitter名片
+    /// Twitter 名片
     FITCLOUDQRCODE_BUSINESSCARD_TWITTER = 0x26,
-    /// Instagram名片
+    /// Instagram 名片
     FITCLOUDQRCODE_BUSINESSCARD_INSTAGRAM = 0x27,
-    /// Messenger名片
+    /// Messenger 名片
     FITCLOUDQRCODE_BUSINESSCARD_MESSENGER = 0x28,
-    /// LINE名片
+    /// LINE 名片
     FITCLOUDQRCODE_BUSINESSCARD_LINE = 0x29,
-    /// Snapchat名片
+    /// Snapchat 名片
     FITCLOUDQRCODE_BUSINESSCARD_SNAPCHAT = 0x2A,
-    /// Skype名片
+    /// Skype 名片
     FITCLOUDQRCODE_BUSINESSCARD_SKYPE = 0x2B,
-    /// Email名片
+    /// Email 名片
     FITCLOUDQRCODE_BUSINESSCARD_EMAIL = 0x2C,
-    /// Phone名片
+    /// Phone 名片
     FITCLOUDQRCODE_BUSINESSCARD_PHONE = 0x2D,
-    /// LinkedIn名片
+    /// LinkedIn 名片
     FITCLOUDQRCODE_BUSINESSCARD_LINKEDIN = 0x2E,
     /// 核酸码
     FITCLOUDQRCODE_NUCLEICACID_CODE = 0x80,
@@ -1200,17 +1200,17 @@ typedef NS_ENUM(Byte, FITCLOUDWATCHLAUNCHVIBRATEDURATION) {
     FITCLOUDWATCHLAUNCHVIBRATEDURATION_EXTRASHORT = 0x00,
     /// 单次长短震
     FITCLOUDWATCHLAUNCHVIBRATEDURATION_SHORT = 0x01,
-    /// 周期2s的震动(震0.6s停1.4s)
+    /// 周期 2s 的震动 (震 0.6s 停 1.4s)
     FITCLOUDWATCHLAUNCHVIBRATEDURATION_CYCLE = 0x02,
 };
 
 #pragma mark -手表上的GPS文件状态
 
-/// 手表上的GPS文件状态定义
+/// 手表上的 GPS 文件状态定义
 typedef NS_ENUM(SInt8, FITCLOUDWATCHGPSFILESTATE) {
     /// 未知状态
     FITCLOUDWATCHGPSFILESTATE_UNKNOWN = -1,
-    /// 当前手表上没有GPS文件
+    /// 当前手表上没有 GPS 文件
     FITCLOUDWATCHGPSFILESTATE_NOTEXIST = 0,
     /// 良好
     FITCLOUDWATCHGPSFILESTATE_GOOD = 1,
@@ -1366,17 +1366,17 @@ typedef NS_ENUM(NSInteger, WORKOUTDATAITEMDISPLAY) {
 
 #pragma mark - 健康定时监测项定义
 
-/// 健康定时监测项定义(the fitcloud interval health monitoring item)
+/// 健康定时监测项定义 (the fitcloud interval health monitoring item)
 typedef NS_ENUM(NSInteger, FITCLOUDINTEVALHEALTHMONITORINGITEM) {
-    /// 心率(heart rate)
+    /// 心率 (heart rate)
     FITCLOUDINTEVALHEALTHMONITORINGITEM_HEARTRATE = 0x01,
-    /// 血氧(blood oxygen)
+    /// 血氧 (blood oxygen)
     FITCLOUDINTEVALHEALTHMONITORINGITEM_BLOODOXYGEN = 0x02,
-    /// 血压(blood pressure)
+    /// 血压 (blood pressure)
     FITCLOUDINTEVALHEALTHMONITORINGITEM_BLOODPRESSURE = 0x03,
-    /// 体温(body temperature)
+    /// 体温 (body temperature)
     FITCLOUDINTEVALHEALTHMONITORINGITEM_BODYTEMPERATURE = 0x04,
-    /// 压力指数(stress index)
+    /// 压力指数 (stress index)
     FITCLOUDINTEVALHEALTHMONITORINGITEM_STRESSINDEX = 0x05,
 };
 
@@ -1390,109 +1390,111 @@ typedef NS_OPTIONS(UInt64, FITCLOUDMN) {
     FITCLOUDMN_CALL = 1,
     /// 短信通知
     FITCLOUDMN_SMS = 1 << 1,
-    /// QQ通知
+    /// QQ 通知
     FITCLOUDMN_QQ = 1 << 2,
     /// 微信通知
     FITCLOUDMN_WECHAT = 1 << 3,
-    /// Facebook通知
+    /// Facebook 通知
     FITCLOUDMN_FACEBOOK = 1 << 4,
-    /// Twitter通知
+    /// Twitter 通知
     FITCLOUDMN_TWITTER = 1 << 5,
-    /// LinkedIn通知
+    /// LinkedIn 通知
     FITCLOUDMN_LINKEDIN = 1 << 6,
-    /// Instagram通知
+    /// Instagram 通知
     FITCLOUDMN_INSTAGRAM = 1 << 7,
-    /// Pinterest通知
+    /// Pinterest 通知
     FITCLOUDMN_PINTEREST = 1 << 8,
-    /// WhatsApp通知
+    /// WhatsApp 通知
     FITCLOUDMN_WHATSAPP = 1 << 9,
-    /// LINE通知
+    /// LINE 通知
     FITCLOUDMN_LINE = 1 << 10,
-    /// Facebook Messenger通知
+    /// Facebook Messenger 通知
     FITCLOUDMN_MESSENGER = 1 << 11,
-    /// KakaoTalk通知
+    /// KakaoTalk 通知
     FITCLOUDMN_KAKAO = 1 << 12,
-    /// Skype通知
+    /// Skype 通知
     FITCLOUDMN_SKYPE = 1 << 13,
     /// 邮箱通知
     FITCLOUDMN_MAIL = 1 << 14,
-    /// Telegram通知
+    /// Telegram 通知
     FITCLOUDMN_TELEGRAM = 1 << 15,
-    /// Viber通知
+    /// Viber 通知
     FITCLOUDMN_VIBER = 1 << 16,
     /// 日历消息通知
     FITCLOUDMN_CALENDAR = 1 << 17,
-    /// Snapchat通知
+    /// Snapchat 通知
     FITCLOUDMN_SNAPCHAT = 1 << 18,
-    /// Hike通知
+    /// Hike 通知
     FITCLOUDMN_HIKE = 1 << 19,
-    /// YouTube通知
+    /// YouTube 通知
     FITCLOUDMN_YOUTUBE = 1 << 20,
-    /// Apple Music通知
+    /// Apple Music 通知
     FITCLOUDMN_APPLEMUSIC = 1 << 21,
-    /// Zoom通知
+    /// Zoom 通知
     FITCLOUDMN_ZOOM = 1 << 22,
-    /// TikTok通知
+    /// TikTok 通知
     FITCLOUDMN_TIKTOK = 1 << 23,
-    /// Gmail通知
+    /// Gmail 通知
     FITCLOUDMN_GMAIL = 1 << 24,
-    /// Outlook通知
+    /// Outlook 通知
     FITCLOUDMN_OUTLOOK = 1 << 25,
-    /// WhatsApp Business通知
+    /// WhatsApp Business 通知
     FITCLOUDMN_WHATSUPBUSINESS = 1 << 26,
-    /// Fastrack通知
+    /// Fastrack 通知
     FITCLOUDMN_FASTRACK = 1 << 27,
-    /// Titan Smart World通知
+    /// Titan Smart World 通知
     FITCLOUDMN_TITANSMARTWORLD = 1 << 28,
-    /// Google Pay通知
+    /// Google Pay 通知
     FITCLOUDMN_GPAY = 1 << 29,
-    /// Amazon通知
+    /// Amazon 通知
     FITCLOUDMN_AMAZON = 1 << 30,
-    /// 其他APP通知
+    /// 其他 APP 通知
     FITCLOUDMN_OTHER = ((UInt64)1) << 31,
-    /// PhonePe通知
+    /// PhonePe 通知
     FITCLOUDMN_PHONEPE = ((UInt64)1) << 32,
-    /// Hinge通知
+    /// Hinge 通知
     FITCLOUDMN_HINGE = ((UInt64)1) << 33,
-    /// Flipkart通知
+    /// Flipkart 通知
     FITCLOUDMN_FLIPKART = ((UInt64)1) << 34,
-    /// Myntra通知
+    /// Myntra 通知
     FITCLOUDMN_MYNTRA = ((UInt64)1) << 35,
-    /// Meesho通知
+    /// Meesho 通知
     FITCLOUDMN_MEESHO = ((UInt64)1) << 36,
-    /// Zivame通知
+    /// Zivame 通知
     FITCLOUDMN_ZIVAME = ((UInt64)1) << 37,
-    /// Ajio通知
+    /// Ajio 通知
     FITCLOUDMN_AJIO = ((UInt64)1) << 38,
-    /// Urbanic通知
+    /// Urbanic 通知
     FITCLOUDMN_URBANIC = ((UInt64)1) << 39,
-    /// Nykaa通知
+    /// Nykaa 通知
     FITCLOUDMN_NYKAA = ((UInt64)1) << 40,
-    /// Healthifyme通知
+    /// Healthifyme 通知
     FITCLOUDMN_HEALTHIFYME = ((UInt64)1) << 41,
-    /// Cultfit通知
+    /// Cultfit 通知
     FITCLOUDMN_CULTFIT = ((UInt64)1) << 42,
-    /// Flo通知
+    /// Flo 通知
     FITCLOUDMN_FLO = ((UInt64)1) << 43,
-    /// Bumble通知
+    /// Bumble 通知
     FITCLOUDMN_BUMBLE = ((UInt64)1) << 44,
-    /// Uber通知
+    /// Uber 通知
     FITCLOUDMN_UBER = ((UInt64)1) << 45,
-    /// Swiggy通知
+    /// Swiggy 通知
     FITCLOUDMN_SWIGGY = ((UInt64)1) << 46,
-    /// Zomato通知
+    /// Zomato 通知
     FITCLOUDMN_ZOMATO = ((UInt64)1) << 47,
-    /// Tira通知
+    /// Tira 通知
     FITCLOUDMN_TIRA = ((UInt64)1) << 48,
-    /// Zalo通知
+    /// Zalo 通知
     FITCLOUDMN_ZALO = ((UInt64)1) << 49,
     /// 钉钉通知
     FITCLOUDMN_DINGTALK = ((UInt64)1) << 50,
+    /// 飞书通知
+    FITCLOUDMN_FEISHU = ((UInt64)1) << 51,
 };
 
 #pragma mark - 内置个性化提醒定义(高级提醒)
 
-/// 内置个性化提醒定义(高级提醒)
+/// 内置个性化提醒定义 (高级提醒)
 typedef NS_ENUM(Byte, FITCLOUDBUILTINPERSONALIZEDREMINDER) {
     /// 久坐提醒
     FITCLOUDBUILTINPERSONALIZEDREMINDER_SEDENTARY = 0x00,
@@ -1504,7 +1506,7 @@ typedef NS_ENUM(Byte, FITCLOUDBUILTINPERSONALIZEDREMINDER) {
     FITCLOUDBUILTINPERSONALIZEDREMINDER_MEDICATION = 0x02,
 };
 
-/// 个性化提醒(高级提醒) 类型
+/// 个性化提醒 (高级提醒) 类型
 typedef NS_ENUM(NSInteger, FITCLOUDPERSONALIZEDREMINDERTYPE) {
     /// 未知
     FITCLOUDPERSONALIZEDREMINDERTYPE_UNKNOWN = 0x00,
@@ -1516,19 +1518,19 @@ typedef NS_ENUM(NSInteger, FITCLOUDPERSONALIZEDREMINDERTYPE) {
     FITCLOUDPERSONALIZEDREMINDERTYPE_CUSTOM = 0x02,
 };
 
-/// 个性化提醒(高级提醒) 循环周期
+/// 个性化提醒 (高级提醒) 循环周期
 typedef NS_OPTIONS(Byte, FITCLOUDPERSONALIZEDREMINDERCYCLE) {
     FITCLOUDPERSONALIZEDREMINDERCYCLE_NONE = 0,      // 不循环，仅当天有效
-    FITCLOUDPERSONALIZEDREMINDERCYCLE_MON = 1,       // 周一(循环)
-    FITCLOUDPERSONALIZEDREMINDERCYCLE_TUE = 1 << 1,  // 周二(循环)
-    FITCLOUDPERSONALIZEDREMINDERCYCLE_WED = 1 << 2,  // 周三(循环)
-    FITCLOUDPERSONALIZEDREMINDERCYCLE_THUR = 1 << 3, // 周四(循环)
-    FITCLOUDPERSONALIZEDREMINDERCYCLE_FRI = 1 << 4,  // 周五(循环)
-    FITCLOUDPERSONALIZEDREMINDERCYCLE_SAT = 1 << 5,  // 周六(循环)
-    FITCLOUDPERSONALIZEDREMINDERCYCLE_SUN = 1 << 6,  // 周日(循环)
+    FITCLOUDPERSONALIZEDREMINDERCYCLE_MON = 1,       // 周一 (循环)
+    FITCLOUDPERSONALIZEDREMINDERCYCLE_TUE = 1 << 1,  // 周二 (循环)
+    FITCLOUDPERSONALIZEDREMINDERCYCLE_WED = 1 << 2,  // 周三 (循环)
+    FITCLOUDPERSONALIZEDREMINDERCYCLE_THUR = 1 << 3, // 周四 (循环)
+    FITCLOUDPERSONALIZEDREMINDERCYCLE_FRI = 1 << 4,  // 周五 (循环)
+    FITCLOUDPERSONALIZEDREMINDERCYCLE_SAT = 1 << 5,  // 周六 (循环)
+    FITCLOUDPERSONALIZEDREMINDERCYCLE_SUN = 1 << 6,  // 周日 (循环)
 };
 
-/// 个性化提醒(高级提醒) 时间类型
+/// 个性化提醒 (高级提醒) 时间类型
 typedef NS_ENUM(Byte, FITCLOUDPERSONALIZEDREMINDTIMETYPE) {
     /// 时间段
     FITCLOUDPERSONALIZEDREMINDTIMETYPE_PERIOD = 0x00,
@@ -1578,7 +1580,7 @@ typedef NS_ENUM(Byte, FITCLOUDWEATHERTYPE) {
     FITCLOUDWEATHERTYPE_THUNDERSHOWERSWITHHAIL = 0x05,
     /// 小雨
     FITCLOUDWEATHERTYPE_LIGHTRAIN = 0x06,
-    /// 中雨(moderate rain)、大雨(heavy rain)、暴雨(rainstorm)
+    /// 中雨 (moderate rain)、大雨 (heavy rain)、暴雨 (rainstorm)
     FITCLOUDWEATHERTYPE_MHSRAIN = 0x07,
     /// 雨夹雪、冻雨
     FITCLOUDWEATHERTYPE_SLEET = 0x08,

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.30 build20250507001 (2025-05-07)
+
+- Added support for Feishu App notifications.
+- Added method `+ (BOOL)isDeviceSupportAppNotification:(FITCLOUDMN) appNotification` to check if the watch device supports notifications for a specific App.
+
 ## V1.3.1-beta.29 build20250430001 (2025-04-30)
 
 - Optimized the property naming and type definitions for step data.
