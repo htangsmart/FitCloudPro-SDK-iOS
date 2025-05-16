@@ -628,6 +628,11 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - aiConversationModel: The AI conversation model type
 - (void)onWatchSideToggleAiConversationModel:(FITCLOUDAICONVERSATIONMODEL)aiConversationModel;
 
+/// Notifies the AdFlash AI agent toggled from watch side
+/// - Parameters:
+///   - aiAgent: The AdFlash AI agent type
+- (void)onWatchSideToggleAdFlashAiAgent:(FITCLOUDADFLASHAIAGENT)aiAgent;
+
 /// Notifies that voice translation has started
 /// - Note: Called when the watch begins recording voice for translation
 - (void)onTranslateVoiceBegin;
@@ -775,6 +780,12 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// - Parameters:
 ///   - deviceId: The device id
 - (void)onQueryGoMoreAlgorithmKey:(NSString *)deviceId;
+
+/// Requests AI analysis report of health data
+- (void)onRequestHealthDataAIAnalysisReport;
+
+/// Requests AI health advices
+- (void)onRequestAIHealthAdvices;
 
 /// Notifies when the ANCS authorization status has been updated
 /// - Parameters:

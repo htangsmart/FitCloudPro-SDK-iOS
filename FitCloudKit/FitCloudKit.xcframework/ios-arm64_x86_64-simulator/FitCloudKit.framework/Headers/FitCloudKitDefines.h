@@ -1703,6 +1703,28 @@ typedef NS_ENUM(NSInteger, FITCLOUDAICONVERSATIONMODEL) {
     FITCLOUDAICONVERSATIONMODEL_KIMI = 0x06,
 };
 
+#pragma mark AdFlash AI Agent 
+
+/// AdFlash AI Agent
+typedef NS_ENUM(NSInteger, FITCLOUDADFLASHAIAGENT) {
+    /// unspecified
+    FITCLOUDADFLASHAIAGENT_UNSPECIFIED = -1,
+    /// jarvis
+    FITCLOUDADFLASHAIAGENT_JARVIS = 0x00,
+    /// 星座运势
+    FITCLOUDADFLASHAIAGENT_CONSTELLATION = 0x01,
+    /// 塔罗牌大师
+    FITCLOUDADFLASHAIAGENT_TAROTMASTER = 0x02,
+    /// 食物热量查询
+    FITCLOUDADFLASHAIAGENT_FOODCALORIE = 0x03,
+    /// 社交技巧
+    FITCLOUDADFLASHAIAGENT_SOCIALSKILLS = 0x04,
+    /// 情绪纾解
+    FITCLOUDADFLASHAIAGENT_EMOTIONALRELIEF = 0x05,
+    /// 今天吃什么
+    FITCLOUDADFLASHAIAGENT_TODAYFOOD = 0x06,
+};
+
 #pragma mark AI Watch Face Generation Result Codes
 
 /// AI photo generation result codes

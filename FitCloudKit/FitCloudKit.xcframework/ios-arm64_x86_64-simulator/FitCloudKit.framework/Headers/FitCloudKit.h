@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本：
-//      pcjbird    2025-05-07  Version:1.3.1-beta.30 Build:20250507001
+//      pcjbird    2025-05-16  Version:1.3.1-beta.31 Build:20250516001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -245,13 +245,23 @@ NS_ASSUME_NONNULL_BEGIN
 /// Clear watch connection history
 + (void)clearPeripheralHistory;
 
-#pragma mark
+#pragma mark Specified AI Conversation Model
+
 /// Get the specified AI conversation model
 /// - Returns: The AI conversation model type used for watch interactions
 ///
 /// This method returns the AI conversation model type that is currently specified for use with the watch.
 /// The model determines how AI conversations are handled between the watch and connected services.
 + (FITCLOUDAICONVERSATIONMODEL)specifiedAiConversationModel;
+
+#pragma mark Specified AdFlash AI Agent
+
+/// Gets the specified AdFlash AI agent type
+/// - Returns: The AdFlash AI agent type that is currently specified for use with the watch
+///
+/// This method returns the AI agent type that is currently specified for AdFlash functionality.
+/// The agent type determines how AdFlash AI features are handled on the watch.
++ (FITCLOUDADFLASHAIAGENT)specifiedAdFlashAiAgent;
 
 @end
 
@@ -1442,6 +1452,24 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - succeed: Whether the reset was successful
 ///     - error: Error information if reset fails, nil on success
 + (void)resetAppUsageStatisticsWithCompletion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
+
+#pragma mark - AI Health
+
+/// Sends an AI-generated health analysis report to the watch
+/// - Parameters:
+///   - report: The AI health analysis report model containing the analysis results
+///   - completion: A completion handler called when sending completes. Parameters:
+///     - succeed: Whether sending was successful 
+///     - error: Error information if sending fails, nil on success
++ (void)sendAIHealthAnalysisReport:(FitCloudAIHealthAnalysisReportModel *)report completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
+
+/// Sends AI-generated health advice recommendations to the watch
+/// - Parameters:
+///   - advices: The AI health advice model containing the recommendations
+///   - completion: A completion handler called when sending completes. Parameters:
+///     - succeed: Whether sending was successful
+///     - error: Error information if sending fails, nil on success
++ (void)sendAIHealthAdvices:(FitCloudAIHealthAdvicesModel *)advices completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
 
 @end
 

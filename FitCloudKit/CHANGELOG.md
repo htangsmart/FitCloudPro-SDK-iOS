@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.31 build20250516001 (2025-05-16)
+
+- Introduce new APIs for AI health features.
+- Modified the command parsing logic of `+ (BOOL)isDeviceSupportAppNotification:(FITCLOUDMN) appNotification` method to maintain consistency with the Android implementation. Due to existing differences between Android implementation and documentation definitions, the iOS command parsing logic has been adjusted to ensure unified behavior across platforms. The firmware will update the corresponding documentation definitions accordingly.
+
 ## V1.3.1-beta.30 build20250507001 (2025-05-07)
 
 - Added support for Feishu App notifications.

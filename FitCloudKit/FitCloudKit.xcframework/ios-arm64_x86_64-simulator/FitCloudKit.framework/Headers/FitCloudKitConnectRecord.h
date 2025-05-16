@@ -3,7 +3,7 @@
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/8/2.
-//  Copyright © 2018年 Zero Status. All rights reserved.
+//  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -76,6 +76,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Returns: A numeric value representing the AI conversation model type as defined in FITCLOUDAICONVERSATIONMODEL.
 ///           When nil or FITCLOUDAICONVERSATIONMODEL_UNSPECIFIED is returned, it indicates no specific model has been set.
 @property(nonatomic, strong, nullable) NSNumber *specifiedAiConversationModel;
+
+/// The user-specified AI agent for advertisement flash
+/// - Returns: A numeric value representing the AI agent type for advertisement flash.
+///           When nil, it indicates no specific agent has been set.
+@property(nonatomic, strong, nullable) NSNumber *specifiedAdFlashAiAgent;
 
 @end
 

@@ -15,6 +15,8 @@
 #import <FitCloudKit/FitCloudAppUsageCountStatisticsModel.h>
 #import <FitCloudKit/OraimoMuslimPrayerAlarmClockModel.h>
 #import <FitCloudKit/OraimoMuslimPrayerSwitchSettingsModel.h>
+#import <FitCloudKit/FitCloudAIHealthAnalysisReportModel.h>
+#import <FitCloudKit/FitCloudAIHealthAdvicesModel.h>
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>

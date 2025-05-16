@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-05-07 Version:1.3.1-beta.30 Build:20250507001
+## pcjbird 2025-05-16 Version:1.3.1-beta.31 Build:20250516001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -26,6 +26,7 @@
 - 新增支持一次性配置传音 Oraimo 穆斯林祈祷功能的所有开关设置。
 - 新增支持设置飞书 App 消息提醒。
 - 新增方法 `+ (BOOL)isDeviceSupportAppNotification:(FITCLOUDMN) appNotification` 用于检查手表设备是否支持特定 App 的消息提醒功能。
+- 引入新的 AI 健康功能相关接口。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
