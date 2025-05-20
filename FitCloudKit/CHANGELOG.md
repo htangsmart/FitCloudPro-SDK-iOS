@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.1-beta.32 build20250520001 (2025-05-20)
+
+- Introduce new APIs for world clock features.
+- Added support for Microsoft Teams App notifications.
+- Added support for querying the supported languages for the watch device.
+
 ## V1.3.1-beta.31 build20250516001 (2025-05-16)
 
 - Introduce new APIs for AI health features.

@@ -10,13 +10,13 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本：
-//      pcjbird    2025-05-16  Version:1.3.1-beta.31 Build:20250516001
+//      pcjbird    2025-05-20  Version:1.3.1-beta.32 Build:20250520001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <FitCloudKit/FitCloudSecureCoding.h>
-#import <FitCloudKit/FitCloudModels.h>
+#import <FitCloudKit/FitCloudDataModels.h>
 #import <FitCloudKit/FitCloudEvent.h>
 #import <FitCloudKit/FitCloudCallback.h>
 #import <FitCloudKit/FitCloudOption.h>
@@ -905,6 +905,15 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - error: Error information if query fails, nil on success
 + (void)queryWatchLanguageWithCompletion:(void (^_Nullable)(BOOL success, FITCLOUDLANGUAGE lang, NSError *_Nullable error))completion;
 
+#pragma mark Query the supported languages of the watch device
+/// Query the supported languages of the watch device
+/// - Parameters:
+///   - completion: A completion handler called with the result. Parameters:
+///     - success: Whether the query was successful
+///     - supportedLanguages: Array of supported languages on the watch device, array elements are of type FITCLOUDLANGUAGE
+///     - error: Error information if query fails, nil on success
++ (void)queryWatchSupportedLanguagesWithCompletion:(void (^_Nullable)(BOOL success, NSArray<NSNumber *> *_Nullable supportedLanguages, NSError *_Nullable error))completion;
+
 #pragma mark - Watch language utilities
 
 /// Get the Chinese display name for a language
@@ -1470,6 +1479,25 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - succeed: Whether sending was successful
 ///     - error: Error information if sending fails, nil on success
 + (void)sendAIHealthAdvices:(FitCloudAIHealthAdvicesModel *)advices completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
+
+
+#pragma mark - World clock
+
+/// Sends world clock settings to the watch
+/// - Parameters:
+///   - worldClockArray: Array of world clock models to sync to the watch
+///   - completion: The completion handler called when sending completes
+///     - succeed: Whether sending was successful
+///     - error: Error information if sending fails, nil on success
++ (void)sendWorldClockArray:(NSArray<FitCloudWorldClockModel *> *)worldClockArray completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
+
+/// Queries world clock settings from the watch
+/// - Parameters:
+///   - completion: The completion handler called with the query results
+///     - succeed: Whether the query was successful
+///     - worldClockArray: Array of world clock models retrieved from the watch, nil if query fails
+///     - error: Error information if query fails, nil on success
++ (void)queryWorldClockArrayWithCompletion:(void (^__nullable)(BOOL succeed, NSArray<FitCloudWorldClockModel *> *_Nullable worldClockArray, NSError *_Nullable error))completion;
 
 @end
 

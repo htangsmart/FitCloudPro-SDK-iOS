@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-05-16 Version:1.3.1-beta.31 Build:20250516001
+## pcjbird 2025-05-20 Version:1.3.1-beta.32 Build:20250520001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -27,6 +27,9 @@
 - Added support for Feishu App notifications.
 - Added method `+ (BOOL)isDeviceSupportAppNotification:(FITCLOUDMN) appNotification` to check if the watch device supports notifications for a specific App.
 - Introduce new APIs for AI health features.
+- Introduce new APIs for world clock features.
+- Added support for Microsoft Teams App notifications.
+- Added support for querying the supported languages for the watch device.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

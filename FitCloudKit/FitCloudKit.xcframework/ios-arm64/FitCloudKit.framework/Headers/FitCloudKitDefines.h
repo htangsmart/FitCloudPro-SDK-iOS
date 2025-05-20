@@ -276,6 +276,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICECAPACITY) {
     FITCLOUDDEVICECAPACITY_MYTASKCOUNT = 0x1d,
     /// AI 对话应答文本支持的最大字节数
     FITCLOUDDEVICECAPACITY_AICONVERSATIONRESPONSETEXTBYTES = 0x1f,
+    /// 支持的最大世界时钟数量
+    FITCLOUDDEVICECAPACITY_WORLDCLOCKCOUNT = 0x20,
 };
 
 #pragma mark - 手表硬件
@@ -1490,6 +1492,8 @@ typedef NS_OPTIONS(UInt64, FITCLOUDMN) {
     FITCLOUDMN_DINGTALK = ((UInt64)1) << 50,
     /// 飞书通知
     FITCLOUDMN_FEISHU = ((UInt64)1) << 51,
+    /// Microsoft Teams通知
+    FITCLOUDMN_TEAMS = ((UInt64)1) << 52,
 };
 
 #pragma mark - 内置个性化提醒定义(高级提醒)
