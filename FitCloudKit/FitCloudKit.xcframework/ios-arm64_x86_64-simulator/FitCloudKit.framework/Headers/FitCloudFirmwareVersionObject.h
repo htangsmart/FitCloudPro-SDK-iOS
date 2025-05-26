@@ -321,4 +321,7 @@
 /// 是否支持家长模式
 @property(nonatomic, readonly) BOOL withParentalControl;
 
+/// 是否支持查询手表支持的语言
+@property(nonatomic, readonly) BOOL allowQueryWatchSupportedLanguages;
+
 @end

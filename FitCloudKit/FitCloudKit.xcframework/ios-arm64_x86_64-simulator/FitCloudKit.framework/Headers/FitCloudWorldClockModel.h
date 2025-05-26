@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// The unique identifier for the world clock.
 @property (nonatomic, assign) NSInteger clockId;
 
-/// The timezone offset in hours from UTC.
+/// The timezone offset in minutes from UTC. For example, -480 for UTC-8.
 @property (nonatomic, assign) NSInteger timeZone;
 
 /// The name of the city associated with this world clock.

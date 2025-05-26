@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.33 build20250526001 (2025-05-26)
+
+- Modified the commands for world clock features.
+- Added flag to indicate whether the watch device supports querying supported languages.
+
 ## V1.3.1-beta.32 build20250520001 (2025-05-20)
 
 - Introduce new APIs for world clock features.
