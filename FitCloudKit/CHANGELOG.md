@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.34 build20250529001 (2025-05-29)
+
+- Removed compilation of certain files that may cause symbol conflicts.
+- Added flag to indicate whether the watch device supports world clock features.
+
 ## V1.3.1-beta.33 build20250526001 (2025-05-26)
 
 - Modified the commands for world clock features.

@@ -324,4 +324,7 @@
 /// 是否支持查询手表支持的语言
 @property(nonatomic, readonly) BOOL allowQueryWatchSupportedLanguages;
 
+/// 是否支持世界时钟
+@property(nonatomic, readonly) BOOL withWorldClock;
+
 @end

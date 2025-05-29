@@ -198,6 +198,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICEFEATURE) {
     FITCLOUDDEVICEFEATURE_FAVORITECONTACTS,
     /// Emergency contacts
     FITCLOUDDEVICEFEATURE_EMERGENCYCONTACTS,
+    /// World clock
+    FITCLOUDDEVICEFEATURE_WORLDCLOCK,
 
     /// Weather, set the watch weather information via the app
     FITCLOUDDEVICEFEATURE_WEATHER,
