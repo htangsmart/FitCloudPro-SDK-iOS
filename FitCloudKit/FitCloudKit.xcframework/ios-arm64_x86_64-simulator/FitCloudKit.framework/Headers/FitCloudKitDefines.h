@@ -959,6 +959,26 @@ typedef NS_ENUM(NSInteger, TRANSLATETEXTTYPE) {
     TRANSLATETEXTTYPE_TRANSLATION = 0x01,
 };
 
+/// Represents the playing state of translation voice.
+///
+/// This enumeration defines the possible states for translation voice playback:
+/// - Stop: The voice playback is stopped
+/// - Playing: The voice is currently playing
+/// - Pause: The voice playback is paused
+/// - Resumed: The voice playback has resumed from pause
+typedef NS_ENUM(NSInteger, TranslatedTextVoicePlayingState) {
+    /// Voice playing state is unknown
+    TranslatedTextVoicePlayingStateUnknown = -1,
+    /// Voice playback is stopped
+    TranslatedTextVoicePlayingStateStop = 0x00,
+    /// Voice is currently playing
+    TranslatedTextVoicePlayingStatePlaying = 0x01,
+    /// Voice playback is paused
+    TranslatedTextVoicePlayingStatePause = 0x02,
+    /// Voice playback has resumed from pause
+    TranslatedTextVoicePlayingStateResumed = 0x03,
+};
+
 #pragma mark - 表盘相关
 
 /// 表盘位类型
@@ -1494,7 +1514,7 @@ typedef NS_OPTIONS(UInt64, FITCLOUDMN) {
     FITCLOUDMN_DINGTALK = ((UInt64)1) << 50,
     /// 飞书通知
     FITCLOUDMN_FEISHU = ((UInt64)1) << 51,
-    /// Microsoft Teams通知
+    /// Microsoft Teams 通知
     FITCLOUDMN_TEAMS = ((UInt64)1) << 52,
 };
 

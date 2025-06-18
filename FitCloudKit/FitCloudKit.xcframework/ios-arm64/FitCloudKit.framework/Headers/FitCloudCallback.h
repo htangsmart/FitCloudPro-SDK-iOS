@@ -653,6 +653,11 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - targetLang: The target language to translate into
 - (void)onTranslateVoiceStopWithOpusVoiceData:(NSData *_Nullable)opusVoiceData decodedVoiceData:(NSData *_Nullable)voiceData sourceLanguage:(FITCLOUDLANGUAGE)sourceLang targetLanguage:(FITCLOUDLANGUAGE)targetLang;
 
+/// Notifies when the watch side toggles the translated text voice playing state
+/// - Parameters:
+///   - state: The target voice playing state
+- (void)onWatchSideToggleTranslatedTextVoicePlayingState:(TranslatedTextVoicePlayingState)state;
+
 /// Notifies that ASR (Automatic Speech Recognition) voice recording has started
 /// - Note: Called when the watch begins recording voice for ASR
 - (void)onASRVoiceBegin;

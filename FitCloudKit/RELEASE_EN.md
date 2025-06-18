@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-05-29 Version:1.3.1-beta.34 Build:20250529001
+## pcjbird 2025-06-18 Version:1.3.1-beta.35 Build:20250618001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -30,6 +30,7 @@
 - Introduce new APIs for world clock features.
 - Added support for Microsoft Teams App notifications.
 - Added support for querying the supported languages for the watch device.
+- Added `onWatchSideToggleTranslatedTextVoicePlayingState:` callback method to notify the watch side toggle translated text voice playing state.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

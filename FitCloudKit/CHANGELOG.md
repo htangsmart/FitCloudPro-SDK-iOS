@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.35 build20250618001 (2025-06-18)
+
+- Added `onWatchSideToggleTranslatedTextVoicePlayingState:` callback method to notify the watch side toggle translated text voice playing state.
+
 ## V1.3.1-beta.34 build20250529001 (2025-05-29)
 
 - Removed compilation of certain files that may cause symbol conflicts.

@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-05-29 Version:1.3.1-beta.34 Build:20250529001
+## pcjbird 2025-06-18 Version:1.3.1-beta.35 Build:20250618001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -30,6 +30,7 @@
 - 引入世界时钟功能相关的新 API。
 - 新增支持设置 Microsoft Teams App 消息提醒。
 - 新增支持查询手表设备支持的语言列表。
+- 新增 `onWatchSideToggleTranslatedTextVoicePlayingState:` 回调方法，通知 App 端手表端请求切换翻译结果语音播放状态。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
