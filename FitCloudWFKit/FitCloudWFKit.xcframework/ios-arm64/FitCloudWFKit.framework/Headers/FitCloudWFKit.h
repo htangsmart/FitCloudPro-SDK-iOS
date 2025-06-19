@@ -7,10 +7,10 @@
 //
 //  框架名称:FitCloudWFKit.xcframework
 //  框架功能:The iOS framework for the FitCloudPro smartwatch, which is designed to assist you in easily customizing your own watchface files.
-//         FitCloudPro 智能手表表盘辅助框架， 旨在帮助您轻松自定义属于您自己的表盘文件。
+//         FitCloudPro 智能手表表盘辅助框架，旨在帮助您轻松自定义属于您自己的表盘文件。
 //
-//  构建版本:
-//      pcjbird    2025-04-04  Version:1.2.0-beta.1 Build:20250404001
+//  构建版本：
+//      pcjbird    2025-06-19  Version:1.2.0-beta.2 Build:20250619001
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>

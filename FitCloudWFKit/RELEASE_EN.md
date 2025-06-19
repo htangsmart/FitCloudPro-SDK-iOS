@@ -1,8 +1,9 @@
 # RELEASES
 
-## V1.2.0-beta.1 build20250404001 (2025-04-04)
+## V1.2.0-beta.2 build20250619001 (2025-06-19)
 
 - Added support for the third version of custom watch faces on the 568X platform, including time and date coloring capabilities and the ability to write time/date styles in watch face files. Additionally, added support for Bluetrum's PAR image compression format.
+- Added patch program for the 8773 platform to address image format issues by implementing ARGB8565 format support for affected devices.
 
 ## pcjbird 2025-02-06 Version:1.1.9 Build:20250206001
 
