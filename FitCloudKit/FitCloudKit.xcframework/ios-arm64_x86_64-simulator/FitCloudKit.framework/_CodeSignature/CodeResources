@@ -90,7 +90,7 @@
 		</data>
 		<key>Headers/FitCloudDataModels.h</key>
 		<data>
-		VV/cN08ir+HCIZy8/tkis7ygJEc=
+		9/gRg4DZ8qNXeJ5uANc2s6Chxmk=
 		</data>
 		<key>Headers/FitCloudECGDefines.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
-		PTXRNJ/ixNLh7elgUY9M2En6ZQM=
+		6aVLFqsl3v4N1/a8LoAEPG8T3b0=
 		</data>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
 		<data>
@@ -127,6 +127,14 @@
 		<key>Headers/FitCloudGamePasscodeSetting.h</key>
 		<data>
 		x6HvWH+5hPxv2IU68arm8BYLY60=
+		</data>
+		<key>Headers/FitCloudGamePlayCountModel.h</key>
+		<data>
+		rAkX6DI59/O2skAs8U/svAcJhYg=
+		</data>
+		<key>Headers/FitCloudGamePlayCountStatisticsModel.h</key>
+		<data>
+		zjr+DZETtfMwXaUl4XRcfTX62WI=
 		</data>
 		<key>Headers/FitCloudGameRankingTrend.h</key>
 		<data>
@@ -202,7 +210,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		ynM66y4+YHCua/Kox9hwAnYB9mM=
+		7ATBSMnoezysENlbEnMOK0he5LI=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -382,7 +390,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jqJm8PsOxOVys1BEj2ZwQdtZW2Y=
+		JccKXtPpnoomyieWnmT/RRS2pw8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -626,11 +634,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VV/cN08ir+HCIZy8/tkis7ygJEc=
+			9/gRg4DZ8qNXeJ5uANc2s6Chxmk=
 			</data>
 			<key>hash2</key>
 			<data>
-			sAI/uoUuPa96w4wWt/XRqP3YcmS66WOaiKpnapge47I=
+			M2G8Kb6ueZpSiThw+EPKF/qCH/WDdCP7QY+4hLbahH4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudECGDefines.h</key>
@@ -692,11 +700,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PTXRNJ/ixNLh7elgUY9M2En6ZQM=
+			6aVLFqsl3v4N1/a8LoAEPG8T3b0=
 			</data>
 			<key>hash2</key>
 			<data>
-			CyVZV5UlwgunnVpGcbfo93AhqU+dko8I7IYa1/hHuY4=
+			5776xs2uSzmj/E+GuEj4BHKOswqoct2+rQ8sDjDg87w=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
@@ -730,6 +738,28 @@
 			<key>hash2</key>
 			<data>
 			LwXksvcdLW/wsYDWbv3bDkM0HWuvXUSz1hWtcDfjO/M=
+			</data>
+		</dict>
+		<key>Headers/FitCloudGamePlayCountModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rAkX6DI59/O2skAs8U/svAcJhYg=
+			</data>
+			<key>hash2</key>
+			<data>
+			WKiNj+bsGPnRnRpNjUjcnUcLyGg934zqCUAE5YB5JM0=
+			</data>
+		</dict>
+		<key>Headers/FitCloudGamePlayCountStatisticsModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zjr+DZETtfMwXaUl4XRcfTX62WI=
+			</data>
+			<key>hash2</key>
+			<data>
+			Gm6OB7MI+mdHYR2eqM/kMaO9HZ2BqgHAPW/J64jDNAg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGameRankingTrend.h</key>
@@ -934,11 +964,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ynM66y4+YHCua/Kox9hwAnYB9mM=
+			7ATBSMnoezysENlbEnMOK0he5LI=
 			</data>
 			<key>hash2</key>
 			<data>
-			yHOKwueV14fuuvh3mZ90wZYS6qX2vbnSjtBI0dnbDIM=
+			rgQJ3b2pCjgfUZFjicZ5Zi6Dm0UiX0N3wj0JwVMsXOY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>

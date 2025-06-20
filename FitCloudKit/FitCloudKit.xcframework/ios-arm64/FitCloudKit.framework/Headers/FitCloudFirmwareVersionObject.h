@@ -321,6 +321,9 @@
 /// 是否支持家长模式
 @property(nonatomic, readonly) BOOL withParentalControl;
 
+/// 是否支持统计手表游戏游玩次数
+@property(nonatomic, readonly) BOOL allowCountWatchGamePlay;
+
 /// 是否支持查询手表支持的语言
 @property(nonatomic, readonly) BOOL allowQueryWatchSupportedLanguages;
 

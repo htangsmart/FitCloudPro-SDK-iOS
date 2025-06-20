@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本：
-//      pcjbird    2025-06-18  Version:1.3.1-beta.35 Build:20250618001
+//      pcjbird    2025-06-20  Version:1.3.1-beta.36 Build:20250620001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -958,6 +958,16 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - trendsArray: Array of ranking trends, maximum 60 entries
 ///   - block: The completion handler called when the operation completes
 + (void)setGameRankingTrendsArray:(NSArray<FitCloudGameRankingTrend *> *)trendsArray completion:(FitCloudResultHandler _Nullable)block;
+
+#pragma mark - Game Play Statistics
+
+/// Query game play count statistics from the watch
+/// - Parameters:
+///   - completion: A completion handler called when the query completes. Parameters:
+///     - succeed: Whether the query was successful
+///     - statistics: The game play statistics if query successful, nil otherwise
+///     - error: Error information if query fails, nil on success
++ (void)queryGamePlayCountStatisticsWithCompletion:(void (^__nullable)(BOOL succeed, FitCloudGamePlayCountStatisticsModel *_Nullable statistics, NSError *_Nullable error))completion;
 
 #pragma mark Screen and Vibration Settings
 

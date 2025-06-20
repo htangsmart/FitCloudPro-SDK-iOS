@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.36 build20250620001 (2025-06-20)
+
+- Introduced new APIs to query game playing statistics.
+
 ## V1.3.1-beta.35 build20250618001 (2025-06-18)
 
 - Added `onWatchSideToggleTranslatedTextVoicePlayingState:` callback method to notify the watch side toggle translated text voice playing state.
