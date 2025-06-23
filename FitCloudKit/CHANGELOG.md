@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.1-beta.37 build20250623001 (2025-06-23)
+
+- Removed the `clearTranssionInfinixWatchMenstrualCorrectedDataInfoWithCompletion:` API for `Transsion Infinix` devices.
+- Introduce the `clearTranssionInfinixWatchMenstrualCorrectedStartDayWithCompletion:` API to clear the menstrual corrected start day for `Transsion Infinix` devices.
+- Introduce the `clearTranssionInfinixWatchMenstrualCorrectedEndDayWithCompletion:` API to clear the menstrual corrected end day for `Transsion Infinix` devices.
+
 ## V1.3.1-beta.36 build20250620001 (2025-06-20)
 
 - Introduced new APIs to query game playing statistics.

@@ -46,10 +46,15 @@
 ///   - completion: the completion callback
 + (void)sendTranssionInfinixWatchMenstrualCorrectedEndDay:(NSString *_Nonnull)correctedMenstrualEndDay completion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
 
-/// Clear Transsion Infinix watch menstrual corrected data info
+/// Clear Transsion Infinix watch menstrual corrected start day
 /// - Parameters:
 ///   - completion: the completion callback
-+ (void)clearTranssionInfinixWatchMenstrualCorrectedDataInfoWithCompletion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
++ (void)clearTranssionInfinixWatchMenstrualCorrectedStartDayWithCompletion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
+
+/// Clear Transsion Infinix watch menstrual corrected end day
+/// - Parameters:
+///   - completion: the completion callback
++ (void)clearTranssionInfinixWatchMenstrualCorrectedEndDayWithCompletion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
 
 /// Query Transsion Infinix watch menstrual data for the month
 /// - Parameters:

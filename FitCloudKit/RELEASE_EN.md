@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-06-20 Version:1.3.1-beta.36 Build:20250620001
+## pcjbird 2025-06-23 Version:1.3.1-beta.37 Build:20250623001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -32,6 +32,9 @@
 - Added support for querying the supported languages for the watch device.
 - Added `onWatchSideToggleTranslatedTextVoicePlayingState:` callback method to notify the watch side toggle translated text voice playing state.
 - Introduced new APIs to query game playing statistics.
+- Removed the `clearTranssionInfinixWatchMenstrualCorrectedDataInfoWithCompletion:` API for `Transsion Infinix` devices.
+- Introduce the `clearTranssionInfinixWatchMenstrualCorrectedStartDayWithCompletion:` API to clear the menstrual corrected start day for `Transsion Infinix` devices.
+- Introduce the `clearTranssionInfinixWatchMenstrualCorrectedEndDayWithCompletion:` API to clear the menstrual corrected end day for `Transsion Infinix` devices.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
