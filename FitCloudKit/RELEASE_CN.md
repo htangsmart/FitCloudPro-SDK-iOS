@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-06-23 Version:1.3.1-beta.37 Build:20250623001
+## pcjbird 2025-07-02 Version:1.3.1-beta.38 Build:20250702001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -35,6 +35,7 @@
 - 移除了用于 `Transsion Infinix` 设备的 `clearTranssionInfinixWatchMenstrualCorrectedDataInfoWithCompletion:` API。
 - 引入 `clearTranssionInfinixWatchMenstrualCorrectedStartDayWithCompletion:` API，用于清除 `Transsion Infinix` 设备的经期校正开始日期。
 - 引入 `clearTranssionInfinixWatchMenstrualCorrectedEndDayWithCompletion:` API，用于清除 `Transsion Infinix` 设备的经期校正结束日期。
+- 更新了 GPS 位置数据请求回调 API，从 `- (void)onRequestGPSLocationData` 改为 `- (void)onWatchSideRequestGPSLocationDataWithPurpose:`，以在手表请求 GPS 位置数据时提供用途信息。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

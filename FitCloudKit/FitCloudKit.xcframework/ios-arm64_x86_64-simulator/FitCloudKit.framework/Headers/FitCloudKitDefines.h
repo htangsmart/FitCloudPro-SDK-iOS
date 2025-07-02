@@ -1767,4 +1767,15 @@ typedef NS_ENUM(NSInteger, FITCLOUDAIPHOTOGENRESULT) {
     FITCLOUDAIPHOTOGENRESULT_UNKNOWN_ERROR = 0xff,
 };
 
+/// Defines the purpose for requesting location from the device side
+///
+/// This enumeration specifies various reasons why the device may request location information
+typedef NS_ENUM(NSInteger, FitCloudDeviceSideLocationRequestPurpose) {
+    /// Indicates a default location request with no specific purpose
+    FitCloudDeviceSideLocationRequestPurposeDefault = 0x00,
+    
+    /// Indicates location is being requested to enable quick start of GPS-based workout tracking
+    FitCloudDeviceSideLocationRequestPurposeGPSWorkoutQuickStart = 0x01,
+};
+
 #endif /* FitCloudKitDefines_h */

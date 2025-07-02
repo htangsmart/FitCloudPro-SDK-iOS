@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-06-23 Version:1.3.1-beta.37 Build:20250623001
+## pcjbird 2025-07-02 Version:1.3.1-beta.38 Build:20250702001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -35,6 +35,7 @@
 - Removed the `clearTranssionInfinixWatchMenstrualCorrectedDataInfoWithCompletion:` API for `Transsion Infinix` devices.
 - Introduce the `clearTranssionInfinixWatchMenstrualCorrectedStartDayWithCompletion:` API to clear the menstrual corrected start day for `Transsion Infinix` devices.
 - Introduce the `clearTranssionInfinixWatchMenstrualCorrectedEndDayWithCompletion:` API to clear the menstrual corrected end day for `Transsion Infinix` devices.
+- Updated the GPS location data request callback API from `- (void)onRequestGPSLocationData` to `- (void)onWatchSideRequestGPSLocationDataWithPurpose:` to provide purpose information when the watch requests GPS location data.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

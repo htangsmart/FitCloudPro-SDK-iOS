@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.38 build20250702001 (2025-07-02)
+
+- Updated the GPS location data request callback API from `- (void)onRequestGPSLocationData` to `- (void)onWatchSideRequestGPSLocationDataWithPurpose:` to provide purpose information when the watch requests GPS location data.
+
 ## V1.3.1-beta.37 build20250623001 (2025-06-23)
 
 - Removed the `clearTranssionInfinixWatchMenstrualCorrectedDataInfoWithCompletion:` API for `Transsion Infinix` devices.

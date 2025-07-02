@@ -728,7 +728,9 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 - (void)OnRequestCricketMatchData;
 
 /// 手表请求 GPS 定位数据
-- (void)onRequestGPSLocationData;
+/// - Parameters:
+///   - purpose: 定位请求目的
+- (void)onRequestGPSLocationDataWithPurpose:(FitCloudDeviceSideLocationRequestPurpose)purpose;
 
 /// Notifies the progress of writing GPS file to watch after uploading GPS file to watch during GPS file upgrade process
 /// - Parameters:

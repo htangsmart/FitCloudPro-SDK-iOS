@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
-		c8ZyaucwVUcDb0xS0nEYoNx7xrY=
+		WP4UW0tb+yEllgm9SncdqdYJ98M=
 		</data>
 		<key>Headers/FitCloudCapacity.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
-		6aVLFqsl3v4N1/a8LoAEPG8T3b0=
+		lcRe3Rc3GtRhVOiuteWIXnLLWpI=
 		</data>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
 		<data>
@@ -210,7 +210,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		PuuG9IdhZQBAmCx7+mglzxxN/vY=
+		IkcCIq/U5kF+BbWV/RqgpktfHME=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -218,7 +218,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		0Jd3CBKSgdC8Z9XGS+LlyFTjzgE=
+		Hl84SbUEXnVz7zWR48VhVKHXM2o=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -390,7 +390,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Y11HeF8VKq8yKNQxdoqwZshoOxU=
+		lExEwULR0RfU+3X9xs/HHhehYMc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -513,11 +513,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c8ZyaucwVUcDb0xS0nEYoNx7xrY=
+			WP4UW0tb+yEllgm9SncdqdYJ98M=
 			</data>
 			<key>hash2</key>
 			<data>
-			dn5OiW3FHu0zIjipHNCQfZhw89NIhh+qVIpbAmPNURc=
+			GvdDeQNe8aaMWv1mdxUDriNhrhrza+ycduLEy+r62tw=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCapacity.h</key>
@@ -700,11 +700,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6aVLFqsl3v4N1/a8LoAEPG8T3b0=
+			lcRe3Rc3GtRhVOiuteWIXnLLWpI=
 			</data>
 			<key>hash2</key>
 			<data>
-			5776xs2uSzmj/E+GuEj4BHKOswqoct2+rQ8sDjDg87w=
+			ya1fUbbdM3rM8DIr+/Rd9isZCh/YVZnff98QKrIm2cI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
@@ -964,11 +964,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PuuG9IdhZQBAmCx7+mglzxxN/vY=
+			IkcCIq/U5kF+BbWV/RqgpktfHME=
 			</data>
 			<key>hash2</key>
 			<data>
-			PGlABRaj32OAbv9Ngj0xGs85v8AFYzC/HiRWhTzEeY4=
+			gELANEiSmThBMRmXsGh06s4ID1sF7YqfMjClP7vt0B4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -986,11 +986,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0Jd3CBKSgdC8Z9XGS+LlyFTjzgE=
+			Hl84SbUEXnVz7zWR48VhVKHXM2o=
 			</data>
 			<key>hash2</key>
 			<data>
-			SJShKhsXoDWLnxH/M7T28U0F3UjR/PkZQgb3WFBp2bo=
+			MUXFp3IfY2SE9X0g0DmaaDShTaFanjroM8vpTNjQfQ8=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
