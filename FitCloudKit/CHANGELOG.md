@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.39 build20250718001 (2025-07-18)
+
+- Fixed an issue where loading bound user information would fail.
+
 ## V1.3.1-beta.38 build20250702001 (2025-07-02)
 
 - Updated the GPS location data request callback API from `- (void)onRequestGPSLocationData` to `- (void)onWatchSideRequestGPSLocationDataWithPurpose:` to provide purpose information when the watch requests GPS location data.
