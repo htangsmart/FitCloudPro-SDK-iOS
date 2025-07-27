@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.40 build20250728001 (2025-07-28)
+
+- Watch face size support for 160x86 square.
+
 ## V1.3.1-beta.39 build20250718001 (2025-07-18)
 
 - Fixed an issue where loading bound user information would fail.
