@@ -335,4 +335,13 @@
 /// 是否支持世界时钟
 @property(nonatomic, readonly) BOOL withWorldClock;
 
+/// 是否支持情绪功能
+@property(nonatomic, readonly) BOOL withEmotion;
+
+/// 是否支持节日祝福
+@property(nonatomic, readonly) BOOL withFestivalWish;
+
+/// 是否支持上课模式
+@property(nonatomic, readonly) BOOL withClassroomMode;
+
 @end

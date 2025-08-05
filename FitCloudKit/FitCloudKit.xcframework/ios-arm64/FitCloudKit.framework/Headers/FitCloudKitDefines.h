@@ -200,6 +200,10 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICEFEATURE) {
     FITCLOUDDEVICEFEATURE_EMERGENCYCONTACTS,
     /// World clock
     FITCLOUDDEVICEFEATURE_WORLDCLOCK,
+    /// Emotion feature
+    FITCLOUDDEVICEFEATURE_EMOTION,
+    /// Festival wish
+    FITCLOUDDEVICEFEATURE_FESTIVALWISH,
 
     /// Weather, set the watch weather information via the app
     FITCLOUDDEVICEFEATURE_WEATHER,
@@ -280,6 +284,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICECAPACITY) {
     FITCLOUDDEVICECAPACITY_AICONVERSATIONRESPONSETEXTBYTES = 0x1f,
     /// 支持的最大世界时钟数量
     FITCLOUDDEVICECAPACITY_WORLDCLOCKCOUNT = 0x20,
+    /// 支持的最大来电照片插槽数量
+    FITCLOUDDEVICECAPACITY_INCOMINGCALLPHOTOSLOTCOUNT = 0x21,
 };
 
 #pragma mark - 手表硬件
@@ -1776,6 +1782,25 @@ typedef NS_ENUM(NSInteger, FitCloudDeviceSideLocationRequestPurpose) {
     
     /// Indicates location is being requested to enable quick start of GPS-based workout tracking
     FitCloudDeviceSideLocationRequestPurposeGPSWorkoutQuickStart = 0x01,
+};
+
+#pragma mark Festival
+
+/// Represents different types of festivals that can be set on the device
+typedef NS_ENUM(NSInteger, FitCloudFestival) {
+    /// None
+    FitCloudFestivalNone = -1,
+    
+    /// Birthday
+    FitCloudFestivalBirthday = 0,
+    
+    /// Christmas
+    FitCloudFestivalChristmas = 1,
+    
+    /// New Year
+    FitCloudFestivalNewYear = 2,
+    
+    FitCloudFestivalMax = FitCloudFestivalNewYear,
 };
 
 #endif /* FitCloudKitDefines_h */

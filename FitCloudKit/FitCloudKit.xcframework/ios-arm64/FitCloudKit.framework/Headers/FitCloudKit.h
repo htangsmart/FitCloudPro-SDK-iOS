@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本：
-//      pcjbird    2025-07-28  Version:1.3.1-beta.40 Build:20250728001
+//      pcjbird    2025-08-05  Version:1.3.1-beta.41 Build:20250805001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -807,6 +807,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - block: The completion handler called with the women's health settings
 + (void)getWomenHealthSettingWithBlock:(FitCloudWomenHealthSettingResultBlock _Nullable)block;
+
+#pragma mark Classroom Mode
+
+/// Configures classroom mode settings
+/// - Parameters:
+///   - classroomModeSetting: The classroom mode settings
+///   - completion: The completion handler called when the operation completes
++ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudResultHandler _Nullable)completion;
+
+/// Retrieves classroom mode settings
+/// - Parameters:
+///   - completion: The completion handler called with the classroom mode settings
++ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion;
 
 #pragma mark Lovers Features
 
@@ -1772,6 +1785,42 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - success: Whether sending was successful
 ///     - error: Error information if sending fails, nil on success
 + (void)sendAIPhotoGenerationResult:(FITCLOUDAIPHOTOGENRESULT)resultCode completion:(FitCloudResultHandler _Nullable)completion;
+
+@end
+
+@interface FitCloudKit (IncomingCallPhoto)
+
++ (void)updateIncomingCallPhotoSlot:(NSUInteger)slotIndex withPhoneNumber:(NSString*)phoneNumber completion:(void (^_Nullable)(NSValue*_Nullable photoSize, NSError *_Nullable error))completion;
+
++ (void)clearIncomingCallPhotoSlot:(NSUInteger)slotIndex completion:(FitCloudResultHandler _Nullable)completion;
+
+/// Sends incoming call photo to the connected watch device.
+///
+/// Use this method to transfer contact photo to the watch for display. The transfer
+/// progress is reported through the progress handler, and completion status through the completion handler.
+///
+/// - Parameters:
+///   - image: The contact photo to send to the watch
+///   - progressHandler: A closure called periodically with transfer progress updates
+///     - progress: The current transfer progress from 0.0 to 1.0
+///   - completion: A closure called when the transfer completes
+///     - succeed: Whether the transfer completed successfully
+///     - avgSpeed: The average transfer speed in bytes per second
+///     - error: An error object if the transfer failed, or nil on success
++ (void)sendIncomingCallPhoto:(UIImage *)image progress:(void (^_Nullable)(CGFloat progress))progressHandler completion:(void (^_Nullable)(BOOL succeed, CGFloat avgSpeed, NSError *_Nullable error))completion;
+
+@end
+
+@interface FitCloudKit (FestivalWish)
+
+/// Sends festival wishes to the watch
+/// - Parameters:
+///   - wishArray: An array of festival wish time models containing the festival wishes to be sent
+///   - completion: the completion callback
+///
+/// This method allows sending festival wishes and greetings to be displayed on the watch at specified times.
+/// The wishes are defined using FitCloudFestivalWishTimeModel objects that specify the content and timing.
++ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudResultHandler _Nullable)completion;
 
 @end
 

@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-07-28 Version:1.3.1-beta.40 Build:20250728001
+## pcjbird 2025-08-05 Version:1.3.1-beta.41 Build:20250805001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -38,6 +38,8 @@
 - 更新了 GPS 位置数据请求回调 API，从 `- (void)onRequestGPSLocationData` 改为 `- (void)onWatchSideRequestGPSLocationDataWithPurpose:`，以在手表请求 GPS 位置数据时提供用途信息。
 - 修复了加载绑定用户信息时可能失败的问题。
 - 表盘尺寸支持 160x86 方。
+- 引入上课模式设置功能相关的 API：`+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudResultHandler _Nullable)completion` 和 `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion`。
+- 引入向手表设备发送节日祝福的 API：`+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudResultHandler _Nullable)completion`。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

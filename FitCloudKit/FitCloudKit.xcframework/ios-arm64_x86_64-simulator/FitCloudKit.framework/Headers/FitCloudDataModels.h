@@ -19,6 +19,9 @@
 #import <FitCloudKit/FitCloudAIHealthAdvicesModel.h>
 #import <FitCloudKit/FitCloudWorldClockModel.h>
 #import <FitCloudKit/FitCloudGamePlayCountStatisticsModel.h>
+#import <FitCloudKit/FitCloudIncomingCallPhotoSlotModel.h>
+#import <FitCloudKit/FitCloudFestivalWishTimeModel.h>
+#import <FitCloudKit/FitCloudClassroomModeSettingsModel.h>
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>

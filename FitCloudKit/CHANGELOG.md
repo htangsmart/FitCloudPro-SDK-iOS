@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.41 build20250805001 (2025-08-05)
+
+- Introduce the `+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudResultHandler _Nullable)completion` and `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion` API for classroom mode settings features.
+- Introduce the `+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudResultHandler _Nullable)completion` API for sending festival wishes to the watch device.
+
 ## V1.3.1-beta.40 build20250728001 (2025-07-28)
 
 - Watch face size support for 160x86 square.
