@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.42 build20250806001 (2025-08-06)
+
+- Fixed an issue where the `FitCloudClassroomModeSettingsModel` class was not being declared correctly.
+
 ## V1.3.1-beta.41 build20250805001 (2025-08-05)
 
 - Introduce the `+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudResultHandler _Nullable)completion` and `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion` API for classroom mode settings features.
