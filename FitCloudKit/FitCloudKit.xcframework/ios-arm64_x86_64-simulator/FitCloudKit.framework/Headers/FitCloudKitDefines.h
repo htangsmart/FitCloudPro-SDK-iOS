@@ -431,6 +431,11 @@ typedef NS_OPTIONS(UInt16, FITCLOUDPREFER) {
     /// - 0: 英制
     /// - 1: 公制
     FITCLOUDPREFER_METRICWEIGHT = 1 << 8,
+    
+    /// 体温单位
+    /// - 0: 摄氏度
+    /// - 1: 华氏度
+    FITCLOUDPREFER_BODYTEMPERATURE_FAHRENHEIT = 1 << 9,
 };
 
 #pragma mark - 手表语言
@@ -1522,6 +1527,14 @@ typedef NS_OPTIONS(UInt64, FITCLOUDMN) {
     FITCLOUDMN_FEISHU = ((UInt64)1) << 51,
     /// Microsoft Teams 通知
     FITCLOUDMN_TEAMS = ((UInt64)1) << 52,
+    /// Google Play通知
+    FITCLOUDMN_GOOGLEPLAY = ((UInt64)1) << 53,
+    /// Google Drive通知
+    FITCLOUDMN_GOOGLEDRIVE = ((UInt64)1) << 54,
+    /// JioHotstar通知
+    FITCLOUDMN_JIOHOTSTAR = ((UInt64)1) << 55,
+    /// Paytm通知
+    FITCLOUDMN_PAYTM = ((UInt64)1) << 56,
 };
 
 #pragma mark - 内置个性化提醒定义(高级提醒)

@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## V1.3.1-beta.43 build20250808001 (2025-08-08)
+
+- Introduced new APIs for incoming call photo features.
+- Added support for Google Pay/Google Drive/JioHotstar/Paytm App notifications.
+- Added AQI (Air Quality Index) parameter to weather data.
+- Added support for body temperature unit preference settings (Celsius/Fahrenheit).
+
 ## V1.3.1-beta.42 build20250806001 (2025-08-06)
 
 - Fixed an issue where the `FitCloudClassroomModeSettingsModel` class was not being declared correctly.

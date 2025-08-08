@@ -182,7 +182,7 @@
 		</data>
 		<key>Headers/FitCloudIncomingCallPhotoSlotModel.h</key>
 		<data>
-		ECC9iNh/LrOX5qpfwfsTsp1lu/M=
+		ENn8QIXkttfw5KVqUO9hYgxG3wQ=
 		</data>
 		<key>Headers/FitCloudIslamicDateModel.h</key>
 		<data>
@@ -222,7 +222,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		1xJbJ4p5h/SrwszDaZ2BGj5vHAQ=
+		8ItM/BvMW9j9+iIoBgr+mhC4SW8=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -230,7 +230,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		fGV3nAAADmZgJ9U8izU+CxnaEvo=
+		jbaELPCu7rquJ3Rpfh8woN0aAZc=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -358,7 +358,7 @@
 		</data>
 		<key>Headers/FitCloudWeatherObject.h</key>
 		<data>
-		drgifoWc79g2LNyKaTfIBOBPK6Y=
+		QKTyE+2ci6iRYZzU2BVtjWvxg/Y=
 		</data>
 		<key>Headers/FitCloudWomenHealthSetting.h</key>
 		<data>
@@ -402,7 +402,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0XXsofnE4HGOdIcPxu8fdbRGoIw=
+		iQ8hs6RvA00RJfxqC0PBQ4xpg+U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -899,11 +899,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ECC9iNh/LrOX5qpfwfsTsp1lu/M=
+			ENn8QIXkttfw5KVqUO9hYgxG3wQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			R0qj5cmpgg80wzO6+RZ3g56KXD4EA3tyHArGovdc9z4=
+			LRz5zTUYa3RXDhCJQa8fc6/f47+hQyacpUIFhuB2Rjs=
 			</data>
 		</dict>
 		<key>Headers/FitCloudIslamicDateModel.h</key>
@@ -1009,11 +1009,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1xJbJ4p5h/SrwszDaZ2BGj5vHAQ=
+			8ItM/BvMW9j9+iIoBgr+mhC4SW8=
 			</data>
 			<key>hash2</key>
 			<data>
-			wPDinCEGsMQJOveDCymi5HokBDJyMzw5S3f0+iwYlUU=
+			nu1bKWL3Ry2gYg/vWBKbTrohmmKVKV2aCd7FKJr7Cgg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -1031,11 +1031,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fGV3nAAADmZgJ9U8izU+CxnaEvo=
+			jbaELPCu7rquJ3Rpfh8woN0aAZc=
 			</data>
 			<key>hash2</key>
 			<data>
-			NfPENuAoi6DhuBqkWIw+Lc5HXXF0V+ZcSetEeH0m/zw=
+			koYyH3HnA3R3k8lSEVu4wm3XmpIh9Op/xceFKmRyaNY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
@@ -1383,11 +1383,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			drgifoWc79g2LNyKaTfIBOBPK6Y=
+			QKTyE+2ci6iRYZzU2BVtjWvxg/Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			ziBeCiGak93ijE/vnyrwVzKfO44IoPnFjyq9ZNX3VA4=
+			Ew30Lu6qAOTRF2GfRzbeLVROnsjMC+793jvtTe10RoY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudWomenHealthSetting.h</key>

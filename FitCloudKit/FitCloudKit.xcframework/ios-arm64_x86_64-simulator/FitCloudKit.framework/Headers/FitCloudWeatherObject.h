@@ -61,4 +61,7 @@
 /// 能见度，最大30000米，单位：米
 @property(nonatomic, assign) UInt16 visibility;
 
+/// 空气质量指数(0~400)
+@property(nonatomic, assign) UInt16 airQualityIndex;
+
 @end

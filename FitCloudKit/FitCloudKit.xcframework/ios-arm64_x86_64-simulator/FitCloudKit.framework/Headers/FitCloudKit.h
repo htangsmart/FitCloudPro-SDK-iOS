@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本：
-//      pcjbird    2025-08-06  Version:1.3.1-beta.42 Build:20250806001
+//      pcjbird    2025-08-08  Version:1.3.1-beta.43 Build:20250808001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1790,24 +1790,43 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FitCloudKit (IncomingCallPhoto)
 
-+ (void)updateIncomingCallPhotoSlot:(NSUInteger)slotIndex withPhoneNumber:(NSString*)phoneNumber completion:(void (^_Nullable)(NSValue*_Nullable photoSize, NSError *_Nullable error))completion;
+/// Queries the suggested size for incoming call contact photos
+/// - Parameters:
+///   - completion: The completion handler called with the query result
+///     - succeed: Whether the query was successful
+///     - photoSize: An NSValue containing the suggested CGSize for photos, or nil if query failed
+///     - error: An error object if the query failed, or nil on success
+/// 
+/// Use this method to get the recommended dimensions for contact photos that will be displayed for incoming calls on the watch.
+/// The watch may have specific size requirements to optimize display and storage of these photos.
++ (void)queryIncomingCallPhotoSuggestedSizeWithCompletion:(void (^_Nullable)(BOOL succeed, NSValue*_Nullable photoSize, NSError *_Nullable error))completion;
 
+/// Queries the available photo slots for incoming call display on the watch
+/// - Parameters:
+///   - completion: A block called when the query completes
+///     - succeed: Whether the query was successful
+///     - slots: An array of photo slot models containing information about each available slot, or nil if query failed
+///     - error: Any error that occurred during the query, or nil if successful
++ (void)queryIncomingCallPhotoSlotsWithCompletion:(void (^_Nullable)(BOOL succeed, NSArray<FitCloudIncomingCallPhotoSlotModel *> *_Nullable slots, NSError *_Nullable error))completion;
+
+/// Updates a photo slot for incoming call display on the watch
+/// - Parameters:
+///   - slotIndex: The index of the photo slot to update (0-based)
+///   - phoneNumber: The phone number associated with this photo
+///   - image: The contact photo to display for incoming calls
+///   - progressHandler: A block called with progress updates during the transfer (0.0 to 1.0)
+///   - completion: A block called when the update completes
+///     - succeed: Whether the update was successful
+///     - avgSpeed: The average transfer speed in bytes per second
+///     - error: Any error that occurred during the update, or nil if successful
++ (void)updateIncomingCallPhotoSlot:(NSUInteger)slotIndex withPhoneNumber:(NSString*)phoneNumber photo:(UIImage*)image progress:(void (^_Nullable)(CGFloat progress))progressHandler completion:(void (^_Nullable)(BOOL succeed, CGFloat avgSpeed, NSError *_Nullable error))completion;
+
+/// Clears a photo slot used for incoming call display
+/// - Parameters:
+///   - slotIndex: The index of the photo slot to clear (0-based)
+///   - completion: A block called when the clear operation completes
 + (void)clearIncomingCallPhotoSlot:(NSUInteger)slotIndex completion:(FitCloudResultHandler _Nullable)completion;
 
-/// Sends incoming call photo to the connected watch device.
-///
-/// Use this method to transfer contact photo to the watch for display. The transfer
-/// progress is reported through the progress handler, and completion status through the completion handler.
-///
-/// - Parameters:
-///   - image: The contact photo to send to the watch
-///   - progressHandler: A closure called periodically with transfer progress updates
-///     - progress: The current transfer progress from 0.0 to 1.0
-///   - completion: A closure called when the transfer completes
-///     - succeed: Whether the transfer completed successfully
-///     - avgSpeed: The average transfer speed in bytes per second
-///     - error: An error object if the transfer failed, or nil on success
-+ (void)sendIncomingCallPhoto:(UIImage *)image progress:(void (^_Nullable)(CGFloat progress))progressHandler completion:(void (^_Nullable)(BOOL succeed, CGFloat avgSpeed, NSError *_Nullable error))completion;
 
 @end
 

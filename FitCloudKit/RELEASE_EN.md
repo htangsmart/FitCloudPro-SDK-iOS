@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-08-06 Version:1.3.1-beta.42 Build:20250806001
+## pcjbird 2025-08-08 Version:1.3.1-beta.43 Build:20250808001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -40,6 +40,10 @@
 - Watch face size support for 160x86 square.
 - Introduce the `+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudResultHandler _Nullable)completion` and `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion` API for classroom mode settings features.
 - Introduce the `+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudResultHandler _Nullable)completion` API for sending festival wishes to the watch device.
+- Introduced new APIs for incoming call photo features.
+- Added support for Google Pay/Google Drive/JioHotstar/Paytm App notifications.
+- Added AQI (Air Quality Index) parameter to weather data.
+- Added support for body temperature unit preference settings (Celsius/Fahrenheit).
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

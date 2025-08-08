@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-08-06 Version:1.3.1-beta.42 Build:20250806001
+## pcjbird 2025-08-08 Version:1.3.1-beta.43 Build:20250808001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -40,6 +40,10 @@
 - 表盘尺寸支持 160x86 方。
 - 引入上课模式设置功能相关的 API：`+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudResultHandler _Nullable)completion` 和 `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion`。
 - 引入向手表设备发送节日祝福的 API：`+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudResultHandler _Nullable)completion`。
+- 引入来电显示照片相关的新 API。
+- 新增支持 Google Pay/Google Drive/JioHotstar/Paytm 应用程序通知。
+- 天气数据中新增空气质量指数 (AQI) 参数。
+- 新增体温单位偏好设置支持（摄氏度/华氏度）。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 
