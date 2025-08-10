@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-08-08 Version:1.3.1-beta.43 Build:20250808001
+## pcjbird 2025-08-10 Version:1.3.1-beta.44 Build:20250810001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -44,6 +44,7 @@
 - Added support for Google Pay/Google Drive/JioHotstar/Paytm App notifications.
 - Added AQI (Air Quality Index) parameter to weather data.
 - Added support for body temperature unit preference settings (Celsius/Fahrenheit).
+- Added support for syncing emotion data from the watch device.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

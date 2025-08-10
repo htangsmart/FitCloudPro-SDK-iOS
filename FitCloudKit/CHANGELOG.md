@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.44 build20250810001 (2025-08-10)
+
+- Added support for syncing emotion data from the watch device.
+
 ## V1.3.1-beta.43 build20250808001 (2025-08-08)
 
 - Introduced new APIs for incoming call photo features.

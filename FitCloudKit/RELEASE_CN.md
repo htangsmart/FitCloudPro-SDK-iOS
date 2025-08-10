@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-08-08 Version:1.3.1-beta.43 Build:20250808001
+## pcjbird 2025-08-10 Version:1.3.1-beta.44 Build:20250810001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -44,6 +44,7 @@
 - 新增支持 Google Pay/Google Drive/JioHotstar/Paytm 应用程序通知。
 - 天气数据中新增空气质量指数 (AQI) 参数。
 - 新增体温单位偏好设置支持（摄氏度/华氏度）。
+- 新增从手表同步情绪数据。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

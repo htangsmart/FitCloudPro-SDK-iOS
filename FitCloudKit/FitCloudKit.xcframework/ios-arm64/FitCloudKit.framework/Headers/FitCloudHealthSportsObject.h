@@ -233,6 +233,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+#pragma mark - 情绪
+
+@interface FitCloudEmotionItemObject: FitCloudManualSyncItemObject
+
+/// 情绪值：0～255
+/// [0, 40) 不愉悦，[40, 70) 平静，[70, 100] 愉悦
+@property(nonatomic, assign) UInt8 value;
+
+@end
+
+@interface FitCloudEmotionRecordObject: FitCloudManualSyncRecordObject <FitCloudEmotionItemObject *>
+
+
+@end
+
 #pragma mark - Workout
 
 /// A class representing workout data items from the watch's sports mode
