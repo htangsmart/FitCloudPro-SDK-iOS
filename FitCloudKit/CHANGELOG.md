@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.45 build20250811001 (2025-08-11)
+
+- Fixed an issue when creating AI photo file and incoming call photo file.
+
 ## V1.3.1-beta.44 build20250810001 (2025-08-10)
 
 - Added support for syncing emotion data from the watch device.

@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-08-10 Version:1.3.1-beta.44 Build:20250810001
+## pcjbird 2025-08-11 Version:1.3.1-beta.45 Build:20250811001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
