@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本：
-//      pcjbird    2025-08-11  Version:1.3.1-beta.45 Build:20250811001
+//      pcjbird    2025-08-16  Version:1.3.1-beta.46 Build:20250816001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -820,6 +820,23 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - completion: The completion handler called with the classroom mode settings
 + (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion;
+
+
+#pragma mark Emotion Settings
+
+/// Configures emotion monitoring settings
+/// - Parameters:
+///   - settings: The emotion monitoring settings
+///   - completion: The completion handler called when the operation completes
++ (void)sendEmotionSettings:(FitCloudEmotionSettingsModel *_Nonnull)settings completion:(FitCloudResultHandler _Nullable)completion;
+
+/// Retrieves emotion monitoring settings
+/// - Parameters:
+///   - completion: The completion handler called with the emotion monitoring settings
+///     - success: Whether the operation was successful
+///     - settings: The retrieved emotion monitoring settings
+///     - error: Error information if operation fails, nil on success
++ (void)queryEmotionSettingsWithCompletion:(void (^_Nullable)(BOOL success, FitCloudEmotionSettingsModel *_Nullable settings, NSError *_Nullable error))completion;
 
 #pragma mark Lovers Features
 

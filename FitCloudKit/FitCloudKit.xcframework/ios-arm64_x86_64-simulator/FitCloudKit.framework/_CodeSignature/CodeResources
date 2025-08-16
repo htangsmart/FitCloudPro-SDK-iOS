@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/FitCloudDataModels.h</key>
 		<data>
-		v5RXbNY5zIp1GzsH9tbcTKsFwjA=
+		tXFwn2Fz+LCgC4jav8r7PV9vWIc=
 		</data>
 		<key>Headers/FitCloudECGDefines.h</key>
 		<data>
@@ -107,6 +107,10 @@
 		<key>Headers/FitCloudEmergencyContactObject.h</key>
 		<data>
 		/YR9wrNueUw1ARHMhCXvR7gF+B8=
+		</data>
+		<key>Headers/FitCloudEmotionSettingsModel.h</key>
+		<data>
+		bRuG8rpbElKKqezO1sgYSpE9hnw=
 		</data>
 		<key>Headers/FitCloudEvent.h</key>
 		<data>
@@ -222,7 +226,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		8nggaRVOzM1YAKLgMuUcaPM5o6g=
+		iACBOgO1Zyo8V3PdFVECxj/28eo=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -402,7 +406,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sJC0FFExKZ2jKfb+N7jtEwqZ7pM=
+		PlbXUSGtE2QopXYA/LTJn7akRt4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -657,11 +661,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v5RXbNY5zIp1GzsH9tbcTKsFwjA=
+			tXFwn2Fz+LCgC4jav8r7PV9vWIc=
 			</data>
 			<key>hash2</key>
 			<data>
-			XpyxsiRA8+XlJZqyL+vCSjvZWHtmgQIuC8zjf5dH0fI=
+			rEk2l9dFVNQFLMW4YzDEvEGGN6weBiSeWZpIPjjLpkc=
 			</data>
 		</dict>
 		<key>Headers/FitCloudECGDefines.h</key>
@@ -695,6 +699,17 @@
 			<key>hash2</key>
 			<data>
 			BkCNEtHfhFxnd7qom25zTkQiK8syJVU1LOiGfu960+4=
+			</data>
+		</dict>
+		<key>Headers/FitCloudEmotionSettingsModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bRuG8rpbElKKqezO1sgYSpE9hnw=
+			</data>
+			<key>hash2</key>
+			<data>
+			L5uYK6hEw03IQaxIRy+DjNY8NUWWtHipOVpuFW6uxtM=
 			</data>
 		</dict>
 		<key>Headers/FitCloudEvent.h</key>
@@ -1009,11 +1024,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8nggaRVOzM1YAKLgMuUcaPM5o6g=
+			iACBOgO1Zyo8V3PdFVECxj/28eo=
 			</data>
 			<key>hash2</key>
 			<data>
-			zQ5hjSLpZ3LHppxVCbHhr7FuiSxRD0nhC3Y7xFCKROI=
+			WFtXs+DQDg6m5CkG5rGFXR0f8JJaibqLZymMGSauzmQ=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>

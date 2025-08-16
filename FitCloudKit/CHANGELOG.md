@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.46 build20250816001 (2025-08-16)
+
+- Added support for emotion monitoring settings.
+
 ## V1.3.1-beta.45 build20250811001 (2025-08-11)
 
 - Fixed an issue when creating AI photo file and incoming call photo file.
