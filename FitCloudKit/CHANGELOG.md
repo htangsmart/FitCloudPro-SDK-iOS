@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.47 build20250818001 (2025-08-18)
+
+- Fixed an issue where emotion data synchronization was not working properly.
+
 ## V1.3.1-beta.46 build20250816001 (2025-08-16)
 
 - Added support for emotion monitoring settings.
