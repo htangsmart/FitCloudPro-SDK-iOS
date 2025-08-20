@@ -26,6 +26,22 @@
 
 ## Releases
 
+V1.3.3 Build20250820001
+
+```
+  Release Date：2025-08-20
+  Features：
+  1.Add error codes localization in Khmer language.
+```
+
+V1.3.2 Build20250130001
+
+```
+  Release Date：2025-01-30
+  Features：
+  1.Bump RTKLEFoundation.xcframework and RTKOTASDK.xcframework from 1.12.0 to 1.12.1 to fix some crash issue and optimize the data sending mechanism.
+```
+
 V1.3.1 Build20240930001
 
 ```
