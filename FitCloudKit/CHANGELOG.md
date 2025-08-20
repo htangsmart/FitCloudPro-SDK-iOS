@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.48 build20250820001 (2025-08-20)
+
+- Added support for Khmer localization.
+
 ## V1.3.1-beta.47 build20250818001 (2025-08-18)
 
 - Fixed an issue where emotion data synchronization was not working properly.
