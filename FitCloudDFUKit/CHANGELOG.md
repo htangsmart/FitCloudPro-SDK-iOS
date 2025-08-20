@@ -1,6 +1,10 @@
 # CHANGELOG
 
-## V1.3.2 build202501300001 (2025-01-30)
+## V1.3.3 build20250820001 (2025-08-20)
+
+- Add error codes localization in `Khmer` language.
+
+## V1.3.2 build20250130001 (2025-01-30)
 
 - Release FitCloudDFUKit V1.3.2 build20250130001.
 

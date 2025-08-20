@@ -1,5 +1,9 @@
 # 版本更新日志
 
+## V1.3.3 build20250820001 (2025-08-20)
+
+- 新增`高棉语`错误码本地化支持。
+
 ## pcjbird 2025-01-30 Version:1.3.2 Build:20250130001
 
 - 将`RTKLEFoundation.xcframework`和`RTKOTASDK.xcframeframework`从`1.12.0`升级到`1.12.1`，以修复一些崩溃问题并优化数据发送机制。
@@ -13,7 +17,7 @@
 - 更新 Realtek 固件升级 SDK，支持 8773 型号芯片
 - 更新 Realtek 固件升级 SDK，解决蓝牙关闭不及时回调错误的问题
 - 新增选项，支持 Realtek 升级程序设置回调完成前不等待断连动作，
-- 更新 Realtek 固件升级 SDK，解决之前部分芯片平台固件升级报错的问题，并修正 Realtek 的版本号(原先原厂填错了版本号)
+- 更新 Realtek 固件升级 SDK，解决之前部分芯片平台固件升级报错的问题，并修正 Realtek 的版本号 (原先原厂填错了版本号)
 - Xcode 16 适配
 
 ## pcjbird 2022-12-30 Version:1.3.0 Build:202212300001

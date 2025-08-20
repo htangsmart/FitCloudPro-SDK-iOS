@@ -1,5 +1,9 @@
 # RELEASES
 
+## V1.3.3 build20250820001 (2025-08-20)
+
+- Add error codes localization in `Khmer` language.
+
 ## pcjbird 2025-01-30 V1.3.2 build20250130001
 
 - Bump `RTKLEFoundation.xcframework` and `RTKOTASDK.xcframework` from `1.12.0` to `1.12.1` to fix some crash issue and optimize the data sending mechanism.
