@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.2.0 build20250820001 (2025-08-20)
+
+- Add error codes localization in `Khmer` language.
+
 ## V1.2.0-beta.2 build20250619001 (2025-06-19)
 
 - Added patch program for the 8773 platform to address image format issues by implementing ARGB8565 format support for affected devices.

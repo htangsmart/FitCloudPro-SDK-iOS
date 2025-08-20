@@ -38,11 +38,11 @@
 
 #### The iOS framework for the FitCloudPro smartwatch, which is designed to assist you in easily customizing your own watchface files.
 
-![Pod Version](http://img.shields.io/badge/pod-v1.1.9-blue)
+![Pod Version](http://img.shields.io/badge/pod-v1.2.0-blue)
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
-![GitHub release](http://img.shields.io/badge/release-v1.1.9-blue)
-![GitHub release](http://img.shields.io/badge/release%20date-2025.02.06-green)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.2.0%20beta.2-brightgreen)
+![GitHub release](http://img.shields.io/badge/release-v1.2.0-blue)
+![GitHub release](http://img.shields.io/badge/release%20date-2025.08.20-green)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.2.0-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek-blueviolet)
 
 - [中文文档(Chinese Doc)](FitCloudWFKit/README.md)
