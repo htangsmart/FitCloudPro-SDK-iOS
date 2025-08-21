@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.49 build20250821001 (2025-08-21)
+
+- Added `FitCloudDeviceSideLocationRequestPurposeGPSWorkoutAccurate` purpose for requesting precise location during GPS workouts.
+
 ## V1.3.1-beta.48 build20250820001 (2025-08-20)
 
 - Added support for Khmer localization.

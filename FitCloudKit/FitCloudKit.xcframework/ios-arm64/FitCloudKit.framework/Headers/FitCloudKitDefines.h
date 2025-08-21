@@ -1527,13 +1527,13 @@ typedef NS_OPTIONS(UInt64, FITCLOUDMN) {
     FITCLOUDMN_FEISHU = ((UInt64)1) << 51,
     /// Microsoft Teams 通知
     FITCLOUDMN_TEAMS = ((UInt64)1) << 52,
-    /// Google Play通知
+    /// Google Play 通知
     FITCLOUDMN_GOOGLEPLAY = ((UInt64)1) << 53,
-    /// Google Drive通知
+    /// Google Drive 通知
     FITCLOUDMN_GOOGLEDRIVE = ((UInt64)1) << 54,
-    /// JioHotstar通知
+    /// JioHotstar 通知
     FITCLOUDMN_JIOHOTSTAR = ((UInt64)1) << 55,
-    /// Paytm通知
+    /// Paytm 通知
     FITCLOUDMN_PAYTM = ((UInt64)1) << 56,
 };
 
@@ -1795,6 +1795,9 @@ typedef NS_ENUM(NSInteger, FitCloudDeviceSideLocationRequestPurpose) {
     
     /// Indicates location is being requested to enable quick start of GPS-based workout tracking
     FitCloudDeviceSideLocationRequestPurposeGPSWorkoutQuickStart = 0x01,
+    
+    /// Indicates location is being requested for accurate tracking of GPS-based workouts
+    FitCloudDeviceSideLocationRequestPurposeGPSWorkoutAccurate = 0x02,
 };
 
 #pragma mark Festival

@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-08-20 Version:1.3.1-beta.48 Build:20250820001
+## pcjbird 2025-08-21 Version:1.3.1-beta.49 Build:20250821001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
