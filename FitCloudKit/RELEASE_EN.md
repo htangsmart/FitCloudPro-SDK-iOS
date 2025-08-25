@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-08-21 Version:1.3.1-beta.49 Build:20250821001
+## pcjbird 2025-08-25 Version:1.3.1-beta.50 Build:20250825001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -46,6 +46,7 @@
 - Added support for body temperature unit preference settings (Celsius/Fahrenheit).
 - Added support for syncing emotion data from the watch device.
 - Added support for Khmer localization.
+- Watch face size support for 402x402 square.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

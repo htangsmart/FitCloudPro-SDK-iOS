@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.50 build20250825001 (2025-08-25)
+
+- Watch face size support for 402x402 square.
+
 ## V1.3.1-beta.49 build20250821001 (2025-08-21)
 
 - Added `FitCloudDeviceSideLocationRequestPurposeGPSWorkoutAccurate` purpose for requesting precise location during GPS workouts.
