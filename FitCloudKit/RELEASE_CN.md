@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-08-25 Version:1.3.1-beta.50 Build:20250825001
+## pcjbird 2025-08-29 Version:1.3.1-beta.51 Build:20250829001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -47,6 +47,8 @@
 - 新增从手表同步情绪数据。
 - 新增`高棉语`支持。
 - 表盘尺寸支持 402x402 方。
+- 新增标志位用于表示手表设备是否应该禁用微信运动功能。
+- 新增标志位用于表示手表设备是否应该禁用血压私人模式功能。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

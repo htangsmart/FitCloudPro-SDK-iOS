@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.51 build20250829001 (2025-08-29)
+
+- Added flag to indicate whether the watch device should disable wechat sports feature.
+- Added flag to indicate whether the watch device should disable blood pressure private mode feature.
+
 ## V1.3.1-beta.50 build20250825001 (2025-08-25)
 
 - Watch face size support for 402x402 square.
