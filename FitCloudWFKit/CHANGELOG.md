@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.2.1-beta.1 build20250830001 (2025-08-30)
+
+- Fixed some Italian translations.
+
 ## V1.2.0 build20250820001 (2025-08-20)
 
 - Add error codes localization in `Khmer` language.

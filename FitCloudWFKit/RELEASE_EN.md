@@ -1,5 +1,9 @@
 # RELEASES
 
+## V1.2.1-beta.1 build20250830001 (2025-08-30)
+
+- Fixed some Italian translations.
+
 ## V1.2.0 build20250820001 (2025-08-20)
 
 - Added support for the third version of custom watch faces on the 568X platform, including time and date coloring capabilities and the ability to write time/date styles in watch face files. Additionally, added support for Bluetrum's PAR image compression format.
