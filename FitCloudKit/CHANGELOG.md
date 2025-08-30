@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.52 build20250830001 (2025-08-30)
+
+- Fixed some Italian translations.
+
 ## V1.3.1-beta.51 build20250829001 (2025-08-29)
 
 - Added flag to indicate whether the watch device should disable wechat sports feature.
