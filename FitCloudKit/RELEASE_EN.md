@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-08-30 Version:1.3.1-beta.52 Build:20250830001
+## pcjbird 2025-09-11 Version:1.3.1-beta.53 Build:20250911001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -49,6 +49,7 @@
 - Watch face size support for 402x402 square.
 - Added flag to indicate whether the watch device should disable wechat sports feature.
 - Added flag to indicate whether the watch device should disable blood pressure private mode feature.
+- Added SDK initialization option `secsPairingRequestConfirmTimeOut` to configure the timeout period for awaiting pairing confirmation from the watch device.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

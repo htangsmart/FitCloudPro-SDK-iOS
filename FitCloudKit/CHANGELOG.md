@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.53 build20250911001 (2025-09-11)
+
+- Added SDK initialization option `secsPairingRequestConfirmTimeOut` to configure the timeout period for awaiting pairing confirmation from the watch device.
+
 ## V1.3.1-beta.52 build20250830001 (2025-08-30)
 
 - Fixed some Italian translations.

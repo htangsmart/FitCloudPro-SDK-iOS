@@ -3,7 +3,7 @@
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/5/19.
-//  Copyright © 2018年 Zero Status. All rights reserved.
+//  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -33,6 +33,11 @@
 ///
 /// > Important: The default value is 10s
 @property(nonatomic, assign) NSTimeInterval secsCommandTimeOut;
+
+/// The pairing request confirm timeout time in seconds
+///
+/// > Important: The default value is 20s
+@property(nonatomic, assign) NSTimeInterval secsPairingRequestConfirmTimeOut;
 
 /// Bluetooth packet transmission interval, in milliseconds
 ///
