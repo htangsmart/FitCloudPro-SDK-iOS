@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.55 build20250921001 (2025-09-21)
+
+- Prevent data synchronization and execution of other commands during OTA upgrade process.
+
 ## V1.3.1-beta.54 build20250920001 (2025-09-20)
 
 - Added more SDK debug logs.
