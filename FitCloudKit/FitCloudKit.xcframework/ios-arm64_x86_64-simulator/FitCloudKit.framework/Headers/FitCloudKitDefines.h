@@ -1825,4 +1825,85 @@ typedef NS_ENUM(NSInteger, FitCloudFestival) {
     FitCloudFestivalMax = FitCloudFestivalNewYear,
 };
 
+#pragma mark Workout summary data type
+
+/// Workout summary data type
+typedef NS_ENUM(NSInteger, FitCloudWorkoutSummaryDataType) {
+    /// Unknown
+    FitCloudWorkoutSummaryDataTypeUnknown = -1,
+    
+    /// Steps, unit: step
+    FitCloudWorkoutSummaryDataTypeSteps = 0,
+    
+    /// Distance, unit: meter
+    FitCloudWorkoutSummaryDataTypeDistance = 1,
+    
+    /// Calories, unit: cal
+    FitCloudWorkoutSummaryDataTypeCalories = 2,
+
+    /// Average speed, unit: m/s
+    FitCloudWorkoutSummaryDataTypeAvgSpeed = 3,
+
+    /// Maximum speed, unit: m/s
+    FitCloudWorkoutSummaryDataTypeMaxSpeed = 4,
+
+    /// Minimum speed, unit: m/s
+    FitCloudWorkoutSummaryDataTypeMinSpeed = 5,
+
+    /// Average pace, unit: s/m
+    FitCloudWorkoutSummaryDataTypeAvgPace = 6,
+
+    /// Slowest pace, unit: s/m
+    FitCloudWorkoutSummaryDataTypeSlowestPace = 7,
+
+    /// Fastest pace, unit: s/m 
+    FitCloudWorkoutSummaryDataTypeFastestPace = 8,
+
+    /// Average heart rate, unit: BPM
+    FitCloudWorkoutSummaryDataTypeAvgHeartRate = 9,
+
+    /// Maximum heart rate, unit: BPM
+    FitCloudWorkoutSummaryDataTypeMaxHeartRate = 10,
+
+    /// Minimum heart rate, unit: BPM
+    FitCloudWorkoutSummaryDataTypeMinHeartRate = 11,
+
+    /// Average cadence, unit: step/min
+    FitCloudWorkoutSummaryDataTypeAvgCadence = 12,
+
+    /// Maximum cadence, unit: step/min
+    FitCloudWorkoutSummaryDataTypeMaxCadence = 13,
+
+    /// Minimum cadence, unit: step/min
+    FitCloudWorkoutSummaryDataTypeMinCadence = 14,
+
+    /// Average stride, unit: meter
+    FitCloudWorkoutSummaryDataTypeAvgStride = 15,
+
+    /// Duration, unit: second
+    FitCloudWorkoutSummaryDataTypeDuration = 16,
+
+    /// Workout type
+    FitCloudWorkoutSummaryDataTypeWorkoutType = 17,
+
+    /// Heart rate zone - warm up duration (in minutes)
+    FitCloudWorkoutSummaryDataTypeHeartRateWarmUpDuration = 18,
+
+    /// Heart rate zone - fat burning duration (in minutes)
+    FitCloudWorkoutSummaryDataTypeHeartRateFatBurningDuration = 19,
+
+    /// Heart rate zone - aerobic duration (in minutes)
+    FitCloudWorkoutSummaryDataTypeHeartRateAerobicDuration = 20,
+
+    /// Heart rate zone - anaerobic duration (in minutes)
+    FitCloudWorkoutSummaryDataTypeHeartRateAnaerobicDuration = 21,
+
+    /// Heart rate zone - extreme duration (in minutes)
+    FitCloudWorkoutSummaryDataTypeHeartRateExtremeDuration = 22,
+    
+
+    FitCloudWorkoutSummaryDataTypeMax = FitCloudWorkoutSummaryDataTypeHeartRateExtremeDuration,
+};
+
+
 #endif /* FitCloudKitDefines_h */

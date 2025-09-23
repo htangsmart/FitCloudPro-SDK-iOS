@@ -10,6 +10,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <FitCloudKit/FitCloudKitDefines.h>
 #import <FitCloudKit/FitCloudSecureCoding.h>
+#import <FitCloudKit/FitCloudWorkoutSummaryDataModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -356,6 +357,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// Array of heart rate data models collected during sports activity
 /// - Note: Contains timestamped BPM readings throughout the workout
 @property(nonatomic, strong, nullable) NSArray<FitCloudBPMDataModel *> *bpmDataArray;
+
+
+/// An array of workout summary data models that were calculated on the watch device
+/// - Note: This property contains workout summary statistics that were computed directly on the watch,
+///         rather than being calculated on the phone
+@property(nonatomic, strong, nullable) NSArray<FitCloudWorkoutSummaryDataModel*> * workoutSummaryDataCalculatedOnWatch;
 
 @end
 

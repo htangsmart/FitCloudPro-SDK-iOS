@@ -303,9 +303,9 @@
 /// - 是否支持 4G 网络
 @property(nonatomic, readonly) BOOL allowQueryTranssionInfinixDeviceInfo;
 
-/// 是否使用手表计算的运动总结数据
+/// 是否使用手表计算的运动概要数据
 ///
-/// 当该属性为 `true` 时，App 应该使用手表计算的运动总结数据，而不是自行计算
+/// 当该属性为 `true` 时，App 应该使用手表计算的运动概要数据，而不是自行计算
 @property(nonatomic, readonly) BOOL shouldUseWorkoutSummaryDataCalculatedOnWatch;
 
 /// 是否支持切换耳机仓鼠标起始点预设

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.56 build20250923001 (2025-09-23)
+
+- Added support for parsing pre-calculated workout summary data from the watch device.
+
 ## V1.3.1-beta.55 build20250921001 (2025-09-21)
 
 - Prevent data synchronization and execution of other commands during OTA upgrade process.
