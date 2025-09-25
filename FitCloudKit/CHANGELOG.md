@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.57 build20250925001 (2025-09-25)
+
+- Added support for querying GoMore algorithm key with specified version.
+- Updated the parsing logic for pre-calculated workout summary data from watch devices to accommodate the latest Bluetooth communication protocol.
+
 ## V1.3.1-beta.56 build20250923001 (2025-09-23)
 
 - Added support for parsing pre-calculated workout summary data from the watch device.

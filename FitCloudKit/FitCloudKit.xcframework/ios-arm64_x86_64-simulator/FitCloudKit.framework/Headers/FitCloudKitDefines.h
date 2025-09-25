@@ -1712,6 +1712,19 @@ typedef NS_ENUM(NSInteger, FITCLOUDAPPSIDEPERMISSIONTYPE) {
 
 #pragma mark GoMore Algorithm Key Return Code
 
+
+/// GoMore algorithm version definitions
+///
+/// Defines different versions of the GoMore algorithm supported by the device
+typedef NS_ENUM(NSInteger, FITCLOUDGOMOREALGORITHMVERSION) {
+    /// 1.0
+    FITCLOUDGOMOREALGORITHMVERSION_1_0 = 0x01,
+    /// 2.0
+    FITCLOUDGOMOREALGORITHMVERSION_2_0 = 0x02,
+    /// Default version
+    FITCLOUDGOMOREALGORITHMVERSION_DEFAULT = FITCLOUDGOMOREALGORITHMVERSION_1_0,
+};
+
 typedef NS_ENUM(NSInteger, FITCLOUDGOMOREALGORITHMKEYRETURNCODE) {
     /// Success
     FITCLOUDGOMOREALGORITHMKEYRETURNCODE_SUCCESS = 0x00,
@@ -1860,13 +1873,13 @@ typedef NS_ENUM(NSInteger, FitCloudWorkoutSummaryDataType) {
     FitCloudWorkoutSummaryDataTypeFastestPace = 8,
 
     /// Average heart rate, unit: BPM
-    FitCloudWorkoutSummaryDataTypeAvgHeartRate = 9,
+    FitCloudWorkoutSummaryDataTypeAvgBPM = 9,
 
     /// Maximum heart rate, unit: BPM
-    FitCloudWorkoutSummaryDataTypeMaxHeartRate = 10,
+    FitCloudWorkoutSummaryDataTypeMaxBPM = 10,
 
     /// Minimum heart rate, unit: BPM
-    FitCloudWorkoutSummaryDataTypeMinHeartRate = 11,
+    FitCloudWorkoutSummaryDataTypeMinBPM = 11,
 
     /// Average cadence, unit: step/min
     FitCloudWorkoutSummaryDataTypeAvgCadence = 12,
@@ -1877,7 +1890,7 @@ typedef NS_ENUM(NSInteger, FitCloudWorkoutSummaryDataType) {
     /// Minimum cadence, unit: step/min
     FitCloudWorkoutSummaryDataTypeMinCadence = 14,
 
-    /// Average stride, unit: meter
+    /// Average stride, unit: centimeters/step
     FitCloudWorkoutSummaryDataTypeAvgStride = 15,
 
     /// Duration, unit: second

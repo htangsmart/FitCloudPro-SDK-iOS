@@ -23,6 +23,7 @@
 #import <FitCloudKit/FitCloudFestivalWishTimeModel.h>
 #import <FitCloudKit/FitCloudClassroomModeSettingsModel.h>
 #import <FitCloudKit/FitCloudEmotionSettingsModel.h>
+#import <FitCloudKit/FitCloudWorkoutSummaryDataModel.h>
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>

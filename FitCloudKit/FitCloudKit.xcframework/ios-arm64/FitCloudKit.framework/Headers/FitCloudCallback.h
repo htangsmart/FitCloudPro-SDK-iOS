@@ -786,7 +786,8 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// On query the GoMore algorithm key
 /// - Parameters:
 ///   - deviceId: The device id
-- (void)onQueryGoMoreAlgorithmKey:(NSString *)deviceId;
+///   - version: The GoMore algorithm version
+- (void)onQueryGoMoreAlgorithmKey:(NSString *)deviceId version:(FITCLOUDGOMOREALGORITHMVERSION)version;
 
 /// Requests AI analysis report of health data
 - (void)onRequestHealthDataAIAnalysisReport;
