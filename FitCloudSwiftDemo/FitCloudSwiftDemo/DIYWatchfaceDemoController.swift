@@ -161,7 +161,7 @@ class DIYWatchfaceDemoController: UIViewController {
         let preview = selectedDIYPhoto ?? UIImage(named: "test_360_preview")!
 
         // Create DIY watchface with template binary file
-        FitCloudWFKit.create(withTemplateBin: path, isNextGUI: isNextGUI, rewriteNextGUIWatchfaceNo: nil, bkImage: bkImage, bkCornerRadius: 0, preview: preview, dtPosition: .TOP) { progress, tips in
+        FitCloudWFKit.create(withTemplateBin: path, isNextGUI: isNextGUI, rewriteNextGUIWatchfaceNo: nil, bkImage: bkImage, bkCornerRadius: 0, preview: preview, dtPosition: .TOP, dtStyle: nil, dtColor: nil) { progress, tips in
             // Handle DIY progress updates
             let message = "DIY watchface progress:\(progress), \(tips ?? "")"
             XLOG_INFO(message)
