@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-09-25 Version:1.3.1-beta.57 Build:20250925001
+## pcjbird 2025-10-10 Version:1.3.1-beta.58 Build:20251010001
 
 - 引入 withBarometricPressure 标志，表示手表设备是否支持显示气压。
 - 新增 `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` 和 `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` 定义以支持 Momo 和 Zalo 收款码。
@@ -50,6 +50,7 @@
 - 新增标志位用于表示手表设备是否应该禁用微信运动功能。
 - 新增标志位用于表示手表设备是否应该禁用血压私人模式功能。
 - 新增 SDK 初始化选项 `secsPairingRequestConfirmTimeOut` 用于配置等待手表设备配对确认的超时时间。
+- 新增手表 GPS 互联运动类型定义：徒步、越野跑、马拉松。
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

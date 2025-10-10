@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1-beta.58 build20251010001 (2025-10-10)
+
+- Added new workout types for watch GPS interconnection: hiking, trail running, and marathon.
+
 ## V1.3.1-beta.57 build20250925001 (2025-09-25)
 
 - Added support for querying GoMore algorithm key with specified version.
