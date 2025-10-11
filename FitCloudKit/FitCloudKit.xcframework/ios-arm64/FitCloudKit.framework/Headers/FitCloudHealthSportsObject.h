@@ -158,7 +158,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 呼吸频率
 
-/// 手表呼吸频率 (Breathe Rate) 数据条目
+/// 手表呼吸频率 (Respiratory Rate) 数据条目
 @interface FitCloudBRItemObject : FitCloudManualSyncItemObject
 
 /// 呼吸频率
@@ -166,7 +166,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// 手表呼吸频率 (Breathe Rate) 数据记录
+/// 手表呼吸频率 (Respiratory Rate) 数据记录
 @interface FitCloudBRRecordObject : FitCloudManualSyncRecordObject <FitCloudBRItemObject *>
 
 @end
@@ -400,106 +400,125 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 健康实时测量
 
-/// 实时健康测量项定义
+/// 实时健康测量项定义 / Real-time health measurement items definition
 typedef NS_OPTIONS(UInt16, FITCLOUDREALTIMEMHEALTHEASUREITEM) {
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_NONE = 0,                 // 无
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_HEARTRATE = 1,            // 心率
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODOXYGEN = 1 << 1,     // 血氧
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODPRESSURE = 1 << 2,   // 血压
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_BREATHERATE = 1 << 3,     // 呼吸频率
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_ECG = 1 << 4,             // 心电
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_BODYTEMPERATURE = 1 << 5, // 体温
-    FITCLOUDREALTIMEMHEALTHEASUREITEM_STRESSINDEX = 1 << 6,     // 压力指数
+    /// 无 / None
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_NONE = 0,
+    
+    /// 心率 / Heart rate
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_HEARTRATE = 1,
+    
+    /// 血氧 / Blood oxygen
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODOXYGEN = 1 << 1,
+    
+    /// 血压 / Blood pressure
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODPRESSURE = 1 << 2,
+    
+    /// 呼吸频率 / Respiratory rate
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_RESPIRATORYRATE = 1 << 3,
+    
+    /// 心电 / ECG
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_ECG = 1 << 4,
+    
+    /// 体温 / Body temperature
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_BODYTEMPERATURE = 1 << 5,
+    
+    /// 压力指数 / Stress index
+    FITCLOUDREALTIMEMHEALTHEASUREITEM_STRESSINDEX = 1 << 6,
 };
 
-/// 实时健康测量参数
+/// Real-time health measurement parameters / 实时健康测量参数
 @interface FitCloudRealTimeHealthMeasuringParam : NSObject <FitCloudSecureCoding>
 
-/// 测量项
+/// Measurement item / 测量项
 @property(nonatomic, assign) FITCLOUDREALTIMEMHEALTHEASUREITEM item;
 
-/// 实时测量时间间隔
-/// - Note: 单位：秒
+/// Real-time measurement interval / 实时测量时间间隔
+/// - Note: Unit: seconds / 单位：秒
 @property(nonatomic, assign) UInt8 interval;
 
-/// 单次实时测量最长时间限制
-/// - Note: 单位：分钟
+/// Maximum duration limit for a single real-time measurement / 单次实时测量最长时间限制
+/// - Note: Unit: minutes / 单位：分钟
 @property(nonatomic, assign) UInt8 maxMeasuringMinutes;
 
 @end
 
-/// 实时健康测量返回的数据
+/// Real-time health measuring result data model (实时健康测量返回的数据模型)
 @interface FitCloudRealTimeHealthMeasuringResultObject : NSObject
 
-/// 采样时刻
+/// Sampling moment (采样时刻)
 @property(nonatomic, strong) NSDate *moment;
 
-/// 心率
+/// Heart rate (心率)
 @property(nonatomic, assign) UInt8 heartRate;
 
-/// 血氧
+/// Blood oxygen (血氧)
 @property(nonatomic, assign) UInt8 bloodOxygen;
 
-/// 舒张压
+/// Diastolic pressure (舒张压)
 @property(nonatomic, assign) UInt8 diastolic;
 
-/// 收缩压
+/// Systolic pressure (收缩压)
 @property(nonatomic, assign) UInt8 systolic;
 
-/// 呼吸频率
-@property(nonatomic, assign) UInt8 breatheRate;
+/// Respiratory rate (呼吸频率)
+@property(nonatomic, assign) UInt8 respiratoryRate;
 
-/// 体温测量状态
-/// - Note: 0:正常状态，数据正常返回中；1:测量结束，正常结束时间结束；2:测量结束，未佩戴手表；3:测量结束，体温过高；4:测量结束，体温过低；
+/// Body temperature measurement status (体温测量状态)
+/// - Note: 0: Normal status, data is being returned normally; (正常状态，数据正常返回中)
+///         1: Measurement end, normal end time reached; (测量结束，正常结束时间到达)
+///         2: Measurement end, watch not worn; (测量结束，未佩戴手表)
+///         3: Measurement end, body temperature too high; (测量结束，体温过高)
+///         4: Measurement end, body temperature too low; (测量结束，体温过低)
 @property(nonatomic, assign) UInt8 temperatureFlag;
 
-/// 腕温
-/// - Note: 单位：摄氏度
+/// Wrist temperature (腕温)
+/// - Note: Unit: Celsius degrees (摄氏度)
 @property(nonatomic, assign) CGFloat wrist;
 
-/// 体温
-/// - Note: 单位：摄氏度
+/// Body temperature (体温)
+/// - Note: Unit: Celsius degrees (摄氏度)
 @property(nonatomic, assign) CGFloat body;
 
-/// 压力
-/// - Note: 当手表支持压力指数时有效
+/// Stress index (压力指数)
+/// - Note: Valid when watch supports stress index measurement (当手表支持压力指数测量时有效)
 @property(nonatomic, assign) UInt8 stressIndex;
 
 @end
 
 #pragma mark - 每日运动健康数据
 
-/// 每日运动健康数据
+/// 每日运动健康数据 / Daily health & sports data
 @interface FitCloudDailyHealthAndSportsDataObject : NSObject <FitCloudSecureCoding>
 
-/// 累计步数
+/// 累计步数 / Total steps
 @property(nonatomic, assign) NSUInteger steps;
 
-/// 距离 (单位：米)
+/// 距离 (单位：米) / Distance (unit: meters)
 @property(nonatomic, assign) NSUInteger distance;
 
-/// 卡路里 (单位：小卡)
+/// 卡路里 (单位：小卡) / Calories (unit: small calories)
 @property(nonatomic, assign) NSUInteger calorie;
 
-/// 深度睡眠时间 (单位：分钟)
+/// 深度睡眠时间 (单位：分钟) / Deep-sleep duration (unit: minutes)
 @property(nonatomic, assign) NSUInteger deepSleepInMinutes;
 
-/// 浅度睡眠时间 (单位：分钟)
+/// 浅度睡眠时间 (单位：分钟) / Light-sleep duration (unit: minutes)
 @property(nonatomic, assign) NSUInteger lightSleepInMinutes;
 
-/// 平均心率 (次/分钟)
+/// 平均心率 (次/分钟) / Average heart rate (beats/min)
 @property(nonatomic, assign) NSUInteger avgBPM;
 
-/// 尚未保存的步数
+/// 尚未保存的步数 / Unsaved steps
 @property(nonatomic, assign) UInt16 bufSteps;
 
-/// 尚未保存的距离 (单位：米)
+/// 尚未保存的距离 (单位：米) / Unsaved distance (unit: meters)
 @property(nonatomic, assign) UInt16 bufDistance;
 
-/// 尚未保存的卡路里数据 (单位：小卡)
+/// 尚未保存的卡路里数据 (单位：小卡) / Unsaved calorie data (unit: small calories)
 @property(nonatomic, assign) UInt16 bufCalorie;
 
-/// 运动时长 (单位：分钟)
+/// 运动时长 (单位：分钟) / Exercise duration (unit: minutes)
 @property(nonatomic, assign) UInt16 durationInMinutes;
 
 @end

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.1-beta.59 build20251011001 (2025-10-11)
+
+- Renamed `breathe rate` to `respiratory rate`.
+- Refined several code comments for clarity.
+
 ## V1.3.1-beta.58 build20251010001 (2025-10-10)
 
 - Added new workout types for watch GPS interconnection: hiking, trail running, and marathon.
