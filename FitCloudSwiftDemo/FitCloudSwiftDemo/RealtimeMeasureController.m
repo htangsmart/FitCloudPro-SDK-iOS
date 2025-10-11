@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, REALTIMEHEALTHMEASUREEVENTTYPE)
     REALTIMEHEALTHMEASUREEVENTTYPE_ECG,
     REALTIMEHEALTHMEASUREEVENTTYPE_BLOODPRESSURE,
     REALTIMEHEALTHMEASUREEVENTTYPE_BLOODOXYGEN,
-    REALTIMEHEALTHMEASUREEVENTTYPE_BREATHERATE,
+    REALTIMEHEALTHMEASUREEVENTTYPE_RESPIRATORYRATE,
     REALTIMEHEALTHMEASUREEVENTTYPE_ALL,
 };
 
@@ -69,9 +69,9 @@ typedef NS_ENUM(NSInteger, REALTIMEHEALTHMEASUREEVENTTYPE)
             item = FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODOXYGEN;
             break;
         }
-        case REALTIMEHEALTHMEASUREEVENTTYPE_BREATHERATE:
+        case REALTIMEHEALTHMEASUREEVENTTYPE_RESPIRATORYRATE:
         {
-            item = FITCLOUDREALTIMEMHEALTHEASUREITEM_BREATHERATE;
+            item = FITCLOUDREALTIMEMHEALTHEASUREITEM_RESPIRATORYRATE;
             break;
         }
         case REALTIMEHEALTHMEASUREEVENTTYPE_ALL: {
@@ -79,7 +79,7 @@ typedef NS_ENUM(NSInteger, REALTIMEHEALTHMEASUREEVENTTYPE)
             BOOL isHeartRateSupported = (allConfig && allConfig.firmware && (allConfig.firmware.hardwareSupported & FITCLOUDHARDWARE_HEARTRATE));
             BOOL isBloodPressureSupported = (allConfig && allConfig.firmware && (allConfig.firmware.hardwareSupported & FITCLOUDHARDWARE_BLOODPRESSURE));
             BOOL isBloodOxygenSupported = (allConfig && allConfig.firmware && (allConfig.firmware.hardwareSupported & FITCLOUDHARDWARE_BLOODOXYGEN));
-            BOOL isBreatheRateSupported = (allConfig && allConfig.firmware && (allConfig.firmware.hardwareSupported & FITCLOUDHARDWARE_BREATHERATE));
+            BOOL isRespiratoryRateSupported = (allConfig && allConfig.firmware && (allConfig.firmware.hardwareSupported & FITCLOUDHARDWARE_RESPIRATORYRATE));
             if(isHeartRateSupported)
             {
                 item = item | FITCLOUDREALTIMEMHEALTHEASUREITEM_HEARTRATE;
@@ -92,9 +92,9 @@ typedef NS_ENUM(NSInteger, REALTIMEHEALTHMEASUREEVENTTYPE)
             {
                 item = item | FITCLOUDREALTIMEMHEALTHEASUREITEM_BLOODOXYGEN;
             }
-            if(isBreatheRateSupported)
+            if(isRespiratoryRateSupported)
             {
-                item = item | FITCLOUDREALTIMEMHEALTHEASUREITEM_BREATHERATE;
+                item = item | FITCLOUDREALTIMEMHEALTHEASUREITEM_RESPIRATORYRATE;
             }
             break;
         }
