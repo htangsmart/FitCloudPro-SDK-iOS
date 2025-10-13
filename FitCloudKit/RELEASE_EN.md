@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-10-11 Version:1.3.1-beta.59 Build:20251011001
+## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.
 - Added `FITCLOUDQRCODE_MONEYRECEIVE_MOMO` and `FITCLOUDQRCODE_MONEYRECEIVE_ZALO` definitions to support Momo and Zalo payment codes.
@@ -51,6 +51,7 @@
 - Added flag to indicate whether the watch device should disable blood pressure private mode feature.
 - Added SDK initialization option `secsPairingRequestConfirmTimeOut` to configure the timeout period for awaiting pairing confirmation from the watch device.
 - Added new workout types for watch GPS interconnection: hiking, trail running, and marathon.
+- Added a patch to fix an issue on iOS 26 where Realtek-based devices could not complete one-click pairing with the call audio Bluetooth.
 
 ## pcjbird 2025-01-21 Version:1.3.0 Build:20250121001
 

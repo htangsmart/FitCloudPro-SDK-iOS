@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.1 build20251013001 (2025-10-13)
+
+- Release FitCloudKit V1.3.1 build20251013001.
+
 ## V1.3.1-beta.59 build20251011001 (2025-10-11)
 
 - Renamed `breathe rate` to `respiratory rate`.
