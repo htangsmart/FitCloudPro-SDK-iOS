@@ -86,6 +86,7 @@
 ## V1.3.1-beta.40 build20250728001 (2025-07-28)
 
 - Watch face size support for 160x86 square.
+- Added a patch to fix an issue on iOS 26 where Realtek-based devices could not complete one-click pairing with the call audio Bluetooth.
 
 ## V1.3.1-beta.39 build20250718001 (2025-07-18)
 
