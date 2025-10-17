@@ -125,13 +125,18 @@ extern NSString *const FITCLOUDEVENT_GETALLCONFIG_RESULT_NOTIFY;
 
 /// Notification of binding/login initialization result
 ///
-/// - Parameter userInfo: Dictionary containing result and error information {@"result":@(YES/NO), @"error" : error}
+/// - Parameters:
+///   - object: nil
+///   - userInfo: Dictionary containing result and error information {@"result":@(YES/NO), @"error" : error}
 extern NSString *const FITCLOUDEVENT_INITIALIZE_RESULT_NOTIFY;
 
 /// Notification when preparation sync work begins after successful binding/login initialization
 extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_BEGIN_NOTIFY;
 
 /// Notification when preparation sync work ends after successful binding/login initialization
+///
+/// - Parameters:
+///   - object: error info if exist
 extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_END_NOTIFY;
 
 /// Notification of watch battery information

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.1 build20251017001 (2025-10-17)
+
+- Block device scanning during the connection process.
+- Added more SDK debug logs.
+
 ## V1.3.1 build20251013001 (2025-10-13)
 
 - Release FitCloudKit V1.3.1 build20251013001.
