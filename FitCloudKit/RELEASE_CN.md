@@ -1,10 +1,10 @@
 # 版本更新日志
 
-## pcjbird 2025-10-17 V1.3.2-beta.1 Build:20251017001
+## pcjbird 2025-10-17 V1.3.2-beta.2 Build:20251017002
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
-- 新增更多 SDK 调试日志。
+- 调整返回错误 `userInfo` 中描述的本地化为英文。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 

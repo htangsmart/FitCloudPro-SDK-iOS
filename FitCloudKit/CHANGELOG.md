@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.2 build20251017002 (2025-10-17)
+
+- Adjusted the localization of the description in the returned error userInfo to English.
+
 ## V1.3.2-beta.1 build20251017001 (2025-10-17)
 
 - Block device scanning during the connection process.
