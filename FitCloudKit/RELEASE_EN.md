@@ -1,5 +1,11 @@
 # RELEASES
 
+## pcjbird 2025-10-17 V1.3.2-beta.1 Build:20251017001
+
+- Block device scanning during the connection process.
+- Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
+- Added more SDK debug logs.
+
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 
 - Introduce the `withBarometricPressure` flag to indicate whether the watch device supports displaying barometric pressure.

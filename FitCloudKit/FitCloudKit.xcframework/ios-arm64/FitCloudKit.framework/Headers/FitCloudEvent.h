@@ -3,7 +3,7 @@
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/4/30.
-//  Copyright © 2018年 Zero Status. All rights reserved.
+//  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 
 #ifndef FitCloudEvent_h
@@ -26,6 +26,12 @@ extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCOVERED_NOTIFY;
 ///
 /// - Parameter object: FitCloudPeripheral instance
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_DISCOVERED_UPDATED_NOTIFY;
+
+/// Notification when peripheral (watch) scan starts with error
+///
+/// - Parameters:
+///   - object: error as NSError
+extern NSString *const FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY;
 
 /// Notification when peripheral (watch) scanning stops
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_SCANSTOP_NOTIFY;
@@ -125,13 +131,18 @@ extern NSString *const FITCLOUDEVENT_GETALLCONFIG_RESULT_NOTIFY;
 
 /// Notification of binding/login initialization result
 ///
-/// - Parameter userInfo: Dictionary containing result and error information {@"result":@(YES/NO), @"error" : error}
+/// - Parameters:
+///   - object: nil
+///   - userInfo: Dictionary containing result and error information {@"result":@(YES/NO), @"error" : error}
 extern NSString *const FITCLOUDEVENT_INITIALIZE_RESULT_NOTIFY;
 
 /// Notification when preparation sync work begins after successful binding/login initialization
 extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_BEGIN_NOTIFY;
 
 /// Notification when preparation sync work ends after successful binding/login initialization
+///
+/// - Parameters:
+///   - object: error info if exist
 extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_END_NOTIFY;
 
 /// Notification of watch battery information
