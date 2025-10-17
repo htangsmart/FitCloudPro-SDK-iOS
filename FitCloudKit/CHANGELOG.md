@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.3 build20251018001 (2025-10-18)
+
+- Added more SDK debug logs.
+
 ## V1.3.2-beta.2 build20251017002 (2025-10-17)
 
 - Adjusted the localization of the description in the returned error userInfo to English.
