@@ -1,10 +1,13 @@
 # 版本更新日志
 
-## pcjbird 2025-10-18 V1.3.2-beta.3 Build:20251018001
+## pcjbird 2025-10-20 V1.3.2-beta.4 Build:20251020001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
 - 调整返回错误 `userInfo` 中描述的本地化为英文。
+- 新增 `Zalo` 业务卡片定义。
+- 新增对基于体感游戏的心率数据支持。
+- 新增更多 SDK 调试日志，以帮助诊断手表连接稳定性问题。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 
