@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.2-beta.4 build20251020001 (2025-10-20)
+
+- Added `Zalo` business-card definition.
+- Motion-based games now support heart-rate data.
+- Added more SDK debug logs to help diagnose watch-connection stability.
+
 ## V1.3.2-beta.3 build20251018001 (2025-10-18)
 
 - Added more SDK debug logs.

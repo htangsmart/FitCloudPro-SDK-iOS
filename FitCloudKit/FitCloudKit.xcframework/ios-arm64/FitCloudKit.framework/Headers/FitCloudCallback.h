@@ -748,7 +748,8 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - xGravity: 对应 sensor 数据中的 X 轴加速度
 ///   - yGravity: 对应 sensor 数据中的 Y 轴加速度
 ///   - zGravity: 对应 sensor 数据中的 Z 轴加速度
-- (void)OnGSensorDataWithXGravity:(SInt16)xGravity yGravity:(SInt16)yGravity zGravity:(SInt16)zGravity;
+///   - heartRate: 心率数据，仅当手表体感游戏支持心率数据时才有效，否则为 nil
+- (void)onGSensorDataWithXGravity:(SInt16)xGravity yGravity:(SInt16)yGravity zGravity:(SInt16)zGravity heartRate:(NSNumber *_Nullable)heartRate;
 
 /// 手表端通知退出导航
 - (void)OnExitNaviFromWatchNotify;

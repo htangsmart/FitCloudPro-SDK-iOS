@@ -344,4 +344,8 @@
 /// 是否支持上课模式
 @property(nonatomic, readonly) BOOL withClassroomMode;
 
+/// 体感游戏是否支持心率数据
+@property(nonatomic, readonly) BOOL withGameHeartRate;
+
+
 @end
