@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.5 build20251021001 (2025-10-21)
+
+- Enhanced the auto-binding and login flow for improved stability and speed.
+
 ## V1.3.2-beta.4 build20251020001 (2025-10-20)
 
 - Added `Zalo` business-card definition.
