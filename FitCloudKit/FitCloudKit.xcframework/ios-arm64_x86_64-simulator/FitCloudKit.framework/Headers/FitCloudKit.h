@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本：
-//      pcjbird    2025-10-21  Version:1.3.2-beta.5 Build:20251021001
+//      pcjbird    2025-10-22  Version:1.3.2-beta.6 Build:20251022001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1661,6 +1661,20 @@ NS_ASSUME_NONNULL_BEGIN
 ///  - Parameters:
 ///    - block: 结果回调
 + (void)closeGSensorWithBlock:(FitCloudResultHandler _Nullable)block;
+
+#pragma mark 开启体感游戏心率
+
+/// 开启体感游戏心率
+/// - Parameters:
+///   - completion: 结果回调
++ (void)openGameHeartRateWithCompletion:(FitCloudResultHandler _Nullable)completion;
+
+#pragma mark 关闭体感游戏心率
+
+/// 关闭体感游戏心率
+/// - Parameters:
+///   - completion: 结果回调
++ (void)closeGameHeartRateWithCompletion:(FitCloudResultHandler _Nullable)completion;
 
 @end
 

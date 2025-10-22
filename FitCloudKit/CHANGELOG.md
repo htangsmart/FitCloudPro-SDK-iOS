@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.6 build20251022001 (2025-10-22)
+
+- Added support for enabling and disabling the game heart-rate feature.
+
 ## V1.3.2-beta.5 build20251021001 (2025-10-21)
 
 - Enhanced the auto-binding and login flow for improved stability and speed.
