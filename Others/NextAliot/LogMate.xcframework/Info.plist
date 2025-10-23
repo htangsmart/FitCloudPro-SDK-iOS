@@ -35,6 +35,21 @@
 			<key>SupportedPlatform</key>
 			<string>ios</string>
 		</dict>
+		<dict>
+			<key>BinaryPath</key>
+			<string>LogMate.framework/Versions/A/LogMate</string>
+			<key>LibraryIdentifier</key>
+			<string>macos-arm64_x86_64</string>
+			<key>LibraryPath</key>
+			<string>LogMate.framework</string>
+			<key>SupportedArchitectures</key>
+			<array>
+				<string>arm64</string>
+				<string>x86_64</string>
+			</array>
+			<key>SupportedPlatform</key>
+			<string>macos</string>
+		</dict>
 	</array>
 	<key>CFBundlePackageType</key>
 	<string>XFWK</string>

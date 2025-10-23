@@ -27,6 +27,9 @@ typedef NS_ENUM(NSInteger, LOGMATELEVEL)
     /// error
     LOGMATELEVEL_ERROR = 4,
     
+    /// fatal
+    LOGMATELEVEL_FATAL = 5,
+    
 };
 
 #endif /* LogMateLevel_h */
