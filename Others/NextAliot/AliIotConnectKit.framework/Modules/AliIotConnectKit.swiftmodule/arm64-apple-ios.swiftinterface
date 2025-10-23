@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AliIotConnectKit
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AliIotConnectKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 @_exported import AliIotConnectKit
 import AliIotConnectKit_Private
 import CommonCrypto
@@ -519,7 +520,7 @@ extension AliIotConnectKit.SchedulerType {
     buf.deallocate()
   }
 
-  // xor
+   
   for i in 0..<length {
     buf[i] = left[left.startIndex.advanced(by: i)] ^ right[right.startIndex.advanced(by: i)]
   }
@@ -528,13 +529,13 @@ extension AliIotConnectKit.SchedulerType {
 }
 @inline(__always) @inlinable internal func bitPadding(to data: inout Swift.Array<Swift.UInt8>, blockSize: Swift.Int, allowance: Swift.Int = 0) {
   let msgLength = data.count
-  // Step 1. Append Padding Bits
-  // append one bit (UInt8 with one bit) to message
+   
+   
   data.append(0x80)
 
-  // Step 2. append "0" bit until message length in bits ≡ 448 (mod 512)
-  let max = blockSize - allowance // 448, 986
-  if msgLength % blockSize < max { // 448
+   
+  let max = blockSize - allowance  
+  if msgLength % blockSize < max {  
     data += Array<UInt8>(repeating: 0, count: max - 1 - (msgLength % blockSize))
   } else {
     data += Array<UInt8>(repeating: 0, count: blockSize + max - 1 - (msgLength % blockSize))
@@ -678,7 +679,7 @@ final public class AES {
       b3 = lb30 ^ lb31 ^ lb32 ^ lb33
     }
 
-    // last round
+     
     let r = rounds - 1
 
     t[0] = b0 ^ rk[r][0]
@@ -686,7 +687,7 @@ final public class AES {
     t[2] = b2 ^ rk[r][2]
     t[3] = b3 ^ rk[r][3]
 
-    // rounds
+     
     b0 = F1(t[0], t[1], t[2], t[3]) ^ rk[rounds][0]
     b1 = F1(t[1], t[2], t[3], t[0]) ^ rk[rounds][1]
     b2 = F1(t[2], t[3], t[0], t[1]) ^ rk[rounds][2]
@@ -718,7 +719,7 @@ extension AliIotConnectKit.AES : AliIotConnectKit.Cipher {
     for chunk in chunks {
       out += try oneTimeCryptor.update(withBytes: chunk, isLast: false)
     }
-    // Padding may be added at the very end
+     
     out += try oneTimeCryptor.finish()
 
     if self.blockMode.options.contains(.paddingRequired) && (out.count % AES.blockSize != 0) {
@@ -743,8 +744,8 @@ extension AliIotConnectKit.AES : AliIotConnectKit.Cipher {
     var lastIdx = chunks.startIndex
     chunks.indices.formIndex(&lastIdx, offsetBy: chunks.count - 1)
 
-    // To properly remove padding, `isLast` has to be known when called with the last chunk of ciphertext
-    // Last chunk of ciphertext may contains padded data so next call to update(..) won't be able to remove it
+     
+     
     for idx in chunks.indices {
       out += try oneTimeCryptor.update(withBytes: chunks[idx], isLast: idx == lastIdx)
     }
@@ -999,15 +1000,15 @@ public class BlockDecryptor : AliIotConnectKit.Cryptor, AliIotConnectKit.Updatab
   @inlinable public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8> {
     self.accumulated += bytes
 
-    // If a worker (eg GCM) can combine ciphertext + tag
-    // we need to remove tag from the ciphertext.
+     
+     
     if !isLast && self.accumulated.count < self.blockSize + self.worker.additionalBufferSize {
       return []
     }
 
     let accumulatedWithoutSuffix: Array<UInt8>
     if self.worker.additionalBufferSize > 0 {
-      // FIXME: how slow is that?
+       
       accumulatedWithoutSuffix = Array(self.accumulated.prefix(self.accumulated.count - self.worker.additionalBufferSize))
     } else {
       accumulatedWithoutSuffix = self.accumulated
@@ -1015,13 +1016,13 @@ public class BlockDecryptor : AliIotConnectKit.Cryptor, AliIotConnectKit.Updatab
 
     var processedBytesCount = 0
     var plaintext = Array<UInt8>(reserveCapacity: accumulatedWithoutSuffix.count)
-    // Processing in a block-size manner. It's good for block modes, but bad for stream modes.
+     
     for var chunk in accumulatedWithoutSuffix.batched(by: self.blockSize) {
       if isLast || (accumulatedWithoutSuffix.count - processedBytesCount) >= blockSize {
         let isLastChunk = processedBytesCount + chunk.count == accumulatedWithoutSuffix.count
 
         if isLast, isLastChunk, var finalizingWorker = worker as? FinalizingDecryptModeWorker {
-          chunk = try finalizingWorker.willDecryptLast(bytes: chunk + accumulated.suffix(worker.additionalBufferSize)) // tag size
+          chunk = try finalizingWorker.willDecryptLast(bytes: chunk + accumulated.suffix(worker.additionalBufferSize))  
         }
 
         if !chunk.isEmpty {
@@ -1035,7 +1036,7 @@ public class BlockDecryptor : AliIotConnectKit.Cryptor, AliIotConnectKit.Updatab
         processedBytesCount += chunk.count
       }
     }
-    accumulated.removeFirst(processedBytesCount) // super-slow
+    accumulated.removeFirst(processedBytesCount)  
 
     if isLast {
       if accumulatedWithoutSuffix.isEmpty, var finalizingWorker = worker as? FinalizingDecryptModeWorker {
@@ -1149,7 +1150,7 @@ final internal class StreamDecryptor : AliIotConnectKit.Cryptor, AliIotConnectKi
     let toProcess = self.accumulated.prefix(max(self.accumulated.count - self.worker.additionalBufferSize, 0))
 
     if var finalizingWorker = worker as? FinalizingDecryptModeWorker, isLast == true {
-      // will truncate suffix if needed
+       
       try finalizingWorker.willDecryptLast(bytes: self.accumulated.slice)
     }
 
@@ -1164,17 +1165,17 @@ final internal class StreamDecryptor : AliIotConnectKit.Cryptor, AliIotConnectKi
       plaintext = Array(try finalizingWorker.didDecryptLast(bytes: plaintext.slice))
     }
 
-    // omit unecessary calculation if not needed
+     
     if self.padding != .noPadding {
       self.lastBlockRemainder = plaintext.count.quotientAndRemainder(dividingBy: self.blockSize).remainder
     }
 
     if isLast {
-      // CTR doesn't need padding. Really. Add padding to the last block if really want. but... don't.
+       
       plaintext = self.padding.remove(from: plaintext, blockSize: self.blockSize - self.lastBlockRemainder)
     }
 
-    self.accumulated.removeFirst(processedBytesCount) // super-slow
+    self.accumulated.removeFirst(processedBytesCount)  
 
     if var finalizingWorker = worker as? FinalizingDecryptModeWorker, isLast == true {
       plaintext = Array(try finalizingWorker.finalize(decrypt: plaintext.slice))
@@ -2026,6 +2027,7 @@ extension AliIotConnectKit.ReactiveCompatible {
   }
 }
 extension ObjectiveC.NSObject : AliIotConnectKit.ReactiveCompatible {
+  @available(iOS 2.0, *)
   public typealias ReactiveBase = ObjectiveC.NSObject
 }
 extension AliIotConnectKit.CS.BigUInt {
@@ -2288,9 +2290,9 @@ public func == (lhs: AliIotConnectKit.Descriptor, rhs: AliIotConnectKit.Descript
 extension Swift.FixedWidthInteger {
   @inlinable internal func bytes(totalBytes: Swift.Int = MemoryLayout<Self>.size) -> Swift.Array<Swift.UInt8> {
     arrayOfBytes(value: self.littleEndian, length: totalBytes)
-    // TODO: adjust bytes order
-    // var value = self.littleEndian
-    // return withUnsafeBytes(of: &value, Array.init).reversed()
+     
+     
+     
   }
 }
 public protocol ManagerType : AnyObject {
@@ -2871,12 +2873,12 @@ extension AliIotConnectKit.SHA2 : AliIotConnectKit.Updatable {
 
     if isLast {
       let lengthInBits = (processedBytesTotalCount + self.accumulated.count) * 8
-      let lengthBytes = lengthInBits.bytes(totalBytes: self.blockSize / 8) // A 64-bit/128-bit representation of b. blockSize fit by accident.
+      let lengthBytes = lengthInBits.bytes(totalBytes: self.blockSize / 8)  
 
-      // Step 1. Append padding
+       
       bitPadding(to: &self.accumulated, blockSize: self.blockSize, allowance: self.blockSize / 8)
 
-      // Step 2. Append Length a 64-bit representation of lengthInBits
+       
       self.accumulated += lengthBytes
     }
 
@@ -2895,7 +2897,7 @@ extension AliIotConnectKit.SHA2 : AliIotConnectKit.Updatable {
     self.accumulated.removeFirst(processedBytes)
     self.processedBytesTotalCount += processedBytes
 
-    // output current hash
+     
     var result = Array<UInt8>(repeating: 0, count: variant.digestLength)
     switch self.variant {
       case .sha224, .sha256:
@@ -2924,11 +2926,11 @@ extension AliIotConnectKit.SHA2 : AliIotConnectKit.Updatable {
         }
     }
 
-    // reset hash value for instance
+     
     if isLast {
       switch self.variant {
         case .sha224, .sha256:
-          self.accumulatedHash32 = self.variant.h.lazy.map { UInt32($0) } // FIXME: UInt64 for process64
+          self.accumulatedHash32 = self.variant.h.lazy.map { UInt32($0) }  
         case .sha384, .sha512:
           self.accumulatedHash64 = self.variant.h
       }
@@ -3014,10 +3016,10 @@ extension AliIotConnectKit.SHA3 : AliIotConnectKit.Updatable {
     self.accumulated += bytes
 
     if isLast {
-      // Add padding
+       
       let markByteIndex = self.accumulated.count
 
-      // We need to always pad the input. Even if the input is a multiple of blockSize.
+       
       let r = self.blockSize * 8
       let q = (r / 8) - (accumulated.count % (r / 8))
       self.accumulated += Array<UInt8>(repeating: 0, count: q)
@@ -3035,12 +3037,12 @@ extension AliIotConnectKit.SHA3 : AliIotConnectKit.Updatable {
     }
     self.accumulated.removeFirst(processedBytes)
 
-    // TODO: verify performance, reduce vs for..in
+     
     let result = self.accumulatedHash.reduce(into: Array<UInt8>()) { (result, value) in
       result += value.bigEndian.bytes()
     }
 
-    // reset hash value for instance
+     
     if isLast {
       self.accumulatedHash = Array<UInt64>(repeating: 0, count: self.digestLength)
     }
@@ -3133,6 +3135,29 @@ extension AliIotConnectKit.ObservableType {
 extension AliIotConnectKit.ObservableType {
   public func retry() -> AliIotConnectKit.Observable<Self.Element>
   public func retry(_ maxAttemptCount: Swift.Int) -> AliIotConnectKit.Observable<Self.Element>
+}
+extension Foundation.Date {
+  public var timeStamp: Swift.String {
+    get
+  }
+  public var milliStamp: Swift.String {
+    get
+  }
+  public var formattedDateString: Swift.String {
+    get
+  }
+  public var timeStampWithDate: Swift.String {
+    get
+  }
+  public var milliStampWithDate: Swift.String {
+    get
+  }
+}
+extension Swift.String {
+  public func inFix(startIndex: Swift.Int, endIndex: Swift.Int) -> Swift.String
+}
+extension ObjectiveC.NSObject {
+  public func bleDataToString(json: [Swift.String : Any]) -> Swift.String
 }
 public struct WearCommonEvent_C : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -3464,12 +3489,12 @@ extension AliIotConnectKit.SHA1 : AliIotConnectKit.Updatable {
 
     if isLast {
       let lengthInBits = (processedBytesTotalCount + self.accumulated.count) * 8
-      let lengthBytes = lengthInBits.bytes(totalBytes: 64 / 8) // A 64-bit representation of b
+      let lengthBytes = lengthInBits.bytes(totalBytes: 64 / 8)  
 
-      // Step 1. Append padding
+       
       bitPadding(to: &self.accumulated, blockSize: SHA1.blockSize, allowance: 64 / 8)
 
-      // Step 2. Append Length a 64-bit representation of lengthInBits
+       
       self.accumulated += lengthBytes
     }
 
@@ -3483,7 +3508,7 @@ extension AliIotConnectKit.SHA1 : AliIotConnectKit.Updatable {
     self.accumulated.removeFirst(processedBytes)
     self.processedBytesTotalCount += processedBytes
 
-    // output current hash
+     
     var result = Array<UInt8>(repeating: 0, count: SHA1.digestLength)
     var pos = 0
     for idx in 0..<self.accumulatedHash.count {
@@ -3495,7 +3520,7 @@ extension AliIotConnectKit.SHA1 : AliIotConnectKit.Updatable {
       pos += 4
     }
 
-    // reset hash value for instance
+     
     if isLast {
       self.accumulatedHash = SHA1.hashInitialValue
     }
@@ -3562,31 +3587,31 @@ extension AliIotConnectKit.RSA : AliIotConnectKit.Cipher {
     return try self.encrypt(Array<UInt8>(bytes), variant: .pksc1v15)
   }
   @inlinable final public func encrypt(_ bytes: Swift.Array<Swift.UInt8>, variant: AliIotConnectKit.RSA.RSAEncryptionVariant) throws -> Swift.Array<Swift.UInt8> {
-    // Prepare the data for the specified variant
+     
     let preparedData = try variant.prepare(bytes, blockSize: self.keySizeBytes)
 
-    // Encrypt the prepared data
+     
     return try variant.formatEncryptedBytes(self.encryptPreparedBytes(preparedData), blockSize: self.keySizeBytes)
   }
   @inlinable final internal func encryptPreparedBytes(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8> {
-    // Calculate encrypted data
+     
     return BigUInteger(Data(bytes)).power(self.e, modulus: self.n).serialize().bytes
   }
   @inlinable final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8> {
     return try self.decrypt(Array<UInt8>(bytes), variant: .pksc1v15)
   }
   @inlinable final public func decrypt(_ bytes: Swift.Array<Swift.UInt8>, variant: AliIotConnectKit.RSA.RSAEncryptionVariant) throws -> Swift.Array<Swift.UInt8> {
-    // Decrypt the data
+     
     let decrypted = try self.decryptPreparedBytes(bytes)
 
-    // Remove padding / unstructure data and return the raw plaintext
+     
     return variant.removePadding(decrypted, blockSize: self.keySizeBytes)
   }
   @inlinable final internal func decryptPreparedBytes(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8> {
-    // Check for Private Exponent presence
+     
     guard let d = d else { throw RSA.Error.noPrivateKey }
 
-    // Calculate decrypted data
+     
     return BigUInteger(Data(bytes)).power(d, modulus: self.n).serialize().bytes
   }
 }
@@ -3600,14 +3625,14 @@ extension AliIotConnectKit.RSA {
         case .unsafe:
           return bytes
         case .raw:
-          // We need at least 11 bytes of padding in order to safely encrypt messages
-          // - block types 1 and 2 have this minimum padding requirement, block type 0 isn't specified, but we enforce the minimum padding length here to be safe.
+           
+           
           guard blockSize >= bytes.count + 11 else { throw RSA.Error.invalidMessageLengthForEncryption }
           return Array(repeating: 0x00, count: blockSize - bytes.count) + bytes
         case .pksc1v15:
-          // The `Security` framework refuses to encrypt a zero byte message using the pkcs1v15 padding scheme, so we do the same
+           
           guard !bytes.isEmpty else { throw RSA.Error.invalidMessageLengthForEncryption }
-          // We need at least 11 bytes of random padding in order to safely encrypt messages (RFC2313 Section 8.1 - Note 6)
+           
           guard blockSize >= bytes.count + 11 else { throw RSA.Error.invalidMessageLengthForEncryption }
           return Padding.eme_pkcs1v15.add(to: bytes, blockSize: blockSize)
       }
@@ -3617,7 +3642,7 @@ extension AliIotConnectKit.RSA {
         case .unsafe:
           return bytes
         case .raw, .pksc1v15:
-          // Format the encrypted bytes before returning
+           
           return Array<UInt8>(repeating: 0x00, count: blockSize - bytes.count) + bytes
       }
     }
@@ -3628,8 +3653,8 @@ extension AliIotConnectKit.RSA {
         case .raw:
           return bytes
         case .pksc1v15:
-          // Convert the Octet String into an Integer Primitive using the BigInteger `serialize` method
-          // (this effectively just prefixes the data with a 0x00 byte indicating that its a positive integer)
+           
+           
           return Padding.eme_pkcs1v15.remove(from: [0x00] + bytes, blockSize: blockSize)
       }
     }
@@ -3992,7 +4017,7 @@ final internal class StreamEncryptor : AliIotConnectKit.Cryptor, AliIotConnectKi
   @inlinable final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8> {
     var accumulated = Array(bytes)
     if isLast {
-      // CTR doesn't need padding. Really. Add padding to the last block if really want. but... don't.
+       
       accumulated = self.padding.add(to: accumulated, blockSize: self.blockSize - self.lastBlockRemainder)
     }
 
@@ -4001,7 +4026,7 @@ final internal class StreamEncryptor : AliIotConnectKit.Cryptor, AliIotConnectKi
       encrypted += self.worker.encrypt(block: chunk)
     }
 
-    // omit unecessary calculation if not needed
+     
     if self.padding != .noPadding {
       self.lastBlockRemainder = encrypted.count.quotientAndRemainder(dividingBy: self.blockSize).remainder
     }
@@ -4504,6 +4529,7 @@ extension AliIotConnectKit.PCBC.Error : Swift.Hashable {}
 extension AliIotConnectKit.SHA2.Variant : Swift.Equatable {}
 extension AliIotConnectKit.SHA2.Variant : Swift.Hashable {}
 extension AliIotConnectKit.SHA2.Variant : Swift.Sendable {}
+extension AliIotConnectKit.SHA2.Variant : Swift.BitwiseCopyable {}
 extension AliIotConnectKit.RxBluetoothKitLog.LogLevel : Swift.Hashable {}
 extension AliIotConnectKit.RxBluetoothKitLog.LogLevel : Swift.RawRepresentable {}
 extension AliIotConnectKit.BluetoothState : Swift.Equatable {}
@@ -4516,6 +4542,7 @@ extension AliIotConnectKit.PKCS5.PBKDF2.Error : Swift.Hashable {}
 extension AliIotConnectKit.RSA.RSAEncryptionVariant : Swift.Equatable {}
 extension AliIotConnectKit.RSA.RSAEncryptionVariant : Swift.Hashable {}
 extension AliIotConnectKit.RSA.RSAEncryptionVariant : Swift.Sendable {}
+extension AliIotConnectKit.RSA.RSAEncryptionVariant : Swift.BitwiseCopyable {}
 extension AliIotConnectKit.Rabbit.Error : Swift.Equatable {}
 extension AliIotConnectKit.Rabbit.Error : Swift.Hashable {}
 extension AliIotConnectKit.CS.BigInt.Sign : Swift.Equatable {}

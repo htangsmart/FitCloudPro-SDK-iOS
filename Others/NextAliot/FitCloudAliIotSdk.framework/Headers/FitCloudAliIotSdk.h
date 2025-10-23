@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark Start the AliIot Auth
 
-/// tart the AliIot Auth
+/// start the AliIot Auth
 +(void) startAliotAuth;
 
 #pragma mark Cascade the Aliot data from FitCloudKit to the sdk
