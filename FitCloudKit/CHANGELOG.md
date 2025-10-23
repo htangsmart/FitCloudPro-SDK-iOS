@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.7 build20251023001 (2025-10-23)
+
+- Fixed the issue where heart-rate data parsing failed in motion-based games.
+
 ## V1.3.2-beta.6 build20251022001 (2025-10-22)
 
 - Added support for enabling and disabling the game heart-rate feature.
