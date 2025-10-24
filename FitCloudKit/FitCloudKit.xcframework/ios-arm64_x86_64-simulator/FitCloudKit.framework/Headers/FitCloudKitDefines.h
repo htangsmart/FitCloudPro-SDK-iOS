@@ -1932,5 +1932,15 @@ typedef NS_ENUM(NSInteger, FitCloudWorkoutSummaryDataType) {
     FitCloudWorkoutSummaryDataTypeMax = FitCloudWorkoutSummaryDataTypeHeartRateExtremeDuration,
 };
 
+#pragma mark - AI diet response code
+
+/// AI Diet Response Code
+typedef NS_ENUM(NSInteger, FitCloudAIDietResponseCode) {
+    /// Success
+    FitCloudAIDietResponseCodeSuccess = 0x00,
+
+    /// Failed due to user diet info is not set
+    FitCloudAIDietResponseCodeUserDietInfoNotSet = 0x01,
+};
 
 #endif /* FitCloudKitDefines_h */

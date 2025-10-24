@@ -796,6 +796,9 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// Requests AI health advices
 - (void)onRequestAIHealthAdvices;
 
+/// Requests AI diet advices
+- (void)onRequestAIDietAdvices;
+
 /// Notifies when the ANCS authorization status has been updated
 /// - Parameters:
 ///   - ancsAuthorized: A Boolean value that indicates whether ANCS is currently authorized

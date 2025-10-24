@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.8 build20251024001 (2025-10-24)
+
+- Introduced new APIs for AI diet features.
+
 ## V1.3.2-beta.7 build20251023001 (2025-10-23)
 
 - Fixed the issue where heart-rate data parsing failed in motion-based games.

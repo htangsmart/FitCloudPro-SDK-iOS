@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本：
-//      pcjbird    2025-10-23  Version:1.3.2-beta.7 Build:20251023001
+//      pcjbird    2025-10-24  Version:1.3.2-beta.8 Build:20251024001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1519,6 +1519,17 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - succeed: Whether sending was successful
 ///     - error: Error information if sending fails, nil on success
 + (void)sendAIHealthAdvices:(FitCloudAIHealthAdvicesModel *)advices completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
+
+#pragma mark - AI Diet
+
+/// Sends AI-generated diet advice to the watch.
+/// - Parameters:
+///   - responseCode: The response code indicating the type of diet advice.
+///   - advices: The diet advice text to be sent, or `nil` if not applicable.
+///   - completion: A completion handler called when the operation finishes.
+///     - succeed: `YES` if the advice was successfully sent, `NO` otherwise.
+///     - error: An error object if the operation failed, or `nil` on success.
++ (void)sendAIDietAdvicesWithResponseCode:(FitCloudAIDietResponseCode)responseCode advices:(NSString* _Nullable)advices completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
 
 
 #pragma mark - World clock

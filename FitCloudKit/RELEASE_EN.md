@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-10-23 V1.3.2-beta.7 Build:20251023001
+## pcjbird 2025-10-24 V1.3.2-beta.8 Build:20251024001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -9,6 +9,7 @@
 - Motion-based games now support heart-rate data.
 - Added more SDK debug logs to help diagnose watch-connection stability.
 - Enhanced the auto-binding and login flow for improved stability and speed.
+- Introduced new APIs for AI diet features.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 
