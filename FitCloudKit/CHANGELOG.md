@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.9 build20251026001 (2025-10-26)
+
+- Added more SDK debug logs.
+
 ## V1.3.2-beta.8 build20251024001 (2025-10-24)
 
 - Introduced new APIs for AI diet features.
