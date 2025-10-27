@@ -84,6 +84,13 @@
 /// > Important: The default value is YES.
 @property(nonatomic, assign) BOOL onlyDiscoverKnownManufacturers;
 
+/// Whether the SDK is specifically used for connecting to an earbud case.
+///
+/// > Important: The default value is NO.
+@property(nonatomic, assign) BOOL onlyUsedForConnectingEarbudCase;
+
+
+
 /// The default initialize option.
 + (instancetype)defaultOption;
 

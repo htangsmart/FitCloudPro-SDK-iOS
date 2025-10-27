@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.10 build20251027001 (2025-10-27)
+
+- Introduce new sdk initialize option `onlyUsedForConnectingEarbudCase` to optimize the connection process for earbud cases.
+
 ## V1.3.2-beta.9 build20251026001 (2025-10-26)
 
 - Added more SDK debug logs.

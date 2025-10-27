@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-10-26 V1.3.2-beta.9 Build:20251026001
+## pcjbird 2025-10-27 V1.3.2-beta.10 Build:20251027001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -10,6 +10,7 @@
 - Added more SDK debug logs to help diagnose watch-connection stability.
 - Enhanced the auto-binding and login flow for improved stability and speed.
 - Introduced new APIs for AI diet features.
+- Introduce new sdk initialize option `onlyUsedForConnectingEarbudCase` to optimize the connection process for earbud cases.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 

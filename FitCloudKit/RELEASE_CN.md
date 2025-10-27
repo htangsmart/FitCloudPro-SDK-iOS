@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-10-26 V1.3.2-beta.9 Build:20251026001
+## pcjbird 2025-10-27 V1.3.2-beta.10 Build:20251027001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -10,6 +10,7 @@
 - 新增更多 SDK 调试日志，以帮助诊断手表连接稳定性问题。
 - 优化自动绑定与登录流程，提升稳定性与速度。
 - 新增 AI 饮食相关接口。
+- 引入新的 SDK 初始化选项 `onlyUsedForConnectingEarbudCase`，用于优化耳机仓的连接流程。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 
