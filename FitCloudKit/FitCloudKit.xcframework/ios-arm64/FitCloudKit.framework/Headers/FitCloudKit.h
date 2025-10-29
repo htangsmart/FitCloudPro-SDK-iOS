@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本：
-//      pcjbird    2025-10-29  Version:1.3.2-beta.11 Build:20251029001
+//      pcjbird    2025-10-30  Version:1.3.2-beta.12 Build:20251030001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -770,6 +770,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - block: The completion handler called with the watch face UI information
 + (void)getWatchfaceUIInformationWithBlock:(FitCloudWatchfaceUIInfoResultBlock _Nullable)block;
+
+/// Fetch the number of watchface slots that support upload
+/// - Parameters:
+///   - completion: Callback that returns the slot information
+///     - success: Whether the query succeeded
+///     - slotCount: Total number of uploadable slots
+///     - slotIndexArray: Array of slot indices that support upload (NSNumber)
+///     - error: Error details if the operation failed
++ (void)fetchUploadableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion;
+
+
 
 #pragma mark Toggle Watch Face
 

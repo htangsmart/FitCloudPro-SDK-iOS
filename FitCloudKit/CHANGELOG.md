@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.12 build20251030001 (2025-10-30)
+
+- Introduce new API `+ (void)fetchUploadableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion` to fetch the number of watchface slots that support upload.
+
 ## V1.3.2-beta.11 build20251029001 (2025-10-29)
 
 - Added a new `desc` property to the `FitCloudTaskModel` for task-detail descriptions.
