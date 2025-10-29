@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.11 build20251029001 (2025-10-29)
+
+- Added a new `desc` property to the `FitCloudTaskModel` for task-detail descriptions.
+- Updated the task-sending API to `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudResultHandler _Nullable)completion`, enabling tasks to be sent to the watch in batches to prevent memory exhaustion caused by transmitting too much data at once.
+
 ## V1.3.2-beta.10 build20251027001 (2025-10-27)
 
 - Introduce new sdk initialize option `onlyUsedForConnectingEarbudCase` to optimize the connection process for earbud cases.

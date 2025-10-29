@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-10-27 V1.3.2-beta.10 Build:20251027001
+## pcjbird 2025-10-29 V1.3.2-beta.11 Build:20251029001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -11,6 +11,8 @@
 - 优化自动绑定与登录流程，提升稳定性与速度。
 - 新增 AI 饮食相关接口。
 - 引入新的 SDK 初始化选项 `onlyUsedForConnectingEarbudCase`，用于优化耳机仓的连接流程。
+- 为 `FitCloudTaskModel` 新增 `desc` 属性，用于描述任务详情。
+- 更新任务发送 API 为 `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudResultHandler _Nullable)completion`，支持分批向手表发送任务，避免因一次传输数据过多导致手表无法正确处理。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 

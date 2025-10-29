@@ -38,6 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// The display label for the task
 @property(nonatomic, strong) NSString *label;
 
+/// The details description for the task
+@property(nonatomic, strong) NSString *desc;
+
 /// Whether the task is enabled
 /// - Note: YES if enabled, NO if disabled
 @property(nonatomic, assign) BOOL enabled;

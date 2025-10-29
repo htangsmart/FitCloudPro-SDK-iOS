@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-10-27 V1.3.2-beta.10 Build:20251027001
+## pcjbird 2025-10-29 V1.3.2-beta.11 Build:20251029001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -11,6 +11,8 @@
 - Enhanced the auto-binding and login flow for improved stability and speed.
 - Introduced new APIs for AI diet features.
 - Introduce new sdk initialize option `onlyUsedForConnectingEarbudCase` to optimize the connection process for earbud cases.
+- Added a new `desc` property to the `FitCloudTaskModel` for task-detail descriptions.
+- Updated the task-sending API to `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudResultHandler _Nullable)completion`, enabling tasks to be sent to the watch in batches to prevent memory exhaustion caused by transmitting too much data at once.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 
