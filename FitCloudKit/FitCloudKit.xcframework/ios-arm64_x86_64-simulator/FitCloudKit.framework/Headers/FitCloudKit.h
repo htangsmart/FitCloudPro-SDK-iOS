@@ -771,14 +771,14 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: The completion handler called with the watch face UI information
 + (void)getWatchfaceUIInformationWithBlock:(FitCloudWatchfaceUIInfoResultBlock _Nullable)block;
 
-/// Fetch the number of watchface slots that support upload
+/// Fetch the count of watchface slots capable of installing cloud or custom watchfaces
 /// - Parameters:
-///   - completion: Callback that returns the slot information
+///   - completion: The completion handler
 ///     - success: Whether the query succeeded
-///     - slotCount: Total number of uploadable slots
-///     - slotIndexArray: Array of slot indices that support upload (NSNumber)
+///     - slotCount: Total count of installable slots
+///     - slotIndexArray: Array of slot indices that can install a cloud or custom watchface
 ///     - error: Error details if the operation failed
-+ (void)fetchUploadableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion;
++ (void)fetchInstallableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion;
 
 
 

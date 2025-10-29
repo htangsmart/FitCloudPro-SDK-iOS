@@ -13,7 +13,7 @@
 - 引入新的 SDK 初始化选项 `onlyUsedForConnectingEarbudCase`，用于优化耳机仓的连接流程。
 - 为 `FitCloudTaskModel` 新增 `desc` 属性，用于描述任务详情。
 - 更新任务发送 API 为 `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudResultHandler _Nullable)completion`，支持分批向手表发送任务，避免因一次传输数据过多导致手表无法正确处理。
-- 引入新的 API `+ (void)fetchUploadableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion` 用于获取手表支持推送的表盘位数量。
+- 引入新的 API `+ (void)fetchInstallableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion` 来获取手表支持安装云端或自定义表盘的表盘位数量以及对应的槽位索引信息。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 

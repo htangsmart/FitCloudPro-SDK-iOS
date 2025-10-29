@@ -13,7 +13,7 @@
 - Introduce new sdk initialize option `onlyUsedForConnectingEarbudCase` to optimize the connection process for earbud cases.
 - Added a new `desc` property to the `FitCloudTaskModel` for task-detail descriptions.
 - Updated the task-sending API to `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudResultHandler _Nullable)completion`, enabling tasks to be sent to the watch in batches to prevent memory exhaustion caused by transmitting too much data at once.
-- Introduce new API `+ (void)fetchUploadableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion` to fetch the number of watchface slots that support upload.
+- Introduce new API `+ (void)fetchInstallableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion` to fetch the count of watchface slots that support installing cloud or custom watchfaces.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 
