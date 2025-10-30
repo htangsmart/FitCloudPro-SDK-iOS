@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
 //
 //  构建版本：
-//      pcjbird    2025-10-30  Version:1.3.2-beta.12 Build:20251030001
+//      pcjbird    2025-10-30  Version:1.3.2-beta.13 Build:20251030002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -326,24 +326,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Synchronizes the watch time with the system time
 /// - Parameters:
-///   - block: The completion handler called when the sync completes
-+ (void)syncSystemTimeWithBlock:(FitCloudResultHandler _Nullable)block;
+///   - completion: The completion handler called when the sync completes
++ (void)syncSystemTimeWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Sync Specific Time
 
 /// Synchronizes a specific time to the watch
 /// - Parameters:
 ///   - time: The time to sync
-///   - block: The completion handler called when the sync completes
-+ (void)syncTimeToWatch:(NSDate *)time block:(FitCloudResultHandler _Nullable)block;
+///   - completion: The completion handler called when the sync completes
++ (void)syncTimeToWatch:(NSDate *)time completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Sync Weather
 
 /// Synchronizes weather information to the watch
 /// - Parameters:
 ///   - weather: The weather information
-///   - block: The completion handler called when the sync completes
-+ (void)syncWeather:(FitCloudWeatherObject *_Nonnull)weather block:(FitCloudResultHandler _Nullable)block;
+///   - completion: The completion handler called when the sync completes
++ (void)syncWeather:(FitCloudWeatherObject *_Nonnull)weather completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Set 24-Hour Weather
 
@@ -352,22 +352,25 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - weathers: Array of hourly weather forecasts, ordered sequentially from the specified timestamp
 ///   - timestamp: The starting timestamp
 ///   - completion: The completion handler called when the operation completes
-+ (void)set24HoursWeather:(NSArray<FitCloudHourWeatherObject *> *_Nonnull)weathers timestamp:(NSDate *_Nonnull)timestamp completion:(FitCloudResultHandler _Nullable)completion;
++ (void)set24HoursWeather:(NSArray<FitCloudHourWeatherObject *> *_Nonnull)weathers timestamp:(NSDate *_Nonnull)timestamp completion:(FitCloudCompletionHandler _Nullable)completion;
 
-#pragma mark Set Alarms
+#pragma mark Send alarm clock list to the watch device
 
-/// Synchronizes the alarm list from phone to watch
+/// Send alarm clock list to the  watch device
 /// - Parameters:
-///   - alarms: The array of alarms
-///   - block: The completion handler called when the sync completes
-+ (void)setAlarms:(NSArray<FitCloudAlarmObject *> *_Nullable)alarms block:(FitCloudResultHandler _Nullable)block;
+///   - alarmClockArray: The alarm clock list
+///   - completion: The completion handler called when the sync completes
++ (void)sendAlarmClockArray:(NSArray<FitCloudAlarmObject *> *_Nullable)alarmClockArray completion:(FitCloudCompletionHandler _Nullable)completion;
 
-#pragma mark Get Alarms
+#pragma mark Fetch Alarm Clock list on Watch
 
-/// Retrieves the alarm list from the watch
+/// Fetch Alarm Clock list on Watch
 /// - Parameters:
-///   - block: The completion handler called with the alarm list
-+ (void)getAlarmsWithBlock:(FitCloudAlarmsResultBlock _Nullable)block;
+///   - completion: The completion handler called with the alarm clock list
+///     - success: whether fetch succeed
+///     - alarmClockArray: alarm clock list
+///     - error: error information
++ (void)fetchAlarmClockWithCompletion:(FitCloudAlarmClockFetchCompletion _Nullable)completion;
 
 #pragma mark Set Allow Watch Schedule Settings
 
@@ -375,7 +378,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - allow: Whether to allow watch schedule settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setAllowWatchScheduleSettings:(BOOL)allow completion:(FitCloudResultHandler _Nullable)block;
++ (void)setAllowWatchScheduleSettings:(BOOL)allow completion:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Set Schedules
 
@@ -383,7 +386,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - schedules: The array of schedules
 ///   - block: The completion handler called when the sync completes
-+ (void)setSchedules:(NSArray<FitCloudScheduleObject *> *_Nullable)schedules block:(FitCloudResultHandler _Nullable)block;
++ (void)setSchedules:(NSArray<FitCloudScheduleObject *> *_Nullable)schedules block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Schedules
 
@@ -400,7 +403,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - totalTaskCount: The total tasks, now you can send tasks in multiple batches, as a result, here `totalTaskCount` means all the task count you have arranged, not means the task count sent this time
 ///   - totalCoinsEarned: The total coins earned
 ///   - completion: The completion handler called when the sync completes
-+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudResultHandler _Nullable)completion;
++ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Get Tasks
 
@@ -415,7 +418,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - contacts: The array of favorite contacts
 ///   - block: The completion handler called when the sync completes
-+ (void)setFavContacts:(NSArray<FitCloudContactObject *> *_Nullable)contacts block:(FitCloudResultHandler _Nullable)block;
++ (void)setFavContacts:(NSArray<FitCloudContactObject *> *_Nullable)contacts block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Favorite Contacts
 
@@ -431,7 +434,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - contacts: The array of emergency contacts
 ///   - on: Whether to enable emergency contacts
 ///   - completion: The completion handler called when the operation completes
-+ (void)setEmergencyContacts:(NSArray<FitCloudEmergencyContactObject *> *_Nullable)contacts on:(BOOL)on completion:(FitCloudResultHandler _Nullable)completion;
++ (void)setEmergencyContacts:(NSArray<FitCloudEmergencyContactObject *> *_Nullable)contacts on:(BOOL)on completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Get Emergency Contacts
 
@@ -446,7 +449,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - habits: The array of habits
 ///   - block: The completion handler called when the sync completes
-+ (void)setHabits:(NSArray<FitCloudHabitObject *> *_Nullable)habits block:(FitCloudResultHandler _Nullable)block;
++ (void)setHabits:(NSArray<FitCloudHabitObject *> *_Nullable)habits block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Habits
 
@@ -461,7 +464,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - profile: The user profile
 ///   - block: The completion handler called when the operation completes
-+ (void)setUserProfile:(FitCloudUserProfileObject *_Nonnull)profile block:(FitCloudResultHandler _Nullable)block;
++ (void)setUserProfile:(FitCloudUserProfileObject *_Nonnull)profile block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Set Custom Labels
 
@@ -469,7 +472,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - labels: The custom labels
 ///   - block: The completion handler called when the operation completes
-+ (void)setCustomLabels:(FitCloudCustomLabelsObject *_Nonnull)labels block:(FitCloudResultHandler _Nullable)block;
++ (void)setCustomLabels:(FitCloudCustomLabelsObject *_Nonnull)labels block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Set Daily Goals
 
@@ -481,7 +484,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - duration: Exercise duration goal in minutes
 ///   - timestamp: Timestamp (defaults to current time if nil)
 ///   - block: The completion handler called when the operation completes
-+ (void)setDailyGoalWithStepCount:(UInt32)stepcount distance:(UInt32)distance calorie:(UInt32)calorie duration:(UInt16)duration timestamp:(NSDate *_Nullable)timestamp block:(FitCloudResultHandler _Nullable)block;
++ (void)setDailyGoalWithStepCount:(UInt32)stepcount distance:(UInt32)distance calorie:(UInt32)calorie duration:(UInt16)duration timestamp:(NSDate *_Nullable)timestamp block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Daily Goals
 
@@ -503,7 +506,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - mnSetting: The message notification settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setMessageNotification:(FITCLOUDMN)mnSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setMessageNotification:(FITCLOUDMN)mnSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Message Notifications
 
@@ -518,7 +521,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - display: The screen display settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setScreenDisplay:(FITCLOUDSCREENDISPLAY)display block:(FitCloudResultHandler _Nullable)block;
++ (void)setScreenDisplay:(FITCLOUDSCREENDISPLAY)display block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Screen Display
 
@@ -533,7 +536,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - prefer: The watch preferences
 ///   - block: The completion handler called when the operation completes
-+ (void)setFitCloudPrefer:(FITCLOUDPREFER)prefer block:(FitCloudResultHandler _Nullable)block;
++ (void)setFitCloudPrefer:(FITCLOUDPREFER)prefer block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Watch Preferences
 
@@ -560,7 +563,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - htmSetting: The health timing monitor settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setHealthTimingMonitor:(FitCloudHTMObject *_Nonnull)htmSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setHealthTimingMonitor:(FitCloudHTMObject *_Nonnull)htmSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Health Monitoring
 
@@ -575,7 +578,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - htmSingleSettings: Array of individual monitor settings
 ///   - completion: The completion handler called when the operation completes
-+ (void)setSingleHealthTimingMonitoring:(NSArray<FitCloudHTMSingleObject *> *)htmSingleSettings completion:(FitCloudResultHandler _Nullable)completion;
++ (void)setSingleHealthTimingMonitoring:(NSArray<FitCloudHTMSingleObject *> *)htmSingleSettings completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Get Individual Health Monitoring
 
@@ -590,7 +593,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - lsrSetting: The sedentary reminder settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setSedentaryRemind:(FitCloudLSRObject *_Nonnull)lsrSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setSedentaryRemind:(FitCloudLSRObject *_Nonnull)lsrSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Sedentary Reminder
 
@@ -605,7 +608,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - drSetting: The drink reminder settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setDrinkRemind:(FitCloudDRObject *_Nonnull)drSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setDrinkRemind:(FitCloudDRObject *_Nonnull)drSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Drink Reminder
 
@@ -620,7 +623,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - remind: The personalized reminder
 ///   - completion: The completion handler called when the operation completes
-+ (void)setPersonalizedRemind:(FitCloudPersonalizedReminderObject *_Nonnull)remind completion:(FitCloudResultHandler _Nullable)completion;
++ (void)setPersonalizedRemind:(FitCloudPersonalizedReminderObject *_Nonnull)remind completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Query Personalized Reminders
 
@@ -635,7 +638,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - idArray: Array of reminder IDs to remove
 ///   - completion: The completion handler called when the operation completes
-+ (void)removePersonalizedRemindersWithIdArray:(NSArray<NSNumber *> *_Nonnull)idArray completion:(FitCloudResultHandler _Nullable)completion;
++ (void)removePersonalizedRemindersWithIdArray:(NSArray<NSNumber *> *_Nonnull)idArray completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Set Protection Reminder
 
@@ -643,7 +646,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - prSetting: The protection reminder settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setProtectionRemind:(FitCloudPRObject *_Nonnull)prSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setProtectionRemind:(FitCloudPRObject *_Nonnull)prSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Protection Reminder
 
@@ -658,7 +661,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - hwrSetting: The hand wash reminder settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setHandWashRemind:(FitCloudHandWashRemindObject *_Nonnull)hwrSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setHandWashRemind:(FitCloudHandWashRemindObject *_Nonnull)hwrSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Hand Wash Reminder
 
@@ -673,7 +676,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - wwuSetting: The wrist wake up settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setWristWakeUp:(FitCloudWWUObject *_Nonnull)wwuSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setWristWakeUp:(FitCloudWWUObject *_Nonnull)wwuSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Wrist Wake Up
 
@@ -688,7 +691,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - bprSetting: The blood pressure reference settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setBloodPressureRefer:(FitCloudBPRObject *_Nonnull)bprSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setBloodPressureRefer:(FitCloudBPRObject *_Nonnull)bprSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Blood Pressure Reference
 
@@ -703,7 +706,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - hrAlarmSetting: The heart rate alarm settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setHRAlarm:(FitCloudHRAlarmObject *_Nonnull)hrAlarmSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setHRAlarm:(FitCloudHRAlarmObject *_Nonnull)hrAlarmSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Heart Rate Alarm
 
@@ -718,7 +721,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - bpAlarmSetting: The blood pressure alarm settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setBPAlarm:(FitCloudBPAlarmObject *_Nonnull)bpAlarmSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setBPAlarm:(FitCloudBPAlarmObject *_Nonnull)bpAlarmSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Blood Pressure Alarm
 
@@ -733,7 +736,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - dndSetting: The Do Not Disturb settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setDND:(FitCloudDNDSetting *_Nonnull)dndSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setDND:(FitCloudDNDSetting *_Nonnull)dndSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Do Not Disturb
 
@@ -748,7 +751,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - settings: The power saving settings
 ///   - block: The completion handler called when the operation completes
-+ (void)setPowerSavingSettings:(FitCloudPowerSavingSetting *_Nonnull)settings block:(FitCloudResultHandler _Nullable)block;
++ (void)setPowerSavingSettings:(FitCloudPowerSavingSetting *_Nonnull)settings block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Power Saving
 
@@ -789,7 +792,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - slotIndex: The target slot index (0-10) to switch to
 ///   - styleArray: Array of module styles to apply. Pass nil to only switch watch face without modifying styles
 ///   - completion: The completion handler called when the operation completes
-+ (void)toggleWatchfaceWithSlotIndex:(NSInteger)slotIndex modulesStyleArray:(NSArray<NSNumber *> *_Nullable)styleArray completion:(FitCloudResultHandler)completion;
++ (void)toggleWatchfaceWithSlotIndex:(NSInteger)slotIndex modulesStyleArray:(NSArray<NSNumber *> *_Nullable)styleArray completion:(FitCloudCompletionHandler)completion;
 
 #pragma mark Delete the watchface
 
@@ -797,13 +800,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - watchfaceNo: the watchface No.
 ///   - completion: the completion callback
-+ (void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion;
++ (void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudCompletionHandler)completion;
 
 /// Delete the watchface with slot index
 /// - Parameters:
 ///   - slotIndex: the slot index, 0～10
 ///   - completion: the completion callback
-+ (void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion;
++ (void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudCompletionHandler)completion;
 
 #pragma mark Women's Health Settings
 
@@ -811,7 +814,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - whSetting: The women's health settings information
 ///   - block: The completion handler called when the operation completes
-+ (void)setWomenHealthConfig:(FitCloudWomenHealthSetting *_Nonnull)whSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setWomenHealthConfig:(FitCloudWomenHealthSetting *_Nonnull)whSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Get Women's Health Settings
 
@@ -826,7 +829,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - classroomModeSetting: The classroom mode settings
 ///   - completion: The completion handler called when the operation completes
-+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudResultHandler _Nullable)completion;
++ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Retrieves classroom mode settings
 /// - Parameters:
@@ -840,7 +843,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - settings: The emotion monitoring settings
 ///   - completion: The completion handler called when the operation completes
-+ (void)sendEmotionSettings:(FitCloudEmotionSettingsModel *_Nonnull)settings completion:(FitCloudResultHandler _Nullable)completion;
++ (void)sendEmotionSettings:(FitCloudEmotionSettingsModel *_Nonnull)settings completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Retrieves emotion monitoring settings
 /// - Parameters:
@@ -856,19 +859,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - notification: lovers bonding notification
 ///   - completion: the completion callback
-+ (void)sendLoversBondingNotifcation:(FITCLOUDLOVERSBONDINGNOTIFICATION)notification completion:(FitCloudResultHandler _Nullable)completion;
++ (void)sendLoversBondingNotifcation:(FITCLOUDLOVERSBONDINGNOTIFICATION)notification completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Callback the lovers message send result
 /// - Parameters:
 ///   - result: the lovers message send result
 ///   - completion: the completion callback
-+ (void)callbackLoversMessageSendResult:(FITCLOUDLOVERSMESSAGESENDRESULT)result completion:(FitCloudResultHandler _Nullable)completion;
++ (void)callbackLoversMessageSendResult:(FITCLOUDLOVERSMESSAGESENDRESULT)result completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Set the love memorial day
 /// - Parameters:
 ///   - loveMemorialDay: the love memorial day
 ///   - completion: the completion callback
-+ (void)setLoveMemorialDay:(NSDate *)loveMemorialDay completion:(FitCloudResultHandler _Nullable)completion;
++ (void)setLoveMemorialDay:(NSDate *)loveMemorialDay completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Set love memorial day reminder settings
 /// - Parameters:
@@ -881,13 +884,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)sendLoveMemorialDayReminderHour:(NSNumber *_Nullable)hour
                                  minute:(NSNumber *_Nullable)minute
                           daysInAdvance:(NSNumber *_Nullable)daysInAdvance
-                             completion:(FitCloudResultHandler _Nullable)completion;
+                             completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Received the lover message
 /// - Parameters:
 ///   - message: the lover message
 ///   - completion: the completion callback
-+ (void)receivedLoverMessage:(NSString *)message completion:(FitCloudResultHandler _Nullable)completion;
++ (void)receivedLoverMessage:(NSString *)message completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Other Modules Firmware Version
 
@@ -902,14 +905,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - lockScreenSetting: The lock screen settings to apply
 ///   - block: The completion handler called when the operation completes
-+ (void)setLockScreenSetting:(FitCloudLockScreenSetting *_Nonnull)lockScreenSetting block:(FitCloudResultHandler _Nullable)block;
++ (void)setLockScreenSetting:(FitCloudLockScreenSetting *_Nonnull)lockScreenSetting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Exit Sleep Mode
 
 /// Actively exit sleep mode from the app
 /// - Parameters:
 ///   - block: The completion handler called when the operation completes
-+ (void)exitSleepWithBlock:(FitCloudResultHandler _Nullable)block;
++ (void)exitSleepWithBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Synchronize the user language to the watch device
 
@@ -999,7 +1002,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - trendsArray: Array of ranking trends, maximum 60 entries
 ///   - block: The completion handler called when the operation completes
-+ (void)setGameRankingTrendsArray:(NSArray<FitCloudGameRankingTrend *> *)trendsArray completion:(FitCloudResultHandler _Nullable)block;
++ (void)setGameRankingTrendsArray:(NSArray<FitCloudGameRankingTrend *> *)trendsArray completion:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark - Game Play Statistics
 
@@ -1065,7 +1068,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - medals: The array of medals to sync
 ///   - block: The completion handler called when the operation completes
-+ (void)setMedals:(NSArray<FitCloudMedal *> *_Nullable)medals block:(FitCloudResultHandler _Nullable)block;
++ (void)setMedals:(NSArray<FitCloudMedal *> *_Nullable)medals block:(FitCloudCompletionHandler _Nullable)block;
 
 /// Get medal list from the watch
 /// - Parameters:
@@ -1086,38 +1089,38 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - screenSettings: The screen settings to apply
 ///   - vibrateSettings: The vibration settings to apply
 ///   - block: The completion handler called when the operation completes
-+ (void)setScreenSettings:(FitCloudScreenSetting *)screenSettings vibrateSettings:(FitCloudVibrateSetting *)vibrateSettings completion:(FitCloudResultHandler _Nullable)block;
++ (void)setScreenSettings:(FitCloudScreenSetting *)screenSettings vibrateSettings:(FitCloudVibrateSetting *)vibrateSettings completion:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Find Watch
 
 /// Find watch (triggers vibration or sound alert on success)
 /// - Parameters:
 ///   - comletion: The completion handler called when the operation completes
-+ (void)findWatchWithCompletion:(FitCloudResultHandler _Nullable)comletion;
++ (void)findWatchWithCompletion:(FitCloudCompletionHandler _Nullable)comletion;
 
 /// Stop finding watch
 /// - Parameters:
 ///   - comletion: The completion handler called when the operation completes
-+ (void)stopFindWatchWithCompletion:(FitCloudResultHandler _Nullable)comletion;
++ (void)stopFindWatchWithCompletion:(FitCloudCompletionHandler _Nullable)comletion;
 
 #pragma mark Factory Reset
 
 /// Restore watch to factory settings
 /// - Parameters:
 ///   - block: The completion handler called when the operation completes
-+ (void)restoreAsFactorySettingsWithBlock:(FitCloudResultHandler _Nullable)block;
++ (void)restoreAsFactorySettingsWithBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Power Management
 
 /// Turn off the watch
 /// - Parameters:
 ///   - block: The completion handler called when the operation completes
-+ (void)turnOffWithBlock:(FitCloudResultHandler _Nullable)block;
++ (void)turnOffWithBlock:(FitCloudCompletionHandler _Nullable)block;
 
 /// Reboot the watch
 /// - Parameters:
 ///   - block: The completion handler called when the operation completes
-+ (void)rebootWithBlock:(FitCloudResultHandler _Nullable)block;
++ (void)rebootWithBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Custom Broadcast Key
 
@@ -1125,7 +1128,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - keyData: Custom key data, must be 6 bytes and byte order must be managed by caller
 ///   - block: The completion handler called when the operation completes
-+ (void)setCustomBroadcastKey:(NSData *)keyData withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)setCustomBroadcastKey:(NSData *)keyData withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Location Services
 
@@ -1133,7 +1136,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - state: The app location service state
 ///   - block: The completion handler called when the operation completes
-+ (void)notifyAppLocServiceState:(APPLOCATIONSERVICESTATE)state withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)notifyAppLocServiceState:(APPLOCATIONSERVICESTATE)state withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark QR Code Push
 
@@ -1142,7 +1145,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - qrcode: The QR code type
 ///   - content: The QR code content
 ///   - block: The completion handler called when the operation completes
-+ (void)sendQRCode:(FITCLOUDQRCODE)qrcode content:(NSString *)content withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)sendQRCode:(FITCLOUDQRCODE)qrcode content:(NSString *)content withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Watch Launch Vibration
 
@@ -1150,7 +1153,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - param: The vibration parameters
 ///   - block: The completion handler called when the operation completes
-+ (void)setWatchLaunchVibrateParam:(FitCloudWatchLaunchVibrateSetting *)param withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)setWatchLaunchVibrateParam:(FitCloudWatchLaunchVibrateSetting *)param withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Message Management
 
@@ -1159,12 +1162,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - deleteIndex: Index to delete (0 to n-1, 0 is newest), valid when shouldDeleteAll is false
 ///   - shouldDeleteAll: Whether to delete all messages
 ///   - block: The completion handler called when the operation completes
-+ (void)deleteWatchMessageWithIndex:(NSInteger)deleteIndex shouldDeleteAll:(BOOL)shouldDeleteAll withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)deleteWatchMessageWithIndex:(NSInteger)deleteIndex shouldDeleteAll:(BOOL)shouldDeleteAll withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 /// Dismiss current message display on watch
 /// - Parameters:
 ///   - block: The completion handler called when the operation completes
-+ (void)dismissCurrentWatchMessageWithBlock:(FitCloudResultHandler _Nullable)block;
++ (void)dismissCurrentWatchMessageWithBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Game Lock
 
@@ -1172,14 +1175,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - setting: The game lock settings to apply
 ///   - block: The completion handler called when the operation completes
-+ (void)setGamePasscodeSetting:(FitCloudGamePasscodeSetting *_Nonnull)setting block:(FitCloudResultHandler _Nullable)block;
++ (void)setGamePasscodeSetting:(FitCloudGamePasscodeSetting *_Nonnull)setting block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Find Phone
 
 /// Notify watch that find phone ring playback has ended
 /// - Parameters:
 ///   - block: The completion handler called when the operation completes
-+ (void)notifyAppFindiPhoneRingPlayEndWithBlock:(FitCloudResultHandler _Nullable)block;
++ (void)notifyAppFindiPhoneRingPlayEndWithBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Third-party Integration
 
@@ -1187,7 +1190,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - aliotData: The Alipay IoT data
 ///   - block: The completion handler called when the operation completes
-+ (void)sendAliotData:(NSData *)aliotData withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)sendAliotData:(NSData *)aliotData withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 /// Send NetEase Cloud Music bridge data
 /// - Parameters:
@@ -1203,7 +1206,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - stations: PV power station data, maximum 6 stations (extras ignored)
 ///   - block: The completion handler called when the operation completes
-+ (void)sendSkyworthPVData:(NSArray<SkyworthPVPowerStationObject *> *)stations withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)sendSkyworthPVData:(NSArray<SkyworthPVPowerStationObject *> *)stations withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark Cricket Match Data
 
@@ -1211,26 +1214,26 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - matches: Match data, maximum 2 matches
 ///   - block: The completion handler called when the operation completes
-+ (void)sendUpcomingCricketMatchData:(NSArray<FitCloudCricketUpcomingMatch *> *)matches withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)sendUpcomingCricketMatchData:(NSArray<FitCloudCricketUpcomingMatch *> *)matches withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 /// Send live cricket match data
 /// - Parameters:
 ///   - matches: Match data, maximum 2 matches
 ///   - block: The completion handler called when the operation completes
-+ (void)sendLiveCricketMatchData:(NSArray<FitCloudCricketLiveMatch *> *)matches withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)sendLiveCricketMatchData:(NSArray<FitCloudCricketLiveMatch *> *)matches withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 /// Send ended cricket match data
 /// - Parameters:
 ///   - matches: Match data, maximum 2 matches
 ///   - block: The completion handler called when the operation completes
-+ (void)sendEndedCricketMatchData:(NSArray<FitCloudCricketEndedMatch *> *)matches withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)sendEndedCricketMatchData:(NSArray<FitCloudCricketEndedMatch *> *)matches withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 /// Set cricket match score list order
 /// - Parameters:
 ///   - match1order: Match 1 order
 ///   - match2order: Match 2 order
 ///   - block: The completion handler called when the operation completes
-+ (void)sendCricketMatchScoreListOrderWith:(FitCloudCricketMatchScoreOrder *)match1order match2order:(FitCloudCricketMatchScoreOrder *)match2order withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)sendCricketMatchScoreListOrderWith:(FitCloudCricketMatchScoreOrder *)match1order match2order:(FitCloudCricketMatchScoreOrder *)match2order withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark GPS Related Features
 
@@ -1301,41 +1304,41 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - map: the navigation map
 ///   - naviType: navi type
 ///   - completion: completion callback
-+ (void)onNaviStartWithMap:(FITCLOUDROUTEPLANMAPPROVIDER)map type:(FITCLOUDROUTEPLANNAVITYPE)naviType withCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)onNaviStartWithMap:(FITCLOUDROUTEPLANMAPPROVIDER)map type:(FITCLOUDROUTEPLANNAVITYPE)naviType withCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// The navigation guide kind callback
 /// - Parameters:
 ///   - guideKind: the guide kind
 ///   - completion: completion callback
-+ (void)onNaviGuideKind:(FITCLOUDROUTEPLANGUIDEKIND)guideKind withCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)onNaviGuideKind:(FITCLOUDROUTEPLANGUIDEKIND)guideKind withCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// The navigation guide text callback
 /// - Parameters:
 ///   - guideText: the guide text
 ///   - completion: completion callback
-+ (void)onNaviGuideText:(NSString *)guideText withCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)onNaviGuideText:(NSString *)guideText withCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// The remain time for navigation update callback
 /// - Parameters:
 ///   - remainTime: the remain time in seconds
 ///   - completion: completion callback
-+ (void)onNaviRemainTimeUpdate:(NSInteger)remainTime withCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)onNaviRemainTimeUpdate:(NSInteger)remainTime withCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// The remain distance for navigation update callback
 /// - Parameters:
 ///   - remainDistance: the remain distance in meters
 ///   - completion: completion callback
-+ (void)onNaviRemainDistanceUpdate:(NSInteger)remainDistance withCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)onNaviRemainDistanceUpdate:(NSInteger)remainDistance withCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// The navigation arrive destination callback
 /// - Parameters:
 ///   - completion: completion callback
-+ (void)onNaviArriveDestination:(NSString *_Nullable)destination withCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)onNaviArriveDestination:(NSString *_Nullable)destination withCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// The naviagation exit callback
 /// - Parameters:
 ///   - completion: completion callback
-+ (void)onNaviExitWithCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)onNaviExitWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark 电子卡包
 
@@ -1348,19 +1351,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - ecard: the electronic card
 ///   - block: the electronic card set response
-+ (void)setECard:(FitCloudECard *)ecard withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)setECard:(FitCloudECard *)ecard withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 /// sort the electronic cards
 /// - Parameters:
 ///   - idArray: the electronic card id array
 ///   - block: the electronic cards sort response
-+ (void)sortECardsWithIdArray:(NSArray<NSNumber *> *)idArray withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)sortECardsWithIdArray:(NSArray<NSNumber *> *)idArray withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 /// delete the electronic cards
 /// - Parameters:
 ///   - idArray: the electronic card id array
 ///   - block: the electronic cards delete response
-+ (void)deleteECardsWithIdArray:(NSArray<NSNumber *> *)idArray withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)deleteECardsWithIdArray:(NSArray<NSNumber *> *)idArray withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark - 其他
 
@@ -1368,7 +1371,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - value: 运动极限心率 (maximum exercise heart rate)
 ///   - completion: the completion callback
-+ (void)setMaxExerciseHeartRate:(NSInteger)value withCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)setMaxExerciseHeartRate:(NSInteger)value withCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// 获取运动极限心率 (Query maximum exercise heart rate)
 /// - Parameters:
@@ -1386,7 +1389,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - lyricsColor: 歌词颜色 (lyrics color)
 ///   - completion: the completion callback
-+ (void)setEarbudCaseLyricsColor:(UIColor *)lyricsColor withCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)setEarbudCaseLyricsColor:(UIColor *)lyricsColor withCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// 查询耳机仓歌词颜色 (Query earbud case lyrics color)
 /// - Parameters:
@@ -1397,7 +1400,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - alwaysBright: 是否常亮
 ///   - completion: the completion callback
-+ (void)setEarbudCaseChargingWallpaperAlwaysBright:(BOOL)alwaysBright withCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)setEarbudCaseChargingWallpaperAlwaysBright:(BOOL)alwaysBright withCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// 查询耳机仓充电壁纸是否常亮 (Query earbud case charging wallpaper whether always bright)
 /// - Parameters:
@@ -1408,7 +1411,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - preset: 预设，取值范围从 0 开始
 ///   - completion: the completion callback
-+ (void)setEarbudCaseMouseStartPointPreset:(NSInteger)preset withCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)setEarbudCaseMouseStartPointPreset:(NSInteger)preset withCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// 查询耳机仓鼠标起始点预设 (Query earbud case mouse start point preset)
 /// - Parameters:
@@ -1589,7 +1592,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - randomCode: 随机码，如果没有，则填 nil，仅部分项目有该功能
 ///   - bAbort: 如果已经存在绑定用户是否终止，当为 FALSE 时，自动先解绑并绑定新的用户
 ///   - block: 结果回调
-+ (void)bindUserObject:(NSString *)userId randomCode:(NSString *_Nullable)randomCode abortIfExist:(BOOL)bAbort block:(FitCloudResultHandler _Nullable)block;
++ (void)bindUserObject:(NSString *)userId randomCode:(NSString *_Nullable)randomCode abortIfExist:(BOOL)bAbort block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark 最后绑定时间
 
@@ -1602,7 +1605,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - shouldDisconnectWhenSuccess: 解绑成功后是否应该自动断开连接
 ///   - block: 结果回调
-+ (void)unbindUserObject:(BOOL)shouldDisconnectWhenSuccess block:(FitCloudResultHandler _Nullable)block;
++ (void)unbindUserObject:(BOOL)shouldDisconnectWhenSuccess block:(FitCloudCompletionHandler _Nullable)block;
 
 @end
 
@@ -1629,7 +1632,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - rtmParam: 实时测量参数
 ///   - block: 调用结果回调
-+ (void)requestRealTimeHealthMeasuring:(FitCloudRealTimeHealthMeasuringParam *_Nonnull)rtmParam block:(FitCloudResultHandler _Nullable)block;
++ (void)requestRealTimeHealthMeasuring:(FitCloudRealTimeHealthMeasuringParam *_Nonnull)rtmParam block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark 手动同步历史运动健康数据
 
@@ -1646,7 +1649,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 请求当天睡眠调试数据
 /// - Parameters:
 ///   - block: 结果回调，代表请求是否成功，不代表数据返回成功
-+ (void)requestSleepDebugDataWithBlock:(FitCloudResultHandler _Nullable)block;
++ (void)requestSleepDebugDataWithBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark 启动/关闭手表GPS互联运动
 
@@ -1654,7 +1657,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - params: 参数
 ///   - block: 调用结果回调
-+ (void)requestRealTimeGPSConnectSports:(FitCloudSportsWithGPSActionParams *_Nonnull)params block:(FitCloudResultHandler _Nullable)block;
++ (void)requestRealTimeGPSConnectSports:(FitCloudSportsWithGPSActionParams *_Nonnull)params block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark 通知手表GPS互联运动当前App端运动数据
 
@@ -1662,7 +1665,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - appClientData: 已运动信息
 ///   - block: 调用结果回调
-+ (void)notifyRealTimeGPSConnectSportsAppClientData:(FitCloudSportsWithGPSAppClientData *_Nonnull)appClientData block:(FitCloudResultHandler _Nullable)block;
++ (void)notifyRealTimeGPSConnectSportsAppClientData:(FitCloudSportsWithGPSAppClientData *_Nonnull)appClientData block:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark 请求手表GPS互联运动当前状态
 
@@ -1683,21 +1686,21 @@ NS_ASSUME_NONNULL_BEGIN
 /// 关闭 GSensor
 ///  - Parameters:
 ///    - block: 结果回调
-+ (void)closeGSensorWithBlock:(FitCloudResultHandler _Nullable)block;
++ (void)closeGSensorWithBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark 开启体感游戏心率
 
 /// 开启体感游戏心率
 /// - Parameters:
 ///   - completion: 结果回调
-+ (void)openGameHeartRateWithCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)openGameHeartRateWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark 关闭体感游戏心率
 
 /// 关闭体感游戏心率
 /// - Parameters:
 ///   - completion: 结果回调
-+ (void)closeGameHeartRateWithCompletion:(FitCloudResultHandler _Nullable)completion;
++ (void)closeGameHeartRateWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 
@@ -1710,7 +1713,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - state: APP 相机状态（前台/后台）
 ///   - block: 结果回调
-+ (void)notifyAppCameraState:(APPCAMERASTATE)state withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)notifyAppCameraState:(APPCAMERASTATE)state withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 #pragma mark APP通知手表切换前后摄像头是否成功
 
@@ -1718,7 +1721,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - success: APP 切换前后摄像头是否成功
 ///   - completion: 结果回调
-+ (void)notifyAppToggleCameraResult:(BOOL)success completion:(FitCloudResultHandler _Nullable)completion;
++ (void)notifyAppToggleCameraResult:(BOOL)success completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark 通知手表第三方外设启停操作结果
 
@@ -1726,7 +1729,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - result: 结果
 ///   - block: 结果回调
-+ (void)notifyThirdPartyPeripheralStartStopResult:(THIRDPARTYPERIPHERALACTIONRESULT)result withBlock:(FitCloudResultHandler)block;
++ (void)notifyThirdPartyPeripheralStartStopResult:(THIRDPARTYPERIPHERALACTIONRESULT)result withBlock:(FitCloudCompletionHandler)block;
 
 #pragma mark 通知手表第三方外设数据
 
@@ -1735,7 +1738,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - peripheral: 外设
 ///   - value: 数据
 ///   - block: 结果回调
-+ (void)notifyThirdPartyPeripheral:(THIRDPARTYPERIPHERAL)peripheral value:(CGFloat)value withBlock:(FitCloudResultHandler)block;
++ (void)notifyThirdPartyPeripheral:(THIRDPARTYPERIPHERAL)peripheral value:(CGFloat)value withBlock:(FitCloudCompletionHandler)block;
 @end
 
 /// FitCloudKit Dump Module
@@ -1748,7 +1751,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - text: 结果
 ///   - errorCode: 错误码
 ///   - block: 结果回调
-+ (void)sendAlexaResult:(NSString *)text with:(ALEXAINVOKEERROR)errorCode withBlock:(FitCloudResultHandler _Nullable)block;
++ (void)sendAlexaResult:(NSString *)text with:(ALEXAINVOKEERROR)errorCode withBlock:(FitCloudCompletionHandler _Nullable)block;
 
 @end
 
@@ -1775,7 +1778,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - isEnd: 是否结束
 ///   - resultType: 文案类型
 ///   - completion: 结果回调
-+ (void)sendLLMResult:(NSString *)text isEnd:(BOOL)isEnd resultType:(LLMRESULTTYPE)resultType completion:(FitCloudResultHandler _Nullable)completion;
++ (void)sendLLMResult:(NSString *)text isEnd:(BOOL)isEnd resultType:(LLMRESULTTYPE)resultType completion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 
@@ -1792,14 +1795,14 @@ NS_ASSUME_NONNULL_BEGIN
 ///             - TRANSLATETEXTTYPE_ORIGINAL: Original text content
 ///             - TRANSLATETEXTTYPE_TRANSLATION: Translated text content
 ///   - completion: The completion handler called when sending completes
-+ (void)sendTranslationText:(NSString *)text isEnd:(BOOL)isEnd resultType:(TRANSLATETEXTTYPE)textType completion:(FitCloudResultHandler _Nullable)completion;
++ (void)sendTranslationText:(NSString *)text isEnd:(BOOL)isEnd resultType:(TRANSLATETEXTTYPE)textType completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Report Device MAC Address Translation Feature Not Registered
 
 /// Report to watch that current MAC address is not registered with translation service provider
 /// - Parameters:
 ///   - completion: The completion handler
-+ (void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion;
++ (void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 
@@ -1811,7 +1814,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: A completion handler called when sending completes. Parameters:
 ///     - success: Whether sending was successful
 ///     - error: Error information if sending fails, nil on success
-+ (void)sendASRResult:(NSString *)text completion:(FitCloudResultHandler _Nullable)completion;
++ (void)sendASRResult:(NSString *)text completion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 
@@ -1838,7 +1841,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: A completion handler called when sending completes. Parameters:
 ///     - success: Whether sending was successful
 ///     - error: Error information if sending fails, nil on success
-+ (void)sendAIPhotoGenerationResult:(FITCLOUDAIPHOTOGENRESULT)resultCode completion:(FitCloudResultHandler _Nullable)completion;
++ (void)sendAIPhotoGenerationResult:(FITCLOUDAIPHOTOGENRESULT)resultCode completion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 
@@ -1879,7 +1882,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - slotIndex: The index of the photo slot to clear (0-based)
 ///   - completion: A block called when the clear operation completes
-+ (void)clearIncomingCallPhotoSlot:(NSUInteger)slotIndex completion:(FitCloudResultHandler _Nullable)completion;
++ (void)clearIncomingCallPhotoSlot:(NSUInteger)slotIndex completion:(FitCloudCompletionHandler _Nullable)completion;
 
 
 @end
@@ -1893,7 +1896,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// This method allows sending festival wishes and greetings to be displayed on the watch at specified times.
 /// The wishes are defined using FitCloudFestivalWishTimeModel objects that specify the content and timing.
-+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudResultHandler _Nullable)completion;
++ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 

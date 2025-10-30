@@ -20,7 +20,7 @@
 ///   - contacts: 常用联系人列表
 ///   - progress: 进度回调
 ///   - block: 结果回调
-+(void) setFavContacts:(NSArray<FitCloudContactObject*>*_Nullable)contacts progress:(FitCloudProgressBlock _Nullable ) progress block:(FitCloudResultHandler _Nullable )block;
++(void) setFavContacts:(NSArray<FitCloudContactObject*>*_Nullable)contacts progress:(FitCloudProgressHandler _Nullable ) progress block:(FitCloudCompletionHandler _Nullable )block;
 
 @end
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.13 build20251030002 (2025-10-30)
+
+- Renamed some API method name.
+
 ## V1.3.2-beta.12 build20251030001 (2025-10-30)
 
 - Introduce new API `+ (void)fetchInstallableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion` to fetch the count of watchface slots that support installing cloud or custom watchfaces.
@@ -7,7 +11,7 @@
 ## V1.3.2-beta.11 build20251029001 (2025-10-29)
 
 - Added a new `desc` property to the `FitCloudTaskModel` for task-detail descriptions.
-- Updated the task-sending API to `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudResultHandler _Nullable)completion`, enabling tasks to be sent to the watch in batches to prevent memory exhaustion caused by transmitting too much data at once.
+- Updated the task-sending API to `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudCompletionHandler _Nullable)completion`, enabling tasks to be sent to the watch in batches to prevent memory exhaustion caused by transmitting too much data at once.
 
 ## V1.3.2-beta.10 build20251027001 (2025-10-27)
 
@@ -137,8 +141,8 @@
 
 ## V1.3.1-beta.41 build20250805001 (2025-08-05)
 
-- Introduce the `+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudResultHandler _Nullable)completion` and `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion` API for classroom mode settings features.
-- Introduce the `+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudResultHandler _Nullable)completion` API for sending festival wishes to the watch device.
+- Introduce the `+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudCompletionHandler _Nullable)completion` and `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion` API for classroom mode settings features.
+- Introduce the `+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudCompletionHandler _Nullable)completion` API for sending festival wishes to the watch device.
 
 ## V1.3.1-beta.40 build20250728001 (2025-07-28)
 
@@ -385,7 +389,7 @@
 
 ## V1.3.0-beta.56 build20241224001 (2024-12-24)
 
-- Introduce the API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion` to notify the watch device that the current MAC address is not registered with the translation service provider.
+- Introduce the API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudCompletionHandler _Nullable)completion` to notify the watch device that the current MAC address is not registered with the translation service provider.
 
 ## V1.3.0-beta.55 build20241223002 (2024-12-23)
 
@@ -467,7 +471,7 @@
 
 ## V1.3.0-beta.36 build20241123002 (2024-11-23)
 
-- Introduce the new API `+(void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion` to delete the GPS epo file on the watch side.
+- Introduce the new API `+(void)clearWatchGPSFileWithCompletion:(FitCloudCompletionHandler _Nullable)completion` to delete the GPS epo file on the watch side.
 
 ## V1.3.0-beta.35 build20241123001 (2024-11-23)
 
@@ -513,7 +517,7 @@
 
 ## V1.3.0-beta.25 build20241025001 (2024-10-25)
 
-- Introduce the new API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion` to delete the watchface with slot index on the watch side.
+- Introduce the new API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudCompletionHandler)completion` to delete the watchface with slot index on the watch side.
 
 ## V1.3.0-beta.24 build20241024005 (2024-10-24)
 
@@ -545,7 +549,7 @@
 ## V1.3.0-beta.18 build20241023002 (2024-10-23)
 
 - Add app location permission information for Muslim prayer kaaba data.
-- Introduce the new API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion` to delete the watchface on the watch side.
+- Introduce the new API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudCompletionHandler)completion` to delete the watchface on the watch side.
 
 ## V1.3.0-beta.17 build20241023001 (2024-10-23)
 

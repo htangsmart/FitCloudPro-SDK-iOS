@@ -77,16 +77,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// FitCloud 调用结果回调
+/// FitCloud completion handler callback
 /// - Parameters:
-///   - succeed: 是否成功
-///   - error: 错误信息
-typedef void (^FitCloudResultHandler)(BOOL succeed, NSError *_Nullable error);
+///   - success: whether the call succeeded
+///   - error: error information
+typedef void (^FitCloudCompletionHandler)(BOOL success, NSError *_Nullable error);
 
-/// FitCloud 进度回调
+/// FitCloud progress callback
 /// - Parameters:
-///   - progress: 进度 0～1
-typedef void (^FitCloudProgressBlock)(CGFloat progress);
+///   - progress: progress value 0.0～1.0
+typedef void (^FitCloudProgressHandler)(CGFloat progress);
 
 /// FitCloud 调用结果回调
 /// - Parameters:
@@ -109,12 +109,12 @@ typedef void (^FitCloudEnterDFUModeResultBlock)(BOOL succeed, CBPeripheral *_Nul
 ///   - error: 错误信息
 typedef void (^FitCloudExitDFUModeResultBlock)(BOOL succeed, NSError *_Nullable error);
 
-/// FitCloud 获取闹钟列表调用结果回调
+/// FitCloud callback for fetching alarm clock list
 /// - Parameters:
-///   - succeed: 是否成功
-///   - list: 闹钟列表
-///   - error: 错误信息
-typedef void (^FitCloudAlarmsResultBlock)(BOOL succeed, NSArray<FitCloudAlarmObject *> *_Nullable list, NSError *_Nullableerror);
+///   - success: whether fetch succeed
+///   - alarmClockArray: alarm clock list
+///   - error: error information
+typedef void (^FitCloudAlarmClockFetchCompletion)(BOOL success, NSArray<FitCloudAlarmObject *> *_Nullable alarmClockArray, NSError *_Nullable error);
 
 /// FitCloud 获取日程列表调用结果回调
 /// - Parameters:

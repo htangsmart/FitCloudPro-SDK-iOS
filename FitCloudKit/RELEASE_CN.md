@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-10-30 V1.3.2-beta.12 Build:20251030001
+## pcjbird 2025-10-30 V1.3.2-beta.13 Build:20251030002
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -12,7 +12,7 @@
 - 新增 AI 饮食相关接口。
 - 引入新的 SDK 初始化选项 `onlyUsedForConnectingEarbudCase`，用于优化耳机仓的连接流程。
 - 为 `FitCloudTaskModel` 新增 `desc` 属性，用于描述任务详情。
-- 更新任务发送 API 为 `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudResultHandler _Nullable)completion`，支持分批向手表发送任务，避免因一次传输数据过多导致手表无法正确处理。
+- 更新任务发送 API 为 `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudCompletionHandler _Nullable)completion`，支持分批向手表发送任务，避免因一次传输数据过多导致手表无法正确处理。
 - 引入新的 API `+ (void)fetchInstallableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion` 来获取手表支持安装云端或自定义表盘的表盘位数量以及对应的槽位索引信息。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
@@ -53,8 +53,8 @@
 - 更新了 GPS 位置数据请求回调 API，从 `- (void)onRequestGPSLocationData` 改为 `- (void)onWatchSideRequestGPSLocationDataWithPurpose:`，以在手表请求 GPS 位置数据时提供用途信息。
 - 修复了加载绑定用户信息时可能失败的问题。
 - 表盘尺寸支持 160x86 方。
-- 引入上课模式设置功能相关的 API：`+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudResultHandler _Nullable)completion` 和 `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion`。
-- 引入向手表设备发送节日祝福的 API：`+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudResultHandler _Nullable)completion`。
+- 引入上课模式设置功能相关的 API：`+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudCompletionHandler _Nullable)completion` 和 `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion`。
+- 引入向手表设备发送节日祝福的 API：`+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudCompletionHandler _Nullable)completion`。
 - 引入来电显示照片相关的新 API。
 - 新增支持 Google Pay/Google Drive/JioHotstar/Paytm 应用程序通知。
 - 天气数据中新增空气质量指数 (AQI) 参数。
@@ -89,17 +89,17 @@
 - 修复当应用尝试断开手表设备但该设备已经断开连接且仍保留在自动连接池中时，仍然会自动重新连接的问题。
 - 修复了某些项目中解析从手表设备同步的数据时出现的一些问题。
 - 为朝拜克尔白数据添加应用程序位置权限信息。
-- 引入新的 API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion`用于删除手表端的表盘。
+- 引入新的 API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudCompletionHandler)completion`用于删除手表端的表盘。
 - 添加连接超时选项，当您最初尝试手动连接到手表设备时，将应用以秒为单位的连接超时。如果达到此超时，将返回连接失败错误。随后，SDK 将尝试以静默方式重新连接。
 - 将 SDK 初始化选项 `shouldAutoConnect` 重命名为 `shouldAutoReconnectWhenAppLaunch`。
 - 修复微信支付指令发送的一些问题。
-- 引入新的 API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion`用于删除手表端对应表盘位置的表盘。
+- 引入新的 API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudCompletionHandler)completion`用于删除手表端对应表盘位置的表盘。
 - 引入新的 API，用于从手表端切换 iPhone 摄像头请求。
 - 修复历史连接记录的一些问题，特别当用户修改了手机时间。
 - 引入新的 API 以处理来自手表端的地图导航快照请求。
 - 表盘尺寸支持 240x320 方，184x276 方。
 - 新 OTA 升级启动指令增加了待升级文件类型信息。
-- 引入新的 API `+(void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion` 以删除手表端的 GPS epo 文件。
+- 引入新的 API `+(void)clearWatchGPSFileWithCompletion:(FitCloudCompletionHandler _Nullable)completion` 以删除手表端的 GPS epo 文件。
 - 支持华盛达`我的任务`相关指令。
 - 新增`FITCLOUDMN_ZALO`通知定义。
 - 新增 `FITCLOUDEVENT_COMMAND_EXEC_TIMEOUT_NOTIFY` 事件用于通知指令执行超时。
@@ -108,7 +108,7 @@
 - 大模型语音数据以及翻译语音数据新增返回原始的 opus 编码语音数据。
 - 在 SDK 层过滤掉一些已知非法的 GPS 点。
 - 修复常用联系人名称中包含某些特殊字符时导致设置常用联系人失败的问题。
-- 新增 API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion` 以通知手表设备当前 MAC 地址未在翻译能力提供商处注册。
+- 新增 API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudCompletionHandler _Nullable)completion` 以通知手表设备当前 MAC 地址未在翻译能力提供商处注册。
 - 重命名了与语言同步相关的 API。
 - 修改了一些关于手表设备在 GPS 文件升级过程中向手表写入 GPS 文件时回调 App 的 API。
 - 修改查询手表上 GPS 文件状态时，距离有效期不足 3 天认为需要更新 GPS 文件。

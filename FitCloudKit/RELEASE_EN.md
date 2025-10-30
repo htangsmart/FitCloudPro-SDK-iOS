@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-10-30 V1.3.2-beta.12 Build:20251030001
+## pcjbird 2025-10-30 V1.3.2-beta.13 Build:20251030002
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -12,7 +12,7 @@
 - Introduced new APIs for AI diet features.
 - Introduce new sdk initialize option `onlyUsedForConnectingEarbudCase` to optimize the connection process for earbud cases.
 - Added a new `desc` property to the `FitCloudTaskModel` for task-detail descriptions.
-- Updated the task-sending API to `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudResultHandler _Nullable)completion`, enabling tasks to be sent to the watch in batches to prevent memory exhaustion caused by transmitting too much data at once.
+- Updated the task-sending API to `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudCompletionHandler _Nullable)completion`, enabling tasks to be sent to the watch in batches to prevent memory exhaustion caused by transmitting too much data at once.
 - Introduce new API `+ (void)fetchInstallableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion` to fetch the count of watchface slots that support installing cloud or custom watchfaces.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
@@ -53,8 +53,8 @@
 - Updated the GPS location data request callback API from `- (void)onRequestGPSLocationData` to `- (void)onWatchSideRequestGPSLocationDataWithPurpose:` to provide purpose information when the watch requests GPS location data.
 - Fixed an issue where loading bound user information would fail.
 - Watch face size support for 160x86 square.
-- Introduce the `+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudResultHandler _Nullable)completion` and `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion` API for classroom mode settings features.
-- Introduce the `+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudResultHandler _Nullable)completion` API for sending festival wishes to the watch device.
+- Introduce the `+ (void)setClassroomMode:(FitCloudClassroomModeSettingsModel *_Nonnull)classroomModeSetting completion:(FitCloudCompletionHandler _Nullable)completion` and `+ (void)queryClassroomModeSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudClassroomModeSettingsModel *_Nullable classroomModeSetting, NSError *_Nullable error))completion` API for classroom mode settings features.
+- Introduce the `+ (void)sendFestivalWishArray:(NSArray<FitCloudFestivalWishTimeModel *> *)wishArray completion:(FitCloudCompletionHandler _Nullable)completion` API for sending festival wishes to the watch device.
 - Introduced new APIs for incoming call photo features.
 - Added support for Google Pay/Google Drive/JioHotstar/Paytm App notifications.
 - Added AQI (Air Quality Index) parameter to weather data.
@@ -90,17 +90,17 @@
 - Fix the automatic reconnect issue, when the app attemp to disconnect the watch device which is already disconnected but remains in the auto-connect pool.
 - Fix some issue with parsing data synced from the watch device in some of the projects.
 - Add app location permission information for Muslim prayer kaaba data.
-- Introduce the new API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudResultHandler)completion` to delete the watchface on the watch side.
+- Introduce the new API `+(void)deleteWatchface:(NSInteger)watchfaceNo completion:(FitCloudCompletionHandler)completion` to delete the watchface on the watch side.
 - Add SDK init option `secsConnectTimeOut`, when you initially attempt to manually connect to the peripheral, a connection timeout in seconds is applied. If this timeout is reached, a connection failure error will be returned. Subsequently, the SDK will attempt to reconnect silently.
 - Rename the SDK init option `shouldAutoConnect` to `shouldAutoReconnectWhenAppLaunch`.
 - Fix some issue with WPAuth commands.
-- Introduce the new API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudResultHandler)completion` to delete the watchface with slot index on the watch side.
+- Introduce the new API `+(void)deleteWatchfaceWithSlotIndex:(NSInteger)slotIndex completion:(FitCloudCompletionHandler)completion` to delete the watchface with slot index on the watch side.
 - Introduce the new APIs for toggling iPhone camera requests from the watch side.
 - Fix some issues with historical connection records, especially when users modify their phone time.
 - Introduce the new APIs for handling the map navigation snapshot request from the watch side.
 - Add support for watchface size 240x320 square and 184x276 square.
 - New OTA start command added information about the file type to be upgraded.
-- Introduce the new API `+(void)clearWatchGPSFileWithCompletion:(FitCloudResultHandler _Nullable)completion` to delete the GPS epo file on the watch side.
+- Introduce the new API `+(void)clearWatchGPSFileWithCompletion:(FitCloudCompletionHandler _Nullable)completion` to delete the GPS epo file on the watch side.
 - Support `My Task` related commands for Huashengda.
 - Added `FITCLOUDMN_ZALO` notification definition.
 - Add the `FITCLOUDEVENT_COMMAND_EXEC_TIMEOUT_NOTIFY` event to notify that the command execution timed out.
@@ -109,7 +109,7 @@
 - Added the original opus voice data return for LLM voice data and translation voice data.
 - Filter out known invalid GPS points at the SDK layer.
 - Fixed an issue where setting favorite contacts would fail when contact names contained certain special characters.
-- Introduce the API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudResultHandler _Nullable)completion` to notify the watch device that the current MAC address is not registered with the translation service provider.
+- Introduce the API `+(void)reportDeviceMacAddressTranslateFeatureNotRegistered:(FitCloudCompletionHandler _Nullable)completion` to notify the watch device that the current MAC address is not registered with the translation service provider.
 - Renamed several APIs related to language synchronization.
 - Changed several APIs related to callbacks to the App when writing GPS files to the watch device during GPS file upgrade process.
 - Changed the logic of querying the state of the GPS file on the watch device: If the validity period is less than 3 days, it is considered that the GPS file needs to be updated.
