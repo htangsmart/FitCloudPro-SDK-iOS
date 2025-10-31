@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.14 build20251031001 (2025-10-31)
+
+- Updated the task-sending API to allow setting `totalTaskCount` and `totalCoinsEarned` even when the task list is empty or `nil` .
+- Additional SDK stability improvements and performance optimizations.
+
 ## V1.3.2-beta.13 build20251030002 (2025-10-30)
 
 - Renamed some API method name.
