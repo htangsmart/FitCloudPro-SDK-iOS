@@ -135,17 +135,34 @@ typedef NS_ENUM(NSInteger, FITCLOUDKITERROR) {
 
 #pragma mark - 日志等级
 
-/// FitCloudKit 日志等级定义
+/// Log levels used by FitCloudKit.
+///
+/// The levels are ordered by increasing severity:
+/// - ``verbose``: All messages including detailed trace logs.
+/// - ``debug``:  Diagnostic information useful during development.
+/// - ``info``:   General informational messages.
+/// - ``warn``:   Warnings that do not prevent functionality.
+/// - ``error``:  Errors that prevent the requested operation.
+/// - ``fatal``:  Critical errors that may terminate the process.
+/// - ``mute``:   Disables all logging.
 typedef NS_ENUM(NSInteger, FITCLOUDKITLOGLEVEL) {
-    FITCLOUDKITLOGLEVEL_DEBUG = 0,
-    FITCLOUDKITLOGLEVEL_VERBOSE,
-    FITCLOUDKITLOGLEVEL_INFO,
-    FITCLOUDKITLOGLEVEL_WARNING,
-    FITCLOUDKITLOGLEVEL_ERROR,
-    FITCLOUDKITLOGLEVEL_EXCEPTION,
-    FITCLOUDKITLOGLEVEL_ABORT,
-    FITCLOUDKITLOGLEVEL_MIN = FITCLOUDKITLOGLEVEL_DEBUG,
-    FITCLOUDKITLOGLEVEL_MAX = FITCLOUDKITLOGLEVEL_ABORT,
+    /// Verbose level – captures every message.
+    FITCLOUDKITLOGLEVEL_VERBOSE = 0,
+    /// Debug level – diagnostic details for developers.
+    FITCLOUDKITLOGLEVEL_DEBUG = 1,
+    /// Info level – general runtime information.
+    FITCLOUDKITLOGLEVEL_INFO = 2,
+    /// Warning level – recoverable issues.
+    FITCLOUDKITLOGLEVEL_WARN = 3,
+    /// Error level – non-recoverable operation failures.
+    FITCLOUDKITLOGLEVEL_ERROR = 4,
+    /// Fatal level – critical failures.
+    FITCLOUDKITLOGLEVEL_FATAL = 5,
+    /// Minimum valid level (maps to ``verbose``).
+    FITCLOUDKITLOGLEVEL_MIN = FITCLOUDKITLOGLEVEL_VERBOSE,
+    /// Maximum valid level (maps to ``fatal``).
+    FITCLOUDKITLOGLEVEL_MAX = FITCLOUDKITLOGLEVEL_FATAL,
+    /// Mute level – suppresses all log output.
     FITCLOUDKITLOGLEVEL_MUTE = NSIntegerMax
 };
 

@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-10-31 V1.3.2-beta.14 Build:20251031001
+## pcjbird 2025-11-03 V1.3.2-beta.15 Build:20251103001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -14,6 +14,11 @@
 - Added a new `desc` property to the `FitCloudTaskModel` for task-detail descriptions.
 - Updated the task-sending API to `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudCompletionHandler _Nullable)completion`, enabling tasks to be sent to the watch in batches to prevent memory exhaustion caused by transmitting too much data at once.
 - Introduce new API `+ (void)fetchInstallableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion` to fetch the count of watchface slots that support installing cloud or custom watchfaces.
+- Modified the SDK initialization method to return a boolean indicating success instead of the FitCloudKit object.
+- Introduce new sdk initialize option `logLevel` to set the minimum log level for the SDK.
+- Introduce new sdk initialize option `includeTimestampInLogs` to indicate whether to include the timestamp in the log messages.
+- Renamed the SDK log message callback Method from `- (void)OnLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level;` to `- (void)onLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level subsystem:(NSString *)subsystem category:(NSString *)category;`.
+- Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 

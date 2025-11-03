@@ -17,6 +17,16 @@
 /// > Important: Debug mode will print logs to the Xcode console, otherwise logs will be received by the FitCloudCallback. Default is non-debug mode.
 @property(nonatomic, assign) BOOL debugMode;
 
+/// The log level.
+///
+/// > Important: The default value is `FITCLOUDKITLOGLEVEL_VERBOSE`
+@property(nonatomic, assign) FITCLOUDKITLOGLEVEL logLevel;
+
+/// Whether logs include timestamp information
+///
+/// > Important: The default value is YES
+@property(nonatomic, assign) BOOL includeTimestampInLogs;
+
 /// The scan timeout time in seconds
 ///
 /// > Important: The default value is 10s

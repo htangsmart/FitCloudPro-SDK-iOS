@@ -807,11 +807,18 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// 睡眠调试数据
 - (void)OnSleepDebugData:(FitCloudSleepDebugData *)sleepDebugData;
 
-/// 会调日志数据
+
+/// Called when a log message is emitted.
+///
 /// - Parameters:
-///   - message: 日志信息
-///   - level: 日志等级
-- (void)OnLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level;
+///   - message: The log message text.
+///   - level: The severity level of the log entry.
+///   - subsystem: The subsystem that generated the log.
+///   - category: The log category within the subsystem.
+- (void)onLogMessage:(NSString *)message
+               level:(FITCLOUDKITLOGLEVEL)level
+           subsystem:(NSString *)subsystem
+            category:(NSString *)category;
 @end
 
 NS_ASSUME_NONNULL_END

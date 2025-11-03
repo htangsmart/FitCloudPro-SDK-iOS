@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-10-31 V1.3.2-beta.14 Build:20251031001
+## pcjbird 2025-11-03 V1.3.2-beta.15 Build:20251103001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -14,6 +14,11 @@
 - 为 `FitCloudTaskModel` 新增 `desc` 属性，用于描述任务详情。
 - 更新任务发送 API 为 `+ (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudCompletionHandler _Nullable)completion`，支持分批向手表发送任务，避免因一次传输数据过多导致手表无法正确处理。
 - 引入新的 API `+ (void)fetchInstallableWatchfaceSlotCountWithCompletion:(void (^_Nullable)(BOOL success, NSNumber *_Nullable slotCount, NSArray<NSNumber*>* _Nullable slotIndexArray, NSError *_Nullable error))completion` 来获取手表支持安装云端或自定义表盘的表盘位数量以及对应的槽位索引信息。
+- 修改了 SDK 的初始化方法，使其返回一个表示是否成功的布尔值，而非返回 FitCloudKit 对象。
+- 新增 SDK 初始化选项 logLevel，用于设置 SDK 的最低日志等级。
+- 新增 SDK 初始化选项 includeTimestampInLogs，用于指示日志消息中是否包含时间戳。
+- 将 SDK 日志回调方法由 `- (void)OnLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level;` 重命名为 `- (void)onLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level subsystem:(NSString *)subsystem category:(NSString *)category;`。
+- 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
 

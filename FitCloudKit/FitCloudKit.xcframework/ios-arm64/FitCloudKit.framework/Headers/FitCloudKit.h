@@ -6,11 +6,11 @@
 //  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 //  框架名称:FitCloudKit.xcframework
-//  框架功能:The iOS framework for the FitCloudPro smartwatch, which is responsible for encapsulating features such as communication with the watch device.
-//          FitCloudPro 智能手表的 iOS 框架，负责与手表设备通信等功能的封装。
+//  框架功能:The iOS framework for FitCloudPro smartwatches, encapsulating core functionalities such as device communication.
+//          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2025-10-31  Version:1.3.2-beta.14 Build:20251031001
+//      pcjbird    2025-11-03  Version:1.3.2-beta.15 Build:20251103001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -54,8 +54,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - option: initialize option, if nil will use the default option.
 ///   - callback: the sdk callback handler
 /// - Returns:
-///  FitCloudKit
-+ (instancetype _Nonnull)initWithOption:(FitCloudOption *_Nullable)option callback:(id<FitCloudCallback> _Nullable)callback;
+///  Whether the SDK is initialized successfully
++ (BOOL)initWithOption:(FitCloudOption *_Nullable)option callback:(id<FitCloudCallback> _Nullable)callback;
 
 /// Scan the watch devices
 + (void)scanPeripherals;
