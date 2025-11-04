@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.17 build20251104002 (2025-11-04)
+
+- Added support for 128×160 square watch face size.
+
 ## V1.3.2-beta.16 build20251104001 (2025-11-04)
 
 - Renamed several API methods and polished the related comments.
