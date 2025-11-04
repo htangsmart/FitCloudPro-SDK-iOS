@@ -68,7 +68,7 @@
      if([FitCloudKit lastConnectPeripheral])
      {
          self.deviceName.text = [FitCloudKit lastConnectPeripheral].name;
-         if([FitCloudKit connecting])
+         if([FitCloudKit isConnecting])
          {
              self.indicator.hidden = self.connectStatus.hidden = FALSE;
              if(!self.indicator.isAnimating)[self.indicator startAnimating];
@@ -257,7 +257,7 @@
         }
         else
         {
-            [FitCloudKit requestShowBluetoothPowerAlert];
+            [FitCloudKit showBluetoothPowerAlertIfPossible];
         }
         return FALSE;
     }
@@ -269,7 +269,7 @@
     self.indicator.hidden = self.connectStatus.hidden = FALSE;
     [self.indicator startAnimating];
     self.btnConnectDevice.hidden = TRUE;
-    [FitCloudKit tryConnect:[[FitCloudKit historyPeripherals] lastObject]];
+    [FitCloudKit tryReconnect:[[FitCloudKit historyPeripherals] lastObject]];
 }
 
 - (IBAction)OnRemoveDevice:(id)sender {

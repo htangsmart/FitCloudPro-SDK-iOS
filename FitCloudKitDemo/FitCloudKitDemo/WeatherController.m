@@ -36,9 +36,9 @@
         weather_callback.weatherType = FITCLOUDWEATHERTYPE_SUNNY;
         weather_callback.city = @"深圳";
         __weak typeof(self) weakSelf = self;
-        [FitCloudKit syncWeather:weather_callback block:^(BOOL succeed, NSError *error) {
+        [FitCloudKit syncWeather:weather_callback completion:^(BOOL success, NSError * _Nullable error) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                OpResultToastTip(weakSelf.view, succeed);
+                OpResultToastTip(weakSelf.view, success);
             });
         }];
     }

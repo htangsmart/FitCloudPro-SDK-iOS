@@ -15,13 +15,10 @@
 
 -(void) fitCloudKitConfig
 {
-    if(!self.fitCloudKit)
-    {
-        FitCloudOption *option = [FitCloudOption defaultOption];
-        option.debugMode = NO;
-        option.shouldAutoReconnectWhenAppLaunch = YES;
-        self.fitCloudKit = [FitCloudKit initWithOption:option callback:self];
-    }
+    FitCloudOption *option = [FitCloudOption defaultOption];
+    option.debugMode = NO;
+    option.shouldAutoReconnectWhenAppLaunch = YES;
+    BOOL success = [FitCloudKit initWithOption:option callback:self];
 }
 
 /**
@@ -185,12 +182,17 @@
     }];
 }
 
-/**
- *@brief 记录日志数据 Log message callback
- *@param message 日志信息 log message
- *@param level 日志等级 log level
- */
--(void) OnLogMessage:(NSString*)message level:(FITCLOUDKITLOGLEVEL)level
+/// Called when a log message is emitted.
+///
+/// - Parameters:
+///   - message: The log message text.
+///   - level: The severity level of the log entry.
+///   - subsystem: The subsystem that generated the log.
+///   - category: The log category within the subsystem.
+- (void)onLogMessage:(NSString *)message
+               level:(FITCLOUDKITLOGLEVEL)level
+           subsystem:(NSString *)subsystem
+            category:(NSString *)category
 {
     //You can process the log message according to your actual business logic
     message = [[message stringByReplacingOccurrencesOfString:@"<" withString:@"["] stringByReplacingOccurrencesOfString:@">" withString:@"]"];
@@ -198,7 +200,7 @@
     {
         XLOG_INFO(@"%@", message);
     }
-    else if(level == FITCLOUDKITLOGLEVEL_WARNING)
+    else if(level == FITCLOUDKITLOGLEVEL_WARN)
     {
         XLOG_WARNING(@"%@", message);
     }

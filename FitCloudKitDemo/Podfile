@@ -11,7 +11,7 @@ target 'FitCloudKitDemo' do
   #use_frameworks!
 
   # Pods for FitCloudKitDemo
-  pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+  pod 'FitCloudKit',:path => '../'
   pod 'XLFacility', git: 'https://github.com/pcjbird/XLFacility.git'
   pod 'iOSLogBrowserSDK'
   pod 'YYCategories'

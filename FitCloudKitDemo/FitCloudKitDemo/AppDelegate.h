@@ -12,7 +12,5 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic, strong) FitCloudKit *fitCloudKit;
-
 @end
 

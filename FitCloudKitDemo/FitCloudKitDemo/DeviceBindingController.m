@@ -58,7 +58,7 @@
 
 -(void)dealloc
 {
-    if(![FitCloudKit alreadyBound])[FitCloudKit ignoreConnectedPeripheral:YES];
+    if(![FitCloudKit alreadyBound])[FitCloudKit ignoreConnectedDevice:YES];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -272,7 +272,7 @@
 }
 
 - (IBAction)OnTryLater:(id)sender {
-    [FitCloudKit ignoreConnectedPeripheral:YES];
+    [FitCloudKit ignoreConnectedDevice:YES];
     //[[NSNotificationCenter defaultCenter] postNotificationName:IGNORECONNECTEDPERIPHERALNOTIFICATION object:nil];
     [self dismissViewControllerAnimated:NO completion:^{
         //[[NSNotificationCenter defaultCenter] postNotificationName:SKIPTOAPPHOMENOTIFICATION object:nil];
