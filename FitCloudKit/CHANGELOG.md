@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.16 build20251104001 (2025-11-04)
+
+- Renamed several API methods and polished the related comments.
+
 ## V1.3.2-beta.15 build20251103001 (2025-11-03)
 
 - Modified the SDK initialization method to return a boolean indicating success instead of the FitCloudKit object.

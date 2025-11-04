@@ -444,29 +444,29 @@ typedef void (^FitCloudOpenGSensorResultBlock)(BOOL succeed, NSError *_Nullable 
 ///   void
 typedef void (^FitCloudECardsResultBlock)(BOOL succeed, NSInteger maxCount, NSInteger maxContentLen, NSArray<FitCloudECard *> *_Nullable ecards, NSError *_Nullable error);
 
-/// The new OTA start confirm result block
+/// Callback block for OTA upgrade start result
 /// - Parameters:
-///   - success: whether start success
-///   - error: error information
-typedef void (^FitCloudNewOTAStartConfirmResultBlock)(BOOL success, NSError *_Nullable error);
+///   - success: whether the OTA start succeeded
+///   - error: error information if failed
+typedef void (^FitCloudOTAStartResultHandler)(BOOL success, NSError *_Nullable error);
 
-/// The new OTA progress block
+/// OTA upgrade progress callback
 /// - Parameters:
-///   - progress: the progress, range 0.0~1.0f
-typedef void (^FitCloudNewOTAProgressBlock)(CGFloat progress);
+///   - progress: progress value, range 0.0–1.0
+typedef void (^FitCloudOTAProgressHandler)(CGFloat progress);
 
-/// The new OTA completion block
+/// The OTA upgrade completion callback
 /// - Parameters:
 ///   - success: whether upgrade success
 ///   - avgSpeed: the avg transfer speed, kB/s
-///   - error: error information
-typedef void (^FitCloudNewOTACompletionBlock)(BOOL success, CGFloat avgSpeed, NSError *_Nullable error);
+///   - error: error information if failed
+typedef void (^FitCloudOTACompletionHandler)(BOOL success, CGFloat avgSpeed, NSError *_Nullable error);
 
-/// The new OTA cancel completion block
+/// The OTA upgrade cancel completion callback
 /// - Parameters:
 ///   - success: whether cancel success
-///   - error: error information
-typedef void (^FitCloudNewOTACancelCompletionBlock)(BOOL success, NSError *_Nullable error);
+///   - error: error information if failed
+typedef void (^FitCloudOTACancelCompletionHandler)(BOOL success, NSError *_Nullable error);
 
 /// The smart watch emergency contacts query completion block
 /// - Parameters:
@@ -490,11 +490,11 @@ typedef void (^FitCloudRestingHRQueryCompletion)(BOOL success, NSArray<FitCloudR
 ///   - error: error information
 typedef void (^FitCloudPersonalizedRemindersQueryCompletion)(BOOL success, NSArray<FitCloudPersonalizedReminderObject *> *_Nullable reminderArray, NSError *_Nullable error);
 
-/// FitCloud New OTA environment check result callback
+/// FitCloud New OTA environment check completion callback
 /// - Parameters:
-///   - succeed: whether new ota environment is available to upgrade
-///   - error: error information
-typedef void (^FitCloudNewOTAEnvironmentCheckCompletion)(BOOL succeed, NSError *_Nullable error);
+///     - success: whether the watch device currently meets the conditions for a new OTA upgrade
+///     - error: error information if check failed, or nil if successful
+typedef void (^FitCloudNewOTAEnvironmentCheckCompletion)(BOOL success, NSError *_Nullable error);
 
 /// The smart watch other modules firmware version query completion block
 /// - Parameters:

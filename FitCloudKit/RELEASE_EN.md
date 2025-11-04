@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-11-03 V1.3.2-beta.15 Build:20251103001
+## pcjbird 2025-11-04 V1.3.2-beta.16 Build:20251104001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -18,6 +18,7 @@
 - Introduce new sdk initialize option `logLevel` to set the minimum log level for the SDK.
 - Introduce new sdk initialize option `includeTimestampInLogs` to indicate whether to include the timestamp in the log messages.
 - Renamed the SDK log message callback Method from `- (void)OnLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level;` to `- (void)onLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level subsystem:(NSString *)subsystem category:(NSString *)category;`.
+- Renamed other several API methods and polished the related comments.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

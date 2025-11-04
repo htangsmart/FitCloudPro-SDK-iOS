@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2025-11-03  Version:1.3.2-beta.15 Build:20251103001
+//      pcjbird    2025-11-04  Version:1.3.2-beta.16 Build:20251104001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -55,101 +55,127 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - callback: the sdk callback handler
 /// - Returns:
 ///  Whether the SDK is initialized successfully
-+ (BOOL)initWithOption:(FitCloudOption *_Nullable)option callback:(id<FitCloudCallback> _Nullable)callback;
++ (BOOL)initWithOption:(nullable FitCloudOption *)option
+              callback:(nullable id<FitCloudCallback>)callback;
 
-/// Scan the watch devices
-+ (void)scanPeripherals;
+/// Scan for watch devices or other discoverable devices known to the SDK.
++ (void)startScan;
 
-/// Stop scan the watch devices
+/// Stop scan for watch devices or other discoverable devices known to the SDK.
 + (void)stopScan;
 
-/// Converts a peripheral discovered by your own scanning method into a connectable peripheral
+/// Resolves a peripheral discovered by your own scanning into a connectable peripheral compatible with the SDK.
 /// - Parameters:
-///   - peripheral: The peripheral discovered by your scanning
-///   - completion: The completion handler called with the conversion result
-+ (void)translatePeripheral:(CBPeripheral *_Nonnull)peripheral toConnectablePeripheralCompletion:(void (^_Nullable)(BOOL success, NSError *_Nullable error, CBPeripheral *_Nullable connectablePeripheral))completion;
+///   - peripheral: The peripheral you discovered through custom scanning
+///   - completion: Called with the resolution result
+///     - success: YES if the peripheral was successfully resolved
+///     - error: Non-nil if resolution failed
+///     - connectablePeripheral: The SDK-compatible peripheral, nil on failure
++ (void)resolveConnectablePeripheralFrom:(CBPeripheral *_Nonnull)peripheral
+                              completion:(void (^_Nullable)(BOOL success,
+                                                          NSError *_Nullable error,
+                                                          CBPeripheral *_Nullable connectablePeripheral))completion;
 
-/// Connects to a watch device
+/// Establishes a connection to the specified watch device or other discoverable devices known to the SDK.
 /// - Parameters:
-///   - peripheral: The watch device peripheral to connect to
+///   - peripheral: The target device to connect.
+///
+/// >Important: The peripheral must first be discovered by the SDK or resolved through the SDK before it can be connected.
 + (void)connect:(CBPeripheral *_Nonnull)peripheral;
 
-/// Connects to a watch device with optional BT mode
+/// Establishes a connection to the specified watch device or other discoverable devices known to the SDK 
+/// with optional classic Bluetooth (BT) connection.
 /// - Parameters:
-///   - peripheral: The watch device peripheral to connect to
-///   - btMode: Whether to simultaneously connect classic Bluetooth (BT) using one-key dual connection
-+ (void)connect:(CBPeripheral *_Nonnull)peripheral btMode:(BOOL)btMode;
+///   - peripheral: The target device to connect.
+///   - withClassicBT: Whether to simultaneously connect classic Bluetooth (BT) using one-key dual connection.
+///
+/// >Important: The peripheral must first be discovered by the SDK or resolved through the SDK before it can be connected.
++ (void)connect:(CBPeripheral *_Nonnull)peripheral
+   withClassicBT:(BOOL)withClassicBT;
 
-/// Connects and binds to a watch device
+/// Establishes a connection to the specified watch device or other discoverable devices known to the SDK 
+/// and binds it to the specified user account.
 /// - Parameters:
-///   - peripheral: The watch device peripheral to connect to
+///   - peripheral: The target device to connect.
 ///   - userId: The user ID for binding
 ///   - randomCode: Optional random code for binding (only used in some projects, pass nil if not needed)
-///   - btMode: Whether to simultaneously connect classic Bluetooth (BT) using one-key dual connection
-+ (void)connectAndBind:(CBPeripheral *_Nonnull)peripheral userId:(NSString *_Nonnull)userId randomCode:(NSString *_Nullable)randomCode btMode:(BOOL)btMode;
-
-/// Try to connect the historical watch device
-/// - Parameters:
-///   - record: the historical watch device
+///   - withClassicBT: Whether to simultaneously connect classic Bluetooth (BT) using one-key dual connection.
 ///
-/// >Warning: Please do not attempt to connect the watch device which has already been unbound.
-+ (void)tryConnect:(FitCloudKitConnectRecord *_Nonnull)record;
+/// >Important: The peripheral must first be discovered by the SDK or resolved through the SDK before it can be connected.
++ (void)connectAndBind:(CBPeripheral *_Nonnull)peripheral
+               userId:(NSString *_Nonnull)userId
+           randomCode:(NSString *_Nullable)randomCode
+        withClassicBT:(BOOL)withClassicBT;   
 
-/// Disconnect the current watch device
+/// Try to reconnect a historical connected device
+/// - Parameters:
+///   - device: the historical connected device
+///
+/// >Warning: Please do not attempt to reconnect a device which has already been unbound.
++ (void)tryReconnect:(FitCloudKitConnectRecord *_Nonnull)device;
+
+/// Disconnect the current connected device
+///
+/// This method also disables automatic reconnection for the current device.
+/// If no device is once connected, the method has no effect.
 + (void)disconnect;
 
-/// Ignore the currently connected but unbound/binding failed watch device
+/// Ignore the currently connected but unbound/binding-failed device
 /// - Parameters:
-///   - silent: If YES, related logs will not be printed
-+ (void)ignoreConnectedPeripheral:(BOOL)silent;
+///   - silent: Pass YES to suppress related SDK log output
++ (void)ignoreConnectedDevice:(BOOL)silent;
 
-#pragma mark Request to turn on Bluetooth to allow connection to accessories
+#pragma mark Attempts to display the system Bluetooth power alert if possible
 
-/// Request to turn on Bluetooth to allow connection to accessories
+/// Attempts to display the system Bluetooth power alert if possible.
 ///
-/// Only valid when system Bluetooth is turned off
-+ (void)requestShowBluetoothPowerAlert;
+/// This method only works when the app has Bluetooth permission granted,
+/// but the system Bluetooth is currently turned off. 
+/// It has no effect if Bluetooth permission is denied.
+///
+/// >Important: This method should be called on the main thread.
++ (void)showBluetoothPowerAlertIfPossible;
 
-#pragma mark List of discovered peripherals (watches)
+#pragma mark List of discovered devices
 
-/// List of discovered peripherals (watches)
-/// - Returns: Discovered Bluetooth peripherals
-+ (NSArray<FitCloudPeripheral *> *_Nonnull)discoveredPeripherals;
+/// Returns the list of Bluetooth devices discovered by the SDK.
+/// - Returns: An array of `FitCloudPeripheral` objects representing the discovered devices.
++ (NSArray<FitCloudPeripheral *> *_Nonnull)discoveredDevices;
 
 #pragma mark Bluetooth central device state
 
 /// Bluetooth central device state
 + (FITCLOUDBLECENTRALSTATE)bleState;
 
-#pragma mark Whether Bluetooth is connected
+#pragma mark Check if device is connected
 
-/// Whether Bluetooth is connected
-+ (BOOL)connected;
+/// Indicates whether the Bluetooth connection is currently established.
++ (BOOL)isConnected;
 
-#pragma mark Whether Bluetooth is connecting
+#pragma mark Check if device is connecting
 
-/// Whether Bluetooth is connecting
-+ (BOOL)connecting;
+/// Indicates whether a connection attempt is currently in progress.
++ (BOOL)isConnecting;
 
-#pragma mark Whether the Bluetooth peripheral device is initialized/ready (whether operations with the Bluetooth peripheral can be performed)
+#pragma mark Check if device is ready
 
-/// Whether the Bluetooth peripheral device is initialized/ready (whether operations with the Bluetooth peripheral can be performed)
-+ (BOOL)deviceReady;
+/// Indicates whether the Bluetooth peripheral device is initialized/ready (whether operations with the Bluetooth peripheral can be performed).
++ (BOOL)isDeviceReady;
 
-#pragma mark Whether the preparation work after watch connection is completed
+#pragma mark Check if device prepare work is finished
 
-/// Whether the preparation work after watch connection is completed
-+ (BOOL)devicePrepareWorkFinished;
+/// Indicates whether the post-connection device preparation is complete.
++ (BOOL)isDevicePrepareWorkFinished;
 
-#pragma mark Whether the Bluetooth peripheral device is initialized/ready and currently idle (whether operations with the Bluetooth peripheral can be performed)
+#pragma mark Check if device is idle
 
-/// Whether the Bluetooth peripheral device is initialized/ready and currently idle (whether operations with the Bluetooth peripheral can be performed)
-+ (BOOL)deviceIdle;
+/// Indicates whether the device is initialized, ready, and idle—i.e., whether it can accept new operations.
++ (BOOL)isDeviceIdle;
 
-#pragma mark Whether manual synchronization of exercise and health data is currently allowed
+#pragma mark Check if sync data is now allowed
 
-/// Whether manual synchronization of exercise and health data is currently allowed
-+ (BOOL)canSyncData;
+/// Indicates whether manual synchronization of exercise and health data is currently permitted.
++ (BOOL)canSyncDataNow;
 
 #pragma mark User binding status
 
@@ -1942,11 +1968,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// New OTA Module
 @interface FitCloudKit (NewOTA)
 
-#pragma mark Check Watch New OTA Environment
+#pragma mark Check the New OTA Environment
 
-/// Check if the watch environment supports new OTA upgrade, such as sufficient battery level
+/// Check whether the watch device currently meets the conditions for a new OTA upgrade, such as sufficient battery level, etc.
 /// - Parameters:
-///   - completion: The completion handler called with the environment check result
+///   - completion: The completion handler
+///     - success: whether the watch device currently meets the conditions for a new OTA upgrade
+///     - error: error information if check failed, or nil if successful
 + (void)checkNewOTAEnvironmentWithCompletion:(FitCloudNewOTAEnvironmentCheckCompletion)completion;
 
 #pragma mark Send New OTA File
@@ -1955,17 +1983,28 @@ NS_ASSUME_NONNULL_BEGIN
 /// This method should be called on a background thread if possible
 /// - Parameters:
 ///   - newOTAFilePath: The path to the new OTA upgrade file
-///   - startConfirmResult: The callback for upgrade start confirmation, indicating whether OTA upgrade started successfully
-///   - progress: The callback for transfer progress updates
-///   - completion: The completion handler called when the transfer completes
-+ (void)sendNewOTA:(NSString *)newOTAFilePath startConfirmResult:(FitCloudNewOTAStartConfirmResultBlock _Nullable)startConfirmResult progress:(FitCloudNewOTAProgressBlock _Nullable)progress completion:(FitCloudNewOTACompletionBlock _Nullable)completion;
+///   - startResultHandler: Callback block for OTA upgrade start result, indicating whether the OTA start succeeded
+///     - success: whether the OTA start succeeded
+///     - error: error information if failed
+///   - progressHandler: OTA upgrade progress callback
+///     - progress: progress value, range 0.0–1.0
+///   - completionHandler: The completion handler called when the transfer completes
+///     - success: whether upgrade success
+///     - avgSpeed: the avg transfer speed, kB/s
+///     - error: error information if failed
++ (void)sendNewOTA:(NSString *_Nonnull)newOTAFilePath
+       startResult:(FitCloudOTAStartResultHandler _Nullable)startResultHandler
+          progress:(FitCloudOTAProgressHandler _Nullable)progressHandler
+        completion:(FitCloudOTACompletionHandler _Nullable)completionHandler;
 
 #pragma mark Cancel New OTA File Transfer
 
 /// Cancel the ongoing new OTA file transfer if needed
 /// - Parameters:
 ///   - completion: The completion handler called when the cancellation completes
-+ (void)cancelSendTheNewOTAIfNeededWithCompletion:(FitCloudNewOTACancelCompletionBlock _Nullable)completion;
+///     - success: whether the cancellation succeeded
+///     - error: error information if failed
++ (void)cancelSendTheNewOTAIfNeededWithCompletion:(FitCloudOTACancelCompletionHandler _Nullable)completion;
 
 @end
 

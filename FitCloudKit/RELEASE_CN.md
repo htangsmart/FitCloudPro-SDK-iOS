@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-11-03 V1.3.2-beta.15 Build:20251103001
+## pcjbird 2025-11-04 V1.3.2-beta.16 Build:20251104001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -18,6 +18,7 @@
 - 新增 SDK 初始化选项 logLevel，用于设置 SDK 的最低日志等级。
 - 新增 SDK 初始化选项 includeTimestampInLogs，用于指示日志消息中是否包含时间戳。
 - 将 SDK 日志回调方法由 `- (void)OnLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level;` 重命名为 `- (void)onLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level subsystem:(NSString *)subsystem category:(NSString *)category;`。
+- 重命名了一些其他 API 方法，并优化了相关注释。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
