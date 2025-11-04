@@ -12,9 +12,9 @@ target 'FitCloudSwiftDemo' do
   # Pods for FitCloudSwiftDemo
 
   # FitCloudPro SDKs
-  pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
-  pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
-  pod 'FitCloudWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+  pod 'FitCloudKit',:path => '../'
+  pod 'FitCloudDFUKit',:path => '../'
+  pod 'FitCloudWFKit',:path => '../'
 
   # Log SDKs
   pod 'XLFacility', git: 'https://github.com/pcjbird/XLFacility.git'

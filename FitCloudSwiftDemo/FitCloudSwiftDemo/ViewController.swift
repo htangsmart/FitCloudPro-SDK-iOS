@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         
         if let lastPeripheral = FitCloudKit.lastConnectPeripheral() {
             deviceName.text = lastPeripheral.name
-            if FitCloudKit.connecting() {
+            if FitCloudKit.isConnecting() {
                 indicator.isHidden = false
                 connectStatus.isHidden = false
                 if !indicator.isAnimating {
@@ -235,7 +235,7 @@ override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         } else {
-            FitCloudKit.requestShowBluetoothPowerAlert()
+            FitCloudKit.showBluetoothPowerAlertIfPossible()
         }
         return false
     }
@@ -250,7 +250,7 @@ override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?
         indicator.startAnimating()
         btnConnectDevice.isHidden = true
         if let lastDevice = FitCloudKit.historyPeripherals().last {
-            FitCloudKit.tryConnect(lastDevice)
+            FitCloudKit.tryReconnect(lastDevice)
         }
     }
     

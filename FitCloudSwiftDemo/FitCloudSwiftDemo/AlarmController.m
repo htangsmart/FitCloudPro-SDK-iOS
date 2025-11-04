@@ -56,9 +56,9 @@
         [alarmlist addObject:alarm];
         [alarmlist addObjectsFromArray:[FitCloudKit alarmlist]];
         __weak typeof(self) weakSelf = self;
-        [FitCloudKit setAlarms:alarmlist block:^(BOOL succeed, NSError *error) {
+        [FitCloudKit sendAlarmClockArray:alarmlist completion:^(BOOL success, NSError * _Nullable error) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                OpResultToastTip(weakSelf.view, succeed);
+                OpResultToastTip(weakSelf.view, success);
             });
         }];
     }
@@ -90,9 +90,9 @@
         alarm.label = @"test alarm label1";
         [newAlarmlist insertObject:alarm atIndex:0];
         __weak typeof(self) weakSelf = self;
-        [FitCloudKit setAlarms:alarmlist block:^(BOOL succeed, NSError *error) {
+        [FitCloudKit sendAlarmClockArray:alarmlist completion:^(BOOL success, NSError * _Nullable error) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                OpResultToastTip(weakSelf.view, succeed);
+                OpResultToastTip(weakSelf.view, success);
             });
         }];
     }

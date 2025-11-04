@@ -43,9 +43,10 @@ extension  FitCloudProSDK: FitCloudCallback {
         XLOG_INFO("Received photo control command from watch device")
     }
     
+    
     /// Called when receiving real-time health measurement data from the watch
     /// - Parameter records: Array of health measurement result objects containing various health metrics
-    func onRealTimeHealthMeasuringData(_ records: [FitCloudRealTimeHealthMeasuringResultObject]!) {
+    func onRealTimeHealthMeasuringData(_ records: [FitCloudRealTimeHealthMeasuringResultObject]) {
         XLOG_INFO("Received real-time health measurement data: \(String(describing: records))")
     }
     
@@ -53,9 +54,10 @@ extension  FitCloudProSDK: FitCloudCallback {
     /// - Parameters:
     ///   - ecgDataArray: Array of ECG data points
     ///   - interval: Time interval between data points in milliseconds
-    func onRealTimeECGData(_ ecgDataArray: [NSNumber]!, interval: Int) {
+    func onRealTimeECGData(_ ecgDataArray: [NSNumber], interval: Int) {
         XLOG_INFO("Received real-time ECG data with \(ecgDataArray.count) points, interval: \(interval)ms")
     }
+     
     
     /// Called when the real-time ECG measurement stops
     /// This function will be triggered when the ECG measurement is completed or interrupted
@@ -153,15 +155,18 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
     }
     
-    /// Called when there is a log message from the FitCloudKit
+    /// Called when a log message is emitted.
+    ///
     /// - Parameters:
-    ///   - message: The log message string
-    ///   - level: The severity level of the log message
-    func onLogMessage(_ message: String!, level: FITCLOUDKITLOGLEVEL) {
+    ///   - message: The log message text.
+    ///   - level: The severity level of the log entry.
+    ///   - subsystem: The subsystem that generated the log.
+    ///   - category: The log category within the subsystem.
+    func onLogMessage(_ message: String, level: FITCLOUDKITLOGLEVEL, subsystem: String, category: String) {
         switch level {
         case .INFO:
             XLOG_INFO(message)
-        case .WARNING:
+        case .WARN:
             XLOG_WARNING(message)
         case .ERROR:
             XLOG_ERROR(message)
