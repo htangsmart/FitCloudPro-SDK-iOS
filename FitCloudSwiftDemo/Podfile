@@ -15,6 +15,9 @@ target 'FitCloudSwiftDemo' do
   pod 'FitCloudKit',:path => '../'
   pod 'FitCloudDFUKit',:path => '../'
   pod 'FitCloudWFKit',:path => '../'
+  
+  # TopStepAISDK
+  pod 'TopStepAISDK',:path => 'TopStepAISDK/'
 
   # Log SDKs
   pod 'XLFacility', git: 'https://github.com/pcjbird/XLFacility.git'

@@ -1,0 +1,432 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TopStepAISDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+import AVFAudio
+import Foundation
+import LAME
+import LogMate
+import MagicHelper
+import Network
+import Swift
+@_exported import TopStepAISDK
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public enum TopStepAIModel : Swift.Int {
+  case unspecific = 0
+  case doubao = 1
+  case deepseek = 2
+  case chatglm = 3
+  case erniebot = 4
+  case qwen = 5
+  case spark = 6
+  case kimi = 7
+  public static let TOPSTEPAIMODEL_UNSPECIFIC: Swift.Int
+  public static let TOPSTEPAIMODEL_DOUBAO: Swift.Int
+  public static let TOPSTEPAIMODEL_DEEPSEEK: Swift.Int
+  public static let TOPSTEPAIMODEL_CHATGLM: Swift.Int
+  public static let TOPSTEPAIMODEL_ERNIEBOT: Swift.Int
+  public static let TOPSTEPAIMODEL_QWEN: Swift.Int
+  public static let TOPSTEPAIMODEL_SPARK: Swift.Int
+  public static let TOPSTEPAIMODEL_KIMI: Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension TopStepAISDK.TopStepAIModel : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class TopStepASRService : ObjectiveC.NSObject {
+  @objc public static func shared() -> TopStepAISDK.TopStepASRService
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func createVoiceRecognizeTask(languageForSpeechInput: Swift.String? = nil, voiceDataAppendHandler: ((_ appendVoiceDataBlock: ((_ data: Foundation.Data) -> Swift.Void)?) -> Swift.Void)? = nil, pcmBufferAppendHandler: ((_ appendPcmBufferBlock: ((_ buffer: AVFAudio.AVAudioPCMBuffer) -> Swift.Void)?) -> Swift.Void)? = nil, onResult: ((_ taskId: Swift.String?, _ isFinal: Swift.Bool, _ text: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void)? = nil) -> Swift.String?
+  #endif
+  @objc public func finish()
+  @objc deinit
+}
+public typealias TranslateLanguage = Foundation.NSString
+@_inheritsConvenienceInitializers @objc public class TranslateLanguages : ObjectiveC.NSObject {
+  @objc public static let auto: TopStepAISDK.TranslateLanguage
+  @objc public static let zh_Hans: TopStepAISDK.TranslateLanguage
+  @objc public static let zh_Hant: TopStepAISDK.TranslateLanguage
+  @objc public static let en: TopStepAISDK.TranslateLanguage
+  @objc public static let yue: TopStepAISDK.TranslateLanguage
+  @objc public static let jp: TopStepAISDK.TranslateLanguage
+  @objc public static let kor: TopStepAISDK.TranslateLanguage
+  @objc public static let fra: TopStepAISDK.TranslateLanguage
+  @objc public static let spa: TopStepAISDK.TranslateLanguage
+  @objc public static let th: TopStepAISDK.TranslateLanguage
+  @objc public static let ara: TopStepAISDK.TranslateLanguage
+  @objc public static let ru: TopStepAISDK.TranslateLanguage
+  @objc public static let pt: TopStepAISDK.TranslateLanguage
+  @objc public static let de: TopStepAISDK.TranslateLanguage
+  @objc public static let it: TopStepAISDK.TranslateLanguage
+  @objc public static let el: TopStepAISDK.TranslateLanguage
+  @objc public static let nl: TopStepAISDK.TranslateLanguage
+  @objc public static let pl: TopStepAISDK.TranslateLanguage
+  @objc public static let bg: TopStepAISDK.TranslateLanguage
+  @objc public static let et: TopStepAISDK.TranslateLanguage
+  @objc public static let da: TopStepAISDK.TranslateLanguage
+  @objc public static let fi: TopStepAISDK.TranslateLanguage
+  @objc public static let cs: TopStepAISDK.TranslateLanguage
+  @objc public static let ro: TopStepAISDK.TranslateLanguage
+  @objc public static let sl: TopStepAISDK.TranslateLanguage
+  @objc public static let sv: TopStepAISDK.TranslateLanguage
+  @objc public static let hu: TopStepAISDK.TranslateLanguage
+  @objc public static let vi: TopStepAISDK.TranslateLanguage
+  @objc public static let ht: TopStepAISDK.TranslateLanguage
+  @objc public static let ps: TopStepAISDK.TranslateLanguage
+  @objc public static let rn: TopStepAISDK.TranslateLanguage
+  @objc public static let rw: TopStepAISDK.TranslateLanguage
+  @objc public static let sd: TopStepAISDK.TranslateLanguage
+  @objc public static let sg: TopStepAISDK.TranslateLanguage
+  @objc public static let si: TopStepAISDK.TranslateLanguage
+  @objc public static let sk: TopStepAISDK.TranslateLanguage
+  @objc public static let sm: TopStepAISDK.TranslateLanguage
+  @objc public static let sn: TopStepAISDK.TranslateLanguage
+  @objc public static let so: TopStepAISDK.TranslateLanguage
+  @objc public static let sq: TopStepAISDK.TranslateLanguage
+  @objc public static let sr: TopStepAISDK.TranslateLanguage
+  @objc public static let st: TopStepAISDK.TranslateLanguage
+  @objc public static let su: TopStepAISDK.TranslateLanguage
+  @objc public static let sw: TopStepAISDK.TranslateLanguage
+  @objc public static let ta: TopStepAISDK.TranslateLanguage
+  @objc public static let te: TopStepAISDK.TranslateLanguage
+  @objc public static let tg: TopStepAISDK.TranslateLanguage
+  @objc public static let tn: TopStepAISDK.TranslateLanguage
+  @objc public static let ti: TopStepAISDK.TranslateLanguage
+  @objc public static let tig: TopStepAISDK.TranslateLanguage
+  @objc public static let tk: TopStepAISDK.TranslateLanguage
+  @objc public static let to: TopStepAISDK.TranslateLanguage
+  @objc public static let tpi: TopStepAISDK.TranslateLanguage
+  @objc public static let tr: TopStepAISDK.TranslateLanguage
+  @objc public static let ts: TopStepAISDK.TranslateLanguage
+  @objc public static let tt: TopStepAISDK.TranslateLanguage
+  @objc public static let tw: TopStepAISDK.TranslateLanguage
+  @objc public static let ty: TopStepAISDK.TranslateLanguage
+  @objc public static let udm: TopStepAISDK.TranslateLanguage
+  @objc public static let uk: TopStepAISDK.TranslateLanguage
+  @objc public static let ur: TopStepAISDK.TranslateLanguage
+  @objc public static let uy: TopStepAISDK.TranslateLanguage
+  @objc public static let uz: TopStepAISDK.TranslateLanguage
+  @objc public static let war: TopStepAISDK.TranslateLanguage
+  @objc public static let xh: TopStepAISDK.TranslateLanguage
+  @objc public static let yi: TopStepAISDK.TranslateLanguage
+  @objc public static let yo: TopStepAISDK.TranslateLanguage
+  @objc public static let yua: TopStepAISDK.TranslateLanguage
+  @objc public static let zu: TopStepAISDK.TranslateLanguage
+  @objc public static let hy: TopStepAISDK.TranslateLanguage
+  @objc public static let id: TopStepAISDK.TranslateLanguage
+  @objc public static let ig: TopStepAISDK.TranslateLanguage
+  @objc public static let icelandic: TopStepAISDK.TranslateLanguage
+  @objc public static let jv: TopStepAISDK.TranslateLanguage
+  @objc public static let ka: TopStepAISDK.TranslateLanguage
+  @objc public static let kek: TopStepAISDK.TranslateLanguage
+  @objc public static let kg: TopStepAISDK.TranslateLanguage
+  @objc public static let kk: TopStepAISDK.TranslateLanguage
+  @objc public static let km: TopStepAISDK.TranslateLanguage
+  @objc public static let kn: TopStepAISDK.TranslateLanguage
+  @objc public static let ku: TopStepAISDK.TranslateLanguage
+  @objc public static let ky: TopStepAISDK.TranslateLanguage
+  @objc public static let la: TopStepAISDK.TranslateLanguage
+  @objc public static let lb: TopStepAISDK.TranslateLanguage
+  @objc public static let lg: TopStepAISDK.TranslateLanguage
+  @objc public static let ln: TopStepAISDK.TranslateLanguage
+  @objc public static let lo: TopStepAISDK.TranslateLanguage
+  @objc public static let lt: TopStepAISDK.TranslateLanguage
+  @objc public static let lv: TopStepAISDK.TranslateLanguage
+  @objc public static let mg: TopStepAISDK.TranslateLanguage
+  @objc public static let mhr: TopStepAISDK.TranslateLanguage
+  @objc public static let mi: TopStepAISDK.TranslateLanguage
+  @objc public static let mk: TopStepAISDK.TranslateLanguage
+  @objc public static let ml: TopStepAISDK.TranslateLanguage
+  @objc public static let mn: TopStepAISDK.TranslateLanguage
+  @objc public static let mr: TopStepAISDK.TranslateLanguage
+  @objc public static let mrj: TopStepAISDK.TranslateLanguage
+  @objc public static let ms: TopStepAISDK.TranslateLanguage
+  @objc public static let mt: TopStepAISDK.TranslateLanguage
+  @objc public static let mww: TopStepAISDK.TranslateLanguage
+  @objc public static let my: TopStepAISDK.TranslateLanguage
+  @objc public static let nb: TopStepAISDK.TranslateLanguage
+  @objc public static let ne: TopStepAISDK.TranslateLanguage
+  @objc public static let no: TopStepAISDK.TranslateLanguage
+  @objc public static let ny: TopStepAISDK.TranslateLanguage
+  @objc public static let om: TopStepAISDK.TranslateLanguage
+  @objc public static let os: TopStepAISDK.TranslateLanguage
+  @objc public static let otq: TopStepAISDK.TranslateLanguage
+  @objc public static let pa: TopStepAISDK.TranslateLanguage
+  @objc public static let pap: TopStepAISDK.TranslateLanguage
+  @objc public static let af: TopStepAISDK.TranslateLanguage
+  @objc public static let am: TopStepAISDK.TranslateLanguage
+  @objc public static let az: TopStepAISDK.TranslateLanguage
+  @objc public static let ba: TopStepAISDK.TranslateLanguage
+  @objc public static let be: TopStepAISDK.TranslateLanguage
+  @objc public static let bem: TopStepAISDK.TranslateLanguage
+  @objc public static let bi: TopStepAISDK.TranslateLanguage
+  @objc public static let bn: TopStepAISDK.TranslateLanguage
+  @objc public static let bs: TopStepAISDK.TranslateLanguage
+  @objc public static let ca: TopStepAISDK.TranslateLanguage
+  @objc public static let ceb: TopStepAISDK.TranslateLanguage
+  @objc public static let co: TopStepAISDK.TranslateLanguage
+  @objc public static let crs: TopStepAISDK.TranslateLanguage
+  @objc public static let cy: TopStepAISDK.TranslateLanguage
+  @objc public static let ee: TopStepAISDK.TranslateLanguage
+  @objc public static let eo: TopStepAISDK.TranslateLanguage
+  @objc public static let eu: TopStepAISDK.TranslateLanguage
+  @objc public static let fa: TopStepAISDK.TranslateLanguage
+  @objc public static let fil: TopStepAISDK.TranslateLanguage
+  @objc public static let fj: TopStepAISDK.TranslateLanguage
+  @objc public static let fy: TopStepAISDK.TranslateLanguage
+  @objc public static let ga: TopStepAISDK.TranslateLanguage
+  @objc public static let gd: TopStepAISDK.TranslateLanguage
+  @objc public static let gl: TopStepAISDK.TranslateLanguage
+  @objc public static let gu: TopStepAISDK.TranslateLanguage
+  @objc public static let ha: TopStepAISDK.TranslateLanguage
+  @objc public static let haw: TopStepAISDK.TranslateLanguage
+  @objc public static let he: TopStepAISDK.TranslateLanguage
+  @objc public static let hi: TopStepAISDK.TranslateLanguage
+  @objc public static let hr: TopStepAISDK.TranslateLanguage
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class TopStepAigcService : ObjectiveC.NSObject {
+  @objc public static func shared() -> TopStepAISDK.TopStepAigcService
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public var aigcStyles: [TopStepAISDK.TopStepAigcAlgorithmModel]? {
+    @objc get
+  }
+  #endif
+  @objc public var maxGenerateCount: Swift.Int {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func fetchAigcStyles(completion: ((Swift.Bool, [TopStepAISDK.TopStepAigcAlgorithmModel]?, (any Swift.Error)?) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func generate(prompt: Swift.String, style: Swift.String, imageCount: Swift.Int, completion: ((_ taskId: Swift.String?, _ success: Swift.Bool, _ images: [UIKit.UIImage]?, _ error: (any Swift.Error)?) -> Swift.Void)? = nil) -> Swift.String?
+  #endif
+  @objc deinit
+}
+public let InitErrorDomain: Swift.String
+public let AsrErrorDomain: Swift.String
+public let AigcErrorDomain: Swift.String
+public let GptErrorDomain: Swift.String
+public let TTSErrorDomain: Swift.String
+public let TranslateErrorDomain: Swift.String
+@objc public enum InitErrorCode : Swift.Int {
+  case unknown = -1
+  case notAllowsArbitraryLoads = 0
+  case invalidParameter = 2
+  case badServerResponse = 3
+  case parameterAKNotFound = 101
+  case parameterSNNotFound = 102
+  case deviceProhibited = 104
+  case channelProhibited = 106
+  case serviceNotEnabled = 107
+  case parameterValidationFailed = 108
+  case needToCheckDetailsMessage = 111
+  case deviceNotRegistered = 500
+  case internetConnectionOffline = 9999
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum AsrErrorCode : Swift.Int {
+  case unknown = -1
+  case sdkNotInitialized = 1
+  case invalidParameter = 2
+  case badServerResponse = 3
+  case internetConnectionOffline = 9999
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum AigcErrorCode : Swift.Int {
+  case unknown = -1
+  case sdkNotInitialized = 1
+  case invalidParameter = 2
+  case badServerResponse = 3
+  case generationFailed = 201
+  case contentInterceptedDueToProfanity = 501
+  case contentInterceptedDueToCopyright = 503
+  case serverInternalError = 282000
+  case missingRequiredParameter = 282003
+  case contentInterceptedDueToOtherReason = 282004
+  case parameterFormatNotSatisfied = 216100
+  case referenceImageFormatNotSatisfied = 216201
+  case taskTimeout = 216303
+  case parameterChangeDegreeNotFound = 216630
+  case internetConnectionOffline = 9999
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum TTSErrorCode : Swift.Int {
+  case unknown = -1
+  case sdkNotInitialized = 1
+  case invalidParameter = 2
+  case badServerResponse = 3
+  case audioFileSaveFailed = 1001
+  case audioConversionFailed = 1002
+  case invalidURL = 1003
+  case networkRequestFailed = 1004
+  case serverError = 1005
+  case fileNotFound = 1006
+  case internetConnectionOffline = 9999
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum GptErrorCode : Swift.Int {
+  case unknown = -1
+  case sdkNotInitialized = 1
+  case invalidParameter = 2
+  case badServerResponse = 3
+  case badRequest = 400
+  case authenticationFailed = 401
+  case permissionDenied = 403
+  case notFound = 404
+  case unprocessableEntity = 422
+  case rateLimitExceeded = 429
+  case contentInterceptedDueToViolation = 430
+  case internetConnectionOffline = 9999
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum TranslateErrorCode : Swift.Int {
+  case unknown = -1
+  case sdkNotInitialized = 1
+  case invalidParameter = 2
+  case badServerResponse = 3
+  case internetConnectionOffline = 9999
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class TopStepAigcAlgorithmModel : ObjectiveC.NSObject {
+  @objc public var name: Swift.String {
+    @objc get
+  }
+  @objc public var styleCode: Swift.String {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public var iconUrl: Swift.String? {
+    @objc get
+  }
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class TopStepTTSService : ObjectiveC.NSObject {
+  @objc public static func shared() -> TopStepAISDK.TopStepTTSService
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func synthesizeText(text: Swift.String, completion: ((_ taskId: Swift.String?, _ success: Swift.Bool, _ audioPath: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void)? = nil) -> Swift.String?
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class TopStepAITranslateService : ObjectiveC.NSObject {
+  @objc public static func shared() -> TopStepAISDK.TopStepAITranslateService
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func translate(text: Swift.String, targetLanguage: TopStepAISDK.TranslateLanguage, sourceLanguage: TopStepAISDK.TranslateLanguage? = nil, completion: ((_ taskId: Swift.String?, _ success: Swift.Bool, _ translation: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void)? = nil) -> Swift.String?
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class TopStepGPTService : ObjectiveC.NSObject {
+  @objc public static func shared() -> TopStepAISDK.TopStepGPTService
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func send(question: Swift.String, fromDevice: TopStepAISDK.TopStepWatchDeviceModel? = nil, usingSpecifiedModel: TopStepAISDK.TopStepAIModel = .unspecific, onStartAnswering: ((_ questionId: Swift.String?) -> Swift.Void)? = nil, onAnswer: ((_ questionId: Swift.String, _ deltaText: Swift.String?, _ fullText: Swift.String?, _ isFinal: Swift.Bool) -> Swift.Void)? = nil, onFinishAnswering: ((_ questionId: Swift.String) -> Swift.Void)? = nil, onError: ((_ questionId: Swift.String, _ error: any Swift.Error) -> Swift.Void)? = nil) -> Swift.String?
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class TopStepAI : ObjectiveC.NSObject {
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc public static var sdkBuild: Swift.String {
+    @objc get
+  }
+  @objc public static var sdkReleaseDate: Swift.String {
+    @objc get
+  }
+  @objc public static var sdkVersionDescription: Swift.String {
+    @objc get
+  }
+  @objc public static func setLogProvider(_ loggable: any LogMate.LoggableProtocol)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func setWatchDeviceMacAddr(_ macAddr: Swift.String, completion: @escaping (_ success: Swift.Bool, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class TopStepWatchDeviceModel : ObjectiveC.NSObject, Foundation.NSCopying, Foundation.NSCoding, Swift.Decodable, Swift.Encodable {
+  @objc public var name: Swift.String
+  @objc public var macAddress: Swift.String?
+  @objc public var model: Swift.String?
+  @objc public var projectNumber: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public init(name: Swift.String, macAddress: Swift.String? = nil, model: Swift.String? = nil, projectNumber: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc required public init?(coder: Foundation.NSCoder)
+  #endif
+  @objc public func encode(with coder: Foundation.NSCoder)
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  #endif
+  @objc deinit
+}
+extension TopStepAISDK.TopStepAIModel : Swift.Equatable {}
+extension TopStepAISDK.TopStepAIModel : Swift.Hashable {}
+extension TopStepAISDK.TopStepAIModel : Swift.RawRepresentable {}
+extension TopStepAISDK.InitErrorCode : Swift.Equatable {}
+extension TopStepAISDK.InitErrorCode : Swift.Hashable {}
+extension TopStepAISDK.InitErrorCode : Swift.RawRepresentable {}
+extension TopStepAISDK.AsrErrorCode : Swift.Equatable {}
+extension TopStepAISDK.AsrErrorCode : Swift.Hashable {}
+extension TopStepAISDK.AsrErrorCode : Swift.RawRepresentable {}
+extension TopStepAISDK.AigcErrorCode : Swift.Equatable {}
+extension TopStepAISDK.AigcErrorCode : Swift.Hashable {}
+extension TopStepAISDK.AigcErrorCode : Swift.RawRepresentable {}
+extension TopStepAISDK.TTSErrorCode : Swift.Equatable {}
+extension TopStepAISDK.TTSErrorCode : Swift.Hashable {}
+extension TopStepAISDK.TTSErrorCode : Swift.RawRepresentable {}
+extension TopStepAISDK.GptErrorCode : Swift.Equatable {}
+extension TopStepAISDK.GptErrorCode : Swift.Hashable {}
+extension TopStepAISDK.GptErrorCode : Swift.RawRepresentable {}
+extension TopStepAISDK.TranslateErrorCode : Swift.Equatable {}
+extension TopStepAISDK.TranslateErrorCode : Swift.Hashable {}
+extension TopStepAISDK.TranslateErrorCode : Swift.RawRepresentable {}

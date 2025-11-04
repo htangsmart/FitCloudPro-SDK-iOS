@@ -1,0 +1,11 @@
+framework module TopStepAISDK {
+  umbrella header "TopStepAISDK.h"
+  export *
+
+  module * { export * }
+}
+
+module TopStepAISDK.Swift {
+  header "TopStepAISDK-Swift.h"
+  requires objc
+}

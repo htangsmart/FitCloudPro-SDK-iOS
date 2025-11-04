@@ -1,0 +1,6 @@
+framework module MagicHelper {
+  umbrella header "MagicHelper.h"
+  export *
+
+  module * { export * }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleExecutable</key>
+  <string>MicrosoftCognitiveServicesSpeech</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.microsoft.cognitiveservices.SpeechSDK</string>
+  <key>CFBundleName</key>
+  <string>MicrosoftCognitiveServicesSpeech</string>
+  <key>CFBundlePackageType</key>
+  <string>FMWK</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.35.0</string>
+  <key>CFBundleVersion</key>
+  <string>1.35.0</string>
+  <key>NSHumanReadableCopyright</key>
+  <string>Copyright © 2018 Microsoft Corporation. All rights reserved.</string>
+  <key>CFBundleGetInfoString</key>
+  <string>Microsoft Cognitive Services Speech SDK</string>
+  <key>MinimumOSVersion</key>
+  <string>11.0</string>
+
+</dict>
+</plist>
