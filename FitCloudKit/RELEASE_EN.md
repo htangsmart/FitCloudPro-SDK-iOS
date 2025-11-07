@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-11-04 V1.3.2-beta.17 Build:20251104002
+## pcjbird 2025-11-07 V1.3.2-beta.18 Build:20251107001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -20,6 +20,8 @@
 - Renamed the SDK log message callback Method from `- (void)OnLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level;` to `- (void)onLogMessage:(NSString *)message level:(FITCLOUDKITLOGLEVEL)level subsystem:(NSString *)subsystem category:(NSString *)category;`.
 - Renamed other several API methods and polished the related comments.
 - Added support for 128×160 square watch face size.
+- Prevent auto-login when connecting to an unbound device.
+- Added support for sending the last two months of menstrual-cycle data to Titan watches. See `FitCloudKit+Titan.h` for details.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        iOSLogBrowserSDK.start(with: nil)
+        let option = iOSLogBrowserOption.default()
+        option.showQueueNameInBrowser = true
+        iOSLogBrowserSDK.start(with: option)
         XLOG_INFO("您正在使用 iOS 局域网日志查看服务！")
         FitCloudProSDK.shared.start()
         return true

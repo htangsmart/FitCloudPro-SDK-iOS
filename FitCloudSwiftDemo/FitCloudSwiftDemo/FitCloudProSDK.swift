@@ -13,6 +13,8 @@ import FitCloudWFKit
 
 class FitCloudProSDK: NSObject {
     
+    private var hasCreatedASRTaskBeforeDeviceReady: Bool = false
+    private var isReceivingASROpusData: Bool = false
     private var asrTaskId: String? = nil
     private var aigcTaskId: String? = nil
 
@@ -38,6 +40,7 @@ class FitCloudProSDK: NSObject {
         let option = FitCloudOption()
         option.debugMode = false
         option.shouldAutoReconnectWhenAppLaunch = true
+        option.includeTimestampInLogs = false
         FitCloudKit.initWith(option, callback: self)
         initTopStepAISDK()
         addNotificationObservers()
@@ -48,7 +51,7 @@ class FitCloudProSDK: NSObject {
     }
     
     private func addNotificationObservers() {
-        // 监听设备准备同步工作完成的通知
+        // Listen for the notification that the device preparation sync work is completed
         NotificationCenter.default.addObserver(self,
             selector: #selector(onDeviceReady(_:)),
             name: NSNotification.Name(rawValue: FITCLOUDEVENT_PREPARESYNCWORK_END_NOTIFY),
@@ -79,6 +82,11 @@ class FitCloudProSDK: NSObject {
                     XLOG_ERROR("Failed to register device MAC address: unknown error")
                 }
             }
+        }
+        if self.hasCreatedASRTaskBeforeDeviceReady, !self.isReceivingASROpusData {
+            self.hasCreatedASRTaskBeforeDeviceReady = false
+            XLOG_INFO("Send ASR error text: \"Task initialized before device was ready. Please try again.\"")
+            self.sendASRErrorText("Task initialized before device was ready. Please try again.")
         }
     }
 
@@ -216,10 +224,49 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
     }
     
+    /*func onTranslateVoiceBegin() {
+        
+    }
+    
+    func onTranslateDeltaOpusVoiceData(_ deltaOpusVoiceData: Data?, decodedDeltaVoiceData deltaVoiceData: Data?, sourceLanguage sourceLang: FITCLOUDLANGUAGE, targetLanguage targetLang: FITCLOUDLANGUAGE) {
+        
+    }
+    
+    func onTranslateVoiceStop(withOpusVoiceData opusVoiceData: Data?, decodedVoiceData voiceData: Data?, sourceLanguage sourceLang: FITCLOUDLANGUAGE, targetLanguage targetLang: FITCLOUDLANGUAGE) {
+        if let opusVoiceData = opusVoiceData {
+            saveOpusDataToFile(opusVoiceData, fileName: "translate_voice.opus")
+        }
+        
+        if let voiceData = voiceData {
+            savePCMDataToFile(voiceData, fileName: "translate_voice.pcm")
+        }
+    }*/
+    
+    func sendASRErrorText(_ errorText: String) {
+        
+        XLOG_INFO("Send ASR error to the watch device: \(errorText)")
+        FitCloudKit.sendASRResult(errorText) { success, error in
+            if !success {
+                // 发送 ASR 结果到设备失败
+                if let error = error {
+                    XLOG_ERROR("Failed to send ASR result to device: \(error)")
+                } else {
+                    XLOG_ERROR("Failed to send ASR result to device: unknown error")
+                }
+                return
+            }
+            XLOG_INFO("ASR result sent to device successfully")
+        }
+    }
+    
     /// Notifies that ASR (Automatic Speech Recognition) voice recording has started
     /// - Note: Called when the watch begins recording voice for ASR
     func onASRVoiceBegin() {
-        // 在后台线程中创建语音识别任务
+        if !FitCloudKit.isDevicePrepareWorkFinished() {
+            self.hasCreatedASRTaskBeforeDeviceReady = true
+            return
+        }
+        // Create a voice-recognition task on a background thread
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             self?.asrTaskId = TopStepASRService.shared().createVoiceRecognizeTask(languageForSpeechInput: nil, voiceDataAppendHandler: {[weak self] appendVoiceDataBlock in
                 self?.appendVoiceDataBlock = appendVoiceDataBlock
@@ -244,8 +291,12 @@ extension  FitCloudProSDK: FitCloudCallback {
                 self.appendVoiceDataBlock = nil
             }
         }
+        if self.hasCreatedASRTaskBeforeDeviceReady {
+            return
+        }
         if let error = error {
             XLOG_ERROR("An error occurred during Automatic Speech Recognition (ASR): \(error)")
+            sendASRErrorText(error.localizedDescription)
             return
         }
         guard let asrTaskId = self.asrTaskId, let taskId = taskId, asrTaskId == taskId, isFinal else {
@@ -278,6 +329,7 @@ extension  FitCloudProSDK: FitCloudCallback {
     ///   - deltaOpusVoiceData: The incremental voice data in Opus format
     ///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
     func onASRDeltaOpusVoiceData(_ deltaOpusVoiceData: Data?, decodedDeltaVoiceData deltaVoiceData: Data?) {
+        self.isReceivingASROpusData = true
         guard let _ = self.asrTaskId, let appendVoiceDataBlock = self.appendVoiceDataBlock, let deltaVoiceData = deltaVoiceData else {
             return
         }
@@ -289,7 +341,50 @@ extension  FitCloudProSDK: FitCloudCallback {
     ///   - opusVoiceData: The opus encoded voice data
     ///   - voiceData: The decoded voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
     func onASRVoiceStop(withOpusVoiceData opusVoiceData: Data?, decodedVoiceData voiceData: Data?) {
+        self.isReceivingASROpusData = false
+        if !FitCloudKit.isDevicePrepareWorkFinished() {
+            XLOG_INFO("Finished receiving ASR opus data before device is ready...")
+            return
+        }
+        if self.hasCreatedASRTaskBeforeDeviceReady {
+            self.hasCreatedASRTaskBeforeDeviceReady = false
+            XLOG_INFO("Send ASR error text: \"Task initialized before device was ready. Please try again.\"")
+            self.sendASRErrorText("Task initialized before device was ready. Please try again.")
+            return
+        }
         TopStepASRService.shared().finish()
+        
+        if let opusVoiceData = opusVoiceData {
+            saveOpusDataToFile(opusVoiceData, fileName: "asr_voice.opus")
+        }
+        
+        if let voiceData = voiceData {
+            savePCMDataToFile(voiceData, fileName: "asr_voice.pcm")
+        }
+    }
+
+    func saveOpusDataToFile(_ opusData: Data, fileName: String) {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        
+        do {
+            try opusData.write(to: fileURL)
+            XLOG_INFO("Opus data saved to: \(fileURL.path)")
+        } catch {
+            XLOG_ERROR("Failed to save Opus data: \(error)")
+        }
+    }
+
+    func savePCMDataToFile(_ pcmData: Data, fileName: String) {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        
+        do {
+            try pcmData.write(to: fileURL)
+            XLOG_INFO("PCM data saved to: \(fileURL.path)")
+        } catch {
+            XLOG_ERROR("Failed to save PCM data: \(error)")
+        }
     }
 
     /// Notifies that watch requests to generate an AI watch face based on the given prompt and preview dimensions
@@ -312,6 +407,7 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
         self.aiPhotoPreviewWidth = width
         self.aiPhotoPreviewHeight = height
+        XLOG_INFO("The watch device request to generate an AI watchface with preview width: \(width), height: \(height)")
         XLOG_INFO("Generating AI watch face with prompt: \(prompt)")
        
         if let _ = TopStepAigcService.shared().aigcStyles {
@@ -371,6 +467,8 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
         self.toConfirmedAIPhoto = image
         XLOG_INFO("Aigc result: \(image)")
+        //savePhotoToFile(image, fileName: "aigc_photo.jpg")
+
         guard self.aiPhotoPreviewWidth > 0, self.aiPhotoPreviewHeight > 0 else {
             XLOG_ERROR("Invalid preview dimensions")
             return
@@ -378,6 +476,8 @@ extension  FitCloudProSDK: FitCloudCallback {
         XLOG_INFO("Send aigc generate result to device...")
         FitCloudKit.sendAIPhotoGenerationResult(.SUCCESS, completion: nil)
         let preview = self.generatePreview(image: image, width: self.aiPhotoPreviewWidth, height: self.aiPhotoPreviewHeight)
+        
+        //savePhotoToFile(preview, fileName: "aigc_preview.jpg")
         
         XLOG_INFO("Send AI-generated preview to device...")
         DispatchQueue.global(qos: .userInitiated).async {
@@ -396,41 +496,93 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
     }
 
+    func savePhotoToFile(_ image: UIImage, fileName: String) {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        
+        do {
+            XLOG_INFO("Try save photo \(image) to file, image size: \(image.size), image scale: \(image.scale)")
+            let data = image.jpegData(compressionQuality: 1.0)
+            try data?.write(to: fileURL)
+            XLOG_INFO("Photo saved to: \(fileURL.path) successfully, file size: \(data?.count ?? 0) bytes")
+        } catch {
+            XLOG_ERROR("Failed to save photo: \(error)")
+        }
+    }
+
     func generatePreview(image: UIImage, width: Int, height: Int) -> UIImage {
-        // Create preview size
         let previewSize = CGSize(width: width, height: height)
-        
-        // Create graphics context
-        UIGraphicsBeginImageContextWithOptions(previewSize, false, 0.0)
-        
-        // Get context
-        guard let _ = UIGraphicsGetCurrentContext() else {
-            return image
+        //XLOG_INFO("Generate AI photo preview with %@ to size: \(width)*\(height)")
+        // Generate preview image using UIGraphicsImageRenderer
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1.0
+        let renderer = UIGraphicsImageRenderer(size: previewSize, format: format)
+        let previewImage = renderer.image { _ in
+            // Calculate AspectFill scale and offset
+            let imageSize = image.size
+            let widthRatio = previewSize.width / imageSize.width
+            let heightRatio = previewSize.height / imageSize.height
+            let scale = max(widthRatio, heightRatio)
+            
+            let scaledWidth = imageSize.width * scale
+            let scaledHeight = imageSize.height * scale
+            let offsetX = (previewSize.width - scaledWidth) * 0.5
+            let offsetY = (previewSize.height - scaledHeight) * 0.5
+            
+            // Draw the image
+            let drawRect = CGRect(x: offsetX, y: offsetY, width: scaledWidth, height: scaledHeight)
+            image.draw(in: drawRect)
         }
-        
-        // Calculate AspectFill scale ratio and offset
-        let imageSize = image.size
-        let widthRatio = previewSize.width / imageSize.width
-        let heightRatio = previewSize.height / imageSize.height
-        let scale = max(widthRatio, heightRatio)
-        
-        let scaledWidth = imageSize.width * scale
-        let scaledHeight = imageSize.height * scale
-        let offsetX = (previewSize.width - scaledWidth) * 0.5
-        let offsetY = (previewSize.height - scaledHeight) * 0.5
-        
-        // Draw image
-        let drawRect = CGRect(x: offsetX, y: offsetY, width: scaledWidth, height: scaledHeight)
-        image.draw(in: drawRect)
-        
-        // Get result image
-        guard let previewImage = UIGraphicsGetImageFromCurrentImageContext() else {
-            UIGraphicsEndImageContext()
-            return image
-        }
-        
-        UIGraphicsEndImageContext()
+
+        //XLOG_INFO("Generated preview photo \(previewImage), image size: \(previewImage.size), image scale: \(previewImage.scale)")
         return previewImage
+    }
+
+     /// Compress image to specified size (in KB)
+    /// - Parameters:
+    ///   - image: Original image
+    ///   - maxSizeKB: Maximum size in KB
+    /// - Returns: Compressed UIImage
+    func compressImage(_ image: UIImage, maxSizeKB: Int) -> UIImage? {
+        guard maxSizeKB > 0 else { return nil }
+        let maxSizeBytes = maxSizeKB * 1024
+        //XLOG_INFO("Compress image to max size: \(maxSizeKB) KB, max size bytes: \(maxSizeBytes)")
+        
+        // Try highest quality first
+        let compressionQuality: CGFloat = 1.0
+        let imageData = image.jpegData(compressionQuality: compressionQuality)
+        //XLOG_INFO("Original image size: \(imageData?.count ?? 0) bytes, compression quality: \(compressionQuality)")
+        
+        // If already meets requirement, use original image
+        if let data = imageData, data.count <= maxSizeBytes {
+            //XLOG_INFO("Image size already meets requirement, no compression needed. Size: \(data.count) bytes")
+            return image
+        }
+        
+        // Binary search compression
+        var low: CGFloat = 0.0
+        var high: CGFloat = 1.0
+        var bestData: Data?
+        
+        for _ in 0..<6 { // Try at most 6 times
+            let mid = (low + high) / 2
+            if let data = image.jpegData(compressionQuality: mid) {
+                if data.count <= maxSizeBytes {
+                    bestData = data
+                    low = mid
+                } else {
+                    high = mid
+                }
+            }
+        }
+        
+        // Convert best data back to UIImage
+        if let bestData = bestData, let compressedImage = UIImage(data: bestData) {
+            //XLOG_INFO("Compressed image size: \(bestData.count) bytes, compression quality: \(low)")
+            return compressedImage
+        }
+        //XLOG_WARNING("Failed to compress AI-generated preview image to required size, compression quality: \(high)")
+        return nil
     }
 
     /// Notifies whether the watch confirms to use this AI-generated watch face photo
@@ -447,8 +599,8 @@ extension  FitCloudProSDK: FitCloudCallback {
             return
         }
 
-        #warning("Replace the placeholder with the custom watchface template file for your project")
-        guard let templatePath = Bundle.main.path(forResource: "ai_watchface_template", ofType: "bin") else {
+        //#warning("Replace the placeholder with the custom watchface template file for your project")
+        guard let templatePath = Bundle.main.path(forResource: "gui_dial_binfile_watch_1024000_1_20250430", ofType: "bin") else {
             XLOG_ERROR("The watch face template file does not exist")
             return
         }

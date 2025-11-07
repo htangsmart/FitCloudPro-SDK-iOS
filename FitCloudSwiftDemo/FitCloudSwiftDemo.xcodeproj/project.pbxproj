@@ -74,6 +74,7 @@
 		89CBFB2A2D66F10E008E7B50 /* 3679a6588f34.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB272D66F10E008E7B50 /* 3679a6588f34.bin */; };
 		89CBFB2B2D66F10E008E7B50 /* test_360_preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB292D66F10E008E7B50 /* test_360_preview.png */; };
 		89CBFB2C2D66F10E008E7B50 /* test_360_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CBFB282D66F10E008E7B50 /* test_360_bg.png */; };
+		89F38BAE2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89F38BAD2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +176,7 @@
 		89CBFB272D66F10E008E7B50 /* 3679a6588f34.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 3679a6588f34.bin; sourceTree = "<group>"; };
 		89CBFB282D66F10E008E7B50 /* test_360_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_360_bg.png; sourceTree = "<group>"; };
 		89CBFB292D66F10E008E7B50 /* test_360_preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_360_preview.png; sourceTree = "<group>"; };
+		89F38BAD2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = gui_dial_binfile_watch_1024000_1_20250430.bin; sourceTree = "<group>"; };
 		CA40CD2328A4F44CA511AD27 /* Pods-FitCloudSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -405,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				894A982F2D68786200627844 /* gui_dial_binfile_watch_1020000_1_20240903_ota.bin */,
+				89F38BAD2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin */,
 				89CBFB272D66F10E008E7B50 /* 3679a6588f34.bin */,
 				89CBFB282D66F10E008E7B50 /* test_360_bg.png */,
 				89CBFB292D66F10E008E7B50 /* test_360_preview.png */,
@@ -506,6 +509,7 @@
 				89CBFB242D66385E008E7B50 /* e063fe4164204cff8326c7ca08e3f2fe.bin in Resources */,
 				89CBFB0F2D661D70008E7B50 /* Main.storyboard in Resources */,
 				89CBFB262D66E186008E7B50 /* 5140b9f6ad95.bin in Resources */,
+				89F38BAE2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,7 +675,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20251010002;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4R4ZQP25B9;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FitCloudSwiftDemo/FitCloudSwiftDemo-Prefix.pch";
@@ -713,7 +717,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20251010002;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4R4ZQP25B9;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FitCloudSwiftDemo/FitCloudSwiftDemo-Prefix.pch";

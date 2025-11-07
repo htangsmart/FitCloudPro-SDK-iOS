@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2025-11-04  Version:1.3.2-beta.17 Build:20251104002
+//      pcjbird    2025-11-07  Version:1.3.2-beta.18 Build:20251107001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -2008,4 +2008,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
 NS_ASSUME_NONNULL_END
+
+//Haylou
+#import "FitCloudKit+Haylou.h"
+
+//Huashengda
+#import "FitCloudKit+Huashengda.h"
+
+//transsion infinix
+#import "FitCloudKit+TranssionInfinix.h"
+
+//Transsion oraimo
+#import "FitCloudKit+TranssionOraimo.h"
+
+//Titan
+#import "FitCloudKit+Titan.h"

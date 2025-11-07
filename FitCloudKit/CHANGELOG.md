@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.18 build20251107001 (2025-11-07)
+
+- Prevent auto-login when connecting to an unbound device.
+- Added support for sending the last two months of menstrual-cycle data to Titan watches. See `FitCloudKit+Titan.h` for details.
+
 ## V1.3.2-beta.17 build20251104002 (2025-11-04)
 
 - Added support for 128×160 square watch face size.
