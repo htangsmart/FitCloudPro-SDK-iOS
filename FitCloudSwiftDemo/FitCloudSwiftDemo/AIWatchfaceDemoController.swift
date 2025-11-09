@@ -107,6 +107,11 @@ class AIWatchfaceDemoController: UIViewController {
             fileArray.append(aigcPreviewUrl)
         }
 
+        let asrOpusVoiceUrl = documentsURL.appendingPathComponent("asr_voice.opus")
+        if FileManager.default.fileExists(atPath: asrOpusVoiceUrl.path) {
+            fileArray.append(asrOpusVoiceUrl)
+        }
+        
         let asrPcmVoiceUrl = documentsURL.appendingPathComponent("asr_voice.pcm")
         if FileManager.default.fileExists(atPath: asrPcmVoiceUrl.path) {
             fileArray.append(asrPcmVoiceUrl)
