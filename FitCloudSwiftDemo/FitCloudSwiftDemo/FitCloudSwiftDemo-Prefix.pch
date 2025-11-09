@@ -27,5 +27,6 @@
 #import <Toast/Toast.h>
 #import "LocalizedLabel.h"
 #import "LocalizedButton.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 #endif /* FitCloudSwiftDemo_Prefix_pch */

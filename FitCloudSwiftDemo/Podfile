@@ -12,9 +12,9 @@ target 'FitCloudSwiftDemo' do
   # Pods for FitCloudSwiftDemo
 
   # FitCloudPro SDKs
-  pod 'FitCloudKit',:path => '../'
-  pod 'FitCloudDFUKit',:path => '../'
-  pod 'FitCloudWFKit',:path => '../'
+  pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+  pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+  pod 'FitCloudWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
   
   # TopStepAISDK
   pod 'TopStepAISDK',:path => 'TopStepAISDK/'
@@ -26,5 +26,7 @@ target 'FitCloudSwiftDemo' do
   # Other Third party SDKs
   pod 'YYCategories'
   pod 'Toast'
+  pod 'Zip', '~> 2.1', :modular_headers => true
+  pod 'MBProgressHUD'
 end
 

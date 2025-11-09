@@ -6,4 +6,5 @@
 #import <FitCloudKit/FitCloudKit.h>
 #import <FitCloudDFUKit/FitCloudDFUKit.h>
 #import <FitCloudWFKit/FitCloudWFKit.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 #import "MuslimPrayerParams.h"

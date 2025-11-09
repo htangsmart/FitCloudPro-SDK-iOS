@@ -13,6 +13,8 @@ import FitCloudWFKit
 
 class FitCloudProSDK: NSObject {
     
+    var isWatchDeviceRegisterAIServiceSuccess: Bool = false
+    var watchDeviceRegisterAIServiceError: NSError? = nil
     private var hasCreatedASRTaskBeforeDeviceReady: Bool = false
     private var isReceivingASROpusData: Bool = false
     private var asrTaskId: String? = nil
@@ -72,20 +74,28 @@ class FitCloudProSDK: NSObject {
         }
         XLOG_INFO("Start to register the watch device MAC address with TopStepAI service")
         // Register the watch device MAC address with TopStepAI service
-        TopStepAI.setWatchDeviceMacAddr(macAddr) { success, error in
+        TopStepAI.setWatchDeviceMacAddr(macAddr) {[weak self] success, error in
             if success {
                 XLOG_INFO("Successfully registered device MAC address: \(macAddr)")
+                NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Successfully registered device MAC address: \(macAddr)")
+                self?.isWatchDeviceRegisterAIServiceSuccess = true
             } else {
                 if let error = error {
                     XLOG_ERROR("Failed to register device MAC address: \(error)")
+                    NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to register device MAC address: \(error)")
+                    self?.isWatchDeviceRegisterAIServiceSuccess = false
+                    self?.watchDeviceRegisterAIServiceError = error as NSError?
                 } else {
                     XLOG_ERROR("Failed to register device MAC address: unknown error")
+                    NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to register device MAC address: unknown error")
+                    self?.isWatchDeviceRegisterAIServiceSuccess = false
                 }
             }
         }
         if self.hasCreatedASRTaskBeforeDeviceReady, !self.isReceivingASROpusData {
             self.hasCreatedASRTaskBeforeDeviceReady = false
             XLOG_INFO("Send ASR error text: \"Task initialized before device was ready. Please try again.\"")
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Task initialized before device was ready. Please try again.")
             self.sendASRErrorText("Task initialized before device was ready. Please try again.")
         }
     }
@@ -308,7 +318,7 @@ extension  FitCloudProSDK: FitCloudCallback {
             ? "voice is empty"
             : trimmedText!
         
-        
+        NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "ASR result: \(asrResultText), sending to device for confirmation...")
         XLOG_INFO("ASR result: \(asrResultText), sending to device...")
         FitCloudKit.sendASRResult(asrResultText) { success, error in
             if !success {
@@ -333,6 +343,7 @@ extension  FitCloudProSDK: FitCloudCallback {
         guard let _ = self.asrTaskId, let appendVoiceDataBlock = self.appendVoiceDataBlock, let deltaVoiceData = deltaVoiceData else {
             return
         }
+        NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Receiving ASR voice data...")
         appendVoiceDataBlock(deltaVoiceData)
     }
 
@@ -349,6 +360,7 @@ extension  FitCloudProSDK: FitCloudCallback {
         if self.hasCreatedASRTaskBeforeDeviceReady {
             self.hasCreatedASRTaskBeforeDeviceReady = false
             XLOG_INFO("Send ASR error text: \"Task initialized before device was ready. Please try again.\"")
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Task initialized before device was ready. Please try again.")
             self.sendASRErrorText("Task initialized before device was ready. Please try again.")
             return
         }
@@ -409,7 +421,9 @@ extension  FitCloudProSDK: FitCloudCallback {
         self.aiPhotoPreviewHeight = height
         XLOG_INFO("The watch device request to generate an AI watchface with preview width: \(width), height: \(height)")
         XLOG_INFO("Generating AI watch face with prompt: \(prompt)")
-       
+        // Add progress tips
+        NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Generating AI watch face with prompt: \(prompt)")
+        
         if let _ = TopStepAigcService.shared().aigcStyles {
              self.generateAIPhotos(prompt: prompt)
         }
@@ -439,6 +453,8 @@ extension  FitCloudProSDK: FitCloudCallback {
         guard let aigcStyles = TopStepAigcService.shared().aigcStyles, let style = aigcStyles.first?.styleCode else {
             XLOG_ERROR("Unable to generate image: failed to fetch AIGC styles")
             XLOG_INFO("Send aigc generate result to device...")
+            // Add progress tips
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to fetch AIGC styles: unknown error")
             FitCloudKit.sendAIPhotoGenerationResult(.UNKNOWN_ERROR, completion: nil)
             return
         }
@@ -457,6 +473,8 @@ extension  FitCloudProSDK: FitCloudCallback {
         if let error = error {
             XLOG_ERROR("An error occurred during AI image generation: \(error)")
             XLOG_INFO("Send aigc generate result to device...")
+            // Add progress tips
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to generate AI watch face: \(error)")
             FitCloudKit.sendAIPhotoGenerationResult(.NETWORK_ERROR, completion: nil)
             return
         }
@@ -466,8 +484,9 @@ extension  FitCloudProSDK: FitCloudCallback {
             return
         }
         self.toConfirmedAIPhoto = image
+        NotificationCenter.default.post(name: AppNotifcations.aiPhotoDidChange, object: image)
         XLOG_INFO("Aigc result: \(image)")
-        //savePhotoToFile(image, fileName: "aigc_photo.jpg")
+        savePhotoToFile(image, fileName: "aigc_photo.jpg")
 
         guard self.aiPhotoPreviewWidth > 0, self.aiPhotoPreviewHeight > 0 else {
             XLOG_ERROR("Invalid preview dimensions")
@@ -477,21 +496,29 @@ extension  FitCloudProSDK: FitCloudCallback {
         FitCloudKit.sendAIPhotoGenerationResult(.SUCCESS, completion: nil)
         let preview = self.generatePreview(image: image, width: self.aiPhotoPreviewWidth, height: self.aiPhotoPreviewHeight)
         
-        //savePhotoToFile(preview, fileName: "aigc_preview.jpg")
+        savePhotoToFile(preview, fileName: "aigc_preview.jpg")
         
         XLOG_INFO("Send AI-generated preview to device...")
+        NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Sending AI watch face preview to device...")
         DispatchQueue.global(qos: .userInitiated).async {
             FitCloudKit.sendAIGeneratedPhoto(preview) { progress in
-                XLOG_INFO("Sending AI watch face preview to device, progress: \(progress)")
+                XLOG_INFO(String(format: "Sending AI watch face preview to device, progress: %.1f%%", progress * 100))
+                NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: String(format: "Sending AI watch face preview to device, progress: %.1f%%", progress * 100))
             } completion: { success, avgSpeed, error in
                 if !success {
                     // Failed to send AI-generated preview to device
                     if let error = error {
                         XLOG_ERROR("Failed to send AI watch face preview to device: \(error)")
+                        NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to send AI watch face preview to device: \(error)")
                     } else {
                         XLOG_ERROR("Failed to send AI watch face preview to device: unknown error")
+                        NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to send AI watch face preview to device: unknown error")
                     }
+                    return
                 }
+                // Successfully sent AI-generated preview to device
+                XLOG_INFO(String(format: "Successfully sent AI watch face preview to device, avgSpeed: %.2f KB/s", avgSpeed))
+                NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: String(format: "Successfully sent AI watch face preview to device, avgSpeed: %.2f KB/s", avgSpeed))
             }
         }
     }
@@ -591,6 +618,7 @@ extension  FitCloudProSDK: FitCloudCallback {
     func didConfirmAIWatchFacePhoto(_ confirmed: Bool) {
         if !confirmed {
             XLOG_INFO("User declined to use AI-generated watch face photo")
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "User declined to use AI-generated watch face photo")
             self.toConfirmedAIPhoto = nil
             return
         }
@@ -600,28 +628,45 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
 
         //#warning("Replace the placeholder with the custom watchface template file for your project")
-        guard let templatePath = Bundle.main.path(forResource: "gui_dial_binfile_watch_1024000_1_20250430", ofType: "bin") else {
+        guard let templatePath = Bundle.main.path(forResource: "gui_dial_binfile_watch_156000_1_20250928_ota", ofType: "bin") else {
             XLOG_ERROR("The watch face template file does not exist")
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "The watch face template file does not exist")
             return
         }
+        // Add progress tips
+        NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Creating watch face...")
         FitCloudWFKit.create(withTemplateBin: templatePath, isNextGUI: true, rewriteNextGUIWatchfaceNo: nil, bkImage: image, bkCornerRadius: 0, preview: image, dtPosition: .BOTTOM, dtStyle: nil, dtColor: nil) { progress, tip in
-            XLOG_INFO("Creating watch face, progress: \(progress), tip: \(String(describing: tip))")
+            XLOG_INFO(String(format: "Creating watch face, progress: %.1f%%, tip: %@", progress * 100, String(describing: tip)))
+            // Add progress tips
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: String(format: "Creating watch face, progress: %.1f%%, tip: %@", progress * 100, String(describing: tip)))
         } logging: { level, message in
-            XLOG_INFO("Creating watch face, level: \(level), message: \(String(describing: message))")
+            XLOG_INFO(String(format: "Creating watch face, level: \(level), message: \(String(describing: message))"))
         } completion: {[weak self] success, resultBinPath, resultBkImage, resultPreview, error in
             XLOG_INFO("Creating watch face, success: \(success), resultBinPath: \(String(describing: resultBinPath)), resultBkImage: \(String(describing: resultBkImage)), resultPreview: \(String(describing: resultPreview)), error: \(String(describing: error))")
+            // Add progress tips
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Creating watch face, success: \(success), error: \(String(describing: error))")
+
             if !success {
                 // 创建手表表盘失败
                 if let error = error {
                     XLOG_ERROR("Failed to create watch face: \(error)")
+                    // Add progress tips
+                    NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to create watch face: \(error)")
                 } else {
                     XLOG_ERROR("Failed to create watch face: unknown error")
+                    // Add progress tips
+                    NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to create watch face: unknown error")
                 }
                 self?.toConfirmedAIPhoto = nil
                 return
             }
             self?.toConfirmedAIPhoto = nil
             XLOG_INFO("Watch face created successfully")
+            // Add progress tips
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Watch face created successfully")
+            // Notify the watch face bin file did change
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceBinDidChange, object: resultBinPath)
+
             self?.uploadAIWatchfaceToWatch(binPath: resultBinPath!)
         }
 
@@ -629,12 +674,22 @@ extension  FitCloudProSDK: FitCloudCallback {
 
     func uploadAIWatchfaceToWatch(binPath: String) {
         XLOG_INFO("Uploading AI-generated watch face to watch...")
+        // Add progress tips
+        NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Uploading AI-generated watch face to watch...")
+
         FitCloudKit.sendNewOTA(binPath) { success, error in
             XLOG_INFO("Starting to upload success: \(success), error: \(String(describing: error))")
+            // Add progress tips
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Starting to upload success: \(success), error: \(String(describing: error))")
+            
             } progress: { progress in
-                XLOG_INFO("Uploading progress: \(progress)")
+                XLOG_INFO(String(format: "Uploading progress: %.1f%%", progress * 100))
+                // Add progress tips
+                NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: String(format: "Uploading progress: %.1f%%", progress * 100))
             } completion: { success, avgSpeed, error in
-                XLOG_INFO("Uploading completed success: \(success), avgSpeed: \(avgSpeed), error: \(String(describing: error))")
+                XLOG_INFO(String(format: "Uploading completed success: %d, avgSpeed: %.2f KB/s, error: %@", success, avgSpeed, String(describing: error)))
+                // Add progress tips
+                NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: String(format: "Uploading completed success: %d, avgSpeed: %.2f KB/s, error: %@", success, avgSpeed, String(describing: error)))
                 if !success {
                     // Failed to upload watch face to watch
                     if let error = error {
@@ -645,6 +700,8 @@ extension  FitCloudProSDK: FitCloudCallback {
                     return
                 }
                 XLOG_INFO("Watch face uploaded to watch successfully")
+                // Add progress tips
+                NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Watch face uploaded to watch successfully")
             }
     }
     

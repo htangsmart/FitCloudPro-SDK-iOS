@@ -104,6 +104,9 @@ func registerNotificationObsever() {
         if self.indicator.isAnimating {
             self.indicator.stopAnimating()
         }
+        if let lastPeripheral = FitCloudKit.lastConnectPeripheral() {
+            self.deviceName.text = lastPeripheral.name
+        }
         self.connectStatus.text = NSLocalizedString("Connected", comment: "")
         self.connectStatus.textColor = UIColor(red: 0x00/255.0, green: 0xB2/255.0, blue: 0x00/255.0, alpha: 1.0)
         self.btnConnectDevice.isHidden = true
