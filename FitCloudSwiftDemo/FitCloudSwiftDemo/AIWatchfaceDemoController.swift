@@ -7,14 +7,18 @@
 
 import UIKit
 import Zip
+import FitCloudKit
 
 
 class AIWatchfaceDemoController: UIViewController {
 
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var tipsLabel: UILabel!
-
+    @IBOutlet weak var installPositionSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var dateTimeColorSegmentedControl: UISegmentedControl!
+    
     var aiWatchfaceBinPath: String?
+    var installableWatchfaceSlotIndexArray: [NSNumber]?
 
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -22,13 +26,18 @@ class AIWatchfaceDemoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.installPositionSegmentedControl.isHidden = true
+        self.dateTimeColorSegmentedControl.isHidden = true
+        self.installPositionSegmentedControl.addTarget(self, action: #selector(installPositionSegmentedControlValueChanged(_:)), for: .valueChanged)
+        self.dateTimeColorSegmentedControl.addTarget(self, action: #selector(dateTimeColorSegmentedControlValueChanged(_:)), for: .valueChanged)
         let macAddress = FitCloudKit.macAddr()
         let isWatchDeviceRegisterAIServiceSuccess = FitCloudProSDK.shared.isWatchDeviceRegisterAIServiceSuccess
         let watchDeviceRegisterAIServiceError = FitCloudProSDK.shared.watchDeviceRegisterAIServiceError
         
         if isWatchDeviceRegisterAIServiceSuccess {
             showDeviceRegisterAIServiceSuccessTips(macAddress ?? "")
+            fetchInstallablePositions()
+            setupWithTitanDateTimeColorStyles()
         }
         else if let error = watchDeviceRegisterAIServiceError {
             showDeviceRegisterAIServiceFailedTips(macAddress ?? "", error: error)
@@ -39,6 +48,52 @@ class AIWatchfaceDemoController: UIViewController {
         
         // Do any additional setup after loading the view.
         registerNotifications()
+    }
+
+    func fetchInstallablePositions() {
+        FitCloudKit.fetchInstallableWatchfaceSlotCount {[weak self] success, installableSlotCount, slotIndexArray, error in
+            if success {
+                guard let installableSlotCount = installableSlotCount, let slotIndexArray = slotIndexArray else {
+                    return
+                }
+                self?.installableWatchfaceSlotIndexArray = slotIndexArray
+                DispatchQueue.main.async {
+                    self?.installPositionSegmentedControl.isHidden = false
+                    self?.installPositionSegmentedControl.removeAllSegments()
+                    for index in 0..<Int(installableSlotCount) {
+                        self?.installPositionSegmentedControl.insertSegment(withTitle: "\(index + 1)", at: index, animated: false)
+                    }
+                    self?.installPositionSegmentedControl.selectedSegmentIndex = FitCloudProSDK.shared.aiWatchfaceInstallPostion
+                    FitCloudProSDK.shared.aiWatchfaceSlotIndex = slotIndexArray[FitCloudProSDK.shared.aiWatchfaceInstallPostion].intValue
+                }
+            }
+        }
+    }
+
+    @objc func installPositionSegmentedControlValueChanged(_ sender: UISegmentedControl) {
+        let selectedIndex = sender.selectedSegmentIndex
+        print("installPositionSegmentedControlValueChanged: \(selectedIndex)")
+        FitCloudProSDK.shared.aiWatchfaceInstallPostion = selectedIndex
+        guard let slotIndexArray = self.installableWatchfaceSlotIndexArray else {
+            return
+        }
+        FitCloudProSDK.shared.aiWatchfaceSlotIndex = slotIndexArray[selectedIndex].intValue
+    }
+
+    func setupWithTitanDateTimeColorStyles() {
+        self.dateTimeColorSegmentedControl.isHidden = false
+        self.dateTimeColorSegmentedControl.removeAllSegments()
+        let colors = ["Black", "White", "Green", "Gray", "Yellow"]
+        for (index, color) in colors.enumerated() {
+            self.dateTimeColorSegmentedControl.insertSegment(withTitle: color, at: index, animated: false)
+        }
+        self.dateTimeColorSegmentedControl.selectedSegmentIndex = FitCloudProSDK.shared.aiWatchfaceDateTimeColorStyle
+    }
+
+    @objc func dateTimeColorSegmentedControlValueChanged(_ sender: UISegmentedControl) {
+        let selectedIndex = sender.selectedSegmentIndex
+        print("dateTimeColorSegmentedControlValueChanged: \(selectedIndex)")
+        FitCloudProSDK.shared.aiWatchfaceDateTimeColorStyle = selectedIndex
     }
 
     func showDeviceRegisterAIServiceSuccessTips(_ macAddress: String) {

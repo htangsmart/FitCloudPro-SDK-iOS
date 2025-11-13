@@ -27,6 +27,10 @@ class FitCloudProSDK: NSObject {
     
     private var appendVoiceDataBlock: ((_ voiceData: Data) -> Void)? = nil
     
+    var aiWatchfaceSlotIndex: Int = 0
+    var aiWatchfaceInstallPostion: Int = 0
+    var aiWatchfaceDateTimeColorStyle: Int = 0
+    
     static let shared = FitCloudProSDK()
 
     private override init() {
@@ -96,7 +100,7 @@ class FitCloudProSDK: NSObject {
             self.hasCreatedASRTaskBeforeDeviceReady = false
             XLOG_INFO("Send ASR error text: \"Task initialized before device was ready. Please try again.\"")
             NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Task initialized before device was ready. Please try again.")
-            self.sendASRErrorText("Task initialized before device was ready. Please try again.")
+            self.sendASRErrorText("Task initialized before device was ready. Please try again.", errorCode: .customMessage)
         }
     }
 
@@ -252,10 +256,10 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
     }*/
     
-    func sendASRErrorText(_ errorText: String) {
+    func sendASRErrorText(_ errorText: String, errorCode: FitCloudASRErrorCode) {
         
         XLOG_INFO("Send ASR error to the watch device: \(errorText)")
-        FitCloudKit.sendASRResult(errorText) { success, error in
+        FitCloudKit.sendASRResult(errorText, errorCode: errorCode) { success, error in
             if !success {
                 // 发送 ASR 结果到设备失败
                 if let error = error {
@@ -304,9 +308,13 @@ extension  FitCloudProSDK: FitCloudCallback {
         if self.hasCreatedASRTaskBeforeDeviceReady {
             return
         }
-        if let error = error {
+        if let error = error as? NSError {
             XLOG_ERROR("An error occurred during Automatic Speech Recognition (ASR): \(error)")
-            sendASRErrorText(error.localizedDescription)
+            var errorCode: FitCloudASRErrorCode = .customMessage
+            if error.code == AsrErrorCode.internetConnectionOffline.rawValue {
+                errorCode = .internetConnectionOffline
+            }
+            sendASRErrorText(error.localizedDescription, errorCode: errorCode)
             return
         }
         guard let asrTaskId = self.asrTaskId, let taskId = taskId, asrTaskId == taskId, isFinal else {
@@ -320,7 +328,7 @@ extension  FitCloudProSDK: FitCloudCallback {
         
         NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "ASR result: \(asrResultText), sending to device for confirmation...")
         XLOG_INFO("ASR result: \(asrResultText), sending to device...")
-        FitCloudKit.sendASRResult(asrResultText) { success, error in
+        FitCloudKit.sendASRResult(asrResultText, errorCode: .success) { success, error in
             if !success {
                 // 发送 ASR 结果到设备失败
                 if let error = error {
@@ -361,7 +369,7 @@ extension  FitCloudProSDK: FitCloudCallback {
             self.hasCreatedASRTaskBeforeDeviceReady = false
             XLOG_INFO("Send ASR error text: \"Task initialized before device was ready. Please try again.\"")
             NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Task initialized before device was ready. Please try again.")
-            self.sendASRErrorText("Task initialized before device was ready. Please try again.")
+            self.sendASRErrorText("Task initialized before device was ready. Please try again.", errorCode: .customMessage)
             return
         }
         TopStepASRService.shared().finish()
@@ -470,12 +478,16 @@ extension  FitCloudProSDK: FitCloudCallback {
         defer {
             self.aigcTaskId = nil
         }
-        if let error = error {
+        if let error = error as? NSError {
             XLOG_ERROR("An error occurred during AI image generation: \(error)")
             XLOG_INFO("Send aigc generate result to device...")
             // Add progress tips
             NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to generate AI watch face: \(error)")
-            FitCloudKit.sendAIPhotoGenerationResult(.NETWORK_ERROR, completion: nil)
+            var errorCode: FITCLOUDAIPHOTOGENRESULT = .UNKNOWN_ERROR
+            if error.code == AigcErrorCode.internetConnectionOffline.rawValue {
+                errorCode = .NETWORK_CONNECTION_OFFLINE
+            }
+            FitCloudKit.sendAIPhotoGenerationResult(errorCode, completion: nil)
             return
         }
         guard let aigcTaskId = self.aigcTaskId, let taskId = taskId, aigcTaskId == taskId, let image = images?.first else {
@@ -666,7 +678,47 @@ extension  FitCloudProSDK: FitCloudCallback {
             NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Watch face created successfully")
             // Notify the watch face bin file did change
             NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceBinDidChange, object: resultBinPath)
+            guard let installPosition = self?.aiWatchfaceInstallPostion else {
+                XLOG_ERROR("Invalid install position")
+                NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Invalid install position")
+                return
+            }
+            self?.uploadAIWatchfaceToWatch(binPath: resultBinPath!, installPosition: installPosition + 1)
+        }
 
+    }
+
+    func uploadAIWatchfaceToWatch(binPath: String, installPosition: Int) {
+        XLOG_INFO("Modifying watch face bin install position to \(installPosition) from template bin \(binPath)...")
+        // Add progress tips
+        NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Modifying watch face bin install position to \(installPosition) from template bin \(binPath)...")
+        FitCloudWFKit.modifyWatchfaceBinPushIndex(to: installPosition, fromTemplateBin: binPath) { level, message in
+            XLOG_INFO(String(format: "Modifying watch face bin install position: %@", String(describing: message)))
+                // Add progress tips
+                NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: String(format: "Modifying watch face bin install position: %@", String(describing: message)))
+        } completion: {[weak self] success, resultBinPath, error in
+            XLOG_INFO("Modifying watch face bin install position, success: \(success), resultBinPath: \(String(describing: resultBinPath)), error: \(String(describing: error))")
+            // Add progress tips
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Modifying watch face bin install position, success: \(success), error: \(String(describing: error))")
+
+            if !success {
+                // 创建手表表盘失败
+                if let error = error {
+                    XLOG_ERROR("Failed to modify watch face bin install position: \(error)")
+                    // Add progress tips
+                    NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to modify watch face bin install position: \(error)")
+                } else {
+                    XLOG_ERROR("Failed to modify watch face bin install position: unknown error")
+                    // Add progress tips
+                    NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Failed to modify watch face bin install position: unknown error")
+                }
+                return
+            }
+            XLOG_INFO("Watch face bin install position modified successfully")
+            // Add progress tips
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Watch face bin install position modified successfully") 
+            // Notify the watch face bin file did change
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceBinDidChange, object: resultBinPath)
             self?.uploadAIWatchfaceToWatch(binPath: resultBinPath!)
         }
 
@@ -686,7 +738,7 @@ extension  FitCloudProSDK: FitCloudCallback {
                 XLOG_INFO(String(format: "Uploading progress: %.1f%%", progress * 100))
                 // Add progress tips
                 NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: String(format: "Uploading progress: %.1f%%", progress * 100))
-            } completion: { success, avgSpeed, error in
+            } completion: {[weak self] success, avgSpeed, error in
                 XLOG_INFO(String(format: "Uploading completed success: %d, avgSpeed: %.2f KB/s, error: %@", success, avgSpeed, String(describing: error)))
                 // Add progress tips
                 NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: String(format: "Uploading completed success: %d, avgSpeed: %.2f KB/s, error: %@", success, avgSpeed, String(describing: error)))
@@ -702,7 +754,25 @@ extension  FitCloudProSDK: FitCloudCallback {
                 XLOG_INFO("Watch face uploaded to watch successfully")
                 // Add progress tips
                 NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Watch face uploaded to watch successfully")
+
+                self?.changeDateTimeColorStyle()
             }
+    }
+
+    func changeDateTimeColorStyle() {
+        XLOG_INFO("Change date time color style to \(self.aiWatchfaceDateTimeColorStyle)")
+        NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Change date time color style to \(self.aiWatchfaceDateTimeColorStyle)")
+        FitCloudKit.toggleWatchface(withSlotIndex: self.aiWatchfaceSlotIndex, modulesStyleArray: [NSNumber(integerLiteral: self.aiWatchfaceDateTimeColorStyle)]) { success, error in
+            XLOG_INFO("Change date time color style success: \(success), error: \(String(describing: error))")
+            // Add progress tips
+            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Change date time color style success: \(success), error: \(String(describing: error))")
+
+            if success {
+                XLOG_INFO("Date time color style changed successfully")
+                // Add progress tips
+                NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Date time color style changed successfully")
+            }
+        }
     }
     
     /// Called when a log message is emitted.

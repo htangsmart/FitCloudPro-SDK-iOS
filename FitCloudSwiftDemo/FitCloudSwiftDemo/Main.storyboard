@@ -595,7 +595,7 @@
                                         <rect key="frame" x="0.0" y="771" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aTf-Yh-itc" id="Jqd-X0-4zz">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Profile Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8p-sb-Gf0" customClass="LocalizedLabel">
@@ -615,7 +615,7 @@
                                         <rect key="frame" x="0.0" y="825" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mUe-eC-L5m" id="yTI-xQ-Hww">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sync Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z90-w7-0HJ" customClass="LocalizedLabel">
@@ -635,7 +635,7 @@
                                         <rect key="frame" x="0.0" y="879" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RpT-0I-nOt" id="VZn-QP-dXb">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Women Health" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U82-U4-HeK" customClass="LocalizedLabel">
@@ -655,7 +655,7 @@
                                         <rect key="frame" x="0.0" y="933" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="81Z-Os-g9X" id="jxV-Mf-bIY">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Muslim Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZK-tU-ui2" customClass="LocalizedLabel">
@@ -675,7 +675,7 @@
                                         <rect key="frame" x="0.0" y="987" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fOZ-ZH-oTU" id="jUE-XZ-IgB">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM7-VJ-cTZ" customClass="LocalizedLabel">
@@ -695,7 +695,7 @@
                                         <rect key="frame" x="0.0" y="1041" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rvq-jE-wk7" id="5ws-hP-l2A">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cloud Watchface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2S-u3-s4S" customClass="LocalizedLabel">
@@ -715,7 +715,7 @@
                                         <rect key="frame" x="0.0" y="1095" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xbq-wx-zis" id="DuI-zN-Nzy">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DIY Watchface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fk6-1w-JDn" customClass="LocalizedLabel">
@@ -735,7 +735,7 @@
                                         <rect key="frame" x="0.0" y="1149" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vIb-pj-4DN" id="X4l-4d-SsB">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AI Watchface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4E-jn-qs3" customClass="LocalizedLabel">
@@ -2820,27 +2820,63 @@
                                     <action selector="onExport:" destination="ahl-ri-toX" eventType="touchUpInside" id="t9C-fd-7NJ"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uTm-w7-mfU">
+                                <rect key="frame" x="103" y="625.66666666666663" width="130" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Install Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNq-2p-E1h">
+                                <rect key="frame" x="10" y="634" width="77" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datetime Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ym-Yj-bnc">
+                                <rect key="frame" x="10" y="678" width="79" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DLT-Rn-gXh">
+                                <rect key="frame" x="105" y="669.66666666666663" width="130" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5q6-c6-ELB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5q6-c6-ELB" firstAttribute="trailing" secondItem="y4e-50-3d5" secondAttribute="trailing" constant="30" id="5Ei-ub-UgM"/>
+                            <constraint firstItem="DLT-Rn-gXh" firstAttribute="leading" secondItem="4Ym-Yj-bnc" secondAttribute="trailing" constant="16" id="7ES-l1-N9j"/>
                             <constraint firstItem="ld4-kV-FPX" firstAttribute="centerY" secondItem="d8J-MA-NdH" secondAttribute="centerY" id="7Ox-1m-6p6"/>
                             <constraint firstItem="y4e-50-3d5" firstAttribute="leading" secondItem="5q6-c6-ELB" secondAttribute="leading" constant="30" id="7tJ-2n-ewO"/>
                             <constraint firstItem="d8J-MA-NdH" firstAttribute="leading" secondItem="5q6-c6-ELB" secondAttribute="leading" constant="22" id="9ia-i2-G3V"/>
+                            <constraint firstItem="4Ym-Yj-bnc" firstAttribute="top" secondItem="vNq-2p-E1h" secondAttribute="bottom" constant="30" id="Msp-1f-E7f"/>
                             <constraint firstItem="5q6-c6-ELB" firstAttribute="trailing" secondItem="99F-nG-8B3" secondAttribute="trailing" constant="50" id="P4T-Xn-6By"/>
+                            <constraint firstItem="vNq-2p-E1h" firstAttribute="top" secondItem="DqK-yK-u4g" secondAttribute="bottom" constant="20" id="S3h-v2-NtA"/>
                             <constraint firstItem="5q6-c6-ELB" firstAttribute="trailing" secondItem="DqK-yK-u4g" secondAttribute="trailing" constant="50" id="XLZ-ip-fEq"/>
+                            <constraint firstItem="DLT-Rn-gXh" firstAttribute="centerY" secondItem="4Ym-Yj-bnc" secondAttribute="centerY" id="dYQ-dQ-fEN"/>
                             <constraint firstItem="d8J-MA-NdH" firstAttribute="top" secondItem="5q6-c6-ELB" secondAttribute="top" constant="18" id="gMD-yz-TjU"/>
                             <constraint firstItem="DqK-yK-u4g" firstAttribute="top" secondItem="99F-nG-8B3" secondAttribute="bottom" constant="47" id="kdu-yH-nw1"/>
+                            <constraint firstItem="4Ym-Yj-bnc" firstAttribute="leading" secondItem="5q6-c6-ELB" secondAttribute="leading" constant="10" id="lhJ-Rv-q3e"/>
                             <constraint firstItem="5q6-c6-ELB" firstAttribute="bottom" secondItem="y4e-50-3d5" secondAttribute="bottom" constant="20" id="mvO-Ia-7YV"/>
                             <constraint firstItem="ld4-kV-FPX" firstAttribute="centerX" secondItem="fI8-YW-dzs" secondAttribute="centerX" id="psy-NB-b50"/>
+                            <constraint firstItem="vNq-2p-E1h" firstAttribute="leading" secondItem="5q6-c6-ELB" secondAttribute="leading" constant="10" id="qI0-fR-j6w"/>
                             <constraint firstItem="99F-nG-8B3" firstAttribute="leading" secondItem="5q6-c6-ELB" secondAttribute="leading" constant="50" id="tG3-cY-ela"/>
+                            <constraint firstItem="uTm-w7-mfU" firstAttribute="leading" secondItem="vNq-2p-E1h" secondAttribute="trailing" constant="16" id="uw1-eX-J8i"/>
                             <constraint firstItem="DqK-yK-u4g" firstAttribute="leading" secondItem="5q6-c6-ELB" secondAttribute="leading" constant="50" id="wqD-Lq-bxJ"/>
+                            <constraint firstItem="uTm-w7-mfU" firstAttribute="centerY" secondItem="vNq-2p-E1h" secondAttribute="centerY" id="x7p-NW-Bn9"/>
                             <constraint firstItem="99F-nG-8B3" firstAttribute="top" secondItem="d8J-MA-NdH" secondAttribute="bottom" constant="76" id="z9W-lw-MPC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AYm-z5-gtB"/>
                     <connections>
+                        <outlet property="dateTimeColorSegmentedControl" destination="DLT-Rn-gXh" id="tYl-um-GPE"/>
+                        <outlet property="installPositionSegmentedControl" destination="uTm-w7-mfU" id="eJt-Ss-sVe"/>
                         <outlet property="photoView" destination="99F-nG-8B3" id="KnQ-VJ-mJx"/>
                         <outlet property="tipsLabel" destination="DqK-yK-u4g" id="Ne8-K4-tqm"/>
                     </connections>
@@ -2861,7 +2897,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
