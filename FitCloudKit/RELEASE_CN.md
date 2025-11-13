@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-11-07 V1.3.2-beta.18 Build:20251107001
+## pcjbird 2025-11-13 V1.3.2-beta.19 Build:20251113001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -22,6 +22,9 @@
 - 添加对 128×160 方形表盘的支持。
 - 连接未绑定设备时防止自动登录。
 - 新增支持向 Titan 系列手表发送最近两个月经期数据，详见 `FitCloudKit+Titan.h`。
+- 修改 `LLMRESULTTYPE` 的定义，新增 `LLMRESULTTYPE_INTERNETCONNECTIONOFFLINE` 和 `LLMRESULTTYPE_UNKNOWNERROR`。
+- 修改 `FITCLOUDAIPHOTOGENRESULT` 的定义，将 `FITCLOUDAIPHOTOGENRESULT_NETWORK_ERROR` 修改为 `FITCLOUDAIPHOTOGENRESULT_NETWORK_CONNECTION_OFFLINE`。
+- 修改语音识别结果发送 API：将 `+ (void)sendASRResult:(NSString *)text completion:(FitCloudCompletionHandler _Nullable)completion` 修改为 `+ (void)sendASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion;`。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

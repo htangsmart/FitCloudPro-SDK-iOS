@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-11-07 V1.3.2-beta.18 Build:20251107001
+## pcjbird 2025-11-13 V1.3.2-beta.19 Build:20251113001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -22,6 +22,10 @@
 - Added support for 128×160 square watch face size.
 - Prevent auto-login when connecting to an unbound device.
 - Added support for sending the last two months of menstrual-cycle data to Titan watches. See `FitCloudKit+Titan.h` for details.
+- Changed the commands for sending the last two months of menstrual-cycle data to Titan watches.
+- Update the definition of `LLMRESULTTYPE` to add `LLMRESULTTYPE_INTERNETCONNECTIONOFFLINE` and `LLMRESULTTYPE_UNKNOWNERROR`.
+- Update the definition of `FITCLOUDAIPHOTOGENRESULT`, changing `FITCLOUDAIPHOTOGENRESULT_NETWORK_ERROR` to `FITCLOUDAIPHOTOGENRESULT_NETWORK_CONNECTION_OFFLINE`.
+- Updated the ASR result-sending API: replaced `+ (void)sendASRResult:(NSString *)text completion:(FitCloudCompletionHandler _Nullable)completion` with `+ (void)sendASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion`.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

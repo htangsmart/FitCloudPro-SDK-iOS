@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## V1.3.2-beta.19 build20251113001 (2025-11-13)
+
+- Changed the commands for sending the last two months of menstrual-cycle data to Titan watches.
+- Update the definition of `LLMRESULTTYPE` to add `LLMRESULTTYPE_INTERNETCONNECTIONOFFLINE` and `LLMRESULTTYPE_UNKNOWNERROR`.
+- Update the definition of `FITCLOUDAIPHOTOGENRESULT`, changing `FITCLOUDAIPHOTOGENRESULT_NETWORK_ERROR` to `FITCLOUDAIPHOTOGENRESULT_NETWORK_CONNECTION_OFFLINE`.
+- Updated the ASR result-sending API: replaced `+ (void)sendASRResult:(NSString *)text completion:(FitCloudCompletionHandler _Nullable)completion` with `+ (void)sendASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion`.
+
 ## V1.3.2-beta.18 build20251107001 (2025-11-07)
 
 - Prevent auto-login when connecting to an unbound device.

@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2025-11-07  Version:1.3.2-beta.18 Build:20251107001
+//      pcjbird    2025-11-13  Version:1.3.2-beta.19 Build:20251113001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1837,10 +1837,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// Send ASR (Automatic Speech Recognition) result to watch
 /// - Parameters:
 ///   - text: The ASR result text to send
+///   - errorCode: The ASR error code to send
 ///   - completion: A completion handler called when sending completes. Parameters:
 ///     - success: Whether sending was successful
 ///     - error: Error information if sending fails, nil on success
-+ (void)sendASRResult:(NSString *)text completion:(FitCloudCompletionHandler _Nullable)completion;
++ (void)sendASRResult:(nullable NSString *)text
+           errorCode:(FitCloudASRErrorCode)errorCode
+          completion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 
