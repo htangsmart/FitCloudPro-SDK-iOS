@@ -1,4 +1,9 @@
 # CHANGELOG
+
+## V1.3.2-beta.21 build20251114002 (2025-11-14)
+
+- Updated the parsing logic for pre-calculated workout summary data from watch devices to accommodate the latest Bluetooth communication protocol.
+
 ## V1.3.2-beta.20 build20251114001 (2025-11-14)
 
 - Added support for 160×128 square watch face size.

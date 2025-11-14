@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-11-14 Version:1.3.2-beta.20 Build:20251114001
+## pcjbird 2025-11-14 Version:1.3.2-beta.21 Build:20251114002
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -27,6 +27,7 @@
 - Update the definition of `FITCLOUDAIPHOTOGENRESULT`, changing `FITCLOUDAIPHOTOGENRESULT_NETWORK_ERROR` to `FITCLOUDAIPHOTOGENRESULT_NETWORK_CONNECTION_OFFLINE`.
 - Updated the ASR result-sending API: replaced `+ (void)sendASRResult:(NSString *)text completion:(FitCloudCompletionHandler _Nullable)completion` with `+ (void)sendASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion`.
 - Added support for 160×128 square watch face size.
+- Updated the parsing logic for pre-calculated workout summary data from watch devices to accommodate the latest Bluetooth communication protocol.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
