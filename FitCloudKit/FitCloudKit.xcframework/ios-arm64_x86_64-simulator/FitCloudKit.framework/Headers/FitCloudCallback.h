@@ -623,6 +623,11 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// Notifies that watch has exited the large language model interface
 - (void)onWatchSideExitLLM;
 
+/// Notifies the app that the watch has confirmed the current question and will forward it to the LLM (large language model).
+/// >Important: This method is only supported on select watch models that implement LLM-question ASR-result confirmation.
+///             Ignore this method implementation if the watch model does not support LLM-question ASR-result confirmation.
+- (void)onWatchSideDidConfirmedLLMQuestion;
+
 /// Notifies the AI conversation model toggled from watch side
 /// - Parameters:
 ///   - aiConversationModel: The AI conversation model type

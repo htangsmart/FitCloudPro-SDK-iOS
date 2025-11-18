@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.22 build20251118001 (2025-11-18)
+
+- Added SDK callback `- (void)onWatchSideDidConfirmedLLMQuestion` to notify the app that the watch has confirmed the current question and will forward it to the LLM (large language model). This method is only supported on select watch models that implement LLM-question ASR-result confirmation.
+- Introduced new API `+ (void)sendLLMQuestionASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion` to send the ASR result of an LLM question to the watch. This method is only supported on select watch models that implement LLM-question ASR-result confirmation. Do **not** call it on unsupported devices. Always verify device capability before use.
+
 ## V1.3.2-beta.21 build20251114002 (2025-11-14)
 
 - Updated the parsing logic for pre-calculated workout summary data from watch devices to accommodate the latest Bluetooth communication protocol.

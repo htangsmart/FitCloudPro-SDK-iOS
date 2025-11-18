@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-11-14 Version:1.3.2-beta.21 Build:20251114002
+## pcjbird 2025-11-18 Version:1.3.2-beta.22 Build:20251118001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -28,6 +28,8 @@
 - Updated the ASR result-sending API: replaced `+ (void)sendASRResult:(NSString *)text completion:(FitCloudCompletionHandler _Nullable)completion` with `+ (void)sendASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion`.
 - Added support for 160×128 square watch face size.
 - Updated the parsing logic for pre-calculated workout summary data from watch devices to accommodate the latest Bluetooth communication protocol.
+- Added SDK callback `- (void)onWatchSideDidConfirmedLLMQuestion` to notify the app that the watch has confirmed the current question and will forward it to the LLM (large language model). This method is only supported on select watch models that implement LLM-question ASR-result confirmation.
+- Introduced new API `+ (void)sendLLMQuestionASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion` to send the ASR result of an LLM question to the watch. This method is only supported on select watch models that implement LLM-question ASR-result confirmation. Do **not** call it on unsupported devices. Always verify device capability before use.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-11-14 Version:1.3.2-beta.21 Build:20251114002
+## pcjbird 2025-11-18 Version:1.3.2-beta.22 Build:20251118001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -27,6 +27,8 @@
 - 修改语音识别结果发送 API：将 `+ (void)sendASRResult:(NSString *)text completion:(FitCloudCompletionHandler _Nullable)completion` 修改为 `+ (void)sendASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion;`。
 - 添加对 160×128 方形表盘的支持。
 - 更新从手表设备解析预计算运动总结数据的逻辑，以适配最新的蓝牙通信协议。
+- 新增 SDK 回调 `- (void)onWatchSideDidConfirmedLLMQuestion`，用于通知应用程序，手表已确认当前问题并将其转发给 LLM（大型语言模型）。此方法仅在支持 LLM-问题 ASR-结果确认的特定手表型号上受支持。
+- 引入新 API `+ (void)sendLLMQuestionASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion` 以发送 LLM 问题的 ASR（自动语音识别）结果到手表。此方法仅在支持 LLM-问题 ASR-结果确认的特定手表型号上受支持。请勿在不支持的设备上调用。始终在使用前验证设备能力。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
