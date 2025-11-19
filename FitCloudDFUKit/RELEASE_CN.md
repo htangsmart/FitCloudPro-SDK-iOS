@@ -3,7 +3,7 @@
 ## V1.3.4-beta.2 build20251119001 (2025-11-19)
 
 - 修复了一些意大利语的翻译问题。
-- 将`RTKLEFoundation.xcframework`和`RTKOTASDK.xcframework`从`1.12.1`升级到`1.17.3`，以修复一些崩溃问题并移除 bitcode。
+- 将`RTKLEFoundation.xcframework`和`RTKOTASDK.xcframework`从`1.12.1`升级到`1.17.3`，修复一些崩溃问题并移除 bitcode。
 
 ## V1.3.3 build20250820001 (2025-08-20)
 
