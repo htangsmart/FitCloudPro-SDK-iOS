@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.23 build20251119001 (2025-11-19)
+
+- Fixed an issue where the app would fail to auto-reconnect to the watch in certain scenarios after exiting DFU mode.
+
 ## V1.3.2-beta.22 build20251118001 (2025-11-18)
 
 - Added SDK callback `- (void)onWatchSideDidConfirmedLLMQuestion` to notify the app that the watch has confirmed the current question and will forward it to the LLM (large language model). This method is only supported on select watch models that implement LLM-question ASR-result confirmation.
