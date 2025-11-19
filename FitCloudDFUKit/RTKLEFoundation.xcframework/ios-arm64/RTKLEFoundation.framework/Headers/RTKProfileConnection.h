@@ -5,6 +5,8 @@
 //  Created by jerome_gu on 2021/10/18.
 //  Copyright © 2022 Realtek. All rights reserved.
 //
+#ifndef RTKProfileConnection_h
+#define RTKProfileConnection_h
 
 #import <Foundation/Foundation.h>
 #import <ExternalAccessory/ExternalAccessory.h>
@@ -183,3 +185,5 @@ typedef NS_ENUM(NSUInteger, RTKProfileConnectionStatus) {
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif /* RTKProfileConnection_h */

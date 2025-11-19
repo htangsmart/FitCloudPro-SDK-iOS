@@ -38,6 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// The accessory with which you want to communicate.
 @property (nonatomic, readonly) EAAccessory *accessory;
 
+
+/// Notify the transport to update its state.
+///
+/// When the accessory this transport operates on is disconnected, you should call this method, to keep the transport's state correct.
+- (void)refreshState;
+
 @end
 
 NS_ASSUME_NONNULL_END

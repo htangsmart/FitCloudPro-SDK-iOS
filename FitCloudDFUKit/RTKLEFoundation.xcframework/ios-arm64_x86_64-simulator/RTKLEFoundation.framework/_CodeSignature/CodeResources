@@ -20,17 +20,9 @@
 		<data>
 		qHAKB16YvZGizfYcQHvhiWC/RcY=
 		</data>
-		<key>Headers/RTKAccessory.h</key>
-		<data>
-		31yVANBGbuNKeBz/9IUblieA1Wk=
-		</data>
-		<key>Headers/RTKAccessoryManager.h</key>
-		<data>
-		sd6Guje7YV7LMk0BwEf39yaBx/g=
-		</data>
 		<key>Headers/RTKAccessorySessionTransport.h</key>
 		<data>
-		kRaAEiqvZtnpo7n/pxUcgoVXULM=
+		u6I0e3uUmkzzHKrMxtKz0pK4ttw=
 		</data>
 		<key>Headers/RTKActionAttempt.h</key>
 		<data>
@@ -39,10 +31,6 @@
 		<key>Headers/RTKAsynchronousInvocation.h</key>
 		<data>
 		yjczSLDc4tf5+lXsWWLb5NBnLgo=
-		</data>
-		<key>Headers/RTKAttemptAction.h</key>
-		<data>
-		GiYXlHwThQvUe7LkydNAUSuSFMA=
 		</data>
 		<key>Headers/RTKBTGeneralDefines.h</key>
 		<data>
@@ -60,25 +48,13 @@
 		<data>
 		P4NRTMZq/J3moCpr8vxFP0zahHo=
 		</data>
-		<key>Headers/RTKCharacteristicReadWrite.h</key>
-		<data>
-		VVcNonNWFMetpB6aYkdUPhiJ+fA=
-		</data>
 		<key>Headers/RTKCharacteristicTRXTransport.h</key>
 		<data>
 		Jy4fqHTJPGklEc7DnRuX+eqfJIU=
 		</data>
-		<key>Headers/RTKCommunicationDataReceiver.h</key>
-		<data>
-		nOCEbHEaMwWUpinLbBXzYVH571Q=
-		</data>
-		<key>Headers/RTKCommunicationDataSender.h</key>
-		<data>
-		wDym/b5a17pGdacGgRzVRHQKrD0=
-		</data>
 		<key>Headers/RTKConnectionUponGATT.h</key>
 		<data>
-		Ht/Rj9ajzc4OWZ/C6OpZOjfYBNc=
+		FI5p8sXU0yvHcLsNzuIXbGpqlHM=
 		</data>
 		<key>Headers/RTKConnectionUponiAP.h</key>
 		<data>
@@ -90,31 +66,15 @@
 		</data>
 		<key>Headers/RTKLEFoundation.h</key>
 		<data>
-		jFhXloI20uCV4Ewm+2Di6KVERHg=
-		</data>
-		<key>Headers/RTKLEPackage.h</key>
-		<data>
-		+Gf51z+HAydWpe2fobvxw8Ue4iQ=
-		</data>
-		<key>Headers/RTKLEPeripheral.h</key>
-		<data>
-		j41RSNToFZyW8jZhkgczBM+nSfk=
-		</data>
-		<key>Headers/RTKLEProfile.h</key>
-		<data>
-		CokqGp7JzTfqSsAXj89ddPemO/A=
+		oSMx3MyD5yUmON0BucxnSP1KEaQ=
 		</data>
 		<key>Headers/RTKLog.h</key>
 		<data>
-		D3v0l6PI4EvYQUGK8Ah/hjQE/DE=
+		zThXdwvEYRrwxZPk59Txx6YpXwY=
 		</data>
 		<key>Headers/RTKOperationWaitor.h</key>
 		<data>
 		0GfpZT7UZO4U+Fcn5YJWqSlXQ1Y=
-		</data>
-		<key>Headers/RTKPackageCommunication.h</key>
-		<data>
-		n+y5q2wLnaUnCqKf2Ldrgzk10uA=
 		</data>
 		<key>Headers/RTKPackageIDGenerator.h</key>
 		<data>
@@ -126,15 +86,11 @@
 		</data>
 		<key>Headers/RTKPacketTransport.h</key>
 		<data>
-		8VLJ/ipfvuPqnyFhSHyDpZlYDvE=
-		</data>
-		<key>Headers/RTKPeripheralCharacteristicOperation.h</key>
-		<data>
-		lvX07RxuC8KI5o5DmtKQxsI0qeE=
+		j3gRWhBxujRGfRwHvak9bI9SBJk=
 		</data>
 		<key>Headers/RTKProfileConnection.h</key>
 		<data>
-		JhGLLSPRCDofSXzSBXSjCOQiiSI=
+		GGln+sOG/ZARsBJbFXUUbjj+Zsg=
 		</data>
 		<key>Headers/RTKProfileConnectionManager.h</key>
 		<data>
@@ -146,7 +102,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		uH1gSuB/aOukuYz3R+x0QSa8Oxs=
+		V4CuWmTkfqL3zEP/KhCjJt9iXYc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -199,37 +155,15 @@
 			dNbUtMRuhlLF/Nd66c2nqBloqvKd6Z6xm56rSiojTOM=
 			</data>
 		</dict>
-		<key>Headers/RTKAccessory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			31yVANBGbuNKeBz/9IUblieA1Wk=
-			</data>
-			<key>hash2</key>
-			<data>
-			0/Zi9ytaWl+wzUTmF/qM5ZEjIllczZhU8sbiSxVX7NU=
-			</data>
-		</dict>
-		<key>Headers/RTKAccessoryManager.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sd6Guje7YV7LMk0BwEf39yaBx/g=
-			</data>
-			<key>hash2</key>
-			<data>
-			64YIw7cwH5ExHn1ZQmgwcJgwjLM/mgU22/djvbuFVL8=
-			</data>
-		</dict>
 		<key>Headers/RTKAccessorySessionTransport.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kRaAEiqvZtnpo7n/pxUcgoVXULM=
+			u6I0e3uUmkzzHKrMxtKz0pK4ttw=
 			</data>
 			<key>hash2</key>
 			<data>
-			NDySLmkeebGuS5s4ABP2n1QkhbrWzcpigwGxDpjqXIY=
+			dlcaT6ILR5mMscXsBlNhWMT9xywVTn1weKBRNqbODqg=
 			</data>
 		</dict>
 		<key>Headers/RTKActionAttempt.h</key>
@@ -252,17 +186,6 @@
 			<key>hash2</key>
 			<data>
 			iktAKCK7SwPvOkxzBpGT/LcgbaWfCZsl9rMVGNJUvzA=
-			</data>
-		</dict>
-		<key>Headers/RTKAttemptAction.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			GiYXlHwThQvUe7LkydNAUSuSFMA=
-			</data>
-			<key>hash2</key>
-			<data>
-			zmIgGegaqzUT99cO/bwNTwzLRjfY72U+F/XgbSu9sD0=
 			</data>
 		</dict>
 		<key>Headers/RTKBTGeneralDefines.h</key>
@@ -309,17 +232,6 @@
 			ReHq/UKHgITcK2yxBtPRVTkr+8VuTXsf0DS7iEapFRU=
 			</data>
 		</dict>
-		<key>Headers/RTKCharacteristicReadWrite.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VVcNonNWFMetpB6aYkdUPhiJ+fA=
-			</data>
-			<key>hash2</key>
-			<data>
-			7eqqHLyRkNWMiODQW8D3gr1h4tyvojVh193bH0cMDms=
-			</data>
-		</dict>
 		<key>Headers/RTKCharacteristicTRXTransport.h</key>
 		<dict>
 			<key>hash</key>
@@ -331,37 +243,15 @@
 			gTXGaNvDq3kWNeBaxeXU0szJ0M3aOFuXD1CntDMjCxk=
 			</data>
 		</dict>
-		<key>Headers/RTKCommunicationDataReceiver.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			nOCEbHEaMwWUpinLbBXzYVH571Q=
-			</data>
-			<key>hash2</key>
-			<data>
-			V65bQ2me93WbgO54ApSiKIxY3snjTaxyi58gtbeM3UM=
-			</data>
-		</dict>
-		<key>Headers/RTKCommunicationDataSender.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wDym/b5a17pGdacGgRzVRHQKrD0=
-			</data>
-			<key>hash2</key>
-			<data>
-			xuklhbPpxyIWKEourWfbhgUeFNAfRQT+ILg3Ni4m45o=
-			</data>
-		</dict>
 		<key>Headers/RTKConnectionUponGATT.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ht/Rj9ajzc4OWZ/C6OpZOjfYBNc=
+			FI5p8sXU0yvHcLsNzuIXbGpqlHM=
 			</data>
 			<key>hash2</key>
 			<data>
-			yLjuNlTAhmBH+iTZd/3KetTbNypsFCb2fFpkKzl+Edw=
+			xhgnFNyGGC5aIHkIJviCOFvAnK/rLrWCBSn/Bs1w+Nw=
 			</data>
 		</dict>
 		<key>Headers/RTKConnectionUponiAP.h</key>
@@ -390,55 +280,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jFhXloI20uCV4Ewm+2Di6KVERHg=
+			oSMx3MyD5yUmON0BucxnSP1KEaQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			NorSIV8NL78XKhh+fYs+B3KI9jFzuJLpHev6OVvKR4A=
-			</data>
-		</dict>
-		<key>Headers/RTKLEPackage.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+Gf51z+HAydWpe2fobvxw8Ue4iQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			B5suU64zGNSsV4spKOXWBD/rZAUIIDSflSh13C4FGNA=
-			</data>
-		</dict>
-		<key>Headers/RTKLEPeripheral.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			j41RSNToFZyW8jZhkgczBM+nSfk=
-			</data>
-			<key>hash2</key>
-			<data>
-			txxNVLcvYr1otyxZs7mgWdkD5vDmG1SQUGoxKdhSQo8=
-			</data>
-		</dict>
-		<key>Headers/RTKLEProfile.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			CokqGp7JzTfqSsAXj89ddPemO/A=
-			</data>
-			<key>hash2</key>
-			<data>
-			6jnTUea/ntGpLJ0zlGt9mCQT1mb8e9Wj3T1gcYMyfcc=
+			vndddFpqukX1EceNCdv5zGykQun4fXUz8NCcZ1oRHM4=
 			</data>
 		</dict>
 		<key>Headers/RTKLog.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			D3v0l6PI4EvYQUGK8Ah/hjQE/DE=
+			zThXdwvEYRrwxZPk59Txx6YpXwY=
 			</data>
 			<key>hash2</key>
 			<data>
-			CD3GxJg35xrBpww054Cd5JHMivr6+BFRUzy3a7Ec+2o=
+			l3KqenZXCC03HnJEa0xFk89s2qwbCSFjyK/6fm9gh/M=
 			</data>
 		</dict>
 		<key>Headers/RTKOperationWaitor.h</key>
@@ -450,17 +307,6 @@
 			<key>hash2</key>
 			<data>
 			Hj4k6bNDfFCIWlQV/lhIadLjYYuxUm0mMdR5GL0j0eY=
-			</data>
-		</dict>
-		<key>Headers/RTKPackageCommunication.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			n+y5q2wLnaUnCqKf2Ldrgzk10uA=
-			</data>
-			<key>hash2</key>
-			<data>
-			Vka9jDEKEKP3f1fTsYp6DPPvlKZIGLT1bFpf3/eBGHw=
 			</data>
 		</dict>
 		<key>Headers/RTKPackageIDGenerator.h</key>
@@ -489,33 +335,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8VLJ/ipfvuPqnyFhSHyDpZlYDvE=
+			j3gRWhBxujRGfRwHvak9bI9SBJk=
 			</data>
 			<key>hash2</key>
 			<data>
-			YVeqcvn7DO3lu30tyn5o2TFssRlga62FIJIyJwL49Bk=
-			</data>
-		</dict>
-		<key>Headers/RTKPeripheralCharacteristicOperation.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lvX07RxuC8KI5o5DmtKQxsI0qeE=
-			</data>
-			<key>hash2</key>
-			<data>
-			oDh5r4ditLCZieUv48CnOgf/gREYvWU803LpG8qQnJI=
+			3w1ULYzuVKEhBTEUE30zdDCHpe0cu8Mn5Wh9tPKOWSY=
 			</data>
 		</dict>
 		<key>Headers/RTKProfileConnection.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JhGLLSPRCDofSXzSBXSjCOQiiSI=
+			GGln+sOG/ZARsBJbFXUUbjj+Zsg=
 			</data>
 			<key>hash2</key>
 			<data>
-			MP7ePJsSdv0lAJYecNjy4u1jrGcD4+DspWQh/3rHX1I=
+			QcwspCrV/NhFj8GS72iCDP81HXjany2f0jLE5ik1LQM=
 			</data>
 		</dict>
 		<key>Headers/RTKProfileConnectionManager.h</key>

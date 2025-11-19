@@ -1,5 +1,5 @@
 //
-//  RTKOTAImage.h
+//  RTKOTAUpgradeBin.h
 //  RTKOTASDK
 //
 //  Created by jerome_gu on 2019/1/28.
@@ -14,6 +14,7 @@
 #import <RTKOTASDK/RTKOTABin.h>
 #endif
 
+@class RTKOTADeviceInfo;
 /// Values that represent which bank image reside in a remote device.
 typedef NS_ENUM(NSUInteger, RTKOTAUpgradeBank) {
     RTKOTAUpgradeBank_Unknown,          ///< The bank info is not determined.
@@ -51,6 +52,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSUInteger ICType;
 
+/// Indicates whether this binary object is compiled for nand flash.
+@property (readonly) BOOL isNandFlash;
+
+@property (readonly) BOOL compressed;
+
 - (instancetype)initWithPureData:(NSData *)data;
 
 
@@ -84,6 +90,21 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// The fileData should be a valid CombineMPPack file format.
 + (nullable NSError*)extractCombinePackFileWithData:(NSData *)fileData toPrimaryBudBins:(NSArray <RTKOTAUpgradeBin*> *_Nullable*_Nullable)primaryBinsRef secondaryBudBins:(NSArray <RTKOTAUpgradeBin*> *_Nullable*_Nullable)secondaryBinsRef;
+
+@end
+
+
+@interface RTKOTAUpgradeBin (Available)
+
+/// Return a boolean value indicates whether the SOC this image match with is determined.
+///
+/// Binary object typically come with SOC determined, but sometimes it does not. When `ICDetermined` return `NO`, you can call `-assertAvailableForPeripheral:` to make it available for a specified peripheral, which should be very careful. It's a disaster when upgrade a device with a mismatch image.
+@property (nonatomic, readonly) BOOL ICDetermined;
+
+/// Subjectively make the binary available for the peripheral a deivce info specifies.
+///
+/// - Parameter info: The device information of a peripheral to assume availability.
+- (void)assertAvailableForPeripheralInfo:(RTKOTADeviceInfo *)info;
 
 @end
 

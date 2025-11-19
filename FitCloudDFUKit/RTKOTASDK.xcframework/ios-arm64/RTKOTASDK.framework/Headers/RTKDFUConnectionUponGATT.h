@@ -102,6 +102,13 @@ typedef NS_ENUM(NSUInteger, RTKDFUPeripheralMode) {
 /// - Parameter handler: The completion handler to call when the request is complete.
 - (void)reportImageID:(RTKImageId)imageID currentImageNumber:(uint8_t)currentNumber totalImageNumber:(uint8_t)totalNumber withCompletionHandler:(nullable RTKLECompletionBlock)handler;
 
+/// Report information about the current upgrade image.
+///
+/// - Parameter protocol: The protocol type of the current device.
+///
+///  An extension of ``reportImageID:currentImageNumber:totalImageNumber:withCompletionHandler:`` and can replace it.
+- (void)reportImageID:(RTKImageId)imageID currentImageNumber:(uint8_t)currentNumber totalImageNumber:(uint8_t)totalNumber ofProtocol:(RTKOTAProtocolType)protocol withCompletionHandler:(RTKLECompletionBlock)handler;
+
 
 /// Request to check pub key information.
 ///

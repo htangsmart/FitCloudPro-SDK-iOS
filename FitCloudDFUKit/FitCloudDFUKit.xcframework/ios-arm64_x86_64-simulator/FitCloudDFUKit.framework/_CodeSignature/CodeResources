@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/FitCloudDFUKit.h</key>
 		<data>
-		2uKRM18JEXvVBPAWSvpBIsi99BA=
+		m8Dm8og6YKivd4s9DKABkz3UVw0=
 		</data>
 		<key>Headers/FitCloudDFULogLevel.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dxWie7j5LwqDZ+fwipWOrGiEpYk=
+		zojSWBGhgBH8SKdVfUGUXsIKKxk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -53,10 +53,6 @@
 	<dict>
 		<key>Headers/FitCloudDFUErrorCode.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			XRy5l9DPTOutz1cp84snsh1gGmE=
-			</data>
 			<key>hash2</key>
 			<data>
 			Nk/HR67KJJ15wF6O4jg67Il7VnA2Mr8YYbR6bWCNGCc=
@@ -64,21 +60,13 @@
 		</dict>
 		<key>Headers/FitCloudDFUKit.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			2uKRM18JEXvVBPAWSvpBIsi99BA=
-			</data>
 			<key>hash2</key>
 			<data>
-			f77jMu3mPyUr949CQRcu/I3MBumBxRzghpz5s0YhaIo=
+			Yks7Yc98fVyvOHntHksn0zvcDirOY66cAx2OEIBQTX4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudDFULogLevel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			RlEFL9no3VG0tdL4jchc7YZNilU=
-			</data>
 			<key>hash2</key>
 			<data>
 			iNjoIwy0whbBRkKlaSALL6kZPkgXU/iWSYmDaYBiQ/s=
@@ -86,10 +74,6 @@
 		</dict>
 		<key>Headers/FitCloudFile.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			wgteRX2F38zFdeEuNGvsGcSoZ3k=
-			</data>
 			<key>hash2</key>
 			<data>
 			HIcIiAL2/19uo93V4OBz/VuWiFiCDhClJKHKtcZdEbU=
@@ -97,10 +81,6 @@
 		</dict>
 		<key>Headers/FitCloudFileFormat.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			uAILuk+8CSGVEYM/HjwoEfQ9r5c=
-			</data>
 			<key>hash2</key>
 			<data>
 			TZUSpyEla7aZ+281jVRNV4M1fJdhJZgrIutEoLp4nqw=
@@ -108,10 +88,6 @@
 		</dict>
 		<key>Headers/FitCloudFilesBridge.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			D3OgkfYaT/rhSCcIlhmTLda2v+8=
-			</data>
 			<key>hash2</key>
 			<data>
 			LTLMGK2klYXH7EH4CqJqqsb445AZyoy2LRiHhTzkDGY=
@@ -119,10 +95,6 @@
 		</dict>
 		<key>Headers/FitCloudMusicBridge.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			mECrj8LbZVBunvZKvAQ15+S+Mok=
-			</data>
 			<key>hash2</key>
 			<data>
 			EfL4VvvFrrAFznENy0ewUPTlh2Zt8X+cWW4pgUWCV48=
@@ -130,10 +102,6 @@
 		</dict>
 		<key>Headers/FitCloudPlaylist.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			V6KZWH1vyytwWdUp5DEPm5cTteQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			NCU6GbzBQGM4epr9RZd6CURka1puZncDsnnEGde7yCU=
@@ -141,10 +109,6 @@
 		</dict>
 		<key>Headers/FitCloudSong.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			688p2RzZA6kfiprF8GBptPdbBS8=
-			</data>
 			<key>hash2</key>
 			<data>
 			FtaYFacj+Ul4PwgXh54lTgxfo5yI1EtLn4kyzmoUfAY=
@@ -152,10 +116,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			2ys1uJBkNQG0/nNOxYhKMLXUFS0=
-			</data>
 			<key>hash2</key>
 			<data>
 			r9EssvITtT+LiOBuRGnJJ3D3RK2Wc9XzdxN8bpQZuM0=

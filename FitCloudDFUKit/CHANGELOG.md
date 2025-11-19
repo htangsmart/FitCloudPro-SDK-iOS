@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.4-beta.2 build20251119001 (2025-11-19)
+
+- Bump `RTKLEFoundation.xcframework` and `RTKOTASDK.xcframework` from `1.12.1` to `1.17.3` to fix some crash issue and remove bitcode related configurations.
+
 ## V1.3.4-beta.1 build20250830001 (2025-08-30)
 
 - Fixed some Italian translations.

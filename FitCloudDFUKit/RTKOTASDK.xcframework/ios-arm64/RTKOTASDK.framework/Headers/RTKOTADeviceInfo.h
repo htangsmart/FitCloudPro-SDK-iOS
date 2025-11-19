@@ -10,14 +10,13 @@
 
 #ifdef RTK_SDK_IS_STATIC_LIBRARY
 #import "libRTKLEFoundation.h"
-#import "RTKOTAUpgradeBin.h"
 #import "RTKOTAInstalledBin.h"
 #else
 #import <RTKLEFoundation/RTKLEFoundation.h>
-#import <RTKOTASDK/RTKOTAUpgradeBin.h>
 #import <RTKOTASDK/RTKOTAInstalledBin.h>
 #endif
 
+@class RTKOTAUpgradeBin;
 /// Values that indicate comunication protocol a device may implement.
 typedef NS_ENUM(NSUInteger, RTKOTAProtocolType) {
     /// Old type for Bumblebee, GATT and SPP are supported.
@@ -176,6 +175,34 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) NSUInteger headerOffset;
 
 
+///Returns a boolean value that indicating whether the device supports compressed mode.
+@property (readonly) BOOL supportCompressedMode;
+
+
+/// Returns the offset of compressed DFU Header.
+@property (readonly) NSUInteger compressedHeaderOffset;
+
+
+///Returns a boolean value that indicating whether the device supports displaying the upgrade progress.
+@property (readonly) BOOL supportReportImageNumber;
+
+
+/// Indicates whether this device has received images right now, but not be activated.
+@property (readonly) BOOL upgradedCurrently;
+
+
+/// Indicates whether this device supports test mode.
+@property (readonly) BOOL supportTest;
+
+/// Indicates whether the first or second bud is being upgraded.
+@property (readonly) RTKOTABudFlag budFlag;
+
+/// Indicates whether the current link is GATT Over BREDR.
+@property (readonly) BOOL GATTOverBREDR;
+
+/// Indicates whether the device is nand flash.
+@property (readonly) BOOL isNandFlashOTA;
+
 /* RWS Upgrade related properties */
 
 /// Returns a boolean value indicating whether the device is one of RWS pair.
@@ -195,19 +222,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// If this value is `YES` , when you call upgrade methods on an `RTKDFUUpgrade` object, both the pair of devices will be upgraded at a time.
 @property (readonly) BOOL engaged;
 
-
-/// Indicates whether this device has received images right now, but not be activated.
-@property (readonly) BOOL upgradedCurrently;
-
-
-/// Indicates whether this device supports test mode.
-@property (readonly) BOOL supportTest;
-
-/// Indicates whether the first or second bud is being upgraded.
-@property (readonly) RTKOTABudFlag budFlag;
-
-/// Indicates whether the current link is GATT Over BREDR.
-@property (readonly) BOOL GATTOverBREDR;
 
 @end
 

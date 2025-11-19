@@ -26,7 +26,6 @@ FOUNDATION_EXPORT const unsigned char RTKOTASDKVersionString[];
 #import <RTKOTASDK/RTKOTABin.h>
 #import <RTKOTASDK/RTKOTAInstalledBin.h>
 #import <RTKOTASDK/RTKOTAUpgradeBin.h>
-#import <RTKOTASDK/RTKOTAUpgradeBin+Available.h>
 
 #import <RTKOTASDK/RTKOTAError.h>
 
@@ -35,9 +34,3 @@ FOUNDATION_EXPORT const unsigned char RTKOTASDKVersionString[];
 #import <RTKOTASDK/RTKDFUConnectionUponGATT.h>
 #import <RTKOTASDK/RTKDFUConnectionUponiAP.h>
 #import <RTKOTASDK/RTKDFUManager.h>
-
-// Legacy APIs for compability, not recommended to be use.
-#import <RTKOTASDK/RTKOTAProfile.h>
-#import <RTKOTASDK/RTKOTAPeripheral.h>
-#import <RTKOTASDK/RTKDFUPeripheral.h>
-#import <RTKOTASDK/RTKMultiDFUPeripheral.h>

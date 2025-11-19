@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter deviceInfo: The object containing information of this given device.
 /// - Parameter handler: The completion handler to call when the expected device is found or time out occurs.
 ///
-/// While upgrading a RWS pair devices, call this method to scan for the companion device when finish upgrade the first device.
+/// While upgrading a RWS pair devices, call this method to scan for the companion device when finish upgrade the first device. If there are custom device broadcast service UUIDs, please refer to the documentation to set the UUIDs for scanning.
 ///
 /// The default interval of time out is 10 seconds.
 - (void)scanForCompanionDeviceConnectionOfDeviceConnection:(RTKProfileConnection *)connection

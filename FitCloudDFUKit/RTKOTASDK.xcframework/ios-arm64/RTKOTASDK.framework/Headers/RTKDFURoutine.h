@@ -27,13 +27,11 @@ typedef uint32_t RTKImageKey;
 #define RTKImageVersionInvalid  0xffffffff
 
 /// Constants that represent upgrade method.
-typedef NS_ENUM(uint8_t, RTKOTAUpgradeMode) {
-    /// Use normal upgrade method
-    RTKOTAUpgradeMode_default =   0x00,
-    /// Use OTA temp section for upgrade
-    RTKOTAUpgradeMode_OTATempSection,
-    /// Upgrade Voice Prompt data
-    RTKOTAUpgradeMode_updateVPData,
+typedef NS_OPTIONS(uint8_t, RTKOTAUpgradeMode) {
+    RTKOTAUpgradeMode_default        = 0,       /// Use normal upgrade method
+    RTKOTAUpgradeMode_OTATempSection = 1 << 0,  /// bit 0 Use OTA temp section for upgrade
+    RTKOTAUpgradeMode_updateVPData   = 1 << 1,  /// bit 1 Upgrade Voice Prompt data
+    RTKOTAUpgradeMode_compressed     = 1 << 2,  /// bit 2 Upgrade compressed images
 };
 
 typedef NS_OPTIONS(uint32_t, RTKDFUTestFlag) {

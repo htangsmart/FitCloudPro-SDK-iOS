@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/RTKDFUConnectionUponGATT.h</key>
 		<data>
-		ll4Y9J7z7xam6k+WxjToJF3jFv0=
+		e7las7LPssfTMPNAEnkT3btT6As=
 		</data>
 		<key>Headers/RTKDFUConnectionUponiAP.h</key>
 		<data>
@@ -14,23 +14,15 @@
 		</data>
 		<key>Headers/RTKDFUManager.h</key>
 		<data>
-		l1baJiNBn4mZ678vTKZ2kMxvb5Y=
-		</data>
-		<key>Headers/RTKDFUPeripheral.h</key>
-		<data>
-		WivH5lgX61cZNimb5S8U0ArFt1g=
+		ieNCb0l4IY0pvrfgjDRxtkn+SOI=
 		</data>
 		<key>Headers/RTKDFURoutine.h</key>
 		<data>
-		01jZR6KIAHpMJPkR2YMpeYiT3sw=
+		jXf8k/7tPc7vmgF+Uci5RmlmG/U=
 		</data>
 		<key>Headers/RTKDFUUpgrade.h</key>
 		<data>
 		hiSrjUWXGaUdivZ2XphfgElEpEM=
-		</data>
-		<key>Headers/RTKMultiDFUPeripheral.h</key>
-		<data>
-		HgXBzWh9TZK1PDGRvEdQEsViukM=
 		</data>
 		<key>Headers/RTKOTABin.h</key>
 		<data>
@@ -38,7 +30,7 @@
 		</data>
 		<key>Headers/RTKOTADeviceInfo.h</key>
 		<data>
-		hTxP28vH80nk96KmGuFJPKWALp4=
+		6hPcbLTTv9xD6ktyeC0KptgYVFs=
 		</data>
 		<key>Headers/RTKOTAError.h</key>
 		<data>
@@ -48,33 +40,25 @@
 		<data>
 		BD1K4HuBfEUIRJBVmCEO9N9Tnso=
 		</data>
-		<key>Headers/RTKOTAPeripheral.h</key>
-		<data>
-		aTl0fx0dHuq0Ck5vZ3/r5EIPJlg=
-		</data>
-		<key>Headers/RTKOTAProfile.h</key>
-		<data>
-		WB35kAA9AnhlBKTGZQjqFKMazug=
-		</data>
 		<key>Headers/RTKOTASDK.h</key>
 		<data>
-		ByRdGjOyLD78J9HkbXPPXGDSXP8=
-		</data>
-		<key>Headers/RTKOTAUpgradeBin+Available.h</key>
-		<data>
-		KSH+i4oPCmFdgHLnH3m7skhDMDc=
+		u8ubWOPNaPFuJOFPQlzB38SEiHs=
 		</data>
 		<key>Headers/RTKOTAUpgradeBin.h</key>
 		<data>
-		bUvpaB1btuDewZL6bAe1UUtr1c8=
+		BBJ5D4cojdzLIq7/EJnH/UIUP/M=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fog7aZC52K6f5b8A7mnpngCkHOE=
+		OEt3SFkYrOaE7Do3mxny+/LVhHI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		2lwZ7wawi+LwQa20kUaI3bP0lfQ=
+		</data>
+		<key>RTKOTASDKDemo-Mac-Info.plist</key>
+		<data>
+		ynDVuYoWDd4hI+JUsmj2w6cI56o=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -83,11 +67,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ll4Y9J7z7xam6k+WxjToJF3jFv0=
+			e7las7LPssfTMPNAEnkT3btT6As=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bd/M7rvNr5QYRQyjvATBDXyxgvvnTuvahCoH168+4IM=
+			ivUGjMMqgt4j5vlcMfPm+5DLEjy29clr4tITMBdK9fc=
 			</data>
 		</dict>
 		<key>Headers/RTKDFUConnectionUponiAP.h</key>
@@ -105,33 +89,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			l1baJiNBn4mZ678vTKZ2kMxvb5Y=
+			ieNCb0l4IY0pvrfgjDRxtkn+SOI=
 			</data>
 			<key>hash2</key>
 			<data>
-			QspaZg5LwhdI2cdNcKsFYF1lNzAXViI75JhjK4sBR0s=
-			</data>
-		</dict>
-		<key>Headers/RTKDFUPeripheral.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WivH5lgX61cZNimb5S8U0ArFt1g=
-			</data>
-			<key>hash2</key>
-			<data>
-			dQoa3ctBhl6abxyQHijISrquqgA/NzJsC7ma9/5rAR0=
+			ErrsD46GnDVB+xHNp/9tPP0+TmWS7ltGlyEwPM7tigY=
 			</data>
 		</dict>
 		<key>Headers/RTKDFURoutine.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			01jZR6KIAHpMJPkR2YMpeYiT3sw=
+			jXf8k/7tPc7vmgF+Uci5RmlmG/U=
 			</data>
 			<key>hash2</key>
 			<data>
-			jWpNhwRYBNMcsC6cTs65g59xZAppXUhGUCBtMl8oEnw=
+			gnBBoKSTzg2URO/5mOtZErB8YWHahzlI3unuGcyHbkU=
 			</data>
 		</dict>
 		<key>Headers/RTKDFUUpgrade.h</key>
@@ -143,17 +116,6 @@
 			<key>hash2</key>
 			<data>
 			pfTtqN8U+VE6K7yJqEooRCD+/F1edFVBdd4P0ZWmZzg=
-			</data>
-		</dict>
-		<key>Headers/RTKMultiDFUPeripheral.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			HgXBzWh9TZK1PDGRvEdQEsViukM=
-			</data>
-			<key>hash2</key>
-			<data>
-			oeqo4n8GQ7ct667SHLFSL1D5+5DsicLT+8sSzo26xho=
 			</data>
 		</dict>
 		<key>Headers/RTKOTABin.h</key>
@@ -171,11 +133,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hTxP28vH80nk96KmGuFJPKWALp4=
+			6hPcbLTTv9xD6ktyeC0KptgYVFs=
 			</data>
 			<key>hash2</key>
 			<data>
-			tbRosq0FELefEU3Vz8xFCwb2IYLFgrTq9wZfbKen9Nk=
+			SifI74WTnFNLgLjuqoMRxesqXLYPvm1r8XcpXHi9g/E=
 			</data>
 		</dict>
 		<key>Headers/RTKOTAError.h</key>
@@ -200,59 +162,26 @@
 			PFcxzRW23colJ7ngJdZ+5yyPAQz2TQFKmDAeCiUzcro=
 			</data>
 		</dict>
-		<key>Headers/RTKOTAPeripheral.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			aTl0fx0dHuq0Ck5vZ3/r5EIPJlg=
-			</data>
-			<key>hash2</key>
-			<data>
-			TodgZnvlgbcxdOY1BOA4l9ZNsdynhkW13C3ooEmsF2s=
-			</data>
-		</dict>
-		<key>Headers/RTKOTAProfile.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WB35kAA9AnhlBKTGZQjqFKMazug=
-			</data>
-			<key>hash2</key>
-			<data>
-			kAXuVioavVDLCcjSZ2+h1p3ZsTKHbShaPJ2dMOAO8tM=
-			</data>
-		</dict>
 		<key>Headers/RTKOTASDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ByRdGjOyLD78J9HkbXPPXGDSXP8=
+			u8ubWOPNaPFuJOFPQlzB38SEiHs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ap2tJ5Yj2RgPZc0RJ4Gs5zHoaAdBz3hWoqxjIifUZ9g=
-			</data>
-		</dict>
-		<key>Headers/RTKOTAUpgradeBin+Available.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KSH+i4oPCmFdgHLnH3m7skhDMDc=
-			</data>
-			<key>hash2</key>
-			<data>
-			JZyyq6cSpojHlAOaehEmbzXq15HTpWdsTk9IEmS10Ho=
+			VhBSPKWkvlpaiGjmjczewmKuOMH1AhLjPltFVVh/LWw=
 			</data>
 		</dict>
 		<key>Headers/RTKOTAUpgradeBin.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bUvpaB1btuDewZL6bAe1UUtr1c8=
+			BBJ5D4cojdzLIq7/EJnH/UIUP/M=
 			</data>
 			<key>hash2</key>
 			<data>
-			BP0QkAZm+FuLi3bkU9JVFvupuB3jzY6kOCoat6e9TNg=
+			5QIGI3qaatkr5uu7ok+TfP0maa9N//F5OpqCNDeB+l8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -264,6 +193,17 @@
 			<key>hash2</key>
 			<data>
 			+FbuuaCpN3eOBy3Uq2FlgHwcoIHEYZ1fvuJoQ5Y1VJM=
+			</data>
+		</dict>
+		<key>RTKOTASDKDemo-Mac-Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ynDVuYoWDd4hI+JUsmj2w6cI56o=
+			</data>
+			<key>hash2</key>
+			<data>
+			7Z4dwhyWLGYjSVUAkrQNRy1eO3QHz1dHd/gSf1/HStE=
 			</data>
 		</dict>
 	</dict>
