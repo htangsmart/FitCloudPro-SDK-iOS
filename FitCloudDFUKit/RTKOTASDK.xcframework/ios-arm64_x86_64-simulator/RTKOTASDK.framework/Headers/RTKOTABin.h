@@ -144,7 +144,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) RTKOTAImageType type;
 
 /// Return a integer version number of the binary object.
-@property (readonly) uint32_t version;
+@property (readonly) uint64_t version;
 
 
 /// The name of the binary object.

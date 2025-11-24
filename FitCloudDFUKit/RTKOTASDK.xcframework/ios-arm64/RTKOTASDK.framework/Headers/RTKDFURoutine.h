@@ -20,11 +20,15 @@ typedef uint16_t RTKImageId;
 /// An integer value that represents image version number.
 typedef uint32_t RTKImageVersion;
 
+/// An integer value that represents 8 bytes image version number.
+typedef uint64_t RTKLongImageVersion;
+
 /// An integer value that represents image key information.
 typedef uint32_t RTKImageKey;
 
 /// Represents an invalid `RTKImageVersion` value.
 #define RTKImageVersionInvalid  0xffffffff
+#define RTKLongImageVersionInvalid 0xffffffffffffffff
 
 /// Constants that represent upgrade method.
 typedef NS_OPTIONS(uint8_t, RTKOTAUpgradeMode) {
@@ -91,6 +95,11 @@ typedef struct __attribute__((packed)) {
     RTKImageId imageId;
     RTKImageVersion version;
 } RTKImageVersionInfo_t;
+
+typedef struct __attribute__((packed)) {
+    RTKImageId imageId;
+    RTKLongImageVersion version;
+} RTKLongImageVersionInfo_t;
 
 typedef struct __attribute__((packed)) {
     RTKImageId imageId;
@@ -185,6 +194,23 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// If the request completes successfully, the `isConsistent` parameter of the completion handler block indicates the consistency.
 - (void)checkFeatureInfoConsistencyOfImages:(NSArray <RTKOTAUpgradeBin*> *)images withCompletionHandler:(nullable void(^)(BOOL success, NSError *err, BOOL isConsistent))handler;
+
+
+/// Request to retrieve image versions in long format installed on the connected device through characteristics.
+///
+/// - Parameter handler: The completion handler to call when the request is complete.
+///
+/// If the request completes successfully, the count parameter of the completion handler block indicates count of `infos` array, the `infos` is a pointer to an array containing image version informations.
+- (void)getLongImageVersionsWithCompletionHandler:(nullable void(^)(BOOL success, NSError *error, NSUInteger count, RTKLongImageVersionInfo_t infos[_Nullable]))handler;
+
+
+/// Request to retrieve image versions  in long format of active bank or free bank through command.
+///
+/// - Parameter isActiveBank: A boolean value indicates if images is current active.
+/// - Parameter handler: The completion handler to call when the request is complete.
+///
+/// @discussion If the request completes successfully, the count parameter of the completion handler block indicates count of `infos` array, the `infos` is a pointer to an array containing image version informations.
+- (void)getLongImageVersionsOfActiveBank:(BOOL)isActiveBank withCompletionHandler:(nullable void(^)(BOOL success, NSError *error, NSUInteger count, RTKLongImageVersionInfo_t infos[_Nullable]))handler;
 
 
 #pragma mark - DFU procedure operations

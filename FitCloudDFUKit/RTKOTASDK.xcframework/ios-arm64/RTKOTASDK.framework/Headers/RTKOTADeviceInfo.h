@@ -203,6 +203,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Indicates whether the device is nand flash.
 @property (readonly) BOOL isNandFlashOTA;
 
+/// Indicates whether the version numbers of the images use the 8-byte format.
+@property (readonly) BOOL supportLongImageVersion;
+
 /* RWS Upgrade related properties */
 
 /// Returns a boolean value indicating whether the device is one of RWS pair.

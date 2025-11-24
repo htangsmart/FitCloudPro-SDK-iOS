@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) uint16_t VPID;
 
-@property (readonly) NSData *imageFeature;
+@property (nullable, readonly) NSData *imageFeature;
 
 @property (readonly) NSUInteger ICType;
 

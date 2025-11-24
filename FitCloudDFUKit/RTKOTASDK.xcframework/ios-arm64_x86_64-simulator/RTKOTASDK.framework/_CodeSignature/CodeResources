@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/RTKDFURoutine.h</key>
 		<data>
-		jXf8k/7tPc7vmgF+Uci5RmlmG/U=
+		b3HLr81rqhbQ4xsB7PdXaunPqZA=
 		</data>
 		<key>Headers/RTKDFUUpgrade.h</key>
 		<data>
@@ -26,15 +26,15 @@
 		</data>
 		<key>Headers/RTKOTABin.h</key>
 		<data>
-		p9v8lMxjJ3co98HSgV3JjNFGqP8=
+		3mdp9FBUzBWB/IoKTaaobLVOIdQ=
 		</data>
 		<key>Headers/RTKOTADeviceInfo.h</key>
 		<data>
-		6hPcbLTTv9xD6ktyeC0KptgYVFs=
+		1d4bgT6v+iOGxsjbEvxqysdf2mQ=
 		</data>
 		<key>Headers/RTKOTAError.h</key>
 		<data>
-		tFAJEFFM6LSNutuSCDn8+v6TNoo=
+		onTArVQ9wdKnwYlLXurlqpdEy+4=
 		</data>
 		<key>Headers/RTKOTAInstalledBin.h</key>
 		<data>
@@ -46,15 +46,15 @@
 		</data>
 		<key>Headers/RTKOTAUpgradeBin.h</key>
 		<data>
-		BBJ5D4cojdzLIq7/EJnH/UIUP/M=
+		HW5SPIl8Ovj/eU6zuf7kzt9L2xE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OEt3SFkYrOaE7Do3mxny+/LVhHI=
+		H3IRkkWhSyzRisRcz+NfsU9/KZU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		2lwZ7wawi+LwQa20kUaI3bP0lfQ=
+		ACUQx/mvIR35ZspO5yH/hSvVn98=
 		</data>
 		<key>RTKOTASDKDemo-Mac-Info.plist</key>
 		<data>
@@ -100,11 +100,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jXf8k/7tPc7vmgF+Uci5RmlmG/U=
+			b3HLr81rqhbQ4xsB7PdXaunPqZA=
 			</data>
 			<key>hash2</key>
 			<data>
-			gnBBoKSTzg2URO/5mOtZErB8YWHahzlI3unuGcyHbkU=
+			ExM+gbiWyit2YQUyQFI2OXzNFQh3In+5/hohVJx6K4E=
 			</data>
 		</dict>
 		<key>Headers/RTKDFUUpgrade.h</key>
@@ -122,33 +122,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			p9v8lMxjJ3co98HSgV3JjNFGqP8=
+			3mdp9FBUzBWB/IoKTaaobLVOIdQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			1GzF9VBKfZ9gehKCq6TyiR07ko+ft8INkcD7nBk8Abo=
+			w0WCGVsNxyzv/mMLB+u3NzbFIaF6RxYrjcdq5k7Pjv4=
 			</data>
 		</dict>
 		<key>Headers/RTKOTADeviceInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6hPcbLTTv9xD6ktyeC0KptgYVFs=
+			1d4bgT6v+iOGxsjbEvxqysdf2mQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			SifI74WTnFNLgLjuqoMRxesqXLYPvm1r8XcpXHi9g/E=
+			jpp9n3+SScFyYzDb0KXt04XVf1EcaZKQ6pMFR/ZBbF0=
 			</data>
 		</dict>
 		<key>Headers/RTKOTAError.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tFAJEFFM6LSNutuSCDn8+v6TNoo=
+			onTArVQ9wdKnwYlLXurlqpdEy+4=
 			</data>
 			<key>hash2</key>
 			<data>
-			NE1LBILeHQS8y48CS931M7DYNDA2MnZjl4q4Hj31J5U=
+			YutG1Po+111m+CQ7oGexh8U5WvWU3RgbxbkRb5NQh74=
 			</data>
 		</dict>
 		<key>Headers/RTKOTAInstalledBin.h</key>
@@ -177,22 +177,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BBJ5D4cojdzLIq7/EJnH/UIUP/M=
+			HW5SPIl8Ovj/eU6zuf7kzt9L2xE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5QIGI3qaatkr5uu7ok+TfP0maa9N//F5OpqCNDeB+l8=
+			Hx87kDaTdCCc1Y9V/oYuC2gdUnAr82TmOHQzkRQdr9Y=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2lwZ7wawi+LwQa20kUaI3bP0lfQ=
+			ACUQx/mvIR35ZspO5yH/hSvVn98=
 			</data>
 			<key>hash2</key>
 			<data>
-			+FbuuaCpN3eOBy3Uq2FlgHwcoIHEYZ1fvuJoQ5Y1VJM=
+			QkuKzeuTb/vxoBP0DKGr620hWkh+L0ApGwcH06QXaxs=
 			</data>
 		</dict>
 		<key>RTKOTASDKDemo-Mac-Info.plist</key>

@@ -69,6 +69,7 @@ typedef NS_ENUM(NSInteger, RTKOTAErrorCode) {
     RTKOTAErrorDFUEnableBufferCheck,                        ///< Enable buffer check failed.
     RTKOTAErrorDFURequestReceiveFailure,                    ///< Request peripheral to receive image failed.
     RTKOTAErrorDFUImageSendFail,                            ///< Send image data failed.
+    RTKOTAErrorDFUImageEncryptionFail,                      ///< Encrypt image data failed.
     RTKOTAErrorDFUBufferCheckFail,                          ///< Buffer check failed.
     RTKOTAErrorDFUValidate,                                 ///< Image validate failed.
     RTKOTAErrorDFUActive,                                   ///< Image active failed.
