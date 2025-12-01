@@ -347,5 +347,8 @@
 /// 体感游戏是否支持心率数据
 @property(nonatomic, readonly) BOOL withGameHeartRate;
 
+/// 上课模式是否支持设置重复选项
+@property(nonatomic, readonly) BOOL withClassroomModeRepeatOptions;
+
 
 @end

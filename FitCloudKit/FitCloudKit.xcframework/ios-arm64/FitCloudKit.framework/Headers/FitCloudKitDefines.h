@@ -1978,4 +1978,29 @@ typedef NS_ENUM(NSInteger, FitCloudASRErrorCode) {
     FitCloudASRErrorCodeInternetConnectionOffline = 0x02,
 };
 
+
+#pragma mark - Repeat
+
+/// Repeat options
+///
+/// Defines the repeat rules for features, indicating which days of the week the rule is active.
+typedef NS_OPTIONS(Byte, FITCLOUDREPEAT) {
+    /// No repeat, valid only for the current day
+    FITCLOUDREPEAT_NONE = 0,
+    /// Monday (repeat)
+    FITCLOUDREPEAT_MON = 1,
+    /// Tuesday (repeat)
+    FITCLOUDREPEAT_TUE = 1 << 1,
+    /// Wednesday (repeat)
+    FITCLOUDREPEAT_WED = 1 << 2,
+    /// Thursday (repeat)
+    FITCLOUDREPEAT_THUR = 1 << 3,
+    /// Friday (repeat)
+    FITCLOUDREPEAT_FRI = 1 << 4,
+    /// Saturday (repeat)
+    FITCLOUDREPEAT_SAT = 1 << 5,
+    /// Sunday (repeat)
+    FITCLOUDREPEAT_SUN = 1 << 6,
+};
+
 #endif /* FitCloudKitDefines_h */

@@ -6,6 +6,7 @@
 //  Copyright © 2025 Zero Status. All rights reserved.
 //
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudKitDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// The end time in minutes from midnight (00:00).
 @property(nonatomic, assign) UInt16 end;
+
+/// The repeat options for the classroom mode schedule.
+@property(nonatomic, assign) FITCLOUDREPEAT repeatOptions;
+    
+
 
 @end
 

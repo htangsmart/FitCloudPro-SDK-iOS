@@ -1,5 +1,10 @@
 # CHANGELOG
 
+
+## V1.3.2-beta.24 build20251201001 (2025-12-01)
+
+- Added repeat options support for classroom mode settings.
+
 ## V1.3.2-beta.23 build20251119001 (2025-11-19)
 
 - Fixed an issue where the app would fail to auto-reconnect to the watch in certain scenarios after exiting DFU mode.
