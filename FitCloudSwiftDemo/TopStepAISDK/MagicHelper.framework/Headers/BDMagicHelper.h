@@ -133,6 +133,9 @@ FOUNDATION_EXPORT MagicDeviceType const MagicDeviceGlass;
 /// 耳机
 FOUNDATION_EXPORT MagicDeviceType const MagicDeviceEarphone;
 
+typedef void(^MGTTSOnAudioChunk)(NSData *chunk);
+typedef void(^MGCompletionHandler)(NSDictionary * _Nullable result, NSError * _Nullable error);
+
 /// 管理类
 @interface BDMagicHelper : NSObject
 
@@ -140,12 +143,17 @@ FOUNDATION_EXPORT MagicDeviceType const MagicDeviceEarphone;
 /// - See: BDHelperDelegate
 @property (nonatomic, weak) id<MagicHelperDelegate> delegate;
 
+/// 是否是测试环境，默认NO（商用）
+/// 切换环境需要重新初始化
+@property (nonatomic, assign) BOOL isTestEnv;
+
 /// 是否开启日志,默认NO
 @property (nonatomic, assign) BOOL logEnable;
 
 /// 是否开启海外版GPT测试链接， 默认NO
 @property (nonatomic, assign) BOOL isTestIntlGPT;
 
+///
 @property (nonatomic, strong) MagicRecognitionSession *recognitionSession;
 
 /// 单例
@@ -199,23 +207,25 @@ FOUNDATION_EXPORT MagicDeviceType const MagicDeviceEarphone;
 - (void)aiStyle;
 
 /// 翻译
+/// 支持语种见：https://docs.qq.com/sheet/DWXhuY3dsTU11akts?tab=BB08J2
 - (void)translateWithBody:(TranslateRequestBody *)body;
-
-/// 健康问答
-- (void)healthQAWithBody:(HealthQABody *)body;
-
-/// 健康数据分析
-- (void)healthAnalysisWithBody:(HealthAnalysisBody *)body;
 
 /// 海外版语音文件识别
 /// - Parameter path: 语音文件路径
+/// 支持语种：https://docs.qq.com/document/DWWZBY0dObHVNamFI?nlc=1&_bid=1&client=drive_file&tab=v3qifl
 - (void)intlFileAsr:(ASRFileIntlRequestBody *)body;
 
 /// 海外版语音识别(asr)
-- (IntlAudioInput *)intlAsr:(ASRIntlRequestBody *)body;
+/// 支持语种：https://docs.qq.com/document/DWWZBY0dObHVNamFI?nlc=1&_bid=1&client=drive_file&tab=v3qifl
+- (nullable IntlAudioInput *)intlAsr:(ASRIntlRequestBody *)body;
 
 /// 海外版语音合成(tts)
+/// 支持语种：https://docs.qq.com/document/DWWZBY0dObHVNamFI?nlc=1&_bid=1&client=drive_file&tab=v3qifl
 - (void)intlTts:(TTSIntlRequestBody *)body;
+
+/// 海外tts v2版本
+/// 支持语种：https://docs.qq.com/document/DWWZBY0dObHVNamFI?nlc=1&_bid=1&client=drive_file&tab=v3qifl
+- (void)intlTtsV2:(TTSIntlRequestBody *)body;
 
 /// 海外版aigc (aigc)
 - (void)intlAigc:(ChatPictureRequestBody *)body;
@@ -254,7 +264,7 @@ FOUNDATION_EXPORT MagicDeviceType const MagicDeviceEarphone;
 
 /// 同声传译v1
 /// 回调见- (void)didReceiveSimultInterpretationResult:(NSDictionary *)result error:(nullable NSError *)error;
-- (IntlAudioInput *)simultInterpretationWithBody:(SimultInterpretationRequestBody *)body;
+- (nullable IntlAudioInput *)simultInterpretationWithBody:(SimultInterpretationRequestBody *)body;
 
 /// 会议纪要
 - (void)generateSummaryWithBody:(MeetingSummaryRequestBody *)body;
@@ -265,10 +275,6 @@ FOUNDATION_EXPORT MagicDeviceType const MagicDeviceEarphone;
 /// 获取会议纪要v2模版
 - (void)getSummaryTemplates;
 
-/// 海外tts v2版本
-- (void)intlTtsV2:(TTSIntlRequestBody *)body;
-
-
 ///多个wav文件合并，合并成功返回新的文件地址，否则返回nil
 - (NSString *)mergeWavFiles:(NSArray *)fileList;
 
@@ -278,7 +284,22 @@ FOUNDATION_EXPORT MagicDeviceType const MagicDeviceEarphone;
 /// 图片翻译
 - (void)translationImage:(TranslationImageBody *)body;
 
+/// TTS V3 流式返回音频数据
+/// - Parameters:
+///   - body: 请求参数
+///   - onAudioChunk: 流式回调
+///   - completion: 完成回调
+/// - Return: 任务id, 如果为nil,则表示创建失败
+/// 这个方法返回的都是PCM 16000hz的数据
+- (nullable NSString *)intlTtsV3:(TTSIntlRequestBody *)body
+                    onAudioChunk:(MGTTSOnAudioChunk _Nullable)onAudioChunk
+                      completion:(MGCompletionHandler)completion;
+
+/// 结束任务
+/// 结束任务后onAudioChunk，completion都不会有任何回调了
+- (void)cancelTTSV3:(NSString *)taskId;
 
 @end
 
 NS_ASSUME_NONNULL_END
+

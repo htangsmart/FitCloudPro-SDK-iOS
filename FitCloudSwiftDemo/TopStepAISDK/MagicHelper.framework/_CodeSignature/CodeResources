@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AILanguageCodeUtil.h</key>
 		<data>
-		eG2pMHI8SfVwnN3AYw8soYNMWGQ=
+		VDCGplYUBFwJD2VtqT8zHKnk5MY=
 		</data>
 		<key>Headers/AIMusicRequestBody.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/BDMagicHelper.h</key>
 		<data>
-		2Ajx70xdlx6R41TvA3NEkdwZi34=
+		1dpMX+eIprUbAmqKtz8ori68KyA=
 		</data>
 		<key>Headers/ChatIntlRequestBody.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/RecognitionImageBody.h</key>
 		<data>
-		aY+5mJgdn8dw6/7Dqo9HfwjFfK8=
+		MuyiGvA5a6GE6T4mJ12/Mf/DiTc=
 		</data>
 		<key>Headers/SimultInterpretationRequestBody.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Headers/TranslateRequestBody.h</key>
 		<data>
-		5PxGG63ZryBTVWbDSvCzuFVnJgE=
+		yG5DUIRbY5qSkII14+d4cbftCyA=
 		</data>
 		<key>Headers/TranslationImageBody.h</key>
 		<data>
@@ -146,11 +146,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eG2pMHI8SfVwnN3AYw8soYNMWGQ=
+			VDCGplYUBFwJD2VtqT8zHKnk5MY=
 			</data>
 			<key>hash2</key>
 			<data>
-			xkTRDwHcUeLwYHilk6Nii/4Q5mBxnpHNaJWX4x4KbPk=
+			7inGBoIJZ4MrBDvt8IlXZPTOr81GeoiJu+0Z7HAYBF8=
 			</data>
 		</dict>
 		<key>Headers/AIMusicRequestBody.h</key>
@@ -201,11 +201,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2Ajx70xdlx6R41TvA3NEkdwZi34=
+			1dpMX+eIprUbAmqKtz8ori68KyA=
 			</data>
 			<key>hash2</key>
 			<data>
-			WYVvOB4U2WV8LO8QOyA5xJPyjJqHpSMlmwygEQH0SYQ=
+			bodu2BexjaMsUrPMqwYQ53gKG2KcAbrstUaVqDfZ2S4=
 			</data>
 		</dict>
 		<key>Headers/ChatIntlRequestBody.h</key>
@@ -377,11 +377,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aY+5mJgdn8dw6/7Dqo9HfwjFfK8=
+			MuyiGvA5a6GE6T4mJ12/Mf/DiTc=
 			</data>
 			<key>hash2</key>
 			<data>
-			MYMGjD5zdjnNu6URfzJXHvRPpTYEw4AQq2ThWii5Aiw=
+			UrXkuovM5q8yJpcCbBIBuDhMZTIPNrHAdEqVdA2N2hs=
 			</data>
 		</dict>
 		<key>Headers/SimultInterpretationRequestBody.h</key>
@@ -432,11 +432,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5PxGG63ZryBTVWbDSvCzuFVnJgE=
+			yG5DUIRbY5qSkII14+d4cbftCyA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Uvz9d5uS+C93YHjtEJBom0CmK0qhJNBqEU906bVx2uQ=
+			0i4iFjBdprS03DbRfVQE5GU9pzTiYW6t6a5mrv66JFM=
 			</data>
 		</dict>
 		<key>Headers/TranslationImageBody.h</key>

@@ -53,8 +53,43 @@ typedef NS_ENUM(NSInteger, AILanguageCode) {
     AILanguageCodeUZ,   // 乌兹别克语 (Uzbek)
     AILanguageCodeVI,   // 越南语 (Vietnamese)
     AILanguageCodeZH,   // 中文 (Chinese)
+    AILanguageCodeZHTW, // 中文繁体 (Chinese)
     AILanguageCodeCS,   // 捷克语 (Czech)
-    AILanguageCodeKO    // 韩语 (Korean)
+    AILanguageCodeKO,    // 韩语 (Korean)
+    
+    AILanguageCodeAF,   // 南非荷兰语 (Afrikaans)
+    AILanguageCodeAM,   // 阿姆哈拉语 (Amharic)
+    AILanguageCodeAS,   // 阿萨姆语 (Assamese)
+    AILanguageCodeAZ,   // 阿塞拜疆语 (Azerbaijani)
+    AILanguageCodeCA,   // 加泰罗尼亚语 (Catalan)
+    AILanguageCodeCY,   // 威尔士语 (Welsh)
+    AILanguageCodeEU,   // 巴斯克语 (Basque)
+    AILanguageCodeGU,   // 古吉拉特语 (Gujarati)
+    AILanguageCodeHE,   // 希伯来语 (Hebrew)
+    AILanguageCodeHY,   // 亚美尼亚语 (Armenian)
+    AILanguageCodeIS,   // 冰岛语 (Icelandic)
+    AILanguageCodeKK,   // 哈萨克语 (Kazakh)
+    AILanguageCodeKM,   // 高棉语 (Khmer)
+    AILanguageCodeKN,   // 卡纳达语 (Kannada)
+    AILanguageCodeMK,   // 马其顿语 (Macedonian)
+    AILanguageCodeML,   // 马拉雅拉姆语 (Malayalam)
+    AILanguageCodeMN,   // 蒙古语 (Mongolian)
+    AILanguageCodeMR,   // 马拉地语 (Marathi)
+    AILanguageCodeMT,   // 马耳他语 (Maltese)
+    AILanguageCodeNB,   // 书面挪威语 (Norwegian Bokmål)
+    AILanguageCodeNE,   // 尼泊尔语 (Nepali)
+    AILanguageCodeOR,   // 奥里亚语 (Odia)
+    AILanguageCodePA,   // 旁遮普语 (Punjabi)
+    AILanguageCodePS,   // 普什图语 (Pashto)
+    AILanguageCodeSI,   // 僧伽罗语 (Sinhala)
+    AILanguageCodeSO,   // 索马里语 (Somali)
+    AILanguageCodeSQ,   // 阿尔巴尼亚语 (Albanian)
+    AILanguageCodeSR,   // 塞尔维亚语 (Serbian)
+    AILanguageCodeSW,   // 斯瓦希里语 (Swahili)
+    AILanguageCodeTA,   // 泰米尔语 (Tamil)
+    AILanguageCodeTE,   // 泰卢固语 (Telugu)
+    AILanguageCodeUR,   // 乌尔都语 (Urdu)
+    AILanguageCodeZU,   // 祖鲁语 (Zulu)
 };
 
 @interface AILanguageCodeUtil : NSObject
@@ -63,6 +98,9 @@ typedef NS_ENUM(NSInteger, AILanguageCode) {
 + (NSString *)localeCodeForLanguage:(AILanguageCode)language;
 + (NSString *)nameForLanguage:(AILanguageCode)language;
 + (AILanguageCode)languageCodeForString:(NSString *)string;
+
+/// 返回所有语言数组，每项包含 @{@"code": @(枚举值), @"name": 名称}
++ (NSArray<NSDictionary *> *)msLanguages;
 
 /// 返回所有语言数组，每项包含 @{@"code": @(枚举值), @"name": 名称}
 + (NSArray<NSDictionary *> *)allLanguages;

@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TopStepAISDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import AVFAudio
 import Foundation
 import LAME
@@ -221,6 +221,7 @@ public let AigcErrorDomain: Swift.String
 public let GptErrorDomain: Swift.String
 public let TTSErrorDomain: Swift.String
 public let TranslateErrorDomain: Swift.String
+public let CommonErrorDomain: Swift.String
 @objc public enum InitErrorCode : Swift.Int {
   case unknown = -1
   case notAllowsArbitraryLoads = 0
@@ -248,6 +249,7 @@ public let TranslateErrorDomain: Swift.String
   case sdkNotInitialized = 1
   case invalidParameter = 2
   case badServerResponse = 3
+  case recognizeFailed = 4
   case internetConnectionOffline = 9999
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
@@ -327,6 +329,35 @@ public let TranslateErrorDomain: Swift.String
   case sdkNotInitialized = 1
   case invalidParameter = 2
   case badServerResponse = 3
+  case internetConnectionOffline = 9999
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum CommonErrorCode : Swift.Int {
+  case unknown = -1
+  case notAllowsArbitraryLoads = 0
+  case sdkNotInitialized = 1
+  case deviceNotRegistered = 2
+  case deviceProhibited = 3
+  case channelProhibited = 4
+  case serviceNotEnabled = 5
+  case invalidParameter = 6
+  case badServerResponse = 7
+  case serverInternalError = 8
+  case taskTimeout = 9
+  case aiPhotoGenerationFailed = 10
+  case contentInterceptedDueToProfanity = 11
+  case contentInterceptedDueToCopyright = 12
+  case contentInterceptedDueToOtherReason = 13
+  case referenceImageFormatNotSatisfied = 14
+  case recognizeFailed = 15
+  case audioFileSaveFailed = 16
+  case needToCheckDetailsMessage = 17
   case internetConnectionOffline = 9999
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
@@ -430,3 +461,6 @@ extension TopStepAISDK.GptErrorCode : Swift.RawRepresentable {}
 extension TopStepAISDK.TranslateErrorCode : Swift.Equatable {}
 extension TopStepAISDK.TranslateErrorCode : Swift.Hashable {}
 extension TopStepAISDK.TranslateErrorCode : Swift.RawRepresentable {}
+extension TopStepAISDK.CommonErrorCode : Swift.Equatable {}
+extension TopStepAISDK.CommonErrorCode : Swift.Hashable {}
+extension TopStepAISDK.CommonErrorCode : Swift.RawRepresentable {}

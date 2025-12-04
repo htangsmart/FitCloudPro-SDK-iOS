@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/TopStepAISDK-Swift.h</key>
 		<data>
-		Uw6IcsDUW4RirKfVApMDBVlXAz8=
+		g1OHgtrmQHHd1IFdR1gwWctBl7w=
 		</data>
 		<key>Headers/TopStepAISDK.h</key>
 		<data>
@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		D9G/PmvYm7FKjuNd+HV3FjAQxMw=
+		d9cLkgGUgP51Dj+alUCvvjcgONI=
 		</data>
 		<key>Modules/TopStepAISDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		/LmmL7Bm1bag/3HiQ2+vI4J9Tl8=
+		K/5zcd+rjoCXmZKFoZ5pSx4K7W4=
 		</data>
 		<key>Modules/TopStepAISDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		9NSze013tKY/nowFrZP7Xs/dVf8=
+		1xldWYAy7uI40pr2brO1iLP9LuE=
 		</data>
 		<key>Modules/TopStepAISDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		oaiP8H0g8Ojq0vxNqqkEBMXV5Ag=
+		lsvFQbVDKO5NDDLQJ+TZ80KBads=
 		</data>
 		<key>Modules/TopStepAISDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		9NSze013tKY/nowFrZP7Xs/dVf8=
+		1xldWYAy7uI40pr2brO1iLP9LuE=
 		</data>
 		<key>Modules/TopStepAISDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zu7tRCaUi9c9HGbulJ2Bhsvo1fk=
+		YaRApkCsKRffRviVzevoO0rA9SM=
 		</data>
 		<key>Modules/TopStepAISDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		/LmmL7Bm1bag/3HiQ2+vI4J9Tl8=
+		K/5zcd+rjoCXmZKFoZ5pSx4K7W4=
 		</data>
 		<key>Modules/TopStepAISDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		jt0agkbwVHlPR/p44HppetaU9/w=
+		7rtJiaiSMl+85yjxYVQxeUOC74M=
 		</data>
 		<key>Modules/TopStepAISDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		tpeD7/hIhVbTD0rsp8OMYDA1gTw=
+		cZ8hA28IGEfIM33FRovAXwKJfik=
 		</data>
 		<key>Modules/TopStepAISDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		jt0agkbwVHlPR/p44HppetaU9/w=
+		7rtJiaiSMl+85yjxYVQxeUOC74M=
 		</data>
 		<key>Modules/TopStepAISDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		BOytfnZnSm7b6O9zz4PNPmnxFyY=
+		V7o0NBJbg83c1dy2HZUifkldBFc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FMXHXT7JBvBBoOfc0s3m196AoXGceYvfhz7VyCDYOzE=
+			+mFVOqBz8mJdC0wc+4AqM+jnlKBiNtgrZCnQIvR+CX8=
 			</data>
 		</dict>
 		<key>Headers/TopStepAISDK.h</key>
@@ -81,70 +81,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UTcPdOTPulSiTufqDMUsW9wAb5wo6KmPv/PWIaFe+Uc=
+			xr3BiRLfDV4gHt6LyTrqbCtLPliSocD2crvqj6KPDn8=
 			</data>
 		</dict>
 		<key>Modules/TopStepAISDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWk2NDSFKjQ+CDTSt+vyOOHsQyy57EG9jLNiWjs/EAM=
+			uqWJzJL1ZVln+EnyWA6r/EpghnCiuWcKIDF9MVjrA9M=
 			</data>
 		</dict>
 		<key>Modules/TopStepAISDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n03tC6ukxEx3gzxA2IUkr+PCuzwxAIHZlGeoSXK6erw=
+			8qCLcb9sT9bNY+me65mKD3SbvwYzvY74BuRc5TVGWHA=
 			</data>
 		</dict>
 		<key>Modules/TopStepAISDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWk2NDSFKjQ+CDTSt+vyOOHsQyy57EG9jLNiWjs/EAM=
+			uqWJzJL1ZVln+EnyWA6r/EpghnCiuWcKIDF9MVjrA9M=
 			</data>
 		</dict>
 		<key>Modules/TopStepAISDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			36NKQFB3TvYqtN5/JfwvdrWmvSfCxsZL3Bq4mmIqLJc=
+			tQ8WENf47F7xKefMfUln3phIF571a+glQlE9Ak660V0=
 			</data>
 		</dict>
 		<key>Modules/TopStepAISDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UTcPdOTPulSiTufqDMUsW9wAb5wo6KmPv/PWIaFe+Uc=
+			xr3BiRLfDV4gHt6LyTrqbCtLPliSocD2crvqj6KPDn8=
 			</data>
 		</dict>
 		<key>Modules/TopStepAISDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lgIJ65eP/GjiiGqNzxCXv3hJrur3GyRHNVqtXSc4erc=
+			3aW8IhpVnodbf8Kpo9BPkhGt3aifRJ0+ZmAdYRbFZZQ=
 			</data>
 		</dict>
 		<key>Modules/TopStepAISDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nvo5VyEZREkMJBQDm6PnXNDDQpJlG8/WmbdUDp8iVOE=
+			q24u5Hn5ScT3JGVn7LYWE+0XI8KpJHSWRoYYZwakLZw=
 			</data>
 		</dict>
 		<key>Modules/TopStepAISDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lgIJ65eP/GjiiGqNzxCXv3hJrur3GyRHNVqtXSc4erc=
+			3aW8IhpVnodbf8Kpo9BPkhGt3aifRJ0+ZmAdYRbFZZQ=
 			</data>
 		</dict>
 		<key>Modules/TopStepAISDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6eCrnv2sy5XX3VLiqYI7rF1qcOhaZ9TeDCTAcw7jWjg=
+			F05YuNnvfVgw8DG2ieB7tWY5iDMeAGj4FGdsCEs52JU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

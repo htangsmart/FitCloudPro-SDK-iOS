@@ -9764,6 +9764,52 @@
         ]
       },
       {
+        "kind": "Var",
+        "name": "CommonErrorDomain",
+        "printedName": "CommonErrorDomain",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:12TopStepAISDK17CommonErrorDomainSSvp",
+        "mangledName": "$s12TopStepAISDK17CommonErrorDomainSSvp",
+        "moduleName": "TopStepAISDK",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "isLet": true,
+        "hasStorage": true,
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:12TopStepAISDK17CommonErrorDomainSSvg",
+            "mangledName": "$s12TopStepAISDK17CommonErrorDomainSSvg",
+            "moduleName": "TopStepAISDK",
+            "implicit": true,
+            "accessorKind": "get"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "InitErrorCode",
         "printedName": "InitErrorCode",
@@ -10625,6 +10671,48 @@
           },
           {
             "kind": "Var",
+            "name": "recognizeFailed",
+            "printedName": "recognizeFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.AsrErrorCode.Type) -> TopStepAISDK.AsrErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AsrErrorCode",
+                    "printedName": "TopStepAISDK.AsrErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@AsrErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.AsrErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AsrErrorCode",
+                        "printedName": "TopStepAISDK.AsrErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@AsrErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@AsrErrorCode@AsrErrorCodeRecognizeFailed",
+            "mangledName": "$s12TopStepAISDK12AsrErrorCodeO15recognizeFailedyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
             "name": "internetConnectionOffline",
             "printedName": "internetConnectionOffline",
             "children": [
@@ -10663,7 +10751,7 @@
               "RawDocComment",
               "ObjC"
             ],
-            "fixedbinaryorder": 4
+            "fixedbinaryorder": 5
           },
           {
             "kind": "Constructor",
@@ -13111,6 +13199,987 @@
         "declKind": "Enum",
         "usr": "c:@M@TopStepAISDK@E@TranslateErrorCode",
         "mangledName": "$s12TopStepAISDK18TranslateErrorCodeO",
+        "moduleName": "TopStepAISDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CommonErrorCode",
+        "printedName": "CommonErrorCode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeUnknown",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO7unknownyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "notAllowsArbitraryLoads",
+            "printedName": "notAllowsArbitraryLoads",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeNotAllowsArbitraryLoads",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO23notAllowsArbitraryLoadsyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "sdkNotInitialized",
+            "printedName": "sdkNotInitialized",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeSdkNotInitialized",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO17sdkNotInitializedyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "deviceNotRegistered",
+            "printedName": "deviceNotRegistered",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeDeviceNotRegistered",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO19deviceNotRegisteredyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "deviceProhibited",
+            "printedName": "deviceProhibited",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeDeviceProhibited",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO16deviceProhibitedyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "channelProhibited",
+            "printedName": "channelProhibited",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeChannelProhibited",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO17channelProhibitedyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "serviceNotEnabled",
+            "printedName": "serviceNotEnabled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeServiceNotEnabled",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO17serviceNotEnabledyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "invalidParameter",
+            "printedName": "invalidParameter",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeInvalidParameter",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO16invalidParameteryA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 7
+          },
+          {
+            "kind": "Var",
+            "name": "badServerResponse",
+            "printedName": "badServerResponse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeBadServerResponse",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO17badServerResponseyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 8
+          },
+          {
+            "kind": "Var",
+            "name": "serverInternalError",
+            "printedName": "serverInternalError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeServerInternalError",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO014serverInternalE0yA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 9
+          },
+          {
+            "kind": "Var",
+            "name": "taskTimeout",
+            "printedName": "taskTimeout",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeTaskTimeout",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO11taskTimeoutyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 10
+          },
+          {
+            "kind": "Var",
+            "name": "aiPhotoGenerationFailed",
+            "printedName": "aiPhotoGenerationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeAiPhotoGenerationFailed",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO23aiPhotoGenerationFailedyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 11
+          },
+          {
+            "kind": "Var",
+            "name": "contentInterceptedDueToProfanity",
+            "printedName": "contentInterceptedDueToProfanity",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeContentInterceptedDueToProfanity",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO32contentInterceptedDueToProfanityyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 12
+          },
+          {
+            "kind": "Var",
+            "name": "contentInterceptedDueToCopyright",
+            "printedName": "contentInterceptedDueToCopyright",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeContentInterceptedDueToCopyright",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO32contentInterceptedDueToCopyrightyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 13
+          },
+          {
+            "kind": "Var",
+            "name": "contentInterceptedDueToOtherReason",
+            "printedName": "contentInterceptedDueToOtherReason",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeContentInterceptedDueToOtherReason",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO34contentInterceptedDueToOtherReasonyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 14
+          },
+          {
+            "kind": "Var",
+            "name": "referenceImageFormatNotSatisfied",
+            "printedName": "referenceImageFormatNotSatisfied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeReferenceImageFormatNotSatisfied",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO32referenceImageFormatNotSatisfiedyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 15
+          },
+          {
+            "kind": "Var",
+            "name": "recognizeFailed",
+            "printedName": "recognizeFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeRecognizeFailed",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO15recognizeFailedyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 16
+          },
+          {
+            "kind": "Var",
+            "name": "audioFileSaveFailed",
+            "printedName": "audioFileSaveFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeAudioFileSaveFailed",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO19audioFileSaveFailedyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 17
+          },
+          {
+            "kind": "Var",
+            "name": "needToCheckDetailsMessage",
+            "printedName": "needToCheckDetailsMessage",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeNeedToCheckDetailsMessage",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO25needToCheckDetailsMessageyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 18
+          },
+          {
+            "kind": "Var",
+            "name": "internetConnectionOffline",
+            "printedName": "internetConnectionOffline",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TopStepAISDK.CommonErrorCode.Type) -> TopStepAISDK.CommonErrorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TopStepAISDK.CommonErrorCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CommonErrorCode",
+                        "printedName": "TopStepAISDK.CommonErrorCode",
+                        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@TopStepAISDK@E@CommonErrorCode@CommonErrorCodeInternetConnectionOffline",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO25internetConnectionOfflineyA2CmF",
+            "moduleName": "TopStepAISDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 19
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TopStepAISDK.CommonErrorCode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CommonErrorCode",
+                    "printedName": "TopStepAISDK.CommonErrorCode",
+                    "usr": "c:@M@TopStepAISDK@E@CommonErrorCode"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TopStepAISDK15CommonErrorCodeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO8rawValueACSgSi_tcfc",
+            "moduleName": "TopStepAISDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TopStepAISDK15CommonErrorCodeO8rawValueSivp",
+            "mangledName": "$s12TopStepAISDK15CommonErrorCodeO8rawValueSivp",
+            "moduleName": "TopStepAISDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TopStepAISDK15CommonErrorCodeO8rawValueSivg",
+                "mangledName": "$s12TopStepAISDK15CommonErrorCodeO8rawValueSivg",
+                "moduleName": "TopStepAISDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@TopStepAISDK@E@CommonErrorCode",
+        "mangledName": "$s12TopStepAISDK15CommonErrorCodeO",
         "moduleName": "TopStepAISDK",
         "declAttributes": [
           "AccessControl",
@@ -16585,428 +17654,582 @@
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "StringLiteral",
+      "offset": 1134,
+      "length": 40,
+      "value": "\"com.topstep.sdks.ai.common.errordomain\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1169,
+      "offset": 1303,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1340,
+      "offset": 1474,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1397,
+      "offset": 1531,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1457,
+      "offset": 1591,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1545,
+      "offset": 1679,
       "length": 3,
       "value": "101"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1635,
+      "offset": 1769,
       "length": 3,
       "value": "102"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1695,
+      "offset": 1829,
       "length": 3,
       "value": "104"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1757,
+      "offset": 1891,
       "length": 3,
       "value": "106"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1820,
+      "offset": 1954,
       "length": 3,
       "value": "107"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1899,
+      "offset": 2033,
       "length": 3,
       "value": "108"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2005,
+      "offset": 2139,
       "length": 3,
       "value": "111"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2104,
+      "offset": 2238,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2201,
+      "offset": 2335,
       "length": 4,
       "value": "9999"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2355,
+      "offset": 2489,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2439,
+      "offset": 2573,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2496,
+      "offset": 2630,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2556,
+      "offset": 2690,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2651,
+      "offset": 2800,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2895,
       "length": 4,
       "value": "9999"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2799,
+      "offset": 3043,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2883,
+      "offset": 3127,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 2940,
+      "offset": 3184,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 3000,
+      "offset": 3244,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 3057,
+      "offset": 3301,
       "length": 3,
       "value": "201"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 3154,
+      "offset": 3398,
       "length": 3,
       "value": "501"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 3251,
+      "offset": 3495,
       "length": 3,
       "value": "503"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 3317,
+      "offset": 3561,
       "length": 6,
       "value": "282000"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 3396,
+      "offset": 3640,
       "length": 6,
       "value": "282003"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 3653,
+      "offset": 3897,
       "length": 6,
       "value": "282004"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 3760,
+      "offset": 4004,
       "length": 6,
       "value": "216100"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 3858,
+      "offset": 4102,
       "length": 6,
       "value": "216201"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 3910,
+      "offset": 4154,
       "length": 6,
       "value": "216303"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4024,
+      "offset": 4268,
       "length": 6,
       "value": "216630"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4124,
+      "offset": 4368,
       "length": 4,
       "value": "9999"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4259,
+      "offset": 4503,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4342,
+      "offset": 4587,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4398,
+      "offset": 4644,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4457,
+      "offset": 4704,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4524,
+      "offset": 4772,
       "length": 4,
       "value": "1001"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4594,
+      "offset": 4843,
       "length": 4,
       "value": "1002"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4641,
+      "offset": 4891,
       "length": 4,
       "value": "1003"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4709,
+      "offset": 4960,
       "length": 4,
       "value": "1004"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4758,
+      "offset": 5010,
       "length": 4,
       "value": "1005"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4810,
+      "offset": 5063,
       "length": 4,
       "value": "1006"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 4907,
+      "offset": 5161,
       "length": 4,
       "value": "9999"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5072,
+      "offset": 5326,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5156,
+      "offset": 5410,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5213,
+      "offset": 5467,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5273,
+      "offset": 5527,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5318,
+      "offset": 5572,
       "length": 3,
       "value": "400"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5385,
+      "offset": 5639,
       "length": 3,
       "value": "401"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5444,
+      "offset": 5698,
       "length": 3,
       "value": "403"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5487,
+      "offset": 5741,
       "length": 3,
       "value": "404"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5552,
+      "offset": 5806,
       "length": 3,
       "value": "422"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5614,
+      "offset": 5868,
       "length": 3,
       "value": "429"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5708,
+      "offset": 5962,
       "length": 3,
       "value": "430"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5805,
+      "offset": 6059,
       "length": 4,
       "value": "9999"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 5942,
+      "offset": 6196,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 6026,
+      "offset": 6280,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 6083,
+      "offset": 6337,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 6143,
+      "offset": 6397,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
       "kind": "IntegerLiteral",
-      "offset": 6238,
+      "offset": 6492,
+      "length": 4,
+      "value": "9999"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6621,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6796,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6879,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6976,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7034,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7094,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7155,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7212,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7272,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7336,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7383,
+      "length": 1,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7460,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7556,
+      "length": 2,
+      "value": "11"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7652,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7905,
+      "length": 2,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7999,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8106,
+      "length": 2,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8175,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8280,
+      "length": 2,
+      "value": "17"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAIErrors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8376,
       "length": 4,
       "value": "9999"
     },
@@ -17043,21 +18266,21 @@
       "kind": "StringLiteral",
       "offset": 2327,
       "length": 14,
-      "value": "\"1.0.0-beta.4\""
+      "value": "\"1.0.0-beta.6\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAI.swift",
       "kind": "StringLiteral",
       "offset": 2534,
       "length": 13,
-      "value": "\"20251029001\""
+      "value": "\"20251126001\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAI.swift",
       "kind": "StringLiteral",
       "offset": 2746,
       "length": 12,
-      "value": "\"2025-10-29\""
+      "value": "\"2025-11-26\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAI.swift",
