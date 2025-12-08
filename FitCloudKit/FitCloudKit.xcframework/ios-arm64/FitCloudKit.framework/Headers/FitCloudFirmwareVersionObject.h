@@ -350,5 +350,9 @@
 /// 上课模式是否支持设置重复选项
 @property(nonatomic, readonly) BOOL withClassroomModeRepeatOptions;
 
+/// 是否支持蝶唯客户的 Web 智能翻译功能
+@property(nonatomic, readonly) BOOL withWebAITranslationForDieWei;
+
+
 
 @end

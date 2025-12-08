@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-12-01 Version:1.3.2-beta.24 Build:20251201001
+## pcjbird 2025-12-08 Version:1.3.2-beta.25 Build:20251208001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -32,6 +32,7 @@
 - Introduced new API `+ (void)sendLLMQuestionASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion` to send the ASR result of an LLM question to the watch. This method is only supported on select watch models that implement LLM-question ASR-result confirmation. Do **not** call it on unsupported devices. Always verify device capability before use.
 - Fixed an issue where the app would fail to auto-reconnect to the watch in certain scenarios after exiting DFU mode.
 - Added repeat options support for classroom mode settings.
+- Added flag to indicate whether the watch supports ai-tranlsation feature for `蝶唯`.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

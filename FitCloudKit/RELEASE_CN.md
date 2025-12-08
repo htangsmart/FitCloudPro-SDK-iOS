@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-12-01 Version:1.3.2-beta.24 Build:20251201001
+## pcjbird 2025-12-08 Version:1.3.2-beta.25 Build:20251208001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -31,6 +31,7 @@
 - 引入新 API `+ (void)sendLLMQuestionASRResult:(nullable NSString *)text errorCode:(FitCloudASRErrorCode)errorCode completion:(FitCloudCompletionHandler _Nullable)completion` 以发送 LLM 问题的 ASR（自动语音识别）结果到手表。此方法仅在支持 LLM-问题 ASR-结果确认的特定手表型号上受支持。请勿在不支持的设备上调用。始终在使用前验证设备能力。
 - 修复了在某些场景下退出 DFU 模式后，App 无法自动重新连接手表的问题。
 - 新增对教室模式设置中重复选项的支持。
+- 新增标志位，用于标识手表是否支持 `蝶唯` 的 AI 翻译功能。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
