@@ -1,9 +1,10 @@
 # RELEASES
 
-## V1.3.4-beta.2 build20251119001 (2025-11-19)
+## V1.3.4-beta.3 build20251209001 (2025-12-09)
 
 - Fixed some Italian translations.
 - Bump `RTKLEFoundation.xcframework` and `RTKOTASDK.xcframework` from `1.12.1` to `1.17.3` to fix some crash issue and remove bitcode related configurations.
+- Bump `RTKLEFoundation.xcframework` and `RTKOTASDK.xcframework` from `1.17.3` to `1.18.0` to fix some crash issue.
 
 ## V1.3.3 build20250820001 (2025-08-20)
 
