@@ -146,7 +146,7 @@
 /// 是否支持习惯养成功能
 @property(nonatomic, readonly) BOOL allowHabits;
 
-/// 是否支持更多的二维码传输，收款码：Paytm 收款码/PhonePe 收款码/GPay 收款码/BHTM 收款码，名片：Email 名片/Phone 名片/LinkedIn 名片
+/// 是否支持更多的二维码传输，收款码：Paytm 收款码/PhonePe 收款码/Google Wallet 收款码/BHTM 收款码，名片：Email 名片/Phone 名片/LinkedIn 名片
 @property(nonatomic, readonly) BOOL showAdditionalQRCodeTransfer;
 
 /// 是否音乐推送

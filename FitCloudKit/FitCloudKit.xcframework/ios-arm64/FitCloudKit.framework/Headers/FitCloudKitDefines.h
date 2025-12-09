@@ -1174,8 +1174,8 @@ typedef NS_ENUM(Byte, FITCLOUDQRCODE) {
     FITCLOUDQRCODE_MONEYRECEIVE_PAYTM = 0x05,
     /// PhonePe 收款码
     FITCLOUDQRCODE_MONEYRECEIVE_PHONEPE = 0x06,
-    /// GPay 收款码
-    FITCLOUDQRCODE_MONEYRECEIVE_GPAY = 0x07,
+    /// Google Wallet 收款码
+    FITCLOUDQRCODE_MONEYRECEIVE_GOOGLEWALLET = 0x07,
     /// BHTM 收款码
     FITCLOUDQRCODE_MONEYRECEIVE_BHIM = 0x08,
     /// Momo 收款码
@@ -1520,8 +1520,8 @@ typedef NS_OPTIONS(UInt64, FITCLOUDMN) {
     FITCLOUDMN_FASTRACK = 1 << 27,
     /// Titan Smart World 通知
     FITCLOUDMN_TITANSMARTWORLD = 1 << 28,
-    /// Google Pay 通知
-    FITCLOUDMN_GPAY = 1 << 29,
+    /// Google Wallet 通知
+    FITCLOUDMN_GOOGLEWALLET = 1 << 29,
     /// Amazon 通知
     FITCLOUDMN_AMAZON = 1 << 30,
     /// 其他 APP 通知

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.26 build20251209001 (2025-12-09)
+
+- Renamed `GPay` to `Google Wallet`.
+
 ## V1.3.2-beta.25 build20251208001 (2025-12-08)
 
 - Added flag to indicate whether the watch supports ai-tranlsation feature for `蝶唯`.
