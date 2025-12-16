@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.27 build20251216001 (2025-12-16)
+
+- Trying to log out a user from the watch when manually disconnect or app terminates.
+
 ## V1.3.2-beta.26 build20251209001 (2025-12-09)
 
 - Renamed `GPay` to `Google Wallet`.
