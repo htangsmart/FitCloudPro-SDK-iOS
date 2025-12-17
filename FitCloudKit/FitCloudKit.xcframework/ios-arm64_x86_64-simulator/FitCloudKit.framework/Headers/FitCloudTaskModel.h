@@ -41,9 +41,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// The details description for the task
 @property(nonatomic, strong) NSString *desc;
 
-/// Whether the task is enabled
-/// - Note: YES if enabled, NO if disabled
+/// Whether the task is enabled.
+/// `YES`: enabled, `NO`: disabled
 @property(nonatomic, assign) BOOL enabled;
+
+/// Whether the task file time has been set.
+/// `YES`: already set, `NO`:  not set
+@property(nonatomic, assign) BOOL hasSetFireTime;
 
 @end
 

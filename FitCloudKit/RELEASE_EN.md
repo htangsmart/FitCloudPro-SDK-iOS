@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-12-16 Version:1.3.2-beta.27 Build:20251216001   
+## pcjbird 2025-12-17 Version:1.3.2-beta.28 Build:20251217001   
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -35,6 +35,8 @@
 - Added flag to indicate whether the watch supports ai-tranlsation feature for `蝶唯`.
 - Renamed `GPay` to `Google Wallet`.
 - Trying to log out a user from the watch when manually disconnect or app terminates.
+- Added `hasSetFireTime` property for `FitCloudTaskModel`, indicating whether the task has set a fire time.
+- Introduce new API `+ (void)redeemTaskRewardWithCompletion:(FitCloudCompletionHandler _Nullable)completion;` to redeem the total task rewards.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

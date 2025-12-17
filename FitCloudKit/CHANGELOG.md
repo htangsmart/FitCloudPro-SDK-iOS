@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.28 build20251217001 (2025-12-17)
+
+- Added `hasSetFireTime` property for `FitCloudTaskModel`, indicating whether the task has set a fire time.
+- Introduce new API `+ (void)redeemTaskRewardWithCompletion:(FitCloudCompletionHandler _Nullable)completion;` to redeem the total task rewards.
+
 ## V1.3.2-beta.27 build20251216001 (2025-12-16)
 
 - Trying to log out a user from the watch when manually disconnect or app terminates.

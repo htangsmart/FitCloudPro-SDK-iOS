@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2025-12-16  Version:1.3.2-beta.27 Build:20251216001
+//      pcjbird    2025-12-17  Version:1.3.2-beta.28 Build:20251217001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -421,7 +421,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: The completion handler called with the schedule list
 + (void)getSchedulesWithBlock:(FitCloudSchedulesResultBlock _Nullable)block;
 
-#pragma mark Set Tasks
+#pragma mark Snd Tasks
 
 /// Synchronizes the task list from phone to watch
 /// - Parameters:
@@ -431,12 +431,20 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: The completion handler called when the sync completes
 + (void)sendTasks:(NSArray<FitCloudTaskModel *> *_Nullable)tasks totalTaskCount:(NSUInteger)totalTaskCount totalCoinsEarned:(NSUInteger)totalCoinsEarned completion:(FitCloudCompletionHandler _Nullable)completion;
 
-#pragma mark Get Tasks
+#pragma mark Query Tasks
 
 /// Retrieves the task list from the watch
 /// - Parameters:
 ///   - completion: The completion handler called with the task list
 + (void)queryTasksWithCompletion:(FitCloudTaskQueryCompletion _Nullable)completion;
+
+#pragma mark Redeem Task Rewards
+
+/// Redeems task rewards on the watch
+/// - Parameters:
+///   - completion: The completion handler called when the operation completes
++ (void)redeemTaskRewardWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
 
 #pragma mark Set Favorite Contacts
 
