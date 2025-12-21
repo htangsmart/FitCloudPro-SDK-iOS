@@ -2003,4 +2003,76 @@ typedef NS_OPTIONS(Byte, FITCLOUDREPEAT) {
     FITCLOUDREPEAT_SUN = 1 << 6,
 };
 
+#pragma mark - 护身符 / Talisman
+
+/// 护身符类型 / Talisman types
+typedef NS_ENUM(NSInteger, FitCloudTalismanType) {
+    /// 无 / None
+    FitCloudTalismanTypeNone        = 0,  
+    /// 长寿符 / Longevity talisman
+    FitCloudTalismanTypeLongevity        = 1,  
+    /// 出行平安 / Safe travel talisman
+    FitCloudTalismanTypeTravelSafety     = 2,  
+    /// 贵人符 / Noble-person talisman
+    FitCloudTalismanTypeNoblePerson      = 3,  
+    /// 护身符 / Protection talisman
+    FitCloudTalismanTypeProtection       = 4,  
+    /// 净化符 / Purification talisman
+    FitCloudTalismanTypePurification     = 5,  
+    /// 平安符 / Peace talisman
+    FitCloudTalismanTypePeace            = 6,  
+    /// 破小人 / Anti-villain talisman
+    FitCloudTalismanTypeAntiVillain      = 7,  
+    /// 升官符 / Promotion talisman
+    FitCloudTalismanTypePromotion        = 8,  
+    /// 文昌符 / Scholar talisman
+    FitCloudTalismanTypeScholar          = 9,  
+    /// 姻缘符 / Marriage talisman
+    FitCloudTalismanTypeMarriage         = 10, 
+    /// 招财符 / Wealth talisman
+    FitCloudTalismanTypeWealth           = 11, 
+    /// 镇宅符 / Home-protection talisman
+    FitCloudTalismanTypeHomeProtection   = 12, 
+    /// 转运符 / Luck-change talisman
+    FitCloudTalismanTypeLuckChange       = 13,
+
+    /// 最大类型 / Maximum type
+    FitCloudTalismanTypeMax = FitCloudTalismanTypeLuckChange,
+};
+
+#pragma mark - 瑜伽音频 / Yoga audio
+
+/// 瑜伽音频类型 / Yoga audio types
+typedef NS_ENUM(NSInteger, FitCloudYogaAudioType) {
+    /// 无音频 / No audio
+    FitCloudYogaAudioTypeNone        = 0,  
+    /// 白羊座音频 / Aries audio
+    FitCloudYogaAudioTypeAries       = 1,  
+    /// 金牛座音频 / Taurus audio
+    FitCloudYogaAudioTypeTaurus      = 2,  
+    /// 双子座音频 / Gemini audio
+    FitCloudYogaAudioTypeGemini      = 3,  
+    /// 巨蟹座音频 / Cancer audio
+    FitCloudYogaAudioTypeCancer      = 4,  
+    /// 狮子座音频 / Leo audio
+    FitCloudYogaAudioTypeLeo         = 5,  
+    /// 处女座音频 / Virgo audio
+    FitCloudYogaAudioTypeVirgo       = 6,  
+    /// 天秤座音频 / Libra audio    
+    FitCloudYogaAudioTypeLibra       = 7,  
+    /// 天蝎座音频 / Scorpio audio
+    FitCloudYogaAudioTypeScorpio     = 8,  
+    /// 射手座音频 / Sagittarius audio
+    FitCloudYogaAudioTypeSagittarius = 9,  
+    /// 摩羯座音频 / Capricorn audio
+    FitCloudYogaAudioTypeCapricorn   = 10, 
+    /// 水瓶座音频 / Aquarius audio
+    FitCloudYogaAudioTypeAquarius    = 11, 
+    /// 双鱼座音频 / Pisces audio   
+    FitCloudYogaAudioTypePisces      = 12, 
+
+    /// 最大类型 / Maximum type
+    FitCloudYogaAudioTypeMax = FitCloudYogaAudioTypePisces,
+};
+
 #endif /* FitCloudKitDefines_h */

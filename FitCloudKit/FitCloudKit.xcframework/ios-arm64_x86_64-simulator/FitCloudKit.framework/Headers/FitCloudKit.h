@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2025-12-17  Version:1.3.2-beta.28 Build:20251217001
+//      pcjbird    2025-12-21  Version:1.3.2-beta.29 Build:20251221001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1398,6 +1398,62 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - idArray: the electronic card id array
 ///   - block: the electronic cards delete response
 + (void)deleteECardsWithIdArray:(NSArray<NSNumber *> *)idArray withBlock:(FitCloudCompletionHandler _Nullable)block;
+
+#pragma mark - Today's Fortune Data
+
+/// Send today's fortune data to the smart watch
+/// - Parameters:
+///   - fortuneData: the today's fortune data
+///   - completion: the today's fortune data send response
++ (void)sendTodayFortuneData:(FitCloudTodayFortuneDataModel *)fortuneData withCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+#pragma mark - Talisman
+
+/// Send talisman data to the smart watch
+/// - Parameters:
+///   - talismanData: the talisman data
+///   - completion: the talisman data send response
++ (void)sendTalismanData:(FitCloudTalismanDataModel *)talismanData withCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Query current talisman selected from watch side and about to display on the app side
+/// - Parameters:
+///   - completion: the query response
+///     - success: Whether the operation was successful
+///     - talisman: the selected talisman type
+///     - error: Error information if operation fails, nil on success
++ (void)querySelectedTalismanWithCompletion:(void (^_Nullable)(BOOL success, FitCloudTalismanType talisman, NSError *_Nullable error))completion;
+
+#pragma mark - Yoga Audio
+
+/// Query yoga audio info from the smart watch
+/// - Parameters:
+///   - completion: the yoga audio info query response
+///     - success: Whether the operation was successful
+///     - currentYogaAudioType: the current yoga audio type
+///     - lastUploadDate: the last yoga audio upload date
+///     - error: Error information if operation fails, nil on success
++ (void)queryYogaAudioInfoWithCompletion:(void (^_Nullable)(BOOL success, FitCloudYogaAudioType currentYogaAudioType, NSDate * _Nullable lastUploadDate, NSError *_Nullable error))completion;
+
+/// Send yoga audio file to the smart watch
+/// This method should be called on a background thread if possible
+/// - Parameters:
+///   - audioFilePath: Path to the yoga audio file (binary OTA format, not a standard audio file)
+///   - progressHandler: yoga audio upload progress callback
+///     - progress: progress value, range 0.0–1.0
+///   - completionHandler: The completion handler called when the transfer completes
+///     - success: whether upgrade success
+///     - avgSpeed: the avg transfer speed, kB/s
+///     - error: error information if failed
++ (void)sendYogaAudio:(NSString *_Nonnull)audioFilePath
+          progress:(void(^_Nullable)(CGFloat progress))progressHandler
+        completion:(void(^_Nullable)(BOOL success, CGFloat avgSpeed, NSError *_Nullable error))completionHandler;
+
+/// Cancel the ongoing yoga audio file transfer if needed
+/// - Parameters:
+///   - completion: The completion handler called when the cancellation completes
+///     - success: whether the cancellation succeeded
+///     - error: error information if failed
++ (void)cancelSendYogaAudioIfNeededWithCompletion:(void(^_Nullable)(BOOL success, NSError *_Nullable error))completion;
 
 #pragma mark - 其他
 

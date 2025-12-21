@@ -24,6 +24,8 @@
 #import <FitCloudKit/FitCloudClassroomModeSettingsModel.h>
 #import <FitCloudKit/FitCloudEmotionSettingsModel.h>
 #import <FitCloudKit/FitCloudWorkoutSummaryDataModel.h>
+#import <FitCloudKit/FitCloudTodayFortuneDataModel.h>
+#import <FitCloudKit/FitCloudTalismanDataModel.h>
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>

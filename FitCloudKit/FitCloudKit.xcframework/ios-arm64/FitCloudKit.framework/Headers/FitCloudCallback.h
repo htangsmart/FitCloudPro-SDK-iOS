@@ -804,6 +804,19 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// Requests AI diet advices
 - (void)onRequestAIDietAdvices;
 
+/// The watch side request the today fortune data information
+- (void)onRequestTodayFortuneData;
+
+/// Notifies that the user shared a talisman to he or she's lover from the watch side
+/// - Parameters:
+///   - talisman: The talisman type shared by the user.
+- (void)onShareTalismanToLover:(FitCloudTalismanType)talisman;
+
+/// The watch side request a yoga audio
+- (void)onRequestYogaAudio;
+
+
+
 /// Notifies when the ANCS authorization status has been updated
 /// - Parameters:
 ///   - ancsAuthorized: A Boolean value that indicates whether ANCS is currently authorized

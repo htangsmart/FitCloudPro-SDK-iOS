@@ -1,9 +1,26 @@
 # CHANGELOG
 
+## V1.3.2-beta.29 build20251221001 (2025-12-21)
+
+- Introduced new APIs for the `855A-Constellation&Fortune` product.
+  - Today's fortune data:
+    - Added SDK callback method `- (void)onRequestTodayFortuneData;`, which will be called when the watch requests today's fortune data.
+    - Added new API `+ (void)sendTodayFortuneData:(FitCloudTodayFortuneDataModel *)fortuneData withCompletion:(FitCloudCompletionHandler _Nullable)completion;` to send today's fortune data to the watch.
+  - Talisman:
+    - Added new API `+ (void)sendTalismanData:(FitCloudTalismanDataModel *)talismanData withCompletion:(FitCloudCompletionHandler _Nullable)completion;` to send talisman data to the watch.
+    - Added new API `+ (void)querySelectedTalismanWithCompletion:(void (^_Nullable)(BOOL success, FitCloudTalismanType talisman, NSError *_Nullable error))completion;` to query current talisman selected from watch side and about to display on the app side.
+    - Added SDK callback method `- (void)onShareTalismanToLover:(FitCloudTalismanType)talisman;`, which will be called when the watch requests to share the talisman to the lover.
+  - Yoga audio:
+    - Added new API `+ (void)queryYogaAudioInfoWithCompletion:(void (^_Nullable)(BOOL success, FitCloudYogaAudioType currentYogaAudioType, NSDate * _Nullable lastUploadDate, NSError *_Nullable error))completion;` to query yoga audio info from watch side.
+    - Added SDK callback method `- (void)onRequestYogaAudio;`, which will be called when the watch requests yoga audio file.
+    - Added new API `+ (void)sendYogaAudio:(NSString *_Nonnull)audioFilePath progress:(void(^_Nullable)(CGFloat progress))progressHandler completion:(void(^_Nullable)(BOOL success, CGFloat avgSpeed, NSError *_Nullable error))completionHandler;` to send yoga audio file to the watch.
+    - Added new API `+ (void)cancelSendYogaAudioIfNeededWithCompletion:(void(^_Nullable)(BOOL success, NSError *_Nullable error))completion;` to cancel sending yoga audio file if needed.
+    
+
 ## V1.3.2-beta.28 build20251217001 (2025-12-17)
 
 - Added `hasSetFireTime` property for `FitCloudTaskModel`, indicating whether the task has set a fire time.
-- Introduce new API `+ (void)redeemTaskRewardWithCompletion:(FitCloudCompletionHandler _Nullable)completion;` to redeem the total task rewards.
+- Introduced new API `+ (void)redeemTaskRewardWithCompletion:(FitCloudCompletionHandler _Nullable)completion;` to redeem the total task rewards.
 
 ## V1.3.2-beta.27 build20251216001 (2025-12-16)
 
