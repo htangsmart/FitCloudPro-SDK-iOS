@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.30 build20251223001 (2025-12-23)
+
+- Fixed an issue for task-sending API.
+
 ## V1.3.2-beta.29 build20251221001 (2025-12-21)
 
 - Introduced new APIs for the `855A-Constellation&Fortune` product.

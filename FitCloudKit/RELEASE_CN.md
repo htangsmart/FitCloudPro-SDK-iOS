@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-12-21 Version:1.3.2-beta.29 Build:20251221001
+## pcjbird 2025-12-23 Version:1.3.2-beta.30 Build:20251223001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -37,6 +37,7 @@
 - 为 `FitCloudTaskModel` 新增 `hasSetFireTime` 属性，用于标识任务是否已设置触发时间。
 - 引入新 API `+ (void)redeemTaskRewardWithCompletion:(FitCloudCompletionHandler _Nullable)completion` 以兑换任务奖励。
 - 为 `855A-星座&运势` 产品引入新 API。
+- 修复了任务发送 API 指令错误的问题。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
