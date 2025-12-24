@@ -7,4 +7,5 @@
 #import <FitCloudDFUKit/FitCloudDFUKit.h>
 #import <FitCloudWFKit/FitCloudWFKit.h>
 #import <MBProgressHUD/MBProgressHUD.h>
+#import <Toast/Toast.h>
 #import "MuslimPrayerParams.h"

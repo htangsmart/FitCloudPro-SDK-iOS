@@ -73,3 +73,23 @@ func XLOG_ABORT(_ message: String,
     let logMessage = "[\(URL(fileURLWithPath: file).lastPathComponent):\(line)] \(function) - \(message)"
     XLSharedFacility.logMessage(logMessage, withTag: nil, level: .logLevel_Abort)
 }
+
+func getMainWindow() -> UIWindow {
+    if #available(iOS 13.0, *) {
+        // iOS13 及以上：优先取第一个带 scene 的 window
+        if let windowScene = UIApplication.shared.connectedScenes.first(where: { $0 is UIWindowScene }) as? UIWindowScene {
+            return windowScene.windows.first ?? UIWindow()
+        }
+    }
+    // iOS13 以下或兜底：使用 keyWindow
+    return UIApplication.shared.keyWindow ?? UIWindow()
+}
+
+func SwiftToast(_ message: String,
+                atView view: UIView? = nil) {
+    guard let parentView = view ?? getMainWindow().rootViewController?.view else {
+        XLOG_ERROR("toast message `\(message)` failed, can not find parent view.")
+        return
+    }
+    parentView.makeToast(message, duration: 3.0, position: CSToastPositionTop)
+}

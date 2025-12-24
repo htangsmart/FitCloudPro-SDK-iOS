@@ -27,17 +27,17 @@
 "Disconnected" = "未连接";
 
 "Logging On User Object" = "正在登录用户...";
-"Login User Object Success" = "登录用户成功.";
-"Login User Object Failure" = "登录用户失败.";
+"Login User Object Success" = "登录用户成功。";
+"Login User Object Failure" = "登录用户失败。";
 "Preparing Work for Smart Watch" = "手表正在完成一些准备工作...";
-"Prepare Work for Smart Watch Finished." = "手表准备工作完成.";
+"Prepare Work for Smart Watch Finished." = "手表准备工作完成。";
 
 "Binding User Object" = "正在绑定用户...";
-"Bind User Object Success" = "绑定用户成功.";
-"Bind User Object Failure" = "绑定用户失败.";
+"Bind User Object Success" = "绑定用户成功。";
+"Bind User Object Failure" = "绑定用户失败。";
 "Getting Smart Watch All Config" = "正在获取手表配置信息...";
-"Get Smart Watch All Config Success" = "获取手表配置信息成功.";
-"Get Smart Watch All Config Failure" = "获取手表配置信息失败.";
+"Get Smart Watch All Config Success" = "获取手表配置信息成功。";
+"Get Smart Watch All Config Failure" = "获取手表配置信息失败。";
 
 "Enjoy Now" = "即刻体验";
 "Retry" = "重试";
@@ -73,7 +73,7 @@
 "Muslim Prayer" = "朝拜";
 
 "Whether Support Mail Reminder" = "手表是否支持邮件提醒";
-"Wheather Support TelegramAndViber Reminder" = "手表是否支持Telegram和Viber提醒";
+"Wheather Support TelegramAndViber Reminder" = "手表是否支持 Telegram 和 Viber 提醒";
 "Whether Call Reminder Enabled" = "来电提醒是否开启";
 "Enable Call Reminder" = "开启来电提醒";
 "Disable Call Reminder" = "关闭来电提醒";
@@ -112,8 +112,8 @@
 
 "Set Daily Goal" = "设置每日目标";
 
-"Do Length & Weight Unit Prefer Settings" = "长度及重量单位偏好设置(公制/英制)";
-"Do Temperature Unit Prefer Settings" = "温度单位偏好设置(摄氏度/华氏度)";
+"Do Length & Weight Unit Prefer Settings" = "长度及重量单位偏好设置 (公制/英制)";
+"Do Temperature Unit Prefer Settings" = "温度单位偏好设置 (摄氏度/华氏度)";
 
 "Do User Profile Settings" = "用户资料设置";
 "Do BloodPressure Rreference Settings" = "血压参考设置";
@@ -139,3 +139,11 @@
 "DIY the watchface failed" = "生成自定义表盘失败...";
 
 "AI Watchface" = "AI 表盘";
+"Constellation&Fortune" = "星座运势";
+"Send Today Fortune Data" = "发送今日运势数据";
+"Send Talisman Data" = "发送护身符数据";
+"Query Selected Talisman" = "查询选中的护身符";
+"Query Yoga Audio Info" = "查询瑜伽音频信息";
+"Send Yoga Audio" = "发送瑜伽音频";
+"Cancel Send Yoga Audio" = "取消发送瑜伽音频";
+"Bond Lover" = "绑定情侣";

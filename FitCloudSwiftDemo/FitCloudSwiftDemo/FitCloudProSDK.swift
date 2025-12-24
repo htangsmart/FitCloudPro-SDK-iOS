@@ -47,6 +47,7 @@ class FitCloudProSDK: NSObject {
         option.debugMode = false
         option.shouldAutoReconnectWhenAppLaunch = true
         option.includeTimestampInLogs = false
+        option.preferWriteWithoutResponse = true
         FitCloudKit.initWith(option, callback: self)
         initTopStepAISDK()
         addNotificationObservers()
@@ -794,4 +795,72 @@ extension  FitCloudProSDK: FitCloudCallback {
             XLOG_DEBUG(message)
         }
     }
+    
+    /// The watch side request the today fortune data information
+    func onRequestTodayFortuneData() {
+        XLOG_INFO("onRequestTodayFortuneData")
+        DispatchQueue.main.async {
+            SwiftToast("Request today fortune data from watch side")
+        }
+        let todayFortuneData = FitCloudTodayFortuneDataModel()
+        todayFortuneData.luckyNumber1 = 7
+        todayFortuneData.luckyNumber2 = 4
+        todayFortuneData.luckyNumber3 = 0
+        todayFortuneData.luckyStarRating = 5
+        todayFortuneData.luckyColor1 = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
+        todayFortuneData.luckyColor2 = UIColor(red: 255.0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
+        todayFortuneData.luckyColor3 = UIColor(red: 0/255.0, green: 255.0/255.0, blue: 0/255.0, alpha: 1.0)
+        todayFortuneData.auspiciousDirection = .east
+        todayFortuneData.fortuneAdvice = "Seize the day with confidence—opportunities favor the bold."
+        FitCloudKit.sendTodayFortuneData(todayFortuneData) { success, error in
+            if !success {
+                var errorMsg = "unknown error"
+                if let error = error {
+                    errorMsg = error.localizedDescription
+                }
+                XLOG_ERROR("Send today fortune data to the watch device failed: \(errorMsg)")
+                return
+            }
+            XLOG_INFO("Send today fortune data to the watch device success")
+        }
+    }
+    
+
+    /// Notifies that the user shared a talisman to he or she's lover from the watch side
+    /// - Parameters:
+    ///   - talisman: The talisman type shared by the user.
+    func onShareTalisman(toLover talisman: FitCloudTalismanType) {
+        XLOG_INFO("onShareTalisman: \(talisman)")
+        DispatchQueue.main.async {
+            SwiftToast("Shared talisman \(EnumUtils.talismanNameOf(talisman)) from watch side")
+        }
+    }
+    
+    /// The watch side request a yoga audio
+    func onRequestYogaAudio() {
+        XLOG_INFO("onRequestYogaAudio")
+        DispatchQueue.main.async {
+            SwiftToast("Request yoga audio from watch side")
+        }
+        let yogaAudioPath = Bundle.main.path(forResource: "855A_sample_yoga_audio_mp3", ofType: "bin") ?? ""
+        guard !yogaAudioPath.isEmpty else {
+            XLOG_ERROR("Yoga audio file path is empty, please check if the resource exists")
+            return
+        }
+        FitCloudKit.sendYogaAudio(yogaAudioPath) { progress in
+            XLOG_INFO("Sending yogo audio, progres: \(progress * 100)%")
+        } completion: { success, avgSpeed, error in
+            if !success {
+                var errorMsg = "unknown error"
+                if let error = error {
+                    errorMsg = error.localizedDescription
+                }
+                XLOG_ERROR("Send yoga audio to the watch device failed: \(errorMsg)")
+                return
+            }
+            XLOG_INFO("Send yoga audio success, avgSpeed: \(avgSpeed)kB/s")
+        }
+    }
+    
+
 }

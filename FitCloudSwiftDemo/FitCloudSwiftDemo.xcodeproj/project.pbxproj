@@ -77,6 +77,11 @@
 		89CC00532EC0596B0030D405 /* AIWatchfaceDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC00522EC0596B0030D405 /* AIWatchfaceDemoController.swift */; };
 		89CC00552EC05AB30030D405 /* AppNotifcations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC00542EC05AB30030D405 /* AppNotifcations.swift */; };
 		89CC00772EC0749D0030D405 /* gui_dial_binfile_watch_156000_1_20250928_ota.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89CC00762EC0749D0030D405 /* gui_dial_binfile_watch_156000_1_20250928_ota.bin */; };
+		89DB8A302EFADE7E00DA38BE /* ConstellationFortuneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB8A2F2EFADE7E00DA38BE /* ConstellationFortuneController.swift */; };
+		89DB8A332EFAE3EF00DA38BE /* 855A_sample_yoga_audio_mp3.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89DB8A312EFAE3EF00DA38BE /* 855A_sample_yoga_audio_mp3.bin */; };
+		89DB8A352EFBE26C00DA38BE /* EnumUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB8A342EFBE26C00DA38BE /* EnumUtils.swift */; };
+		89DB8A382EFBE87100DA38BE /* 855A_sample_yoga_audio2_mp3.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89DB8A372EFBE87100DA38BE /* 855A_sample_yoga_audio2_mp3.bin */; };
+		89DB8A392EFBE87100DA38BE /* 855A_sample_yoga_audio1_mp3.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89DB8A362EFBE87100DA38BE /* 855A_sample_yoga_audio1_mp3.bin */; };
 		89F38BAE2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89F38BAD2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +187,11 @@
 		89CC00522EC0596B0030D405 /* AIWatchfaceDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIWatchfaceDemoController.swift; sourceTree = "<group>"; };
 		89CC00542EC05AB30030D405 /* AppNotifcations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotifcations.swift; sourceTree = "<group>"; };
 		89CC00762EC0749D0030D405 /* gui_dial_binfile_watch_156000_1_20250928_ota.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = gui_dial_binfile_watch_156000_1_20250928_ota.bin; sourceTree = "<group>"; };
+		89DB8A2F2EFADE7E00DA38BE /* ConstellationFortuneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationFortuneController.swift; sourceTree = "<group>"; };
+		89DB8A312EFAE3EF00DA38BE /* 855A_sample_yoga_audio_mp3.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 855A_sample_yoga_audio_mp3.bin; sourceTree = "<group>"; };
+		89DB8A342EFBE26C00DA38BE /* EnumUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumUtils.swift; sourceTree = "<group>"; };
+		89DB8A362EFBE87100DA38BE /* 855A_sample_yoga_audio1_mp3.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 855A_sample_yoga_audio1_mp3.bin; sourceTree = "<group>"; };
+		89DB8A372EFBE87100DA38BE /* 855A_sample_yoga_audio2_mp3.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 855A_sample_yoga_audio2_mp3.bin; sourceTree = "<group>"; };
 		89F38BAD2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = gui_dial_binfile_watch_1024000_1_20250430.bin; sourceTree = "<group>"; };
 		CA40CD2328A4F44CA511AD27 /* Pods-FitCloudSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +239,7 @@
 		899433712D65C8B500B86640 /* FitCloudSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				89DB8A322EFAE3EF00DA38BE /* YogaAudios */,
 				89CBFB202D6626D6008E7B50 /* CloudWatchfaces */,
 				89CBFB212D6626D6008E7B50 /* DIYWatchfaces */,
 				89CBFB222D6626D6008E7B50 /* Firmwares */,
@@ -241,6 +252,7 @@
 				89CBFB0E2D661D70008E7B50 /* Main.storyboard */,
 				8994336F2D65C8B500B86640 /* SceneDelegate.swift */,
 				899433702D65C8B500B86640 /* ViewController.swift */,
+				89DB8A342EFBE26C00DA38BE /* EnumUtils.swift */,
 				89CBFA7C2D65CF81008E7B50 /* FitCloudProSDK.swift */,
 				89CBFA872D6600AE008E7B50 /* AlarmController.h */,
 				89CBFA882D6600AE008E7B50 /* AlarmController.m */,
@@ -285,6 +297,7 @@
 				89CBFB1C2D661E78008E7B50 /* CloudWatchfaceDemoController.swift */,
 				89CBFB1E2D661E89008E7B50 /* DIYWatchfaceDemoController.swift */,
 				89CC00522EC0596B0030D405 /* AIWatchfaceDemoController.swift */,
+				89DB8A2F2EFADE7E00DA38BE /* ConstellationFortuneController.swift */,
 				89CBFA7E2D65EC59008E7B50 /* App.swift */,
 				89CC00542EC05AB30030D405 /* AppNotifcations.swift */,
 				89CBFA802D65ED58008E7B50 /* FitCloudSwiftDemo-Bridging-Header.h */,
@@ -433,6 +446,16 @@
 			path = Firmwares;
 			sourceTree = "<group>";
 		};
+		89DB8A322EFAE3EF00DA38BE /* YogaAudios */ = {
+			isa = PBXGroup;
+			children = (
+				89DB8A312EFAE3EF00DA38BE /* 855A_sample_yoga_audio_mp3.bin */,
+				89DB8A362EFBE87100DA38BE /* 855A_sample_yoga_audio1_mp3.bin */,
+				89DB8A372EFBE87100DA38BE /* 855A_sample_yoga_audio2_mp3.bin */,
+			);
+			path = YogaAudios;
+			sourceTree = "<group>";
+		};
 		FE8D622E9AC5B118AEA36CE6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +529,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				899433752D65C8B500B86640 /* Assets.xcassets in Resources */,
+				89DB8A382EFBE87100DA38BE /* 855A_sample_yoga_audio2_mp3.bin in Resources */,
+				89DB8A392EFBE87100DA38BE /* 855A_sample_yoga_audio1_mp3.bin in Resources */,
 				894A982E2D68748700627844 /* gui_dial_binfile_watch_1020003_1_20240729_ota.bin in Resources */,
 				894A982C2D685E8A00627844 /* OTA_8123_V110_14F6_20250210095854_app_all.bin in Resources */,
 				89CBFB112D661D76008E7B50 /* LaunchScreen.storyboard in Resources */,
@@ -513,6 +538,7 @@
 				89CBFB2A2D66F10E008E7B50 /* 3679a6588f34.bin in Resources */,
 				894A98302D68786200627844 /* gui_dial_binfile_watch_1020000_1_20240903_ota.bin in Resources */,
 				89CBFB2B2D66F10E008E7B50 /* test_360_preview.png in Resources */,
+				89DB8A332EFAE3EF00DA38BE /* 855A_sample_yoga_audio_mp3.bin in Resources */,
 				89CBFB2C2D66F10E008E7B50 /* test_360_bg.png in Resources */,
 				89CBFB172D661D94008E7B50 /* Localizable.strings in Resources */,
 				89CBFB242D66385E008E7B50 /* e063fe4164204cff8326c7ca08e3f2fe.bin in Resources */,
@@ -617,9 +643,11 @@
 				89CBFAEE2D6600DD008E7B50 /* Madhab.swift in Sources */,
 				89CBFAEF2D6600DD008E7B50 /* SolarTime.swift in Sources */,
 				89CBFAF02D6600DD008E7B50 /* HighLatitudeRule.swift in Sources */,
+				89DB8A302EFADE7E00DA38BE /* ConstellationFortuneController.swift in Sources */,
 				89CBFAF12D6600DD008E7B50 /* CalculationMethod.swift in Sources */,
 				89CBFAF22D6600DD008E7B50 /* Prayer.swift in Sources */,
 				89CBFAF32D6600DD008E7B50 /* SunnahTimes.swift in Sources */,
+				89DB8A352EFBE26C00DA38BE /* EnumUtils.swift in Sources */,
 				89CBFAF42D6600DD008E7B50 /* MoView.m in Sources */,
 				89CBFAF52D6600DD008E7B50 /* Qibla.swift in Sources */,
 				89CBFAF62D6600DD008E7B50 /* PrayerAdjustment.swift in Sources */,

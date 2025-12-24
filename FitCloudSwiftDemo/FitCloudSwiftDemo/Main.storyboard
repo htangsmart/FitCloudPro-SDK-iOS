@@ -595,7 +595,7 @@
                                         <rect key="frame" x="0.0" y="771" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aTf-Yh-itc" id="Jqd-X0-4zz">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Profile Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8p-sb-Gf0" customClass="LocalizedLabel">
@@ -615,7 +615,7 @@
                                         <rect key="frame" x="0.0" y="825" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mUe-eC-L5m" id="yTI-xQ-Hww">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sync Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z90-w7-0HJ" customClass="LocalizedLabel">
@@ -635,7 +635,7 @@
                                         <rect key="frame" x="0.0" y="879" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RpT-0I-nOt" id="VZn-QP-dXb">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Women Health" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U82-U4-HeK" customClass="LocalizedLabel">
@@ -655,7 +655,7 @@
                                         <rect key="frame" x="0.0" y="933" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="81Z-Os-g9X" id="jxV-Mf-bIY">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Muslim Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZK-tU-ui2" customClass="LocalizedLabel">
@@ -675,7 +675,7 @@
                                         <rect key="frame" x="0.0" y="987" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fOZ-ZH-oTU" id="jUE-XZ-IgB">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM7-VJ-cTZ" customClass="LocalizedLabel">
@@ -695,7 +695,7 @@
                                         <rect key="frame" x="0.0" y="1041" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rvq-jE-wk7" id="5ws-hP-l2A">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cloud Watchface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2S-u3-s4S" customClass="LocalizedLabel">
@@ -715,7 +715,7 @@
                                         <rect key="frame" x="0.0" y="1095" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xbq-wx-zis" id="DuI-zN-Nzy">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DIY Watchface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fk6-1w-JDn" customClass="LocalizedLabel">
@@ -735,7 +735,7 @@
                                         <rect key="frame" x="0.0" y="1149" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vIb-pj-4DN" id="X4l-4d-SsB">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AI Watchface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4E-jn-qs3" customClass="LocalizedLabel">
@@ -749,6 +749,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="ahl-ri-toX" kind="show" id="lrm-z9-w8n"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="54" id="sI7-J0-Ajy">
+                                        <rect key="frame" x="0.0" y="1203" width="393" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sI7-J0-Ajy" id="Qoq-Tn-qK0">
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Constellation&amp;Fortune" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYI-jj-fQU" customClass="LocalizedLabel">
+                                                    <rect key="frame" x="24" y="18" width="247" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="i1j-HQ-Vud" kind="show" id="Rab-wG-t87"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -2885,6 +2905,178 @@
             </objects>
             <point key="canvasLocation" x="6542.7480916030536" y="1555.6338028169014"/>
         </scene>
+        <!--Constellation Fortune Controller-->
+        <scene sceneID="3J3-xR-Z05">
+            <objects>
+                <viewController id="i1j-HQ-Vud" customClass="ConstellationFortuneController" customModule="FitCloudSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="64K-6d-nfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Constellation&amp;Fortune" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-RH-F0p" customClass="LocalizedLabel">
+                                <rect key="frame" x="82.666666666666671" y="136.66666666666666" width="227.66666666666663" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qj7-VW-jqi" customClass="LocalizedButton">
+                                <rect key="frame" x="22" y="136" width="52" height="22"/>
+                                <state key="normal" title="Back" image="back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGoBack:" destination="i1j-HQ-Vud" eventType="touchUpInside" id="7FH-v7-1Fy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vZ-vI-XaY" customClass="LocalizedButton">
+                                <rect key="frame" x="30" y="188" width="333" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="pKo-ID-NXa"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send Today Fortune Data">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSendTodayFortuneData:" destination="i1j-HQ-Vud" eventType="touchUpInside" id="T4F-co-bI2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mf-Xk-God" customClass="LocalizedButton">
+                                <rect key="frame" x="30" y="265" width="333" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="HUM-7C-lYc"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send Talisman Data">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSendTalismanData:" destination="i1j-HQ-Vud" eventType="touchUpInside" id="tgD-JC-sRR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d64-zr-AAi" customClass="LocalizedButton">
+                                <rect key="frame" x="30" y="342" width="333" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="T9n-wZ-mO2"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Query Selected Talisman">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onQuerySelectedTalisman:" destination="i1j-HQ-Vud" eventType="touchUpInside" id="xHu-kq-rWw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjl-u1-USA" customClass="LocalizedButton">
+                                <rect key="frame" x="30" y="419" width="333" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="fQ8-X5-1xx"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Query Yoga Audio Info">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onQueryYogaAudioInfo:" destination="i1j-HQ-Vud" eventType="touchUpInside" id="Z8a-Z6-SdR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b73-JG-PXh" customClass="LocalizedButton">
+                                <rect key="frame" x="30" y="496" width="333" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="mdK-gI-Tab"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send Yoga Audio">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSendYogaAudio:" destination="i1j-HQ-Vud" eventType="touchUpInside" id="Ugd-ee-7dI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1y-7H-DlQ" customClass="LocalizedButton">
+                                <rect key="frame" x="30" y="573" width="333" height="55"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Cww-FW-4iN"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel Send Yoga Audio">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onCancelSendYogaAudio:" destination="i1j-HQ-Vud" eventType="touchUpInside" id="kl9-kS-Ta8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jua-8t-x3e" customClass="LocalizedButton">
+                                <rect key="frame" x="30" y="674" width="333" height="55"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="dqb-zx-W0C"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Bond Lover">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBondLover:" destination="i1j-HQ-Vud" eventType="touchUpInside" id="XDD-VV-XQO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cJY-gb-7Ou"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Mf-Xk-God" firstAttribute="leading" secondItem="cJY-gb-7Ou" secondAttribute="leading" constant="30" id="0a3-ee-rwV"/>
+                            <constraint firstItem="jhb-RH-F0p" firstAttribute="centerX" secondItem="64K-6d-nfZ" secondAttribute="centerX" id="698-PI-HRP"/>
+                            <constraint firstItem="b73-JG-PXh" firstAttribute="top" secondItem="yjl-u1-USA" secondAttribute="bottom" constant="22" id="AuB-z1-jHk"/>
+                            <constraint firstItem="cJY-gb-7Ou" firstAttribute="trailing" secondItem="9vZ-vI-XaY" secondAttribute="trailing" constant="30" id="B7z-zo-IvN"/>
+                            <constraint firstItem="C1y-7H-DlQ" firstAttribute="leading" secondItem="cJY-gb-7Ou" secondAttribute="leading" constant="30" id="Bos-Nk-1fe"/>
+                            <constraint firstItem="cJY-gb-7Ou" firstAttribute="trailing" secondItem="8Mf-Xk-God" secondAttribute="trailing" constant="30" id="BtD-su-aHw"/>
+                            <constraint firstItem="cJY-gb-7Ou" firstAttribute="trailing" secondItem="yjl-u1-USA" secondAttribute="trailing" constant="30" id="C11-N3-vwS"/>
+                            <constraint firstItem="qj7-VW-jqi" firstAttribute="leading" secondItem="cJY-gb-7Ou" secondAttribute="leading" constant="22" id="Egq-09-g9v"/>
+                            <constraint firstItem="cJY-gb-7Ou" firstAttribute="trailing" secondItem="d64-zr-AAi" secondAttribute="trailing" constant="30" id="Fxs-Ja-6CK"/>
+                            <constraint firstItem="yjl-u1-USA" firstAttribute="leading" secondItem="cJY-gb-7Ou" secondAttribute="leading" constant="30" id="IRR-Bh-POy"/>
+                            <constraint firstItem="d64-zr-AAi" firstAttribute="top" secondItem="8Mf-Xk-God" secondAttribute="bottom" constant="22" id="LZw-UI-Mat"/>
+                            <constraint firstItem="Jua-8t-x3e" firstAttribute="leading" secondItem="cJY-gb-7Ou" secondAttribute="leading" constant="30" id="Lz1-wH-qEp"/>
+                            <constraint firstItem="8Mf-Xk-God" firstAttribute="top" secondItem="9vZ-vI-XaY" secondAttribute="bottom" constant="22" id="RBQ-Hk-wVp"/>
+                            <constraint firstItem="Jua-8t-x3e" firstAttribute="top" secondItem="C1y-7H-DlQ" secondAttribute="bottom" constant="46" id="XDn-jk-Ovh"/>
+                            <constraint firstItem="qj7-VW-jqi" firstAttribute="top" secondItem="cJY-gb-7Ou" secondAttribute="top" constant="18" id="YHH-TZ-Wtp"/>
+                            <constraint firstItem="yjl-u1-USA" firstAttribute="top" secondItem="d64-zr-AAi" secondAttribute="bottom" constant="22" id="eiG-DU-jCc"/>
+                            <constraint firstItem="C1y-7H-DlQ" firstAttribute="top" secondItem="b73-JG-PXh" secondAttribute="bottom" constant="22" id="ff4-OL-xbc"/>
+                            <constraint firstItem="cJY-gb-7Ou" firstAttribute="trailing" secondItem="C1y-7H-DlQ" secondAttribute="trailing" constant="30" id="fmn-pp-ccB"/>
+                            <constraint firstItem="jhb-RH-F0p" firstAttribute="centerY" secondItem="qj7-VW-jqi" secondAttribute="centerY" id="g4b-Hb-xhz"/>
+                            <constraint firstItem="d64-zr-AAi" firstAttribute="leading" secondItem="cJY-gb-7Ou" secondAttribute="leading" constant="30" id="j7E-iL-unD"/>
+                            <constraint firstItem="cJY-gb-7Ou" firstAttribute="trailing" secondItem="b73-JG-PXh" secondAttribute="trailing" constant="30" id="oCu-h2-pQW"/>
+                            <constraint firstItem="cJY-gb-7Ou" firstAttribute="trailing" secondItem="Jua-8t-x3e" secondAttribute="trailing" constant="30" id="qnp-ns-Iwe"/>
+                            <constraint firstItem="9vZ-vI-XaY" firstAttribute="leading" secondItem="cJY-gb-7Ou" secondAttribute="leading" constant="30" id="qsA-zT-N6e"/>
+                            <constraint firstItem="b73-JG-PXh" firstAttribute="leading" secondItem="cJY-gb-7Ou" secondAttribute="leading" constant="30" id="quf-NE-Vwb"/>
+                            <constraint firstItem="9vZ-vI-XaY" firstAttribute="top" secondItem="qj7-VW-jqi" secondAttribute="bottom" constant="30" id="yyM-RI-ops"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ia6-aZ-h8l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCR-uP-QZI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7260" y="1556"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back" width="12" height="22"/>
@@ -2897,7 +3089,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
