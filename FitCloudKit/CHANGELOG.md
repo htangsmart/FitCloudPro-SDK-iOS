@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.31 build20251224001 (2025-12-24)
+
+- Fixed some issues for constellation & fortune API.
+
 ## V1.3.2-beta.30 build20251223001 (2025-12-23)
 
 - Fixed an issue for task-sending API.

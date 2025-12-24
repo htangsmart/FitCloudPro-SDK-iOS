@@ -2075,4 +2075,26 @@ typedef NS_ENUM(NSInteger, FitCloudYogaAudioType) {
     FitCloudYogaAudioTypeMax = FitCloudYogaAudioTypePisces,
 };
 
+#pragma mark - 运势方向 / Auspicious directions
+
+/// 运势方向 / Auspicious directions
+typedef NS_ENUM(NSInteger, FitCloudAuspiciousDirection) {
+    /// 东 / East
+    FitCloudAuspiciousDirectionEast = 0,
+    /// 东南 / Southeast
+    FitCloudAuspiciousDirectionSoutheast = 1,
+    /// 南 / South
+    FitCloudAuspiciousDirectionSouth = 2,
+    /// 西南 / Southwest
+    FitCloudAuspiciousDirectionSouthwest = 3,
+    /// 西 / West
+    FitCloudAuspiciousDirectionWest = 4,
+    /// 西北 / Northwest
+    FitCloudAuspiciousDirectionNorthwest = 5,
+    /// 北 / North
+    FitCloudAuspiciousDirectionNorth = 6,
+    /// 东北 / Northeast
+    FitCloudAuspiciousDirectionNortheast = 7,
+};
+
 #endif /* FitCloudKitDefines_h */

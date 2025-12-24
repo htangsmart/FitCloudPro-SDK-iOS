@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <FitCloudKit/FitCloudKitDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -47,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - 5: Northwest
 /// - 6: North
 /// - 7: Northeast
-@property(nonatomic, assign) NSInteger auspiciousDirection;
+@property(nonatomic, assign) FitCloudAuspiciousDirection auspiciousDirection;
 
 /// Today's advice, with a maximum length of 200 bytes.
 @property(nonatomic, strong, nullable) NSString* fortuneAdvice;
