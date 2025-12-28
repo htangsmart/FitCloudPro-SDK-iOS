@@ -82,6 +82,7 @@
 		89DB8A352EFBE26C00DA38BE /* EnumUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB8A342EFBE26C00DA38BE /* EnumUtils.swift */; };
 		89DB8A382EFBE87100DA38BE /* 855A_sample_yoga_audio2_mp3.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89DB8A372EFBE87100DA38BE /* 855A_sample_yoga_audio2_mp3.bin */; };
 		89DB8A392EFBE87100DA38BE /* 855A_sample_yoga_audio1_mp3.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89DB8A362EFBE87100DA38BE /* 855A_sample_yoga_audio1_mp3.bin */; };
+		89DB8C0A2F014D2500DA38BE /* EarbudsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB8C092F014D2500DA38BE /* EarbudsViewController.swift */; };
 		89F38BAE2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89F38BAD2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +193,7 @@
 		89DB8A342EFBE26C00DA38BE /* EnumUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumUtils.swift; sourceTree = "<group>"; };
 		89DB8A362EFBE87100DA38BE /* 855A_sample_yoga_audio1_mp3.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 855A_sample_yoga_audio1_mp3.bin; sourceTree = "<group>"; };
 		89DB8A372EFBE87100DA38BE /* 855A_sample_yoga_audio2_mp3.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 855A_sample_yoga_audio2_mp3.bin; sourceTree = "<group>"; };
+		89DB8C092F014D2500DA38BE /* EarbudsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarbudsViewController.swift; sourceTree = "<group>"; };
 		89F38BAD2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = gui_dial_binfile_watch_1024000_1_20250430.bin; sourceTree = "<group>"; };
 		CA40CD2328A4F44CA511AD27 /* Pods-FitCloudSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -298,6 +300,7 @@
 				89CBFB1E2D661E89008E7B50 /* DIYWatchfaceDemoController.swift */,
 				89CC00522EC0596B0030D405 /* AIWatchfaceDemoController.swift */,
 				89DB8A2F2EFADE7E00DA38BE /* ConstellationFortuneController.swift */,
+				89DB8C092F014D2500DA38BE /* EarbudsViewController.swift */,
 				89CBFA7E2D65EC59008E7B50 /* App.swift */,
 				89CC00542EC05AB30030D405 /* AppNotifcations.swift */,
 				89CBFA802D65ED58008E7B50 /* FitCloudSwiftDemo-Bridging-Header.h */,
@@ -651,6 +654,7 @@
 				89CBFAF42D6600DD008E7B50 /* MoView.m in Sources */,
 				89CBFAF52D6600DD008E7B50 /* Qibla.swift in Sources */,
 				89CBFAF62D6600DD008E7B50 /* PrayerAdjustment.swift in Sources */,
+				89DB8C0A2F014D2500DA38BE /* EarbudsViewController.swift in Sources */,
 				89CBFAF72D6600DD008E7B50 /* AdhanObjc.swift in Sources */,
 				89CBFB1D2D661E78008E7B50 /* CloudWatchfaceDemoController.swift in Sources */,
 				89CBFAF82D6600DD008E7B50 /* MoCurveLayer.m in Sources */,

@@ -60,7 +60,7 @@ class AIWatchfaceDemoController: UIViewController {
                 DispatchQueue.main.async {
                     self?.installPositionSegmentedControl.isHidden = false
                     self?.installPositionSegmentedControl.removeAllSegments()
-                    for index in 0..<Int(installableSlotCount) {
+                    for index in 0..<Int(truncating:installableSlotCount) {
                         self?.installPositionSegmentedControl.insertSegment(withTitle: "\(index + 1)", at: index, animated: false)
                     }
                     self?.installPositionSegmentedControl.selectedSegmentIndex = FitCloudProSDK.shared.aiWatchfaceInstallPostion

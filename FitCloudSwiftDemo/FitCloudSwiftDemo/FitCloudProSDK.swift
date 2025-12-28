@@ -862,5 +862,39 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
     }
     
+    /// Notifies that the earbuds equalizer preset has changed
+    /// - Parameters:
+    ///   - latestEQ: The new equalizer preset value
+    func onEarbudsEqualizerChanged(to latestEQ: FitCloudPresetEQ) {
+        XLOG_INFO("Earbuds equalizer changed to: \(latestEQ.rawValue)")
+    }
+
+    /// Notifies that the earbuds noise-reduction mode has changed
+    /// - Parameters:
+    ///   - latestMode: The new noise-reduction mode value
+    func onEarbudsNoiseReductionModeChanged(to latestMode: FitCloudNoiseReductionMode) {
+        XLOG_INFO("Earbuds noise-reduction mode changed to: \(latestMode.rawValue)")
+    }
+
+    /// Notifies that the earbuds low-latency mode has changed
+    /// - Parameters:
+    ///   - latestMode: The new low-latency mode value
+    func onEarbudsLowLatencyModeChanged(to latestMode: FitCloudLowLatencyMode) {
+        XLOG_INFO("Earbuds low-latency mode changed to: \(latestMode.rawValue)")
+    }
+
+    /// Notifies that the overall earbuds status has changed
+    /// - Parameters:
+    ///   - latestStatusInfo: The current earbuds status information model
+    func onEarbudsStatusChanged(to latestStatusInfo: FitCloudEarbudsStatusInfoModel) {
+        XLOG_INFO("Earbuds status changed: \(latestStatusInfo)")
+    }
+
+    /// Notifies that the earbuds find-my status has changed caused by a event
+    /// - Parameters:
+    ///   - findEvent: The event
+    func onEarbudsFindStatusChanged(with findEvent: FitCloudEarbudFindEvent) {
+        XLOG_INFO("Earbuds find-my status changed with event: \(findEvent.rawValue)")
+    }
 
 }

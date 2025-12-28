@@ -147,3 +147,70 @@
 "Send Yoga Audio" = "发送瑜伽音频";
 "Cancel Send Yoga Audio" = "取消发送瑜伽音频";
 "Bond Lover" = "绑定情侣";
+
+"Earbuds" = "耳机";
+"SoundEffect 1" = "音效 1";
+"SoundEffect 2" = "音效 2";
+"SoundEffect 3" = "音效 3";
+"SoundEffect 4" = "音效 4";
+"SoundEffect 5" = "音效 5";
+"SoundEffect 6" = "音效 6";
+"Off" = "关闭";
+"On" = "开启";
+"Transparency" = "通透模式";
+
+"EQ Mode" = "EQ 模式";
+"Current：%@" = "当前：%@";
+"Unknown" = "未知";
+"Query" = "查询";
+"Set" = "设置";
+
+"Noise Reduction Mode" = "降噪模式";
+
+"Low Latency Mode" = "低延迟模式";
+
+"Earbuds Status" = "耳机状态";
+"Tap to query status" = "点击查询状态";
+"Query Status" = "查询状态";
+
+"Firmware Version" = "固件版本";
+
+"Find Earbuds" = "查找耳机";
+"Find Status：%@" = "查找状态：%@";
+"Find Left" = "查找左耳";
+"Find Right" = "查找右耳";
+"Stop Left" = "停止查找左耳";
+"Stop Right" = "停止查找右耳";
+
+"Query failed：%@" = "查询失败：%@";
+
+"SetSuccess" = "设置成功";
+"SetFailed" = "设置失败：%@";
+"UnknownError" = "未知错误";
+
+"QueryFailed" = "查询失败：%@";
+
+"LeftConnection: %@\n" = "左耳连接状态：%@\n";
+"RightConnection: %@\n" = "右耳连接状态：%@\n";
+"LeftInCase: %@\n" = "左耳是否在盒：%@\n";
+"RightInCase: %@" = "右耳是否在盒：%@";
+"QueryFailed: %@" = "查询失败：%@";
+
+"Find Status：Left %@ / Right %@" = "查找状态：左耳 %@ / 右耳 %@";
+
+"FindLeftStarted" = "开始查找左耳";
+"FindLeftFailed" = "查找左耳失败：%@";
+"FindRightStarted" = "开始查找右耳";
+"FindRightFailed" = "查找右耳失败：%@";
+"FindLeftStopped" = "已停止查找左耳";
+"StopFindLeftFailed" = "停止查找左耳失败：%@";
+"FindRightStopped" = "已停止查找右耳";
+"StopFindRightFailed" = "停止查找右耳失败：%@";
+
+
+"Connected" = "已连接";
+"Disconnected" = "未连接";
+"In Case" = "在盒";
+"Out of Case" = "不在盒";
+"Finding" = "查找中";
+"Not Finding" = "未查找";

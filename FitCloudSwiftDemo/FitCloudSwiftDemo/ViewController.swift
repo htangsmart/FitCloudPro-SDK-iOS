@@ -212,7 +212,7 @@ func registerNotificationObsever() {
 }
 
 func updateControlVisible() {
-    if FitCloudKit.lastConnectPeripheral() == nil {
+    if FitCloudKit.lastConnectPeripheral() == nil || FitCloudKit.lastConnectPeripheral()?.isAlreadyUnbind == true {
         imageSmartWatch.isHidden = true
         deviceName.isHidden = true
         indicator.isHidden = true

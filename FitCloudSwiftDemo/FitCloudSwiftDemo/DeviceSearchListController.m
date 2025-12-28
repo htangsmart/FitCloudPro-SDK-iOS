@@ -107,7 +107,7 @@
                     NSMutableArray<NSIndexPath*>*array = [NSMutableArray<NSIndexPath*> array];
                     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
                     [array addObject:indexPath];
-                    [weakSelf.tableView reloadRowsAtIndexPaths:array withRowAnimation:UITableViewRowAnimationAutomatic];
+                    [weakSelf.tableView reloadRowsAtIndexPaths:array withRowAnimation:UITableViewRowAnimationNone];
                     [weakSelf.tableView endUpdates];
                     *stop = YES;
                 }
