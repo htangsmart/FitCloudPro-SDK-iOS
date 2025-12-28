@@ -1,5 +1,32 @@
 # CHANGELOG
 
+## V1.3.2-beta.32 build20251228001 (2025-12-28)
+
+- Introduced new APIs for the earbuds product.
+  - EQ mode:
+    - Added new API `+ (void)queryEarbudsEqualizerWithCompletion:(void (^_Nullable)(BOOL success, FitCloudPresetEQ currentEQ, NSError *_Nullable error))completion;` to query the current equalizer preset of the earbuds.
+    - Added new API `+ (void)setEarbudsEqualizer:(FitCloudPresetEQ)eq completion:(FitCloudCompletionHandler _Nullable)completion;` to set the equalizer preset for the earbuds.
+    - Added SDK callback method `- (void)onEarbudsEqualizerChangedTo:(FitCloudPresetEQ)latestEQ;`, which will be called when the earbuds equalizer preset has changed from the earbuds side.
+  - Noise reduction mode:
+    - Added new API `+ (void)queryEarbudsNoiseReductionModeWithCompletion:(void (^_Nullable)(BOOL success, FitCloudNoiseReductionMode mode, NSError *_Nullable error))completion;` to query the current noise reduction mode of the earbuds.
+    - Added new API `+ (void)setEarbudsNoiseReductionMode:(FitCloudNoiseReductionMode)mode completion:(FitCloudCompletionHandler _Nullable)completion;` to set the noise reduction mode for the earbuds.
+    - Added SDK callback method `- (void)onEarbudsNoiseReductionModeChangedTo:(FitCloudNoiseReductionMode)latestMode;`, which will be called when the earbuds noise-reduction mode has changed from the earbuds side.
+  - Low latency mode:
+    - Added new API `+ (void)queryEarbudsLowLatencyModeWithCompletion:(void (^_Nullable)(BOOL success, FitCloudLowLatencyMode mode, NSError *_Nullable error))completion;` to query the current low latency mode of the earbuds.
+    - Added new API `+ (void)setEarbudsLowLatencyMode:(FitCloudLowLatencyMode)mode completion:(FitCloudCompletionHandler _Nullable)completion;` to set the low latency mode for the earbuds.
+    - Added SDK callback method `- (void)onEarbudsLowLatencyModeChangedTo:(FitCloudLowLatencyMode)latestMode;`, which will be called when the earbuds low-latency mode has changed from the earbuds side.
+  - Earbuds status:
+    - Added new API `+ (void)queryEarbudsStatusWithCompletion:(void (^_Nullable)(BOOL success, FitCloudEarbudsStatusInfoModel*_Nullable statusInfo, NSError *_Nullable error))completion;` to query the current status information of the earbuds.
+    - Added SDK callback method `- (void)onEarbudsStatusChangedTo:(FitCloudEarbudsStatusInfoModel*)latestStatusInfo;`, which will be called when the earbuds status has changed from the earbuds side.
+  - Earbuds firmware version:
+    - Added new API: `+ (void)queryEarbudsStatusWithCompletion:(void (^_Nullable)(BOOL success, FitCloudEarbudsStatusInfoModel*_Nullable statusInfo, NSError *_Nullable error))completion;` to query the current status information of the earbuds.
+  - Earbuds find:
+    - Added new API `+ (void)queryEarbudsFindStatusInfoWithCompletion:(void (^_Nullable)(BOOL success, FitCloudEarbudsFindStatusInfoModel*_Nullable statusInfo, NSError *_Nullable error))completion;` to query the find status information of the earbuds.
+    - Added new API `+ (void)findEarbudWithSide:(FitCloudEarbudSide)side completion:(FitCloudCompletionHandler _Nullable)completion;` to trigger the find earbud function for the specified side.
+    - Added new API `+ (void)stopFindEarbudWithSide:(FitCloudEarbudSide)side completion:(FitCloudCompletionHandler _Nullable)completion;` to stop the find earbud function for the specified side.
+    - Added SDK callback method `- (void)onEarbudsFindStatusChangedWithEvent:(FitCloudEarbudFindEvent)findEvent;`, which will be called when he earbuds find-my status has changed caused by a specific event.
+
+
 ## V1.3.2-beta.31 build20251224001 (2025-12-24)
 
 - Fixed some issues for constellation & fortune API.

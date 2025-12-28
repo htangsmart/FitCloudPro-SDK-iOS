@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-12-24 Version:1.3.2-beta.31 Build:20251224001   
+## pcjbird 2025-12-28 Version:1.3.2-beta.32 Build:20251228001   
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -39,6 +39,7 @@
 - Introduced new API `+ (void)redeemTaskRewardWithCompletion:(FitCloudCompletionHandler _Nullable)completion;` to redeem the total task rewards.
 - Introduced new APIs for the `855A-Constellation&Fortune` product.
 - Fixed an issue for task-sending API.
+- Introduced new APIs for the earbuds product.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

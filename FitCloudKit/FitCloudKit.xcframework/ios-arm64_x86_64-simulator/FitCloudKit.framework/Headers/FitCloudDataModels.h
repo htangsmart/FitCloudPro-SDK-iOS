@@ -26,6 +26,9 @@
 #import <FitCloudKit/FitCloudWorkoutSummaryDataModel.h>
 #import <FitCloudKit/FitCloudTodayFortuneDataModel.h>
 #import <FitCloudKit/FitCloudTalismanDataModel.h>
+#import <FitCloudKit/FitCloudEarbudBatteryInfoModel.h>
+#import <FitCloudKit/FitCloudEarbudsFindStatusInfoModel.h>
+#import <FitCloudKit/FitCloudEarbudsStatusInfoModel.h>
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>

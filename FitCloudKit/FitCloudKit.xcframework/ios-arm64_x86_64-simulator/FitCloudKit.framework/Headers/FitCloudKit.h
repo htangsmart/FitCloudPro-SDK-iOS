@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2025-12-24  Version:1.3.2-beta.31 Build:20251224001
+//      pcjbird    2025-12-28  Version:1.3.2-beta.32 Build:20251228001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1473,7 +1473,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: 结果回调
 + (void)queryRestingHRWithCompletion:(FitCloudRestingHRQueryCompletion _Nullable)completion;
 
-#pragma mark - 耳机仓
+#pragma mark - 耳机仓 (EarbudCase)
 
 /// 设置耳机仓歌词颜色 (Set earbud case lyrics color)
 /// - Parameters:
@@ -1510,6 +1510,86 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - currentPreset: 当前预设，取值范围从 0 开始
 ///     - totalPresetsCount: 预设总数
 + (void)queryEarbudCaseMouseStartPointPresetWithCompletion:(void (^_Nullable)(BOOL success, NSInteger currentPreset, NSInteger totalPresetsCount, NSError *_Nullable error))completion;
+
+#pragma mark - 耳机 (Earbuds)
+
+/// Query the current equalizer preset of the earbuds
+/// - Parameters:
+///   - completion: A completion handler called with the query result. Parameters:
+///     - success: Whether the query was successful
+///     - currentEQ: The current equalizer preset
+///     - error: Error information if query fails, nil on success
++ (void)queryEarbudsEqualizerWithCompletion:(void (^_Nullable)(BOOL success, FitCloudPresetEQ currentEQ, NSError *_Nullable error))completion;
+
+/// Set the equalizer preset for the earbuds
+/// - Parameters:
+///   - eq: The equalizer preset to apply
+///   - completion: A completion handler called when the operation completes
++ (void)setEarbudsEqualizer:(FitCloudPresetEQ)eq completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Query the current noise reduction mode of the earbuds
+/// - Parameters:
+///   - completion: A completion handler called with the query result. Parameters:
+///     - success: Whether the query was successful
+///     - mode: The current noise reduction mode
+///     - error: Error information if query fails, nil on success
++ (void)queryEarbudsNoiseReductionModeWithCompletion:(void (^_Nullable)(BOOL success, FitCloudNoiseReductionMode mode, NSError *_Nullable error))completion;
+
+/// Set the noise reduction mode for the earbuds
+/// - Parameters:
+///   - mode: The noise reduction mode to apply
+///   - completion: A completion handler called when the operation completes
++ (void)setEarbudsNoiseReductionMode:(FitCloudNoiseReductionMode)mode completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Query the current low latency mode of the earbuds
+/// - Parameters:
+///   - completion: A completion handler called with the query result. Parameters:
+///     - success: Whether the query was successful
+///     - mode: The current low latency mode
+///     - error: Error information if query fails, nil on success
++ (void)queryEarbudsLowLatencyModeWithCompletion:(void (^_Nullable)(BOOL success, FitCloudLowLatencyMode mode, NSError *_Nullable error))completion;
+
+/// Set the low latency mode for the earbuds
+/// - Parameters:
+///   - mode: The low latency mode to apply
+///   - completion: A completion handler called when the operation completes
++ (void)setEarbudsLowLatencyMode:(FitCloudLowLatencyMode)mode completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Query the current status information of the earbuds
+/// - Parameters:
+///   - completion: A completion handler called with the query result. Parameters:
+///     - success: Whether the query was successful
+///     - statusInfo: The earbuds status information
+///     - error: Error information if query fails, nil on success
++ (void)queryEarbudsStatusWithCompletion:(void (^_Nullable)(BOOL success, FitCloudEarbudsStatusInfoModel*_Nullable statusInfo, NSError *_Nullable error))completion;
+
+/// Query the firmware version of the earbuds
+/// - Parameters:
+///   - completion: A completion handler called with the query result. Parameters:
+///     - success: Whether the query was successful
+///     - version: The firmware version string
+///     - error: Error information if query fails, nil on success
++ (void)queryEarbudsFirmwareVersionWithCompletion:(void (^_Nullable)(BOOL success, NSString*_Nullable version, NSError *_Nullable error))completion;
+
+/// Query the find status information of the earbuds
+/// - Parameters:
+///   - completion: A completion handler called with the query result. Parameters:
+///     - success: Whether the query was successful
+///     - statusInfo: The earbuds find status information
+///     - error: Error information if query fails, nil on success
++ (void)queryEarbudsFindStatusInfoWithCompletion:(void (^_Nullable)(BOOL success, FitCloudEarbudsFindStatusInfoModel*_Nullable statusInfo, NSError *_Nullable error))completion;
+
+/// Trigger the find earbud function for the specified side
+/// - Parameters:
+///   - side: The side of the earbud to find
+///   - completion: A completion handler called when the operation completes
++ (void)findEarbudWithSide:(FitCloudEarbudSide)side completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Stop the find earbud function for the specified side
+/// - Parameters:
+///   - side: The side of the earbud to stop finding
+///   - completion: A completion handler called when the operation completes
++ (void)stopFindEarbudWithSide:(FitCloudEarbudSide)side completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark - 激光测量
 

@@ -2097,4 +2097,110 @@ typedef NS_ENUM(NSInteger, FitCloudAuspiciousDirection) {
     FitCloudAuspiciousDirectionNortheast = 7,
 };
 
+#pragma mark - EQ预设类型
+
+/// EQ 预设类型
+typedef NS_ENUM(NSInteger, FitCloudPresetEQ) {
+    /// 未知
+    FitCloudPresetEQUnknown = -1,
+    /// 音效 1
+    FitCloudPresetEQSoundEffect1 = 0,
+    /// 音效 2
+    FitCloudPresetEQSoundEffect2 = 1,
+    /// 音效 3
+    FitCloudPresetEQSoundEffect3 = 2,
+    /// 音效 4
+    FitCloudPresetEQSoundEffect4 = 3,
+    /// 音效 5
+    FitCloudPresetEQSoundEffect5 = 4,
+    /// 音效 6
+    FitCloudPresetEQSoundEffect6 = 5,
+};
+
+#pragma mark - 降噪模式类型
+/// 降噪模式类型
+typedef NS_ENUM(NSInteger, FitCloudNoiseReductionMode) {
+    ///未知
+    FitCloudNoiseReductionModeUnknown = -1,
+    /// 关闭
+    FitCloudNoiseReductionModeOff = 0,
+    /// 打开
+    FitCloudNoiseReductionModeOn = 1,
+    /// 通透模式
+    FitCloudNoiseReductionModeTransparency = 2,
+};
+
+#pragma mark - 低延时模式类型
+/// 低延时模式类型定义
+typedef NS_ENUM(NSInteger, FitCloudLowLatencyMode) {
+    /// 未知
+    FitCloudLowLatencyModeUnknown = -1,
+    /// 关闭
+    FitCloudLowLatencyModeOff = 0,
+    /// 开启
+    FitCloudLowLatencyModeOn = 1,
+};
+
+#pragma mark - 耳机连接状态
+
+/// 耳机连接状态定义
+typedef NS_ENUM(NSInteger, FitCloudEarbudConnectionStatus) {
+    /// 未知
+    FitCloudEarbudConnectionStatusUnknown = -1,
+    /// 未连接
+    FitCloudEarbudConnectionStatusDisconnected = 0,
+    /// 已连接
+    FitCloudEarbudConnectionStatusConnected = 2,
+};
+
+#pragma mark - 耳机在仓状态
+
+/// 耳机在仓状态定义
+typedef NS_ENUM(NSInteger, FitCloudEarbudInCaseStatus) {
+    /// 未知
+    FitCloudEarbudInCaseStatusUnknown = -1,
+    /// 不在仓
+    FitCloudEarbudInCaseStatusOut = 0,
+    /// 在仓
+    FitCloudEarbudInCaseStatusIn = 1,
+};
+
+#pragma mark - 耳机查找状态
+
+/// 耳机查找状态定义
+typedef NS_ENUM(NSInteger, FitCloudEarbudFindStatus) {
+    /// 未知
+    FitCloudEarbudFindStatusUnknown = -1,
+    /// 不在查找状态
+    FitCloudEarbudFindStatusNotFinding = 0,
+    /// 处于查找状态
+    FitCloudEarbudFindStatusFinding = 1,
+};
+
+#pragma mark - 耳机查找事件
+
+/// 耳机查找事件定义
+typedef NS_ENUM(NSInteger, FitCloudEarbudFindEvent) {
+    /// 未知
+    FitCloudEarbudFindEventUnknown = -1,
+    /// 查找左耳
+    FitCloudEarbudFindEventFindLeft = 0,
+    /// 查找右耳
+    FitCloudEarbudFindEventFindRight = 1,
+    /// 停止查找左耳
+    FitCloudEarbudFindEventStopFindLeft = 2,
+    /// 停止查找右耳
+    FitCloudEarbudFindEventStopFindRight = 3,
+};
+
+#pragma mark -耳机左右侧
+
+/// 耳机左右侧定义
+typedef NS_ENUM(NSInteger, FitCloudEarbudSide) {
+    /// 左耳
+    FitCloudEarbudSideLeft = 0,
+    /// 右耳
+    FitCloudEarbudSideRight = 1,
+};
+
 #endif /* FitCloudKitDefines_h */

@@ -815,7 +815,30 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// The watch side request a yoga audio
 - (void)onRequestYogaAudio;
 
+/// Notifies that the earbuds equalizer preset has changed
+/// - Parameters:
+///   - latestEQ: The new equalizer preset value
+- (void)onEarbudsEqualizerChangedTo:(FitCloudPresetEQ)latestEQ;
 
+/// Notifies that the earbuds noise-reduction mode has changed
+/// - Parameters:
+///   - latestMode: The new noise-reduction mode value
+- (void)onEarbudsNoiseReductionModeChangedTo:(FitCloudNoiseReductionMode)latestMode;
+
+/// Notifies that the earbuds low-latency mode has changed
+/// - Parameters:
+///   - latestMode: The new low-latency mode value
+- (void)onEarbudsLowLatencyModeChangedTo:(FitCloudLowLatencyMode)latestMode;
+
+/// Notifies that the overall earbuds status has changed
+/// - Parameters:
+///   - latestStatusInfo: The current earbuds status information model
+- (void)onEarbudsStatusChangedTo:(FitCloudEarbudsStatusInfoModel*)latestStatusInfo;
+
+/// Notifies that the earbuds find-my status has changed caused by a event
+/// - Parameters:
+///   - findEvent: The event
+- (void)onEarbudsFindStatusChangedWithEvent:(FitCloudEarbudFindEvent)findEvent;
 
 /// Notifies when the ANCS authorization status has been updated
 /// - Parameters:
