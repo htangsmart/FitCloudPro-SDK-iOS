@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.33 build20251228002 (2025-12-28)
+
+- Added flag to indicate whether the device supports earbuds related APIs.
+
 ## V1.3.2-beta.32 build20251228001 (2025-12-28)
 
 - Introduced new APIs for the earbuds product.

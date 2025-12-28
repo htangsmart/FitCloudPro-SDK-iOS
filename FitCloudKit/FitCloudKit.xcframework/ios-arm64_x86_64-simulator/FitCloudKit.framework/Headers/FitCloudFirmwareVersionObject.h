@@ -353,6 +353,7 @@
 /// 是否支持蝶唯客户的 Web 智能翻译功能
 @property(nonatomic, readonly) BOOL withWebAITranslationForDieWei;
 
-
+/// 是否支持耳机相关 API
+@property(nonatomic, readonly) BOOL allowEarbudsAPIs;
 
 @end
