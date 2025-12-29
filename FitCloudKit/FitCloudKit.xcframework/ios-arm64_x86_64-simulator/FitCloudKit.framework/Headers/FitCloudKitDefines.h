@@ -2150,7 +2150,7 @@ typedef NS_ENUM(NSInteger, FitCloudEarbudConnectionStatus) {
     /// 未连接
     FitCloudEarbudConnectionStatusDisconnected = 0,
     /// 已连接
-    FitCloudEarbudConnectionStatusConnected = 2,
+    FitCloudEarbudConnectionStatusConnected = 1,
 };
 
 #pragma mark - 耳机在仓状态
