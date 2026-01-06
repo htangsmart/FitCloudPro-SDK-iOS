@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.34 build20260106001 (2026-01-06)
+
+- Enhanced connection options for iOS 26.2 and later.
+
 ## V1.3.2-beta.33 build20251228002 (2025-12-28)
 
 - Added flag to indicate whether the device supports earbuds related APIs.

@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2025-12-28 Version:1.3.2-beta.33 Build:20251228002
+## pcjbird 2026-01-06 Version:1.3.2-beta.34 Build:20260106001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -39,6 +39,7 @@
 - 为 `855A-星座&运势` 产品引入新 API。
 - 修复了任务发送 API 指令错误的问题。
 - 为耳机产品引入新 API。
+- iOS 26.2 及更高版本使用新的连接选项。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

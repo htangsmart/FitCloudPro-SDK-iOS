@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2025-12-28 Version:1.3.2-beta.33 Build:20251228002   
+## pcjbird 2026-01-06 Version:1.3.2-beta.34 Build:20260106001  
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -40,6 +40,7 @@
 - Introduced new APIs for the `855A-Constellation&Fortune` product.
 - Fixed an issue for task-sending API.
 - Introduced new APIs for the earbuds product.
+- Enhanced connection options for iOS 26.2 and later.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
