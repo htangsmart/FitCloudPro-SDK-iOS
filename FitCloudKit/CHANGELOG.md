@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.35 build20260108001 (2026-01-08)
+
+- Fixed an issue where the SDK would crash when the device was unbound.
+
 ## V1.3.2-beta.34 build20260106001 (2026-01-06)
 
 - Enhanced connection options for iOS 26.2 and later.
