@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.36 build20260109001 (2026-01-09)
+
+- Added a flag to identify the manufacturer for AI e-badge compatibility.
+- Fixed an issue where the callback method of `+ (void)enterDFUModeWithBlock:(FitCloudEnterDFUModeResultBlock _Nullable)block;` was not invoked.
+
 ## V1.3.2-beta.35 build20260108001 (2026-01-08)
 
 - Fixed an issue where the SDK would crash when the device was unbound.

@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-01-08 Version:1.3.2-beta.35 Build:20260108001  
+## pcjbird 2026-01-09 Version:1.3.2-beta.36 Build:20260109001  
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -42,6 +42,8 @@
 - Introduced new APIs for the earbuds product.
 - Enhanced connection options for iOS 26.2 and later.
 - Fixed an issue where the SDK would crash when the device was unbound.
+- Added a flag to identify the manufacturer for AI e-badge compatibility.
+- Fixed an issue where the callback method of `+ (void)enterDFUModeWithBlock:(FitCloudEnterDFUModeResultBlock _Nullable)block;` was not invoked.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
