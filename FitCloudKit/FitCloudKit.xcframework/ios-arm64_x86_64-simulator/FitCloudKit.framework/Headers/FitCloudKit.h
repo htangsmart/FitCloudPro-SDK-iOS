@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-01-09  Version:1.3.2-beta.36 Build:20260109001
+//      pcjbird    2026-01-09  Version:1.3.2-beta.37 Build:20260109002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1734,6 +1734,17 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - worldClockArray: Array of world clock models retrieved from the watch, nil if query fails
 ///     - error: Error information if query fails, nil on success
 + (void)queryWorldClockArrayWithCompletion:(void (^__nullable)(BOOL succeed, NSArray<FitCloudWorldClockModel *> *_Nullable worldClockArray, NSError *_Nullable error))completion;
+
+#pragma mark - Device Passcode
+
+/// Queries the device passcode from the device
+/// - Parameters:
+///   - completion: The completion handler called with the query results
+///     - succeed: Whether the query was successful
+///     - enabled: Whether the device passcode is enabled
+///     - passcode: The device passcode if query successful, nil otherwise
+///     - error: Error information if query fails, nil on success
++ (void)queryDevicePasscodeWithCompletion:(void (^__nullable)(BOOL succeed, BOOL enabled, NSString *_Nullable passcode, NSError *_Nullable error))completion;
 
 @end
 

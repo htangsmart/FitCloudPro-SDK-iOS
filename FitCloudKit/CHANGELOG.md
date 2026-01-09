@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.37 build20260109002 (2026-01-09)
+
+- Introduced new API `+ (void)queryDevicePasscodeWithCompletion:(void (^__nullable)(BOOL succeed, BOOL enabled, NSString *_Nullable passcode, NSError *_Nullable error))completion;` to query the device passcode.
+
 ## V1.3.2-beta.36 build20260109001 (2026-01-09)
 
 - Added a flag to identify the manufacturer for AI e-badge compatibility.
