@@ -2,13 +2,16 @@
 //  LogMateProtocol.h
 //  LogMate
 //
-//  Created by pcjbird on 12/8/23.
+//  Created by pcjbird on 2025/11/23.
+//  Copyright © 2025 Zero Status. All rights reserved.
 //
 
 #ifndef LogMateProtocol_h
 #define LogMateProtocol_h
 #import <Foundation/Foundation.h>
 #import <LogMate/LogMateLevel.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 /// the loggable protocol
 @protocol LoggableProtocol <NSObject>
@@ -19,8 +22,14 @@
 ///   - level: the log level
 ///   - subsystem: the log subsystem
 ///   - category: the log category
--(void) onLogMateMessage:(NSString*)message level:(LOGMATELEVEL)level subsystem:(NSString*)subsystem category:(NSString*)category;
+- (void)onLogMessage:(NSString *)message
+               level:(LogMateLevel)level
+           subsystem:(nullable NSString *)subsystem
+            category:(nullable NSString *)category;
 
 @end
+
+NS_ASSUME_NONNULL_END
+
 
 #endif /* LogMateProtocol_h */

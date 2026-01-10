@@ -11,6 +11,8 @@
 #import "AppDelegate+FitCloudKit.h"
 #import <FitCloudGPSAccelerate/FitCloudGPSAccelerate.h>
 
+#define STRINGIFY(x) #x
+
 
 @interface AppDelegate ()<LoggableProtocol, GPSLocationInfoRequestService>
 
@@ -21,7 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [FitCloudGPSAccelerate setLogProvider:self];
+    [FitCloudGPSAccelerate setLogService:self];
     [FitCloudGPSAccelerate setGPSLocationInfoRequestService:self];
     [self loggerServiceConfig];
     [self fitCloudKitConfig];
@@ -62,12 +64,12 @@
 ///   - completion: the completion callback
 -(void) requestGPSLocationWithCompletionHandler:(void (^ __nullable)(BOOL success, double lon, double lat, NSError* _Nullable error))completion
 {
-    #error "TODO 请自行实现这段代码"
+    //#error "TODO 请自行实现这段代码"
     /// 请自行实现这段代码
-    /*if(completion)
+    if(completion)
     {
         completion(YES, 121.449324, 31.284062, nil);
-    }*/
+    }
 }
 
 #pragma mark - LoggableProtocol
@@ -78,22 +80,25 @@
 ///   - level: the log level
 ///   - subsystem: the log subsystem
 ///   - category: the log category
--(void) onLogMateMessage:(NSString*)message level:(LOGMATELEVEL)level subsystem:(NSString*)subsystem category:(NSString*)category
+- (void)onLogMessage:(NSString *)message
+               level:(LogMateLevel)level
+           subsystem:(nullable NSString *)subsystem
+            category:(nullable NSString *)category
 {
     message = [[message stringByReplacingOccurrencesOfString:@"<" withString:@"["] stringByReplacingOccurrencesOfString:@">" withString:@"]"];
-    if(level == LOGMATELEVEL_INFO)
+    if(level == LogMateLevelInfo)
     {
         XLOG_INFO(@"%@", APP_LOG_STRING(@"%@",message));
     }
-    else if(level == LOGMATELEVEL_WARNING)
+    else if(level == LogMateLevelWarn)
     {
         XLOG_WARNING(@"%@", APP_LOG_STRING(@"%@",message));
     }
-    else if(level == LOGMATELEVEL_ERROR)
+    else if(level == LogMateLevelError)
     {
         XLOG_ERROR(@"%@", APP_LOG_STRING(@"%@",message));
     }
-    else if(level == LOGMATELEVEL_VERBOSE)
+    else if(level == LogMateLevelVerbose)
     {
         XLOG_VERBOSE(@"%@", APP_LOG_STRING(@"%@",message));
     }

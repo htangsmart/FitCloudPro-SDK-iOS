@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/FitCloudOTAGenKit-Swift.h</key>
 		<data>
-		pqwtYgKaa6mG7/zx7+qYV4j+KEw=
+		swuQr7Qmwf/CxgY4nnyn4cu5+XY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HrclxiYw0WYg/Qtkr4KqxhbGY8A=
+		AonC3KtL/4Pz8hff2lHc5WDMtfI=
 		</data>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		hqVmfj4VDVZoq19sCL1UuBnw8BE=
+		6mcVTnLtDiGtbEvQlr3XwKPwOn0=
 		</data>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		9teLZ/ZDHfeNaGgLRn74/ZV8sIE=
+		YLexIcaGnNGXY6Vmzb3ICc89g8s=
 		</data>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		YdAZIzeVoIxPWA+PHNzSH3cbDi4=
+		S4lH2gtruASA+NIxj4mtw49nDsE=
 		</data>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		9teLZ/ZDHfeNaGgLRn74/ZV8sIE=
+		YLexIcaGnNGXY6Vmzb3ICc89g8s=
 		</data>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iI1lTkyiEL3q5FGYjCS2gPfxuPY=
+		OGJ9U6zSS+XhmrlDnTJOf7mxsHc=
 		</data>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		hqVmfj4VDVZoq19sCL1UuBnw8BE=
+		6mcVTnLtDiGtbEvQlr3XwKPwOn0=
 		</data>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		WMqFx7k5471fzxn0Ru4YElQKclQ=
+		9F1n5k6fL55hAb7vI1QQK0AZFzw=
 		</data>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		BbOrKUBlB3ORsvniTfM4Tie1gmI=
+		6PKctphI2zCB5EP5jYW1nLgH7u4=
 		</data>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		WMqFx7k5471fzxn0Ru4YElQKclQ=
+		9F1n5k6fL55hAb7vI1QQK0AZFzw=
 		</data>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bFNoMYi2XjsZ++Ck28f4q89b6x4=
+		wtRiU58E0kYJNgAGCEMwb9r8pz4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,121 +63,121 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pqwtYgKaa6mG7/zx7+qYV4j+KEw=
+			swuQr7Qmwf/CxgY4nnyn4cu5+XY=
 			</data>
 			<key>hash2</key>
 			<data>
-			F1zQNJfC8WqQJhBNRfLr9L5mL68AvEdrE7mXwQ54WUg=
+			lKuUJx6uX+LLwxTKODiAfJbVxcKkPv3/vfBPWhkBMvQ=
 			</data>
 		</dict>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hqVmfj4VDVZoq19sCL1UuBnw8BE=
+			6mcVTnLtDiGtbEvQlr3XwKPwOn0=
 			</data>
 			<key>hash2</key>
 			<data>
-			lWMiAvFkmU28tvqPy9t/TbCsM4/WlzoIOuJSLvWnnCk=
+			ZU/iQKOh8jYRtpx0YgZe8ueQIoSruNdfpSnICUqWvsA=
 			</data>
 		</dict>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9teLZ/ZDHfeNaGgLRn74/ZV8sIE=
+			YLexIcaGnNGXY6Vmzb3ICc89g8s=
 			</data>
 			<key>hash2</key>
 			<data>
-			OVJ108prLhKn/TKllHS7GorMXj/PMxU0ICDsKbooRDs=
+			GRCviVFl9TeId9cRAIBNPAZOcXbSeO8XAiYwIaj4mmM=
 			</data>
 		</dict>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YdAZIzeVoIxPWA+PHNzSH3cbDi4=
+			S4lH2gtruASA+NIxj4mtw49nDsE=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q0/5BA2s4NsCNJTkMCPdymHQofC0HbilOtx0hhEL7xA=
+			NsiKD6kD75qQS6z9PyczUAL4ES4ZE9e56XGPkzmRCss=
 			</data>
 		</dict>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9teLZ/ZDHfeNaGgLRn74/ZV8sIE=
+			YLexIcaGnNGXY6Vmzb3ICc89g8s=
 			</data>
 			<key>hash2</key>
 			<data>
-			OVJ108prLhKn/TKllHS7GorMXj/PMxU0ICDsKbooRDs=
+			GRCviVFl9TeId9cRAIBNPAZOcXbSeO8XAiYwIaj4mmM=
 			</data>
 		</dict>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iI1lTkyiEL3q5FGYjCS2gPfxuPY=
+			OGJ9U6zSS+XhmrlDnTJOf7mxsHc=
 			</data>
 			<key>hash2</key>
 			<data>
-			iVChLJMNy8F/Jr0D9/48/b4KKmFNnPMM6Q2iZMk/hMw=
+			5LI4AjV5WPNNtT76czlThibbcApPc3TmQch9mDlbMwI=
 			</data>
 		</dict>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hqVmfj4VDVZoq19sCL1UuBnw8BE=
+			6mcVTnLtDiGtbEvQlr3XwKPwOn0=
 			</data>
 			<key>hash2</key>
 			<data>
-			lWMiAvFkmU28tvqPy9t/TbCsM4/WlzoIOuJSLvWnnCk=
+			ZU/iQKOh8jYRtpx0YgZe8ueQIoSruNdfpSnICUqWvsA=
 			</data>
 		</dict>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WMqFx7k5471fzxn0Ru4YElQKclQ=
+			9F1n5k6fL55hAb7vI1QQK0AZFzw=
 			</data>
 			<key>hash2</key>
 			<data>
-			IWFrY0oB9/+OH/Z3m2RRhIuF1Yzc19g5CEAkgYxBtos=
+			e/mD4pdgI1qmd0k3y/3bcLxfgqZYTcQdXTYogWbExKU=
 			</data>
 		</dict>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BbOrKUBlB3ORsvniTfM4Tie1gmI=
+			6PKctphI2zCB5EP5jYW1nLgH7u4=
 			</data>
 			<key>hash2</key>
 			<data>
-			n9GzW4L8bZBVUK6g1UVSNAIZZbrBkKbUtZcesCWNIbc=
+			WGktECvqlZG83f6kTO1OgUYKW+ZTEQvo9YA7KoZWQBo=
 			</data>
 		</dict>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WMqFx7k5471fzxn0Ru4YElQKclQ=
+			9F1n5k6fL55hAb7vI1QQK0AZFzw=
 			</data>
 			<key>hash2</key>
 			<data>
-			IWFrY0oB9/+OH/Z3m2RRhIuF1Yzc19g5CEAkgYxBtos=
+			e/mD4pdgI1qmd0k3y/3bcLxfgqZYTcQdXTYogWbExKU=
 			</data>
 		</dict>
 		<key>Modules/FitCloudOTAGenKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bFNoMYi2XjsZ++Ck28f4q89b6x4=
+			wtRiU58E0kYJNgAGCEMwb9r8pz4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z773ii/tOnfVC6jAx1LD+M9YrXzkJzh9rtQmLmwTI4U=
+			2b6xBJ9fg807AK3pxAqLHVMpLrnNEfBLuGRGHcafgFM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

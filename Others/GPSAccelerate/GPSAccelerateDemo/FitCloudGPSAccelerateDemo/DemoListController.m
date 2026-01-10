@@ -32,12 +32,13 @@
     {
         [FitCloudGPSAccelerate requestCurrentLocationAndNotifyTheWatchDevice];
     }
+    
 }
 
 -(void) upgradeGPSFile
 {
     
-    [FitCloudGPSAccelerate startUpdateGPSFilesForce:NO started:^(BOOL success, NSError * _Nullable error) {
+    [FitCloudGPSAccelerate startUpdateGPSFilesForce:YES started:^(BOOL success, NSError * _Nullable error) {
         XLOG_INFO(@"%@", APP_LOG_STRING(@"%@, %@", success ? @"成功": @"失败", error));
     } progress:^(CGFloat progress) {
         XLOG_INFO(@"%@", APP_LOG_STRING(@"进度： %.2f%%", progress*100));

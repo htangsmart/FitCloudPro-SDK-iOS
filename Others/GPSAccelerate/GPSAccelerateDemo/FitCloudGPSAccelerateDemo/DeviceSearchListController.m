@@ -58,7 +58,7 @@
         self.isSearching = TRUE;
         [self.peripherals removeAllObjects];
         [self.tableView reloadData];
-        [FitCloudKit scanPeripherals];
+        [FitCloudKit startScan];
     }
 }
 

@@ -24,7 +24,7 @@ target 'FitCloudGPSAccelerateDemo' do
   commonPods
   
   pod 'FitCloudGPSAccelerate',:path => '../'
-  pod 'QuickTraceiOSLogger'
+  pod 'iOSLogBrowserSDK'
   pod 'YYCategories'
   pod 'Toast'
 

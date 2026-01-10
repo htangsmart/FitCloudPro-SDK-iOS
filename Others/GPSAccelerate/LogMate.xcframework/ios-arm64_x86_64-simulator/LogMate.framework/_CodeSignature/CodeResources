@@ -6,19 +6,23 @@
 	<dict>
 		<key>Headers/LogMate.h</key>
 		<data>
-		yFWBI6y8gAG0/hc0R/SI2kXF6ok=
+		wRVpNojQBFwxW5/aQVRSmuDRL5s=
 		</data>
 		<key>Headers/LogMateLevel.h</key>
 		<data>
-		BFqYB1XVSZ9Q19d/F4jR3tjF7o4=
+		DEqPK63Cz1kRbUMeX1ElHvbBH2M=
+		</data>
+		<key>Headers/LogMateMacros.h</key>
+		<data>
+		cSk+sTVWwshUABC/iJJR2XqPsnc=
 		</data>
 		<key>Headers/LogMateProtocol.h</key>
 		<data>
-		+NBqu5YbsYgAVUIo0a9MBT5cxcE=
+		FEV3JOtvBYnVp4/ENViUvOqP424=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		uDfhwpogn6rLTyxdkj8kJb520n8=
+		n2DNbPCena1QRCE3hIFqZWczY3Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -29,43 +33,34 @@
 	<dict>
 		<key>Headers/LogMate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			yFWBI6y8gAG0/hc0R/SI2kXF6ok=
-			</data>
 			<key>hash2</key>
 			<data>
-			QWtfgL+KWsu+l+AyTMaWmuX1tgbF4kzyRNtzGOgeo5U=
+			5Cny8rFkf/jIQjn/Z0p82kdmBYuuK9uGticHmqpboCA=
 			</data>
 		</dict>
 		<key>Headers/LogMateLevel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			BFqYB1XVSZ9Q19d/F4jR3tjF7o4=
-			</data>
 			<key>hash2</key>
 			<data>
-			7g44zhy53AGVM4uL0GvxxvHn6rtadheRipKYXxDp4u0=
+			RBY2ELve3yFnQ/T0vz82Bnhd5XOKI11Pww4xQk8bSIY=
+			</data>
+		</dict>
+		<key>Headers/LogMateMacros.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9V6tOTo8kVTGf2x9k1gFLHvRPPcHPYxgFnAhOWsS3JI=
 			</data>
 		</dict>
 		<key>Headers/LogMateProtocol.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			+NBqu5YbsYgAVUIo0a9MBT5cxcE=
-			</data>
 			<key>hash2</key>
 			<data>
-			pODArcmp5GBFhgXe/RTdzKxdYmtjcBDq2qP+FwRsK5U=
+			nmJdQajlZRrhiSRtMXRx9vz90u55HG9sZEqB8P5lYkc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			dcca/Bba+ldkEx13ZTHwjOeXu3I=
-			</data>
 			<key>hash2</key>
 			<data>
 			OVCN7Uqkn5+3wQFbzKpxgJQrkDbH7lEsbOwmRmvWxqg=

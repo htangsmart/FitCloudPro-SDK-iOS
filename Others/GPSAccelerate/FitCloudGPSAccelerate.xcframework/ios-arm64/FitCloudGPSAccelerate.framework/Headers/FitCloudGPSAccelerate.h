@@ -34,10 +34,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark Settings
 
-/// Set the log provider
+/// Set the log service
 /// - Parameters:
-///   - loggable: the log provider
-+(void)setLogProvider:(id<LoggableProtocol>)loggable;
+///   - logService: the log service
++(void)setLogService:(id<LoggableProtocol>)logService;
 
 /// Set the epo files download service
 ///

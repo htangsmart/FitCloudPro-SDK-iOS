@@ -37,10 +37,6 @@ end
 
 The following additional fields need to be configured for Info.plist
 
-```
-App Transport Security Settings
-    Allow Arbitrary Loads                      YES
-```
 
 ```
 Privacy - Bluetooth Peripheral Usage Description
@@ -56,18 +52,21 @@ Privacy - Bluetooth Always Usage Description
 Initialize
 
 ```
-    [FitCloudGPSAccelerate setLogProvider:self];
+    [FitCloudGPSAccelerate setLogService:self];
     [FitCloudGPSAccelerate setGPSLocationInfoRequestService:self];
 ```
 
 **Step 4**
 
-实现 FitCloudCallback 对应的方法 `- (void)OnRequestGPSData`
+实现 FitCloudCallback 对应的方法 `- (void)onRequestGPSLocationDataWithPurpose:(FitCloudDeviceSideLocationRequestPurpose)purpose`
 
-Implement the method `- (void)OnRequestGPSData` for FitCloudCallback
+Implement the method `- (void)onRequestGPSLocationDataWithPurpose:(FitCloudDeviceSideLocationRequestPurpose)purpose` for FitCloudCallback
 
 ```
-- (void)OnRequestGPSData
+/// 手表请求 GPS 定位数据
+/// - Parameters:
+///   - purpose: 定位请求目的
+- (void)onRequestGPSLocationDataWithPurpose:(FitCloudDeviceSideLocationRequestPurpose)purpose
 {
     [FitCloudGPSAccelerate requestCurrentLocationAndNotifyTheWatchDevice];
 }
