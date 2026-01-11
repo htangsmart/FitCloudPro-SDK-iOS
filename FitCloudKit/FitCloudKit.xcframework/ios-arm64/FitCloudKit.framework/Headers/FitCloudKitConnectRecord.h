@@ -29,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// The MAC address of the watch. Returns nil if manufacturer has custom advertisement data
 @property(nonatomic, strong, nullable) NSString *macAddr;
 
+/// The device product type,  defined by `FitCloudDeviceProductType`
+@property(nonatomic, strong, nullable) NSNumber* productType;
+
 /// The last connection time
 @property(nonatomic, strong) NSDate *lastConnectTime;
 

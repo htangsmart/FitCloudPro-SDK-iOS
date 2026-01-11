@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.38 build20260111001 (2026-01-11)
+
+- Added device product type definition.
+
 ## V1.3.2-beta.37 build20260109002 (2026-01-09)
 
 - Introduced new API `+ (void)queryDevicePasscodeWithCompletion:(void (^__nullable)(BOOL succeed, BOOL enabled, NSString *_Nullable passcode, NSError *_Nullable error))completion;` to query the device passcode.

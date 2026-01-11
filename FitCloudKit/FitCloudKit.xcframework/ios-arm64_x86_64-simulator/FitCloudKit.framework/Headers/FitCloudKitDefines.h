@@ -192,6 +192,30 @@ typedef NS_ENUM(NSInteger, FITCLOUDCHIPVENDOR) {
     FITCLOUDCHIPVENDOR_BLUETRUM = 3,
 };
 
+#pragma mark - Device Product Type
+
+/// the device product type defines
+typedef NS_ENUM(NSInteger, FitCloudDeviceProductType) {
+    /// unknown product
+    FitCloudDeviceProductTypeUnknown = -1,
+    /// the smart watch product
+    FitCloudDeviceProductTypeWatch = 0,
+    /// the earbuds product
+    FitCloudDeviceProductTypeEarbuds = 1,
+    /// the earbuds charging case product
+    FitCloudDeviceProductTypeChargingCase = 2,
+    /// the e-badge product
+    FitCloudDeviceProductTypeEBadge = 3,
+    /// the smart glasses product
+    FitCloudDeviceProductTypeGlasses = 4,
+    /// the smart ring product
+    FitCloudDeviceProductTypeRing = 5,
+    /// the smart speaker product
+    FitCloudDeviceProductTypeSpeaker = 6,
+    
+};
+
+
 #pragma mark - the watch common features define
 
 /// the watch common features define

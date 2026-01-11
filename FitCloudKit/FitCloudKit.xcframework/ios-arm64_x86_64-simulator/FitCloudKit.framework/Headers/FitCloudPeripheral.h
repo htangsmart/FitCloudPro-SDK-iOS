@@ -3,11 +3,12 @@
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/7/31.
-//  Copyright © 2018年 Zero Status. All rights reserved.
+//  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import <FitCloudKit/FitCloudKitDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// RSSI
 @property(nonatomic, strong, nullable)NSNumber *RSSI;
 
-/// mac地址，如果厂商自定义了广播数据，这里返回nil
+/// mac 地址，如果厂商自定义了广播数据，这里返回 nil
 @property(nonatomic, strong, readonly, nullable) NSString* macAddr;
 
 /// 是否为下一代厂商名称
@@ -40,6 +41,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 是否已经跟系统配对
 @property(nonatomic, assign) BOOL  paired;
+
+/// 设备产品类型
+@property(nonatomic, readonly) FitCloudDeviceProductType productType;
 
 /// 主项目号
 @property(nonatomic, strong, nullable) NSString* mainProjNo;
