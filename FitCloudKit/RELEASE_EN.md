@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-01-11 Version:1.3.2-beta.38 Build:20260111001  
+## pcjbird 2026-01-13 Version:1.3.2-beta.39 Build:20260113001  
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -46,6 +46,7 @@
 - Fixed an issue where the callback method of `+ (void)enterDFUModeWithBlock:(FitCloudEnterDFUModeResultBlock _Nullable)block;` was not invoked.
 - Introduced new API `+ (void)queryDevicePasscodeWithCompletion:(void (^__nullable)(BOOL succeed, BOOL enabled, NSString *_Nullable passcode, NSError *_Nullable error))completion;` to query the device passcode.
 - Added device product type definition.
+- Introduced new APIs for AI-Chat features.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

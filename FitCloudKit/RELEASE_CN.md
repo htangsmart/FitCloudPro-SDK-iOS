@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2026-01-11 Version:1.3.2-beta.38 Build:20260111001
+## pcjbird 2026-01-13 Version:1.3.2-beta.39 Build:20260113001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -45,6 +45,7 @@
 - 修复了在调用 `+ (void)enterDFUModeWithBlock:(FitCloudEnterDFUModeResultBlock _Nullable)block;` 方法后，回调方法未被调用的问题。
 - 引入新 API `+ (void)queryDevicePasscodeWithCompletion:(void (^__nullable)(BOOL succeed, BOOL enabled, NSString *_Nullable passcode, NSError *_Nullable error))completion;` 以查询设备密码。
 - 新增设备产品类型定义。
+- 引入 AI-Chat 相关的 API 定义。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

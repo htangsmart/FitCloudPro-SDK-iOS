@@ -840,6 +840,17 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - findEvent: The event
 - (void)onEarbudsFindStatusChangedWithEvent:(FitCloudEarbudFindEvent)findEvent;
 
+/// Notifies that the StarBurst AI bridge data has been received
+/// - Parameters:
+///   - data: The StarBurst AI bridge data
+- (void)onStarBurstAIBridgeDataReceived:(NSData *)data;
+
+/// Notifies the app that the watch requests to initiate an AI chat session.
+- (void)onRequestInitiateAIChat;
+
+/// Notifies the app that the watch requests to terminate the current AI chat session.
+- (void)onRequestTerminateAIChat;
+
 /// Notifies when the ANCS authorization status has been updated
 /// - Parameters:
 ///   - ancsAuthorized: A Boolean value that indicates whether ANCS is currently authorized

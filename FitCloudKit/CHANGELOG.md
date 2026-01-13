@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## V1.3.2-beta.39 build20260113001 (2026-01-13)
+
+- Introduced new APIs for AI-Chat features.
+  - StarBurst AI bridge:
+    - Added new API `+ (void)sendStarBurstAIBridgeData:(NSData *)data;` to send AI bridge data to the device.
+    - Added SDK callback method `- (void)onStarBurstAIBridgeDataReceived:(NSData *)data;`, which will be called when receive AI bridge data from the device.
+  - AI-Chat:
+    - Added SDK callback method `- (void)onRequestInitiateAIChat;`, which will be called when the device requests to initiate an AI-Chat session.
+    - Added SDK callback method `- (void)onRequestTerminateAIChat;`, which will be called when the device requests to terminate the current AI-Chat session.
+    - Added new API `+ (void)terminateAIChatSessionIfNeeded:(FitCloudCompletionHandler _Nullable)completion;` to allow the app to proactively terminate the current AI-Chat session.
+
 ## V1.3.2-beta.38 build20260111001 (2026-01-11)
 
 - Added device product type definition.

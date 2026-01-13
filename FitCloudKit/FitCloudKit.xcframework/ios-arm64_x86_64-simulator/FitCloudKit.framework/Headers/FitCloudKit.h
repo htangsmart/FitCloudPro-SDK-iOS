@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-01-11  Version:1.3.2-beta.38 Build:20260111001
+//      pcjbird    2026-01-13  Version:1.3.2-beta.39 Build:20260113001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1236,6 +1236,11 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - data: The WeChat Pay authentication bridge data
 + (void)sendWPAuthBridgeData:(NSData *)data;
 
+/// Send StarBurst AI bridge data
+/// - Parameters:
+///   - data: The StarBurst AI bridge data
++ (void)sendStarBurstAIBridgeData:(NSData *)data;
+
 /// Send Skyworth PV data
 /// - Parameters:
 ///   - stations: PV power station data, maximum 6 stations (extras ignored)
@@ -1980,6 +1985,17 @@ NS_ASSUME_NONNULL_BEGIN
                 isEnd:(BOOL)isEnd
            resultType:(LLMRESULTTYPE)resultType
            completion:(FitCloudCompletionHandler _Nullable)completion;
+
+@end
+
+@interface FitCloudKit (AiChat)
+
+/// Terminate the AI chat session if needed
+/// - Parameters:
+///   - completion: A completion handler called when the operation completes
+///     - success: Whether the termination was successful
+///     - error: Error information if termination fails, nil on success
++ (void)terminateAIChatSessionIfNeeded:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 
