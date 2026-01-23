@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.41 build20260124001 (2026-01-24)
+
+- Introduced new API `+ (void)restartSession;` to disconnect the currently connected device and re-initiates the login process using the previously authenticated user ID. This method is typically invoked as a recovery action when an error occurs during the automatic login process.
+
 ## V1.3.2-beta.40 build20260123001 (2026-01-23)
 
 - Optimized ANCS handling logic during device connection to improve stability and compatibility.

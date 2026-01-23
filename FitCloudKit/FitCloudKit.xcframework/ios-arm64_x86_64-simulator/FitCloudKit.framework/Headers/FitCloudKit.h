@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-01-23  Version:1.3.2-beta.40 Build:20260123001
+//      pcjbird    2026-01-24  Version:1.3.2-beta.41 Build:20260124001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -119,6 +119,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// This method also disables automatic reconnection for the current device.
 /// If no device is once connected, the method has no effect.
 + (void)disconnect;
+
+/// Disconnects the currently connected device and re-initiates the login process
+/// using the previously authenticated user ID.
+///
+/// This method is typically invoked as a recovery action when an error occurs
+/// during the automatic login process.
++ (void)restartSession;
 
 /// Ignore the currently connected but unbound/binding-failed device
 /// - Parameters:

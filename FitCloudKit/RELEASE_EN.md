@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-01-23 Version:1.3.2-beta.40 Build:20260123001  
+## pcjbird 2026-01-24 Version:1.3.2-beta.41 Build:20260124001  
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -48,6 +48,7 @@
 - Added device product type definition.
 - Introduced new APIs for AI-Chat features.
 - Optimized ANCS handling logic during device connection to improve stability and compatibility.
+- Introduced new API `+ (void)restartSession;` to disconnect the currently connected device and re-initiates the login process using the previously authenticated user ID. This method is typically invoked as a recovery action when an error occurs during the automatic login process.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

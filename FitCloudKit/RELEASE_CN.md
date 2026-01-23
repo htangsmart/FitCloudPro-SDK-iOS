@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2026-01-23 Version:1.3.2-beta.40 Build:20260123001
+## pcjbird 2026-01-24 Version:1.3.2-beta.41 Build:20260124001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -47,6 +47,7 @@
 - 新增设备产品类型定义。
 - 引入 AI-Chat 相关的 API 定义。
 - 优化设备连接过程中的 ANCS 处理逻辑，提升稳定性与兼容性。
+- 新增 API `+ (void)restartSession;`，用于断开当前已连接设备并使用之前已认证的用户 ID 重新发起登录流程。该方法通常在自动登录过程中出现错误时作为恢复操作被调用。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
