@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.40 build20260123001 (2026-01-23)
+
+- Optimized ANCS handling logic during device connection to improve stability and compatibility.
+
 ## V1.3.2-beta.39 build20260113001 (2026-01-13)
 
 - Introduced new APIs for AI-Chat features.
