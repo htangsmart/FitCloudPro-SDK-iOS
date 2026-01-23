@@ -51,6 +51,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 子项目号
 @property(nonatomic, strong, nullable) NSString* subProjNo;
 
+/// 芯片
+@property(nonatomic, readonly) FITCLOUDCHIPVENDOR chipVendor;
+
 @end
 
 NS_ASSUME_NONNULL_END

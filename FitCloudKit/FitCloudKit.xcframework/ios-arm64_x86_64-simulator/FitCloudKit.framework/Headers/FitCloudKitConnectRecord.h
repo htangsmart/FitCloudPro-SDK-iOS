@@ -32,6 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// The device product type,  defined by `FitCloudDeviceProductType`
 @property(nonatomic, strong, nullable) NSNumber* productType;
 
+/// the device chip vendor, defined by 'FITCLOUDCHIPVENDOR'
+@property(nonatomic, strong, nullable) NSNumber* chipVendor;
+
 /// The last connection time
 @property(nonatomic, strong) NSDate *lastConnectTime;
 
