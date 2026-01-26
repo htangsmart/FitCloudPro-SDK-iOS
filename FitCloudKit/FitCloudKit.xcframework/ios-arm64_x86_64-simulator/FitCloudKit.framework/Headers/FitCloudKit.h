@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-01-24  Version:1.3.2-beta.41 Build:20260124001
+//      pcjbird    2026-01-26  Version:1.3.2-beta.42 Build:20260126001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -325,6 +325,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Returns: The chip vendor type
 + (FITCLOUDCHIPVENDOR)chipVendor;
 
+#pragma mark Soc Platform Series
+
+/// Gets the current SoC platform series
+/// - Returns: The SoC platform series
++ (FitCloudSoCPlatformSeries) socPlatformSeries;
+
 #pragma mark Enter DFU Mode
 
 /// Prepares to enter firmware upgrade (DFU) mode
@@ -386,6 +392,21 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - timestamp: The starting timestamp
 ///   - completion: The completion handler called when the operation completes
 + (void)set24HoursWeather:(NSArray<FitCloudHourWeatherObject *> *_Nonnull)weathers timestamp:(NSDate *_Nonnull)timestamp completion:(FitCloudCompletionHandler _Nullable)completion;
+
+
+
+#pragma mark Send future hourly weathers
+
+
+/// Sends future hourly weather forecasts to the watch.
+///
+/// Use this method to push upcoming hourly weather data to the watch.
+///
+/// - Parameters:
+///   - hourlyWeathers: An array of ``FitCloudHourlyWeatherModel`` objects representing the next hours’ weather conditions.
+///   - completion: A ``FitCloudCompletionHandler`` called when the transfer finishes. The handler’s `success` flag indicates whether the watch acknowledged the data.
++ (void)sendFutureHourlyWeathers:(NSArray<FitCloudHourlyWeatherModel *> *_Nonnull)hourlyWeathers
+                      completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Send alarm clock list to the watch device
 
@@ -981,7 +1002,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Warning: This method will change the `watchPreferLang` of the FitCloudOption to the specified language if the language is different from the current, and then synchronize the language to the watch device.
 + (void)syncSpecificLanguageToWatch:(FITCLOUDLANGUAGE)lang completion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
 
-#pragma mark Query the current language of the watch device
+#pragma mark - Query the current language of the watch device
 
 /// Query the current language of the watch device
 /// - Parameters:
@@ -991,7 +1012,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - error: Error information if query fails, nil on success
 + (void)queryWatchLanguageWithCompletion:(void (^_Nullable)(BOOL success, FITCLOUDLANGUAGE lang, NSError *_Nullable error))completion;
 
-#pragma mark Query the supported languages of the watch device
+#pragma mark - Query the supported languages of the watch device
 /// Query the supported languages of the watch device
 /// - Parameters:
 ///   - completion: A completion handler called with the result. Parameters:
@@ -1007,6 +1028,16 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - language: The watch language
 /// - Returns: The Chinese display name of the language
 + (NSString *)cnDisplayNameOfWatchLanguage:(FITCLOUDLANGUAGE)language;
+
+# pragma mark - Query the device serial number
+
+/// Query Device Serial Number
+/// - Parameters:
+///   - completion: the completion callback
+///     - success: Whether the query was successful
+///     - sn: the serial number of the device if query is successful, otherwise nil
+///     - error: Error information if query fails, nil on success
++(void) queryDeviceSerialNumberWithCompletion:(void(^_Nullable)(BOOL success, NSString* _Nullable sn, NSError* _Nullable error)) completion;
 
 #pragma mark Supported Games
 
@@ -1080,21 +1111,29 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Query the supported workout types on the watch
 /// - Parameters:
-///   - completion: A completion handler called with the result. Parameters:
+///   - completion: A completion handler called with the result. 
 ///     - success: Whether the query was successful
 ///     - workoutTypesArray: The array of supported workout types, nil if query fails
 ///     - error: Error information if query fails, nil on success
 + (void)querySupportedWorkoutOnWatchWithCompletion:(void (^_Nullable)(BOOL success, NSArray<NSNumber *> *_Nullable workoutTypesArray, NSError *_Nullable error))completion;
 
-#pragma mark Query the workout slots on the watch
+#pragma mark - Query the workout slots on the watch
 
 /// Query the workout slots on the watch
 /// - Parameters:
-///   - completion: A completion handler called with the result. Parameters:
+///   - completion: A completion handler called with the result. 
 ///     - success: Whether the query was successful
 ///     - workoutSlots: The array of workout slots, nil if query fails
 ///     - error: Error information if query fails, nil on success
 + (void)queryWorkoutSlotsOnWatchWithCompletion:(void (^_Nullable)(BOOL success, NSArray<FitCloudWorkoutSlot *> *_Nullable workoutSlots, NSError *_Nullable error))completion;
+
+#pragma mark - Edit workout slots on Watch
+
+/// Edit the workout slots on the watch
+/// - Parameters:
+///   - workoutSlots: Array of workout slots; if the workout type of a slot is set to nil, it means to remove the workout item in that slot
+///   - completion: The completion handler called when the operation completes
++ (void)editWorkoutSlotsOnWatch:(NSArray<FitCloudWorkoutSlotEditModel*>*)workoutSlots completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark QR Code Features
 
@@ -1997,12 +2036,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FitCloudKit (AiChat)
 
-/// Terminate the AI chat session if needed
+
+/// Notify the device the AI chat session initiated success.
+/// - Parameters:
+///   - completion: Callback closure after the report is complete.
+///     - success: Whether the report was successful.
+///     - deviceEncounteredException: Indicates whether the device encountered an exception during initiation. If true, the app must terminate the AI chat.
+///     - error: Error information, `nil` on success.
++ (void)reportAIChatSessionInitiateSuccess:(void (^_Nullable)(BOOL success,
+                                                              BOOL deviceEncounteredException,
+                                                              NSError *_Nullable error))completion;
+
+/// Notify the device the AI chat session initiate failed or already terminated
 /// - Parameters:
 ///   - completion: A completion handler called when the operation completes
 ///     - success: Whether the termination was successful
 ///     - error: Error information if termination fails, nil on success
-+ (void)terminateAIChatSessionIfNeeded:(FitCloudCompletionHandler _Nullable)completion;
++ (void)reportAIChatSessionInitiateFailedOrTerminated:(FitCloudCompletionHandler _Nullable)completion;
+
 
 @end
 

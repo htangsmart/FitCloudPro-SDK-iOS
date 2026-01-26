@@ -192,6 +192,31 @@ typedef NS_ENUM(NSInteger, FITCLOUDCHIPVENDOR) {
     FITCLOUDCHIPVENDOR_BLUETRUM = 3,
 };
 
+#pragma mark - SoC (System on Chip) 平台系列
+
+typedef NS_ENUM(NSInteger, FitCloudSoCPlatformSeries) {
+    
+    /// 未知
+    FitCloudSoCPlatformSeriesUnknown = -1,
+    /// 瑞昱（未明确系列）
+    FitCloudSoCPlatformSeriesRealtek = 0,
+    /// 瑞昱 8762d
+    FitCloudSoCPlatformSeriesRealtek8762d = 1,
+    /// 瑞昱 8762c
+    FitCloudSoCPlatformSeriesRealtek8762c = 2,
+    /// 瑞昱 87x3
+    FitCloudSoCPlatformSeriesRealtek87x3 = 3,
+    /// 中科蓝讯（未明确系列）
+    FitCloudSoCPlatformSeriesBluetrum = 100,
+    /// 中科蓝讯 568x
+    FitCloudSoCPlatformSeriesBluetrum568x = 101,
+    /// 中科蓝讯 579x
+    FitCloudSoCPlatformSeriesBluetrum579x = 102,
+    /// Nordic（未明确系列）
+    FitCloudSoCPlatformSeriesNordic = 200,
+};
+
+
 #pragma mark - Device Product Type
 
 /// the device product type defines
@@ -334,7 +359,9 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICECAPACITY) {
     /// 支持的最大世界时钟数量
     FITCLOUDDEVICECAPACITY_WORLDCLOCKCOUNT = 0x20,
     /// 支持的最大来电照片插槽数量
-    FITCLOUDDEVICECAPACITY_INCOMINGCALLPHOTOSLOTCOUNT = 0x21,
+    FITCLOUDDEVICECAPACITY_INCOMINGCALLPHOTOSLOTCOUNT = 0x21,    
+    /// Maximum number of supported future hourly weather forecast hours
+    FITCLOUDDEVICECAPACITY_MAXFUTUREHOURLYWEATHERHOURS = 0x22,
 };
 
 #pragma mark - 手表硬件

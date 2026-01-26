@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-01-24 Version:1.3.2-beta.41 Build:20260124001  
+## pcjbird 2026-01-26 Version:1.3.2-beta.42 Build:20260126001  
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -49,6 +49,9 @@
 - Introduced new APIs for AI-Chat features.
 - Optimized ANCS handling logic during device connection to improve stability and compatibility.
 - Introduced new API `+ (void)restartSession;` to disconnect the currently connected device and re-initiates the login process using the previously authenticated user ID. This method is typically invoked as a recovery action when an error occurs during the automatic login process.
+- Introduce new API `+(void) queryDeviceSerialNumberWithCompletion:(void(^_Nullable)(BOOL success, NSString* _Nullable sn, NSError* _Nullable error)) completion;` to query the serial number of the device, only avaliable on some devices.
+- Introduce new API `+ (void)editWorkoutSlotsOnWatch:(NSArray<FitCloudWorkoutSlotEditModel*>*)workoutSlots completion:(FitCloudCompletionHandler _Nullable)completion;` to edit the workout slots on watch, only avaliable on some devices.
+- Introduce new API `+ (void)sendFutureHourlyWeathers:(NSArray<FitCloudHourlyWeatherModel *> *_Nonnull)hourlyWeathers completion:(FitCloudCompletionHandler _Nullable)completion;` to send future hourly weather to the device, only available on some of the watch devices.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

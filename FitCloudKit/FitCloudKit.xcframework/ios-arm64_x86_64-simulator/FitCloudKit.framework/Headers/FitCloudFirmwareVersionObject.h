@@ -34,6 +34,9 @@
 /// 手表硬件支持的功能，手机 APP 根据该项判断在手机 APP 上是否显示或使用该功能
 @property(nonatomic, readonly) FITCLOUDHARDWARE hardwareSupported;
 
+/// SoC 平台系列
+@property(nonatomic, readonly) FitCloudSoCPlatformSeries socPlatformSeries;
+
 /// 是否禁止自定义屏幕显示
 @property(nonatomic, readonly) BOOL disableCustomScreenDisplay;
 
@@ -355,5 +358,11 @@
 
 /// 是否支持耳机相关 API
 @property(nonatomic, readonly) BOOL allowEarbudsAPIs;
+
+/// 是否支持查询设备序列号
+@property(nonatomic, readonly) BOOL allowQueryDeivceSerialNumber;
+
+/// 是否支持编辑运动槽位
+@property(nonatomic, readonly) BOOL allowEditWorkoutSlots;
 
 @end

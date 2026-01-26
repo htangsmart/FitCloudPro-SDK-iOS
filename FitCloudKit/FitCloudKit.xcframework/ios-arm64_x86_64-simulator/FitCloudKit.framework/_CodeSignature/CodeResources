@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/FitCloudDataModels.h</key>
 		<data>
-		aHxsaas9/Wm5v1GfZNMA517Is7I=
+		mUTOoKHobT4JEtFTk9rnyI5quCE=
 		</data>
 		<key>Headers/FitCloudECGDefines.h</key>
 		<data>
@@ -138,7 +138,7 @@
 		</data>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
-		WgaxN9qG6MEw0DRxohrJeiDoFkw=
+		pdEJjwUsuw0cVq7GMLNyR5zhPo0=
 		</data>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
 		<data>
@@ -242,7 +242,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		oqWmY+x0DV/u5lKsct0JWNoDyZ8=
+		f3w5Y8c+a+i4lxWV5Z3lJ0q4rsY=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -250,7 +250,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		DQe8hY1gZ+A6cBHKdy5L+ZDnkbk=
+		1JSGhTGdQxlsSc1YiRogJr6uFW4=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -396,6 +396,10 @@
 		<data>
 		LAVj9z0vo+IA3niV78XiSH9mzss=
 		</data>
+		<key>Headers/FitCloudWorkoutSlotEditModel.h</key>
+		<data>
+		eYZdiBzSf0NLT9Zunv149DVyLn0=
+		</data>
 		<key>Headers/FitCloudWorkoutSummaryDataModel.h</key>
 		<data>
 		NEOAloeixvBfehYmd7Mpa6E7t5g=
@@ -434,7 +438,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EKommfJLThP9FcTDvDnhvLPqXi0=
+		qJvccRXDmblzBa2DiqBsIe/wuA0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -601,7 +605,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			I4hQnLpewLSKZOjws2UJSGVmQWrYQ9Q+UuPib5YtS7g=
+			xm8E/MFc+57iZgZst55GV7Wmoy269evXSUuLpQ1Zlcs=
 			</data>
 		</dict>
 		<key>Headers/FitCloudECGDefines.h</key>
@@ -678,7 +682,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			P6LweNHNwl1q4Kg3HndG/tSlrBnT1zfOPjbJEZLaJ8c=
+			d7kN2lxZ81FmhRuJ722lxyKg7Vkio4sXTJPZw5qBIxE=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
@@ -860,7 +864,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PxYBUbTaxZ977vBCUotr3QiHz/2t4mVSD/QxZWIJ7p0=
+			3Ruv7MF7GL+c9Wu6mfsReK5/xuisQeMfBNdNqF/WfNs=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -874,7 +878,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ES1B929Y31Gcn1UKaAyE0C0nVBlz9bM+jKKd+/RFtDY=
+			5CppYwa5Ktglxgj4rxS0bfRgVXI0lvty2EzmRhWHG5c=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
@@ -1127,6 +1131,13 @@
 			<key>hash2</key>
 			<data>
 			VZa5ab5tKqiAf0bFdERmlKIJj16P+6lTV4C4TkefeB4=
+			</data>
+		</dict>
+		<key>Headers/FitCloudWorkoutSlotEditModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			t5NmjAV2nqQf92gCb8EQVtstTaLhWJQobw/pzYGsW5I=
 			</data>
 		</dict>
 		<key>Headers/FitCloudWorkoutSummaryDataModel.h</key>

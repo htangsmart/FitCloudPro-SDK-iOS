@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## V1.3.2-beta.42 build20260126001 (2026-01-26)
+
+- Fix AI Chat–related APIs:
+  - Remove API `+ (void)terminateAIChatSessionIfNeeded:(FitCloudCompletionHandler _Nullable)completion;`.
+  - Added new API `+ (void)reportAIChatSessionInitiateFailedOrTerminated:(FitCloudCompletionHandler _Nullable)completion;` to notify the device the AI chat session initiate failed or already terminated.
+  - Added new API `+ (void)reportAIChatSessionInitiateSuccess:(void (^_Nullable)(BOOL success, BOOL deviceEncounteredException, NSError *_Nullable error))completion;` to notify the device the AI chat session initiated success, if the API callback parameter `deviceEncounteredException` is true, the app must terminate the AI chat.
+- Introduce new API `+(void) queryDeviceSerialNumberWithCompletion:(void(^_Nullable)(BOOL success, NSString* _Nullable sn, NSError* _Nullable error)) completion;` to query the serial number of the device, only avaliable on some devices.
+- Introduce new API `+ (void)editWorkoutSlotsOnWatch:(NSArray<FitCloudWorkoutSlotEditModel*>*)workoutSlots completion:(FitCloudCompletionHandler _Nullable)completion;` to edit the workout slots on watch, only avaliable on some devices.
+- Introduce new API `+ (void)sendFutureHourlyWeathers:(NSArray<FitCloudHourlyWeatherModel *> *_Nonnull)hourlyWeathers completion:(FitCloudCompletionHandler _Nullable)completion;` to send future hourly weather to the device, only available on some of the watch devices.
+
 ## V1.3.2-beta.41 build20260124001 (2026-01-24)
 
 - Introduced new API `+ (void)restartSession;` to disconnect the currently connected device and re-initiates the login process using the previously authenticated user ID. This method is typically invoked as a recovery action when an error occurs during the automatic login process.
