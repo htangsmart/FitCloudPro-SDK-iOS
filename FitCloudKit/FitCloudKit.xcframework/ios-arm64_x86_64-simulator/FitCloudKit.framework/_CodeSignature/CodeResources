@@ -196,6 +196,10 @@
 		<data>
 		npiQzkWG8Ckw7WymxiN+RIu60Jw=
 		</data>
+		<key>Headers/FitCloudHourlyWeatherModel.h</key>
+		<data>
+		aZkvLmBooGx+6M72fcz//w6i670=
+		</data>
 		<key>Headers/FitCloudIncomingCallPhotoSlotModel.h</key>
 		<data>
 		ENn8QIXkttfw5KVqUO9hYgxG3wQ=
@@ -781,6 +785,13 @@
 			<key>hash2</key>
 			<data>
 			YNa1aI1c6kyZ1Eox0cUMqERwXHfpNO0JyFWnBHLe9NI=
+			</data>
+		</dict>
+		<key>Headers/FitCloudHourlyWeatherModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZNuez5+TaoS1Knl5uZizckD4zC+PUI5xxQtZlwpjqZY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudIncomingCallPhotoSlotModel.h</key>
