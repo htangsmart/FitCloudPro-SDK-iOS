@@ -9,6 +9,7 @@
 - Introduce new API `+(void) queryDeviceSerialNumberWithCompletion:(void(^_Nullable)(BOOL success, NSString* _Nullable sn, NSError* _Nullable error)) completion;` to query the serial number of the device, only avaliable on some devices.
 - Introduce new API `+ (void)editWorkoutSlotsOnWatch:(NSArray<FitCloudWorkoutSlotEditModel*>*)workoutSlots completion:(FitCloudCompletionHandler _Nullable)completion;` to edit the workout slots on watch, only avaliable on some devices.
 - Introduce new API `+ (void)sendFutureHourlyWeathers:(NSArray<FitCloudHourlyWeatherModel *> *_Nonnull)hourlyWeathers completion:(FitCloudCompletionHandler _Nullable)completion;` to send future hourly weather to the device, only available on some of the watch devices.
+- Introduce new API `+ (FitCloudSoCPlatformSeries) socPlatformSeries;` to query the SoC platform series.
 
 ## V1.3.2-beta.41 build20260124001 (2026-01-24)
 

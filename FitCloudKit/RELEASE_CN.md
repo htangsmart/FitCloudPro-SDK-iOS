@@ -51,6 +51,7 @@
 - 新增 API `+(void)queryDeviceSerialNumberWithCompletion:(void(^_Nullable)(BOOL success, NSString* _Nullable sn, NSError* _Nullable error))completion;`，用于查询设备序列号，仅部分设备支持。
 - 新增 API `+ (void)editWorkoutSlotsOnWatch:(NSArray<FitCloudWorkoutSlotEditModel*>*)workoutSlots completion:(FitCloudCompletionHandler _Nullable)completion;`，用于编辑手表上的运动槽位，仅部分设备支持。
 - 新增 API `+ (void)sendFutureHourlyWeathers:(NSArray<FitCloudHourlyWeatherModel *> *_Nonnull)hourlyWeathers completion:(FitCloudCompletionHandler _Nullable)completion;`，用于向设备发送未来逐小时天气，仅部分手表支持。
+- 新增 API `+ (FitCloudSoCPlatformSeries) socPlatformSeries;` 用于查询 SoC 平台系列。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

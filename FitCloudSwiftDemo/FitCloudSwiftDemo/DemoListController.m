@@ -33,8 +33,40 @@
     }
     else if(indexPath.row == 2)
     {
-        
+        [self sendFuture100HourlyWeather];
     }
+}
+
+
+-(void) sendFuture100HourlyWeather
+{
+    NSMutableArray* hourlyWeatherArray = [NSMutableArray array];
+    NSDate* now = [NSDate date];
+    for(NSInteger index = 0; index < 100; index++)
+    {
+        FitCloudHourlyWeatherModel* model = [FitCloudHourlyWeatherModel new];
+        model.timestamp = [now dateByAddingTimeInterval:index*3600];
+        // 随机生成天气数据
+        model.weatherType = arc4random_uniform(10); // 0~9 共 10 种天气类型
+        model.temperature = -20 + arc4random_uniform(61); // -20~40 °C
+        model.windScale = arc4random_uniform(13); // 0~12 级风力
+        model.uvIndex = arc4random_uniform(12); // 0~11 UV 指数
+        model.visibility = 100 + arc4random_uniform(30000); // 100~30000 米，避开 0
+        model.airQualityIndex = arc4random_uniform(401); // 0~400 空气质量指数
+        [hourlyWeatherArray addObject:model];
+    }
+    __weak typeof(self) weakSelf = self;
+    [FitCloudKit sendFutureHourlyWeathers:hourlyWeatherArray completion:^(BOOL success, NSError * _Nullable error) {
+        if ([error isKindOfClass:[NSError class]]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.view makeToast:error.localizedDescription duration:3.0f position:CSToastPositionTop];
+            });
+            return;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.view makeToast:@"Send success." duration:3.0f position:CSToastPositionTop];
+        });
+    }];
 }
 
 -(void) fetchSportsDataToday
