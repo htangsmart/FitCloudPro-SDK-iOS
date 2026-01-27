@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.2.1-beta.2 build20260127001 (2026-01-27)
+
+- Added support for  579X platform.
+
 ## V1.2.1-beta.1 build20250830001 (2025-08-30)
 
 - Fixed some Italian translations.

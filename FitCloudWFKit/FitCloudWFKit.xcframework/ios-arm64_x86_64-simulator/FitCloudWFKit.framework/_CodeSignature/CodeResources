@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FM5zCuf+PR83hV4YV8xvjXCT6ho=
+		6ltlFNOi4Lwx7eyjlcrhmhLRONg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -29,10 +29,6 @@
 	<dict>
 		<key>Headers/DevicePhotoCreateParams.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			vB98Vhnusz6x9AR9kpn2VdCJCUA=
-			</data>
 			<key>hash2</key>
 			<data>
 			uwXzws/9a5IfYUR91p5NJJ4DHzLoZEHIJfIBJRZKQLA=
@@ -40,10 +36,6 @@
 		</dict>
 		<key>Headers/FCWKErrorCode.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			VypYxhXK3/uT+cGCq/63lt/Ya9k=
-			</data>
 			<key>hash2</key>
 			<data>
 			D2ydxDMR5pHVU/W4MytCZ4EUssYBJAb39sxXzGAiCz8=
@@ -51,10 +43,6 @@
 		</dict>
 		<key>Headers/FitCloudWFKit.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			AgVOaFOKL7XL/6eyLbcXf3SRt20=
-			</data>
 			<key>hash2</key>
 			<data>
 			TGprH7K4w7BDO3musOSTZJXbLjzFFTHK/nfgErrpG5A=
@@ -62,10 +50,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			T8qxTNAqxpldok7BxIno9CegobI=
-			</data>
 			<key>hash2</key>
 			<data>
 			THSsFbunXL/nrT1Izr9GR7+DlYeZkG07BG8Si7vT+Zg=
