@@ -1306,6 +1306,56 @@
             "init_kind": "Convenience"
           },
           {
+            "kind": "Var",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(cpy)supportsSecureCoding",
+            "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC20supportsSecureCodingSbvpZ",
+            "moduleName": "FitCloudOTAGenKit",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FitCloudOTAGenKit@objc(cs)ICOEEPOFile(cm)supportsSecureCoding",
+                "mangledName": "$s17FitCloudOTAGenKit11ICOEEPOFileC20supportsSecureCodingSbvgZ",
+                "moduleName": "FitCloudOTAGenKit",
+                "static": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "encode",
             "printedName": "encode(with:)",
@@ -2123,7 +2173,7 @@
                     "kind": "TypeNominal",
                     "name": "LogLevel",
                     "printedName": "FitCloudOTAGenKit.LogLevel",
-                    "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                    "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                   },
                   {
                     "kind": "TypeNominal",
@@ -2134,7 +2184,7 @@
                         "kind": "TypeNominal",
                         "name": "LogLevel",
                         "printedName": "FitCloudOTAGenKit.LogLevel",
-                        "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                        "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                       }
                     ]
                   }
@@ -2142,7 +2192,7 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel@LogLevelVerbose",
+            "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel@FitCloudOTAGenKitLogLevelVerbose",
             "mangledName": "$s17FitCloudOTAGenKit8LogLevelO7verboseyA2CmF",
             "moduleName": "FitCloudOTAGenKit",
             "declAttributes": [
@@ -2165,7 +2215,7 @@
                     "kind": "TypeNominal",
                     "name": "LogLevel",
                     "printedName": "FitCloudOTAGenKit.LogLevel",
-                    "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                    "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                   },
                   {
                     "kind": "TypeNominal",
@@ -2176,7 +2226,7 @@
                         "kind": "TypeNominal",
                         "name": "LogLevel",
                         "printedName": "FitCloudOTAGenKit.LogLevel",
-                        "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                        "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                       }
                     ]
                   }
@@ -2184,7 +2234,7 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel@LogLevelDebug",
+            "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel@FitCloudOTAGenKitLogLevelDebug",
             "mangledName": "$s17FitCloudOTAGenKit8LogLevelO5debugyA2CmF",
             "moduleName": "FitCloudOTAGenKit",
             "declAttributes": [
@@ -2207,7 +2257,7 @@
                     "kind": "TypeNominal",
                     "name": "LogLevel",
                     "printedName": "FitCloudOTAGenKit.LogLevel",
-                    "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                    "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                   },
                   {
                     "kind": "TypeNominal",
@@ -2218,7 +2268,7 @@
                         "kind": "TypeNominal",
                         "name": "LogLevel",
                         "printedName": "FitCloudOTAGenKit.LogLevel",
-                        "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                        "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                       }
                     ]
                   }
@@ -2226,7 +2276,7 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel@LogLevelInfo",
+            "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel@FitCloudOTAGenKitLogLevelInfo",
             "mangledName": "$s17FitCloudOTAGenKit8LogLevelO4infoyA2CmF",
             "moduleName": "FitCloudOTAGenKit",
             "declAttributes": [
@@ -2249,7 +2299,7 @@
                     "kind": "TypeNominal",
                     "name": "LogLevel",
                     "printedName": "FitCloudOTAGenKit.LogLevel",
-                    "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                    "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                   },
                   {
                     "kind": "TypeNominal",
@@ -2260,7 +2310,7 @@
                         "kind": "TypeNominal",
                         "name": "LogLevel",
                         "printedName": "FitCloudOTAGenKit.LogLevel",
-                        "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                        "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                       }
                     ]
                   }
@@ -2268,7 +2318,7 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel@LogLevelWarning",
+            "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel@FitCloudOTAGenKitLogLevelWarning",
             "mangledName": "$s17FitCloudOTAGenKit8LogLevelO7warningyA2CmF",
             "moduleName": "FitCloudOTAGenKit",
             "declAttributes": [
@@ -2291,7 +2341,7 @@
                     "kind": "TypeNominal",
                     "name": "LogLevel",
                     "printedName": "FitCloudOTAGenKit.LogLevel",
-                    "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                    "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                   },
                   {
                     "kind": "TypeNominal",
@@ -2302,7 +2352,7 @@
                         "kind": "TypeNominal",
                         "name": "LogLevel",
                         "printedName": "FitCloudOTAGenKit.LogLevel",
-                        "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                        "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                       }
                     ]
                   }
@@ -2310,7 +2360,7 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel@LogLevelError",
+            "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel@FitCloudOTAGenKitLogLevelError",
             "mangledName": "$s17FitCloudOTAGenKit8LogLevelO5erroryA2CmF",
             "moduleName": "FitCloudOTAGenKit",
             "declAttributes": [
@@ -2333,7 +2383,7 @@
                     "kind": "TypeNominal",
                     "name": "LogLevel",
                     "printedName": "FitCloudOTAGenKit.LogLevel",
-                    "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                    "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
                   }
                 ],
                 "usr": "s:Sq"
@@ -2435,9 +2485,10 @@
           }
         ],
         "declKind": "Enum",
-        "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel",
+        "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel",
         "mangledName": "$s17FitCloudOTAGenKit8LogLevelO",
         "moduleName": "FitCloudOTAGenKit",
+        "objc_name": "FitCloudOTAGenKitLogLevel",
         "declAttributes": [
           "AccessControl",
           "ObjC",
@@ -2523,7 +2574,7 @@
                 "kind": "TypeNominal",
                 "name": "LogLevel",
                 "printedName": "FitCloudOTAGenKit.LogLevel",
-                "usr": "c:@M@FitCloudOTAGenKit@E@LogLevel"
+                "usr": "c:@M@FitCloudOTAGenKit@E@FitCloudOTAGenKitLogLevel"
               },
               {
                 "kind": "TypeNominal",
@@ -3061,6 +3112,13 @@
             "printedName": "_ObjectiveCBridgeableError",
             "usr": "s:10Foundation26_ObjectiveCBridgeableErrorP",
             "mangledName": "$s10Foundation26_ObjectiveCBridgeableErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -3396,6 +3454,13 @@
             "printedName": "_ObjectiveCBridgeableError",
             "usr": "s:10Foundation26_ObjectiveCBridgeableErrorP",
             "mangledName": "$s10Foundation26_ObjectiveCBridgeableErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -4020,22 +4085,29 @@
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/ICOEEPOFile.swift",
+      "kind": "BooleanLiteral",
+      "offset": 949,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/ICOEEPOFile.swift",
       "kind": "StringLiteral",
-      "offset": 1109,
+      "offset": 1197,
       "length": 86,
       "value": "\"[芯与物EPO文件] 文件路径：\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/ICOEEPOFile.swift",
       "kind": "StringLiteral",
-      "offset": 1162,
+      "offset": 1250,
       "length": 15,
       "value": "\" 文件类型：\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/ICOEEPOFile.swift",
       "kind": "StringLiteral",
-      "offset": 1194,
+      "offset": 1282,
       "length": 1,
       "value": "\"\""
     },
@@ -4140,35 +4212,35 @@
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
       "kind": "IntegerLiteral",
-      "offset": 198,
+      "offset": 225,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
       "kind": "IntegerLiteral",
-      "offset": 236,
+      "offset": 263,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
       "kind": "IntegerLiteral",
-      "offset": 272,
+      "offset": 299,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
       "kind": "IntegerLiteral",
-      "offset": 314,
+      "offset": 341,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudOTAGenKit\/FitCloudOTAGenKit\/Log\/Loggable.swift",
       "kind": "IntegerLiteral",
-      "offset": 352,
+      "offset": 379,
       "length": 1,
       "value": "4"
     },
