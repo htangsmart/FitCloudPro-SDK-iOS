@@ -51,8 +51,8 @@
         model.temperature = -20 + arc4random_uniform(61); // -20~40 °C
         model.windScale = arc4random_uniform(13); // 0~12 级风力
         model.uvIndex = arc4random_uniform(12); // 0~11 UV 指数
-        model.visibility = 100 + arc4random_uniform(30000); // 100~30000 米，避开 0
-        model.airQualityIndex = arc4random_uniform(401); // 0~400 空气质量指数
+        model.visibility = 100 + arc4random_uniform(30000-200); // 100~30000 米，避开 0
+        model.airQualityIndex = arc4random_uniform(380); // 0~400 空气质量指数
         [hourlyWeatherArray addObject:model];
     }
     __weak typeof(self) weakSelf = self;

@@ -791,6 +791,8 @@ extension  FitCloudProSDK: FitCloudCallback {
             XLOG_WARNING(message)
         case .ERROR:
             XLOG_ERROR(message)
+        case .VERBOSE:
+            XLOG_VERBOSE(message)
         default:
             XLOG_DEBUG(message)
         }

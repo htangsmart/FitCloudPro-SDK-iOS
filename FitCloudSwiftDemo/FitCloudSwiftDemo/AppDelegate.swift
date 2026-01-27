@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let option = iOSLogBrowserOption.default()
         option.showQueueNameInBrowser = true
+        option.minLogLevel = .VERBOSE
         iOSLogBrowserSDK.start(with: option)
         XLOG_INFO("您正在使用 iOS 局域网日志查看服务！")
         FitCloudProSDK.shared.start()
