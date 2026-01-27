@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.43 build20260127001 (2026-01-27)
+
+- Fix an issue for API `+ (void)sendFutureHourlyWeathers:(NSArray<FitCloudHourlyWeatherModel *> *_Nonnull)hourlyWeathers completion:(FitCloudCompletionHandler _Nullable)completion;`.
+
 ## V1.3.2-beta.42 build20260126001 (2026-01-26)
 
 - Fix AI Chat–related APIs:
