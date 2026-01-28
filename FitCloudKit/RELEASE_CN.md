@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2026-01-28 Version:1.3.2-beta.44 Build:20260128001
+## pcjbird 2026-01-28 Version:1.3.2-beta.45 Build:20260128002
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -52,6 +52,7 @@
 - 新增 API `+ (void)sendFutureHourlyWeathers:(NSArray<FitCloudHourlyWeatherModel *> *_Nonnull)hourlyWeathers completion:(FitCloudCompletionHandler _Nullable)completion;`，用于向设备发送未来逐小时天气，仅部分手表支持。
 - 新增 API `+ (FitCloudSoCPlatformSeries) socPlatformSeries;` 用于查询 SoC 平台系列。
 - 新增运动槽位编辑相关的 API。
+- 新增用于配置和查询设备端语音唤醒功能启用状态的 API。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

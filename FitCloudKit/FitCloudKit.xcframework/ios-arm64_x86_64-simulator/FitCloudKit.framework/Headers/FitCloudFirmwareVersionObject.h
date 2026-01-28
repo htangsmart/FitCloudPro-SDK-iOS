@@ -365,4 +365,7 @@
 /// 是否支持编辑运动槽位
 @property(nonatomic, readonly) BOOL allowEditWorkoutSlots;
 
+/// 是否支持设备端语音唤醒
+@property(nonatomic, readonly) BOOL allowVoiceWakeUpOnDevice;
+
 @end

@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-01-28 Version:1.3.2-beta.44 Build:20260128001  
+## pcjbird 2026-01-28 Version:1.3.2-beta.45 Build:20260128002  
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -53,6 +53,7 @@
 - Introduce new API `+ (void)sendFutureHourlyWeathers:(NSArray<FitCloudHourlyWeatherModel *> *_Nonnull)hourlyWeathers completion:(FitCloudCompletionHandler _Nullable)completion;` to send future hourly weather to the device, only available on some of the watch devices.
 - Introduce new API `+ (FitCloudSoCPlatformSeries) socPlatformSeries;` to query the SoC platform series.
 - Introduce new APIs for workout slot edit.
+- Introduced new APIs to configure and query the enable state of on-device voice wake-up.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

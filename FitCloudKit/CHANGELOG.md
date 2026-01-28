@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.45 build20260128002 (2026-01-28)
+
+- Introduced new APIs to configure and query the enable state of on-device voice wake-up.
+
 ## V1.3.2-beta.44 build20260128001 (2026-01-28)
 
 - Fix workout slot edit related APIs:

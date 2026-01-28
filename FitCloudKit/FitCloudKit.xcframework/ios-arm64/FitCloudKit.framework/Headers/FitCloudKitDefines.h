@@ -2254,4 +2254,16 @@ typedef NS_ENUM(NSInteger, FitCloudEarbudSide) {
     FitCloudEarbudSideRight = 1,
 };
 
+#pragma mark - 开关状态
+
+/// 开关状态
+typedef NS_ENUM(NSInteger, FitCloudEnableState) {
+    /// 未知
+    FitCloudEnableStateUnknown = -1,
+    /// 关闭
+    FitCloudEnableStateOff = 0,
+    ///  开启
+    FitCloudEnableStateOn = 1,
+};
+
 #endif /* FitCloudKitDefines_h */

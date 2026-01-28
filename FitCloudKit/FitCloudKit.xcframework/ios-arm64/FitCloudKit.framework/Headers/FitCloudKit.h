@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-01-27  Version:1.3.2-beta.43 Build:20260127001
+//      pcjbird    2026-01-28  Version:1.3.2-beta.45 Build:20260128002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -2068,6 +2068,26 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - success: Whether the termination was successful
 ///     - error: Error information if termination fails, nil on success
 + (void)reportAIChatSessionInitiateFailedOrTerminated:(FitCloudCompletionHandler _Nullable)completion;
+
+
+/// Enable or disable on-device voice wake-up.
+/// - Parameters:
+///   - enabled: Pass `YES` to enable wake-up, `NO` to disable it.
+///   - completion: The closure invoked when the operation finishes.
+///     - success: `YES` if the command was accepted, `NO` otherwise.
+///     - error: An error object on failure, `nil` on success.
++ (void)setOnDeviceVoiceWakeUpEnabled:(BOOL)enabled
+                           completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Query the current enable state of on-device voice wake-up.
+/// - Parameters:
+///   - completion: The closure invoked with the query result.
+///     - success: `YES` if the query succeeded, `NO` otherwise.
+///     - enableState: The current enable state.
+///     - error: An error object on failure, `nil` on success.
++ (void)queryOnDeviceVoiceWakeUpEnableStateWithCompletion:(void (^_Nullable)(BOOL success,
+                                                                             FitCloudEnableState enableState,
+                                                                             NSError *_Nullable error))completion;
 
 
 @end
