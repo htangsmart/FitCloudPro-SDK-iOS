@@ -1,5 +1,5 @@
 //
-//  FitCloudWorkoutSlotEditModel.h
+//  FitCloudEditableWorkoutSlotModel.h
 //  FitCloudKit
 //
 //  Created by pcjbird on 2026-01-26.
@@ -11,12 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface FitCloudWorkoutSlotEditModel : NSObject
+@interface FitCloudEditableWorkoutSlotModel : NSObject
 
 /// The index position of the slot
 @property(nonatomic, assign) NSUInteger slotIndex;
 
-/// The workout type identifier, if nil means will delete the workout in this slot
+/// The workout type identifier, if nil means the slots has no workout currently
 @property(nonatomic, copy, nullable) NSNumber* workoutType;
 
 @end

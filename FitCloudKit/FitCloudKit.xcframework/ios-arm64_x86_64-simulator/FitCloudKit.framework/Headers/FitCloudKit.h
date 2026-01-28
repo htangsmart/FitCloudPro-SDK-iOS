@@ -1115,7 +1115,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - success: Whether the query was successful
 ///     - workoutTypesArray: The array of supported workout types, nil if query fails
 ///     - error: Error information if query fails, nil on success
-+ (void)querySupportedWorkoutOnWatchWithCompletion:(void (^_Nullable)(BOOL success, NSArray<NSNumber *> *_Nullable workoutTypesArray, NSError *_Nullable error))completion;
++ (void)querySupportedWorkoutOnWatchWithCompletion:(void (^_Nullable)(BOOL success, 
+                                                                      NSArray<NSNumber *> *_Nullable workoutTypesArray, 
+                                                                      NSError *_Nullable error))completion;
 
 #pragma mark - Query the workout slots on the watch
 
@@ -1125,15 +1127,28 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - success: Whether the query was successful
 ///     - workoutSlots: The array of workout slots, nil if query fails
 ///     - error: Error information if query fails, nil on success
-+ (void)queryWorkoutSlotsOnWatchWithCompletion:(void (^_Nullable)(BOOL success, NSArray<FitCloudWorkoutSlot *> *_Nullable workoutSlots, NSError *_Nullable error))completion;
++ (void)queryWorkoutSlotsOnWatchWithCompletion:(void (^_Nullable)(BOOL success, 
+                                                                  NSArray<FitCloudWorkoutSlot *> *_Nullable workoutSlots, 
+                                                                  NSError *_Nullable error))completion;
 
 #pragma mark - Edit workout slots on Watch
 
-/// Edit the workout slots on the watch
+/// Query editable workout slots on the watch
+/// - Parameters:
+///   - completion: A completion handler called with the result. 
+///     - success: Whether the query was successful
+///     - workoutSlots: The array of editable workout slots, nil if query fails
+///     - error: Error information if query fails, nil on success
++ (void)queryEditableWorkoutSlotsOnWatchWithCompletion:(void (^_Nullable)(BOOL success, 
+                                                                          NSArray<FitCloudEditableWorkoutSlotModel *> *_Nullable workoutSlots, 
+                                                                          NSError *_Nullable error))completion;
+
+/// Update editable the workout slots on the watch
 /// - Parameters:
 ///   - workoutSlots: Array of workout slots; if the workout type of a slot is set to nil, it means to remove the workout item in that slot
 ///   - completion: The completion handler called when the operation completes
-+ (void)editWorkoutSlotsOnWatch:(NSArray<FitCloudWorkoutSlotEditModel*>*)workoutSlots completion:(FitCloudCompletionHandler _Nullable)completion;
++ (void)updateEditableWorkoutSlotsOnWatch:(NSArray<FitCloudEditableWorkoutSlotModel*>*)workoutSlots 
+                               completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark QR Code Features
 

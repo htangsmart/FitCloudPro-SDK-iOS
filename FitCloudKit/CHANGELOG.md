@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## V1.3.2-beta.44 build20260128001 (2026-01-28)
+
+- Fix workout slot edit related APIs:
+  - Remove API `+ (void)editWorkoutSlotsOnWatch:(NSArray<FitCloudWorkoutSlotEditModel*>*)workoutSlots completion:(FitCloudCompletionHandler _Nullable)completion;`.
+  - Introduced new API `+ (void)queryEditableWorkoutSlotsOnWatchWithCompletion:(void (^_Nullable)(BOOL success, NSArray<FitCloudEditableWorkoutSlotModel *> *_Nullable workoutSlots, NSError *_Nullable error))completion;` to query editable workout slots on the watch.
+  - Introduced new API `+ (void)updateEditableWorkoutSlotsOnWatch:(NSArray<FitCloudEditableWorkoutSlotModel*>*)workoutSlots completion:(FitCloudCompletionHandler _Nullable)completion` to update editable the workout slots on the watch.
+
 ## V1.3.2-beta.43 build20260127001 (2026-01-27)
 
 - Fix an issue for API `+ (void)sendFutureHourlyWeathers:(NSArray<FitCloudHourlyWeatherModel *> *_Nonnull)hourlyWeathers completion:(FitCloudCompletionHandler _Nullable)completion;`.

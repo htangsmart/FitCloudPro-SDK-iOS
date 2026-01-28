@@ -29,7 +29,7 @@
 #import <FitCloudKit/FitCloudEarbudBatteryInfoModel.h>
 #import <FitCloudKit/FitCloudEarbudsFindStatusInfoModel.h>
 #import <FitCloudKit/FitCloudEarbudsStatusInfoModel.h>
-#import <FitCloudKit/FitCloudWorkoutSlotEditModel.h>
+#import <FitCloudKit/FitCloudEditableWorkoutSlotModel.h>
 #import <FitCloudKit/FitCloudHourlyWeatherModel.h>
 
 /// Specific client defines
