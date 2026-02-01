@@ -14734,6 +14734,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "LogMate",
+        "printedName": "LogMate",
+        "declKind": "Import",
+        "moduleName": "TopStepAISDK"
+      },
+      {
         "kind": "TypeDecl",
         "name": "TopStepAITranslateService",
         "printedName": "TopStepAITranslateService",
@@ -18266,21 +18273,21 @@
       "kind": "StringLiteral",
       "offset": 2327,
       "length": 14,
-      "value": "\"1.0.0-beta.6\""
+      "value": "\"1.0.0-beta.7\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAI.swift",
       "kind": "StringLiteral",
       "offset": 2534,
       "length": 13,
-      "value": "\"20251126001\""
+      "value": "\"20260201001\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAI.swift",
       "kind": "StringLiteral",
       "offset": 2746,
       "length": 12,
-      "value": "\"2025-11-26\""
+      "value": "\"2026-02-01\""
     },
     {
       "filePath": "\/Users\/Shared\/catalina\/mygithub\/TopStepAISDK\/TopStepAISDK\/TopStepAI.swift",

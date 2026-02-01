@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'TopStepAISDK'
   s.summary      = 'A comprehensive AI SDK for iOS applications'
-  s.version      = '1.0.0-beta.6'
+  s.version      = '1.0.0-beta.7'
   s.description      = <<-DESC
   TopStepAISDK is an AI-powered SDK that offers a range of advanced features, including Automatic Speech Recognition (ASR), Text-to-Speech (TTS), AI-generated imagery (AIGC), AI-driven question answering (GPT), and AI translation services.
   DESC
@@ -20,9 +20,10 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |ss|
-    ss.vendored_frameworks = 'TopStepAISDK.xcframework', 'LogMate.xcframework', 'MicrosoftCognitiveServicesSpeech.xcframework', 'LAME.xcframework', 'MagicHelper.framework', 'AFNetworking.framework'
+    ss.vendored_frameworks = 'TopStepAISDK.xcframework', 'MicrosoftCognitiveServicesSpeech.xcframework', 'LAME.xcframework', 'MagicHelper.framework', 'AFNetworking.framework'
 
     ss.dependency 'SocketRocket'
+    ss.dependency 'LogMate'
   end
 
 

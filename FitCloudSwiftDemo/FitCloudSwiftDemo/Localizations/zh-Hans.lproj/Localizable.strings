@@ -216,3 +216,9 @@
 "Not Finding" = "未查找";
 
 "Send Hourly Weather (100 Hr)" = "发送未来逐小时天气（100小时）";
+
+"Upload GPS File (EPO)" = "上传 GPS 文件 (EPO)";
+"GPS Accelerate" = "GPS加速";
+
+"Simulate Device Request Location" = "模拟设备请求设备位置信息";
+"Start upgrade GPS File" = "开始升级 GPS 文件";

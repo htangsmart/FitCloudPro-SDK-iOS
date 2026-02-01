@@ -54,7 +54,7 @@ class FitCloudProSDK: NSObject {
     }
     
     private func initTopStepAISDK() {
-        TopStepAI.setLogProvider(self)
+        TopStepAI.setLogProvider(LogService.shared)
     }
     
     private func addNotificationObservers() {
@@ -107,11 +107,6 @@ class FitCloudProSDK: NSObject {
 
 }
 
-extension FitCloudProSDK: LoggableProtocol {
-    func onLogMateMessage(_ message: String!, level: LOGMATELEVEL, subsystem: String!, category: String!) {
-        XLOG_INFO("\(String(describing: message))")
-    }
-}
 
 extension  FitCloudProSDK: FitCloudCallback {
     

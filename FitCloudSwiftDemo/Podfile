@@ -16,8 +16,15 @@ target 'FitCloudSwiftDemo' do
   pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
   pod 'FitCloudWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
   
+  # LogMate
+  
+  pod 'LogMate',:path => '../Others/LogMate/'
+  
   # TopStepAISDK
   pod 'TopStepAISDK',:path => 'TopStepAISDK/'
+  
+  # GPS Accelerate
+  pod 'FitCloudGPSAccelerate',:path => '../Others/GPSAccelerate/'
 
   # Log SDKs
   pod 'XLFacility', git: 'https://github.com/pcjbird/XLFacility.git'

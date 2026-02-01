@@ -15,6 +15,8 @@
 		899433732D65C8B500B86640 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8994336F2D65C8B500B86640 /* SceneDelegate.swift */; };
 		899433742D65C8B500B86640 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899433702D65C8B500B86640 /* ViewController.swift */; };
 		899433752D65C8B500B86640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899433692D65C8B500B86640 /* Assets.xcassets */; };
+		89951C7E2F2F652C000CCB7A /* GPSAccelerateDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89951C7D2F2F652C000CCB7A /* GPSAccelerateDemoController.swift */; };
+		89951C802F2F6B73000CCB7A /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89951C7F2F2F6B73000CCB7A /* LogService.swift */; };
 		89CBFA7D2D65CF81008E7B50 /* FitCloudProSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA7C2D65CF81008E7B50 /* FitCloudProSDK.swift */; };
 		89CBFA7F2D65EC59008E7B50 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA7E2D65EC59008E7B50 /* App.swift */; };
 		89CBFA992D6600AE008E7B50 /* DeviceBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA8E2D6600AE008E7B50 /* DeviceBindingController.m */; };
@@ -98,6 +100,8 @@
 		8994336A2D65C8B500B86640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8994336F2D65C8B500B86640 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		899433702D65C8B500B86640 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89951C7D2F2F652C000CCB7A /* GPSAccelerateDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSAccelerateDemoController.swift; sourceTree = "<group>"; };
+		89951C7F2F2F6B73000CCB7A /* LogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
 		89CBFA7C2D65CF81008E7B50 /* FitCloudProSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitCloudProSDK.swift; sourceTree = "<group>"; };
 		89CBFA7E2D65EC59008E7B50 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		89CBFA802D65ED58008E7B50 /* FitCloudSwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitCloudSwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 				899433702D65C8B500B86640 /* ViewController.swift */,
 				89DB8A342EFBE26C00DA38BE /* EnumUtils.swift */,
 				89CBFA7C2D65CF81008E7B50 /* FitCloudProSDK.swift */,
+				89951C7F2F2F6B73000CCB7A /* LogService.swift */,
 				89CBFA872D6600AE008E7B50 /* AlarmController.h */,
 				89CBFA882D6600AE008E7B50 /* AlarmController.m */,
 				89CBFA892D6600AE008E7B50 /* DailyGoalSettingController.h */,
@@ -301,6 +306,7 @@
 				89CC00522EC0596B0030D405 /* AIWatchfaceDemoController.swift */,
 				89DB8A2F2EFADE7E00DA38BE /* ConstellationFortuneController.swift */,
 				89DB8C092F014D2500DA38BE /* EarbudsViewController.swift */,
+				89951C7D2F2F652C000CCB7A /* GPSAccelerateDemoController.swift */,
 				89CBFA7E2D65EC59008E7B50 /* App.swift */,
 				89CC00542EC05AB30030D405 /* AppNotifcations.swift */,
 				89CBFA802D65ED58008E7B50 /* FitCloudSwiftDemo-Bridging-Header.h */,
@@ -649,6 +655,7 @@
 				89DB8A302EFADE7E00DA38BE /* ConstellationFortuneController.swift in Sources */,
 				89CBFAF12D6600DD008E7B50 /* CalculationMethod.swift in Sources */,
 				89CBFAF22D6600DD008E7B50 /* Prayer.swift in Sources */,
+				89951C802F2F6B73000CCB7A /* LogService.swift in Sources */,
 				89CBFAF32D6600DD008E7B50 /* SunnahTimes.swift in Sources */,
 				89DB8A352EFBE26C00DA38BE /* EnumUtils.swift in Sources */,
 				89CBFAF42D6600DD008E7B50 /* MoView.m in Sources */,
@@ -676,6 +683,7 @@
 				89CBFAB82D6600BC008E7B50 /* MuslimPrayerController.m in Sources */,
 				89CBFAB92D6600BC008E7B50 /* UnitPreferController.m in Sources */,
 				89CBFABA2D6600BC008E7B50 /* RealtimeMeasureController.m in Sources */,
+				89951C7E2F2F652C000CCB7A /* GPSAccelerateDemoController.swift in Sources */,
 				89CBFABB2D6600BC008E7B50 /* ScreenDispayController.m in Sources */,
 				89CBFABC2D6600BC008E7B50 /* SedentaryRemindController.m in Sources */,
 				89CBFABD2D6600BC008E7B50 /* UserProfileController.m in Sources */,

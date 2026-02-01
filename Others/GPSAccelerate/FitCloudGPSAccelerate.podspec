@@ -17,9 +17,10 @@ Pod::Spec.new do |s|
   s.frameworks       = 'Foundation', 'UIKit'
 
   s.requires_arc = true
-  s.vendored_frameworks = 'FitCloudGPSAccelerate.xcframework', 'LogMate.xcframework', 'FitCloudOTAGenKit.xcframework'
+  s.vendored_frameworks = 'FitCloudGPSAccelerate.xcframework', 'FitCloudOTAGenKit.xcframework'
 
   s.dependency 'ReactiveObjC'
   s.dependency 'MJExtension'
+  s.dependency 'LogMate'
 
 end

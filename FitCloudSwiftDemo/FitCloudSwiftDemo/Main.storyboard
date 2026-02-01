@@ -672,7 +672,7 @@
                                         <rect key="frame" x="0.0" y="987" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="81Z-Os-g9X" id="jxV-Mf-bIY">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Muslim Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZK-tU-ui2" customClass="LocalizedLabel">
@@ -692,7 +692,7 @@
                                         <rect key="frame" x="0.0" y="1041" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fOZ-ZH-oTU" id="jUE-XZ-IgB">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM7-VJ-cTZ" customClass="LocalizedLabel">
@@ -712,7 +712,7 @@
                                         <rect key="frame" x="0.0" y="1095" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rvq-jE-wk7" id="5ws-hP-l2A">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cloud Watchface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2S-u3-s4S" customClass="LocalizedLabel">
@@ -732,7 +732,7 @@
                                         <rect key="frame" x="0.0" y="1149" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xbq-wx-zis" id="DuI-zN-Nzy">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DIY Watchface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fk6-1w-JDn" customClass="LocalizedLabel">
@@ -752,7 +752,7 @@
                                         <rect key="frame" x="0.0" y="1203" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vIb-pj-4DN" id="X4l-4d-SsB">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AI Watchface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4E-jn-qs3" customClass="LocalizedLabel">
@@ -772,7 +772,7 @@
                                         <rect key="frame" x="0.0" y="1257" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sI7-J0-Ajy" id="Qoq-Tn-qK0">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Constellation&amp;Fortune" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYI-jj-fQU" customClass="LocalizedLabel">
@@ -792,7 +792,7 @@
                                         <rect key="frame" x="0.0" y="1311" width="393" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rlV-kv-4zt" id="AGk-gu-DIN">
-                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Earbuds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFC-Ak-TxJ" customClass="LocalizedLabel">
@@ -806,6 +806,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="52T-iN-mZb" kind="show" id="WJR-n8-ufS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="54" id="KLw-VL-OZV">
+                                        <rect key="frame" x="0.0" y="1365" width="393" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KLw-VL-OZV" id="7K0-C2-k5n">
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload GPS File (EPO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qah-z2-RiW" customClass="LocalizedLabel">
+                                                    <rect key="frame" x="24" y="18" width="247" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7uK-t7-Iaz" kind="show" id="ryX-Wp-QPs"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -3151,7 +3171,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjT-Sr-mk2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7960" y="1556"/>
+            <point key="canvasLocation" x="8088" y="1556"/>
+        </scene>
+        <!--Accelerate Demo Controller-->
+        <scene sceneID="fzu-3H-6e4">
+            <objects>
+                <viewController id="7uK-t7-Iaz" customClass="GPSAccelerateDemoController" customModule="FitCloudSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nTm-qK-42k">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS Accelerate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLq-Zh-tXw" customClass="LocalizedLabel">
+                                <rect key="frame" x="120.66666666666669" y="136.66666666666666" width="152" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nq-3c-Xg2" customClass="LocalizedButton">
+                                <rect key="frame" x="22" y="136" width="52" height="22"/>
+                                <state key="normal" title="Back" image="back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGoBack:" destination="7uK-t7-Iaz" eventType="touchUpInside" id="3fv-ba-34L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHi-h6-bVE" customClass="LocalizedButton">
+                                <rect key="frame" x="30" y="202" width="333" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="P2c-wf-klD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Simulate Device Request Location"/>
+                                <connections>
+                                    <action selector="onSimulateLocationRequestFromDevice:" destination="7uK-t7-Iaz" eventType="touchUpInside" id="kZ4-Gg-d3P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOR-sU-54O" customClass="LocalizedButton">
+                                <rect key="frame" x="30" y="268" width="333" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="mpn-13-Z7u"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start upgrade GPS File"/>
+                                <connections>
+                                    <action selector="onStartUpgradeGPSFile:" destination="7uK-t7-Iaz" eventType="touchUpInside" id="cDt-eW-T32"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JS3-tJ-6Ig"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JS3-tJ-6Ig" firstAttribute="trailing" secondItem="aOR-sU-54O" secondAttribute="trailing" constant="30" id="3qv-ef-jfa"/>
+                            <constraint firstItem="JLq-Zh-tXw" firstAttribute="centerY" secondItem="1Nq-3c-Xg2" secondAttribute="centerY" id="8XU-Fh-5Qp"/>
+                            <constraint firstItem="JLq-Zh-tXw" firstAttribute="centerX" secondItem="nTm-qK-42k" secondAttribute="centerX" id="BUp-f5-DGz"/>
+                            <constraint firstItem="pHi-h6-bVE" firstAttribute="top" secondItem="1Nq-3c-Xg2" secondAttribute="bottom" constant="44" id="GuV-uT-5g2"/>
+                            <constraint firstItem="aOR-sU-54O" firstAttribute="leading" secondItem="JS3-tJ-6Ig" secondAttribute="leading" constant="30" id="R7K-38-QLW"/>
+                            <constraint firstItem="aOR-sU-54O" firstAttribute="top" secondItem="pHi-h6-bVE" secondAttribute="bottom" constant="20" id="dDl-LQ-m7T"/>
+                            <constraint firstItem="1Nq-3c-Xg2" firstAttribute="top" secondItem="JS3-tJ-6Ig" secondAttribute="top" constant="18" id="dM2-Wf-Kt1"/>
+                            <constraint firstItem="pHi-h6-bVE" firstAttribute="leading" secondItem="JS3-tJ-6Ig" secondAttribute="leading" constant="30" id="g5v-a2-fw1"/>
+                            <constraint firstItem="1Nq-3c-Xg2" firstAttribute="leading" secondItem="JS3-tJ-6Ig" secondAttribute="leading" constant="22" id="gba-Gx-0YW"/>
+                            <constraint firstItem="JS3-tJ-6Ig" firstAttribute="trailing" secondItem="pHi-h6-bVE" secondAttribute="trailing" constant="30" id="geQ-N3-qdk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fhN-Id-k3E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wM-Zo-jF2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8925.9541984732823" y="1555.6338028169014"/>
         </scene>
     </scenes>
     <resources>

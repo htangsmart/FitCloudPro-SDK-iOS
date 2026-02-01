@@ -23,6 +23,7 @@ target 'FitCloudGPSAccelerateDemo' do
   
   commonPods
   
+  pod 'LogMate',:path => '../../LogMate/'
   pod 'FitCloudGPSAccelerate',:path => '../'
   pod 'iOSLogBrowserSDK'
   pod 'YYCategories'
