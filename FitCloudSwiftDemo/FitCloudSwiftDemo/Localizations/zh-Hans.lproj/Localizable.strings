@@ -222,3 +222,5 @@
 
 "Simulate Device Request Location" = "模拟设备请求设备位置信息";
 "Start upgrade GPS File" = "开始升级 GPS 文件";
+"Force upgrade" = "强制升级";
+"Using your own download service" = "使用你自己的下载服务";

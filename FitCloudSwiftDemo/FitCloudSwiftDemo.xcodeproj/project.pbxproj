@@ -17,6 +17,10 @@
 		899433752D65C8B500B86640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899433692D65C8B500B86640 /* Assets.xcassets */; };
 		89951C7E2F2F652C000CCB7A /* GPSAccelerateDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89951C7D2F2F652C000CCB7A /* GPSAccelerateDemoController.swift */; };
 		89951C802F2F6B73000CCB7A /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89951C7F2F2F6B73000CCB7A /* LogService.swift */; };
+		89951C852F2F72FA000CCB7A /* 20260201_06_f1e1E3.pgl in Resources */ = {isa = PBXBuildFile; fileRef = 89951C822F2F72FA000CCB7A /* 20260201_06_f1e1E3.pgl */; };
+		89951C862F2F72FA000CCB7A /* 20260201_06_f1e1G3.pgl in Resources */ = {isa = PBXBuildFile; fileRef = 89951C832F2F72FA000CCB7A /* 20260201_06_f1e1G3.pgl */; };
+		89951C872F2F72FA000CCB7A /* 20260201_06_f1e1C3.pgl in Resources */ = {isa = PBXBuildFile; fileRef = 89951C812F2F72FA000CCB7A /* 20260201_06_f1e1C3.pgl */; };
+		89951C882F2F72FA000CCB7A /* 20260201_06_f1e1J3.pgl in Resources */ = {isa = PBXBuildFile; fileRef = 89951C842F2F72FA000CCB7A /* 20260201_06_f1e1J3.pgl */; };
 		89CBFA7D2D65CF81008E7B50 /* FitCloudProSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA7C2D65CF81008E7B50 /* FitCloudProSDK.swift */; };
 		89CBFA7F2D65EC59008E7B50 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA7E2D65EC59008E7B50 /* App.swift */; };
 		89CBFA992D6600AE008E7B50 /* DeviceBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CBFA8E2D6600AE008E7B50 /* DeviceBindingController.m */; };
@@ -102,6 +106,10 @@
 		899433702D65C8B500B86640 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89951C7D2F2F652C000CCB7A /* GPSAccelerateDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSAccelerateDemoController.swift; sourceTree = "<group>"; };
 		89951C7F2F2F6B73000CCB7A /* LogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
+		89951C812F2F72FA000CCB7A /* 20260201_06_f1e1C3.pgl */ = {isa = PBXFileReference; lastKnownFileType = file; path = 20260201_06_f1e1C3.pgl; sourceTree = "<group>"; };
+		89951C822F2F72FA000CCB7A /* 20260201_06_f1e1E3.pgl */ = {isa = PBXFileReference; lastKnownFileType = file; path = 20260201_06_f1e1E3.pgl; sourceTree = "<group>"; };
+		89951C832F2F72FA000CCB7A /* 20260201_06_f1e1G3.pgl */ = {isa = PBXFileReference; lastKnownFileType = file; path = 20260201_06_f1e1G3.pgl; sourceTree = "<group>"; };
+		89951C842F2F72FA000CCB7A /* 20260201_06_f1e1J3.pgl */ = {isa = PBXFileReference; lastKnownFileType = file; path = 20260201_06_f1e1J3.pgl; sourceTree = "<group>"; };
 		89CBFA7C2D65CF81008E7B50 /* FitCloudProSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitCloudProSDK.swift; sourceTree = "<group>"; };
 		89CBFA7E2D65EC59008E7B50 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		89CBFA802D65ED58008E7B50 /* FitCloudSwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitCloudSwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -307,6 +315,10 @@
 				89DB8A2F2EFADE7E00DA38BE /* ConstellationFortuneController.swift */,
 				89DB8C092F014D2500DA38BE /* EarbudsViewController.swift */,
 				89951C7D2F2F652C000CCB7A /* GPSAccelerateDemoController.swift */,
+				89951C812F2F72FA000CCB7A /* 20260201_06_f1e1C3.pgl */,
+				89951C822F2F72FA000CCB7A /* 20260201_06_f1e1E3.pgl */,
+				89951C832F2F72FA000CCB7A /* 20260201_06_f1e1G3.pgl */,
+				89951C842F2F72FA000CCB7A /* 20260201_06_f1e1J3.pgl */,
 				89CBFA7E2D65EC59008E7B50 /* App.swift */,
 				89CC00542EC05AB30030D405 /* AppNotifcations.swift */,
 				89CBFA802D65ED58008E7B50 /* FitCloudSwiftDemo-Bridging-Header.h */,
@@ -545,6 +557,10 @@
 				89CBFB112D661D76008E7B50 /* LaunchScreen.storyboard in Resources */,
 				89CBFB162D661D94008E7B50 /* InfoPlist.strings in Resources */,
 				89CBFB2A2D66F10E008E7B50 /* 3679a6588f34.bin in Resources */,
+				89951C852F2F72FA000CCB7A /* 20260201_06_f1e1E3.pgl in Resources */,
+				89951C862F2F72FA000CCB7A /* 20260201_06_f1e1G3.pgl in Resources */,
+				89951C872F2F72FA000CCB7A /* 20260201_06_f1e1C3.pgl in Resources */,
+				89951C882F2F72FA000CCB7A /* 20260201_06_f1e1J3.pgl in Resources */,
 				894A98302D68786200627844 /* gui_dial_binfile_watch_1020000_1_20240903_ota.bin in Resources */,
 				89CBFB2B2D66F10E008E7B50 /* test_360_preview.png in Resources */,
 				89DB8A332EFAE3EF00DA38BE /* 855A_sample_yoga_audio_mp3.bin in Resources */,

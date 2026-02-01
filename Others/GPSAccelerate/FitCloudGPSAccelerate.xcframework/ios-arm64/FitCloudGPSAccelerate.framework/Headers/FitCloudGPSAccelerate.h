@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Optional, if you does not set the service, the SDK will use the topstep default download service, which will download the epo dat files from topstep's server, otherwise, download epo files with your own service.
 /// - Parameters:
 ///   - downloadService: the epo files download service
-+(void)setEPOFilesDownloadService:(id<EPOFilesDownloadService>)downloadService;
++(void)setEPOFilesDownloadService:(id<EPOFilesDownloadService> _Nullable)downloadService;
 
 /// Set the GPS location info request service
 ///

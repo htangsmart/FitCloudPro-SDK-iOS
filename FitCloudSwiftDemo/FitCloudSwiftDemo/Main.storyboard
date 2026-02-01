@@ -3218,23 +3218,53 @@
                                     <action selector="onStartUpgradeGPSFile:" destination="7uK-t7-Iaz" eventType="touchUpInside" id="cDt-eW-T32"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using your own download service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66N-XV-Qdt" customClass="LocalizedLabel">
+                                <rect key="frame" x="30" y="733" width="255" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0q9-Ot-jdC">
+                                <rect key="frame" x="300" y="732" width="63" height="28"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Force upgrade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hel-Ho-nC4" customClass="LocalizedLabel">
+                                <rect key="frame" x="30" y="677" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XOk-JR-gTd">
+                                <rect key="frame" x="300" y="674" width="63" height="28"/>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JS3-tJ-6Ig"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JS3-tJ-6Ig" firstAttribute="trailing" secondItem="aOR-sU-54O" secondAttribute="trailing" constant="30" id="3qv-ef-jfa"/>
+                            <constraint firstItem="JS3-tJ-6Ig" firstAttribute="trailing" secondItem="XOk-JR-gTd" secondAttribute="trailing" constant="32" id="7P8-Kx-wJQ"/>
                             <constraint firstItem="JLq-Zh-tXw" firstAttribute="centerY" secondItem="1Nq-3c-Xg2" secondAttribute="centerY" id="8XU-Fh-5Qp"/>
+                            <constraint firstItem="JS3-tJ-6Ig" firstAttribute="trailing" secondItem="0q9-Ot-jdC" secondAttribute="trailing" constant="32" id="B7G-OH-4Q1"/>
                             <constraint firstItem="JLq-Zh-tXw" firstAttribute="centerX" secondItem="nTm-qK-42k" secondAttribute="centerX" id="BUp-f5-DGz"/>
+                            <constraint firstItem="66N-XV-Qdt" firstAttribute="top" secondItem="hel-Ho-nC4" secondAttribute="bottom" constant="35" id="Exw-tj-2xg"/>
+                            <constraint firstItem="66N-XV-Qdt" firstAttribute="leading" secondItem="JS3-tJ-6Ig" secondAttribute="leading" constant="30" id="F5r-pc-jBh"/>
                             <constraint firstItem="pHi-h6-bVE" firstAttribute="top" secondItem="1Nq-3c-Xg2" secondAttribute="bottom" constant="44" id="GuV-uT-5g2"/>
+                            <constraint firstItem="JS3-tJ-6Ig" firstAttribute="bottom" secondItem="66N-XV-Qdt" secondAttribute="bottom" constant="30" id="HhN-jy-BdJ"/>
+                            <constraint firstItem="JS3-tJ-6Ig" firstAttribute="bottom" secondItem="0q9-Ot-jdC" secondAttribute="bottom" constant="24" id="NRD-GM-Y8u"/>
                             <constraint firstItem="aOR-sU-54O" firstAttribute="leading" secondItem="JS3-tJ-6Ig" secondAttribute="leading" constant="30" id="R7K-38-QLW"/>
+                            <constraint firstItem="hel-Ho-nC4" firstAttribute="leading" secondItem="JS3-tJ-6Ig" secondAttribute="leading" constant="30" id="Vg4-Xb-lJO"/>
                             <constraint firstItem="aOR-sU-54O" firstAttribute="top" secondItem="pHi-h6-bVE" secondAttribute="bottom" constant="20" id="dDl-LQ-m7T"/>
                             <constraint firstItem="1Nq-3c-Xg2" firstAttribute="top" secondItem="JS3-tJ-6Ig" secondAttribute="top" constant="18" id="dM2-Wf-Kt1"/>
                             <constraint firstItem="pHi-h6-bVE" firstAttribute="leading" secondItem="JS3-tJ-6Ig" secondAttribute="leading" constant="30" id="g5v-a2-fw1"/>
                             <constraint firstItem="1Nq-3c-Xg2" firstAttribute="leading" secondItem="JS3-tJ-6Ig" secondAttribute="leading" constant="22" id="gba-Gx-0YW"/>
                             <constraint firstItem="JS3-tJ-6Ig" firstAttribute="trailing" secondItem="pHi-h6-bVE" secondAttribute="trailing" constant="30" id="geQ-N3-qdk"/>
+                            <constraint firstItem="0q9-Ot-jdC" firstAttribute="top" secondItem="XOk-JR-gTd" secondAttribute="bottom" constant="30" id="nF5-FB-g0d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fhN-Id-k3E"/>
+                    <connections>
+                        <outlet property="forceSwitchCtrl" destination="XOk-JR-gTd" id="VFL-hO-gpy"/>
+                        <outlet property="useOwnDownloadServiceSwitchCtrl" destination="0q9-Ot-jdC" id="9aW-hX-1MI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wM-Zo-jF2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
