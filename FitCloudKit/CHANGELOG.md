@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## V1.3.2-beta.46 build20260201001 (2026-02-01)
+
+- Fix AI-Chat related APIs:
+  - Remove SDK callback method `- (void)onRequestInitiateAIChat;`. 
+  - Remove SDK callback method `- (void)onRequestTerminateAIChat;`.  
+  - Added SDK callback method `- (void)onAIChatSessionEvent:(FitCloudAIChatSessionEvent)event;` to notify the app that the device requests an AI-Chat event.
+
 ## V1.3.2-beta.45 build20260128002 (2026-01-28)
 
 - Introduced new APIs to configure and query the enable state of on-device voice wake-up.
@@ -17,7 +24,7 @@
 
 ## V1.3.2-beta.42 build20260126001 (2026-01-26)
 
-- Fix AI Chat–related APIs:
+- Fix AI–Chat related APIs:
   - Remove API `+ (void)terminateAIChatSessionIfNeeded:(FitCloudCompletionHandler _Nullable)completion;`.
   - Added new API `+ (void)reportAIChatSessionInitiateFailedOrTerminated:(FitCloudCompletionHandler _Nullable)completion;` to notify the device the AI chat session initiate failed or already terminated.
   - Added new API `+ (void)reportAIChatSessionInitiateSuccess:(void (^_Nullable)(BOOL success, BOOL deviceEncounteredException, NSError *_Nullable error))completion;` to notify the device the AI chat session initiated success, if the API callback parameter `deviceEncounteredException` is true, the app must terminate the AI chat.

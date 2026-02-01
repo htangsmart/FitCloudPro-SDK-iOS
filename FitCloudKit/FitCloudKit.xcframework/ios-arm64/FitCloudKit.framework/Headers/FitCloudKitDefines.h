@@ -2266,4 +2266,22 @@ typedef NS_ENUM(NSInteger, FitCloudEnableState) {
     FitCloudEnableStateOn = 1,
 };
 
+#pragma mark - AI chat session event
+
+/// AI chat session event
+typedef NS_ENUM(NSInteger, FitCloudAIChatSessionEvent) {
+    
+    /// Unknown
+    FitCloudAIChatSessionEventUnknown = -1,
+    
+    /// Terminate current AI chat session
+    FitCloudAIChatSessionEventTerminate = 0,
+    
+    /// Initiate new AI chat session via SCO
+    FitCloudAIChatSessionEventInitiateWithSCO = 1,
+    
+    /// Initiate new AI chat session via Opus
+    FitCloudAIChatSessionEventInitiateWithOpus = 2,
+};
+
 #endif /* FitCloudKitDefines_h */

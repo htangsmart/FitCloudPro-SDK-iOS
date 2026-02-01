@@ -845,11 +845,8 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - data: The StarBurst AI bridge data
 - (void)onStarBurstAIBridgeDataReceived:(NSData *)data;
 
-/// Notifies the app that the watch requests to initiate an AI chat session.
-- (void)onRequestInitiateAIChat;
-
-/// Notifies the app that the watch requests to terminate the current AI chat session.
-- (void)onRequestTerminateAIChat;
+/// Notifies the app that the watch requests an AI-chat event.
+- (void)onAIChatSessionEvent:(FitCloudAIChatSessionEvent)event;
 
 /// Notifies when the ANCS authorization status has been updated
 /// - Parameters:
