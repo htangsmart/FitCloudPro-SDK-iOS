@@ -3,6 +3,7 @@
 // swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name FitCloudOTAGenKit
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import Foundation
+import LogMate
 import Swift
 import UIKit
 import _Concurrency
@@ -80,29 +81,19 @@ extension FitCloudOTAGenKit.EPOFileType : Swift.CustomStringConvertible {
     get
   }
 }
-@objc(FitCloudOTAGenKitLogLevel) public enum LogLevel : Swift.Int {
-  case verbose = 0
-  case debug = 1
-  case info = 2
-  case warning = 3
-  case error = 4
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Int)
-  #endif
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension FitCloudOTAGenKit.LogLevel : Swift.CustomStringConvertible {
-  public var description: Swift.String {
-    get
-  }
-}
-@objc public protocol Loggable : ObjectiveC.NSObjectProtocol {
-  @objc func log(_ logLevel: FitCloudOTAGenKit.LogLevel, _ message: Swift.String)
-}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class FitCloudOTAGenService : ObjectiveC.NSObject {
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc public static var sdkBuild: Swift.String {
+    @objc get
+  }
+  @objc public static var sdkReleaseDate: Swift.String {
+    @objc get
+  }
+  @objc public static var sdkVersionDescription: Swift.String {
+    @objc get
+  }
   @objc deinit
 }
 @objc public enum ParamsError : Swift.Int, Swift.Error {
@@ -157,10 +148,10 @@ extension FitCloudOTAGenKit.FitCloudOTAGenPlatform : Swift.CustomStringConvertib
 }
 extension FitCloudOTAGenKit.FitCloudOTAGenService {
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public class func createGpsEpoBin(_ epoFilePaths: [Swift.String], _ outputDirectory: Swift.String, _ logProvider: (any FitCloudOTAGenKit.Loggable)? = nil) throws -> Swift.String
+  @objc dynamic public class func createGpsEpoBin(_ epoFilePaths: [Swift.String], _ outputDirectory: Swift.String, _ logProvider: (any LogMate.LoggableProtocol)? = nil) throws -> Swift.String
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public class func createICOEGpsEpoBin(_ platform: FitCloudOTAGenKit.FitCloudOTAGenPlatform, _ epoFiles: [FitCloudOTAGenKit.ICOEEPOFile], _ outputDirectory: Swift.String, _ logProvider: (any FitCloudOTAGenKit.Loggable)? = nil) throws -> Swift.String
+  @objc dynamic public class func createICOEGpsEpoBin(_ platform: FitCloudOTAGenKit.FitCloudOTAGenPlatform, _ epoFiles: [FitCloudOTAGenKit.ICOEEPOFile], _ outputDirectory: Swift.String, _ logProvider: (any LogMate.LoggableProtocol)? = nil) throws -> Swift.String
   #endif
 }
 extension FitCloudOTAGenKit.OTAImageType : Swift.Equatable {}
@@ -169,9 +160,6 @@ extension FitCloudOTAGenKit.OTAImageType : Swift.RawRepresentable {}
 extension FitCloudOTAGenKit.EPOFileType : Swift.Equatable {}
 extension FitCloudOTAGenKit.EPOFileType : Swift.Hashable {}
 extension FitCloudOTAGenKit.EPOFileType : Swift.RawRepresentable {}
-extension FitCloudOTAGenKit.LogLevel : Swift.Equatable {}
-extension FitCloudOTAGenKit.LogLevel : Swift.Hashable {}
-extension FitCloudOTAGenKit.LogLevel : Swift.RawRepresentable {}
 extension FitCloudOTAGenKit.ParamsError : Swift.Equatable {}
 extension FitCloudOTAGenKit.ParamsError : Swift.Hashable {}
 extension FitCloudOTAGenKit.ParamsError : Swift.RawRepresentable {}

@@ -335,16 +335,42 @@ typedef SWIFT_ENUM(NSInteger, FitCloudOTAGenPlatform, open) {
   FitCloudOTAGenPlatformBluetrum = 2,
 };
 
+@class NSString;
 /// OTA文件生成服务
 SWIFT_CLASS("_TtC17FitCloudOTAGenKit21FitCloudOTAGenService")
 @interface FitCloudOTAGenService : NSObject
 /// 初始化
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// The version number of the SDK
+///
+/// returns:
+/// A string representing the current SDK version (e.g. “1.0.0-beta.1”)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkVersion;)
++ (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;
+/// The build number of the SDK
+///
+/// returns:
+/// A string representing the SDK build number (e.g. “20250315001”)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkBuild;)
++ (NSString * _Nonnull)sdkBuild SWIFT_WARN_UNUSED_RESULT;
+/// The release date of the SDK
+///
+/// returns:
+/// A string representing the SDK release date in YYYY-MM-DD format
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkReleaseDate;)
++ (NSString * _Nonnull)sdkReleaseDate SWIFT_WARN_UNUSED_RESULT;
+/// Returns a formatted string containing SDK version information
+/// note:
+/// The returned string includes an emoji prefix and is formatted for easy reading
+///
+/// returns:
+/// A string containing the SDK name, version, build number and release date
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkVersionDescription;)
++ (NSString * _Nonnull)sdkVersionDescription SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class NSString;
-@protocol Loggable;
+@protocol LoggableProtocol;
 @class ICOEEPOFile;
 @interface FitCloudOTAGenService (SWIFT_EXTENSION(FitCloudOTAGenKit))
 /// 生成GPS文件(Old)
@@ -365,7 +391,7 @@ SWIFT_CLASS("_TtC17FitCloudOTAGenKit21FitCloudOTAGenService")
 ///
 /// returns:
 /// 生成好的GPS文件路径
-+ (NSString * _Nullable)createGpsEpoBin:(NSArray<NSString *> * _Nonnull)epoFilePaths :(NSString * _Nonnull)outputDirectory :(id <Loggable> _Nullable)logProvider error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)createGpsEpoBin:(NSArray<NSString *> * _Nonnull)epoFilePaths :(NSString * _Nonnull)outputDirectory :(id <LoggableProtocol> _Nullable)logProvider error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// 生成芯与物GPS文件
 /// <ul>
 ///   <li>
@@ -384,7 +410,7 @@ SWIFT_CLASS("_TtC17FitCloudOTAGenKit21FitCloudOTAGenService")
 ///
 /// returns:
 /// 生成好的GPS文件路径
-+ (NSString * _Nullable)createICOEGpsEpoBin:(enum FitCloudOTAGenPlatform)platform :(NSArray<ICOEEPOFile *> * _Nonnull)epoFiles :(NSString * _Nonnull)outputDirectory :(id <Loggable> _Nullable)logProvider error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)createICOEGpsEpoBin:(enum FitCloudOTAGenPlatform)platform :(NSArray<ICOEEPOFile *> * _Nonnull)epoFiles :(NSString * _Nonnull)outputDirectory :(id <LoggableProtocol> _Nullable)logProvider error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class NSCoder;
@@ -401,31 +427,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL supportsSecureC
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-/// The log level
-typedef SWIFT_ENUM_NAMED(NSInteger, FitCloudOTAGenKitLogLevel, "LogLevel", open) {
-/// verbose
-  FitCloudOTAGenKitLogLevelVerbose = 0,
-/// debug
-  FitCloudOTAGenKitLogLevelDebug = 1,
-/// info
-  FitCloudOTAGenKitLogLevelInfo = 2,
-/// warning
-  FitCloudOTAGenKitLogLevelWarning = 3,
-/// error
-  FitCloudOTAGenKitLogLevelError = 4,
-};
-
-/// 日志协议
-SWIFT_PROTOCOL("_TtP17FitCloudOTAGenKit8Loggable_")
-@protocol Loggable <NSObject>
-/// 打印日志
-/// \param logLevel 日志等级
-///
-/// \param message 日志信息
-///
-- (void)log:(enum FitCloudOTAGenKitLogLevel)logLevel :(NSString * _Nonnull)message;
 @end
 
 typedef SWIFT_ENUM(NSInteger, OTAGenError, open) {
@@ -830,16 +831,42 @@ typedef SWIFT_ENUM(NSInteger, FitCloudOTAGenPlatform, open) {
   FitCloudOTAGenPlatformBluetrum = 2,
 };
 
+@class NSString;
 /// OTA文件生成服务
 SWIFT_CLASS("_TtC17FitCloudOTAGenKit21FitCloudOTAGenService")
 @interface FitCloudOTAGenService : NSObject
 /// 初始化
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// The version number of the SDK
+///
+/// returns:
+/// A string representing the current SDK version (e.g. “1.0.0-beta.1”)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkVersion;)
++ (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;
+/// The build number of the SDK
+///
+/// returns:
+/// A string representing the SDK build number (e.g. “20250315001”)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkBuild;)
++ (NSString * _Nonnull)sdkBuild SWIFT_WARN_UNUSED_RESULT;
+/// The release date of the SDK
+///
+/// returns:
+/// A string representing the SDK release date in YYYY-MM-DD format
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkReleaseDate;)
++ (NSString * _Nonnull)sdkReleaseDate SWIFT_WARN_UNUSED_RESULT;
+/// Returns a formatted string containing SDK version information
+/// note:
+/// The returned string includes an emoji prefix and is formatted for easy reading
+///
+/// returns:
+/// A string containing the SDK name, version, build number and release date
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkVersionDescription;)
++ (NSString * _Nonnull)sdkVersionDescription SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class NSString;
-@protocol Loggable;
+@protocol LoggableProtocol;
 @class ICOEEPOFile;
 @interface FitCloudOTAGenService (SWIFT_EXTENSION(FitCloudOTAGenKit))
 /// 生成GPS文件(Old)
@@ -860,7 +887,7 @@ SWIFT_CLASS("_TtC17FitCloudOTAGenKit21FitCloudOTAGenService")
 ///
 /// returns:
 /// 生成好的GPS文件路径
-+ (NSString * _Nullable)createGpsEpoBin:(NSArray<NSString *> * _Nonnull)epoFilePaths :(NSString * _Nonnull)outputDirectory :(id <Loggable> _Nullable)logProvider error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)createGpsEpoBin:(NSArray<NSString *> * _Nonnull)epoFilePaths :(NSString * _Nonnull)outputDirectory :(id <LoggableProtocol> _Nullable)logProvider error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// 生成芯与物GPS文件
 /// <ul>
 ///   <li>
@@ -879,7 +906,7 @@ SWIFT_CLASS("_TtC17FitCloudOTAGenKit21FitCloudOTAGenService")
 ///
 /// returns:
 /// 生成好的GPS文件路径
-+ (NSString * _Nullable)createICOEGpsEpoBin:(enum FitCloudOTAGenPlatform)platform :(NSArray<ICOEEPOFile *> * _Nonnull)epoFiles :(NSString * _Nonnull)outputDirectory :(id <Loggable> _Nullable)logProvider error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)createICOEGpsEpoBin:(enum FitCloudOTAGenPlatform)platform :(NSArray<ICOEEPOFile *> * _Nonnull)epoFiles :(NSString * _Nonnull)outputDirectory :(id <LoggableProtocol> _Nullable)logProvider error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class NSCoder;
@@ -896,31 +923,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL supportsSecureC
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-/// The log level
-typedef SWIFT_ENUM_NAMED(NSInteger, FitCloudOTAGenKitLogLevel, "LogLevel", open) {
-/// verbose
-  FitCloudOTAGenKitLogLevelVerbose = 0,
-/// debug
-  FitCloudOTAGenKitLogLevelDebug = 1,
-/// info
-  FitCloudOTAGenKitLogLevelInfo = 2,
-/// warning
-  FitCloudOTAGenKitLogLevelWarning = 3,
-/// error
-  FitCloudOTAGenKitLogLevelError = 4,
-};
-
-/// 日志协议
-SWIFT_PROTOCOL("_TtP17FitCloudOTAGenKit8Loggable_")
-@protocol Loggable <NSObject>
-/// 打印日志
-/// \param logLevel 日志等级
-///
-/// \param message 日志信息
-///
-- (void)log:(enum FitCloudOTAGenKitLogLevel)logLevel :(NSString * _Nonnull)message;
 @end
 
 typedef SWIFT_ENUM(NSInteger, OTAGenError, open) {
