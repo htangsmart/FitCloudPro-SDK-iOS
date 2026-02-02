@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.47 build20260202001 (2026-02-02)
+
+- Fix AI-Chat related APIs:
+  - Added SDK callback method `- (void)onAIChatDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;` to notify that incremental voice data has been received during ai-chat session.
+
 ## V1.3.2-beta.46 build20260201001 (2026-02-01)
 
 - Fix AI-Chat related APIs:
