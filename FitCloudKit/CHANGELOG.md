@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.48 build20260203001 (2026-02-03)
+
+- Fix API `+ (BOOL)isDeviceSupportAppNotification:(FITCLOUDMN) appNotification;` in some watch device.
+
 ## V1.3.2-beta.47 build20260202001 (2026-02-02)
 
 - Fix AI-Chat related APIs:

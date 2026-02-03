@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-02-02  Version:1.3.2-beta.47 Build:20260202001
+//      pcjbird    2026-02-03  Version:1.3.2-beta.48 Build:20260203001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -346,14 +346,16 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark Device Feature Support
 
 /// Checks if the device supports a specific feature
-/// - Parameter feature: The feature to check for support
+/// - Parameters:
+/// - feature: The feature to check for support
 /// - Returns: A boolean value indicating whether the feature is supported
 + (BOOL)isDeviceSupportFeature:(FITCLOUDDEVICEFEATURE)feature;
 
 #pragma mark App Notification Support
 
 /// Checks if the device supports a specific app notification type
-/// - Parameter appNotification: The app notification type to check for support
+/// - Parameters:
+/// - appNotification: The app notification type to check for support
 /// - Returns: A boolean value indicating whether the notification type is supported
 + (BOOL)isDeviceSupportAppNotification:(FITCLOUDMN) appNotification;
 @end
