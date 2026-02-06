@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.49 build20260206001 (2026-02-06)
+
+- Fix SDK callback method `- (void)onEarbudsStatusChangedTo:(FitCloudEarbudsStatusInfoModel*)latestStatusInfo;`. 
+
 ## V1.3.2-beta.48 build20260203001 (2026-02-03)
 
 - Fix API `+ (BOOL)isDeviceSupportAppNotification:(FITCLOUDMN) appNotification;` in some watch device.
