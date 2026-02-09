@@ -1,8 +1,13 @@
 # CHANGELOG
 
+## V1.2.1-beta.3 build20260209001 (2026-02-09)
+
+- Refactored the watch-face generation implementation for the 579X platform.
+- Optimized error handling: now returns an immediate error for obvious template binary file issues.
+
 ## V1.2.1-beta.2 build20260127001 (2026-01-27)
 
-- Added support for  579X platform.
+- Added support for 579X platform.
 
 ## V1.2.1-beta.1 build20250830001 (2025-08-30)
 
