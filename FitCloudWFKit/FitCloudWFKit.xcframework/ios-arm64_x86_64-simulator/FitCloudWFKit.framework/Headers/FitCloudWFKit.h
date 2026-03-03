@@ -10,7 +10,7 @@
 //         FitCloudPro 智能手表表盘辅助框架，旨在帮助您轻松自定义属于您自己的表盘文件。
 //
 //  构建版本：
-//      pcjbird    2026-02-09  Version:1.2.1-beta.3 Build:20260209001
+//      pcjbird    2026-03-02  Version:1.2.1-beta.4 Build:20260302001
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
