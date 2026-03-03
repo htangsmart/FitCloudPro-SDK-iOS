@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.50 build20260225001 (2026-02-25)
+
+- Fix API `+ (FitCloudSoCPlatformSeries) socPlatformSeries;` for 579X.
+
 ## V1.3.2-beta.49 build20260206001 (2026-02-06)
 
 - Fix SDK callback method `- (void)onEarbudsStatusChangedTo:(FitCloudEarbudsStatusInfoModel*)latestStatusInfo;`. 

@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-02-03  Version:1.3.2-beta.48 Build:20260203001
+//      pcjbird    2026-02-25  Version:1.3.2-beta.50 Build:20260225001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
