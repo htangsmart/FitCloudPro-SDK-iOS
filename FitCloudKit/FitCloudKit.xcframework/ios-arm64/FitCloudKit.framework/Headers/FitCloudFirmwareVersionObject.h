@@ -368,4 +368,11 @@
 /// 是否支持设备端语音唤醒
 @property(nonatomic, readonly) BOOL allowVoiceWakeUpOnDevice;
 
+/// 是否支持体力
+@property(nonatomic, readonly) BOOL withPhysicalActivity;
+
+/// 是否支持睡眠评分
+@property(nonatomic, readonly) BOOL withSleepScore;
+
+
 @end

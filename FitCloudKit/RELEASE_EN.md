@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-02-25 Version:1.3.2-beta.50 Build:20260225001  
+## pcjbird 2026-03-03 Version:1.3.2-beta.51 Build:20260303001  
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -54,6 +54,9 @@
 - Introduce new API `+ (FitCloudSoCPlatformSeries) socPlatformSeries;` to query the SoC platform series.
 - Introduce new APIs for workout slot edit.
 - Introduced new APIs to configure and query the enable state of on-device voice wake-up.
+- Added support for GoMore algorithm V3.
+- Workout summary data now supports VO2 max.
+- Added support for synchronization of sleep-score and physical activity data.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

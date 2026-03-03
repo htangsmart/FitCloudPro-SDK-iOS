@@ -1807,6 +1807,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDGOMOREALGORITHMVERSION) {
     FITCLOUDGOMOREALGORITHMVERSION_1_0 = 0x01,
     /// 2.0
     FITCLOUDGOMOREALGORITHMVERSION_2_0 = 0x02,
+    /// 3.0
+    FITCLOUDGOMOREALGORITHMVERSION_3_0 = 0x03,
     /// Default version
     FITCLOUDGOMOREALGORITHMVERSION_DEFAULT = FITCLOUDGOMOREALGORITHMVERSION_1_0,
 };
@@ -1999,6 +2001,9 @@ typedef NS_ENUM(NSInteger, FitCloudWorkoutSummaryDataType) {
 
     /// Heart rate zone - extreme duration (in minutes)
     FitCloudWorkoutSummaryDataTypeHeartRateExtremeDuration = 22,
+
+    /// VO2 max, unit: mL/(kg·min)
+    FitCloudWorkoutSummaryDataTypeVO2Max = 23,
     
 
     FitCloudWorkoutSummaryDataTypeMax = FitCloudWorkoutSummaryDataTypeHeartRateExtremeDuration,

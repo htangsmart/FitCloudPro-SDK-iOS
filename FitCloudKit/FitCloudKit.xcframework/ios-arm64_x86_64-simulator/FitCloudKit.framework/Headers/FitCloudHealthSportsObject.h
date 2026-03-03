@@ -249,6 +249,41 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+#pragma mark - Physical Activity
+
+/// Physical activity data item
+@interface FitCloudPhysicalActivityItemObject : FitCloudManualSyncItemObject
+
+/// Physical activity index
+@property(nonatomic, assign) CGFloat indexValue;
+
+@end
+
+/// Physical activity data record
+@interface FitCloudPhysicalActivityRecordObject : FitCloudManualSyncRecordObject <FitCloudPhysicalActivityItemObject *>
+
+@end
+
+#pragma mark - Sleep Score
+
+/// Sleep score data item
+@interface FitCloudSleepScoreItemObject : FitCloudManualSyncItemObject
+
+/// Sleep score
+@property(nonatomic, assign) UInt8 score;
+
+/// Sleep efficiency
+@property(nonatomic, assign) CGFloat efficiency;
+
+@end
+
+/// Sleep score data record
+@interface FitCloudSleepScoreRecordObject : FitCloudManualSyncRecordObject <FitCloudSleepScoreItemObject *>
+
+@end
+
+
+
 #pragma mark - Workout
 
 /// A class representing workout data items from the watch's sports mode

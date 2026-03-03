@@ -142,7 +142,7 @@
 		</data>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
-		XQjtEAIjj8yTkUpbGwhYx25Qpj8=
+		lctk1GnWhoz3dDZ7hdQ1l9X0mS4=
 		</data>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
 		<data>
@@ -194,7 +194,7 @@
 		</data>
 		<key>Headers/FitCloudHealthSportsObject.h</key>
 		<data>
-		TDm5eXOKbpgwNgnAMnKrnD9F7rM=
+		B11geOuxiW5ecfXwVfK3LE7MN0c=
 		</data>
 		<key>Headers/FitCloudHourWeatherObject.h</key>
 		<data>
@@ -258,7 +258,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		InGBYpeYM248DSPkGDPihV5HrJM=
+		tJNWS5H10YOQ+IIL6TToOuqKY88=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -442,7 +442,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		O9Uw+IwsTaz2teJTYueufaBsitM=
+		coc5pNzbwie17FTCeBo6cQTLMwM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -693,7 +693,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j63viF5G4jN2ItkOKxmRhmgOyf3sM9FT7uxgv4mU17k=
+			NgNpzhFwp0sIkxjy3LNq5mWODA0ZKokTP0zAZ2l1d+g=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
@@ -784,7 +784,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lGdbqu0WU46wQfuSFxMTV6Lw+C5VwJ+adInWHmJEEiM=
+			bukScfS+GuaU1PJ2eFnSjyj4J9R8uttbmJGWbEYXM2w=
 			</data>
 		</dict>
 		<key>Headers/FitCloudHourWeatherObject.h</key>
@@ -896,7 +896,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NwJd/tBD/RkI9IMRDP4iSp6J0TJHaiHtRmdQE+pNtn4=
+			XGnnk+xWIZrFLidwUkn8k5ID2DAA4x4yhnJQyGLMTUE=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
