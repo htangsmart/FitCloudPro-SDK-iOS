@@ -1,6 +1,6 @@
 # RELEASES
 
-## V1.2.1-beta.4 build20260302001 (2026-03-02)
+## V1.2.1-beta.5 build20260304001 (2026-03-04)
 
 - Fixed some Italian translations.
 - Added support for 579X platform.

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.2.1-beta.5 build20260304001 (2026-03-04)
+
+- Revise the watch-face generation implementation for the 579X platform.
+
 ## V1.2.1-beta.4 build20260302001 (2026-03-02)
 
 - Revise the watch-face generation implementation for the 579X platform.

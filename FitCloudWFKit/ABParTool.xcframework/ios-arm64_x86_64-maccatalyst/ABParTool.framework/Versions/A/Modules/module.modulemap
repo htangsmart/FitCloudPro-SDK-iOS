@@ -1,6 +1,0 @@
-framework module ABParTool {
-  umbrella header "ABParTool.h"
-  export *
-
-  module * { export * }
-}
