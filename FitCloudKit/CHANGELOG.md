@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.52 build20260309001 (2026-03-09)
+
+- Added support for synchronization of Titan heart rate zone data.
+
 ## V1.3.2-beta.51 build20260303001 (2026-03-03)
 
 - Added support for GoMore algorithm V3.

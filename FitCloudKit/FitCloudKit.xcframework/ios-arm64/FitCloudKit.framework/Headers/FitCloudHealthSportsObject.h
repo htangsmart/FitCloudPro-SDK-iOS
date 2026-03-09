@@ -375,6 +375,44 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/// A class representing heart rate zone data models
+@interface TitanHeartRateZoneDataModel: NSObject
+
+/// The heart rate zone range start value
+@property(nonatomic, assign) NSInteger zoneRangeStart;
+
+/// The heart rate zone range end value
+@property(nonatomic, assign) NSInteger zoneRangeEnd;
+
+
+/// The number of seconds in the zone
+@property(nonatomic, assign) NSInteger secondsInZone;
+
+@end
+
+/// A class representing heart rate zone summary data models
+@interface TitanHeartRateZoneSummaryDataModel: NSObject
+
+/// Heart rate zone range 1
+@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range1;
+
+/// Heart rate zone range 2
+@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range2;
+
+/// Heart rate zone range 3
+@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range3;
+
+/// Heart rate zone range 4
+@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range4;
+
+/// Heart rate zone range 5
+@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range5;
+
+/// Heart rate zone range 6
+@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range6;
+
+@end
+
 /// A class representing sports record data from the watch's sports mode
 @interface FitCloudSportsRecordObject : FitCloudManualSyncRecordObject <FitCloudSportsItemObject *>
 
@@ -399,7 +437,14 @@ NS_ASSUME_NONNULL_BEGIN
 ///         rather than being calculated on the phone
 @property(nonatomic, strong, nullable) NSArray<FitCloudWorkoutSummaryDataModel*> * workoutSummaryDataCalculatedOnWatch;
 
+/// Titan heart rate zone summary data models
+@property(nonatomic, strong, nullable) TitanHeartRateZoneSummaryDataModel* titanHeartRateZoneSummaryData;
+
 @end
+
+
+
+
 
 #pragma mark - GPS Data
 

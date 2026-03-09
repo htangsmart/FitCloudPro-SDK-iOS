@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2026-03-03 Version:1.3.2-beta.51 Build:20260303001
+## pcjbird 2026-03-09 Version:1.3.2-beta.52 Build:20260309001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -56,6 +56,7 @@
 - 新增对 GoMore 算法 V3 的支持。
 - 运动汇总数据现已支持最大摄氧量（VO2 max）。
 - 新增支持同步睡眠评分与体力数据。
+- 新增支持同步 Titan 心率区域数据。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
