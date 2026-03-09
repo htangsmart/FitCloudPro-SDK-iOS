@@ -68,6 +68,16 @@ import FitCloudKit
                     // Log the heart rate data array associated with this workout session
                     XLOG_INFO("Found workout record, BPM data: \(String(describing: workoutRecord.bpmDataArray))")
                     
+                    if let workoutSummaries:[FitCloudWorkoutSummaryDataModel] = workoutRecord.workoutSummaryDataCalculatedOnWatch {
+                        
+                        for summary in workoutSummaries {
+                            let dataType = summary.dataType
+                            if dataType == .vo2Max {
+                                XLOG_INFO("Workout vo2Max: \(String(describing: summary.value))")
+                            }
+                        }
+                    }
+                    
                     // Get workout items from the record
                     let items = workoutRecord.items
 
@@ -106,7 +116,12 @@ import FitCloudKit
                     XLOG_INFO("Workout Summary - Total Steps: \(workoutStats.steps), Total Calories: \(String(format: "%.2f", kiloCalories))kcal")
                     
                 }
+                else if let currentRecord = record as? FitCloudManualSyncRecordObject<FitCloudSleepScoreItemObject>,
+                        let sleepScoreRecord = currentRecord as? FitCloudSleepScoreRecordObject {
+                    XLOG_INFO("Sleep score: \(String(describing: sleepScoreRecord.items))")
+                }
             }
+            
             
             return
         }, finished: {
