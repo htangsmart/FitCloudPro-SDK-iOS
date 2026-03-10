@@ -87,6 +87,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 手表睡眠数据记录
 @interface FitCloudSleepRecordObject : FitCloudManualSyncRecordObject <FitCloudSleepItemObject *>
 
+/// Sleep score
+@property(nonatomic, strong, nullable) NSNumber* sleepScore;
+
+/// Sleep efficiency
+@property(nonatomic, strong, nullable) NSNumber* sleepEfficiency;
+
 @end
 
 #pragma mark - 心率

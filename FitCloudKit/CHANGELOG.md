@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.53 build20260310001 (2026-03-10)
+
+- Added `sleepScore` and `sleepEfficiency` properties to the sleep record.
+
 ## V1.3.2-beta.52 build20260309001 (2026-03-09)
 
 - Added support for synchronization of Titan heart rate zone data.
