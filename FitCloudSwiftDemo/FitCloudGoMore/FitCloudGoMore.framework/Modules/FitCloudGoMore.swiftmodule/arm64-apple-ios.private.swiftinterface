@@ -1,0 +1,59 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name FitCloudGoMore
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc(FitCloudGoMoreAlgorithmKeyReturnCode) public enum GoMoreAlgorithmKeyReturnCode : Swift.Int {
+  case success = 0x00
+  case networkNotWork = 0x01
+  case wrongParameters = 0x02
+  case appInBackground = 0x03
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(FitCloudGoMoreSDK) final public class GoMoreSDK : ObjectiveC.NSObject {
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc public static var sdkBuild: Swift.String {
+    @objc get
+  }
+  @objc public static var sdkReleaseDate: Swift.String {
+    @objc get
+  }
+  @objc public static var sdkVersionDescription: Swift.String {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(queryGoMoreAlgorithmKey:version:appState:completion:) public static func queryGoMoreAlgorithmKey(deviceId: Swift.String, version: FitCloudGoMore.GoMoreAlgorithmVersion, appState: UIKit.UIApplication.State, completion: @escaping (FitCloudGoMore.GoMoreAlgorithmKeyReturnCode, Swift.String?) -> Swift.Void)
+  #endif
+  @objc deinit
+}
+@objc(FitCloudGoMoreAlgorithmVersion) public enum GoMoreAlgorithmVersion : Swift.Int {
+  case v1 = 0x01
+  case v2 = 0x02
+  case v3 = 0x03
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension FitCloudGoMore.GoMoreAlgorithmKeyReturnCode : Swift.Equatable {}
+extension FitCloudGoMore.GoMoreAlgorithmKeyReturnCode : Swift.Hashable {}
+extension FitCloudGoMore.GoMoreAlgorithmKeyReturnCode : Swift.RawRepresentable {}
+extension FitCloudGoMore.GoMoreAlgorithmVersion : Swift.Equatable {}
+extension FitCloudGoMore.GoMoreAlgorithmVersion : Swift.Hashable {}
+extension FitCloudGoMore.GoMoreAlgorithmVersion : Swift.RawRepresentable {}

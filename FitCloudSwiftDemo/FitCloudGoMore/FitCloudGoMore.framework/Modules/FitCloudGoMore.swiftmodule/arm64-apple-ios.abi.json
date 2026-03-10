@@ -1,0 +1,1332 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "FitCloudGoMore",
+    "printedName": "FitCloudGoMore",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FitCloudGoMore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GoMoreAlgorithmKeyReturnCode",
+        "printedName": "GoMoreAlgorithmKeyReturnCode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudGoMore.GoMoreAlgorithmKeyReturnCode.Type) -> FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GoMoreAlgorithmKeyReturnCode",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                    "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GoMoreAlgorithmKeyReturnCode",
+                        "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                        "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode@FitCloudGoMoreAlgorithmKeyReturnCodeSuccess",
+            "mangledName": "$s14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO7successyA2CmF",
+            "moduleName": "FitCloudGoMore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "networkNotWork",
+            "printedName": "networkNotWork",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudGoMore.GoMoreAlgorithmKeyReturnCode.Type) -> FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GoMoreAlgorithmKeyReturnCode",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                    "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GoMoreAlgorithmKeyReturnCode",
+                        "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                        "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode@FitCloudGoMoreAlgorithmKeyReturnCodeNetworkNotWork",
+            "mangledName": "$s14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO14networkNotWorkyA2CmF",
+            "moduleName": "FitCloudGoMore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "wrongParameters",
+            "printedName": "wrongParameters",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudGoMore.GoMoreAlgorithmKeyReturnCode.Type) -> FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GoMoreAlgorithmKeyReturnCode",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                    "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GoMoreAlgorithmKeyReturnCode",
+                        "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                        "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode@FitCloudGoMoreAlgorithmKeyReturnCodeWrongParameters",
+            "mangledName": "$s14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO15wrongParametersyA2CmF",
+            "moduleName": "FitCloudGoMore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "appInBackground",
+            "printedName": "appInBackground",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudGoMore.GoMoreAlgorithmKeyReturnCode.Type) -> FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GoMoreAlgorithmKeyReturnCode",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                    "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GoMoreAlgorithmKeyReturnCode",
+                        "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                        "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode@FitCloudGoMoreAlgorithmKeyReturnCodeAppInBackground",
+            "mangledName": "$s14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO15appInBackgroundyA2CmF",
+            "moduleName": "FitCloudGoMore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GoMoreAlgorithmKeyReturnCode",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                    "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO8rawValueACSgSi_tcfc",
+            "moduleName": "FitCloudGoMore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO8rawValueSivp",
+            "mangledName": "$s14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO8rawValueSivp",
+            "moduleName": "FitCloudGoMore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO8rawValueSivg",
+                "mangledName": "$s14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO8rawValueSivg",
+                "moduleName": "FitCloudGoMore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode",
+        "mangledName": "$s14FitCloudGoMore0cD22AlgorithmKeyReturnCodeO",
+        "moduleName": "FitCloudGoMore",
+        "objc_name": "FitCloudGoMoreAlgorithmKeyReturnCode",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FitCloudGoMore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Var",
+        "name": "SDK_EMOJI_ICON",
+        "printedName": "SDK_EMOJI_ICON",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:14FitCloudGoMore14SDK_EMOJI_ICONSSvp",
+        "mangledName": "$s14FitCloudGoMore14SDK_EMOJI_ICONSSvp",
+        "moduleName": "FitCloudGoMore",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "RawDocComment"
+        ],
+        "isLet": true,
+        "hasStorage": true
+      },
+      {
+        "kind": "Var",
+        "name": "SDK_NAME",
+        "printedName": "SDK_NAME",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:14FitCloudGoMore8SDK_NAMESSvp",
+        "mangledName": "$s14FitCloudGoMore8SDK_NAMESSvp",
+        "moduleName": "FitCloudGoMore",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "RawDocComment"
+        ],
+        "isLet": true,
+        "hasStorage": true
+      },
+      {
+        "kind": "Var",
+        "name": "SDK_VERSION",
+        "printedName": "SDK_VERSION",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:14FitCloudGoMore11SDK_VERSIONSSvp",
+        "mangledName": "$s14FitCloudGoMore11SDK_VERSIONSSvp",
+        "moduleName": "FitCloudGoMore",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "RawDocComment"
+        ],
+        "isLet": true,
+        "hasStorage": true
+      },
+      {
+        "kind": "Var",
+        "name": "SDK_BUILD",
+        "printedName": "SDK_BUILD",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:14FitCloudGoMore9SDK_BUILDSSvp",
+        "mangledName": "$s14FitCloudGoMore9SDK_BUILDSSvp",
+        "moduleName": "FitCloudGoMore",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "RawDocComment"
+        ],
+        "isLet": true,
+        "hasStorage": true
+      },
+      {
+        "kind": "Var",
+        "name": "SDK_RELEASE_DATE",
+        "printedName": "SDK_RELEASE_DATE",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:14FitCloudGoMore16SDK_RELEASE_DATESSvp",
+        "mangledName": "$s14FitCloudGoMore16SDK_RELEASE_DATESSvp",
+        "moduleName": "FitCloudGoMore",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "RawDocComment"
+        ],
+        "isLet": true,
+        "hasStorage": true
+      },
+      {
+        "kind": "Var",
+        "name": "SDK_BUNDLE_IDENTIFIER",
+        "printedName": "SDK_BUNDLE_IDENTIFIER",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:14FitCloudGoMore21SDK_BUNDLE_IDENTIFIERSSvp",
+        "mangledName": "$s14FitCloudGoMore21SDK_BUNDLE_IDENTIFIERSSvp",
+        "moduleName": "FitCloudGoMore",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "RawDocComment"
+        ],
+        "isLet": true,
+        "hasStorage": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FitCloudGoMore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FitCloudGoMore"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GoMoreSDK",
+        "printedName": "GoMoreSDK",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GoMoreSDK",
+                "printedName": "FitCloudGoMore.GoMoreSDK",
+                "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14FitCloudGoMore0cD3SDKC6sharedACvpZ",
+            "mangledName": "$s14FitCloudGoMore0cD3SDKC6sharedACvpZ",
+            "moduleName": "FitCloudGoMore",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GoMoreSDK",
+                    "printedName": "FitCloudGoMore.GoMoreSDK",
+                    "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14FitCloudGoMore0cD3SDKC6sharedACvgZ",
+                "mangledName": "$s14FitCloudGoMore0cD3SDKC6sharedACvgZ",
+                "moduleName": "FitCloudGoMore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkVersion",
+            "printedName": "sdkVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK(cpy)sdkVersion",
+            "mangledName": "$s14FitCloudGoMore0cD3SDKC10sdkVersionSSvpZ",
+            "moduleName": "FitCloudGoMore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK(cm)sdkVersion",
+                "mangledName": "$s14FitCloudGoMore0cD3SDKC10sdkVersionSSvgZ",
+                "moduleName": "FitCloudGoMore",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkBuild",
+            "printedName": "sdkBuild",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK(cpy)sdkBuild",
+            "mangledName": "$s14FitCloudGoMore0cD3SDKC8sdkBuildSSvpZ",
+            "moduleName": "FitCloudGoMore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK(cm)sdkBuild",
+                "mangledName": "$s14FitCloudGoMore0cD3SDKC8sdkBuildSSvgZ",
+                "moduleName": "FitCloudGoMore",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkReleaseDate",
+            "printedName": "sdkReleaseDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK(cpy)sdkReleaseDate",
+            "mangledName": "$s14FitCloudGoMore0cD3SDKC14sdkReleaseDateSSvpZ",
+            "moduleName": "FitCloudGoMore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK(cm)sdkReleaseDate",
+                "mangledName": "$s14FitCloudGoMore0cD3SDKC14sdkReleaseDateSSvgZ",
+                "moduleName": "FitCloudGoMore",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkVersionDescription",
+            "printedName": "sdkVersionDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK(cpy)sdkVersionDescription",
+            "mangledName": "$s14FitCloudGoMore0cD3SDKC21sdkVersionDescriptionSSvpZ",
+            "moduleName": "FitCloudGoMore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK(cm)sdkVersionDescription",
+                "mangledName": "$s14FitCloudGoMore0cD3SDKC21sdkVersionDescriptionSSvgZ",
+                "moduleName": "FitCloudGoMore",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "queryGoMoreAlgorithmKey",
+            "printedName": "queryGoMoreAlgorithmKey(deviceId:version:appState:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GoMoreAlgorithmVersion",
+                "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion",
+                "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "State",
+                "printedName": "UIKit.UIApplication.State",
+                "usr": "c:@E@UIApplicationState"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudGoMore.GoMoreAlgorithmKeyReturnCode, Swift.String?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(FitCloudGoMore.GoMoreAlgorithmKeyReturnCode, Swift.String?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GoMoreAlgorithmKeyReturnCode",
+                        "printedName": "FitCloudGoMore.GoMoreAlgorithmKeyReturnCode",
+                        "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmKeyReturnCode"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK(cm)queryGoMoreAlgorithmKey:version:appState:completion:",
+            "mangledName": "$s14FitCloudGoMore0cD3SDKC05querycD12AlgorithmKey8deviceId7version8appState10completionySS_AA0cdG7VersionOSo013UIApplicationM0VyAA0cdgH10ReturnCodeO_SSSgtctFZ",
+            "moduleName": "FitCloudGoMore",
+            "static": true,
+            "objc_name": "queryGoMoreAlgorithmKey:version:appState:completion:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@FitCloudGoMore@objc(cs)FitCloudGoMoreSDK",
+        "mangledName": "$s14FitCloudGoMore0cD3SDKC",
+        "moduleName": "FitCloudGoMore",
+        "objc_name": "FitCloudGoMoreSDK",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FitCloudGoMore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GoMoreAlgorithmVersion",
+        "printedName": "GoMoreAlgorithmVersion",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "v1",
+            "printedName": "v1",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudGoMore.GoMoreAlgorithmVersion.Type) -> FitCloudGoMore.GoMoreAlgorithmVersion",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GoMoreAlgorithmVersion",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion",
+                    "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GoMoreAlgorithmVersion",
+                        "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion",
+                        "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion@FitCloudGoMoreAlgorithmVersionV1",
+            "mangledName": "$s14FitCloudGoMore0cD16AlgorithmVersionO2v1yA2CmF",
+            "moduleName": "FitCloudGoMore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "v2",
+            "printedName": "v2",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudGoMore.GoMoreAlgorithmVersion.Type) -> FitCloudGoMore.GoMoreAlgorithmVersion",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GoMoreAlgorithmVersion",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion",
+                    "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GoMoreAlgorithmVersion",
+                        "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion",
+                        "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion@FitCloudGoMoreAlgorithmVersionV2",
+            "mangledName": "$s14FitCloudGoMore0cD16AlgorithmVersionO2v2yA2CmF",
+            "moduleName": "FitCloudGoMore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "v3",
+            "printedName": "v3",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FitCloudGoMore.GoMoreAlgorithmVersion.Type) -> FitCloudGoMore.GoMoreAlgorithmVersion",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GoMoreAlgorithmVersion",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion",
+                    "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GoMoreAlgorithmVersion",
+                        "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion",
+                        "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion@FitCloudGoMoreAlgorithmVersionV3",
+            "mangledName": "$s14FitCloudGoMore0cD16AlgorithmVersionO2v3yA2CmF",
+            "moduleName": "FitCloudGoMore",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GoMoreAlgorithmVersion",
+                    "printedName": "FitCloudGoMore.GoMoreAlgorithmVersion",
+                    "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14FitCloudGoMore0cD16AlgorithmVersionO8rawValueACSgSi_tcfc",
+            "mangledName": "$s14FitCloudGoMore0cD16AlgorithmVersionO8rawValueACSgSi_tcfc",
+            "moduleName": "FitCloudGoMore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14FitCloudGoMore0cD16AlgorithmVersionO8rawValueSivp",
+            "mangledName": "$s14FitCloudGoMore0cD16AlgorithmVersionO8rawValueSivp",
+            "moduleName": "FitCloudGoMore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14FitCloudGoMore0cD16AlgorithmVersionO8rawValueSivg",
+                "mangledName": "$s14FitCloudGoMore0cD16AlgorithmVersionO8rawValueSivg",
+                "moduleName": "FitCloudGoMore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@FitCloudGoMore@E@FitCloudGoMoreAlgorithmVersion",
+        "mangledName": "$s14FitCloudGoMore0cD16AlgorithmVersionO",
+        "moduleName": "FitCloudGoMore",
+        "objc_name": "FitCloudGoMoreAlgorithmVersion",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreAlgorithmKeyReturnCode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 282,
+      "length": 4,
+      "value": "0x00"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreAlgorithmKeyReturnCode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 356,
+      "length": 4,
+      "value": "0x01"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreAlgorithmKeyReturnCode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 428,
+      "length": 4,
+      "value": "0x02"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreAlgorithmKeyReturnCode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 501,
+      "length": 4,
+      "value": "0x03"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/FitCloudGoMore.swift",
+      "kind": "StringLiteral",
+      "offset": 205,
+      "length": 6,
+      "value": "\"🧶\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/FitCloudGoMore.swift",
+      "kind": "StringLiteral",
+      "offset": 297,
+      "length": 19,
+      "value": "\"FitCloudGoMoreSDK\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/FitCloudGoMore.swift",
+      "kind": "StringLiteral",
+      "offset": 416,
+      "length": 14,
+      "value": "\"1.0.0-beta.1\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/FitCloudGoMore.swift",
+      "kind": "StringLiteral",
+      "offset": 546,
+      "length": 13,
+      "value": "\"20260309001\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/FitCloudGoMore.swift",
+      "kind": "StringLiteral",
+      "offset": 661,
+      "length": 12,
+      "value": "\"2026-03-09\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/FitCloudGoMore.swift",
+      "kind": "StringLiteral",
+      "offset": 754,
+      "length": 34,
+      "value": "\"com.topstep.sdks.fitcloud.gomore\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 1482,
+      "length": 100,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 1500,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 1511,
+      "length": 1,
+      "value": "\" V\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 1527,
+      "length": 1,
+      "value": "\" (Build\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 1546,
+      "length": 1,
+      "value": "\") Release Date: \""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 1581,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreAlgorithmVersion.swift",
+      "kind": "IntegerLiteral",
+      "offset": 253,
+      "length": 4,
+      "value": "0x01"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreAlgorithmVersion.swift",
+      "kind": "IntegerLiteral",
+      "offset": 290,
+      "length": 4,
+      "value": "0x02"
+    },
+    {
+      "filePath": "\/Users\/Shared\/catalina\/mygithub\/FitCloudGoMore\/FitCloudGoMore\/GoMoreAlgorithmVersion.swift",
+      "kind": "IntegerLiteral",
+      "offset": 327,
+      "length": 4,
+      "value": "0x03"
+    }
+  ]
+}

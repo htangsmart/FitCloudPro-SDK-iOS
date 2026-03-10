@@ -1,0 +1,4 @@
+framework module FitCloudGoMore {
+  header "FitCloudGoMore-Swift.h"
+  requires objc
+}

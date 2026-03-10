@@ -10,6 +10,7 @@ import FitCloudKit
 import TopStepAISDK
 import LogMate
 import FitCloudWFKit
+import FitCloudGoMore
 
 class FitCloudProSDK: NSObject {
     
@@ -892,6 +893,38 @@ extension  FitCloudProSDK: FitCloudCallback {
     ///   - findEvent: The event
     func onEarbudsFindStatusChanged(with findEvent: FitCloudEarbudFindEvent) {
         XLOG_INFO("Earbuds find-my status changed with event: \(findEvent.rawValue)")
+    }
+    
+    func onQueryGoMoreAlgorithmKey(_ deviceId: String, version: FITCLOUDGOMOREALGORITHMVERSION) {
+        guard let version = GoMoreAlgorithmVersion(rawValue: version.rawValue) else {
+            XLOG_ERROR("Invalid gomore version.")
+            return
+        }
+        DispatchQueue.main.async {
+            let appState = UIApplication.shared.applicationState
+            DispatchQueue.global().async {
+                GoMoreSDK.queryGoMoreAlgorithmKey(deviceId: deviceId, version: version, appState: appState) { code, algorithmKey in
+                    guard let returnCode = FITCLOUDGOMOREALGORITHMKEYRETURNCODE(rawValue: code.rawValue) else {
+                        return
+                    }
+                    FitCloudKit.sendGoMoreAlgorithmKeyQueryResult(with: returnCode, key: algorithmKey) { isSuccess, error in
+                        if !isSuccess {
+                            let errorDesc: String = {
+                                if let error = error {
+                                    return "\(error)"
+                                }
+                                return "Unknown error"
+                            }()
+                            XLOG_ERROR("Send gomore algorithm key to device with error:\(errorDesc)")
+                            return
+                        }
+                        XLOG_INFO("Sucessfully send gomore algorithm key to the device.")
+                    }
+                }
+            }
+        }
+        
+        
     }
 
 }
