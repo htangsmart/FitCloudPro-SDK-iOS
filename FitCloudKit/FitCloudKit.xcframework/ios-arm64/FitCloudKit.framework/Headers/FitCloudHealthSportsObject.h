@@ -382,40 +382,39 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 /// A class representing heart rate zone data models
-@interface TitanHeartRateZoneDataModel: NSObject
+@interface GoMoreHeartRateZoneModel: NSObject
 
-/// The heart rate zone range start value
-@property(nonatomic, assign) NSInteger zoneRangeStart;
+/// The heart rate zone range start value (BPM)
+@property(nonatomic, assign) NSInteger rangeStart;
 
-/// The heart rate zone range end value
-@property(nonatomic, assign) NSInteger zoneRangeEnd;
+/// The heart rate zone range end value (BPM)
+@property(nonatomic, assign) NSInteger rangeEnd;
 
 
-/// The number of seconds in the zone
-@property(nonatomic, assign) NSInteger secondsInZone;
+/// The total time in seconds in the zone (unit: seconds)
+@property(nonatomic, assign) NSInteger duration;
 
 @end
 
+
 /// A class representing heart rate zone summary data models
-@interface TitanHeartRateZoneSummaryDataModel: NSObject
+@interface GoMoreHeartRateZonesModel: NSObject
 
-/// Heart rate zone range 1
-@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range1;
+/// Heart rate zone - warm up zone & duration (in seconds)
+@property(nonatomic, strong, nullable) GoMoreHeartRateZoneModel* warmUp;
 
-/// Heart rate zone range 2
-@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range2;
+/// Heart rate zone - fat burning zone & duration (in seconds)
+@property(nonatomic, strong, nullable) GoMoreHeartRateZoneModel* fatBurning;
 
-/// Heart rate zone range 3
-@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range3;
+/// Heart rate zone - aerobic zone & duration (in seconds)
+@property(nonatomic, strong, nullable) GoMoreHeartRateZoneModel* aerobic;
 
-/// Heart rate zone range 4
-@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range4;
+/// Heart rate zone - anaerobiczone & duration (in seconds)
+@property(nonatomic, strong, nullable) GoMoreHeartRateZoneModel* anaerobic;
 
-/// Heart rate zone range 5
-@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range5;
+/// Heart rate zone - extreme zone & duration (in seconds)
+@property(nonatomic, strong, nullable) GoMoreHeartRateZoneModel* extreme;
 
-/// Heart rate zone range 6
-@property(nonatomic, strong, nullable) TitanHeartRateZoneDataModel* range6;
 
 @end
 
@@ -441,10 +440,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// An array of workout summary data models that were calculated on the watch device
 /// - Note: This property contains workout summary statistics that were computed directly on the watch,
 ///         rather than being calculated on the phone
-@property(nonatomic, strong, nullable) NSArray<FitCloudWorkoutSummaryDataModel*> * workoutSummaryDataCalculatedOnWatch;
+@property(nonatomic, strong, nullable) NSArray<FitCloudWorkoutSummaryDataModel*> * summaries;
 
-/// Titan heart rate zone summary data models
-@property(nonatomic, strong, nullable) TitanHeartRateZoneSummaryDataModel* titanHeartRateZoneSummaryData;
+/// GoMore heart rate zones
+@property(nonatomic, strong, nullable) GoMoreHeartRateZonesModel* goMoreHeartRateZones;
 
 @end
 
