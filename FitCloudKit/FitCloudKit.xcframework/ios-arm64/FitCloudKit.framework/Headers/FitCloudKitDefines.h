@@ -2289,4 +2289,18 @@ typedef NS_ENUM(NSInteger, FitCloudAIChatSessionEvent) {
     FitCloudAIChatSessionEventInitiateWithOpus = 2,
 };
 
+#pragma mark - AI chat audio channel
+
+/// AI chat audio channel
+typedef NS_ENUM(NSInteger, FitCloudAIChatAudioChannel) {
+    /// Unknown
+    FitCloudAIChatAudioChannelUnknown = -1,
+    /// SCO (Synchronous Connection-Oriented) channel
+    FitCloudAIChatAudioChannelSco = 0,
+    /// Opus encoded input, A2DP output channel
+    FitCloudAIChatAudioChannelOpusInA2dpOut = 1,
+    /// Opus encoded input, Opus encoded output channel
+    FitCloudAIChatAudioChannelOpusInOpusOut = 2,
+};
+
 #endif /* FitCloudKitDefines_h */

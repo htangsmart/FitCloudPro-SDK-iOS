@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-03-12 Version:1.3.2-beta.54 Build:20260312001  
+## pcjbird 2026-03-12 Version:1.3.2-beta.55 Build:20260312002  
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -57,7 +57,9 @@
 - Added support for GoMore algorithm V3.
 - Workout summary data now supports VO2 max.
 - Added support for synchronization of sleep-score and physical activity data.
-- Added support for synchronization of Titan heart rate zone data.
+- Added support for synchronization of GoMore heart rate zone data.
+- Added flag to indicate whether the device supports AI-Chat.
+- Added flag to indicate whether the device will use SCO as audio channel for AI-Chat.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

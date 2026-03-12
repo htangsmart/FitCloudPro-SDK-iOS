@@ -374,5 +374,13 @@
 /// 是否支持睡眠评分
 @property(nonatomic, readonly) BOOL withSleepScore;
 
+/// 是否支持 AI 聊天
+@property(nonatomic, readonly) BOOL withAIChat;
+
+/// AI 聊天音频通道是否使用 SCO
+@property(nonatomic, readonly) BOOL aiChatAudioChannelUsingSco;
+
+/// AI 聊天音频通道
+@property(nonatomic, readonly) FitCloudAIChatAudioChannel aiChatAudioChannel;
 
 @end

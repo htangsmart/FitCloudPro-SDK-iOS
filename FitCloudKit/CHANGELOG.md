@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.55 build20260312002 (2026-03-12)
+
+- Added flag to indicate whether the device supports AI-Chat.
+- Added flag to indicate whether the device will use SCO as audio channel for AI-Chat.
+
 ## V1.3.2-beta.54 build20260312001 (2026-03-12)
 
 - Added more SDK debug logs.
@@ -10,7 +15,7 @@
 
 ## V1.3.2-beta.52 build20260309001 (2026-03-09)
 
-- Added support for synchronization of Titan heart rate zone data.
+- Added support for synchronization of GoMore heartrate zones data.
 
 ## V1.3.2-beta.51 build20260303001 (2026-03-03)
 
