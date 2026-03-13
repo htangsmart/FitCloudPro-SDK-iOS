@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.56 build20260313001 (2026-03-13)
+
+- Fixed GoMore heartrate zones.
+- Fixed SleepScore data.
+
 ## V1.3.2-beta.55 build20260312002 (2026-03-12)
 
 - Added flag to indicate whether the device supports AI-Chat.
