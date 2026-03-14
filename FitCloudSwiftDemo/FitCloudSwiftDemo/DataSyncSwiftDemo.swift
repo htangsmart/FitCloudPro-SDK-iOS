@@ -68,7 +68,7 @@ import FitCloudKit
                     // Log the heart rate data array associated with this workout session
                     XLOG_INFO("Found workout record, BPM data: \(String(describing: workoutRecord.bpmDataArray))")
                     
-                    if let workoutSummaries:[FitCloudWorkoutSummaryDataModel] = workoutRecord.workoutSummaryDataCalculatedOnWatch {
+                    if let workoutSummaries:[FitCloudWorkoutSummaryDataModel] = workoutRecord.summaries {
                         
                         for summary in workoutSummaries {
                             let dataType = summary.dataType
@@ -76,6 +76,10 @@ import FitCloudKit
                                 XLOG_INFO("Workout vo2Max: \(String(describing: summary.value))")
                             }
                         }
+                    }
+                    
+                    if let goMoreHeartRateZones = workoutRecord.goMoreHeartRateZones {
+                        XLOG_INFO("GoMore heartrate zones: \n\(goMoreHeartRateZones)")
                     }
                     
                     // Get workout items from the record
