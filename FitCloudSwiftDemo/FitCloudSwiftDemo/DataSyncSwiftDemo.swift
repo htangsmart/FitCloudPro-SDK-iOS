@@ -120,6 +120,11 @@ import FitCloudKit
                     XLOG_INFO("Workout Summary - Total Steps: \(workoutStats.steps), Total Calories: \(String(format: "%.2f", kiloCalories))kcal")
                     
                 }
+                else if let currentRecord = record as? FitCloudManualSyncRecordObject<FitCloudGPSItemObject>,
+                        let gpsDataRecord = currentRecord as? FitCloudGPSRecordObject {
+                    XLOG_INFO("GPS data key: \(String(describing: gpsDataRecord.gpsDataKey))")
+                    XLOG_INFO("GPS data details: \(String(describing: gpsDataRecord.items))")
+                }
                 else if let currentRecord = record as? FitCloudManualSyncRecordObject<FitCloudSleepScoreItemObject>,
                         let sleepScoreRecord = currentRecord as? FitCloudSleepScoreRecordObject {
                     XLOG_INFO("Sleep score: \(String(describing: sleepScoreRecord.items))")
