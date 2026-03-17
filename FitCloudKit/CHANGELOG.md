@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.57 build20260317001 (2026-03-17)
+
+- Introduced new API `+ (void)sendAIDietPlanWithResponseCode:(FitCloudAIDietPlanResponseCode)responseCode planText:(NSString* _Nullable)planText completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;` to send AI fat loss diet plan to the device.
+- Added SDK callback method `- (void)onRequestAIFatLossDietPlan;` to notify the app that the device requests the AI fat loss diet plan data.
+
 ## V1.3.2-beta.56 build20260313001 (2026-03-13)
 
 - Fixed GoMore heartrate zones.
@@ -34,7 +39,7 @@
 
 ## V1.3.2-beta.49 build20260206001 (2026-02-06)
 
-- Fix SDK callback method `- (void)onEarbudsStatusChangedTo:(FitCloudEarbudsStatusInfoModel*)latestStatusInfo;`. 
+- Fix SDK callback method `- (void)onEarbudsStatusChangedTo:(FitCloudEarbudsStatusInfoModel*)latestStatusInfo;`.
 
 ## V1.3.2-beta.48 build20260203001 (2026-02-03)
 
@@ -48,8 +53,8 @@
 ## V1.3.2-beta.46 build20260201001 (2026-02-01)
 
 - Fix AI-Chat related APIs:
-  - Remove SDK callback method `- (void)onRequestInitiateAIChat;`. 
-  - Remove SDK callback method `- (void)onRequestTerminateAIChat;`.  
+  - Remove SDK callback method `- (void)onRequestInitiateAIChat;`.
+  - Remove SDK callback method `- (void)onRequestTerminateAIChat;`.
   - Added SDK callback method `- (void)onAIChatSessionEvent:(FitCloudAIChatSessionEvent)event;` to notify the app that the device requests an AI-Chat event.
 
 ## V1.3.2-beta.45 build20260128002 (2026-01-28)
@@ -148,7 +153,6 @@
     - Added new API `+ (void)stopFindEarbudWithSide:(FitCloudEarbudSide)side completion:(FitCloudCompletionHandler _Nullable)completion;` to stop the find earbud function for the specified side.
     - Added SDK callback method `- (void)onEarbudsFindStatusChangedWithEvent:(FitCloudEarbudFindEvent)findEvent;`, which will be called when he earbuds find-my status has changed caused by a specific event.
 
-
 ## V1.3.2-beta.31 build20251224001 (2025-12-24)
 
 - Fixed some issues for constellation & fortune API.
@@ -172,7 +176,6 @@
     - Added SDK callback method `- (void)onRequestYogaAudio;`, which will be called when the watch requests yoga audio file.
     - Added new API `+ (void)sendYogaAudio:(NSString *_Nonnull)audioFilePath progress:(void(^_Nullable)(CGFloat progress))progressHandler completion:(void(^_Nullable)(BOOL success, CGFloat avgSpeed, NSError *_Nullable error))completionHandler;` to send yoga audio file to the watch.
     - Added new API `+ (void)cancelSendYogaAudioIfNeededWithCompletion:(void(^_Nullable)(BOOL success, NSError *_Nullable error))completion;` to cancel sending yoga audio file if needed.
-    
 
 ## V1.3.2-beta.28 build20251217001 (2025-12-17)
 

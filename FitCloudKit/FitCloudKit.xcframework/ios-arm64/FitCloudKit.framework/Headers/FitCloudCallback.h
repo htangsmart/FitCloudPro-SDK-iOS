@@ -804,6 +804,9 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// Requests AI diet advices
 - (void)onRequestAIDietAdvices;
 
+/// Requests AI fat loss diet plan
+- (void)onRequestAIFatLossDietPlan;
+
 /// The watch side request the today fortune data information
 - (void)onRequestTodayFortuneData;
 

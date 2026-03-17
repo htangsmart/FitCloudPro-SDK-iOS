@@ -2020,6 +2020,17 @@ typedef NS_ENUM(NSInteger, FitCloudAIDietResponseCode) {
     FitCloudAIDietResponseCodeUserDietInfoNotSet = 0x01,
 };
 
+#pragma mark - AI fat loss diet plan response code
+
+/// AI Diet Response Code
+typedef NS_ENUM(NSInteger, FitCloudAIDietPlanResponseCode) {
+    /// Success
+    FitCloudAIDietPlanResponseCodeSuccess = 0x00,
+
+    /// Failed due to user diet info is not set
+    FitCloudAIDietPlanResponseCodeUserDietInfoNotSet = 0x01,
+};
+
 #pragma mark - ASR error code
 
 /// ASR Error Code
