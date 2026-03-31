@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.58 build20260331001 (2026-03-31)
+
+- Added more debug logs to facilitate troubleshooting.
+
 ## V1.3.2-beta.57 build20260317001 (2026-03-17)
 
 - Introduced new API `+ (void)sendAIDietPlanWithResponseCode:(FitCloudAIDietPlanResponseCode)responseCode planText:(NSString* _Nullable)planText completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;` to send AI fat loss diet plan to the device.
