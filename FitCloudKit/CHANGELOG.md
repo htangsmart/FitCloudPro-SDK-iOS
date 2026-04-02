@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.59 build20260402001 (2026-04-02)
+
+- Enhanced the stability of the SDK.
+
 ## V1.3.2-beta.58 build20260331001 (2026-03-31)
 
 - Added more debug logs to facilitate troubleshooting.
