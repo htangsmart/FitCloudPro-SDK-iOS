@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-04-02 Version:1.3.2-beta.59 Build:2026040201
+## pcjbird 2026-04-21 Version:1.3.2-beta.60 Build:20260421001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -60,6 +60,8 @@
 - Added support for synchronization of GoMore heart rate zone data.
 - Added flag to indicate whether the device supports AI-Chat.
 - Added flag to indicate whether the device will use SCO as audio channel for AI-Chat.
+- Added support for the smart earrings product.
+- Added support for querying the Bluetooth name and MAC address of the earbuds.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

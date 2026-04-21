@@ -237,7 +237,8 @@ typedef NS_ENUM(NSInteger, FitCloudDeviceProductType) {
     FitCloudDeviceProductTypeRing = 5,
     /// the smart speaker product
     FitCloudDeviceProductTypeSpeaker = 6,
-    
+    /// the smart earrings product
+    FitCloudDeviceProductTypeEarrings = 7,
 };
 
 

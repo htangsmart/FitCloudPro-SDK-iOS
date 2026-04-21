@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.60 build20260421001 (2026-04-21)
+
+- Added support for the smart earrings product.
+- Added support for querying the Bluetooth name and MAC address of the earbuds.
+
 ## V1.3.2-beta.59 build20260402001 (2026-04-02)
 
 - Enhanced the stability of the SDK.

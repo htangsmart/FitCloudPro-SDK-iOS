@@ -1652,6 +1652,18 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: A completion handler called when the operation completes
 + (void)stopFindEarbudWithSide:(FitCloudEarbudSide)side completion:(FitCloudCompletionHandler _Nullable)completion;
 
+/// Query the current bluetooth name and mac address of the earbuds
+/// - Parameters:
+///   - completion: A completion handler called with the query result. Parameters:
+///     - success: Whether the query was successful
+///     - bluetoothName: The bluetooth name of the earbuds
+///     - macAddress: The mac address of the earbuds
+///     - error: Error information if query fails, nil on success
++ (void)queryEarbudsBluetoothNameAndMacAddressWithCompletion:(void (^_Nullable)(BOOL success,
+                                                                                NSString *_Nullable bluetoothName,
+                                                                                NSString *_Nullable macAddress,
+                                                                                NSError *_Nullable error))completion;
+
 #pragma mark - 激光测量
 
 /// 开始激光测量
