@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.61 build20260427001 (2026-04-27)
+
+- Streamlined the unbinding flow by removing redundant command operations under certain conditions.
+
 ## V1.3.2-beta.60 build20260421001 (2026-04-21)
 
 - Added support for the smart earrings product.
