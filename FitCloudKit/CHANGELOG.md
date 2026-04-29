@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.62 build20260429001 (2026-04-29)
+
+- Fixed the unit of heart rate zone data in workout summary from minutes to seconds.
+
 ## V1.3.2-beta.61 build20260427001 (2026-04-27)
 
 - Streamlined the unbinding flow by removing redundant command operations under certain conditions.
