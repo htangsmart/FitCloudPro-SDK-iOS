@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.63 build20260513001 (2026-05-13)
+
+- Modified the future hourly weather command data format to be consistent with the firmware side.
+
 ## V1.3.2-beta.62 build20260429001 (2026-04-29)
 
 - Fixed the unit of heart rate zone data in workout summary from minutes to seconds.
