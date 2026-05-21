@@ -1,10 +1,5 @@
 # CHANGELOG
 
-## V1.3.2-beta.64 build20260522001 (2026-05-22)
-
-- Introduced new APIs for HRV features.
-- Extended the binding command data format to be consistent with the latest firmware.
-
 ## V1.3.2-beta.63 build20260513001 (2026-05-13)
 
 - Modified the future hourly weather command data format to be consistent with the firmware side.

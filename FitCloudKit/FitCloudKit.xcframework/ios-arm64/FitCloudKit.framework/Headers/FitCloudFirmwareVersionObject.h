@@ -383,13 +383,4 @@
 /// AI 聊天音频通道
 @property(nonatomic, readonly) FitCloudAIChatAudioChannel aiChatAudioChannel;
 
-/// 是否应该禁用查找耳机仓功能
-@property(nonatomic, readonly) BOOL shouldDisableFindEarburdsCase;
-
-/// 是否应该禁用 ANCS 开关配置功能
-@property(nonatomic, readonly) BOOL shouldDisableANCSConfig;
-
-/// 是否支持 HRV 功能，即心率变异性，这个通常指 HRV 数据的定时测量和数据同步，此前也有情绪功能涉及 HRV 数据，但与此处不同，需要特别注意
-@property(nonatomic, readonly) BOOL withHRV;
-
 @end

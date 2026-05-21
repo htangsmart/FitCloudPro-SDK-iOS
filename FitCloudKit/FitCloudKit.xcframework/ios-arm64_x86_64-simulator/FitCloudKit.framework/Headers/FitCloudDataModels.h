@@ -31,8 +31,6 @@
 #import <FitCloudKit/FitCloudEarbudsStatusInfoModel.h>
 #import <FitCloudKit/FitCloudEditableWorkoutSlotModel.h>
 #import <FitCloudKit/FitCloudHourlyWeatherModel.h>
-#import <FitCloudKit/FitCloudDailyHRVDataModel.h>
-#import <FitCloudKit/FitCloudHRVMonitorConfigModel.h>
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>

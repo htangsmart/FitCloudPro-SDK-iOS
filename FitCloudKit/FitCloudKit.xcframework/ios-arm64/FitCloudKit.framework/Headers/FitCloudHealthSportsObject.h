@@ -288,23 +288,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-#pragma mark - HRV
-
-
-/// HRV data item
-@interface FitCloudHRVItemObject : FitCloudManualSyncItemObject
-
-/// Sleep score
-@property(nonatomic, assign) UInt8 value;
-
-
-@end
-
-/// HRV data record
-@interface FitCloudHRVRecordObject : FitCloudManualSyncRecordObject <FitCloudHRVItemObject *>
-
-@end
-
 
 
 #pragma mark - Workout
