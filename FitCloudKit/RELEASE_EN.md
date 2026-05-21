@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-05-13 Version:1.3.2-beta.63 Build:20260513001
+## pcjbird 2026-05-22 Version:1.3.2-beta.64 Build:20260522001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -62,6 +62,8 @@
 - Added flag to indicate whether the device will use SCO as audio channel for AI-Chat.
 - Added support for the smart earrings product.
 - Added support for querying the Bluetooth name and MAC address of the earbuds.
+- Introduced new APIs for HRV features.
+- Extended the binding command data format to be consistent with the latest firmware.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

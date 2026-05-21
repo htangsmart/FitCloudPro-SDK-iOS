@@ -2310,4 +2310,25 @@ typedef NS_ENUM(NSInteger, FitCloudAIChatAudioChannel) {
     FitCloudAIChatAudioChannelOpusInOpusOut = 2,
 };
 
+#pragma mark - HRV
+
+/// HRV Level
+typedef NS_ENUM(NSInteger, FitCloudHRVLevel) {
+    /// None
+    FitCloudHRVLevelNone = 0,
+    /// Poor
+    FitCloudHRVLevelPoor = 1,
+    /// Low
+    FitCloudHRVLevelLow = 2,
+    /// Unbalanced High
+    FitCloudHRVLevelUnbalancedHigh = 3,
+    /// Unbalanced Low
+    FitCloudHRVLevelUnbalancedLow = 4,
+    /// Balanced
+    FitCloudHRVLevelBalanced = 5,
+    /// Abnormal
+    FitCloudHRVLevelAbnormal = 6,
+
+};
+
 #endif /* FitCloudKitDefines_h */
