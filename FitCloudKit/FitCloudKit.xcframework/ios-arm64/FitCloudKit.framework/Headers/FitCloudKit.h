@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-05-13  Version:1.3.2-beta.63 Build:20260513001
+//      pcjbird    2026-05-22  Version:1.3.2-beta.64 Build:20260522001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -646,6 +646,30 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - completion: The completion handler called with the individual monitor settings
 + (void)getSingleHealthTimingMonitoringSettingsWithCompletion:(FitCloudHealthTimingMonitoringSingleSettingsResultBlock _Nullable)completion;
+
+#pragma mark HRV Monitoring
+
+/// Configures HRV timing monitor settings
+/// - Parameters:
+///   - monitorConfig: The HRV timing monitor settings
+///   - completion: The completion handler called when the operation completes
++ (void)setHRVTimingMonitor:(FitCloudHRVMonitorConfigModel *_Nonnull)monitorConfig completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Retrieves HRV timing monitor settings
+/// - Parameters:
+///   - completion: The completion handler called with the monitor settings
+///     - error: The error object if the operation fails
+///     - monitorConfig: The HRV timing monitor settings
+///     - success: Whether the operation was successful
++ (void)queryHRVTimingMonitorSettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudHRVMonitorConfigModel *_Nullable monitorConfig, NSError *_Nullable error))completion;
+
+/// Retrieves daily HRV data
+/// - Parameters:
+///   - completion: The completion handler called with the daily HRV data
+///     - error: The error object if the operation fails
+///     - dailyHRVDataArray: The daily HRV data array
+///     - success: Whether the operation was successful
++ (void)fetchDailyHRVDataWithCompletion:(void (^_Nullable)(BOOL success, NSArray<FitCloudDailyHRVDataModel *> *_Nullable dailyHRVDataArray, NSError *_Nullable error))completion;
 
 #pragma mark Set Sedentary Reminder
 
