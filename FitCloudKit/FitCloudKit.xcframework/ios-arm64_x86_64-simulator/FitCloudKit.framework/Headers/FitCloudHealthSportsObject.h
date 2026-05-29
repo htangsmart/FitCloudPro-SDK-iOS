@@ -294,7 +294,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// HRV data item
 @interface FitCloudHRVItemObject : FitCloudManualSyncItemObject
 
-/// Sleep score
+/// HRV value
 @property(nonatomic, assign) UInt8 value;
 
 

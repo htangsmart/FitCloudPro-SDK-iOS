@@ -1,9 +1,14 @@
 # CHANGELOG
 
+## V1.3.2-beta.65 build20260529001 (2026-05-29)
+
+- Added support for 212×520 square watch face size.
+- Added support for 410×480 square watch face size.
+
 ## V1.3.2-beta.64 build20260522001 (2026-05-22)
 
 - Introduced new APIs for HRV features.
-- Extended the binding command data format to be consistent with the latest firmware.
+- Modified the binding command data format to be consistent with the latest firmware.
 
 ## V1.3.2-beta.63 build20260513001 (2026-05-13)
 

@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-05-22 Version:1.3.2-beta.64 Build:20260522001
+## pcjbird 2026-05-29 Version:1.3.2-beta.65 Build:20260529001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -63,7 +63,9 @@
 - Added support for the smart earrings product.
 - Added support for querying the Bluetooth name and MAC address of the earbuds.
 - Introduced new APIs for HRV features.
-- Extended the binding command data format to be consistent with the latest firmware.
+- Modified the binding command data format to be consistent with the latest firmware.
+- Added support for 212×520 square watch face size.
+- Added support for 410×480 square watch face size.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
