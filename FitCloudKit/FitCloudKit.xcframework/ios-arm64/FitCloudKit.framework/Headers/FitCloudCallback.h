@@ -159,13 +159,6 @@ typedef void (^FitCloudDailyGoalResultBlock)(BOOL succeed, FitCloudDailyGoalObje
 ///   - error: 错误信息
 typedef void (^FitCloudFirmwareVersionResultBlock)(BOOL succeed, FitCloudFirmwareVersionObject *_Nullable version, NSError *_Nullable error);
 
-/// FitCloud 获取消息通知设置调用结果回调
-/// - Parameters:
-///   - succeed: 是否成功
-///   - mnSetting: 消息通知设置信息
-///   - error: 错误信息
-typedef void (^FitCloudMNSettingResultBlock)(BOOL succeed, FITCLOUDMN mnSetting, NSError *_Nullable error);
-
 /// FitCloud 获取手表表盘所有功能项显示状态调用结果回调
 /// - Parameters:
 ///   - succeed 是否成功

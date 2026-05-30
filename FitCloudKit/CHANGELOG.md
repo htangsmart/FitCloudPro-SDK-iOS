@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.2-beta.66 build20260530001 (2026-05-30)
+
+- Fixed the issue where the "Enable Prompt" option was missing in HRV monitoring settings.
+- Changed ANCS notification apps configuration APIs.
+- Added more notification app definitions: VK, Yandex Go, Yandex Market, Sberbank Online, Wildberries, Ozon, MAX, Gosuslugi, Avito, Gold Apple.
+
 ## V1.3.2-beta.65 build20260529001 (2026-05-29)
 
 - Added support for 212×520 square watch face size.

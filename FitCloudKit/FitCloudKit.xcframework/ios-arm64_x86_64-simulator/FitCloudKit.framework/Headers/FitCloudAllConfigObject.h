@@ -3,7 +3,7 @@
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/5/27.
-//  Copyright © 2018年 Zero Status. All rights reserved.
+//  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -26,6 +26,7 @@
 #import <FitCloudKit/FitCloudPowerSavingSetting.h>
 #import <FitCloudKit/FitCloudCapacity.h>
 #import <FitCloudKit/FitCloudSecureCoding.h>
+#import <FitCloudKit/FitCloudNotificationApps.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -35,8 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 手表软硬件版本信息
 @property(nonatomic, strong, nullable) FitCloudFirmwareVersionObject *firmware;
 
-/// 消息通知设置
-@property(nonatomic, assign) FITCLOUDMN mnSetting;
+/// 启用的消息通知应用
+@property(nonatomic, strong, readonly) NSSet<FitCloudNotificationApp> *enabledNotificationApps;
 
 /// 手表表盘所有功能项显示状态设置
 @property(nonatomic, assign) FITCLOUDSCREENDISPLAY sdSetting;

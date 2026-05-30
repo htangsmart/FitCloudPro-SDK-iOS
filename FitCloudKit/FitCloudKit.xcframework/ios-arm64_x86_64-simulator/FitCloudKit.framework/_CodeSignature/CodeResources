@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/FitCloudAllConfigObject.h</key>
 		<data>
-		jssAYodORv/ArFrFRNt0r2b8ZaQ=
+		TUQAW4Jex+9YPVu6jhVd37Ix7iE=
 		</data>
 		<key>Headers/FitCloudAppSidePermissionStatusModel.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
-		LsRdaLni2de+PAu1nQb3JevEtwU=
+		in0lGILso9Q8KcZm0gxJwwYh9Pg=
 		</data>
 		<key>Headers/FitCloudCapacity.h</key>
 		<data>
@@ -182,7 +182,7 @@
 		</data>
 		<key>Headers/FitCloudHRVMonitorConfigModel.h</key>
 		<data>
-		ndfzFmQQLEa/9PrhewPq9Mn7izg=
+		mNE6ZtaS/2rsk/Nx/sJ8bgSXVZ8=
 		</data>
 		<key>Headers/FitCloudHTMObject.h</key>
 		<data>
@@ -258,7 +258,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		Zfvp2RHsR9KT3mevnQvDygNG/Zk=
+		Gv9Ady8WDrRA4zepO4Gth78AB9Y=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -266,7 +266,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		pErcPRy9yT/h627PQLmnjdm+w8U=
+		M29tyPdvjNNMTSWHYe0KxeaaF68=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -295,6 +295,10 @@
 		<key>Headers/FitCloudMuslimPrayerAlarmClockModel.h</key>
 		<data>
 		7FYWfVdEoo8nStbMqBxoqvund1Q=
+		</data>
+		<key>Headers/FitCloudNotificationApps.h</key>
+		<data>
+		iXEfw21PvxFszht5svHvS9OsWi4=
 		</data>
 		<key>Headers/FitCloudOption.h</key>
 		<data>
@@ -450,7 +454,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		neJuU9c16et0Rg5WEQXS7yUlX3U=
+		EbFCYPpFWlhAMSQd4YirMdrjzR8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -484,7 +488,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ni6w2gln4kaCgP27BY6yy2fbNUo63Huy4SBCWdXL5RM=
+			LSFEY0L1gCW/Bj24E9XFn6HbYp+jcbxxblcMfzQBrbc=
 			</data>
 		</dict>
 		<key>Headers/FitCloudAppSidePermissionStatusModel.h</key>
@@ -533,7 +537,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			upUQiAwbpAmZpSDdpDoMHF49GG55O0IintWg9fX2STg=
+			AP14hVxLRid12ujrKULW2nIfHVAqBBbAbj/8U/z5DRQ=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCapacity.h</key>
@@ -771,7 +775,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qFeZb+QlyN2IxV6jyQ6bhCZbSjYkjob49qMuS0CEf3U=
+			u7sPOP/ZItL/+GKgE3j9NigTDjzbdnl+w+UXQSvGtjs=
 			</data>
 		</dict>
 		<key>Headers/FitCloudHTMObject.h</key>
@@ -904,7 +908,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9znLH0XvPuyGuO8hh8YTgiQl5Pl8entefnQSeJG9RW0=
+			ZrqELObtnplBRA7ST1+tlR6ywq24eOz42Ov71fgYRfk=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -918,7 +922,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9j9FhxTxEZ8cO6RmnMJsbakncRi4y2s6/nVuP++sAOo=
+			iE8EEqnMEPXOzvWaQ6nLUvwW0UIRRTVdJEHsmFskp2U=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
@@ -968,6 +972,13 @@
 			<key>hash2</key>
 			<data>
 			YlJvT5Aowk7ETFal/37covvWaOcEAt/SxDnvyYgrPLM=
+			</data>
+		</dict>
+		<key>Headers/FitCloudNotificationApps.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fhiwwBgZji6Q0hpQ7+VVdzkAFi8hl8AIIJUKa6L2yf0=
 			</data>
 		</dict>
 		<key>Headers/FitCloudOption.h</key>

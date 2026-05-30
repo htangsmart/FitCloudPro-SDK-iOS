@@ -10,12 +10,13 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-05-29  Version:1.3.2-beta.65 Build:20260529001
+//      pcjbird    2026-05-30  Version:1.3.2-beta.66 Build:20260530001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <FitCloudKit/FitCloudSecureCoding.h>
+#import <FitCloudKit/FitCloudNotificationApps.h>
 #import <FitCloudKit/FitCloudDataModels.h>
 #import <FitCloudKit/FitCloudEvent.h>
 #import <FitCloudKit/FitCloudCallback.h>
@@ -351,13 +352,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Returns: A boolean value indicating whether the feature is supported
 + (BOOL)isDeviceSupportFeature:(FITCLOUDDEVICEFEATURE)feature;
 
-#pragma mark App Notification Support
+#pragma mark Notification App Support
 
-/// Checks if the device supports a specific app notification type
+/// Checks if the device supports a specific notification app
 /// - Parameters:
-/// - appNotification: The app notification type to check for support
-/// - Returns: A boolean value indicating whether the notification type is supported
-+ (BOOL)isDeviceSupportAppNotification:(FITCLOUDMN)appNotification;
+/// - app: The notification app to check for support
+/// - Returns: A boolean value indicating whether the notification app is supported
++ (BOOL)isDeviceSupportNotificationApp:(FitCloudNotificationApp)app;
 @end
 
 /// FitCloud Setting Module
@@ -560,20 +561,25 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: The completion handler called with the version information
 + (void)getFirmwareVersionWithBlock:(FitCloudFirmwareVersionResultBlock _Nullable)block;
 
-#pragma mark Set Message Notifications
+#pragma mark Set Enabled Notification Apps
 
-/// Configures message notification settings
+/// Sets the enabled notification apps
 /// - Parameters:
-///   - mnSetting: The message notification settings
-///   - block: The completion handler called when the operation completes
-+ (void)setMessageNotification:(FITCLOUDMN)mnSetting block:(FitCloudCompletionHandler _Nullable)block;
+///   - apps: The set of enabled notification apps
+///   - completion: The completion handler called when the operation completes
+///     - succeed: Whether the operation was successful
+///     - error: Any error that occurred
++ (void)setEnabledNotificationApps:(NSSet<FitCloudNotificationApp> *)apps completion:(FitCloudCompletionHandler _Nullable)completion;
 
-#pragma mark Get Message Notifications
+#pragma mark Get Enabled Notification Apps
 
-/// Retrieves message notification settings
+/// Retrieves the enabled notification apps
 /// - Parameters:
-///   - block: The completion handler called with the notification settings
-+ (void)getMessageNotificationSettingWithBlock:(FitCloudMNSettingResultBlock _Nullable)block;
+///   - completion: The completion handler called with the set of enabled notification apps
+///     - succeed: Whether the operation was successful
+///     - apps: The set of enabled notification apps
+///     - error: Any error that occurred
++ (void)getEnabledNotificationAppsWithCompletion:(void (^_Nullable)(BOOL succeed, NSSet<FitCloudNotificationApp> *_Nullable apps, NSError *_Nullable error))completion;
 
 #pragma mark Set Screen Display
 

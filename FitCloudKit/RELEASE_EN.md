@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-05-29 Version:1.3.2-beta.65 Build:20260529001
+## pcjbird 2026-05-30 Version:1.3.2-beta.66 Build:20260530001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -66,6 +66,9 @@
 - Modified the binding command data format to be consistent with the latest firmware.
 - Added support for 212×520 square watch face size.
 - Added support for 410×480 square watch face size.
+- Fixed the issue where the "Enable Prompt" option was missing in HRV monitoring settings.
+- Changed ANCS notification apps configuration APIs.
+- Added more notification app definitions: VK, Yandex Go, Yandex Market, Sberbank Online, Wildberries, Ozon, MAX, Gosuslugi, Avito, Gold Apple.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

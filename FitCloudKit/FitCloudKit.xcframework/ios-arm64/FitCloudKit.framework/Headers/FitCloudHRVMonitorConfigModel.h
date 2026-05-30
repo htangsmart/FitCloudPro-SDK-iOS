@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 // Indicate whether to enable HRV measurement
 @property(nonatomic, assign) BOOL enabled;
 
+// Indicate whether to enable HRV status prompts on the device based on HRV status analysis over a period of time
+@property(nonatomic, assign) BOOL enablePrompt;
+
 // Measurement interval, default 30 minutes, unit: minutes
 @property(nonatomic, assign) NSInteger interval;
 
