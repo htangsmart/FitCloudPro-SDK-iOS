@@ -151,7 +151,6 @@ FOUNDATION_EXPORT FitCloudNotificationApp const FitCloudNotificationAppAvito;
 FOUNDATION_EXPORT FitCloudNotificationApp const FitCloudNotificationAppGoldApple;
 
 /// 返回所有已定义的的通知应用集合
-/// - Note: 新增通知应用时，需要在此集合中添加对应的常量
 FOUNDATION_EXPORT NSSet<FitCloudNotificationApp> *FitCloudAllNotificationApps(void);
 
 NS_ASSUME_NONNULL_END

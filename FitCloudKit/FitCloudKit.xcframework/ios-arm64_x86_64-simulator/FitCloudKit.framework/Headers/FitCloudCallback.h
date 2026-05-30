@@ -42,10 +42,6 @@
 #import <FitCloudKit/FitCloudScreenSetting.h>
 #import <FitCloudKit/FitCloudVibrateSetting.h>
 #import <FitCloudKit/FitCloudScreenResolution.h>
-#import <FitCloudKit/FitCloudSportsWithGPSData.h>
-#import <FitCloudKit/FitCloudSportsWithGPSActionParams.h>
-#import <FitCloudKit/FitCloudSportsWithGPSAppClientData.h>
-#import <FitCloudKit/FitCloudSportsWithGPSCurrentStatus.h>
 #import <FitCloudKit/FitCloudWatchLaunchVibrateSetting.h>
 #import <FitCloudKit/FitCloudGamePasscodeSetting.h>
 #import <FitCloudKit/FitCloudGameRankingTrend.h>
@@ -374,12 +370,6 @@ typedef void (^FitCloudWatchfaceUIInfoResultBlock)(BOOL succeed, FitCloudWatchfa
 ///   - error: 错误信息
 typedef void (^FitCloudLatestHealthMeasurementDataResultBlock)(BOOL succeed, FitCloudLatestHealthMeasurementDataObject *_Nullable dataObject, NSError *_Nullable error);
 
-/// FitCloud 请求 GPS 互联当前运动状态结果回调
-/// - Parameters:
-///   - succeed: 是否成功
-///   - currentStatus: 当前运动状态
-///   - error: 错误信息
-typedef void (^FitCloudGPSConnectSportsCurrentStatusResultBlock)(BOOL succeed, FitCloudSportsWithGPSCurrentStatus *_Nullable currentStatus, NSError *_Nullable error);
 
 /// FitCloud Alexa 语音开始请求回调
 /// - Parameter result: 回调结果
@@ -526,15 +516,15 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// 心电实时测量结束
 - (void)OnRealTimeECGStop;
 
-/// 手表报告 GPS 互联运动状态
+/// GPS 互联运动手表端事件
 /// - Parameters:
-///   -  status: GPS 互联运动状态
-- (void)OnGPSConnectWatchStatus:(FitCloudSportsWithGPSActionParams *)status;
+///   -  workoutEvent: 事件
+- (void)onGPSConnectWorkoutEvent:(FitCloudGPSConnectWorkoutEventModel *)workoutEvent;
 
-/// 手表 GPS 互联实时运动数据
+/// GPS 互联运动手表端周期性向 App 发送运动数据
 /// - Parameters:
-///   -  sportsData: 数据
-- (void)OnGPSConnectSportsData:(FitCloudSportsWithGPSData *)sportsData;
+///   -  periodicReportData: 数据
+- (void)onGPSConnectPeriodReportData:(FitCloudGPSConnectDevice2AppPeriodicReportDataModel *)periodicReportData;
 
 /// 手表控制手机拍照
 - (void)OnTakePhotoCtrl;
@@ -829,7 +819,7 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// Notifies that the overall earbuds status has changed
 /// - Parameters:
 ///   - latestStatusInfo: The current earbuds status information model
-- (void)onEarbudsStatusChangedTo:(FitCloudEarbudsStatusInfoModel*)latestStatusInfo;
+- (void)onEarbudsStatusChangedTo:(FitCloudEarbudsStatusInfoModel *)latestStatusInfo;
 
 /// Notifies that the earbuds find-my status has changed caused by a event
 /// - Parameters:
@@ -857,7 +847,6 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 
 /// 睡眠调试数据
 - (void)OnSleepDebugData:(FitCloudSleepDebugData *)sleepDebugData;
-
 
 /// Called when a log message is emitted.
 ///

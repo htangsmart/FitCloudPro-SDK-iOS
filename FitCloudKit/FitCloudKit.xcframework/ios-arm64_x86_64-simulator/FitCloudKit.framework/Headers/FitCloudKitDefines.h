@@ -1156,56 +1156,56 @@ typedef NS_ENUM(Byte, FITCLOUDGAMERANDINGTREND) {
     FITCLOUDGAMERANDINGTREND_ASCEND = 0x02,
 };
 
-#pragma mark -手表GPS互联实时运动相关
+#pragma mark - GPS-Connect Workout
 
-/// 手表 GPS 互联实时运动定义
-typedef NS_ENUM(UInt16, FITCLOUDSPORTSWITHGPS) {
-    /// 无运动
-    FITCLOUDSPORTSWITHGPS_NONE = 0x00,
-    /// 步行
-    FITCLOUDSPORTSWITHGPS_WALKING = 0x10,
-    /// 跑步
-    FITCLOUDSPORTSWITHGPS_RUNNING = 0x08,
-    /// 登山
-    FITCLOUDSPORTSWITHGPS_CLIMBING = 0x14,
-    /// 骑行
-    FITCLOUDSPORTSWITHGPS_BICYCLING = 0x04,
-    /// 徒步
-    FITCLOUDSPORTSWITHGPS_HIKING = 0x88,
-    /// 越野跑
-    FITCLOUDSPORTSWITHGPS_TRAIL_RUNNING = 0x9C,
-    /// 马拉松
-    FITCLOUDSPORTSWITHGPS_MARATHON = 0x01D0,
+/// GPS-Connect Workout Definitions
+typedef NS_ENUM(NSInteger, FitCloudGPSConnectWorkoutType) {
+    /// Unknown
+    FitCloudGPSConnectWorkoutTypeUnknown = -1,
+    /// Walking
+    FitCloudGPSConnectWorkoutTypeWalking = 0x10,
+    /// Running
+    FitCloudGPSConnectWorkoutTypeRunning = 0x08,
+    /// Climbing
+    FitCloudGPSConnectWorkoutTypeClimbing = 0x14,
+    /// Bicycling
+    FitCloudGPSConnectWorkoutTypeBicycling = 0x04,
+    /// Hiking
+    FitCloudGPSConnectWorkoutTypeHiking = 0x88,
+    /// Trail Running
+    FitCloudGPSConnectWorkoutTypeTrailRunning = 0x9C,
+    /// Marathon
+    FitCloudGPSConnectWorkoutTypeMarathon = 0x01D0,
 };
 
-/// 手表 GPS 互联实时运动行为定义
-typedef NS_ENUM(Byte, FITCLOUDSPORTSWITHGPSACTION) {
-    /// 结束
-    FITCLOUDSPORTSWITHGPSACTION_STOP = 0x00,
-    /// 开始
-    FITCLOUDSPORTSWITHGPSACTION_START = 0x01,
-    /// 暂停
-    FITCLOUDSPORTSWITHGPSACTION_PAUSE = 0x02,
-    /// 恢复
-    FITCLOUDSPORTSWITHGPSACTION_RESUME = 0x03,
+/// GPS-Connect Workout Event Definitions
+typedef NS_ENUM(NSInteger, FitCloudGPSConnectWorkoutEvent) {
+    /// Stop
+    FitCloudGPSConnectWorkoutEventStop = 0x00,
+    /// Start
+    FitCloudGPSConnectWorkoutEventStart = 0x01,
+    /// Pause
+    FitCloudGPSConnectWorkoutEventPause = 0x02,
+    /// Resume
+    FitCloudGPSConnectWorkoutEventResume = 0x03,
 };
 
-/// 手表 GPS 互联实时运动状态定义
-typedef NS_ENUM(Byte, FITCLOUDSPORTSWITHGPSSTATUS) {
-    /// 结束
-    FITCLOUDSPORTSWITHGPSSTATUS_STOP = 0x00,
-    /// 进行中
-    FITCLOUDSPORTSWITHGPSSTATUS_INPROCESS = 0x01,
-    /// 暂停
-    FITCLOUDSPORTSWITHGPSSTATUS_PAUSE = 0x02,
+/// GPS-Connect Workout State Definitions
+typedef NS_ENUM(NSInteger, FitCloudGPSConnectWorkoutState) {
+    /// Completed
+    FitCloudGPSConnectWorkoutStateCompleted = 0x00,
+    /// Active
+    FitCloudGPSConnectWorkoutStateActive = 0x01,
+    /// Paused
+    FitCloudGPSConnectWorkoutStatePaused = 0x02,
 };
 
-/// 手表 GPS 互联实时运动启动方式定义
-typedef NS_ENUM(Byte, FITCLOUDSPORTSWITHGPSSTARTFROM) {
-    /// 由 APP 启动
-    FITCLOUDSPORTSWITHGPSSTARTFROM_APP = 0x01,
-    /// 由手表启动
-    FITCLOUDSPORTSWITHGPSSTARTFROM_WATCH = 0x02,
+/// GPS-Connect Workout Initiator Definitions
+typedef NS_ENUM(NSInteger, FitCloudGPSConnectWorkoutInitiator) {
+    /// App
+    FitCloudGPSConnectWorkoutInitiatorApp = 1,
+    /// Device
+    FitCloudGPSConnectWorkoutInitiatorDevice = 2,
 };
 
 #pragma mark -收款码和名片二维码类型定义

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.67 build20260531001 (2026-05-31)
+
+- Renamed GPS-connect workout related APIs and SDK callback methods.
+
 ## V1.3.2-beta.66 build20260530001 (2026-05-30)
 
 - Fixed the issue where the "Enable Prompt" option was missing in HRV monitoring settings.

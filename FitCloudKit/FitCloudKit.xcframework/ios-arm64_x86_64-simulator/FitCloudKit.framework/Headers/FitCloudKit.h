@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-05-30  Version:1.3.2-beta.66 Build:20260530001
+//      pcjbird    2026-05-31  Version:1.3.2-beta.67 Build:20260531001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1945,35 +1945,43 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: 结果回调，代表请求是否成功，不代表数据返回成功
 + (void)requestSleepDebugDataWithBlock:(FitCloudCompletionHandler _Nullable)block;
 
-#pragma mark 启动/关闭手表GPS互联运动
+#pragma mark - GPS-Connect Workout
 
-/// 启动/关闭 GPS 互联运动
+/// Send GPS-Connect workout event
 /// - Parameters:
-///   - params: 参数
-///   - block: 调用结果回调
-+ (void)requestRealTimeGPSConnectSports:(FitCloudSportsWithGPSActionParams *_Nonnull)params block:(FitCloudCompletionHandler _Nullable)block;
+///   - event: GPS-Connect workout event
+///   - completion: The completion handler
+///     - success: Indicator whether the operation is successful
+///     - error: Error information if the operation failed
++ (void)sendGPSConnectWorkoutEvent:(FitCloudGPSConnectWorkoutEventModel *_Nonnull)event
+                        completion:(FitCloudCompletionHandler _Nullable)completion;
 
-#pragma mark 通知手表GPS互联运动当前App端运动数据
-
-/// 通知手表 GPS 互联运动当前 App 端运动数据
+/// Send GPS-Connect workout periodic report data
 /// - Parameters:
-///   - appClientData: 已运动信息
-///   - block: 调用结果回调
-+ (void)notifyRealTimeGPSConnectSportsAppClientData:(FitCloudSportsWithGPSAppClientData *_Nonnull)appClientData block:(FitCloudCompletionHandler _Nullable)block;
+///   - data: GPS-Connect workout periodic report data
+///   - completion: The completion handler
+///     - success: Indicator whether the operation is successful
+///     - error: Error information if the operation failed
++ (void)sendGPSConnectPeriodicReportData:(FitCloudGPSConnectApp2DevicePeriodicReportDataModel *_Nonnull)data
+                              completion:(FitCloudCompletionHandler _Nullable)completion;
 
-#pragma mark 请求手表GPS互联运动当前状态
-
-/// 请求手表 GPS 互联运动当前状态
+/// Query GPS-Connect workout info
 /// - Parameters:
-///   - block: 调用结果回调
-+ (void)requestRealTimeGPSConnectSportsCurrentStatusWithBlock:(FitCloudGPSConnectSportsCurrentStatusResultBlock _Nullable)block;
+///   - completion: The completion handler
+///     - success: Indicator whether the operation is successful
+///     - error: Error information if the operation failed
+///     - workoutInfo: GPS-Connect workout info
++ (void)queryGPSConnectWorkoutInfoWithCompletion:(void (^_Nullable)(BOOL success,
+                                                                    FitCloudGPSConnectWorkoutInfoModel *_Nullable workoutInfo,
+                                                                    NSError *_Nullable error))completion;
 
 #pragma mark 开启GSensor
 
 /// 开启 GSensor
 /// - Parameters:
 ///   - block: 结果回调
-+ (void)openGSensorWithBlock:(FitCloudOpenGSensorResultBlock _Nullable)block;
++ (void)
+    openGSensorWithBlock:(FitCloudOpenGSensorResultBlock _Nullable)block;
 
 #pragma mark 关闭GSensor
 

@@ -350,6 +350,9 @@
 /// 体感游戏是否支持心率数据
 @property(nonatomic, readonly) BOOL withGameHeartRate;
 
+/// GPS 互联运动是否支持传步数数据给设备端
+@property(nonatomic, readonly) BOOL isGPSConnectApp2DevicePeriodicReportDataSupportStepData;
+
 /// 上课模式是否支持设置重复选项
 @property(nonatomic, readonly) BOOL withClassroomModeRepeatOptions;
 
