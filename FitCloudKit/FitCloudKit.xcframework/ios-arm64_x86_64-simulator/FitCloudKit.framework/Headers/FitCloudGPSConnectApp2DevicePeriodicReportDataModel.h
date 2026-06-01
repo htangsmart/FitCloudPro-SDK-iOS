@@ -25,8 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// Calories burned since workout start
 @property(nonatomic, strong, readonly, nullable) NSNumber *caloriesBurned;
 
-/// Average pace in seconds per kilometer since workout start
-@property(nonatomic, strong, readonly, nullable) NSNumber *avgPace;
+/// Current pace in seconds per kilometer
+@property(nonatomic, strong, readonly, nullable) NSNumber *pace;
 
 /// Number of steps since workout start
 @property(nonatomic, strong, readonly, nullable) NSNumber *numberOfSteps;
@@ -37,13 +37,13 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - workoutDurationInSeconds: The workout duration in seconds since workout start.
 ///   - distanceInCentimeters: The distance in centimeters since workout start.
 ///   - caloriesBurned: The calories burned since workout start.
-///   - avgPace: The average pace in seconds per kilometer since workout start.
+///   - pace: The current pace in seconds per kilometer.
 ///   - numberOfSteps: The number of steps since workout start.
 - (instancetype)initWithWorkoutStartTime:(NSDate *)workoutStartTime
                 workoutDurationInSeconds:(NSNumber *)workoutDurationInSeconds
                    distanceInCentimeters:(NSNumber *_Nullable)distanceInCentimeters
                           caloriesBurned:(NSNumber *_Nullable)caloriesBurned
-                                 avgPace:(NSNumber *_Nullable)avgPace
+                                    pace:(NSNumber *_Nullable)pace
                            numberOfSteps:(NSNumber *_Nullable)numberOfSteps;
 
 /// Unavailable initializer.

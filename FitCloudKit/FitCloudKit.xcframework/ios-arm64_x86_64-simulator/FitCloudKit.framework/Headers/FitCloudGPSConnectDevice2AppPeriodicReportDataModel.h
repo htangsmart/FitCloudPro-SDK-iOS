@@ -22,9 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// Calories burned since workout start
 @property(nonatomic, strong, readonly, nullable) NSNumber *caloriesBurned;
 
-/// Average BPM since workout start
-@property(nonatomic, strong, readonly, nullable) NSNumber *avgBPM;
-
+/// Current heart rate (BPM)
+@property(nonatomic, strong, readonly, nullable) NSNumber *bpm;
 
 /// Unavailable initializer.
 - (instancetype)init NS_UNAVAILABLE;

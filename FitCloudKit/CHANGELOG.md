@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.68 build20260601001 (2026-06-01)
+
+- Fixed GPS-connect workout related data model.
+
 ## V1.3.2-beta.67 build20260531001 (2026-05-31)
 
 - Renamed GPS-connect workout related APIs and SDK callback methods.
