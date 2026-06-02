@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong, readonly, nullable) NSNumber *caloriesBurned;
 
 /// Current heart rate (BPM)
-@property(nonatomic, strong, readonly, nullable) NSNumber *bpm;
+@property(nonatomic, strong, readonly, nullable) NSNumber *bpmValue;
 
 /// Unavailable initializer.
 - (instancetype)init NS_UNAVAILABLE;
