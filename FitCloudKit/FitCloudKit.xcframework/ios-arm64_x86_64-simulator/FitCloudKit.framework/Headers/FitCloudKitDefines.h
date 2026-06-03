@@ -1156,56 +1156,282 @@ typedef NS_ENUM(Byte, FITCLOUDGAMERANDINGTREND) {
     FITCLOUDGAMERANDINGTREND_ASCEND = 0x02,
 };
 
-#pragma mark - GPS-Connect Workout
+#pragma mark - Workout
 
-/// GPS-Connect Workout Definitions
-typedef NS_ENUM(NSInteger, FitCloudGPSConnectWorkoutType) {
+/// The workout type
+typedef NS_ENUM(NSInteger, FitCloudWorkoutType) {
     /// Unknown
-    FitCloudGPSConnectWorkoutTypeUnknown = -1,
-    /// Walking
-    FitCloudGPSConnectWorkoutTypeWalking = 0x10,
-    /// Running
-    FitCloudGPSConnectWorkoutTypeRunning = 0x08,
-    /// Climbing
-    FitCloudGPSConnectWorkoutTypeClimbing = 0x14,
-    /// Bicycling
-    FitCloudGPSConnectWorkoutTypeBicycling = 0x04,
+    FitCloudWorkoutTypeUnknown = -1,
+    /// Outdoor Cycling
+    FitCloudWorkoutTypeOutdoorCycling = 0x00,
+    /// Outdoor Running
+    FitCloudWorkoutTypeOutdoorRun = 0x01,
+    /// Indoor Running
+    FitCloudWorkoutTypeIndoorRun = 0x02,
+    /// Outdoor Walking
+    FitCloudWorkoutTypeOutdoorWalk = 0x03,
+    /// Mountaineering
+    FitCloudWorkoutTypeMountaineering = 0x04,
+    /// Basketball
+    FitCloudWorkoutTypeBasketball = 0x05,
+    /// Swimming
+    FitCloudWorkoutTypeSwimming = 0x06,
+    /// Badminton
+    FitCloudWorkoutTypeBadminton = 0x07,
+    /// Football
+    FitCloudWorkoutTypeFootball = 0x08,
+    /// Elliptical Trainer
+    FitCloudWorkoutTypeEllipticalTrainer = 0x09,
+    /// Yoga
+    FitCloudWorkoutTypeYoga = 0x0a,
+    /// Table Tennis
+    FitCloudWorkoutTypeTableTennis = 0x0b,
+    /// Jump Rope
+    FitCloudWorkoutTypeJumpRope = 0x0c,
+    /// Rowing Machine
+    FitCloudWorkoutTypeRowingMachine = 0x0d,
+    /// Lazy Car
+    FitCloudWorkoutTypeLazyCar = 0x0e,
+    /// Exercise Bike
+    FitCloudWorkoutTypeExerciseBike = 0x0f,
+    /// Free Training
+    FitCloudWorkoutTypeFreeTraining = 0x10,
+    /// Tennis
+    FitCloudWorkoutTypeTennis = 0x11,
+    /// Baseball
+    FitCloudWorkoutTypeBaseball = 0x12,
+    /// Rugby
+    FitCloudWorkoutTypeRugby = 0x13,
+    /// Cricket
+    FitCloudWorkoutTypeCricket = 0x14,
+    /// Free Movement
+    FitCloudWorkoutTypeFreeMovement = 0x15,
+    /// Strength Training
+    FitCloudWorkoutTypeStrengthTraining = 0x16,
+    /// Indoor Walking
+    FitCloudWorkoutTypeIndoorWalk = 0x17,
+    /// Indoor Cycling
+    FitCloudWorkoutTypeIndoorCycle = 0x18,
+    /// Dumbbell
+    FitCloudWorkoutTypeDumbbell = 0x19,
+    /// Dance
+    FitCloudWorkoutTypeDance = 0x1a,
+    /// Hula Hoop
+    FitCloudWorkoutTypeHulaHoop = 0x1b,
+    /// Golf
+    FitCloudWorkoutTypeGolf = 0x1c,
+    /// Long Jump
+    FitCloudWorkoutTypeLongJump = 0x1d,
+    /// Sit-up
+    FitCloudWorkoutTypeSitUp = 0x1e,
+    /// Volleyball
+    FitCloudWorkoutTypeVolleyball = 0x1f,
+    /// Parkour
+    FitCloudWorkoutTypeParkour = 0x20,
     /// Hiking
-    FitCloudGPSConnectWorkoutTypeHiking = 0x88,
+    FitCloudWorkoutTypeHiking = 0x21,
+    /// Hockey
+    FitCloudWorkoutTypeHockey = 0x22,
+    /// Boating
+    FitCloudWorkoutTypeBoating = 0x23,
+    /// HIIT
+    FitCloudWorkoutTypeHIIT = 0x24,
+    /// Softball
+    FitCloudWorkoutTypeSoftball = 0x25,
     /// Trail Running
-    FitCloudGPSConnectWorkoutTypeTrailRunning = 0x9C,
+    FitCloudWorkoutTypeTrailRunning = 0x26,
+    /// Skiing
+    FitCloudWorkoutTypeSkiing = 0x27,
+    /// Air Walker
+    FitCloudWorkoutTypeAirWalker = 0x28,
+    /// Cooldown
+    FitCloudWorkoutTypeCooldown = 0x29,
+    /// Cross Training
+    FitCloudWorkoutTypeCrossTraining = 0x2a,
+    /// Pilates
+    FitCloudWorkoutTypePilates = 0x2b,
+    /// CrossFit
+    FitCloudWorkoutTypeCrossFit = 0x2c,
+    /// Functional Training
+    FitCloudWorkoutTypeFunctionalTraining = 0x2d,
+    /// Physical Training
+    FitCloudWorkoutTypePhysicalTraining = 0x2e,
+    /// Mixed Cardio
+    FitCloudWorkoutTypeMixedCardio = 0x2f,
+    /// Latin Dance
+    FitCloudWorkoutTypeLatinDance = 0x30,
+    /// Street Dance
+    FitCloudWorkoutTypeStreetDance = 0x31,
+    /// Kickboxing
+    FitCloudWorkoutTypeKickboxing = 0x32,
+    /// Barre
+    FitCloudWorkoutTypeBarre = 0x33,
+    /// Australian Football
+    FitCloudWorkoutTypeAustralianFootball = 0x34,
+    /// Bowling
+    FitCloudWorkoutTypeBowling = 0x35,
+    /// Racquetball
+    FitCloudWorkoutTypeRacquetball = 0x36,
+    /// Curling
+    FitCloudWorkoutTypeCurling = 0x37,
+    /// Snowboarding
+    FitCloudWorkoutTypeSnowboarding = 0x38,
+    /// Fishing
+    FitCloudWorkoutTypeFishing = 0x39,
+    /// Disc Sports
+    FitCloudWorkoutTypeDiscSports = 0x3a,
+    /// Downhill Skiing
+    FitCloudWorkoutTypeDownhillSkiing = 0x3b,
+    /// Core Training
+    FitCloudWorkoutTypeCoreTraining = 0x3c,
+    /// Skating
+    FitCloudWorkoutTypeSkating = 0x3d,
+    /// Fitness Gaming
+    FitCloudWorkoutTypeFitnessGaming = 0x3e,
+    /// Aerobics
+    FitCloudWorkoutTypeAerobics = 0x3f,
+    /// Group Training
+    FitCloudWorkoutTypeGroupTraining = 0x40,
+    /// Kendo
+    FitCloudWorkoutTypeKendo = 0x41,
+    /// Fencing
+    FitCloudWorkoutTypeFencing = 0x42,
+    /// Stairs
+    FitCloudWorkoutTypeStairs = 0x43,
+    /// American Football
+    FitCloudWorkoutTypeAmericanFootball = 0x44,
+    /// Rolling
+    FitCloudWorkoutTypeRolling = 0x45,
+    /// Pickleball
+    FitCloudWorkoutTypePickleball = 0x46,
+    /// Boxing
+    FitCloudWorkoutTypeBoxing = 0x47,
+    /// Taekwondo
+    FitCloudWorkoutTypeTaekwondo = 0x48,
+    /// Karate
+    FitCloudWorkoutTypeKarate = 0x49,
+    /// Flexibility
+    FitCloudWorkoutTypeFlexibility = 0x4a,
+    /// Handball
+    FitCloudWorkoutTypeHandball = 0x4b,
+    /// Hand Cycling
+    FitCloudWorkoutTypeHandCycling = 0x4c,
+    /// Mind Body
+    FitCloudWorkoutTypeMindBody = 0x4d,
+    /// Wrestling
+    FitCloudWorkoutTypeWrestling = 0x4e,
+    /// Step Training
+    FitCloudWorkoutTypeStepTraining = 0x4f,
+    /// Tai Chi
+    FitCloudWorkoutTypeTaiChi = 0x50,
+    /// Gymnastics
+    FitCloudWorkoutTypeGymnastics = 0x51,
+    /// Athletics
+    FitCloudWorkoutTypeAthletics = 0x52,
+    /// Martial Arts
+    FitCloudWorkoutTypeMartialArts = 0x53,
+    /// Casual
+    FitCloudWorkoutTypeCasual = 0x54,
+    /// Snow Sports
+    FitCloudWorkoutTypeSnowSports = 0x55,
+    /// Lacrosse
+    FitCloudWorkoutTypeLacrosse = 0x56,
+    /// Single Bar
+    FitCloudWorkoutTypeSingleBar = 0x57,
+    /// Parallel Bars
+    FitCloudWorkoutTypeParallelBars = 0x58,
+    /// Roller Skating
+    FitCloudWorkoutTypeRollerSkating = 0x59,
+    /// Darts
+    FitCloudWorkoutTypeDarts = 0x5a,
+    /// Archery
+    FitCloudWorkoutTypeArchery = 0x5b,
+    /// Horse Riding
+    FitCloudWorkoutTypeHorseRiding = 0x5c,
+    /// Shuttlecock
+    FitCloudWorkoutTypeShuttlecock = 0x5d,
+    /// Ice Hockey
+    FitCloudWorkoutTypeIceHockey = 0x5e,
+    /// Waist and Abdominal Training
+    FitCloudWorkoutTypeWaistTraining = 0x5f,
+    /// VO2 Max Test
+    FitCloudWorkoutTypeVO2maxTest = 0x60,
+    /// Judo
+    FitCloudWorkoutTypeJudo = 0x61,
+    /// Trampoline
+    FitCloudWorkoutTypeTrampoline = 0x62,
+    /// Skateboarding
+    FitCloudWorkoutTypeSkateboarding = 0x63,
+    /// Hoverboard
+    FitCloudWorkoutTypeHoverboard = 0x64,
+    /// Blading
+    FitCloudWorkoutTypeBlading = 0x65,
+    /// Treadmill
+    FitCloudWorkoutTypeTreadmill = 0x66,
+    /// Diving
+    FitCloudWorkoutTypeDiving = 0x67,
+    /// Surfing
+    FitCloudWorkoutTypeSurfing = 0x68,
+    /// Snorkeling
+    FitCloudWorkoutTypeSnorkeling = 0x69,
+    /// Pull-up
+    FitCloudWorkoutTypePullUp = 0x6a,
+    /// Push-up
+    FitCloudWorkoutTypePushUp = 0x6b,
+    /// Planking
+    FitCloudWorkoutTypePlanking = 0x6c,
+    /// Rock Climbing
+    FitCloudWorkoutTypeRockClimbing = 0x6d,
+    /// High Jump
+    FitCloudWorkoutTypeHighJump = 0x6e,
+    /// Bungee Jumping
+    FitCloudWorkoutTypeBungeeJumping = 0x6f,
+    /// Folk Dance
+    FitCloudWorkoutTypeFolkDance = 0x70,
+    /// Hunting
+    FitCloudWorkoutTypeHunting = 0x71,
+    /// Shooting
+    FitCloudWorkoutTypeShooting = 0x72,
     /// Marathon
-    FitCloudGPSConnectWorkoutTypeMarathon = 0x01D0,
+    FitCloudWorkoutTypeMarathon = 0x73,
+    /// Spinning Bike
+    FitCloudWorkoutTypeSpinningBike = 0x74,
+    /// Pool Swimming
+    FitCloudWorkoutTypePoolSwimming = 0x75,
+    /// Open Water Swimming
+    FitCloudWorkoutTypeOpenWaterSwimming = 0x76,
 };
 
-/// GPS-Connect Workout Event Definitions
-typedef NS_ENUM(NSInteger, FitCloudGPSConnectWorkoutEvent) {
+#pragma mark - Companion Workout
+
+/// Companion Workout Event Definitions
+typedef NS_ENUM(NSInteger, FitCloudCompanionWorkoutEvent) {
     /// Stop
-    FitCloudGPSConnectWorkoutEventStop = 0x00,
+    FitCloudCompanionWorkoutEventStop = 0x00,
     /// Start
-    FitCloudGPSConnectWorkoutEventStart = 0x01,
+    FitCloudCompanionWorkoutEventStart = 0x01,
     /// Pause
-    FitCloudGPSConnectWorkoutEventPause = 0x02,
+    FitCloudCompanionWorkoutEventPause = 0x02,
     /// Resume
-    FitCloudGPSConnectWorkoutEventResume = 0x03,
+    FitCloudCompanionWorkoutEventResume = 0x03,
 };
 
-/// GPS-Connect Workout State Definitions
-typedef NS_ENUM(NSInteger, FitCloudGPSConnectWorkoutState) {
+/// Companion Workout State Definitions
+typedef NS_ENUM(NSInteger, FitCloudCompanionWorkoutState) {
     /// Completed
-    FitCloudGPSConnectWorkoutStateCompleted = 0x00,
+    FitCloudCompanionWorkoutStateCompleted = 0x00,
     /// Active
-    FitCloudGPSConnectWorkoutStateActive = 0x01,
+    FitCloudCompanionWorkoutStateActive = 0x01,
     /// Paused
-    FitCloudGPSConnectWorkoutStatePaused = 0x02,
+    FitCloudCompanionWorkoutStatePaused = 0x02,
 };
 
-/// GPS-Connect Workout Initiator Definitions
-typedef NS_ENUM(NSInteger, FitCloudGPSConnectWorkoutInitiator) {
+/// Companion Workout Initiator Definitions
+typedef NS_ENUM(NSInteger, FitCloudCompanionWorkoutInitiator) {
     /// App
-    FitCloudGPSConnectWorkoutInitiatorApp = 1,
+    FitCloudCompanionWorkoutInitiatorApp = 1,
     /// Device
-    FitCloudGPSConnectWorkoutInitiatorDevice = 2,
+    FitCloudCompanionWorkoutInitiatorDevice = 2,
 };
 
 #pragma mark -收款码和名片二维码类型定义

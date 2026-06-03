@@ -370,7 +370,6 @@ typedef void (^FitCloudWatchfaceUIInfoResultBlock)(BOOL succeed, FitCloudWatchfa
 ///   - error: 错误信息
 typedef void (^FitCloudLatestHealthMeasurementDataResultBlock)(BOOL succeed, FitCloudLatestHealthMeasurementDataObject *_Nullable dataObject, NSError *_Nullable error);
 
-
 /// FitCloud Alexa 语音开始请求回调
 /// - Parameter result: 回调结果
 typedef void (^FitCloudAlexaVoiceStartRequestCompletion)(ALEXAINVOKEERROR result);
@@ -516,15 +515,15 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// 心电实时测量结束
 - (void)OnRealTimeECGStop;
 
-/// GPS 互联运动手表端事件
+/// 来自手表端的互联运动事件回调
 /// - Parameters:
 ///   -  workoutEvent: 事件
-- (void)onGPSConnectWorkoutEvent:(FitCloudGPSConnectWorkoutEventModel *)workoutEvent;
+- (void)onCompanionWorkoutEvent:(FitCloudCompanionWorkoutEventModel *)workoutEvent;
 
-/// GPS 互联运动手表端周期性向 App 发送运动数据
+/// 不定期来自手表端的互联运动数据（例如每 5s 钟手表端可能发一次数据，实际多久取决于手表固件）
 /// - Parameters:
 ///   -  periodicReportData: 数据
-- (void)onGPSConnectPeriodReportData:(FitCloudGPSConnectDevice2AppPeriodicReportDataModel *)periodicReportData;
+- (void)onCompanionWorkoutPeriodReportData:(FitCloudCompanionWorkoutDevice2AppPeriodicReportDataModel *)periodicReportData;
 
 /// 手表控制手机拍照
 - (void)OnTakePhotoCtrl;

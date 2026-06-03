@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
-		yIdg2BQLY9yVYUSXJfCbIqX5MmI=
+		w2XR9jhST3ViKpEalzs6fSttmzA=
 		</data>
 		<key>Headers/FitCloudCapacity.h</key>
 		<data>
@@ -55,6 +55,22 @@
 		<key>Headers/FitCloudClassroomModeSettingsModel.h</key>
 		<data>
 		Mscc7E5MQT+tRTwAHskXGEKPsdA=
+		</data>
+		<key>Headers/FitCloudCompanionWorkoutApp2DevicePeriodicReportDataModel.h</key>
+		<data>
+		LFl3SzT6P5UUCVdOGPwdOstQ+wI=
+		</data>
+		<key>Headers/FitCloudCompanionWorkoutDevice2AppPeriodicReportDataModel.h</key>
+		<data>
+		aL34sBjhFwcUm9l7fR1AGFqAI4k=
+		</data>
+		<key>Headers/FitCloudCompanionWorkoutEventModel.h</key>
+		<data>
+		8rS5xv+pNsw5nPiSzI9oZDbr8jw=
+		</data>
+		<key>Headers/FitCloudCompanionWorkoutInfoModel.h</key>
+		<data>
+		tVdpL3x6QwdAx92d/Lo7Ig97t48=
 		</data>
 		<key>Headers/FitCloudContactObject.h</key>
 		<data>
@@ -98,7 +114,7 @@
 		</data>
 		<key>Headers/FitCloudDataModels.h</key>
 		<data>
-		6iIU9oeCK5NEQ0ldrrwCBuzst8w=
+		9jv3mkpZbQMRimG+hAwPaFTWRUE=
 		</data>
 		<key>Headers/FitCloudECGDefines.h</key>
 		<data>
@@ -147,22 +163,6 @@
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
 		bH9HP3qglFHOPiuPZvs1aETIaDA=
-		</data>
-		<key>Headers/FitCloudGPSConnectApp2DevicePeriodicReportDataModel.h</key>
-		<data>
-		eV9symKn0ZWFC8vlvvLqdwKow1A=
-		</data>
-		<key>Headers/FitCloudGPSConnectDevice2AppPeriodicReportDataModel.h</key>
-		<data>
-		124o0vtWoWnjkny4zBsX7xAIx1Y=
-		</data>
-		<key>Headers/FitCloudGPSConnectWorkoutEventModel.h</key>
-		<data>
-		O8gZsqznZMcSI3JNAgeCy9VyM1g=
-		</data>
-		<key>Headers/FitCloudGPSConnectWorkoutInfoModel.h</key>
-		<data>
-		nU8dLVTh+gkNIwX39/y8mHPvqvE=
 		</data>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
 		<data>
@@ -274,7 +274,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		EylxQ3i+AKEh440VxlHKoyZRqzk=
+		3hBndt41KRH2DAylqWu3nCkMGT0=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -282,7 +282,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		ri6F3z5AnNbWg9HIa4zrI2hdrkU=
+		y0WMoiUXVlPWR/vvl2dDt0GgpKw=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -454,7 +454,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		23DRkBI0WJ1hGnlEWMfuG2bWD3Q=
+		5ZW0amN/MhLEexam4vuoD2nWoCs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -537,7 +537,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Pdrb/pogIy7qwu1AjboJ4gETqZwcl0io+PJleGMLvN4=
+			9TF0bDr8s8r8I+M73ZNSff5Ao6SWExQLnHE3ewvrYJg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCapacity.h</key>
@@ -552,6 +552,34 @@
 			<key>hash2</key>
 			<data>
 			0ZMPWEH1IYAJD+dl0K1f7cBg87K8sVU8tBoIIVvHWxY=
+			</data>
+		</dict>
+		<key>Headers/FitCloudCompanionWorkoutApp2DevicePeriodicReportDataModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			t3Qsv1fWhTsjTVRWDuUb2Q3zvtBFDh0pd9zDfW2qAeE=
+			</data>
+		</dict>
+		<key>Headers/FitCloudCompanionWorkoutDevice2AppPeriodicReportDataModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ddyj4/oJYWbiN771UV7fwa+if6Ak3RlbonwcVxSXtzY=
+			</data>
+		</dict>
+		<key>Headers/FitCloudCompanionWorkoutEventModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8mqw3r7xtfslOrkRFcMrYxaCk7QAyIBoWIH5pr2q3U0=
+			</data>
+		</dict>
+		<key>Headers/FitCloudCompanionWorkoutInfoModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Qp9mYymIlGZr4jiKql8JOcLV1lC/ojaXLNncCeQQ0z4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudContactObject.h</key>
@@ -628,7 +656,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lhNk8rCKzJeNTLTbB3VW1cMwPv4y84dVHlc1P6VUv/k=
+			gGvcgqU4eZEB5IAA+02vk8hxZlHdfIdaIhcu28mpC94=
 			</data>
 		</dict>
 		<key>Headers/FitCloudECGDefines.h</key>
@@ -713,34 +741,6 @@
 			<key>hash2</key>
 			<data>
 			puAIYRaW3I4UMXyloFi8EAfSsYvDf1CG6Z4oums/j1s=
-			</data>
-		</dict>
-		<key>Headers/FitCloudGPSConnectApp2DevicePeriodicReportDataModel.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gB+uVvLllcrNSB2HI2eW/GvcW+i4nqSq1HYZ/DZ4peI=
-			</data>
-		</dict>
-		<key>Headers/FitCloudGPSConnectDevice2AppPeriodicReportDataModel.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			JDGDB87msPR92/yWLCyuANd8B4+qDmOv7hHNbuMr+oY=
-			</data>
-		</dict>
-		<key>Headers/FitCloudGPSConnectWorkoutEventModel.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vQgBIRKJTzz/uOplKBYDVyPffKxQj/uqNxSRUCIOLKI=
-			</data>
-		</dict>
-		<key>Headers/FitCloudGPSConnectWorkoutInfoModel.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fC6aEPRVgZs9xp8zEkCXx4+EA92fR9fxB57JbMq+hHI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
@@ -936,7 +936,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ijxlMInstgxCBc/orTUwAIWREbcEcKY4NqmBdNyMGBQ=
+			UxOc7OvEdB8ey1M9g5xbXaBHQQHwlh99iQ/n5eL8oBs=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -950,7 +950,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6ai5Be4rhmu86SipBxEkW8Q9KeVduAkBt2Fqk1EJ+LE=
+			ePea65YnfrWqIPD54ssTBiXny1uDWsNlFVN7tTPW7fM=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>

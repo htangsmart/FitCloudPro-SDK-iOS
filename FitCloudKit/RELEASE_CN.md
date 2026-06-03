@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2026-06-01 Version:1.3.2-beta.68 Build:20260601001
+## pcjbird 2026-06-03 Version:1.3.2-beta.69 Build:20260603001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -68,8 +68,8 @@
 - 修复了 HRV 定时测量设置漏掉【启用提示】的问题。
 - 修改了 ANCS 通知应用配置相关的 API。
 - 新增了更多通知应用定义：VK、Yandex Go、Yandex Market、Sberbank Online、Wildberries、Ozon、MAX、Gosuslugi、Avito、Gold Apple。
-- 重命名了 GPS 互联运动相关的 API 和 SDK 回调方法。
-- 修复了 GPS-connect 运动相关数据模型的问题。
+- 重命名了互联运动相关的 API 和 SDK 回调方法。
+- 修复了互联运动相关数据模型的问题。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

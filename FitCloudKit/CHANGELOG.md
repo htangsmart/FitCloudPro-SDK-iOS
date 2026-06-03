@@ -1,12 +1,17 @@
 # CHANGELOG
 
+## V1.3.2-beta.69 build20260603001 (2026-06-03)
+
+- Renamed companion workout related APIs and SDK callback methods.
+- Fixed the issue in HRV monitoring settings.
+
 ## V1.3.2-beta.68 build20260601001 (2026-06-01)
 
-- Fixed GPS-connect workout related data model.
+- Fixed companion workout related data model.
 
 ## V1.3.2-beta.67 build20260531001 (2026-05-31)
 
-- Renamed GPS-connect workout related APIs and SDK callback methods.
+- Renamed companion workout related APIs and SDK callback methods.
 
 ## V1.3.2-beta.66 build20260530001 (2026-05-30)
 

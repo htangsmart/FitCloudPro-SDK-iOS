@@ -33,10 +33,10 @@
 #import <FitCloudKit/FitCloudHourlyWeatherModel.h>
 #import <FitCloudKit/FitCloudDailyHRVDataModel.h>
 #import <FitCloudKit/FitCloudHRVMonitorConfigModel.h>
-#import <FitCloudKit/FitCloudGPSConnectWorkoutInfoModel.h>
-#import <FitCloudKit/FitCloudGPSConnectWorkoutEventModel.h>
-#import <FitCloudKit/FitCloudGPSConnectApp2DevicePeriodicReportDataModel.h>
-#import <FitCloudKit/FitCloudGPSConnectDevice2AppPeriodicReportDataModel.h>
+#import <FitCloudKit/FitCloudCompanionWorkoutInfoModel.h>
+#import <FitCloudKit/FitCloudCompanionWorkoutEventModel.h>
+#import <FitCloudKit/FitCloudCompanionWorkoutApp2DevicePeriodicReportDataModel.h>
+#import <FitCloudKit/FitCloudCompanionWorkoutDevice2AppPeriodicReportDataModel.h>
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>

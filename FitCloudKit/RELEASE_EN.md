@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-06-01 Version:1.3.2-beta.68 Build:20260601001
+## pcjbird 2026-06-03 Version:1.3.2-beta.69 Build:20260603001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -69,8 +69,8 @@
 - Fixed the issue where the "Enable Prompt" option was missing in HRV monitoring settings.
 - Changed ANCS notification apps configuration APIs.
 - Added more notification app definitions: VK, Yandex Go, Yandex Market, Sberbank Online, Wildberries, Ozon, MAX, Gosuslugi, Avito, Gold Apple.
-- Renamed GPS-connect workout related APIs and SDK callback methods.
-- Fixed GPS-connect workout related data model.
+- Renamed companion workout related APIs and SDK callback methods.
+- Fixed companion workout related data model.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

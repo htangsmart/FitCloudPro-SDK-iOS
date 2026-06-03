@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-06-01  Version:1.3.2-beta.68 Build:20260601001
+//      pcjbird    2026-06-03  Version:1.3.2-beta.69 Build:20260603001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1945,35 +1945,35 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: 结果回调，代表请求是否成功，不代表数据返回成功
 + (void)requestSleepDebugDataWithBlock:(FitCloudCompletionHandler _Nullable)block;
 
-#pragma mark - GPS-Connect Workout
+#pragma mark - Companion Workout
 
-/// Send GPS-Connect workout event
+/// Send companion workout event
 /// - Parameters:
-///   - event: GPS-Connect workout event
+///   - event: Companion workout event
 ///   - completion: The completion handler
 ///     - success: Indicator whether the operation is successful
 ///     - error: Error information if the operation failed
-+ (void)sendGPSConnectWorkoutEvent:(FitCloudGPSConnectWorkoutEventModel *_Nonnull)event
-                        completion:(FitCloudCompletionHandler _Nullable)completion;
++ (void)sendCompanionWorkoutEvent:(FitCloudCompanionWorkoutEventModel *_Nonnull)event
+                       completion:(FitCloudCompletionHandler _Nullable)completion;
 
-/// Send GPS-Connect workout periodic report data
+/// Send companion workout periodic report data
 /// - Parameters:
-///   - data: GPS-Connect workout periodic report data
+///   - data: Companion workout periodic report data
 ///   - completion: The completion handler
 ///     - success: Indicator whether the operation is successful
 ///     - error: Error information if the operation failed
-+ (void)sendGPSConnectPeriodicReportData:(FitCloudGPSConnectApp2DevicePeriodicReportDataModel *_Nonnull)data
-                              completion:(FitCloudCompletionHandler _Nullable)completion;
++ (void)sendCompanionWorkoutPeriodicReportData:(FitCloudCompanionWorkoutApp2DevicePeriodicReportDataModel *_Nonnull)data
+                                    completion:(FitCloudCompletionHandler _Nullable)completion;
 
-/// Query GPS-Connect workout info
+/// Query companion workout info
 /// - Parameters:
 ///   - completion: The completion handler
 ///     - success: Indicator whether the operation is successful
 ///     - error: Error information if the operation failed
-///     - workoutInfo: GPS-Connect workout info
-+ (void)queryGPSConnectWorkoutInfoWithCompletion:(void (^_Nullable)(BOOL success,
-                                                                    FitCloudGPSConnectWorkoutInfoModel *_Nullable workoutInfo,
-                                                                    NSError *_Nullable error))completion;
+///     - workoutInfo: Companion workout info
++ (void)queryCompanionWorkoutInfoWithCompletion:(void (^_Nullable)(BOOL success,
+                                                                   FitCloudCompanionWorkoutInfoModel *_Nullable workoutInfo,
+                                                                   NSError *_Nullable error))completion;
 
 #pragma mark 开启GSensor
 
