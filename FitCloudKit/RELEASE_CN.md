@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2026-06-04 Version:1.3.2-beta.70 Build:20260604001
+## pcjbird 2026-06-05 Version:1.3.2-beta.71 Build:20260605001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -70,6 +70,8 @@
 - 新增了更多通知应用定义：VK、Yandex Go、Yandex Market、Sberbank Online、Wildberries、Ozon、MAX、Gosuslugi、Avito、Gold Apple。
 - 重命名了互联运动相关的 API 和 SDK 回调方法。
 - 修复了互联运动相关数据模型的问题。
+- 新增标志位，用于标识官方应用是否应显示电池百分比。
+- 新增标志位，用于标识官方应用是否应启用关机功能。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.71 build20260605001 (2026-06-05)
+
+- Added flag to indicate whether should show battery percentage on Official App.
+- Added flag to indicate whether enable power off feature on Official App.
+
 ## V1.3.2-beta.70 build20260604001 (2026-06-04)
 
 - Fixed `+ (BOOL)isDeviceSupportNotificationApp:(FitCloudNotificationApp)app` API for the following notification apps: VK, Yandex Go, Yandex Market, Sberbank Online, Wildberries, Ozon, MAX, Gosuslugi, Avito, Gold Apple.
