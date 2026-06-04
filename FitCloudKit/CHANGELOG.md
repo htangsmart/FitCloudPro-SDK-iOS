@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.70 build20260604001 (2026-06-04)
+
+- Fixed `+ (BOOL)isDeviceSupportNotificationApp:(FitCloudNotificationApp)app` API for the following notification apps: VK, Yandex Go, Yandex Market, Sberbank Online, Wildberries, Ozon, MAX, Gosuslugi, Avito, Gold Apple.
+
 ## V1.3.2-beta.69 build20260603001 (2026-06-03)
 
 - Renamed companion workout related APIs and SDK callback methods.
