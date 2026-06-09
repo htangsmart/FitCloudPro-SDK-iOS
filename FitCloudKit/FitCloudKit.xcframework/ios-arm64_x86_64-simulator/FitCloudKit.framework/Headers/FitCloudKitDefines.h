@@ -2435,4 +2435,14 @@ typedef NS_ENUM(NSInteger, FitCloudHRVLevel) {
 
 };
 
+#pragma mark - 实时数据测量
+
+/// Error Code for Real Time Data Measurement
+typedef NS_ENUM(NSInteger, FitCloudRealTimeDataMeasurementErrorCode) {
+    /// Unknown Error
+    FitCloudRealTimeDataMeasurementErrorCodeUnknown = -1,
+    /// Not Worn Error
+    FitCloudRealTimeDataMeasurementErrorCodeNotWorn = 0,
+};
+
 #endif /* FitCloudKitDefines_h */

@@ -150,6 +150,11 @@ extern NSString *const FITCLOUDEVENT_PREPARESYNCWORK_END_NOTIFY;
 /// - Parameter object: FitCloudBatteryInfoObject instance
 extern NSString *const FITCLOUDEVENT_BATTERYINFO_NOTIFY;
 
+/// Notification of watch low battery alert
+///
+/// - Parameter object: FitCloudBatteryInfoObject instance
+extern NSString *const FITCLOUDEVENT_LOW_BATTERY_ALERT_NOTIFY;
+
 /// Notification when alarm list changes
 ///
 /// - Parameter userInfo: Array of FitCloudAlarmObject instances

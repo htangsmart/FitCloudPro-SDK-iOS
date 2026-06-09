@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.73 build20260610001 (2026-06-10)
+
+- Introduced new SDK event `FITCLOUDEVENT_LOW_BATTERY_ALERT_NOTIFY` for low battery alert.
+- Introduced new SDK callback method `- (void)onRealTimeDataMeasurementError:(FitCloudRealTimeDataMeasurementErrorCode)errorCode;` for real-time data measurement error.
+
 ## V1.3.2-beta.72 build20260609001 (2026-06-09)
 
 - Added support for Yandex Maps notification app.

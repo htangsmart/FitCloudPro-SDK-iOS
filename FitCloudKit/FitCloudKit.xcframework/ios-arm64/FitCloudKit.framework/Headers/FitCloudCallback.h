@@ -515,6 +515,11 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// 心电实时测量结束
 - (void)OnRealTimeECGStop;
 
+/// 实时数据测量错误
+/// - Parameters:
+///   - errorCode: 错误码
+- (void)onRealTimeDataMeasurementError:(FitCloudRealTimeDataMeasurementErrorCode)errorCode;
+
 /// 来自手表端的互联运动事件回调
 /// - Parameters:
 ///   -  workoutEvent: 事件
