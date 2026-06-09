@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.72 build20260609001 (2026-06-09)
+
+- Added support for Yandex Maps notification app.
+
 ## V1.3.2-beta.71 build20260605001 (2026-06-05)
 
 - Added flag to indicate whether should show battery percentage on Official App.

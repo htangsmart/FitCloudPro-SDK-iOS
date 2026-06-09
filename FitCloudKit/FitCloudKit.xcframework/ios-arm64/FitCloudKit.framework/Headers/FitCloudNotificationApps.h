@@ -149,6 +149,8 @@ FOUNDATION_EXPORT FitCloudNotificationApp const FitCloudNotificationAppGosuslugi
 FOUNDATION_EXPORT FitCloudNotificationApp const FitCloudNotificationAppAvito;
 /// Gold Apple（Золотое яблоко）通知，俄罗斯地区
 FOUNDATION_EXPORT FitCloudNotificationApp const FitCloudNotificationAppGoldApple;
+/// Yandex Maps（Яндекс Карты）通知，俄罗斯地区
+FOUNDATION_EXPORT FitCloudNotificationApp const FitCloudNotificationAppYandexMaps;
 
 /// 返回所有已定义的的通知应用集合
 FOUNDATION_EXPORT NSSet<FitCloudNotificationApp> *FitCloudAllNotificationApps(void);
