@@ -401,4 +401,19 @@
 /// 公版 App 上是否支持关机功能
 @property(nonatomic, readonly) BOOL allowPowerOffOnOfficialApp;
 
+/// 是否支持设备端声学回声消除 (AEC, Acoustic Echo Cancellation)
+@property(nonatomic, readonly) BOOL isSupportDeviceSideAEC;
+
+/// 是否在 App 上展示 AI 对话功能
+@property(nonatomic, readonly) BOOL shouldShowAIChatInApp;
+
+/// 是否支持 AI 录音
+@property(nonatomic, readonly) BOOL withAIAudioRecording;
+
+/// 是否支持通话录音
+@property(nonatomic, readonly) BOOL withCallRecording;
+
+/// 是否在 App 上隐藏喜马拉雅入口
+@property(nonatomic, readonly) BOOL shouldHideXimalayaInApp;
+
 @end

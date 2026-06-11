@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-06-10  Version:1.3.2-beta.73 Build:20260610001
+//      pcjbird    2026-06-11  Version:1.3.2-beta.74 Build:20260611001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -132,6 +132,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - silent: Pass YES to suppress related SDK log output
 + (void)ignoreConnectedDevice:(BOOL)silent;
+
+/// Cancel the auto reconnecting device
++ (void)cancelAutoReconnectingDevice;
 
 #pragma mark Attempts to display the system Bluetooth power alert if possible
 

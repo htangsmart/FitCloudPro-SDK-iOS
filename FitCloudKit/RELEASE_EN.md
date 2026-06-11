@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-06-10 Version:1.3.2-beta.73 Build:20260610001
+## pcjbird 2026-06-11 Version:1.3.2-beta.74 Build:20260611001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -74,6 +74,7 @@
 - Added flag to indicate whether should show battery percentage on Official App.
 - Added flag to indicate whether enable power off feature on Official App.
 - Added support for Yandex Maps notification app.
+- Fixed an issue where switching to another device after a connection timeout caused confusion in multi-device connection management.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

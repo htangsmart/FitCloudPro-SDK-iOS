@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.74 build20260611001 (2026-06-11)
+
+- Fixed an issue where switching to another device after a connection timeout caused confusion in multi-device connection management.
+- Added some device side flags related to AI Chat/AI Recording/Call Recording/Ximalaya App.
+
 ## V1.3.2-beta.73 build20260610001 (2026-06-10)
 
 - Introduced new SDK event `FITCLOUDEVENT_LOW_BATTERY_ALERT_NOTIFY` for low battery alert.
