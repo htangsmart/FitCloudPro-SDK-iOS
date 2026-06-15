@@ -2414,6 +2414,20 @@ typedef NS_ENUM(NSInteger, FitCloudAIChatAudioChannel) {
     FitCloudAIChatAudioChannelOpusInOpusOut = 2,
 };
 
+#pragma mark - AI chat terminate with interrupt reason
+
+/// AI chat terminate with interrupt reason
+typedef NS_ENUM(NSInteger, FitCloudAIChatTerminateWithInterruptReason) {
+    /// Unknown
+    FitCloudAIChatTerminateWithInterruptReasonUnknown = -1,
+    /// Low Battery
+    FitCloudAIChatTerminateWithInterruptReasonLowBattery = 0x01,
+    /// Incoming Call
+    FitCloudAIChatTerminateWithInterruptReasonIncomingCall = 0x02,
+    /// Other
+    FitCloudAIChatTerminateWithInterruptReasonOther = 0xFF,
+};
+
 #pragma mark - HRV
 
 /// HRV Level
@@ -2443,6 +2457,30 @@ typedef NS_ENUM(NSInteger, FitCloudRealTimeDataMeasurementErrorCode) {
     FitCloudRealTimeDataMeasurementErrorCodeUnknown = -1,
     /// Not Worn Error
     FitCloudRealTimeDataMeasurementErrorCodeNotWorn = 0,
+};
+
+#pragma mark - AI Audio Recording
+
+/// AI Audio Recording Scene
+typedef NS_ENUM(NSInteger, FitCloudAIAudioRecordingScene) {
+    /// Unknown
+    FitCloudAIAudioRecordingSceneUnknown = -1,
+    /// On Site
+    FitCloudAIAudioRecordingSceneOnSite = 1,
+    /// Call
+    FitCloudAIAudioRecordingSceneCall = 2,
+};
+
+/// AI Audio Recording Terminate with Interrupt Reason
+typedef NS_ENUM(NSInteger, FitCloudAIAudioRecordingTerminateWithInterruptReason) {
+    /// Unknown
+    FitCloudAIAudioRecordingTerminateWithInterruptReasonUnknown = -1,
+    /// Low Battery
+    FitCloudAIAudioRecordingTerminateWithInterruptReasonLowBattery = 0x01,
+    /// Incoming Call
+    FitCloudAIAudioRecordingTerminateWithInterruptReasonIncomingCall = 0x02,
+    /// Other
+    FitCloudAIAudioRecordingTerminateWithInterruptReasonOther = 0xFF,
 };
 
 #endif /* FitCloudKitDefines_h */

@@ -416,4 +416,7 @@
 /// 是否在 App 上隐藏喜马拉雅入口
 @property(nonatomic, readonly) BOOL shouldHideXimalayaInApp;
 
+/// 是否在 App 上隐藏抬腕亮屏设置入口
+@property(nonatomic, readonly) BOOL shouldHideRaiseWakeSettingsInApp;
+
 @end

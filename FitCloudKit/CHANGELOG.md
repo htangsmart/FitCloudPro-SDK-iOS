@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.75 build20260615001 (2026-06-15)
+
+- Added flag to indicate whether should hide raise wake settings in App.
+- Introduced new APIs and SDK callback methods related to AI audio recording features.
+
 ## V1.3.2-beta.74 build20260611001 (2026-06-11)
 
 - Fixed an issue where switching to another device after a connection timeout caused confusion in multi-device connection management.

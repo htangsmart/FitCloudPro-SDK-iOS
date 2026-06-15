@@ -838,11 +838,35 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 /// Notifies the app that the watch requests an AI-chat event.
 - (void)onAIChatSessionEvent:(FitCloudAIChatSessionEvent)event;
 
+/// Notifies that the AI-chat session has been terminated with an interrupt reason
+/// - Parameters:
+///   - reason: The interrupt reason
+- (void)onAIChatTerminateWithInterruptReason:(FitCloudAIChatTerminateWithInterruptReason)reason;
+
 /// Notifies that incremental voice data has been received during ai-chat conversation
 /// - Parameters:
 ///   - deltaOpusVoiceData: The incremental voice data in Opus format
 ///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
 - (void)onAIChatDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
+
+/// Notifies that the watch requests to start AI audio recording
+/// - Parameters:
+///   - scene: The scene of the recording
+- (void)onRequestStartAIAudioRecordingWithScene:(FitCloudAIAudioRecordingScene)scene;
+
+/// Notifies that the watch requests to stop AI audio recording
+- (void)onRequestStopAIAudioRecording;
+
+/// Notifies that the AI audio recording session has been terminated with an interrupt reason
+/// - Parameters:
+///   - reason: The interrupt reason
+- (void)onAIAudioRecordingTerminateWithInterruptReason:(FitCloudAIAudioRecordingTerminateWithInterruptReason)reason;
+
+/// Notifies that incremental voice data has been received during AI audio recording
+/// - Parameters:
+///   - deltaOpusVoiceData: The incremental voice data in Opus format
+///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
+- (void)onAIAudioRecordingDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
 
 /// Notifies when the ANCS authorization status has been updated
 /// - Parameters:

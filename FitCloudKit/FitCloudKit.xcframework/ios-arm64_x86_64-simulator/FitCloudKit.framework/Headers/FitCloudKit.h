@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-06-11  Version:1.3.2-beta.74 Build:20260611001
+//      pcjbird    2026-06-15  Version:1.3.2-beta.75 Build:20260615001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -2148,6 +2148,26 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)queryOnDeviceVoiceWakeUpEnableStateWithCompletion:(void (^_Nullable)(BOOL success,
                                                                              FitCloudEnableState enableState,
                                                                              NSError *_Nullable error))completion;
+
+@end
+
+@interface FitCloudKit (AiAudioRecording)
+
+/// Report AI audio recording start success
+/// - Parameters:
+///   - scene: The scene of the recording
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)reportAIAudioRecordingStartSuccessWithScene:(FitCloudAIAudioRecordingScene)scene
+                                         completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Report AI audio recording stopped
+/// - Parameters:
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)reportAIAudioRecordingStoppedWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 
