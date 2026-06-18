@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2026-06-15 Version:1.3.2-beta.75 Build:20260615001
+## pcjbird 2026-06-18 Version:1.3.2-beta.76 Build:20260618001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -74,6 +74,7 @@
 - 新增标志位，用于标识官方应用是否应启用关机功能。
 - 新增对 Yandex Maps 通知应用的支持。
 - 修复了设备连接超时后，切换到连接其他设备时，导致多设备连接混乱的问题。
+- 天气信息中新增了湿度字段。
 - 进一步提升了 SDK 的稳定性与性能。
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

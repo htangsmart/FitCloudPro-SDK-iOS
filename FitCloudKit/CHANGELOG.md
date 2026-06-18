@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.76 build20260618001 (2026-06-18)
+
+- Added humidity field to weather information.
+
 ## V1.3.2-beta.75 build20260615001 (2026-06-15)
 
 - Added flag to indicate whether should hide raise wake settings in App.

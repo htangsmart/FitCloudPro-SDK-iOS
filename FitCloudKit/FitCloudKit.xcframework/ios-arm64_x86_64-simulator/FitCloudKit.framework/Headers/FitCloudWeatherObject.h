@@ -3,7 +3,7 @@
 //  FitCloudKit
 //
 //  Created by pcjbird on 2018/5/28.
-//  Copyright © 2018年 Zero Status. All rights reserved.
+//  Copyright © 2018 年 Zero Status. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -38,14 +38,14 @@
 /// 天气类型
 @property(nonatomic, assign)Byte weatherType;
 
-/// 城市名称，最多支持64个字节，超过会被截取
+/// 城市名称，最多支持 64 个字节，超过会被截取
 @property(nonatomic, strong)NSString* city;
 
-/// 天气更新时间，该字段仅当标志位 allowWeatherForecast 为 YES时有效
+/// 天气更新时间，该字段仅当标志位 allowWeatherForecast 为 YES 时有效
 /// > see allowWeatherForecast @ FitCloudFirmwareVersionObject
 @property(nonatomic, strong)NSDate* updateDate;
 
-/// 天气预报，最多支持14天，该字段仅当标志位 allowWeatherForecast 为 YES时有效
+/// 天气预报，最多支持 14 天，该字段仅当标志位 allowWeatherForecast 为 YES 时有效
 /// > see allowWeatherForecast @ FitCloudFirmwareVersionObject
 @property(nonatomic, strong) NSArray<FitCloudWeatherForecast*>* forecast;
 
@@ -58,10 +58,13 @@
 /// 紫外线等级
 @property(nonatomic, assign) UInt8 uvIndex;
 
-/// 能见度，最大30000米，单位：米
+/// 能见度，最大 30000 米，单位：米
 @property(nonatomic, assign) UInt16 visibility;
 
-/// 空气质量指数(0~400)
+/// 空气质量指数 (0~400)
 @property(nonatomic, assign) UInt16 airQualityIndex;
+
+/// 湿度 (0~100)
+@property(nonatomic, assign) UInt8 humidity;
 
 @end
