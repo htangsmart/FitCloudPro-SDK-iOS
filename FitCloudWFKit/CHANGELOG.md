@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.2.1-beta.6 build20260621001 (2026-06-21)
+
+- Fixed the rounded corner issue for Bluetrum's PAR image compression format.
+
 ## V1.2.1-beta.5 build20260304001 (2026-03-04)
 
 - Revise the watch-face generation implementation for the 579X platform.
