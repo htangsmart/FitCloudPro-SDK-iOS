@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.77 build20260622001 (2026-06-22)
+
+- Added humidity field to `FitCloudHourlyWeatherModel` .
+
 ## V1.3.2-beta.76 build20260618001 (2026-06-18)
 
 - Added humidity field to weather information.
