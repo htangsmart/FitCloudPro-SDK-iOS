@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.78 build20260624001 (2026-06-24)
+
+- Added flag to indicate whether should hide shake to photo in App.
+
 ## V1.3.2-beta.77 build20260622001 (2026-06-22)
 
 - Added humidity field to `FitCloudHourlyWeatherModel` .

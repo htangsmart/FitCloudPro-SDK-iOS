@@ -419,4 +419,7 @@
 /// 是否在 App 上隐藏抬腕亮屏设置入口
 @property(nonatomic, readonly) BOOL shouldHideRaiseWakeSettingsInApp;
 
+/// 是否在 App 上隐藏摇一摇拍照功能入口
+@property(nonatomic, readonly) BOOL shouldHideShakeToPhotoInApp;
+
 @end
