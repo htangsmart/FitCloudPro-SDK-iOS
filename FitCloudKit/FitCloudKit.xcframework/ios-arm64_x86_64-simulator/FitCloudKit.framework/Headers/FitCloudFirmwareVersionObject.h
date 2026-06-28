@@ -359,6 +359,9 @@
 /// 是否支持蝶唯客户的 Web 智能翻译功能
 @property(nonatomic, readonly) BOOL withWebAITranslationForDieWei;
 
+/// 是否在 App 上隐藏时间制式 (24 小时制/12 小时制) 设置入口
+@property(nonatomic, readonly) BOOL shouldHideTimeFormatSettingInApp;
+
 /// 是否支持耳机相关 API
 @property(nonatomic, readonly) BOOL allowEarbudsAPIs;
 
@@ -421,5 +424,8 @@
 
 /// 是否在 App 上隐藏摇一摇拍照功能入口
 @property(nonatomic, readonly) BOOL shouldHideShakeToPhotoInApp;
+
+/// 是否支持 App 助眠分析
+@property(nonatomic, readonly) BOOL shouldShowSleepAnalysisInApp;
 
 @end

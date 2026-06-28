@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.79 build20260628001 (2026-06-28)
+
+- Added flag to indicate whether should show sleep analysis in App.
+- Added flag to indicate whether should hide time format setting in App.
+
 ## V1.3.2-beta.78 build20260624001 (2026-06-24)
 
 - Added flag to indicate whether should hide shake to photo in App.
