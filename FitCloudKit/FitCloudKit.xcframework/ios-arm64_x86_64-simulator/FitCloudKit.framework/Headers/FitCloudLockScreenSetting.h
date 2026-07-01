@@ -17,22 +17,17 @@
 + (instancetype _Nullable)new NS_UNAVAILABLE;
 - (instancetype _Nullable)init NS_UNAVAILABLE;
 
-/**
- * @brief YES 锁定屏幕，NO 解锁屏幕
-*/
+/// YES 锁定屏幕，NO 解锁屏幕
 @property(nonatomic, readonly) BOOL toLock;
 
-/**
- * @brief 锁定/解锁屏幕的密码（长度为六位，必须为数字）
-*/
+/// 锁定/解锁屏幕的密码（密码长度取决于设备，若设备未定义则默认为六位数字，值得注意的是，密码只能包含数字，不能包含字母或特殊字符。）
 @property(nonatomic, strong, readonly) NSString* _Nullable password;
 
-/**
- * @brief 创建锁屏设置
- * @param toLock YES 锁定屏幕，NO 解锁屏幕
- * @param password 锁定/解锁屏幕的密码（长度为六位，必须为数字）
- * @return 锁屏设置, 如果不符合规则可能创建失败返回nil
- */
+/// 创建锁屏设置
+/// - Parameters:
+///   - toLock: YES 锁定屏幕，NO 解锁屏幕
+///   - password: 锁定/解锁屏幕的密码（密码长度取决于设备，若设备未定义则默认为六位数字，值得注意的是，密码只能包含数字，不能包含字母或特殊字符。）
+/// - Returns: 锁屏设置，如果不符合规则可能创建失败返回 nil
 +(FitCloudLockScreenSetting* _Nullable) settingWithIsToLock:(BOOL)toLock password:(NSString*_Nonnull)password;
 
 @end

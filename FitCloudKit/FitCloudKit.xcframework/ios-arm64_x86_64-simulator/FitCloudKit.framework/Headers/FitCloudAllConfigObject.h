@@ -99,6 +99,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 天气映射客户编号
 @property(nonatomic, strong, nullable) NSNumber *weatherMapVendorId;
 
+/// 锁屏密码长度
+@property(nonatomic, strong, nullable) NSNumber *lockScreenPasswordLength;
+
 @end
 
 NS_ASSUME_NONNULL_END

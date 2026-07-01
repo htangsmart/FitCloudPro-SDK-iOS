@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.80 build20260701001 (2026-07-01)
+
+- Passcode length is now allowed to vary by device.
+
 ## V1.3.2-beta.79 build20260628001 (2026-06-28)
 
 - Added flag to indicate whether should show sleep analysis in App.

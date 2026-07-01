@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/FitCloudAllConfigObject.h</key>
 		<data>
-		TUQAW4Jex+9YPVu6jhVd37Ix7iE=
+		FuiQtTkKE4UEPX5SjBaokOZxZJY=
 		</data>
 		<key>Headers/FitCloudAppSidePermissionStatusModel.h</key>
 		<data>
@@ -274,7 +274,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		nmLMaI75WOTveJwIv4Pvaew4SVA=
+		W7BTv1+w11pnU26Ep8YsBWQwmYs=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -298,7 +298,7 @@
 		</data>
 		<key>Headers/FitCloudLockScreenSetting.h</key>
 		<data>
-		pM6a1y/mKZC8DtYouGeKrJx00v0=
+		fsjiVRXa2hsI8mzkO/AIp+Dnfo0=
 		</data>
 		<key>Headers/FitCloudManufacturer.h</key>
 		<data>
@@ -454,7 +454,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hYiiFBz5U7tk5gmOHtxG3KnDuFQ=
+		g/5hqFU8voG2nL2K8iz6Szwhb/U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -488,7 +488,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LSFEY0L1gCW/Bj24E9XFn6HbYp+jcbxxblcMfzQBrbc=
+			AVHxlc6zXswgbCOdaYWtzd0j1y/bw2crgFmRsr0IuHY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudAppSidePermissionStatusModel.h</key>
@@ -936,7 +936,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ts8vOtj4yPFDZETLkyJZsZFoJr1/ezyZ40N5R5HJq0Y=
+			AQ3eERBOVz6F6LQvf1nV7OmUzK0VtCbUIsAKEjnmIpg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -978,7 +978,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AUPqZGfQKXWFd7nanAef6xH+cA5BhCILd4NZRyiDRY0=
+			T0ldh4ldp0/0kcQWEODbcSJ+J8z9yZp4Ovh9/8Kg3e8=
 			</data>
 		</dict>
 		<key>Headers/FitCloudManufacturer.h</key>

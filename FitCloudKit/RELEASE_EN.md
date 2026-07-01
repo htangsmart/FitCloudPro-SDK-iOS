@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-06-28 Version:1.3.2-beta.79 Build:20260628001
+## pcjbird 2026-07-01 Version:1.3.2-beta.80 Build:20260701001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -79,6 +79,7 @@
 - Added flag to indicate whether should hide shake to photo in App.
 - Added flag to indicate whether should show sleep analysis in App.
 - Added flag to indicate whether should hide time format setting in App.
+- Passcode length is now allowed to vary by device.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001
