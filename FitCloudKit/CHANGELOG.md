@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.81 build20260710001 (2026-07-10)
+
+- Added supplementary workout definitions.
+- Introduced new API `+ (void) generateDailyAIHealthRecommendationsForDate:(NSDate*)date sleepData:(FitCloudSleepDataModel* _Nullable)sleepDataModel hrvData:(FitCloudHRVDataModel* _Nullable)hrvDataModel activityData:(FitCloudActivityDataModel* _Nullable)activityDataModel language:(NSString* _Nullable)language completion:(void (^__nullable)(FitCloudDailyAIHealthRecommendationsModel* _Nullable recommendations, NSError *_Nullable error))completion;` for generating daily AI health recommendations.
+
 ## V1.3.2-beta.80 build20260701001 (2026-07-01)
 
 - Passcode length is now allowed to vary by device.

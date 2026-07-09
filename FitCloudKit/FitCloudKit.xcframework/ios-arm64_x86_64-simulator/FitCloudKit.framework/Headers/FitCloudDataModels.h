@@ -37,6 +37,10 @@
 #import <FitCloudKit/FitCloudCompanionWorkoutEventModel.h>
 #import <FitCloudKit/FitCloudCompanionWorkoutApp2DevicePeriodicReportDataModel.h>
 #import <FitCloudKit/FitCloudCompanionWorkoutDevice2AppPeriodicReportDataModel.h>
+#import <FitCloudKit/FitCloudDailyAIHealthRecommendationsModel.h>
+#import <FitCloudKit/FitCloudActivityDataModel.h>
+#import <FitCloudKit/FitCloudHRVDataModel.h>
+#import <FitCloudKit/FitCloudSleepDataModel.h>
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>

@@ -12,6 +12,10 @@
 		<data>
 		Qg4sEVx/FjCyYYoMRBEmV+WENXc=
 		</data>
+		<key>Headers/FitCloudActivityDataModel.h</key>
+		<data>
+		uFU/18kvb09RqMM68ks1OwQS9nA=
+		</data>
 		<key>Headers/FitCloudAlarmObject.h</key>
 		<data>
 		GfBL7eVrawnbvDugDiCokBwcfI0=
@@ -104,6 +108,10 @@
 		<data>
 		Di9XKIhPIWrPCX2YKGoZFZMKAfE=
 		</data>
+		<key>Headers/FitCloudDailyAIHealthRecommendationsModel.h</key>
+		<data>
+		f4oWBEaQ5sa4MVntY/hAGP9HSYY=
+		</data>
 		<key>Headers/FitCloudDailyGoalObject.h</key>
 		<data>
 		IWg3+oJiqAqBCelnzP7OPEntgu0=
@@ -114,7 +122,7 @@
 		</data>
 		<key>Headers/FitCloudDataModels.h</key>
 		<data>
-		9jv3mkpZbQMRimG+hAwPaFTWRUE=
+		zQS8TvlLB5iqx3a+XBnMOdWBiCI=
 		</data>
 		<key>Headers/FitCloudECGDefines.h</key>
 		<data>
@@ -196,6 +204,10 @@
 		<data>
 		WkQWAaxFLrSx9rZHHkdSVSf5neQ=
 		</data>
+		<key>Headers/FitCloudHRVDataModel.h</key>
+		<data>
+		o4kgIT3LJFXc1fK1/lvFiPXwb9k=
+		</data>
 		<key>Headers/FitCloudHRVMonitorConfigModel.h</key>
 		<data>
 		mNE6ZtaS/2rsk/Nx/sJ8bgSXVZ8=
@@ -274,7 +286,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		W7BTv1+w11pnU26Ep8YsBWQwmYs=
+		xeSOiZWkpYFmfsVytmsmstgTe4o=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -282,7 +294,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		nOwt8YxxFvDNDzA2LaMQteOUoKA=
+		HdTXWa94MRLSGRQ3nMZyOKfKFmA=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -363,6 +375,10 @@
 		<key>Headers/FitCloudSecureCoding.h</key>
 		<data>
 		r9yH/Xh/8Yfo3lad3BJgzNgfWiE=
+		</data>
+		<key>Headers/FitCloudSleepDataModel.h</key>
+		<data>
+		M2GgrcleLbUL1fFq13P5eMOvIow=
 		</data>
 		<key>Headers/FitCloudSleepDebugData.h</key>
 		<data>
@@ -454,7 +470,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		g/5hqFU8voG2nL2K8iz6Szwhb/U=
+		oVFtiKjjRRgdfAJ2iTNKvzXcEqM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -475,6 +491,13 @@
 			<key>hash2</key>
 			<data>
 			0dOkgx12Gaf+tHI09I10vYrxWYQHOEE/sO24ebI9MOg=
+			</data>
+		</dict>
+		<key>Headers/FitCloudActivityDataModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/xxDdR6w12fmhGshO/D75VWOZyCPhq4IVzCD9kECVfg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudAlarmObject.h</key>
@@ -638,6 +661,13 @@
 			Q20uF9WC4rsA+brtiP/kzbZnUdAUKZENPoIPREPXyQs=
 			</data>
 		</dict>
+		<key>Headers/FitCloudDailyAIHealthRecommendationsModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8qVQ8Jxj57AzTlG7wpORev+4l+Xb8oGM6fpBGFsrGWU=
+			</data>
+		</dict>
 		<key>Headers/FitCloudDailyGoalObject.h</key>
 		<dict>
 			<key>hash2</key>
@@ -656,7 +686,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gGvcgqU4eZEB5IAA+02vk8hxZlHdfIdaIhcu28mpC94=
+			aOk3Ga7CGPO7oMWiv58WGlgQ0RvWUnc3bt1KvQOo/jQ=
 			</data>
 		</dict>
 		<key>Headers/FitCloudECGDefines.h</key>
@@ -799,6 +829,13 @@
 			XgUjkS/4UJbpUds4/8W+FqJC7LabcvdwzB5YY06i6CM=
 			</data>
 		</dict>
+		<key>Headers/FitCloudHRVDataModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ymRvCk9uUJPcah/56bHBAp0bGr7SvfljXY/U3rWlBgM=
+			</data>
+		</dict>
 		<key>Headers/FitCloudHRVMonitorConfigModel.h</key>
 		<dict>
 			<key>hash2</key>
@@ -936,7 +973,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AQ3eERBOVz6F6LQvf1nV7OmUzK0VtCbUIsAKEjnmIpg=
+			Vbo7ccXPmNZU1OwLmWe0cBit6mBkTOlcZPRCIyCWnQk=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -950,7 +987,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QrT7LnTOasZGcvlST6z+E73e4N39DUbxWh476Zh1PwQ=
+			uclHJsaVDB3B/fEkAiDyA6unzAjkq42+LSmMhUnXsbE=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
@@ -1091,6 +1128,13 @@
 			<key>hash2</key>
 			<data>
 			W4JLDfG3I0c49GQAWK+I9EJxBNEQe1no41el/YJczbw=
+			</data>
+		</dict>
+		<key>Headers/FitCloudSleepDataModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nbVVnn7G0qAOJpTBavncCd6OfZDZ8ANBx4N9nQYnGiY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudSleepDebugData.h</key>

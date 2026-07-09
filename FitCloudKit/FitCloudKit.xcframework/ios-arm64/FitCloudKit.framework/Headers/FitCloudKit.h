@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-07-01  Version:1.3.2-beta.80 Build:20260701001
+//      pcjbird    2026-07-10  Version:1.3.2-beta.81 Build:20260710001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1832,6 +1832,30 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - succeed: `YES` if the advice was successfully sent, `NO` otherwise.
 ///     - error: An error object if the operation failed, or `nil` on success.
 + (void)sendAIDietPlanWithResponseCode:(FitCloudAIDietPlanResponseCode)responseCode planText:(NSString *_Nullable)planText completion:(void (^__nullable)(BOOL succeed, NSError *_Nullable error))completion;
+
+
+#pragma mark - Daily AI Health Recommendations
+
+/// Generates daily AI health recommendations based on the provided health data for a specific date.
+/// - Parameters:
+///   - date: The date for which to generate health recommendations.
+///   - sleepDataModel: The sleep data model containing sleep-related metrics.
+///   - hrvDataModel: The heart rate variability data model containing HRV metrics.
+///   - activityDataModel: The activity data model containing daily activity metrics.
+///   - language: The language code for the returned recommendations, e.g. "en-US".
+///     > Important: Language identifiers must follow the hyphenated format specification, e.g.: `en-US`
+///     - Part1: Language code (ISO 639-1) - Two letters identifying the base language (e.g., "en" for English)
+///     - Part2: Country/Region code (ISO 3166-1) - Optional two letters specifying the country or region (e.g., "US" for United States)
+///   - completion: A completion handler called when the generation completes. Parameters:
+///     - recommendations: The generated daily AI health recommendations, or `nil` if generation failed.
+///     - error: Error information if generation fails, `nil` on success.
++ (void) generateDailyAIHealthRecommendationsForDate:(NSDate*)date
+                                            sleepData:(FitCloudSleepDataModel* _Nullable)ssleepDataModel
+                                              hrvData:(FitCloudHRVDataModel* _Nullable)hrvDataModel
+                                         activityData:(FitCloudActivityDataModel* _Nullable)activityDataModel
+                                             language:(NSString* _Nullable)language
+                                           completion:(void (^__nullable)(FitCloudDailyAIHealthRecommendationsModel* _Nullable recommendations,
+                                                               NSError *_Nullable error))completion;
 
 #pragma mark - World clock
 
