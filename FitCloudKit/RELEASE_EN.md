@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-07-10 Version:1.3.2-beta.81 Build:20260710001
+## pcjbird 2026-07-15 Version:1.3.2-beta.82 Build:20260715001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -82,6 +82,7 @@
 - Passcode length is now allowed to vary by device.
 - Added supplementary workout definitions.
 - Introduced new API `+ (void) generateDailyAIHealthRecommendationsForDate:(NSDate*)date sleepData:(FitCloudSleepDataModel* _Nullable)sleepDataModel hrvData:(FitCloudHRVDataModel* _Nullable)hrvDataModel activityData:(FitCloudActivityDataModel* _Nullable)activityDataModel language:(NSString* _Nullable)language completion:(void (^__nullable)(FitCloudDailyAIHealthRecommendationsModel* _Nullable recommendations, NSError *_Nullable error))completion;` for generating daily AI health recommendations.
+- Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 
 ## pcjbird 2025-10-13 Version:1.3.1 Build:20251013001

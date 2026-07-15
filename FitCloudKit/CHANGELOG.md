@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.82 build20260715001 (2026-07-15)
+
+- Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
+
 ## V1.3.2-beta.81 build20260710001 (2026-07-10)
 
 - Added supplementary workout definitions.
