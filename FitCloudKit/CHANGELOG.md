@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.83 build20260724001 (2026-07-24)
+
+- Fixed ANCS settings parsing issue for some devices.
+
 ## V1.3.2-beta.82 build20260715001 (2026-07-15)
 
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
