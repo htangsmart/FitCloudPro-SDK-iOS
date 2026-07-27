@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.84 build20260727001 (2026-07-27)
+
+- Fixed an issue where AI audio recording callback method was not working as expected.
+
 ## V1.3.2-beta.83 build20260724001 (2026-07-24)
 
 - Fixed ANCS settings parsing issue for some devices.
