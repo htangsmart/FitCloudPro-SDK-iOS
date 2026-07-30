@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-07-27  Version:1.3.2-beta.84 Build:20260727001
+//      pcjbird    2026-07-30  Version:1.3.2-beta.85 Build:20260730001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -2192,6 +2192,101 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - success: Whether the operation was successful
 ///     - error: Error information if the operation fails, nil on success
 + (void)reportAIAudioRecordingStoppedWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+@end
+
+@interface FitCloudKit (VoiceRideHailing)
+
+#pragma mark Confirm
+
+/// Send voice ride hailing confirm info to device
+/// - Parameters:
+///   - confirmModel: The confirm model containing the pickup, destination, vehicle type, estimated price and wait time
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)sendVoiceRideHailingConfirmInfo:(FitCloudVoiceRideHailingConfirmModel *)confirmModel
+                      completion:(FitCloudCompletionHandler _Nullable)completion;
+
+#pragma mark Ordering
+
+/// Send voice ride hailing ordering status to device
+/// - Parameters:
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)sendVoiceRideHailingStatusOrderingWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+#pragma mark No Driver
+
+/// Send voice ride hailing no driver status to device
+/// - Parameters:
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)sendVoiceRideHailingStatusNoDriverWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+#pragma mark Accepted
+
+/// Send voice ride hailing accepted info to device
+/// - Parameters:
+///   - acceptedModel: The accepted model containing vehicle model, plate number, driver info, etc.
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)sendVoiceRideHailingAcceptedInfo:(FitCloudVoiceRideHailingAcceptedModel *)acceptedModel
+                      completion:(FitCloudCompletionHandler _Nullable)completion;
+
+#pragma mark Canceled
+
+/// Send voice ride hailing canceled status to device
+/// - Parameters:
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)sendVoiceRideHailingStatusCanceledWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+#pragma mark Vehicle Arrived at Pickup
+
+/// Send voice ride hailing arrived at pickup info to device
+/// - Parameters:
+///   - arrivedModel: The arrived at pickup model containing vehicle model, plate number, driver info, free wait time, etc.
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)sendVoiceRideHailingArrivedAtPickupInfo:(FitCloudVoiceRideHailingArrivedAtPickupModel *)arrivedModel
+                      completion:(FitCloudCompletionHandler _Nullable)completion;
+
+#pragma mark On Trip
+
+/// Send voice ride hailing on trip info to device
+/// - Parameters:
+///   - onTripModel: The on trip model containing remaining distance, estimated time to destination, estimated total price
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)sendVoiceRideHailingOnTripInfo:(FitCloudVoiceRideHailingOnTripModel *)onTripModel
+                      completion:(FitCloudCompletionHandler _Nullable)completion;
+
+#pragma mark Payment Failed
+
+/// Send voice ride hailing payment failed status to device
+/// - Parameters:
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)sendVoiceRideHailingStatusPaymentFailedWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+#pragma mark Finished
+
+/// Send voice ride hailing finished info to device
+/// - Parameters:
+///   - finishedModel: The finished model containing the total price
+///   - completion: The completion handler called when the operation completes
+///     - success: Whether the operation was successful
+///     - error: Error information if the operation fails, nil on success
++ (void)sendVoiceRideHailingFinishedInfo:(FitCloudVoiceRideHailingFinishedModel *)finishedModel
+                      completion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 

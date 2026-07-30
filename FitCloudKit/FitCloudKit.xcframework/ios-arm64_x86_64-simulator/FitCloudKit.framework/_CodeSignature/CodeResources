@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
-		02eGwqqSLlNqtnNs/Zm+G5MHzkQ=
+		V+3H1njn663W3onQb0U1tXHnDMs=
 		</data>
 		<key>Headers/FitCloudCapacity.h</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Headers/FitCloudDataModels.h</key>
 		<data>
-		zQS8TvlLB5iqx3a+XBnMOdWBiCI=
+		SRZuZzBJ2Zsesk0j/AHw/sftRa4=
 		</data>
 		<key>Headers/FitCloudECGDefines.h</key>
 		<data>
@@ -286,7 +286,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		aOM+hYIXAoA9UYUK8+vCekHUbw0=
+		owdKYs9JDLIPJM4QO5GRKhiNOBo=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		HdTXWa94MRLSGRQ3nMZyOKfKFmA=
+		lgIzoUJXOIHdeNq52pAKJq47vGU=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -404,6 +404,26 @@
 		<data>
 		aaxbHThiMTwEBWrVuzPrAumLJSw=
 		</data>
+		<key>Headers/FitCloudVoiceRideHailingAcceptedModel.h</key>
+		<data>
+		+ER944UjDrqVEBJZZeiSBp+wBtY=
+		</data>
+		<key>Headers/FitCloudVoiceRideHailingArrivedAtPickupModel.h</key>
+		<data>
+		7//A8P9cuPR4vusAWbhj7AWE3EU=
+		</data>
+		<key>Headers/FitCloudVoiceRideHailingConfirmModel.h</key>
+		<data>
+		4/0JtujZROKGc9oGGLPMIDK8ICA=
+		</data>
+		<key>Headers/FitCloudVoiceRideHailingFinishedModel.h</key>
+		<data>
+		U7VigNmcnCladUCg5oGuAzsxHss=
+		</data>
+		<key>Headers/FitCloudVoiceRideHailingOnTripModel.h</key>
+		<data>
+		nEmZOavZjQKYxGYC603Ep7a3fLU=
+		</data>
 		<key>Headers/FitCloudWWUObject.h</key>
 		<data>
 		NFg3AkcXV+Q8WZ1BFLJzNR95qyI=
@@ -470,7 +490,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EXrOlEZs19QqfBVxMBVS5qzmcDM=
+		OGM/OzQ6Jua8yBGiEfadsSccZMU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -560,7 +580,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rwW6CTc5G6XVyco2HYREkuyR/dpYDbL6Dp2p2PZI54A=
+			8AZXby0imS1N0+RMeoLdsVEvSAkpnwLTRoecLuvPd7E=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCapacity.h</key>
@@ -686,7 +706,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aOk3Ga7CGPO7oMWiv58WGlgQ0RvWUnc3bt1KvQOo/jQ=
+			bnt0l7Ec03KQIM22ugvecFZsCOwT82OawU3ZMGvLynw=
 			</data>
 		</dict>
 		<key>Headers/FitCloudECGDefines.h</key>
@@ -973,7 +993,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z7AJG8HNa6zaTChI+dxzM9euonf0R7k7mlPtBkjuKFY=
+			/xPKcrdmFseKvjS4MN6HU2Mu618B0SlOqZ7X3h/qKpQ=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -987,7 +1007,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uclHJsaVDB3B/fEkAiDyA6unzAjkq42+LSmMhUnXsbE=
+			3fHGRhq5Fyglvp55PEmIsHWj//El8487HBCg10MmayU=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
@@ -1177,6 +1197,41 @@
 			<key>hash2</key>
 			<data>
 			afk9x+SDWjfBpNPiGtMVlgLrvHo4FXLTPRx5sHi6zXg=
+			</data>
+		</dict>
+		<key>Headers/FitCloudVoiceRideHailingAcceptedModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VIqsPQrNfLicD70b0EQRwuzswub1ZVMs/UFUD9UzIME=
+			</data>
+		</dict>
+		<key>Headers/FitCloudVoiceRideHailingArrivedAtPickupModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			31wZkiIvz3L5dE/X9e9xDJ95wrQj5GLGyrD2KgZs1Js=
+			</data>
+		</dict>
+		<key>Headers/FitCloudVoiceRideHailingConfirmModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/eiXgkbWohGdzBMY4NKGftcxwhimy2lNZvgkCFTzsRQ=
+			</data>
+		</dict>
+		<key>Headers/FitCloudVoiceRideHailingFinishedModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oJJ+h4sMqRVwPsy2niHXu1xCJKf7rWFzS/OWlqs/APo=
+			</data>
+		</dict>
+		<key>Headers/FitCloudVoiceRideHailingOnTripModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EQ9xVBlQ2EWe1YA/GKUk8Q+65bt3PYBZtNWoszVOakA=
 			</data>
 		</dict>
 		<key>Headers/FitCloudWWUObject.h</key>

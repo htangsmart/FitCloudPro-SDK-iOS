@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.85 build20260730001 (2026-07-30)
+
+- Added support for Voice Ride Hailing feature. @see [Voice Ride Hailing](https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/master/Others/voice-ride-hailing/VOICE_RIDE_HAILING_EN.md)
+
 ## V1.3.2-beta.84 build20260727001 (2026-07-27)
 
 - Fixed an issue where AI audio recording callback method was not working as expected.

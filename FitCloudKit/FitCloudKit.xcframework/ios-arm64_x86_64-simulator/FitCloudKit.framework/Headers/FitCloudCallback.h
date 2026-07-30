@@ -868,6 +868,26 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
 - (void)onAIAudioRecordingDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
 
+
+/// Notifies that the watch requests to start voice ride hailing
+- (void)onVoiceRideHailingBegin;
+
+/// Notifies that incremental voice ride hailing voice data has been received
+/// This method is called when the app side receives incremental voice data for voice ride hailing, which will be called multiple times during the recording process
+/// - Parameters:
+///   - deltaOpusVoiceData: The incremental voice data in Opus format
+///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
+- (void)onReceivedVoiceRideHailingDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
+
+/// Notifies that voice ride hailing recording has completed with decoded voice data
+/// This method is called when the app side receives the final voice data for voice ride hailing
+/// - Parameters:
+///   - opusVoiceData: The opus encoded voice data
+///   - voiceData: The decoded voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
+- (void)onReceivedVoiceRideHailingOpusVoiceData:(NSData *_Nullable)opusVoiceData decodedVoiceData:(NSData *_Nullable)voiceData;
+
+
+
 /// Notifies when the ANCS authorization status has been updated
 /// - Parameters:
 ///   - ancsAuthorized: A Boolean value that indicates whether ANCS is currently authorized

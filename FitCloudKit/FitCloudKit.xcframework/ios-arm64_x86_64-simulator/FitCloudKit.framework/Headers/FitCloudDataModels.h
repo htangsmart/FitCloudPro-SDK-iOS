@@ -42,6 +42,12 @@
 #import <FitCloudKit/FitCloudHRVDataModel.h>
 #import <FitCloudKit/FitCloudSleepDataModel.h>
 
+#import <FitCloudKit/FitCloudVoiceRideHailingConfirmModel.h>
+#import <FitCloudKit/FitCloudVoiceRideHailingAcceptedModel.h>
+#import <FitCloudKit/FitCloudVoiceRideHailingArrivedAtPickupModel.h>
+#import <FitCloudKit/FitCloudVoiceRideHailingOnTripModel.h>
+#import <FitCloudKit/FitCloudVoiceRideHailingFinishedModel.h>
+
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>
 
