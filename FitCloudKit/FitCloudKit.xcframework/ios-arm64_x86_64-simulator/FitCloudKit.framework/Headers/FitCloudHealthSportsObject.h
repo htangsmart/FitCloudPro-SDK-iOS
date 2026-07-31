@@ -43,6 +43,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 详细条目
 @property(nonatomic, strong) NSArray<ObjectType> *items;
 
+/// 同步记录数据概要
+///
+/// 由子类根据实际数据情况实现，用于描述当前同步记录的关键信息摘要，
+/// 便于日志输出、调试及展示。例如计步记录可汇总总步数与采样时段，
+/// 睡眠记录可汇总深睡/浅睡时长与评分等。
+@property (readonly, copy) NSString *recordSummary;
+
 @end
 
 #pragma mark - 计步

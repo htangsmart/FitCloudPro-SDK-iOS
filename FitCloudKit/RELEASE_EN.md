@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-07-30 Version:1.3.2-beta.85 Build:20260730001
+## pcjbird 2026-08-01 Version:1.3.2-beta.86 Build:20260801001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.

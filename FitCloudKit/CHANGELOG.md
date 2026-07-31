@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.86 build20260801001 (2026-08-01)
+
+- Added `recordSummary` for data-sync records.
+
 ## V1.3.2-beta.85 build20260730001 (2026-07-30)
 
 - Added support for Voice Ride Hailing feature. @see [Voice Ride Hailing](https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/master/Others/voice-ride-hailing/VOICE_RIDE_HAILING_EN.md)

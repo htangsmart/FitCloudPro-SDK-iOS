@@ -8,7 +8,7 @@
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
 ![GitHub release](http://img.shields.io/badge/release-v1.3.1-blue)
 ![GitHub release](http://img.shields.io/badge/release%20date-2025.10.13-green)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.2%20beta.85-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.2--beta.86-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek%20%7C%20nordic-blueviolet)
 
 - [中文文档 (Chinese Doc)](FitCloudKit/README.md)
@@ -25,7 +25,7 @@
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
 ![GitHub release](http://img.shields.io/badge/release-v1.3.3-blue)
 ![GitHub release](http://img.shields.io/badge/release%20date-2025.08.20-green)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.4%20beta.3-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.3.4--beta.3-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek%20%7C%20nordic-blueviolet)
 
 - [中文文档 (Chinese Doc)](FitCloudDFUKit/README.md)
@@ -42,7 +42,7 @@
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
 ![GitHub release](http://img.shields.io/badge/release-v1.2.0-blue)
 ![GitHub release](http://img.shields.io/badge/release%20date-2025.08.20-green)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.2.1%20beta.6-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.2.1--beta.6-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-realtek-blueviolet)
 
 - [中文文档 (Chinese Doc)](FitCloudWFKit/README.md)
@@ -59,7 +59,7 @@
 ![Pod Platform](http://img.shields.io/badge/platform-ios-orange)
 ![GitHub release](http://img.shields.io/badge/release-v1.0.1-blue)
 ![GitHub release](http://img.shields.io/badge/release%20date-2022.05.19-green)
-![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.0.2%20beta.1-brightgreen)
+![Nightly Version](http://img.shields.io/badge/nightly%20build-v1.0.2--beta.1-brightgreen)
 ![Chip Vendor](http://img.shields.io/badge/chip%20vendor-nordic-blueviolet)
 
 - [中文文档 (Chinese Doc)](FitCloudNWFKit/README.md)
