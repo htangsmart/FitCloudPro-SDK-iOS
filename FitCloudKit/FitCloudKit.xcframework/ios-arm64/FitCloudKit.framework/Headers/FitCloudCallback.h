@@ -24,7 +24,6 @@
 #import <FitCloudKit/FitCloudAllConfigObject.h>
 #import <FitCloudKit/FitCloudDNDSetting.h>
 #import <FitCloudKit/FitCloudWeatherObject.h>
-#import <FitCloudKit/FitCloudECGDefines.h>
 #import <FitCloudKit/FitCloudUserProfileObject.h>
 #import <FitCloudKit/FitCloudHealthSportsObject.h>
 #import <FitCloudKit/FitCloudPeripheral.h>

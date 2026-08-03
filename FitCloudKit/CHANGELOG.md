@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.87 build20260803001 (2026-08-03)
+
+- Added `isCompanionWorkout` property to `FitCloudSportsRecordObject` to indicate whether the workout is a companion workout.
+- Added `companionWorkoutInitiator` property to `FitCloudSportsRecordObject` for the companion workout initiator, see `FitCloudCompanionWorkoutInitiator`.
+
 ## V1.3.2-beta.86 build20260801001 (2026-08-01)
 
 - Added `recordSummary` for data-sync records.

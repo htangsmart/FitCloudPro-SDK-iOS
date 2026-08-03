@@ -48,6 +48,9 @@
 #import <FitCloudKit/FitCloudVoiceRideHailingOnTripModel.h>
 #import <FitCloudKit/FitCloudVoiceRideHailingFinishedModel.h>
 
+#import <FitCloudKit/FitCloudStorageInfoModel.h>
+#import <FitCloudKit/FitCloudFileInfoModel.h>
+
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>
 

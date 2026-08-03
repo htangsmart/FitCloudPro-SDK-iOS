@@ -322,6 +322,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// The type of workout being performed
 @property(nonatomic, assign) UInt16 workoutType;
 
+/// The raw type of workout being performed
+@property(nonatomic, assign) UInt16 rawWorkoutType;
+
 /// Duration of the workout
 /// - Note: Unit: seconds
 @property(nonatomic, assign) UInt16 duration;
@@ -468,6 +471,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// GoMore heart rate zones
 @property(nonatomic, strong, nullable) GoMoreHeartRateZonesModel* goMoreHeartRateZones;
+
+/// Indicates whether the workout is a companion workout
+@property(nonatomic, readonly) BOOL isCompanionWorkout;
+
+/// the companion workout initiator, if it is companion workout. @see `FitCloudCompanionWorkoutInitiator`
+@property(nonatomic, strong, readonly, nullable) NSNumber *companionWorkoutInitiator;
 
 @end
 

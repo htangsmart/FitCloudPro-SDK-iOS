@@ -8,32 +8,34 @@
 
 #import <Foundation/Foundation.h>
 
-/// FitCloud 厂商信息
+NS_ASSUME_NONNULL_BEGIN
+
+/// Manufacturer information.
 @interface FitCloudManufacturer : NSObject
 
-/// mac地址，如果厂商自定义了广播数据，这里返回nil
+/// MAC address. Returns `nil` if the manufacturer customized the advertisement data.
 @property(nonatomic, strong, readonly, nullable) NSString* macAddr;
 
-/// 是否为下一代厂商名称
+/// Whether the manufacturer name is a next-generation one.
 @property(nonatomic, readonly) BOOL isNextManufacturerName;
 
-/// 是否允许同时连接通话蓝牙
+/// Whether simultaneous connection with call Bluetooth is allowed.
 @property(nonatomic, readonly) BOOL allowConnectWithBT;
 
-/// 厂商是否自定义了广播数据
+/// Whether the manufacturer customized the advertisement data.
 @property(nonatomic, readonly) BOOL isCustomizedAdvData;
 
-/// 主项目号
+/// Main project number.
 @property(nonatomic, strong, nullable, readonly) NSString* mainProjNo;
 
-/// 子项目号
+/// Sub-project number.
 @property(nonatomic, strong, nullable, readonly) NSString* subProjNo;
 
-/// 从广播数据获取厂商信息
+/// Retrieves manufacturer information from the specified advertisement data.
 /// - Parameters:
-///   - advertisementData: 广播数据
+///   - advertisementData: The advertisement data dictionary containing manufacturer information.
 /// - Returns:
-///  FitCloud 厂商信息, 如果不是FitCloud设备返回nil
+///   A `FitCloudManufacturer` instance if the device is a FitCloud device, or `nil` otherwise.
 +(FitCloudManufacturer* _Nullable) manufacturerWithAdvertisementData:(NSDictionary* _Nonnull)advertisementData;
 
 
@@ -41,4 +43,6 @@
 - (instancetype _Nullable)init NS_UNAVAILABLE;
 
 @end
+
+NS_ASSUME_NONNULL_END
 

@@ -2594,4 +2594,43 @@ typedef NS_ENUM(NSInteger, FitCloudAIAudioRecordingTerminateWithInterruptReason)
     FitCloudAIAudioRecordingTerminateWithInterruptReasonOther = 0xFF,
 };
 
+#pragma mark - Device Storage
+
+/// Device Storage Type
+typedef NS_ENUM(NSInteger, FitCloudDeviceStorageType) {
+    /// Flash Storage (External)
+    FitCloudDeviceStorageTypeFlash = 0,
+    /// SD Card Storage
+    FitCloudDeviceStorageTypeSDCard = 1,
+};
+
+#pragma mark - 心电检测
+
+/// 心电检测状态
+typedef NS_ENUM(Byte, ECGDETECTSTATUS) {
+    /// 心电检测空闲状态
+    ECGDETECTSTATUS_FREE = 0x00,
+    /// 设备正在检测心电
+    ECGDETECTSTATUS_DETECTING = 0x01,
+    /// 设备正在保存心电数据
+    ECGDETECTSTATUS_SAVINGDATA = 0x02,
+    /// 未知状态
+    ECGDETECTSTATUS_UNKNOWN = 0x03,
+};
+
+/// 心电检测事件定义 (开始/结束)
+typedef NS_ENUM(UInt8, ECGDETECTIONEVENT) {
+    /// 心电检测结束
+    ECGDETECTIONEVENT_STOP = 0x00,
+    /// 心电检测开始
+    ECGDETECTIONEVENT_START = 0x01,
+};
+
+/// 心电检测启动失败标识
+typedef NS_ENUM(UInt8, ECGDETCTIONSTARTERRORFLAG) {
+    /// 心电检测启动未发生错误
+    ECGDETCTIONSTARTERRORFLAG_NOERROR = 0x00,
+    /// 心电检测启动失败
+    ECGDETCTIONSTARTERRORFLAG_ERROR = 0x01,
+};
 #endif /* FitCloudKitDefines_h */

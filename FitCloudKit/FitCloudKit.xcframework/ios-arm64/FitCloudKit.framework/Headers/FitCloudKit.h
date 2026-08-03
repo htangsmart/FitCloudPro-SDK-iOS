@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-08-01  Version:1.3.2-beta.86 Build:20260801001
+//      pcjbird    2026-08-03  Version:1.3.2-beta.87 Build:20260803001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1885,6 +1885,91 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - passcode: The device passcode if query successful, nil otherwise
 ///     - error: Error information if query fails, nil on success
 + (void)queryDevicePasscodeWithCompletion:(void (^__nullable)(BOOL succeed, BOOL enabled, NSString *_Nullable passcode, NSError *_Nullable error))completion;
+
+#pragma mark - Device Storage
+
+/// Returns whether the device supports external storage.
+/// - Returns: `YES` if external storage is supported, `NO` otherwise.
++ (BOOL)isExternalStorageSupported;
+
+/// Retrieves the device storage information, including storage type, total and remaining space, and counts of songs and audio recordings.
+/// - Parameters:
+///   - completion: The completion handler called with the storage information
+///     - success: Whether the operation was successful
+///     - storageInfo: The device storage information
+///     - error: The error object if the operation fails
++ (void)fetchDeviceStorageInfoWithCompletion:(void (^_Nullable)(BOOL success,
+                                                                FitCloudStorageInfoModel *_Nullable storageInfo,
+                                                                NSError *_Nullable error))completion;
+
+#pragma mark - Song File
+
+/// Retrieves the list of song files stored on the device.
+/// - Parameters:
+///   - completion: The completion handler called with the song file list
+///     - success: Whether the operation was successful
+///     - songFileArray: The array of song file information
+///     - error: The error object if the operation fails
++ (void)fetchSongFileListWithCompletion:(void (^_Nullable)(BOOL success,
+                                                           NSArray<FitCloudFileInfoModel *> *_Nullable songFileArray,
+                                                           NSError *_Nullable error))completion;
+
+/// Deletes the song file at the specified index.
+/// - Parameters:
+///   - fileIndex: The index of the song file to delete, starting from 0
+///   - completion: The completion handler called when the operation completes
++ (void)deleteSongFileAtIndex:(NSInteger)fileIndex
+                   completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Deletes all song files stored on the device.
+/// - Parameters:
+///   - completion: The completion handler called when the operation completes
++ (void)deleteAllSongFilesWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Send song file to the smart watch
+/// This method should be called on a background thread if possible
+/// - Parameters:
+///   - filePath: Path to the song file (binary OTA format, not a standard audio file)
+///   - progressHandler: song upload progress callback
+///     - progress: progress value, range 0.0–1.0
+///   - completionHandler: The completion handler called when the transfer completes
+///     - success: whether upload success
+///     - avgSpeed: the avg transfer speed, kB/s
+///     - error: error information if failed
++ (void)sendSongFile:(NSString *_Nonnull)filePath
+             progress:(void (^_Nullable)(CGFloat progress))progressHandler
+           completion:(void (^_Nullable)(BOOL success, CGFloat avgSpeed, NSError *_Nullable error))completionHandler;
+
+/// Cancel the ongoing song file transfer if needed
+/// - Parameters:
+///   - completion: The completion handler called when the cancellation completes
+///     - success: whether the cancellation succeeded
+///     - error: error information if failed
++ (void)cancelSendSongFileIfNeededWithCompletion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
+
+#pragma mark - Audio Recording File
+
+/// Retrieves the list of audio recording files stored on the device.
+/// - Parameters:
+///   - completion: The completion handler called with the audio recording file list
+///     - success: Whether the operation was successful
+///     - audioRecordingFileArray: The array of audio recording file information
+///     - error: The error object if the operation fails
++ (void)fetchAudioRecordingFileListWithCompletion:(void (^_Nullable)(BOOL success,
+                                                                     NSArray<FitCloudFileInfoModel *> *_Nullable audioRecordingFileArray,
+                                                                     NSError *_Nullable error))completion;
+
+/// Deletes the audio recording file at the specified index.
+/// - Parameters:
+///   - fileIndex: The index of the audio recording file to delete, starting from 0
+///   - completion: The completion handler called when the operation completes
++ (void)deleteAudioRecordingFileAtIndex:(NSInteger)fileIndex
+                             completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Deletes all audio recording files stored on the device.
+/// - Parameters:
+///   - completion: The completion handler called when the operation completes
++ (void)deleteAllAudioRecordingFilesWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 

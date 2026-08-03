@@ -428,4 +428,7 @@
 /// 是否支持 App 助眠分析
 @property(nonatomic, readonly) BOOL shouldShowSleepAnalysisInApp;
 
+/// 是否支持外部存储
+@property(nonatomic, readonly) BOOL withExternalStorage;
+
 @end

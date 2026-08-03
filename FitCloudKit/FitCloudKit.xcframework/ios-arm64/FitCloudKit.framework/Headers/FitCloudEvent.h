@@ -155,6 +155,17 @@ extern NSString *const FITCLOUDEVENT_BATTERYINFO_NOTIFY;
 /// - Parameter object: FitCloudBatteryInfoObject instance
 extern NSString *const FITCLOUDEVENT_LOW_BATTERY_ALERT_NOTIFY;
 
+/// Notification when song list changes
+///
+/// - Parameter userInfo: Array of FitCloudSongFile instances
+extern NSString *const FITCLOUDEVENT_SONGLIST_CHANGED_NOTIFY;
+
+/// Notification when audio recording list changes
+///
+/// - Parameter userInfo: Array of FitCloudAudioRecordingFile instances
+extern NSString *const FITCLOUDEVENT_AUDIO_RECORDINGLIST_CHANGED_NOTIFY;
+
+
 /// Notification when alarm list changes
 ///
 /// - Parameter userInfo: Array of FitCloudAlarmObject instances
