@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-08-03  Version:1.3.2-beta.87 Build:20260803001
+//      pcjbird    2026-08-06  Version:1.3.2-beta.88 Build:20260806001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1929,7 +1929,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Send song file to the smart watch
 /// This method should be called on a background thread if possible
 /// - Parameters:
-///   - filePath: Path to the song file (binary OTA format, not a standard audio file)
+///   - filePath: Path to the song file (MP3 format)
 ///   - progressHandler: song upload progress callback
 ///     - progress: progress value, range 0.0–1.0
 ///   - completionHandler: The completion handler called when the transfer completes

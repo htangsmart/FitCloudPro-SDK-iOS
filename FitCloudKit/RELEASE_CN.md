@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2026-08-03 Version:1.3.2-beta.87 Build:20260803001
+## pcjbird 2026-08-06 Version:1.3.2-beta.88 Build:20260806001
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -84,6 +84,7 @@
 - 新增对语音打车功能的支持。
 - `FitCloudSportsRecordObject` 新增 `isCompanionWorkout` 属性，用于标识是否为互联运动记录。
 - `FitCloudSportsRecordObject` 新增 `companionWorkoutInitiator` 属性，用于标识互联运动的发起方。
+- 新增 MP3 文件推送功能。
 - 增强了 SDK 兼容性，并解决了由固件端代码逻辑问题导致的边缘情况。
 - 进一步提升了 SDK 的稳定性与性能。
 

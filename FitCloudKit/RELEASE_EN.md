@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-08-03 Version:1.3.2-beta.87 Build:20260803001
+## pcjbird 2026-08-06 Version:1.3.2-beta.88 Build:20260806001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -82,10 +82,10 @@
 - Passcode length is now allowed to vary by device.
 - Added supplementary workout definitions.
 - Introduced new API `+ (void) generateDailyAIHealthRecommendationsForDate:(NSDate*)date sleepData:(FitCloudSleepDataModel* _Nullable)sleepDataModel hrvData:(FitCloudHRVDataModel* _Nullable)hrvDataModel activityData:(FitCloudActivityDataModel* _Nullable)activityDataModel language:(NSString* _Nullable)language completion:(void (^__nullable)(FitCloudDailyAIHealthRecommendationsModel* _Nullable recommendations, NSError *_Nullable error))completion;` for generating daily AI health recommendations.
-- Added support for Voice Ride Hailing feature.
-- @see [Voice Ride Hailing](https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/master/Others/voice-ride-hailing/VOICE_RIDE_HAILING_EN.md)
+- Added support for Voice Ride Hailing feature. @see [Voice Ride Hailing](https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/master/Others/voice-ride-hailing/VOICE_RIDE_HAILING_EN.md)
 - Added `isCompanionWorkout` property to `FitCloudSportsRecordObject` to indicate whether the workout is a companion workout.
 - Added `companionWorkoutInitiator` property to `FitCloudSportsRecordObject` for the companion workout initiator, see `FitCloudCompanionWorkoutInitiator`.
+- Added support for MP3 file sending feature. @see [Song File Sending](https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/master/Others/song-file-sending/SONG_FILE_SENDING_EN.md)
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 

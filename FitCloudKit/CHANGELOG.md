@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.88 build20260806001 (2026-08-06)
+
+- Added support for Song File Sending feature. @see [Song File Sending](https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/master/Others/song-file-sending/SONG_FILE_SENDING_EN.md)
+
 ## V1.3.2-beta.87 build20260803001 (2026-08-03)
 
 - Added `isCompanionWorkout` property to `FitCloudSportsRecordObject` to indicate whether the workout is a companion workout.
