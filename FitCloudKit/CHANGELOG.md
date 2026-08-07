@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.89 build20260807001 (2026-08-07)
+
+- Enhanced the stability of the SDK.
+
 ## V1.3.2-beta.88 build20260806001 (2026-08-06)
 
 - Added support for Song File Sending feature. @see [Song File Sending](https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/master/Others/song-file-sending/SONG_FILE_SENDING_EN.md)
