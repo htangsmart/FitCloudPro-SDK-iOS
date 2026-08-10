@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.91 build20260810001 (2026-08-10)
+
+- Enhance the SDK compatibility.
+
 ## V1.3.2-beta.90 build20260807002 (2026-08-07)
 
 - Modified the ai audio recording command data format to be consistent with the latest firmware.

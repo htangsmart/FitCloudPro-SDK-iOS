@@ -2633,4 +2633,19 @@ typedef NS_ENUM(UInt8, ECGDETCTIONSTARTERRORFLAG) {
     /// 心电检测启动失败
     ECGDETCTIONSTARTERRORFLAG_ERROR = 0x01,
 };
+
+#pragma mark - Preferred AI Solution Vendor
+
+/// Preferred AI Solution Vendor
+typedef NS_ENUM(NSInteger, FitCloudPreferredAISolutionVendor) {
+    /// Unknown
+    FitCloudPreferredAISolutionVendorNone = -1,
+    /// StarBurst AI (星芒 AI，字节跳动)
+    FitCloudPreferredAISolutionVendorStarBurst = 0,
+    /// MltCloud AI (骆方案 AI，美乐创) - 手表
+    FitCloudPreferredAISolutionVendorMltCloudW = 1,
+    /// MltCloud AI (骆方案 AI，美乐创) - 眼镜
+    FitCloudPreferredAISolutionVendorMltCloudG = 2,
+};
+
 #endif /* FitCloudKitDefines_h */

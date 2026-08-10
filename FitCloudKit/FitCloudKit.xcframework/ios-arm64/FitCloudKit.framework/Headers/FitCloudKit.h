@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-08-07  Version:1.3.2-beta.90 Build:20260807002
+//      pcjbird    2026-08-10  Version:1.3.2-beta.91 Build:20260810001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -2096,8 +2096,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 开启 GSensor
 /// - Parameters:
 ///   - block: 结果回调
-+ (void)
-    openGSensorWithBlock:(FitCloudOpenGSensorResultBlock _Nullable)block;
++ (void)openGSensorWithBlock:(FitCloudOpenGSensorResultBlock _Nullable)block;
 
 #pragma mark 关闭GSensor
 

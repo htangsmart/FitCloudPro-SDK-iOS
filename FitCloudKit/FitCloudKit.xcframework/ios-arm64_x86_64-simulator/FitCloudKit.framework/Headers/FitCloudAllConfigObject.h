@@ -102,6 +102,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 锁屏密码长度
 @property(nonatomic, strong, nullable) NSNumber *lockScreenPasswordLength;
 
+///首选 AI 解决方案供应商
+@property(nonatomic, readonly) FitCloudPreferredAISolutionVendor preferredAISolutionVendor;
+
 @end
 
 NS_ASSUME_NONNULL_END
