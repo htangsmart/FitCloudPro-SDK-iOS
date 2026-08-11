@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.92 build20260811001 (2026-08-11)
+
+- Enhance the SDK compatibility.
+
 ## V1.3.2-beta.91 build20260810001 (2026-08-10)
 
 - Enhance the SDK compatibility.
