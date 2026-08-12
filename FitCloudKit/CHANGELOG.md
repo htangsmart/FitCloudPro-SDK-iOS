@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.93 build20260812001 (2026-08-12)
+
+- Fixed an issue for 579X platform flag recognition.
+
 ## V1.3.2-beta.92 build20260811001 (2026-08-11)
 
 - Enhance the SDK compatibility.
