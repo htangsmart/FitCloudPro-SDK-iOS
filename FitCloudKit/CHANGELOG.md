@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.94 build20260813001 (2026-08-13)
+
+- Expanded device-to-app companion workout periodic reports to include workout duration, distance, average cadence, GPS pace, and real-time speed.
+
 ## V1.3.2-beta.93 build20260812001 (2026-08-12)
 
 - Fixed an issue for 579X platform flag recognition.

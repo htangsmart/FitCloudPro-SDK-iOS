@@ -25,6 +25,21 @@ NS_ASSUME_NONNULL_BEGIN
 /// Current heart rate (BPM)
 @property(nonatomic, strong, readonly, nullable) NSNumber *bpmValue;
 
+/// Companion workout duration in seconds since workout start
+@property(nonatomic, strong, readonly, nullable) NSNumber *workoutDurationInSeconds;
+
+/// Distance in centimeters since companion workout start
+@property(nonatomic, strong, readonly, nullable) NSNumber *distanceInCentimeters;
+
+/// Average cadence in steps per minute
+@property(nonatomic, strong, readonly, nullable) NSNumber *averageCadence;
+
+/// GPS pace in seconds per kilometer
+@property(nonatomic, strong, readonly, nullable) NSNumber *gpsPace;
+
+/// GPS real-time speed in centimeters per second
+@property(nonatomic, strong, readonly, nullable) NSNumber *gpsRealTimeSpeed;
+
 /// Unavailable initializer.
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
