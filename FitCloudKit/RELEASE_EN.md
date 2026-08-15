@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-08-13 Version:1.3.2-beta.94 Build:20260813001
+## pcjbird 2026-08-16 Version:1.3.2-beta.96 Build:20260816001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -86,6 +86,7 @@
 - Added `isCompanionWorkout` property to `FitCloudSportsRecordObject` to indicate whether the workout is a companion workout.
 - Added `companionWorkoutInitiator` property to `FitCloudSportsRecordObject` for the companion workout initiator, see `FitCloudCompanionWorkoutInitiator`.
 - Added support for MP3 file sending feature. @see [Song File Sending](https://github.com/htangsmart/FitCloudPro-SDK-iOS/tree/master/Others/song-file-sending/SONG_FILE_SENDING_EN.md)
+- Added support for 336×336 square watch face size.
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 

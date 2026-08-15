@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## V1.3.2-beta.96 build20260816001 (2026-08-16)
+
+- Added support for 336×336 square watch face size.
+
+## V1.3.2-beta.95 build20260815001 (2026-08-15)
+
+- Included companion-workout metadata in workout-record descriptions.
+
 ## V1.3.2-beta.94 build20260813001 (2026-08-13)
 
 - Expanded device-to-app companion workout periodic reports to include workout duration, distance, average cadence, GPS pace, and real-time speed.
