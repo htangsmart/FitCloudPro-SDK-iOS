@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-08-16  Version:1.3.2-beta.96 Build:20260816001
+//      pcjbird    2026-08-18  Version:1.3.2-beta.97 Build:20260818001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -1914,17 +1914,41 @@ NS_ASSUME_NONNULL_BEGIN
                                                            NSArray<FitCloudFileInfoModel *> *_Nullable songFileArray,
                                                            NSError *_Nullable error))completion;
 
-/// Deletes the song file at the specified index.
+/// Deletes the song file with the specified file name.
 /// - Parameters:
-///   - fileIndex: The index of the song file to delete, starting from 0
+///   - fileName: The file name of the song file to delete
 ///   - completion: The completion handler called when the operation completes
-+ (void)deleteSongFileAtIndex:(NSInteger)fileIndex
++ (void)deleteSongFileWithName:(NSString *_Nonnull)fileName
                    completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Deletes all song files stored on the device.
 /// - Parameters:
 ///   - completion: The completion handler called when the operation completes
 + (void)deleteAllSongFilesWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Retrieves the detail of a song file with the specified file name.
+/// - Parameters:
+///   - fileName: The file name of the song file to query
+///   - completion: The completion handler called with the song file detail
+///     - success: Whether the operation was successful
+///     - fileDetailsInfo: The song file details information. `nil` indicates the file does not exist or has been deleted.
+///     - error: The error object if the operation fails
++ (void)fetchSongFileDetailWithName:(NSString *_Nonnull)fileName
+                        completion:(void (^_Nullable)(BOOL success,
+                                                     FitCloudFileDetailsInfoModel *_Nullable fileDetailsInfo,
+                                                     NSError *_Nullable error))completion;
+
+/// Fetches a song file from the device and saves it locally.
+/// - Parameters:
+///   - fileName: The file name of the song file to fetch
+///   - progress: The progress handler called with the download progress (0.0–1.0)
+///   - completion: The completion handler called when the fetch completes
+///     - success: Whether the operation was successful
+///     - filePath: The local path where the file was saved
+///     - error: The error object if the operation fails
++ (void)fetchSongFileWithName:(NSString *_Nonnull)fileName
+                    progress:(void (^_Nullable)(CGFloat progress))progress
+                  completion:(void (^_Nullable)(BOOL success, NSString *_Nullable filePath, NSError *_Nullable error))completion;
 
 /// Send song file to the smart watch
 /// This method should be called on a background thread if possible
@@ -1959,17 +1983,41 @@ NS_ASSUME_NONNULL_BEGIN
                                                                      NSArray<FitCloudFileInfoModel *> *_Nullable audioRecordingFileArray,
                                                                      NSError *_Nullable error))completion;
 
-/// Deletes the audio recording file at the specified index.
+/// Deletes the audio recording file with the specified file name.
 /// - Parameters:
-///   - fileIndex: The index of the audio recording file to delete, starting from 0
+///   - fileName: The file name of the audio recording file to delete
 ///   - completion: The completion handler called when the operation completes
-+ (void)deleteAudioRecordingFileAtIndex:(NSInteger)fileIndex
++ (void)deleteAudioRecordingFileWithName:(NSString *_Nonnull)fileName
                              completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Deletes all audio recording files stored on the device.
 /// - Parameters:
 ///   - completion: The completion handler called when the operation completes
 + (void)deleteAllAudioRecordingFilesWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Retrieves the detail of an audio recording file with the specified file name.
+/// - Parameters:
+///   - fileName: The file name of the audio recording file to query
+///   - completion: The completion handler called with the audio recording file detail
+///     - success: Whether the operation was successful
+///     - fileDetailsInfo: The audio recording file details information. `nil` indicates the file does not exist or has been deleted.
+///     - error: The error object if the operation fails
++ (void)fetchAudioRecordingFileDetailWithName:(NSString *_Nonnull)fileName
+                                  completion:(void (^_Nullable)(BOOL success,
+                                                               FitCloudFileDetailsInfoModel *_Nullable fileDetailsInfo,
+                                                               NSError *_Nullable error))completion;
+
+/// Fetches an audio recording file from the device and saves it locally.
+/// - Parameters:
+///   - fileName: The file name of the audio recording file to fetch
+///   - progress: The progress handler called with the download progress (0.0–1.0)
+///   - completion: The completion handler called when the fetch completes
+///     - success: Whether the operation was successful
+///     - filePath: The local path where the file was saved
+///     - error: The error object if the operation fails
++ (void)fetchAudioRecordingFileWithName:(NSString *_Nonnull)fileName
+                              progress:(void (^_Nullable)(CGFloat progress))progress
+                            completion:(void (^_Nullable)(BOOL success, NSString *_Nullable filePath, NSError *_Nullable error))completion;
 
 @end
 

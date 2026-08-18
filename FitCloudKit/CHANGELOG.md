@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.2-beta.97 build20260818001 (2026-08-18)
+
+- Changed the song and audio recording file deletion APIs to accept a file name instead of a file index.
+- Introduced new APIs to query the details of a song file or an audio recording file on the device by file name.
+- Introduced new APIs to fetch a song file or an audio recording file from the device over BLE and save it locally.
+
 ## V1.3.2-beta.96 build20260816001 (2026-08-16)
 
 - Added support for 336×336 square watch face size.
