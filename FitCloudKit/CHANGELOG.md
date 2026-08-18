@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.98 build20260818002 (2026-08-18)
+
+- Removed the redundant interception of the watch language sync command.
+
 ## V1.3.2-beta.97 build20260818001 (2026-08-18)
 
 - Changed the song and audio recording file deletion APIs to accept a file name instead of a file index.
