@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.99 build20260820001 (2026-08-20)
+
+- Improved Opus audio decoding.
+
 ## V1.3.2-beta.98 build20260818002 (2026-08-18)
 
 - Removed the redundant interception of the watch language sync command.
