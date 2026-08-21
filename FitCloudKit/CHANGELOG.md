@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.100 build20260821001 (2026-08-21)
+
+- Fixed an issue for song file deletion.
+
 ## V1.3.2-beta.99 build20260820001 (2026-08-20)
 
 - Improved Opus audio decoding.
