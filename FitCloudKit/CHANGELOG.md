@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.101 build20260823001 (2026-08-23)
+
+- Improved Opus streaming voice decoding quality.
+
 ## V1.3.2-beta.100 build20260821001 (2026-08-21)
 
 - Fixed an issue for song file deletion.
