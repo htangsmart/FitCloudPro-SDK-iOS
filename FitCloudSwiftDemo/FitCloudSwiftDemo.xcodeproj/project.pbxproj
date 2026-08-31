@@ -91,6 +91,10 @@
 		89DB8A392EFBE87100DA38BE /* 855A_sample_yoga_audio1_mp3.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89DB8A362EFBE87100DA38BE /* 855A_sample_yoga_audio1_mp3.bin */; };
 		89DB8C0A2F014D2500DA38BE /* EarbudsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB8C092F014D2500DA38BE /* EarbudsViewController.swift */; };
 		89F38BAE2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin in Resources */ = {isa = PBXBuildFile; fileRef = 89F38BAD2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin */; };
+		FCDF00012F8A000000000001 /* DeviceFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDF00022F8A000000000001 /* DeviceFilesViewController.swift */; };
+		FCPA00012F8B000000000001 /* PCMAudioStreamingController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCPA00042F8B000000000001 /* PCMAudioStreamingController.m */; };
+		FCPA00022F8B000000000001 /* test_send_16k.pcm in Resources */ = {isa = PBXBuildFile; fileRef = FCPA00052F8B000000000001 /* test_send_16k.pcm */; };
+		FCPA00032F8B000000000001 /* test_send_32k.pcm in Resources */ = {isa = PBXBuildFile; fileRef = FCPA00062F8B000000000001 /* test_send_32k.pcm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -210,6 +214,11 @@
 		89DB8C092F014D2500DA38BE /* EarbudsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarbudsViewController.swift; sourceTree = "<group>"; };
 		89F38BAD2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = gui_dial_binfile_watch_1024000_1_20250430.bin; sourceTree = "<group>"; };
 		CA40CD2328A4F44CA511AD27 /* Pods-FitCloudSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-FitCloudSwiftDemo/Pods-FitCloudSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FCDF00022F8A000000000001 /* DeviceFilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceFilesViewController.swift; sourceTree = "<group>"; };
+		FCPA00042F8B000000000001 /* PCMAudioStreamingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCMAudioStreamingController.m; sourceTree = "<group>"; };
+		FCPA00052F8B000000000001 /* test_send_16k.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_send_16k.pcm; sourceTree = "<group>"; };
+		FCPA00062F8B000000000001 /* test_send_32k.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_send_32k.pcm; sourceTree = "<group>"; };
+		FCPA00072F8B000000000001 /* PCMAudioStreamingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCMAudioStreamingController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +287,11 @@
 				89CBFB0E2D661D70008E7B50 /* Main.storyboard */,
 				8994336F2D65C8B500B86640 /* SceneDelegate.swift */,
 				899433702D65C8B500B86640 /* ViewController.swift */,
+				FCDF00022F8A000000000001 /* DeviceFilesViewController.swift */,
+				FCPA00072F8B000000000001 /* PCMAudioStreamingController.h */,
+				FCPA00042F8B000000000001 /* PCMAudioStreamingController.m */,
+				FCPA00052F8B000000000001 /* test_send_16k.pcm */,
+				FCPA00062F8B000000000001 /* test_send_32k.pcm */,
 				89DB8A342EFBE26C00DA38BE /* EnumUtils.swift */,
 				89CBFA7C2D65CF81008E7B50 /* FitCloudProSDK.swift */,
 				89951C7F2F2F6B73000CCB7A /* LogService.swift */,
@@ -583,6 +597,8 @@
 				89CBFB262D66E186008E7B50 /* 5140b9f6ad95.bin in Resources */,
 				89CC00772EC0749D0030D405 /* gui_dial_binfile_watch_156000_1_20250928_ota.bin in Resources */,
 				89F38BAE2EBCE80E0024A07C /* gui_dial_binfile_watch_1024000_1_20250430.bin in Resources */,
+				FCPA00022F8B000000000001 /* test_send_16k.pcm in Resources */,
+				FCPA00032F8B000000000001 /* test_send_32k.pcm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +681,8 @@
 				899433732D65C8B500B86640 /* SceneDelegate.swift in Sources */,
 				89CBFA7F2D65EC59008E7B50 /* App.swift in Sources */,
 				899433742D65C8B500B86640 /* ViewController.swift in Sources */,
+				FCDF00012F8A000000000001 /* DeviceFilesViewController.swift in Sources */,
+				FCPA00012F8B000000000001 /* PCMAudioStreamingController.m in Sources */,
 				89CBFA992D6600AE008E7B50 /* DeviceBindingController.m in Sources */,
 				89CBFA9A2D6600AE008E7B50 /* DeviceCell.m in Sources */,
 				89CBFA9B2D6600AE008E7B50 /* DrinkRemindController.m in Sources */,
@@ -754,7 +772,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260127001;
+				CURRENT_PROJECT_VERSION = 20260831001;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -800,7 +818,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260127001;
+				CURRENT_PROJECT_VERSION = 20260831001;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (

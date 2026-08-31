@@ -7,6 +7,7 @@
 //
 
 #import "DemoListController.h"
+#import "PCMAudioStreamingController.h"
 #import "FitCloudSwiftDemo-Swift.h"
 #define ConsoleResultToastTip(v) [v makeToast:NSLocalizedString(@"View the results in the console.", nil) duration:3.0f position:CSToastPositionTop]
 
@@ -21,9 +22,30 @@
     [super viewDidLoad];
 }
 
+- (void)openPCMAudioStreamingDemo
+{
+    PCMAudioStreamingController *controller = [[PCMAudioStreamingController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)openDeviceFilesDemo
+{
+    DeviceFilesViewController *controller = [[DeviceFilesViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 0)
+    NSString *reuseIdentifier = [tableView cellForRowAtIndexPath:indexPath].reuseIdentifier;
+    if ([reuseIdentifier isEqualToString:@"DeviceFilesDemoCell"])
+    {
+        [self openDeviceFilesDemo];
+    }
+    else if ([reuseIdentifier isEqualToString:@"PCMAudioStreamingDemoCell"])
+    {
+        [self openPCMAudioStreamingDemo];
+    }
+    else if(indexPath.row == 0)
     {
         [self fetchSportsDataToday];
     }

@@ -12,6 +12,9 @@
 
 @interface MessageReminderController ()
 - (IBAction)OnGoBack:(id)sender;
+- (void)queryWhetherNotificationAppEnabled:(FitCloudNotificationApp)app displayName:(NSString *)displayName;
+- (void)updateNotificationAppsByAdding:(NSSet<FitCloudNotificationApp> *)appsToAdd
+                               removing:(NSSet<FitCloudNotificationApp> *)appsToRemove;
 @end
 
 @implementation MessageReminderController
@@ -30,122 +33,106 @@
 {
     if(indexPath.row == 0)
     {
-        FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
-        FitCloudFirmwareVersionObject* firmware = allConfig ? allConfig.firmware : nil;
-        BOOL bMailReminderSupport = firmware && firmware.allowShowMailReminder;
+        BOOL bMailReminderSupport = [FitCloudKit isDeviceSupportNotificationApp:FitCloudNotificationAppMail];
         XLOG_INFO(@"Mail reminder support: %@.", @(bMailReminderSupport));
         ConsoleResultToastTip(self.view);
     }
     else if(indexPath.row == 1)
     {
-        FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
-        FitCloudFirmwareVersionObject* firmware = allConfig ? allConfig.firmware : nil;
-        BOOL bTelegramAndViberReminderSupport = firmware && firmware.allowShowTelegramAndViberReminder;
-        XLOG_INFO(@"Telegram & Viber reminder support: %@.", @(bTelegramAndViberReminderSupport));
+        BOOL bTelegramReminderSupport = [FitCloudKit isDeviceSupportNotificationApp:FitCloudNotificationAppTelegram];
+        BOOL bViberReminderSupport = [FitCloudKit isDeviceSupportNotificationApp:FitCloudNotificationAppViber];
+        XLOG_INFO(@"Telegram reminder support: %@, Viber reminder support: %@.",
+                  @(bTelegramReminderSupport), @(bViberReminderSupport));
         ConsoleResultToastTip(self.view);
     }
     else if(indexPath.row == 2)
     {
-        FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
-        FITCLOUDMN mnSetting = allConfig ? allConfig.mnSetting : 0;
-        BOOL bCallReminder = mnSetting & FITCLOUDMN_CALL;
-        XLOG_INFO(@"Call reminder enabled: %@.", @(bCallReminder));
-        ConsoleResultToastTip(self.view);
+        [self queryWhetherNotificationAppEnabled:FitCloudNotificationAppCall displayName:@"Call"];
     }
     else if(indexPath.row == 3)
     {
-        __weak typeof(self) weakSelf = self;
-        FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
-        FITCLOUDMN mnSetting = allConfig ? allConfig.mnSetting : 0;
-        BOOL bCallReminder = mnSetting & FITCLOUDMN_CALL;
-        if(!bCallReminder)
-        {
-            FITCLOUDMN mnNewSetting = mnSetting;
-            mnNewSetting = mnNewSetting | FITCLOUDMN_CALL;
-            allConfig.mnSetting = mnNewSetting;
-            [FitCloudKit setMessageNotification:mnNewSetting block:^(BOOL succeed, NSError *error) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    OpResultToastTip(weakSelf.view, succeed);
-                });
-                if(!succeed) {
-                    allConfig.mnSetting =  mnSetting;
-                }
-            }];
-            return;
-        }
-        OpResultToastTip(self.view, false);
+        [self updateNotificationAppsByAdding:[NSSet setWithObject:FitCloudNotificationAppCall]
+                                    removing:[NSSet set]];
     }
     else if(indexPath.row == 4)
     {
-        __weak typeof(self) weakSelf = self;
-        FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
-        FITCLOUDMN mnSetting = allConfig ? allConfig.mnSetting : 0;
-        BOOL bCallReminder = mnSetting & FITCLOUDMN_CALL;
-        if(bCallReminder)
-        {
-            FITCLOUDMN mnNewSetting = mnSetting;
-            mnNewSetting = mnNewSetting & (~FITCLOUDMN_CALL);
-            allConfig.mnSetting = mnNewSetting;
-            [FitCloudKit setMessageNotification:mnNewSetting block:^(BOOL succeed, NSError *error) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    OpResultToastTip(weakSelf.view, succeed);
-                });
-                if(!succeed) {
-                    allConfig.mnSetting = mnSetting;
-                }
-            }];
-            return;
-        }
-        OpResultToastTip(self.view, false);
+        [self updateNotificationAppsByAdding:[NSSet set]
+                                    removing:[NSSet setWithObject:FitCloudNotificationAppCall]];
     }
     else if(indexPath.row == 5)
     {
-        __weak typeof(self) weakSelf = self;
-        FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
-        FITCLOUDMN mnSetting = allConfig ? allConfig.mnSetting : 0;
-        BOOL bCallReminder = mnSetting & FITCLOUDMN_CALL;
-        BOOL bSMSReminder = mnSetting & FITCLOUDMN_SMS;
-        if(!bCallReminder || !bSMSReminder)
-        {
-            FITCLOUDMN mnNewSetting = mnSetting;
-            mnNewSetting = mnNewSetting | FITCLOUDMN_CALL | FITCLOUDMN_SMS;
-            allConfig.mnSetting = mnNewSetting;
-            [FitCloudKit setMessageNotification:mnNewSetting block:^(BOOL succeed, NSError *error) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    OpResultToastTip(weakSelf.view, succeed);
-                });
-                if(!succeed) {
-                    allConfig.mnSetting = mnSetting;
-                }
-            }];
-            return;
-        }
-        OpResultToastTip(self.view, false);
+        [self updateNotificationAppsByAdding:[NSSet setWithObjects:FitCloudNotificationAppCall,
+                                                                   FitCloudNotificationAppSMS, nil]
+                                    removing:[NSSet set]];
     }
     else if(indexPath.row == 6)
     {
-        __weak typeof(self) weakSelf = self;
-        FitCloudAllConfigObject* allConfig = [FitCloudKit allConfig];
-        FITCLOUDMN mnSetting = allConfig ? allConfig.mnSetting : 0;
-        BOOL bCallReminder = mnSetting & FITCLOUDMN_CALL;
-        BOOL bSMSReminder = mnSetting & FITCLOUDMN_SMS;
-        if(bCallReminder || bSMSReminder)
-        {
-            FITCLOUDMN mnNewSetting = mnSetting;
-            mnNewSetting = mnNewSetting & (~FITCLOUDMN_CALL) & (~FITCLOUDMN_SMS);
-            allConfig.mnSetting = mnNewSetting;
-            [FitCloudKit setMessageNotification:mnNewSetting block:^(BOOL succeed, NSError *error) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    OpResultToastTip(weakSelf.view, succeed);
-                });
-                if(!succeed) {
-                    allConfig.mnSetting = mnSetting;
-                }
-            }];
+        [self updateNotificationAppsByAdding:[NSSet set]
+                                    removing:[NSSet setWithObjects:FitCloudNotificationAppCall,
+                                                                       FitCloudNotificationAppSMS, nil]];
+    }
+}
+
+- (void)queryWhetherNotificationAppEnabled:(FitCloudNotificationApp)app displayName:(NSString *)displayName
+{
+    __weak typeof(self) weakSelf = self;
+    [FitCloudKit getEnabledNotificationAppsWithCompletion:^(BOOL succeed,
+                                                             NSSet<FitCloudNotificationApp> *apps,
+                                                             NSError *error) {
+        if (succeed) {
+            XLOG_INFO(@"%@ reminder enabled: %@.", displayName, @([apps containsObject:app]));
+        } else {
+            XLOG_ERROR(@"Failed to get enabled notification apps: %@.", error);
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (succeed) {
+                ConsoleResultToastTip(weakSelf.view);
+            } else {
+                OpResultToastTip(weakSelf.view, false);
+            }
+        });
+    }];
+}
+
+- (void)updateNotificationAppsByAdding:(NSSet<FitCloudNotificationApp> *)appsToAdd
+                               removing:(NSSet<FitCloudNotificationApp> *)appsToRemove
+{
+    __weak typeof(self) weakSelf = self;
+    [FitCloudKit getEnabledNotificationAppsWithCompletion:^(BOOL succeed,
+                                                             NSSet<FitCloudNotificationApp> *enabledApps,
+                                                             NSError *error) {
+        if (!succeed) {
+            XLOG_ERROR(@"Failed to get enabled notification apps before updating: %@.", error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                OpResultToastTip(weakSelf.view, false);
+            });
             return;
         }
-        OpResultToastTip(self.view, false);
-    }
+
+        NSMutableSet<FitCloudNotificationApp> *updatedApps = enabledApps
+            ? [enabledApps mutableCopy]
+            : [NSMutableSet set];
+        [updatedApps minusSet:appsToRemove];
+
+        for (FitCloudNotificationApp app in appsToAdd) {
+            if ([FitCloudKit isDeviceSupportNotificationApp:app]) {
+                [updatedApps addObject:app];
+            } else {
+                XLOG_WARNING(@"The device does not support notification app: %@.", app);
+            }
+        }
+
+        [FitCloudKit setEnabledNotificationApps:updatedApps completion:^(BOOL setSucceed, NSError *setError) {
+            if (!setSucceed) {
+                XLOG_ERROR(@"Failed to set enabled notification apps: %@.", setError);
+            } else {
+                XLOG_INFO(@"Enabled notification apps updated: %@.", updatedApps);
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                OpResultToastTip(weakSelf.view, setSucceed);
+            });
+        }];
+    }];
 }
 
 /*

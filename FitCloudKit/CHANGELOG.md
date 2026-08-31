@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## V1.3.2-beta.102 build20260831001 (2026-08-31)
+
+- Removed the API for fetching song files from devices.
+- Fixed an issue where fetching audio recording files from devices could fail.
+- Renamed the API for reporting device AI authentication failures.
+- Improved robustness of file downloads and packet parsing.
+
 ## V1.3.2-beta.101 build20260823001 (2026-08-23)
 
 - Improved Opus streaming voice decoding quality.
