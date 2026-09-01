@@ -380,8 +380,8 @@
 /// 是否支持睡眠评分
 @property(nonatomic, readonly) BOOL withSleepScore;
 
-/// 是否支持 AI 聊天
-@property(nonatomic, readonly) BOOL withAIChat;
+/// 是否使用新一代 Opus 流传输方案
+@property(nonatomic, readonly) BOOL isNextOpusStreamSolution;
 
 /// AI 聊天音频通道是否使用 SCO
 @property(nonatomic, readonly) BOOL aiChatAudioChannelUsingSco;
@@ -430,5 +430,20 @@
 
 /// 是否支持外部存储
 @property(nonatomic, readonly) BOOL withExternalStorage;
+
+/// 是否支持拉取设备端文件
+@property(nonatomic, readonly) BOOL allowFetchDeviceFiles;
+
+/// 是否支持 Opus 音频播放
+@property(nonatomic, readonly) BOOL allowOpusAudioPlayback;
+
+/// 是否支持离线地图
+@property(nonatomic, readonly) BOOL withOfflineMap;
+
+/// 是否支持绿联弹幕
+@property(nonatomic, readonly) BOOL withUgreenBarrage;
+
+/// Opus 传输协议是否包含控制命令
+@property(nonatomic, readonly) BOOL opusTransportProtocolContainsControlCommands;
 
 @end

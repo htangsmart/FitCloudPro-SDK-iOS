@@ -163,24 +163,24 @@ static const NSUInteger PCMAudioChannels = 1;
               resourceName, @(PCMAudioSampleRate), @(PCMAudioChannels), @(bitrate), @(pcmData.length));
 
     __weak typeof(self) weakSelf = self;
-    [FitCloudKit startSendingPCMAudioWithSampleRate:PCMAudioSampleRate
-                                          channels:PCMAudioChannels
-                                           bitrate:bitrate
-                                        completion:^(BOOL success, NSError *error) {
+    [FitCloudKit startPCMAudioPlaybackWithSampleRate:PCMAudioSampleRate
+                                           channels:PCMAudioChannels
+                                            bitrate:bitrate
+                                         completion:^(BOOL success, NSError *error) {
         if (!success) {
             [weakSelf completeWithSuccess:NO error:error];
             return;
         }
 
         [weakSelf updateStatus:NSLocalizedString(@"Device is ready. Sending PCM audio…", nil)];
-        [FitCloudKit sendPCMAudioData:pcmData completion:^(BOOL success, NSError *error) {
+        [FitCloudKit appendPCMAudioData:pcmData completion:^(BOOL success, NSError *error) {
             if (!success) {
                 [weakSelf completeWithSuccess:NO error:error];
                 return;
             }
 
             [weakSelf updateStatus:NSLocalizedString(@"PCM data queued. Waiting for playback to finish…", nil)];
-            [FitCloudKit finishSendingPCMAudioWithCompletion:^(BOOL success, NSError *error) {
+            [FitCloudKit finishPCMAudioPlaybackWithCompletion:^(BOOL success, NSError *error) {
                 [weakSelf completeWithSuccess:success error:error];
             }];
         }];
@@ -196,7 +196,7 @@ static const NSUInteger PCMAudioChannels = 1;
     self.cancelButton.enabled = NO;
     [self updateStatus:NSLocalizedString(@"Cancelling audio stream…", nil)];
     __weak typeof(self) weakSelf = self;
-    [FitCloudKit cancelSendingPCMAudioWithCompletion:^(BOOL success, NSError *error) {
+    [FitCloudKit cancelPCMAudioPlaybackWithCompletion:^(BOOL success, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf updateSendingState:NO];
             if (success) {

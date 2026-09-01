@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## V1.3.2-beta.103 build20260901001 (2026-09-01)
+
+- Added support for 410×494 square watch face size.
+- Added APIs to play PCM audio on supported devices using Opus transport.
+- Added an SDK initialization option that automatically corrects unreasonable user profile values by default and can be explicitly disabled.
+- Added firmware capability flags for device file fetching, Opus audio playback, offline maps, and other device features.
+- Improved capability validation and fallback handling for device file fetching and Opus audio playback.
+
 ## V1.3.2-beta.102 build20260831001 (2026-08-31)
 
 - Removed the API for fetching song files from devices.

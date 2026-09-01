@@ -79,6 +79,11 @@
 /// > Important: The default value is YES.
 @property(nonatomic, assign) BOOL autoSyncUserLanguage;
 
+/// Whether to automatically correct unreasonable user profile values before sending them to the watch device.
+///
+/// > Important: The default value is YES.
+@property(nonatomic, assign) BOOL autoCorrectUserProfile;
+
 /// Whether prefer to use WriteWithoutResponse
 ///
 /// > Important: The default value is NO.

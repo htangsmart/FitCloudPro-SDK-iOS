@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-08-31  Version:1.3.2-beta.102 Build:20260831001
+//      pcjbird    2026-09-01  Version:1.3.2-beta.103 Build:20260901001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -532,7 +532,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark Set User Profile
 
-/// Sets the user profile
+/// Sets the user profile.
+///
+/// If `FitCloudOption.autoCorrectUserProfile` is enabled, unreasonable profile values are automatically corrected before being sent to the watch device.
 /// - Parameters:
 ///   - profile: The user profile
 ///   - block: The completion handler called when the operation completes
@@ -2409,48 +2411,44 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// PCM to Opus audio streaming
-@interface FitCloudKit (PCMAudioStreaming)
+/// PCM audio playback on the connected device.
+@interface FitCloudKit (PCMAudioPlayback)
 
-/// Start a PCM audio stream using the default format (16 kHz, mono) and bitrate (32000 bps).
-/// The completion handler is called after the device confirms that it is ready to receive audio.
-+ (void)startSendingPCMAudioWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+/// Start PCM audio playback using the default format (16 kHz, mono) and bitrate (32000 bps).
+/// The completion handler is called when the device is ready for audio data.
++ (void)startPCMAudioPlaybackWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
-/// Start a PCM audio stream with the specified encoder configuration.
+/// Start PCM audio playback with the specified format and bitrate.
 /// - Parameters:
-///   - sampleRate: PCM sample rate. Opus supports 8000, 12000, 16000, 24000 and 48000 Hz.
+///   - sampleRate: PCM sample rate. Supported values are 8000, 12000, 16000, 24000 and 48000 Hz.
 ///   - channels: Number of interleaved PCM channels, either 1 or 2.
-///   - bitrate: Opus target bitrate in bits per second. The value is also sent to the device as
-///              an unsigned 16-bit big-endian integer.
-///   - completion: Called after the device replies with the Opus-service start-success code (0x03).
+///   - bitrate: Target bitrate in bits per second, from 500 through 65535.
+///   - completion: Called when the device is ready for PCM data.
 ///
-/// PCM samples must be signed 16-bit little-endian integers. Only one outgoing audio stream may
-/// be active at a time.
-+ (void)startSendingPCMAudioWithSampleRate:(NSUInteger)sampleRate
-                                  channels:(NSUInteger)channels
-                                   bitrate:(NSUInteger)bitrate
-                                completion:(FitCloudCompletionHandler _Nullable)completion;
+/// PCM samples must be signed 16-bit little-endian integers. Only one playback session may be
+/// active at a time.
++ (void)startPCMAudioPlaybackWithSampleRate:(NSUInteger)sampleRate
+                                   channels:(NSUInteger)channels
+                                    bitrate:(NSUInteger)bitrate
+                                 completion:(FitCloudCompletionHandler _Nullable)completion;
 
-/// Append PCM samples to the current outgoing audio stream.
+/// Queue PCM samples for playback.
 ///
-/// Data may contain any number of complete interleaved PCM samples. The SDK buffers incomplete
-/// 20 ms frames internally, encodes them as CBR Opus, and coalesces the raw Opus byte stream into
-/// BLE write chunks without adding a transport envelope. Completion means that the data was
-/// accepted into the SDK buffer; transmission continues asynchronously at real-time audio speed.
-+ (void)sendPCMAudioData:(NSData *)pcmData
-              completion:(FitCloudCompletionHandler _Nullable)completion;
+/// Data must contain complete interleaved PCM samples matching the format specified when the
+/// playback was started. Completion indicates whether the data was accepted for playback.
++ (void)appendPCMAudioData:(NSData *)pcmData
+                completion:(FitCloudCompletionHandler _Nullable)completion;
 
-/// Finish the current outgoing audio stream.
+/// Finish the current playback session.
 ///
-/// Any final partial 20 ms PCM frame is zero-padded before encoding. The completion handler is
-/// called after all queued audio is sent and the device replies with end-success code 0x04.
-+ (void)finishSendingPCMAudioWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+/// The completion handler is called after the device confirms that the playback session ended.
++ (void)finishPCMAudioPlaybackWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
-/// Cancel the current outgoing audio stream without retrying pending audio packets.
+/// Cancel the current playback session.
 ///
-/// Buffered PCM data is discarded. If the device has already accepted the stream, the SDK sends
-/// the normal end command before completing cancellation.
-+ (void)cancelSendingPCMAudioWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+/// Pending audio data is discarded. Start a new playback session only after the cancellation
+/// completion handler is called.
++ (void)cancelPCMAudioPlaybackWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 

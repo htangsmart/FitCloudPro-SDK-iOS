@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-08-31 Version:1.3.2-beta.102 Build:20260831001
+## pcjbird 2026-09-01 Version:1.3.2-beta.103 Build:20260901001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -90,6 +90,10 @@
 - Removed the API for fetching song files from devices.
 - Fixed an issue where fetching audio recording files from devices could fail.
 - Renamed the API for reporting device AI authentication failures.
+- Added APIs to play PCM audio on supported devices using Opus transport.
+- Added an SDK initialization option that automatically corrects unreasonable user profile values by default; explicitly disable the option when automatic correction is not needed.
+- Added firmware capability flags for device file fetching, Opus audio playback, offline maps, and other device features.
+- Added support for 410×494 square watch face size.
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 
