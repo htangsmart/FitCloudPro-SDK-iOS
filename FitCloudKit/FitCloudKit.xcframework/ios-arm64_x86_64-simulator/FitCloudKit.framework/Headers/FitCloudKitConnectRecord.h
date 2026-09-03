@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <FitCloudKit/FitCloudSecureCoding.h>
+#import <FitCloudKit/FitCloudKitDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -78,10 +79,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// The advertisement data
 @property(nonatomic, strong, nullable) NSString *advData;
 
-/// The user-specified AI conversation model
-/// - Returns: A numeric value representing the AI conversation model type as defined in FITCLOUDAICONVERSATIONMODEL.
-///           When nil or FITCLOUDAICONVERSATIONMODEL_UNSPECIFIED is returned, it indicates no specific model has been set.
-@property(nonatomic, strong, nullable) NSNumber *specifiedAiConversationModel;
+/// The AI agent selected by the device for single-turn AIAsking requests.
+/// `FitCloudAIAskingAgentUnspecified` means no agent has been selected.
+@property(nonatomic, assign) FitCloudAIAskingAgent selectedAIAskingAgent;
 
 /// The user-specified AI agent for advertisement flash
 /// - Returns: A numeric value representing the AI agent type for advertisement flash.

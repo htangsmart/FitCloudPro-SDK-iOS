@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.104 build20260903001 (2026-09-03)
+
+- Refactored the public AI APIs around business-specific coordination sessions and added comprehensive integration guides.
+
 ## V1.3.2-beta.103 build20260901001 (2026-09-01)
 
 - Added support for 410×494 square watch face size.

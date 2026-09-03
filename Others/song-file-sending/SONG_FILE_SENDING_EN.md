@@ -38,7 +38,7 @@ sequenceDiagram
 4. **Progress callback** → Use `progressHandler` to receive 0.0–1.0 progress updates to drive your UI.
 5. **Transfer completes** → `completionHandler` returns `success`, average speed `avgSpeed` (kB/s), and an optional error.
 6. **(Optional) Cancel** → Call `cancelSendSongFileIfNeededWithCompletion:` to abort an in-flight transfer.
-7. **List management** → Use `fetchSongFileListWithCompletion:` to query, `deleteSongFileAtIndex:completion:` for single deletion, and `deleteAllSongFilesWithCompletion:` to wipe all songs.
+7. **List management** → Use `fetchSongFileListWithCompletion:` to query, `deleteSongFileWithName:completion:` for single deletion, and `deleteAllSongFilesWithCompletion:` to wipe all songs.
 8. **Observe changes** → Listen for `FITCLOUDEVENT_SONGLIST_CHANGED_NOTIFY` and refresh your local cache when the watch-side list changes.
 
 ---
@@ -133,24 +133,24 @@ Retrieves all song files stored on the device. The response is delivered in mult
 
 ### 3. Deleting Song Files
 
-#### 3.1 Delete a Song by Index
+#### 3.1 Delete a Song by File Name
 
-Deletes the song file at the given index on the device.
+Deletes the song file with the given file name on the device.
 
 ```objc
-+ (void)deleteSongFileAtIndex:(NSInteger)fileIndex
++ (void)deleteSongFileWithName:(NSString *_Nonnull)fileName
                    completion:(FitCloudCompletionHandler _Nullable)completion;
 ```
 
 **Parameters:**
 | Parameter | Type | Description |
 |---|---|---|
-| `fileIndex` | `NSInteger` | Index of the song to delete, starting from 0 (obtained from `fetchSongFileListWithCompletion:`) |
+| `fileName` | `NSString *` | File name of the song to delete (obtained from `FitCloudFileInfoModel.fileName` returned by `fetchSongFileListWithCompletion:`) |
 | `completion` | `FitCloudCompletionHandler` | Operation completion handler |
 
 **Discussion:**
 
-- After a successful deletion, call `fetchSongFileListWithCompletion:` again to refresh your cache, because indices are renumbered on the device.
+- The single-delete request payload is encoded as: 1 byte file type + 1 byte UTF-8 file name length + UTF-8 file name bytes.
 - The completion's `success` combines link-level success and the device-returned result (`FileDeleteResultCommand.success`).
 
 ---
@@ -170,7 +170,7 @@ Deletes every song file stored on the device.
 
 **Discussion:**
 
-- Sends an "delete all" command (only a 2-byte payload: type + mode), distinct from the single-delete command (4-byte payload with a 2-byte big-endian index).
+- Sends a "delete all" command (only a 2-byte payload: type + mode), distinct from the single-delete command (file-name payload).
 - Deletion is irreversible; surface a user confirmation before calling.
 
 ---
@@ -320,10 +320,10 @@ extern NSString *const FITCLOUDEVENT_SONGLIST_CHANGED_NOTIFY;
 
 // MARK: - Delete songs
 
-- (void)deleteSongAtIndex:(NSInteger)index {
-    [FitCloudKit deleteSongFileAtIndex:index completion:^(BOOL success, NSError *error) {
+- (void)deleteSongWithInfo:(FitCloudFileInfoModel *)fileInfo {
+    [FitCloudKit deleteSongFileWithName:fileInfo.fileName completion:^(BOOL success, NSError *error) {
         if (success) {
-            [self refreshSongList]; // indices renumber — must refresh
+            [self refreshSongList];
         }
     }];
 }

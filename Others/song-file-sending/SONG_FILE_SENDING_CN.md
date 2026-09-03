@@ -38,7 +38,7 @@ sequenceDiagram
 4. **进度回调** → 通过 `progressHandler` 接收 0.0–1.0 的进度更新以驱动 UI。
 5. **传输完成** → `completionHandler` 返回 `success`、平均速度 `avgSpeed`（kB/s）及错误信息。
 6. **（可选）取消传输** → 调用 `cancelSendSongFileIfNeededWithCompletion:` 中止进行中的传输。
-7. **列表管理** → 调用 `fetchSongFileListWithCompletion:` 查询，`deleteSongFileAtIndex:completion:` 删除单个，`deleteAllSongFilesWithCompletion:` 删除全部。
+7. **列表管理** → 调用 `fetchSongFileListWithCompletion:` 查询，`deleteSongFileWithName:completion:` 删除单个，`deleteAllSongFilesWithCompletion:` 删除全部。
 8. **监听变化** → 监听 `FITCLOUDEVENT_SONGLIST_CHANGED_NOTIFY` 通知，当手表端歌曲列表变化时刷新本地缓存。
 
 ---
@@ -133,24 +133,24 @@ sequenceDiagram
 
 ### 3. 删除歌曲文件
 
-#### 3.1 删除指定索引的歌曲
+#### 3.1 删除指定文件名的歌曲
 
-删除设备上指定索引处的歌曲文件。
+删除设备上指定文件名的歌曲文件。
 
 ```objc
-+ (void)deleteSongFileAtIndex:(NSInteger)fileIndex
++ (void)deleteSongFileWithName:(NSString *_Nonnull)fileName
                    completion:(FitCloudCompletionHandler _Nullable)completion;
 ```
 
 **参数：**
 | 参数 | 类型 | 说明 |
 |---|---|---|
-| `fileIndex` | `NSInteger` | 待删除歌曲的索引，从 0 开始（应来自 `fetchSongFileListWithCompletion:` 的结果） |
+| `fileName` | `NSString *` | 待删除歌曲的文件名（应来自 `fetchSongFileListWithCompletion:` 返回的 `FitCloudFileInfoModel.fileName`） |
 | `completion` | `FitCloudCompletionHandler` | 操作完成回调 |
 
 **讨论：**
 
-- 删除成功后，建议重新调用 `fetchSongFileListWithCompletion:` 刷新本地缓存，因为删除后索引会重排。
+- 单文件删除请求载荷格式为：1 字节文件类型 + 1 字节文件名 UTF8 长度 + 文件名 UTF8 字节串。
 - completion 中的 `success` 综合了链路成功与设备返回结果（`FileDeleteResultCommand.success`）。
 
 ---
@@ -170,7 +170,7 @@ sequenceDiagram
 
 **讨论：**
 
-- 该方法发送"全删"指令（仅 2 字节载荷：类型 + 模式），与单删（4 字节载荷，含 2 字节大端索引）不同。
+- 该方法发送"全删"指令（仅 2 字节载荷：类型 + 模式），与单删（文件名载荷）不同。
 - 删除操作不可恢复，调用前应给出用户确认。
 
 ---
@@ -320,10 +320,10 @@ extern NSString *const FITCLOUDEVENT_SONGLIST_CHANGED_NOTIFY;
 
 // MARK: - 删除歌曲
 
-- (void)deleteSongAtIndex:(NSInteger)index {
-    [FitCloudKit deleteSongFileAtIndex:index completion:^(BOOL success, NSError *error) {
+- (void)deleteSongWithInfo:(FitCloudFileInfoModel *)fileInfo {
+    [FitCloudKit deleteSongFileWithName:fileInfo.fileName completion:^(BOOL success, NSError *error) {
         if (success) {
-            [self refreshSongList]; // 索引重排，必须刷新
+            [self refreshSongList];
         }
     }];
 }

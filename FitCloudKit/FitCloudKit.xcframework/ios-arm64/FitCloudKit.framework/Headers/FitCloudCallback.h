@@ -78,6 +78,16 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - error: error information
 typedef void (^FitCloudCompletionHandler)(BOOL success, NSError *_Nullable error);
 
+/// Completion for an AI business coordination session initiated by the app.
+/// - Parameters:
+///   - success: Whether the app and device entered the coordinated feature state.
+///   - failureReason: The semantic device-side failure reason when `success` is `NO` and the
+///     device returned a valid start-failure response.
+///   - error: Communication or SDK error. Device-side business rejection is represented by `failureReason`.
+typedef void (^FitCloudAIStartCompletion)(BOOL success,
+                                          FitCloudAIDeviceSideStartFailureReason failureReason,
+                                          NSError *_Nullable error);
+
 /// FitCloud progress callback
 /// - Parameters:
 ///   - progress: progress value 0.0～1.0
@@ -588,45 +598,35 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - voiceData: 语音数据，SampleRate 16000.0f 单通道 16 位 PCM
 - (void)OnAlexaVoiceDecodedWithData:(NSData *_Nullable)voiceData;
 
-/// Notifies that large language model voice transmission has started
-- (void)onLLMVoiceBegin;
-
-/// Notifies that incremental voice data has been received during large language model conversation
+/// Notifies that incremental AIAsking voice data has been received.
 /// - Parameters:
 ///   - deltaOpusVoiceData: The incremental voice data in Opus format
 ///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
-- (void)onLLMDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
+- (void)onAIAskingDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
 
-/// Notifies that large language model voice transmission has completed and returns the requested voice data after decoding
+/// Notifies that AIAsking voice transmission has completed and returns the requested voice data after decoding.
+/// The SDK considers the single-turn AIAsking voice session ended before delivering this callback.
 /// - Parameters:
 ///   - opusVoiceData: Voice data in Opus format, 16000Hz sample rate, mono channel, 16-bit PCM
 ///   - voiceData: Decoded voice data, 16000Hz sample rate, mono channel, 16-bit PCM
-- (void)onLLMVoiceStopWithOpusVoiceData:(NSData *_Nullable)opusVoiceData decodedVoiceData:(NSData *_Nullable)voiceData;
+- (void)onAIAskingVoiceDataCompletedWithOpusVoiceData:(NSData *_Nullable)opusVoiceData decodedVoiceData:(NSData *_Nullable)voiceData;
 
-/// Notifies that watch has entered the large language model interface
-- (void)onWatchSideEnterLLM;
+/// Notifies that the device entered the AIAsking scene.
+- (void)onDeviceDidEnterAIAsking;
 
-/// Notifies that watch has exited the large language model interface
-- (void)onWatchSideExitLLM;
+/// Notifies that the device exited the AIAsking scene.
+- (void)onDeviceDidExitAIAsking;
 
-/// Notifies the app that the watch has confirmed the current question and will forward it to the LLM (large language model).
-/// >Important: This method is only supported on select watch models that implement LLM-question ASR-result confirmation.
-///             Ignore this method implementation if the watch model does not support LLM-question ASR-result confirmation.
-- (void)onWatchSideDidConfirmedLLMQuestion;
+/// Notifies that the device confirmed the current AIAsking input.
+- (void)onDeviceDidConfirmAIAsking;
 
-/// Notifies the AI conversation model toggled from watch side
-/// - Parameters:
-///   - aiConversationModel: The AI conversation model type
-- (void)onWatchSideToggleAiConversationModel:(FITCLOUDAICONVERSATIONMODEL)aiConversationModel;
+/// Notifies that the device selected an agent for subsequent single-turn AIAsking requests.
+/// - Parameter agent: The selected AIAsking agent.
+- (void)onDeviceDidSelectAIAskingAgent:(FitCloudAIAskingAgent)agent;
 
-/// Notifies the AdFlash AI agent toggled from watch side
-/// - Parameters:
-///   - aiAgent: The AdFlash AI agent type
-- (void)onWatchSideToggleAdFlashAiAgent:(FITCLOUDADFLASHAIAGENT)aiAgent;
-
-/// Notifies that voice translation has started
-/// - Note: Called when the watch begins recording voice for translation
-- (void)onTranslateVoiceBegin;
+/// Notifies that the device selected an AdFlash AI agent.
+/// - Parameter agent: The selected AdFlash AI agent.
+- (void)onDeviceDidSelectAdFlashAIAgent:(FITCLOUDADFLASHAIAGENT)agent;
 
 /// Notifies that incremental voice data has been received during translation
 /// - Parameters:
@@ -636,7 +636,8 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - targetLang: The target language to translate into
 - (void)onTranslateDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData sourceLanguage:(FITCLOUDLANGUAGE)sourceLang targetLanguage:(FITCLOUDLANGUAGE)targetLang;
 
-/// Notifies that voice translation has completed with decoded voice data and language settings
+/// Notifies that voice translation has completed with decoded voice data and language settings.
+/// The SDK considers this standard or conversation-translation utterance ended before delivering this callback.
 /// - Parameters:
 ///   - opusVoiceData: The opus encoded voice data
 ///   - voiceData: The decoded voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
@@ -649,21 +650,18 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - state: The target voice playing state
 - (void)onWatchSideToggleTranslatedTextVoicePlayingState:(TranslatedTextVoicePlayingState)state;
 
-/// Notifies that ASR (Automatic Speech Recognition) voice recording has started
-/// - Note: Called when the watch begins recording voice for ASR
-- (void)onASRVoiceBegin;
-
-/// Notifies that incremental ASR voice data has been received
+/// Notifies that incremental AI watch-face voice data has been received.
 /// - Parameters:
 ///   - deltaOpusVoiceData: The incremental voice data in Opus format
 ///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
-- (void)onASRDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
+- (void)onAIWatchFaceDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
 
-/// Notifies that ASR voice recording has completed with decoded voice data
+/// Notifies that AI watch-face voice input has completed with decoded voice data.
+/// The SDK considers the single-turn AI watch-face voice session ended before delivering this callback.
 /// - Parameters:
 ///   - opusVoiceData: The opus encoded voice data
 ///   - voiceData: The decoded voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
-- (void)onASRVoiceStopWithOpusVoiceData:(NSData *_Nullable)opusVoiceData decodedVoiceData:(NSData *_Nullable)voiceData;
+- (void)onAIWatchFaceVoiceDataCompletedWithOpusVoiceData:(NSData *_Nullable)opusVoiceData decodedVoiceData:(NSData *_Nullable)voiceData;
 
 /// Notifies that watch requests to generate an AI watch face based on the given prompt and preview dimensions
 /// - Parameters:
@@ -834,13 +832,20 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - data: The StarBurst AI bridge data
 - (void)onStarBurstAIBridgeDataReceived:(NSData *)data;
 
-/// Notifies the app that the watch requests an AI-chat event.
-- (void)onAIChatSessionEvent:(FitCloudAIChatSessionEvent)event;
+/// Device requests the app to establish an AI chat coordination session.
+/// Start the app-owned AI service, then call exactly one matching
+/// AI chat `accept...` or `reject...` API. For device Opus, FitCloudKit subsequently delivers audio.
+/// For SCO or phone microphone, acceptance completes the handshake and the app owns the remaining flow.
+/// - Parameter audioSource: The audio source requested by the device.
+- (void)onDeviceRequestStartAIChatSessionWithAudioSource:(FitCloudAIAudioSource)audioSource;
 
-/// Notifies that the AI-chat session has been terminated with an interrupt reason
-/// - Parameters:
-///   - reason: The interrupt reason
-- (void)onAIChatTerminateWithInterruptReason:(FitCloudAIChatTerminateWithInterruptReason)reason;
+/// Notifies that the device stopped the active AI chat session.
+/// The app should end its local AI chat business and must not send another stop command.
+/// - Parameter reason: The semantic device-side stop reason.
+- (void)onDeviceDidStopAIChatSessionWithReason:(FitCloudAIDeviceInterruptionReason)reason;
+
+/// Device requests the app to exit the AI chat scene.
+- (void)onDeviceRequestExitAIChatSession;
 
 /// Notifies that incremental voice data has been received during ai-chat conversation
 /// - Parameters:
@@ -848,18 +853,25 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
 - (void)onAIChatDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
 
-/// Notifies that the watch requests to start AI audio recording
+/// Device requests the app to establish an AI audio-recording coordination session.
 /// - Parameters:
-///   - scene: The scene of the recording
-- (void)onRequestStartAIAudioRecordingWithScene:(FitCloudAIAudioRecordingScene)scene;
+///   - scene: The requested recording scene.
+///   - audioSource: The requested audio source. Start the app-owned recording business, then call
+///     the matching `accept...` or `reject...` API with the same scene. Accepted non-Opus requests
+///     do not create an SDK media session.
+- (void)onDeviceRequestStartAIAudioRecordingWithScene:(FitCloudAIAudioRecordingScene)scene
+                                          audioSource:(FitCloudAIAudioSource)audioSource;
 
-/// Notifies that the watch requests to stop AI audio recording
-- (void)onRequestStopAIAudioRecording;
-
-/// Notifies that the AI audio recording session has been terminated with an interrupt reason
+/// Device requests the app to stop AI audio recording.
 /// - Parameters:
-///   - reason: The interrupt reason
-- (void)onAIAudioRecordingTerminateWithInterruptReason:(FitCloudAIAudioRecordingTerminateWithInterruptReason)reason;
+///   - scene: The recording scene being stopped.
+///   - reason: The semantic device-side interruption reason.
+- (void)onDeviceRequestStopAIAudioRecordingWithScene:(FitCloudAIAudioRecordingScene)scene
+                                                reason:(FitCloudAIDeviceInterruptionReason)reason;
+
+/// Device requests the app to exit AI audio recording.
+/// - Parameter scene: The recording scene being exited.
+- (void)onDeviceRequestExitAIAudioRecordingWithScene:(FitCloudAIAudioRecordingScene)scene;
 
 /// Notifies that incremental voice data has been received during AI audio recording
 /// - Parameters:
@@ -868,8 +880,67 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 - (void)onAIAudioRecordingDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
 
 
-/// Notifies that the watch requests to start voice ride hailing
-- (void)onVoiceRideHailingBegin;
+/// Device requests the app to establish a voice ride-hailing coordination session.
+/// Start the app-owned ride-hailing service, then call exactly one
+/// matching `accept...` or `reject...` API.
+/// - Parameter audioSource: The audio source requested by the device. Accepted non-Opus requests
+///   complete only the handshake; the app owns the remaining flow.
+- (void)onDeviceRequestStartVoiceRideHailingWithAudioSource:(FitCloudAIAudioSource)audioSource;
+
+/// Notifies that the device canceled voice ride hailing.
+/// - Parameter reason: The semantic device-side interruption reason.
+- (void)onDeviceDidCancelVoiceRideHailingWithReason:(FitCloudAIDeviceInterruptionReason)reason;
+
+/// Device requests the app to exit voice ride hailing.
+- (void)onDeviceRequestExitVoiceRideHailing;
+
+/// Device requests the app to establish a translation coordination session.
+/// - Parameters:
+///   - mode: The requested translation mode.
+///   - audioSource: The requested audio source. Start the app-owned translation service, then call
+///     the matching `accept...` or `reject...` API with the same mode. Accepted non-Opus requests
+///     do not create an SDK media session.
+- (void)onDeviceRequestStartTranslationVoiceSessionWithMode:(FitCloudAITranslationVoiceMode)mode
+                                                 audioSource:(FitCloudAIAudioSource)audioSource;
+
+/// Notifies that the device canceled a translation voice session.
+/// - Parameters:
+///   - mode: The translation mode being stopped.
+///   - reason: The semantic device-side interruption reason.
+- (void)onDeviceDidCancelTranslationVoiceSessionWithMode:(FitCloudAITranslationVoiceMode)mode
+                                                    reason:(FitCloudAIDeviceInterruptionReason)reason;
+
+/// Device requests the app to exit a translation voice session.
+/// - Parameter mode: The translation mode being exited.
+- (void)onDeviceRequestExitTranslationVoiceSessionWithMode:(FitCloudAITranslationVoiceMode)mode;
+
+/// Device requests the app to establish an AI watch-face coordination session.
+/// Start the app-owned AI watch-face service, then call exactly one
+/// matching `accept...` or `reject...` API.
+/// - Parameter audioSource: The audio source requested by the device. Accepted non-Opus requests
+///   complete only the handshake; the app owns the remaining flow.
+- (void)onDeviceRequestStartAIWatchFaceVoiceSessionWithAudioSource:(FitCloudAIAudioSource)audioSource;
+
+/// Notifies that the device canceled AI watch-face voice input.
+/// - Parameter reason: The semantic device-side interruption reason.
+- (void)onDeviceDidCancelAIWatchFaceVoiceSessionWithReason:(FitCloudAIDeviceInterruptionReason)reason;
+
+/// Device requests the app to exit AI watch-face voice input.
+- (void)onDeviceRequestExitAIWatchFaceVoiceSession;
+
+/// Device requests the app to establish an AIAsking coordination session.
+/// Start the app-owned AIAsking service, then call exactly one
+/// matching `accept...` or `reject...` API.
+/// - Parameter audioSource: The audio source requested by the device. Accepted non-Opus requests
+///   complete only the handshake; the app owns the remaining flow.
+- (void)onDeviceRequestStartAIAskingVoiceSessionWithAudioSource:(FitCloudAIAudioSource)audioSource;
+
+/// Notifies that the device canceled AIAsking voice input.
+/// - Parameter reason: The semantic device-side interruption reason.
+- (void)onDeviceDidCancelAIAskingVoiceSessionWithReason:(FitCloudAIDeviceInterruptionReason)reason;
+
+/// Device requests the app to exit AIAsking voice input.
+- (void)onDeviceRequestExitAIAskingVoiceSession;
 
 /// Notifies that incremental voice ride hailing voice data has been received
 /// This method is called when the app side receives incremental voice data for voice ride hailing, which will be called multiple times during the recording process
@@ -878,7 +949,8 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
 - (void)onReceivedVoiceRideHailingDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData decodedDeltaVoiceData:(NSData *_Nullable)deltaVoiceData;
 
-/// Notifies that voice ride hailing recording has completed with decoded voice data
+/// Notifies that voice ride hailing recording has completed with decoded voice data.
+/// The SDK considers the single-turn voice session ended before delivering this callback.
 /// This method is called when the app side receives the final voice data for voice ride hailing
 /// - Parameters:
 ///   - opusVoiceData: The opus encoded voice data

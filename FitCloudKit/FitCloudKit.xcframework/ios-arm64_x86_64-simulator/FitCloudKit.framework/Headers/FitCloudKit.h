@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-09-01  Version:1.3.2-beta.103 Build:20260901001
+//      pcjbird    2026-09-03  Version:1.3.2-beta.104 Build:20260903001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -279,15 +279,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Clear watch connection history
 + (void)clearPeripheralHistory;
-
-#pragma mark Specified AI Conversation Model
-
-/// Get the specified AI conversation model
-/// - Returns: The AI conversation model type used for watch interactions
-///
-/// This method returns the AI conversation model type that is currently specified for use with the watch.
-/// The model determines how AI conversations are handled between the watch and connected services.
-+ (FITCLOUDAICONVERSATIONMODEL)specifiedAiConversationModel;
 
 #pragma mark Specified AdFlash AI Agent
 
@@ -2376,38 +2367,85 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// FitCloudKit LLM Module
-@interface FitCloudKit (LLM)
+/// FitCloudKit AIAsking Module.
+///
+/// These APIs coordinate one AIAsking turn between the app and device; they do not start or manage
+/// the app's AI service. Start/cancel are app-initiated operations, while accept/reject answer a
+/// matching device request. App-initiated SDK sessions always request device Opus. A device request
+/// reports its audio source; accepted non-Opus requests complete without an SDK media session.
+/// The app owns AI service, ASR, result generation, and UI lifecycles.
+/// Scene enter/exit/confirmation callbacks remain separate from the coordination-session lifecycle.
+@interface FitCloudKit (AIAsking)
 
-#pragma mark Send LLM ASR result to the watch device
+/// Returns the AI agent selected by the device for subsequent single-turn AIAsking requests.
+/// The selection is persistent device state and is not cleared when an individual voice session ends.
+/// - Returns: The selected agent, or `FitCloudAIAskingAgentUnspecified` when no agent has been selected.
++ (FitCloudAIAskingAgent)selectedAIAskingAgent;
 
-/// Send LLM ASR (Automatic Speech Recognition) result to watch
+/// Establishes an AIAsking coordination session initiated by the app.
+/// Start the app-owned AIAsking/ASR service before calling this method. This SDK-managed path always
+/// requests device-captured Opus audio.
+/// - Parameter completion: Called after the device responds. `success` is `YES` only when both sides enter the coordinated state;
+///     otherwise `failureReason` describes a device-side start failure and `error` describes an SDK or communication failure.
+/// - Important: Only one AI business session may be pending or active at a time.
++ (void)startAIAskingVoiceSessionWithCompletion:(FitCloudAIStartCompletion _Nullable)completion;
+
+/// Cancels the active single-turn AIAsking voice session before voice transmission completes.
+/// - Parameter completion: Called after the device confirms the cancellation. `error` is non-nil when the command fails
+///   or no matching AIAsking session is active.
++ (void)cancelAIAskingVoiceSessionWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Accepts a pending AIAsking start request previously reported through `FitCloudCallback`.
+/// Call this method only after the app has started its AIAsking service. This method coordinates
+/// device state; it does not start the AI service or audio capture.
+/// - Parameter completion: Called after the device responds.
+///   - success: Whether the start handshake succeeded. Device Opus then enters an SDK media session;
+///     SCO and phone microphone do not.
+///   - deviceSideExceptionOccurred: Whether the device reported an exception after the app accepted the request.
+///   - error: An SDK or communication error. If `deviceSideExceptionOccurred` is `YES`, stop the
+///     app-owned service as appropriate.
++ (void)acceptDeviceAIAskingStartRequestWithCompletion:
+    (void (^_Nullable)(BOOL success,
+                       BOOL deviceSideExceptionOccurred,
+                       NSError *_Nullable error))completion;
+
+/// Rejects a pending AIAsking start request previously reported through `FitCloudCallback`.
+/// - Parameters:
+///   - reason: The app-side business reason for rejecting the request.
+///   - completion: Called after the rejection is delivered, or with an error if there is no matching pending request.
++ (void)rejectDeviceAIAskingStartRequestWithReason:(FitCloudAIStartRejectionReason)reason
+                                         completion:(FitCloudCompletionHandler _Nullable)completion;
+
+#pragma mark Send AIAsking ASR result to the watch device
+
+/// Send the AIAsking ASR (Automatic Speech Recognition) result to the watch.
 /// - Parameters:
 ///   - text: The ASR result text to send
 ///   - errorCode: The ASR error code to send
 ///   - completion: A completion handler called when sending completes. Parameters:
 ///     - success: Whether sending was successful
 ///     - error: Error information if sending fails, nil on success
-/// >Warning: This method is only supported on select watch models that implement LLM-question ASR-result confirmation.
+/// >Warning: This method is only supported on select watch models that implement AIAsking ASR-result confirmation.
 ///           Do **not** call it on unsupported devices.
 ///           Always verify device capability before use.
-+ (void)sendLLMQuestionASRResult:(NSString *_Nullable)text
-                       errorCode:(FitCloudASRErrorCode)errorCode
-                      completion:(FitCloudCompletionHandler _Nullable)completion;
++ (void)sendAIAskingASRResult:(NSString *_Nullable)text
+                     errorCode:(FitCloudASRErrorCode)errorCode
+                    completion:(FitCloudCompletionHandler _Nullable)completion;
 
-#pragma mark Send LLM response to the watch device
+#pragma mark Send AIAsking response to the watch device
 
-/// Send the response from a large language model or custom error text to the watch.
+/// Send an AIAsking response or custom error text to the watch.
 /// - Parameters:
-///   - text: The response text generated by the LLM or a custom error text.
-///   - isEnd: Indicates whether this is the final result (`true`) or an intermediate update (`false`).
+///   - text: The AIAsking response text or a custom error text.
+///   - isEnd: Indicates whether this is the final answer content (`true`) or an intermediate update (`false`).
+///     This value does not control the AIAsking voice-session lifecycle; the SDK ends that session when voice transmission completes.
 ///   - resultType: The type of content represented by the text.
 ///   - completion: A closure called when the send operation completes.
 ///               The closure receives a Boolean indicating success and an optional error.
-+ (void)sendLLMResult:(NSString *)text
-                isEnd:(BOOL)isEnd
-           resultType:(LLMRESULTTYPE)resultType
-           completion:(FitCloudCompletionHandler _Nullable)completion;
++ (void)sendAIAskingResult:(NSString *)text
+                      isEnd:(BOOL)isEnd
+                 resultType:(FitCloudAIAskingResultType)resultType
+                 completion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 
@@ -2452,23 +2490,52 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface FitCloudKit (AiChat)
+/// AI chat coordination-session lifecycle.
+///
+/// These APIs synchronize AI chat feature state with the device; they do not start or manage the
+/// app's external AI service. Use `start...` only for a session initiated by the app. When the device
+/// requests a start through `FitCloudCallback`, start the app-owned AI service and call exactly one matching `accept...` or
+/// `reject...` method. Only an accept completion can report `deviceSideExceptionOccurred`; if it does,
+/// the SDK has already ended the failed start: stop the app-owned service, release local resources, and do not send stop or
+/// reject. Once active, either the app or the device may end the session, regardless of who initiated it.
+/// App-initiated SDK sessions always request device Opus. Accepted device SCO or phone-microphone
+/// requests complete without an SDK media session. SDK-managed AI sessions are exclusive.
+@interface FitCloudKit (AIChat)
 
-/// Notify the device the AI chat session initiated success.
-/// - Parameters:
-///   - completion: Callback closure after the report is complete.
-///     - success: Whether the report was successful.
-///     - deviceEncounteredException: Indicates whether the device encountered an exception during initiation. If true, the app must terminate the AI chat.
-///     - error: Error information, `nil` on success.
-+ (void)reportAIChatSessionInitiateSuccess:
-    (void (^_Nullable)(BOOL success, BOOL deviceEncounteredException, NSError *_Nullable error))completion;
+/// Establishes an AI chat coordination session initiated by the app.
+/// Start the app-owned AI chat service before calling this method. This SDK-managed path always
+/// requests device-captured Opus audio.
+/// - Parameter completion: Called after the device responds. `success` is `YES` only when both sides enter the coordinated state;
+///     otherwise `failureReason` describes a device-side start failure and `error` describes an SDK or communication failure.
+/// - Important: Only one AI business session may be pending or active at a time.
++ (void)startAIChatSessionWithCompletion:(FitCloudAIStartCompletion _Nullable)completion;
 
-/// Notify the device the AI chat session initiate failed or already terminated
+/// Stops the active AI chat session.
+/// - Parameter completion: Called after the device confirms the stop operation. `error` is non-nil when the command fails
+///   or no matching AI chat session is active.
++ (void)stopAIChatSessionWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Accepts a pending AI chat start request previously reported through `FitCloudCallback`.
+/// Call this method only after the app has started its AI chat service. This method coordinates
+/// device state; it does not start the AI service or audio capture.
+/// - Parameter completion: Called after the device responds.
+///   - success: Whether the start handshake succeeded. Device Opus then enters an SDK media session;
+///     SCO and phone microphone do not.
+///   - deviceSideExceptionOccurred: Whether the device reported an exception after the app accepted the request.
+///   - error: An SDK or communication error. If `deviceSideExceptionOccurred` is `YES`, the SDK has already
+///     ended the failed start; stop the app-owned service as appropriate without calling stop
+///     or reject. When acceptance succeeds with Opus, the device may begin sending multi-turn incremental audio.
++ (void)acceptDeviceAIChatSessionStartRequestWithCompletion:
+    (void (^_Nullable)(BOOL success,
+                       BOOL deviceSideExceptionOccurred,
+                       NSError *_Nullable error))completion;
+
+/// Rejects a pending AI chat start request previously reported through `FitCloudCallback`.
 /// - Parameters:
-///   - completion: A completion handler called when the operation completes
-///     - success: Whether the termination was successful
-///     - error: Error information if termination fails, nil on success
-+ (void)reportAIChatSessionInitiateFailedOrTerminated:(FitCloudCompletionHandler _Nullable)completion;
+///   - reason: The app-side business reason for rejecting the request.
+///   - completion: Called after the rejection is delivered, or with an error if there is no matching pending request.
++ (void)rejectDeviceAIChatSessionStartRequestWithReason:(FitCloudAIStartRejectionReason)reason
+                                              completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Enable or disable on-device voice wake-up.
 /// - Parameters:
@@ -2489,27 +2556,95 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface FitCloudKit (AiAudioRecording)
+/// AI audio-recording coordination-session lifecycle. These APIs do not create files, upload audio,
+/// transcribe recordings, or manage an external service. Start/stop are app-initiated operations;
+/// accept/reject answer a matching device request. On-site and call recording are distinct scenes.
+/// App-initiated SDK sessions always use device Opus. A device request reports its audio source;
+/// accepted SCO or phone-microphone requests complete the handshake without an SDK media session.
+@interface FitCloudKit (AIAudioRecording)
 
-/// Report AI audio recording start success
+/// Establishes an AI audio-recording coordination session initiated by the app.
+/// Start the app-owned recording business before calling this method. This SDK-managed path always
+/// requests device-captured Opus audio.
 /// - Parameters:
-///   - scene: The scene of the recording
-///   - completion: The completion handler called when the operation completes
-///     - success: Whether the operation was successful
-///     - error: Error information if the operation fails, nil on success
-+ (void)reportAIAudioRecordingStartSuccessWithScene:(FitCloudAIAudioRecordingScene)scene
-                                         completion:(FitCloudCompletionHandler _Nullable)completion;
+///   - scene: The on-site or call-recording business scene.
+///   - completion: Called after the device responds. `success` is `YES` only when both sides enter the coordinated state;
+///     otherwise `failureReason` describes a device-side start failure and `error` describes an SDK or communication failure.
+/// - Important: Only one AI business session may be pending or active at a time.
++ (void)startAIAudioRecordingWithScene:(FitCloudAIAudioRecordingScene)scene
+                            completion:(FitCloudAIStartCompletion _Nullable)completion;
 
-/// Report AI audio recording stopped
+/// Stops the active AI audio-recording session.
+/// - Parameter completion: Called after the device confirms the stop operation. The SDK uses the active session context
+///   to identify the recording scene; an error is returned when no recording session is active.
++ (void)stopAIAudioRecordingWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Accepts a pending AI audio-recording start request previously reported through `FitCloudCallback`.
+/// Call this method only after the app has started its recording business. This method coordinates
+/// device state; it does not start a service or audio capture.
 /// - Parameters:
-///   - completion: The completion handler called when the operation completes
-///     - success: Whether the operation was successful
-///     - error: Error information if the operation fails, nil on success
-+ (void)reportAIAudioRecordingStoppedWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+///   - scene: The recording scene received in the device start-request callback.
+///   - completion: Called after the device responds.
+///     - success: Whether the start handshake succeeded. Device Opus then enters an SDK media session;
+///       SCO and phone microphone do not.
+///     - deviceSideExceptionOccurred: Whether the device reported an exception after the app accepted the request.
+///     - error: An SDK or communication error. If `deviceSideExceptionOccurred` is `YES`, stop the
+///       app-owned business as appropriate.
++ (void)acceptDeviceAIAudioRecordingStartRequestForScene:(FitCloudAIAudioRecordingScene)scene
+                                                completion:(void (^_Nullable)(BOOL success,
+                                                                              BOOL deviceSideExceptionOccurred,
+                                                                              NSError *_Nullable error))completion;
+
+/// Rejects a pending AI audio-recording start request previously reported through `FitCloudCallback`.
+/// - Parameters:
+///   - scene: The recording scene received in the device start-request callback.
+///   - reason: The app-side business reason for rejecting the request.
+///   - completion: Called after the rejection is delivered, or with an error if the scene does not match the pending request.
++ (void)rejectDeviceAIAudioRecordingStartRequestForScene:(FitCloudAIAudioRecordingScene)scene
+                                                   reason:(FitCloudAIStartRejectionReason)reason
+                                               completion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 
+/// Voice ride-hailing coordination-session lifecycle. These APIs synchronize the voice-input phase
+/// with the device; they do not start or manage the app's ride-hailing service, ASR, or order lifecycle.
+/// Start/cancel are app-initiated operations; accept/reject answer a matching device request.
+/// App-initiated SDK sessions always use device Opus. A device request reports its audio source;
+/// accepted SCO or phone-microphone requests complete the handshake without an SDK media session.
 @interface FitCloudKit (VoiceRideHailing)
+
+/// Establishes a voice ride-hailing coordination session initiated by the app.
+/// Start the app-owned ride-hailing/ASR service before calling this method. This SDK-managed path
+/// always requests device-captured Opus audio.
+/// - Parameter completion: Called after the device responds. `success` is `YES` only when both sides enter the coordinated state;
+///     otherwise `failureReason` describes a device-side start failure and `error` describes an SDK or communication failure.
+/// - Important: Only one AI business session may be pending or active at a time.
++ (void)startVoiceRideHailingVoiceSessionWithCompletion:(FitCloudAIStartCompletion _Nullable)completion;
+
+/// Cancels the active single-turn voice ride-hailing session before voice transmission completes.
+/// - Parameter completion: Called after the device confirms the cancellation, or with an error when no matching session is active.
++ (void)cancelVoiceRideHailingVoiceSessionWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Accepts a pending voice ride-hailing start request previously reported through `FitCloudCallback`.
+/// Call this method only after the app has started its ride-hailing service. This method coordinates
+/// device state; it does not start the service or audio capture.
+/// - Parameter completion: Called after the device responds.
+///   - success: Whether the start handshake succeeded. Device Opus then enters an SDK media session;
+///     SCO and phone microphone do not.
+///   - deviceSideExceptionOccurred: Whether the device reported an exception after the app accepted the request.
+///   - error: An SDK or communication error. If `deviceSideExceptionOccurred` is `YES`, stop the
+///     app-owned service as appropriate.
++ (void)acceptDeviceVoiceRideHailingStartRequestWithCompletion:
+    (void (^_Nullable)(BOOL success,
+                       BOOL deviceSideExceptionOccurred,
+                       NSError *_Nullable error))completion;
+
+/// Rejects a pending voice ride-hailing start request previously reported through `FitCloudCallback`.
+/// - Parameters:
+///   - reason: The app-side business reason for rejecting the request.
+///   - completion: Called after the rejection is delivered, or with an error if there is no matching pending request.
++ (void)rejectDeviceVoiceRideHailingStartRequestWithReason:(FitCloudAIStartRejectionReason)reason
+                                                 completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Confirm
 
@@ -2604,8 +2739,53 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// Translation
+/// Translation coordination-session lifecycle. These APIs synchronize a translation utterance with
+/// the device; they do not start or manage the app's translation service or ASR. The mode supplied to
+/// accept/reject must match the pending device request. Standard and both conversation-translation
+/// speakers are supported as separate business modes. App-initiated SDK sessions always use device
+/// Opus; accepted device SCO or phone-microphone requests do not enter an SDK media session.
 @interface FitCloudKit (Translate)
+
+/// Establishes a translation coordination session initiated by the app.
+/// Start the app-owned translation/ASR service before calling this method. This SDK-managed path
+/// always requests device-captured Opus audio.
+/// - Parameters:
+///   - mode: Standard translation or one side of conversation translation.
+///   - completion: Called after the device responds. `success` is `YES` only when both sides enter the coordinated state;
+///     otherwise `failureReason` describes a device-side start failure and `error` describes an SDK or communication failure.
+/// - Important: Only one AI business session may be pending or active at a time.
++ (void)startTranslationVoiceSessionWithMode:(FitCloudAITranslationVoiceMode)mode
+                                   completion:(FitCloudAIStartCompletion _Nullable)completion;
+
+/// Cancels the active single-turn translation voice session before voice transmission completes.
+/// - Parameter completion: Called after the device confirms the cancellation. The SDK uses the active session context
+///   to identify the translation mode; an error is returned when no translation session is active.
++ (void)cancelTranslationVoiceSessionWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Accepts a pending translation start request previously reported through `FitCloudCallback`.
+/// Call this method only after the app has started its translation service. This method coordinates
+/// device state; it does not start the service or audio capture.
+/// - Parameters:
+///   - mode: The translation mode received in the device start-request callback.
+///   - completion: Called after the device responds.
+///     - success: Whether the start handshake succeeded. Device Opus then enters an SDK media session;
+///       SCO and phone microphone do not.
+///     - deviceSideExceptionOccurred: Whether the device reported an exception after the app accepted the request.
+///     - error: An SDK or communication error. If `deviceSideExceptionOccurred` is `YES`, stop the
+///       app-owned service as appropriate.
++ (void)acceptDeviceTranslationVoiceSessionStartRequestForMode:(FitCloudAITranslationVoiceMode)mode
+                                                    completion:(void (^_Nullable)(BOOL success,
+                                                                                  BOOL deviceSideExceptionOccurred,
+                                                                                  NSError *_Nullable error))completion;
+
+/// Rejects a pending translation start request previously reported through `FitCloudCallback`.
+/// - Parameters:
+///   - mode: The translation mode received in the device start-request callback.
+///   - reason: The app-side business reason for rejecting the request.
+///   - completion: Called after the rejection is delivered, or with an error if the mode does not match the pending request.
++ (void)rejectDeviceTranslationVoiceSessionStartRequestForMode:(FitCloudAITranslationVoiceMode)mode
+                                                         reason:(FitCloudAIStartRejectionReason)reason
+                                                     completion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark Send Translation Result
 
@@ -2647,7 +2827,45 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/// AI watch-face coordination-session lifecycle. These APIs synchronize the voice-input phase with
+/// the device; they do not start or manage the app's AI/image-generation service or image lifecycle.
+/// Start/cancel are app-initiated operations; accept/reject answer a matching device request.
+/// App-initiated SDK sessions always use device Opus. A device request reports its audio source;
+/// accepted SCO or phone-microphone requests complete the handshake without an SDK media session.
 @interface FitCloudKit (AIWatchFace)
+
+/// Establishes an AI watch-face coordination session initiated by the app.
+/// Start the app-owned AI watch-face/ASR service before calling this method. This SDK-managed path
+/// always requests device-captured Opus audio.
+/// - Parameter completion: Called after the device responds. `success` is `YES` only when both sides enter the coordinated state;
+///     otherwise `failureReason` describes a device-side start failure and `error` describes an SDK or communication failure.
+/// - Important: Only one AI business session may be pending or active at a time.
++ (void)startAIWatchFaceVoiceSessionWithCompletion:(FitCloudAIStartCompletion _Nullable)completion;
+
+/// Cancels the active single-turn AI watch-face voice session before voice transmission completes.
+/// - Parameter completion: Called after the device confirms the cancellation, or with an error when no matching session is active.
++ (void)cancelAIWatchFaceVoiceSessionWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Accepts a pending AI watch-face start request previously reported through `FitCloudCallback`.
+/// Call this method only after the app has started its AI watch-face service. This method coordinates
+/// device state; it does not start the service or audio capture.
+/// - Parameter completion: Called after the device responds.
+///   - success: Whether the start handshake succeeded. Device Opus then enters an SDK media session;
+///     SCO and phone microphone do not.
+///   - deviceSideExceptionOccurred: Whether the device reported an exception after the app accepted the request.
+///   - error: An SDK or communication error. If `deviceSideExceptionOccurred` is `YES`, stop the
+///     app-owned service as appropriate.
++ (void)acceptDeviceAIWatchFaceStartRequestWithCompletion:
+    (void (^_Nullable)(BOOL success,
+                       BOOL deviceSideExceptionOccurred,
+                       NSError *_Nullable error))completion;
+
+/// Rejects a pending AI watch-face start request previously reported through `FitCloudCallback`.
+/// - Parameters:
+///   - reason: The app-side business reason for rejecting the request.
+///   - completion: Called after the rejection is delivered, or with an error if there is no matching pending request.
++ (void)rejectDeviceAIWatchFaceStartRequestWithReason:(FitCloudAIStartRejectionReason)reason
+                                            completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Sends an AI-generated photo to the connected watch device.
 ///

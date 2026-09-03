@@ -4,21 +4,21 @@
 
 ## Overview
 
-Voice Ride Hailing enables users to initiate a ride-hailing request directly from their smartwatch via voice. The wearable device captures the user's voice, streams it to the companion app, and the app processes the voice to extract ride intent, communicates with the ride-hailing cloud service, and synchronizes the order status back to the device for real-time display.
+Voice Ride Hailing can originate on the watch or in the app. An SDK session exists only for device Opus capture and is not the ride-service or order lifetime. App-initiated SCO/phone-microphone work calls no SDK start/cancel method; only device-originated requests carry `audioSource` and require accept/reject.
 
 ## Architecture
 
 The voice ride hailing flow involves three main parties:
 
-1. **Smartwatch (Device)**: Initiates the voice recording, captures and streams voice data, and displays order status updates.
-2. **Companion App (iPhone)**: Receives voice data from the device, performs ASR (Automatic Speech Recognition) to extract ride intent, interacts with the ride-hailing backend service, and sends status commands back to the device.
+1. **Smartwatch (Device)**: Can request coordination, captures and sends audio for Opus, and displays order status updates.
+2. **Companion App (iPhone)**: Starts ASR and ride services; uses an SDK session for device Opus, owns SCO/phone-microphone audio entirely, and sends order-status updates to the watch.
 3. **Ride-Hailing Cloud Service**: Processes the ride request, dispatches drivers, and returns order status updates.
 
 ## Workflow
 
 ```mermaid
 flowchart LR
-    A[Smartwatch<br>Device] -->|Voice Data| B[Companion App<br>iPhone]
+    A[Smartwatch<br>Device] -->|Opus Audio / Coordination Events| B[Companion App<br>iPhone]
     B -->|Ride Request| C[Ride-Hailing<br>Cloud Service]
     C -->|Order Status| B
     B -->|Status Updates| A
@@ -26,16 +26,16 @@ flowchart LR
 
 ### Step-by-Step Flow
 
-1. **User triggers voice ride hailing on the watch** → Device calls `onVoiceRideHailingBegin`
-2. **Device streams voice data to the app** → Incremental delta voice data + final voice data
-3. **App performs ASR** → Converts voice to text, extracts ride intent (pickup location, destination, vehicle type)
-4. **App calls ride-hailing cloud service** → Sends the ride request
-5. **Cloud returns confirm info** → Pickup, destination, vehicle type, estimated price, wait time
-6. **App sends confirm info to device** → Device displays confirm screen
-7. **Cloud dispatches driver** → Ordering → Accepted / No Driver
-8. **App sends status updates to device** → Device tracks order progress
-9. **Driver arrives** → Device shows arrival info
-10. **Trip completes** → Device shows final price
+1. **User triggers voice ride hailing on the watch** → SDK calls `onDeviceRequestStartVoiceRideHailingWithAudioSource:`
+2. **App starts its services and answers** → Decide whether to handle the requested audio source and start ASR/ride services; call `acceptDeviceVoiceRideHailingStartRequestWithCompletion:` on success, or `rejectDeviceVoiceRideHailingStartRequestWithReason:completion:` on failure
+3. **Handle the audio source** → Opus arrives through SDK callbacks; after accepting a device SCO/phone-microphone request, the SDK handshake ends and the app proceeds independently
+4. **App performs ASR** → Converts voice to text and extracts ride intent
+5. **App calls ride-hailing cloud service** → Sends the ride request
+6. **Cloud returns confirm info** → Pickup, destination, vehicle type, estimated price, wait time
+7. **App sends confirm info to device** → Device displays confirm screen
+8. **Cloud dispatches driver** → Ordering → Accepted / No Driver
+9. **App sends status updates to device** → Device tracks order progress
+10. **Driver arrives and the trip completes** → Device shows arrival info and final price
 
 ---
 
@@ -45,21 +45,40 @@ flowchart LR
 
 #### 1.1 Voice Ride Hailing Start
 
-Notifies that the watch requests to start voice ride hailing. The device will begin capturing and transmitting voice data to the app. The app should prepare to receive voice data and initialize the ASR pipeline.
+Notifies the app that the watch requests a voice ride-hailing coordination session. The app decides whether it can handle the requested audio source and starts its ride/ASR services, then explicitly accepts or rejects. There is no common audio-channel configuration step, and receiving this callback does not mean both sides entered the coordinated state.
 
 ```objc
-- (void)onVoiceRideHailingBegin;
+- (void)onDeviceRequestStartVoiceRideHailingWithAudioSource:(FitCloudAIAudioSource)audioSource;
 ```
 
 **Discussion:**
 
-- Called when the user initiates a voice ride hailing request on the device.
-- Voice data is captured by the device and transmitted to the app. The app does NOT need to record or transmit voice data.
-- The app should initialize its ASR pipeline upon receiving this callback to prepare for subsequent incremental and final voice data.
+- `audioSource` is the channel requested by the device. Opus comes from the device through the SDK; the app owns SCO and phone-microphone audio.
+- Call `acceptDeviceVoiceRideHailingStartRequestWithCompletion:` after the app accepts the audio source and its service starts.
+- If the business service, AI authorization, or another app-side prerequisite fails, call the reject API with the matching `FitCloudAIStartRejectionReason`.
+- If accept completes with `deviceSideExceptionOccurred=YES`, the SDK has ended the failed coordination session. End the newly started app business and do not send cancel/reject.
 
-#### 1.2 Incremental Voice Data (Delta)
+#### 1.2 Device Cancels Current Input
+
+```objc
+- (void)onDeviceDidCancelVoiceRideHailingWithReason:(FitCloudAIDeviceInterruptionReason)reason;
+```
+
+The device has canceled the current single-turn voice ride-hailing input. Tear down ASR, audio, and business resources according to `reason`. Do not call the cancel API again in response to this device-initiated cancellation.
+
+#### 1.3 Device Requests Exit
+
+```objc
+- (void)onDeviceRequestExitVoiceRideHailing;
+```
+
+The device requests the app to leave the voice ride-hailing scene. End the related UI or business state and release its resources.
+
+#### 1.4 Incremental Voice Data (Delta)
 
 Notifies that incremental voice ride hailing voice data has been received. This method is called multiple times during the recording process, allowing for streaming ASR.
+
+> Only the Opus audio source produces the Opus/PCM callbacks in this section and the following section.
 
 ```objc
 - (void)onReceivedVoiceRideHailingDeltaOpusVoiceData:(NSData *_Nullable)deltaOpusVoiceData
@@ -78,7 +97,7 @@ Notifies that incremental voice ride hailing voice data has been received. This 
 - Suitable for streaming ASR services that support real-time recognition.
 - Use the PCM data directly for ASR, or decode the Opus data if your ASR service prefers encoded formats.
 
-#### 1.3 Final Voice Data
+#### 1.5 Final Voice Data
 
 Notifies that voice ride hailing recording has completed and the final voice data is available.
 
@@ -101,11 +120,51 @@ Notifies that voice ride hailing recording has completed and the final voice dat
 
 ---
 
-### 2. Device Command APIs
+### 2. Session Control APIs
+
+These APIs manage only device Opus capture. They do not start ASR, ride services, or UI. App-initiated SCO/phone microphone uses none of these start/cancel APIs. A device non-Opus request still requires accept/reject, but successful accept completes the handshake and releases SDK state. SDK sessions are mutually exclusive and end when voice transfer completes.
+
+| Audio channel | App-side handling |
+|---|---|
+| `FitCloudAIAudioSourceDeviceOpus` | SDK callbacks provide Opus and decoded PCM data for streaming ASR |
+| `FitCloudAIAudioSourceBluetoothSCO` | Device-request callback only; after accept, the app owns the flow |
+| `FitCloudAIAudioSourcePhoneMicrophone` | Device-request callback only; after accept, the app owns permission, capture, and lifecycle |
+
+```objc
+// App requests device Opus capture
++ (void)startVoiceRideHailingVoiceSessionWithCompletion:(FitCloudAIStartCompletion _Nullable)completion;
+
+// App cancels the current input before voice transmission completes
++ (void)cancelVoiceRideHailingVoiceSessionWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+// Answer after the app accepts the audio source and its services have started
++ (void)acceptDeviceVoiceRideHailingStartRequestWithCompletion:
+    (void (^_Nullable)(BOOL success,
+                       BOOL deviceSideExceptionOccurred,
+                       NSError *_Nullable error))completion;
+
+// Answer when app service startup or channel configuration fails
++ (void)rejectDeviceVoiceRideHailingStartRequestWithReason:(FitCloudAIStartRejectionReason)reason
+                                                 completion:(FitCloudCompletionHandler _Nullable)completion;
+```
+
+> `cancelVoiceRideHailingVoiceSession...` cancels only incomplete voice input. `sendVoiceRideHailingStatusCanceled...` reports that the ride order itself was canceled. They belong to different lifetimes and are not interchangeable.
+
+Use `start...` only when the app requests device Opus capture. App-initiated SCO/phone microphone calls neither start nor cancel. A device-originated request follows the callback and accept/reject path.
+
+For an app-initiated start, `FitCloudAIDeviceSideStartFailureReason` reports a device-side business rejection and `error` reports an SDK or communication failure. Reject accepts the semantic reasons `ServiceFailed`, `AuthenticationFailed`, and `Other`; callers do not need to know their protocol representation.
+
+| success | deviceSideExceptionOccurred | error | Meaning |
+|---:|---:|---|---|
+| YES | NO | nil | Opus enters a media session; SCO/phone microphone completes only the handshake and releases SDK state |
+| NO | YES | nil | The app accepted, but the device did not enter the coordinated state; SDK ended the session, so stop local services |
+| NO | NO | non-nil | SDK state, communication, or response validation failed |
+
+### 3. Order Status APIs
 
 The following APIs are used to send order status updates from the app to the device, enabling real-time tracking display on the smartwatch.
 
-#### 2.1 Send Confirm Info
+#### 3.1 Send Confirm Info
 
 Sends ride hailing confirm information to the device after the app receives the initial quote from the cloud service.
 
@@ -133,7 +192,7 @@ Sends ride hailing confirm information to the device after the app receives the 
 
 ---
 
-#### 2.2 Send Ordering Status
+#### 3.2 Send Ordering Status
 
 Sends the "ordering" status to the device, indicating that the ride request is being processed.
 
@@ -148,7 +207,7 @@ Sends the "ordering" status to the device, indicating that the ride request is b
 
 ---
 
-#### 2.3 Send No Driver Status
+#### 3.3 Send No Driver Status
 
 Sends the "no driver" status to the device, indicating that no driver is available.
 
@@ -163,7 +222,7 @@ Sends the "no driver" status to the device, indicating that no driver is availab
 
 ---
 
-#### 2.4 Send Accepted Info
+#### 3.4 Send Accepted Info
 
 Sends the driver acceptance information to the device.
 
@@ -191,7 +250,7 @@ Sends the driver acceptance information to the device.
 
 ---
 
-#### 2.5 Send Canceled Status
+#### 3.5 Send Canceled Status
 
 Sends the "canceled" status to the device, indicating that the order has been canceled.
 
@@ -206,7 +265,7 @@ Sends the "canceled" status to the device, indicating that the order has been ca
 
 ---
 
-#### 2.6 Send Arrived at Pickup Info
+#### 3.6 Send Arrived at Pickup Info
 
 Sends the arrival at pickup point information to the device.
 
@@ -233,7 +292,7 @@ Sends the arrival at pickup point information to the device.
 
 ---
 
-#### 2.7 Send On Trip Info
+#### 3.7 Send On Trip Info
 
 Sends the "on trip" information to the device for real-time trip tracking.
 
@@ -257,7 +316,7 @@ Sends the "on trip" information to the device for real-time trip tracking.
 
 ---
 
-#### 2.8 Send Payment Failed Status
+#### 3.8 Send Payment Failed Status
 
 Sends the "payment failed" status to the device.
 
@@ -272,7 +331,7 @@ Sends the "payment failed" status to the device.
 
 ---
 
-#### 2.9 Send Finished Info
+#### 3.9 Send Finished Info
 
 Sends the trip completion information to the device.
 
@@ -335,9 +394,28 @@ flowchart TD
 ```objc
 #pragma mark - FitCloudCallback
 
-- (void)onVoiceRideHailingBegin {
-    NSLog(@"Voice ride hailing started on device");
-    // Initialize ASR session, e.g., start streaming to your ASR service
+- (void)onDeviceRequestStartVoiceRideHailingWithAudioSource:(FitCloudAIAudioSource)audioSource {
+    // Select the audio source and start app-side ASR/ride services before accepting.
+    if (![self startVoiceRideHailingServicesForAudioSource:audioSource]) {
+        [FitCloudKit rejectDeviceVoiceRideHailingStartRequestWithReason:FitCloudAIStartRejectionReasonServiceFailed
+                                                             completion:nil];
+        return;
+    }
+    [FitCloudKit acceptDeviceVoiceRideHailingStartRequestWithCompletion:
+        ^(BOOL success, BOOL deviceSideExceptionOccurred, NSError *error) {
+            if (!success) {
+                // End local business after failure.
+                [self teardownVoiceRideHailing];
+            }
+        }];
+}
+
+- (void)onDeviceDidCancelVoiceRideHailingWithReason:(FitCloudAIDeviceInterruptionReason)reason {
+    [self teardownVoiceRideHailing];
+}
+
+- (void)onDeviceRequestExitVoiceRideHailing {
+    [self teardownVoiceRideHailing];
 }
 
 - (void)onReceivedVoiceRideHailingDeltaOpusVoiceData:(NSData *)deltaOpusVoiceData
@@ -448,9 +526,28 @@ flowchart TD
 ```swift
 // MARK: - FitCloudCallback
 
-func onVoiceRideHailingBegin() {
-    print("Voice ride hailing started on device")
-    // Initialize ASR session, e.g., start streaming to your ASR service
+func onDeviceRequestStartVoiceRideHailing(withAudioSource audioSource: FitCloudAIAudioSource) {
+    guard startVoiceRideHailingServices(forAudioSource: audioSource) else {
+        FitCloudKit.rejectDeviceVoiceRideHailingStartRequest(
+            with: .serviceFailed,
+            completion: nil
+        )
+        return
+    }
+    FitCloudKit.acceptDeviceVoiceRideHailingStartRequest { [weak self] success, deviceSideExceptionOccurred, error in
+        if !success {
+            // End local business after failure.
+            self?.teardownVoiceRideHailing()
+        }
+    }
+}
+
+func onDeviceDidCancelVoiceRideHailing(with reason: FitCloudAIDeviceInterruptionReason) {
+    teardownVoiceRideHailing()
+}
+
+func onDeviceRequestExitVoiceRideHailing() {
+    teardownVoiceRideHailing()
 }
 
 func onReceivedVoiceRideHailingDeltaOpusVoiceData(_ deltaOpusVoiceData: Data?,

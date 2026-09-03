@@ -343,7 +343,7 @@ extension  FitCloudProSDK: FitCloudCallback {
     /// - Parameters:
     ///   - deltaOpusVoiceData: The incremental voice data in Opus format
     ///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
-    func onASRDeltaOpusVoiceData(_ deltaOpusVoiceData: Data?, decodedDeltaVoiceData deltaVoiceData: Data?) {
+    func onAIChatDeltaOpusVoiceData(_ deltaOpusVoiceData: Data?, decodedDeltaVoiceData deltaVoiceData: Data?) {
         self.isReceivingASROpusData = true
         guard let _ = self.asrTaskId, let appendVoiceDataBlock = self.appendVoiceDataBlock, let deltaVoiceData = deltaVoiceData else {
             return
