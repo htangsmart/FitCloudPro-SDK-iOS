@@ -16,8 +16,8 @@ class FitCloudProSDK: NSObject {
     
     var isWatchDeviceRegisterAIServiceSuccess: Bool = false
     var watchDeviceRegisterAIServiceError: NSError? = nil
-    private var hasCreatedASRTaskBeforeDeviceReady: Bool = false
     private var isReceivingASROpusData: Bool = false
+    private var shouldDeliverAIWatchFaceASRResult: Bool = false
     private var asrTaskId: String? = nil
     private var aigcTaskId: String? = nil
 
@@ -97,12 +97,6 @@ class FitCloudProSDK: NSObject {
                     self?.isWatchDeviceRegisterAIServiceSuccess = false
                 }
             }
-        }
-        if self.hasCreatedASRTaskBeforeDeviceReady, !self.isReceivingASROpusData {
-            self.hasCreatedASRTaskBeforeDeviceReady = false
-            XLOG_INFO("Send ASR error text: \"Task initialized before device was ready. Please try again.\"")
-            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Task initialized before device was ready. Please try again.")
-            self.sendASRErrorText("Task initialized before device was ready. Please try again.", errorCode: .customMessage)
         }
     }
 
@@ -235,11 +229,7 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
     }
     
-    /*func onTranslateVoiceBegin() {
-        
-    }
-    
-    func onTranslateDeltaOpusVoiceData(_ deltaOpusVoiceData: Data?, decodedDeltaVoiceData deltaVoiceData: Data?, sourceLanguage sourceLang: FITCLOUDLANGUAGE, targetLanguage targetLang: FITCLOUDLANGUAGE) {
+    /*func onTranslateDeltaOpusVoiceData(_ deltaOpusVoiceData: Data?, decodedDeltaVoiceData deltaVoiceData: Data?, sourceLanguage sourceLang: FITCLOUDLANGUAGE, targetLanguage targetLang: FITCLOUDLANGUAGE) {
         
     }
     
@@ -270,21 +260,60 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
     }
     
-    /// Notifies that ASR (Automatic Speech Recognition) voice recording has started
-    /// - Note: Called when the watch begins recording voice for ASR
-    func onASRVoiceBegin() {
-        if !FitCloudKit.isDevicePrepareWorkFinished() {
-            self.hasCreatedASRTaskBeforeDeviceReady = true
+    /// Handles a device-initiated AI watch-face voice session.
+    /// FitCloudKit 1.3.2-beta.104 requires the app service to be ready before accepting the request.
+    func onDeviceRequestStartAIWatchFaceVoiceSession(with audioSource: FitCloudAIAudioSource) {
+        guard audioSource == .deviceOpus else {
+            XLOG_WARNING("Unsupported AI watch-face audio source: \(audioSource.rawValue)")
+            FitCloudKit.rejectDeviceAIWatchFaceStartRequest(with: .serviceFailed, completion: nil)
             return
         }
-        // Create a voice-recognition task on a background thread
+
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            self?.asrTaskId = TopStepASRService.shared().createVoiceRecognizeTask(languageForSpeechInput: nil, voiceDataAppendHandler: {[weak self] appendVoiceDataBlock in
-                self?.appendVoiceDataBlock = appendVoiceDataBlock
-            }, pcmBufferAppendHandler: nil, onResult: {[weak self] taskId, isFinal, text, error in
-                self?.processASRResult(taskId, isFinal, text, error)
-            })
+            guard let self else { return }
+            guard self.startAIWatchFaceASRTask() else {
+                FitCloudKit.rejectDeviceAIWatchFaceStartRequest(with: .serviceFailed, completion: nil)
+                return
+            }
+
+            FitCloudKit.acceptDeviceAIWatchFaceStartRequest { [weak self] success, deviceSideExceptionOccurred, error in
+                guard success else {
+                    XLOG_ERROR("Failed to accept AI watch-face voice session: \(String(describing: error)); device exception: \(deviceSideExceptionOccurred)")
+                    self?.teardownAIWatchFaceASRTask()
+                    return
+                }
+                XLOG_INFO("AI watch-face voice session accepted")
+            }
         }
+    }
+
+    private func startAIWatchFaceASRTask() -> Bool {
+        guard FitCloudKit.isDevicePrepareWorkFinished() else {
+            XLOG_ERROR("Cannot start AI watch-face ASR before the device is ready")
+            return false
+        }
+
+        teardownAIWatchFaceASRTask()
+        let taskId = TopStepASRService.shared().createVoiceRecognizeTask(languageForSpeechInput: nil, voiceDataAppendHandler: { [weak self] appendVoiceDataBlock in
+            self?.appendVoiceDataBlock = appendVoiceDataBlock
+        }, pcmBufferAppendHandler: nil, onResult: { [weak self] taskId, isFinal, text, error in
+            self?.processASRResult(taskId, isFinal, text, error)
+        })
+        self.asrTaskId = taskId
+        self.shouldDeliverAIWatchFaceASRResult = taskId != nil
+
+        if taskId == nil {
+            XLOG_ERROR("Failed to create AI watch-face ASR task")
+        }
+        return taskId != nil
+    }
+
+    private func teardownAIWatchFaceASRTask() {
+        shouldDeliverAIWatchFaceASRResult = false
+        isReceivingASROpusData = false
+        asrTaskId = nil
+        appendVoiceDataBlock = nil
+        TopStepASRService.shared().finish()
     }
 
     /// Processes the result from Automatic Speech Recognition (ASR)
@@ -298,13 +327,12 @@ extension  FitCloudProSDK: FitCloudCallback {
     func processASRResult(_ taskId: String?, _ isFinal: Bool, _ text: String?, _ error: (any Error)?) {
         defer {
             if isFinal {
+                self.shouldDeliverAIWatchFaceASRResult = false
                 self.asrTaskId = nil
                 self.appendVoiceDataBlock = nil
             }
         }
-        if self.hasCreatedASRTaskBeforeDeviceReady {
-            return
-        }
+        guard shouldDeliverAIWatchFaceASRResult else { return }
         if let error = error as? NSError {
             XLOG_ERROR("An error occurred during Automatic Speech Recognition (ASR): \(error)")
             var errorCode: FitCloudASRErrorCode = .customMessage
@@ -339,11 +367,11 @@ extension  FitCloudProSDK: FitCloudCallback {
         }
     }
 
-    /// Notifies that incremental ASR voice data has been received
+    /// Notifies that incremental AI watch-face voice data has been received.
     /// - Parameters:
     ///   - deltaOpusVoiceData: The incremental voice data in Opus format
     ///   - deltaVoiceData: The decoded incremental voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
-    func onAIChatDeltaOpusVoiceData(_ deltaOpusVoiceData: Data?, decodedDeltaVoiceData deltaVoiceData: Data?) {
+    func onAIWatchFaceDeltaOpusVoiceData(_ deltaOpusVoiceData: Data?, decodedDeltaVoiceData deltaVoiceData: Data?) {
         self.isReceivingASROpusData = true
         guard let _ = self.asrTaskId, let appendVoiceDataBlock = self.appendVoiceDataBlock, let deltaVoiceData = deltaVoiceData else {
             return
@@ -352,21 +380,15 @@ extension  FitCloudProSDK: FitCloudCallback {
         appendVoiceDataBlock(deltaVoiceData)
     }
 
-    /// Notifies that ASR voice recording has completed with decoded voice data
+    /// Notifies that AI watch-face voice input has completed with decoded voice data.
     /// - Parameters:
     ///   - opusVoiceData: The opus encoded voice data
     ///   - voiceData: The decoded voice data in PCM format (16000Hz sample rate, mono channel, 16-bit)
-    func onASRVoiceStop(withOpusVoiceData opusVoiceData: Data?, decodedVoiceData voiceData: Data?) {
+    func onAIWatchFaceVoiceDataCompleted(withOpusVoiceData opusVoiceData: Data?, decodedVoiceData voiceData: Data?) {
         self.isReceivingASROpusData = false
         if !FitCloudKit.isDevicePrepareWorkFinished() {
             XLOG_INFO("Finished receiving ASR opus data before device is ready...")
-            return
-        }
-        if self.hasCreatedASRTaskBeforeDeviceReady {
-            self.hasCreatedASRTaskBeforeDeviceReady = false
-            XLOG_INFO("Send ASR error text: \"Task initialized before device was ready. Please try again.\"")
-            NotificationCenter.default.post(name: AppNotifcations.aiWatchfaceProgressTips, object: "Task initialized before device was ready. Please try again.")
-            self.sendASRErrorText("Task initialized before device was ready. Please try again.", errorCode: .customMessage)
+            teardownAIWatchFaceASRTask()
             return
         }
         TopStepASRService.shared().finish()
@@ -378,6 +400,16 @@ extension  FitCloudProSDK: FitCloudCallback {
         if let voiceData = voiceData {
             savePCMDataToFile(voiceData, fileName: "asr_voice.pcm")
         }
+    }
+
+    func onDeviceDidCancelAIWatchFaceVoiceSession(with reason: FitCloudAIDeviceInterruptionReason) {
+        XLOG_INFO("Device canceled AI watch-face voice input: \(reason.rawValue)")
+        teardownAIWatchFaceASRTask()
+    }
+
+    func onDeviceRequestExitAIWatchFaceVoiceSession() {
+        XLOG_INFO("Device requested to exit AI watch-face voice input")
+        teardownAIWatchFaceASRTask()
     }
 
     func saveOpusDataToFile(_ opusData: Data, fileName: String) {
