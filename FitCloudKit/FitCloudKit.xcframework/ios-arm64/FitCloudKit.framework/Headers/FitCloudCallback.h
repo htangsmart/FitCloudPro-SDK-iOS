@@ -887,7 +887,9 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   complete only the handshake; the app owns the remaining flow.
 - (void)onDeviceRequestStartVoiceRideHailingWithAudioSource:(FitCloudAIAudioSource)audioSource;
 
-/// Notifies that the device canceled voice ride hailing.
+/// Notifies that an active or pending voice ride-hailing input was canceled because
+/// the device is exiting the scene. This callback is delivered before the exit callback.
+/// It is not emitted when a turn naturally completes with state 0x00.
 /// - Parameter reason: The semantic device-side interruption reason.
 - (void)onDeviceDidCancelVoiceRideHailingWithReason:(FitCloudAIDeviceInterruptionReason)reason;
 
@@ -903,9 +905,11 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 - (void)onDeviceRequestStartTranslationVoiceSessionWithMode:(FitCloudAITranslationVoiceMode)mode
                                                  audioSource:(FitCloudAIAudioSource)audioSource;
 
-/// Notifies that the device canceled a translation voice session.
+/// Notifies that an active or pending translation input was canceled because the
+/// device is exiting the scene. This callback is delivered before the exit callback.
+/// It is not emitted when a turn naturally completes with state 0x00.
 /// - Parameters:
-///   - mode: The translation mode being stopped.
+///   - mode: The translation mode being canceled.
 ///   - reason: The semantic device-side interruption reason.
 - (void)onDeviceDidCancelTranslationVoiceSessionWithMode:(FitCloudAITranslationVoiceMode)mode
                                                     reason:(FitCloudAIDeviceInterruptionReason)reason;
@@ -921,7 +925,9 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   complete only the handshake; the app owns the remaining flow.
 - (void)onDeviceRequestStartAIWatchFaceVoiceSessionWithAudioSource:(FitCloudAIAudioSource)audioSource;
 
-/// Notifies that the device canceled AI watch-face voice input.
+/// Notifies that an active or pending AI watch-face voice input was canceled because
+/// the device is exiting the scene. This callback is delivered before the exit callback.
+/// It is not emitted when a turn naturally completes with state 0x00.
 /// - Parameter reason: The semantic device-side interruption reason.
 - (void)onDeviceDidCancelAIWatchFaceVoiceSessionWithReason:(FitCloudAIDeviceInterruptionReason)reason;
 
@@ -935,7 +941,9 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   complete only the handshake; the app owns the remaining flow.
 - (void)onDeviceRequestStartAIAskingVoiceSessionWithAudioSource:(FitCloudAIAudioSource)audioSource;
 
-/// Notifies that the device canceled AIAsking voice input.
+/// Notifies that an active or pending AIAsking voice input was canceled because the
+/// device is exiting the scene. This callback is delivered before the exit callback.
+/// It is not emitted when a turn naturally completes with state 0x00.
 /// - Parameter reason: The semantic device-side interruption reason.
 - (void)onDeviceDidCancelAIAskingVoiceSessionWithReason:(FitCloudAIDeviceInterruptionReason)reason;
 

@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-09-03 Version:1.3.2-beta.104 Build:20260903001
+## pcjbird 2026-09-07 Version:1.3.2-beta.105 Build:20260907001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -95,6 +95,7 @@
 - Added firmware capability flags for device file fetching, Opus audio playback, offline maps, and other device features.
 - Added support for 410×494 square watch face size.
 - Refactored the public AI APIs around business-specific coordination sessions and added comprehensive integration guides.
+- Fixed single-turn AI voice-session callback sequencing so natural completion is no longer reported as cancellation and interruption callbacks precede exit.
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 

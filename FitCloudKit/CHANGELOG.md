@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.105 build20260907001 (2026-09-07)
+
+- Fixed single-turn AI voice session callback sequencing so natural completion is no longer reported as cancellation and interruption callbacks precede exit.
+
 ## V1.3.2-beta.104 build20260903001 (2026-09-03)
 
 - Refactored the public AI APIs around business-specific coordination sessions and added comprehensive integration guides.
