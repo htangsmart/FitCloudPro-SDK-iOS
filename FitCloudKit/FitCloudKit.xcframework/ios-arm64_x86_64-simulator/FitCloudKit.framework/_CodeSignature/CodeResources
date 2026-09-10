@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/FitCloudAllConfigObject.h</key>
 		<data>
-		CTTc5YTMl9g+0WeflSPyqCQkglU=
+		JKFKQpek/wm9p+ZiGDnia4Gowto=
 		</data>
 		<key>Headers/FitCloudAppSidePermissionStatusModel.h</key>
 		<data>
@@ -35,6 +35,10 @@
 		<key>Headers/FitCloudAppUsageCountStatisticsModel.h</key>
 		<data>
 		I0CXbsuLwQV7jG4vST/l3QFVOuk=
+		</data>
+		<key>Headers/FitCloudAudioRecordingCapabilities.h</key>
+		<data>
+		lENDGur/uojC2PnvrY2PoBgDrnc=
 		</data>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
 		<data>
@@ -54,7 +58,7 @@
 		</data>
 		<key>Headers/FitCloudCapacity.h</key>
 		<data>
-		QhNxcZMCdARiNsobvFPLniziWk0=
+		6EzuhuNlIUwclVjJXCUDjcnKCkM=
 		</data>
 		<key>Headers/FitCloudClassroomModeSettingsModel.h</key>
 		<data>
@@ -174,7 +178,7 @@
 		</data>
 		<key>Headers/FitCloudFirmwareVersionObject.h</key>
 		<data>
-		M7uDj6p6GRpclWiDrbcF0x788dk=
+		SP0sBAAly7KQowgxcN1xsdtHEIo=
 		</data>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
 		<data>
@@ -290,7 +294,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		bJV/kpKREY1O5iMY1aL2GIvyUTg=
+		qC2rUj2+eKDQuEBxSadmfsAnI2k=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -298,7 +302,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		I83mixy2AiQZ5p1LBhSrqIGuJpA=
+		CtrAwgjB5ucQq2TUqPuo0K6pMV0=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -444,6 +448,10 @@
 		<data>
 		aX43RZPLeDUNyy4ZgC0ZRUD6u2Q=
 		</data>
+		<key>Headers/FitCloudWatchfaceCapabilities.h</key>
+		<data>
+		yDSQFbxFowyRQAT1Nn1Mci57i4M=
+		</data>
 		<key>Headers/FitCloudWatchfaceUIInfo.h</key>
 		<data>
 		7CbUM9jFzu9L41M221drVZDjkBs=
@@ -498,7 +506,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zBw7FRaOCznb2xqCGTWGE+cPPMQ=
+		hqMRUV+vA3hdGl6JMT1WhZ+mhYA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -539,7 +547,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hz8X0Q3hfuJSov4mKyQUAEnzwAgJoVK6Xu5uPcKQbKI=
+			Z2x4S+c6V0AJfkrnjGZgdgc/3BFsFdzAQ8HjCTfLHSI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudAppSidePermissionStatusModel.h</key>
@@ -561,6 +569,13 @@
 			<key>hash2</key>
 			<data>
 			FNrTOh7KXDeGkY2OUGU7dBU8AmwgPsBxAdb7GBiW6cc=
+			</data>
+		</dict>
+		<key>Headers/FitCloudAudioRecordingCapabilities.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UWWDVs6/KOHMUepjSrtz+okQIqBDLBoa5q8TVejsgdU=
 			</data>
 		</dict>
 		<key>Headers/FitCloudBPAlarmObject.h</key>
@@ -595,7 +610,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sp+My44TZ+AGOlFrAMu8yEeKrMaCUBT2pID3nACF4iA=
+			hd6us+PqTsU2J1PRn8lXwNanxNYuAXVO3emETO1wLwA=
 			</data>
 		</dict>
 		<key>Headers/FitCloudClassroomModeSettingsModel.h</key>
@@ -805,7 +820,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aEEMyql6GjznKZyeFbBlQ8tLv7v5RQBnMdcUC5nDUBE=
+			lKKecK8xgGBauUSJCn7UU9ZL1XNyLI5gcS4a48yFhkw=
 			</data>
 		</dict>
 		<key>Headers/FitCloudGPSFileExpireTimeModel.h</key>
@@ -1008,7 +1023,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hB+Fl+jZ9LiQVXkY+J9jt6mbd0WASUeO7cWb/fzBqLc=
+			sN6OG2QL5b4kajHaQHpprRI4yHt+C96jcYK16Ylta5U=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -1022,7 +1037,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kLb/A0EYgkoNdIUzJPJ20U4Pox4blAv4FtOMjHERl2Q=
+			7m69RxQgRbJlGgXzGjkhp11bOEUNKKd5WT0i6JKZ+XM=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
@@ -1275,6 +1290,13 @@
 			<key>hash2</key>
 			<data>
 			o6iyfq5L+BBjxWvax+DmXWh+2C8PKo6PWVciSK7yENg=
+			</data>
+		</dict>
+		<key>Headers/FitCloudWatchfaceCapabilities.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oYaPXQ94S5jtgpjuWZUTYGQAY95dn5vqpNpKbJ5NNzk=
 			</data>
 		</dict>
 		<key>Headers/FitCloudWatchfaceUIInfo.h</key>

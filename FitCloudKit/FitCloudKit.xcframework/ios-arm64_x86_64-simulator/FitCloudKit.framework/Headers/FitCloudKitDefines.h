@@ -387,6 +387,18 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICECAPACITY) {
     FITCLOUDDEVICECAPACITY_MAXFUTUREHOURLYWEATHERHOURS = 0x22,
 };
 
+/// 非模版文件类型的表盘旋转角度，数值单位为度。
+/// 模版文件类型的表盘应使用模版文件内定义的角度。
+/// 旋转方向及参考坐标系遵循设备表盘协议。
+typedef NS_ENUM(NSInteger, FitCloudWatchfaceRotation) {
+    /// 未上报旋转信息，或上报了无法识别的旋转编码。
+    FitCloudWatchfaceRotationUnknown = -1,
+    FitCloudWatchfaceRotationDegrees0 = 0,
+    FitCloudWatchfaceRotationDegrees90 = 90,
+    FitCloudWatchfaceRotationDegrees180 = 180,
+    FitCloudWatchfaceRotationDegrees270 = 270,
+};
+
 #pragma mark - 手表硬件
 
 /// 手表硬件功能支持定义

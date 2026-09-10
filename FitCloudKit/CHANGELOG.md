@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.106 build20260910001 (2026-09-10)
+
+- Expanded device capability reporting for advanced watch faces and audio recording, including rotation, pause/resume, and ASR text requirements, and clarified related firmware capability property names.
+
 ## V1.3.2-beta.105 build20260907001 (2026-09-07)
 
 - Fixed single-turn AI voice session callback sequencing so natural completion is no longer reported as cancellation and interruption callbacks precede exit.

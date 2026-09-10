@@ -25,6 +25,8 @@
 #import <FitCloudKit/FitCloudVibrateSetting.h>
 #import <FitCloudKit/FitCloudPowerSavingSetting.h>
 #import <FitCloudKit/FitCloudCapacity.h>
+#import <FitCloudKit/FitCloudWatchfaceCapabilities.h>
+#import <FitCloudKit/FitCloudAudioRecordingCapabilities.h>
 #import <FitCloudKit/FitCloudSecureCoding.h>
 #import <FitCloudKit/FitCloudNotificationApps.h>
 
@@ -104,6 +106,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///首选 AI 解决方案供应商
 @property(nonatomic, readonly) FitCloudPreferredAISolutionVendor preferredAISolutionVendor;
+
+/// 表盘扩展能力。
+@property(nonatomic, strong, readonly, nullable) FitCloudWatchfaceCapabilities *watchfaceCapabilities;
+
+/// 表盘旋转角度。
+@property(nonatomic, readonly) FitCloudWatchfaceRotation watchfaceRotation;
+
+/// 录音扩展能力与要求。
+@property(nonatomic, strong, readonly, nullable) FitCloudAudioRecordingCapabilities *audioRecordingCapabilities;
 
 @end
 

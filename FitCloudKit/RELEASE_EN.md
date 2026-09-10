@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-09-07 Version:1.3.2-beta.105 Build:20260907001
+## pcjbird 2026-09-10 Version:1.3.2-beta.106 Build:20260910001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -96,6 +96,7 @@
 - Added support for 410×494 square watch face size.
 - Refactored the public AI APIs around business-specific coordination sessions and added comprehensive integration guides.
 - Fixed single-turn AI voice-session callback sequencing so natural completion is no longer reported as cancellation and interruption callbacks precede exit.
+- Expanded device capability reporting for advanced watch faces and audio recording, including multiple images, Danmaku, video, rotation, pause/resume, and ASR text requirements.
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 

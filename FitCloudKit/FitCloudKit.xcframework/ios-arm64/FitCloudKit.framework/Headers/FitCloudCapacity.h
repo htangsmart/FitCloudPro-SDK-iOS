@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// the capacity
 @property(nonatomic, readonly) FITCLOUDDEVICECAPACITY capacity;
 
-/// the capacity max value
+/// 原始设备能力值，含义由 capacity 决定：可能是数量、位掩码或枚举编码。
 @property(nonatomic, readonly) NSInteger value;
 
 @end

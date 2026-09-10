@@ -438,10 +438,10 @@
 @property(nonatomic, readonly) BOOL allowOpusAudioPlayback;
 
 /// 是否支持离线地图
-@property(nonatomic, readonly) BOOL withOfflineMap;
+@property(nonatomic, readonly) BOOL withOfflineMaps;
 
 /// 是否支持绿联弹幕
-@property(nonatomic, readonly) BOOL withUgreenBarrage;
+@property(nonatomic, readonly) BOOL withUgreenDanmaku;
 
 /// Opus 传输协议是否包含控制命令
 @property(nonatomic, readonly) BOOL opusTransportProtocolContainsControlCommands;
