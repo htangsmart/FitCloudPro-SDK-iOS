@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-09-10  Version:1.3.2-beta.107 Build:20260910002
+//      pcjbird    2026-09-11  Version:1.3.2-beta.108 Build:20260911001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -21,6 +21,7 @@
 #import <FitCloudKit/FitCloudEvent.h>
 #import <FitCloudKit/FitCloudCallback.h>
 #import <FitCloudKit/FitCloudOption.h>
+#import <FitCloudKit/FitCloudCancellable.h>
 #import <FitCloudKit/FitCloudKitConnectRecord.h>
 #import <FitCloudKit/SmartWatchOperation.h>
 #import <FitCloudKit/SmartWatchOperation+Private.h>
@@ -2139,6 +2140,70 @@ NS_ASSUME_NONNULL_BEGIN
                              completion:(void (^_Nullable)(BOOL success,
                                                            NSString *_Nullable filePath,
                                                            NSError *_Nullable error))completion;
+
+#pragma mark - Offline Maps File
+
+/// Obtains watch authorization, downloads circular region maps and creates a local tar file.
+/// Requires a connected, initialized watch and FitCloudOfflineMaps linked with -ObjC.
+/// The networking plugin is discovered automatically when downloading.
+/// Authorization, region and zoom levels are obtained from the watch automatically.
+/// - longitude: Center longitude, -180...180 degrees. No coordinate conversion is performed.
+/// - latitude: Center latitude, -90...90 degrees, using the same coordinate system as longitude.
+/// - radius: Radius in kilometers, an integer from 2 to 25. Actual coverage may be larger.
+/// - progress: Optional download/packaging progress, 0...1, on the main queue; not a byte percentage.
+/// - completion: Called once on the main queue with a local tar URL, or an error. Remove the file after use.
+/// - Returns: An optional-to-retain cancellation handle. Transfer to the watch is a separate operation.
++ (id<FitCloudCancellable>)downloadOfflineMapsWithLongitude:(double)longitude
+    latitude:(double)latitude radius:(NSUInteger)radius
+    progress:(void (^_Nullable)(double progress))progress
+    completion:(void (^)(NSURL *_Nullable tarURL, NSError *_Nullable error))completion;
+
+/// Pushes a prepared offline map tar archive using OTA file type 25.
+/// Pass the tar file returned by downloadOfflineMapsWithLongitude:latitude:radius:progress:completion:.
+/// Requires firmware.withOfflineMaps and the new OTA transfer service.
+/// - Parameters:
+///   - filePath: Local .tar file path. The filename must not exceed 64 UTF-8 bytes.
+///   - progress: Transfer progress, from 0.0 to 1.0.
+///   - completion: Called on preparation/start failure or transfer completion; avgSpeed is in kB/s.
++ (void)sendOfflineMapsFile:(NSString *)filePath
+                  progress:(void (^_Nullable)(CGFloat progress))progress
+                completion:(void (^_Nullable)(BOOL success, CGFloat avgSpeed, NSError *_Nullable error))completion;
+
+/// Retrieves the list of offline map files stored on the device.
+/// - Parameters:
+///   - completion: The completion handler called with the offline map file list
+///     - success: Whether the operation was successful
+///     - offlineMapsFileArray: The array of offline map file information
+///     - error: The error object if the operation fails
++ (void)fetchOfflineMapsFileListWithCompletion:
+    (void (^_Nullable)(BOOL success,
+                       NSArray<FitCloudFileInfoModel *> *_Nullable offlineMapsFileArray,
+                       NSError *_Nullable error))completion;
+
+/// Deletes the offline map file with the specified file name.
+/// - Parameters:
+///   - fileName: The file name of the offline map file to delete
+///   - completion: The completion handler called when the operation completes
++ (void)deleteOfflineMapsFileWithName:(NSString *_Nonnull)fileName
+                           completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Deletes all offline map files stored on the device.
+/// - Parameters:
+///   - completion: The completion handler called when the operation completes
++ (void)deleteAllOfflineMapsFilesWithCompletion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Retrieves the detail of an offline map file with the specified file name.
+/// - Parameters:
+///   - fileName: The file name of the offline map file to query
+///   - completion: The completion handler called with the offline map file detail
+///     - success: Whether the operation was successful
+///     - fileDetailsInfo: The offline map file details information. `nil` indicates the file does not exist or has been deleted.
+///     - error: The error object if the operation fails
++ (void)fetchOfflineMapsFileDetailWithName:(NSString *_Nonnull)fileName
+                                completion:
+                                       (void (^_Nullable)(BOOL success,
+                                                          FitCloudFileDetailsInfoModel *_Nullable fileDetailsInfo,
+                                                          NSError *_Nullable error))completion;
 
 @end
 

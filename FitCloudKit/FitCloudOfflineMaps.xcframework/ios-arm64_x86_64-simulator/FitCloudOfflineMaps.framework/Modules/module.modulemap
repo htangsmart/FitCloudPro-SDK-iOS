@@ -1,0 +1,6 @@
+framework module FitCloudOfflineMaps {
+  umbrella header "FitCloudOfflineMaps.h"
+  export *
+
+  module * { export * }
+}

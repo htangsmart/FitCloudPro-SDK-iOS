@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.108 build20260911001 (2026-09-11)
+
+- Added support for downloading, transferring, and managing offline maps on compatible watches.
+
 ## V1.3.2-beta.107 build20260910002 (2026-09-10)
 
 - Optimized OTA transfer reliability and stability.

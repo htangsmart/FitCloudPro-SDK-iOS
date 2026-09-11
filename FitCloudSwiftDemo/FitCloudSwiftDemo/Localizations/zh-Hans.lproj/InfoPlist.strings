@@ -10,3 +10,5 @@
 "NSBluetoothPeripheralUsageDescription" = "将使用您的蓝牙外设权限用于与手环设备配对";
 "NSPhotoLibraryAddUsageDescription" = "需要获得相册创建权限用于保存摇一摇拍照照片等";
 "NSPhotoLibraryUsageDescription" = "需要获得相册权限用于设置您的头像信息等";
+
+"NSLocationWhenInUseUsageDescription" = "用于将您的当前位置设为离线地图下载的默认中心点。";

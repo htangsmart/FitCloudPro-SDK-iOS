@@ -41,6 +41,10 @@
     {
         [self openDeviceFilesDemo];
     }
+    else if ([reuseIdentifier isEqualToString:@"OfflineMapsDemoCell"])
+    {
+        [self.navigationController pushViewController:[[OfflineMapsDemoController alloc] init] animated:YES];
+    }
     else if ([reuseIdentifier isEqualToString:@"PCMAudioStreamingDemoCell"])
     {
         [self openPCMAudioStreamingDemo];
