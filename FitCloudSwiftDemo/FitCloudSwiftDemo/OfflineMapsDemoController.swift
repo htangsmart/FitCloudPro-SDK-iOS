@@ -96,7 +96,17 @@ import FitCloudKit
         help.accessibilityLabel = text("Map download guide")
         help.widthAnchor.constraint(equalToConstant: 44).isActive = true
         help.addTarget(self, action: #selector(showGuide), for: .touchUpInside)
-        content.addArrangedSubview(UIStackView(arrangedSubviews: [backButton, UIView(), help]))
+        configure(manageMapsButton, title: "Watch maps", action: #selector(manageWatchMaps))
+        manageMapsButton.accessibilityLabel = text("Manage watch maps")
+        manageMapsButton.titleLabel?.font = .preferredFont(forTextStyle: .subheadline)
+        manageMapsButton.titleLabel?.adjustsFontForContentSizeCategory = true
+        manageMapsButton.contentHorizontalAlignment = .trailing
+        manageMapsButton.setContentHuggingPriority(.required, for: .horizontal)
+        manageMapsButton.setContentCompressionResistancePriority(.required, for: .horizontal)
+        let navigationRow = UIStackView(arrangedSubviews: [backButton, UIView(), help, manageMapsButton])
+        navigationRow.alignment = .center
+        navigationRow.spacing = 8
+        content.addArrangedSubview(navigationRow)
         content.setCustomSpacing(12, after: content.arrangedSubviews.last!)
 
         let heading = label("Offline Maps")
@@ -115,10 +125,6 @@ import FitCloudKit
         hero.spacing = 16
         hero.alignment = .center
         content.addArrangedSubview(hero)
-        configure(manageMapsButton, title: "Manage watch maps", action: #selector(manageWatchMaps))
-        manageMapsButton.setImage(UIImage(systemName: "map"), for: .normal)
-        manageMapsButton.contentHorizontalAlignment = .leading
-        content.addArrangedSubview(manageMapsButton)
 
         let params = vertical([], spacing: 12)
         configure(mapButton, title: "Choose on map", action: #selector(chooseOnMap))

@@ -359,3 +359,11 @@
 "Delete all watch maps?" = "删除手表上的全部地图？";
 "All offline maps on this watch will be removed. Download and send them again to restore them." = "将删除当前手表上的全部离线地图，恢复需要重新下载并推送。";
 "Watch map operation failed. Please try again." = "手表地图操作失败，请重试。";
+"%ld maps · %@" = "%ld 张地图 · %@";
+"Your offline maps" = "已下载的地图";
+"Stored on watch" = "存储在手表上";
+"Tap a map for actions. Swipe left to delete." = "点击查看操作，左滑可删除地图。";
+"Read device details" = "读取设备详情";
+"Reading device details…" = "正在读取设备详情…";
+"Deleting watch maps…" = "正在删除手表地图…";
+"Device details were not returned. You can still delete maps using the list." = "手表未返回详情，仍可通过列表删除地图。";

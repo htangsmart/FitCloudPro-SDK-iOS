@@ -153,3 +153,11 @@
 "Delete all watch maps?" = "Delete all watch maps?";
 "All offline maps on this watch will be removed. Download and send them again to restore them." = "All offline maps on this watch will be removed. Download and send them again to restore them.";
 "Watch map operation failed. Please try again." = "Watch map operation failed. Please try again.";
+"%ld maps · %@" = "%ld maps · %@";
+"Your offline maps" = "Your offline maps";
+"Stored on watch" = "Stored on watch";
+"Tap a map for actions. Swipe left to delete." = "Tap a map for actions. Swipe left to delete.";
+"Read device details" = "Read device details";
+"Reading device details…" = "Reading device details…";
+"Deleting watch maps…" = "Deleting watch maps…";
+"Device details were not returned. You can still delete maps using the list." = "Device details were not returned. You can still delete maps using the list.";
