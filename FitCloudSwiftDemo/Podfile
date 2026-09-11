@@ -29,7 +29,7 @@ target 'FitCloudSwiftDemo' do
   pod 'FitCloudGPSAccelerate',:path => '../Others/GPSAccelerate/'
 
   # Log SDKs
-  pod 'XLFacility', git: 'https://github.com/pcjbird/XLFacility.git'
+  # iOSLogBrowserSDK bundles XLFacility; adding its pod causes duplicate symbols.
   pod 'iOSLogBrowserSDK'
 
   # Other Third party SDKs
@@ -38,4 +38,3 @@ target 'FitCloudSwiftDemo' do
   pod 'Zip', '~> 2.1', :modular_headers => true
   pod 'MBProgressHUD'
 end
-
