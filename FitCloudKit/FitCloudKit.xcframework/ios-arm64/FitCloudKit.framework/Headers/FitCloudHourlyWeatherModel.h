@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) UInt16 airQualityIndex;
 
 /// the humidity (0~100)
-@property(nonatomic, assign) UInt8 humidity;
+//@property(nonatomic, assign) UInt8 humidity;
 
 /// Check if the weather data is valid
 -(BOOL) isValid;

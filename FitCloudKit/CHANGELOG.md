@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.109 build20260916001 (2026-09-16)
+
+- Raised the minimum supported iOS version to iOS 15.0 to meet the requirements of Xcode 27.
+- Removed the humidity field from FitCloudHourlyWeatherModel to ensure firmware compatibility.
+
 ## V1.3.2-beta.108 build20260911001 (2026-09-11)
 
 - Added support for downloading, transferring, and managing offline maps on compatible watches.

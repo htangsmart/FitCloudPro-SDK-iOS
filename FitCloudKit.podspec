@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FitCloudKit'
-  s.version          = '1.3.2-beta.108'
+  s.version          = '1.3.2-beta.109'
   s.summary          = '和唐公司智能手表SDK'
   s.description      = <<-DESC
                       FitCloudPro智能手表iOS开发框架，提供与手表设备通信等功能的封装。
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.changelog        = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudKit/CHANGELOG.md'
   s.screenshot       = 'https://github.com/htangsmart/FitCloudPro-SDK-iOS/blob/master/FitCloudKit/logo.png'
 
-  s.platform         = :ios, '8.0'
+  s.platform         = :ios, '15.0'
   s.frameworks       = 'Foundation', 'CoreBluetooth', 'CoreGraphics'
 
   # Preserve the lightweight default integration; plugins are explicitly opt-in.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'OfflineMaps' do |maps|
-    maps.ios.deployment_target = '12.0'
+    maps.ios.deployment_target = '15.0'
     maps.dependency 'FitCloudKit/Core'
     maps.vendored_frameworks = 'FitCloudKit/FitCloudOfflineMaps.xcframework'
     # The static plugin is discovered at runtime, so its Objective-C classes must be linked.
