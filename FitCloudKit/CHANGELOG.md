@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.110 build20260916002 (2026-09-16)
+
+- Fixed a firmware-side compatibility issue from SDK side.
+
 ## V1.3.2-beta.109 build20260916001 (2026-09-16)
 
 - Raised the minimum supported iOS version to iOS 15.0 to meet the requirements of Xcode 27.
