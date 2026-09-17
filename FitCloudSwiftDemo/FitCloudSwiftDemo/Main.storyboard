@@ -407,6 +407,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="FHW-VC-001" kind="show" id="FHW-SG-001"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="54" id="uzm-pd-lIm">
                                         <rect key="frame" x="0.0" y="285" width="393" height="54"/>
@@ -1297,6 +1300,130 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sN1-IB-ALL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2800" y="806"/>
+        </scene>
+        <!--Future Hourly Weather Controller-->
+        <scene sceneID="FHW-sc-001">
+            <objects>
+                <tableViewController id="FHW-VC-001" customClass="FutureHourlyWeatherController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FHW-TV-001">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.66666666669999997" alpha="0.26621361300000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="FHW-HV-001">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Hourly Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHW-TL-001" customClass="LocalizedLabel">
+                                    <rect key="frame" x="109" y="10" width="175" height="21"/>
+                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randomize or tap Send" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHW-SL-001" customClass="LocalizedLabel">
+                                    <rect key="frame" x="116" y="35.5" width="161" height="14"/>
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHW-BB-001" customClass="LocalizedButton">
+                                    <rect key="frame" x="16" y="9.5" width="52" height="22"/>
+                                    <state key="normal" title="Back" image="back">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="OnGoBack:" destination="FHW-VC-001" eventType="touchUpInside" id="FHW-AC-001"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHW-RB-001" customClass="LocalizedButton">
+                                    <rect key="frame" x="16" y="86" width="120" height="34"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
+                                    <state key="normal" title="Randomize">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="OnRandomize:" destination="FHW-VC-001" eventType="touchUpInside" id="FHW-AC-002"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHW-CL-001" customClass="LocalizedLabel">
+                                    <rect key="frame" x="160" y="93" width="73" height="17"/>
+                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHW-SB-001" customClass="LocalizedButton">
+                                    <rect key="frame" x="257" y="86" width="120" height="34"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
+                                    <state key="normal" title="Send">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="OnSend:" destination="FHW-VC-001" eventType="touchUpInside" id="FHW-AC-003"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="130" id="FHW-C1-001"/>
+                                <constraint firstItem="FHW-BB-001" firstAttribute="leading" secondItem="FHW-HV-001" secondAttribute="leading" constant="16" id="FHW-C2-001"/>
+                                <constraint firstItem="FHW-SL-001" firstAttribute="centerX" secondItem="FHW-HV-001" secondAttribute="centerX" id="FHW-C3-001"/>
+                                <constraint firstItem="FHW-SL-001" firstAttribute="top" secondItem="FHW-BB-001" secondAttribute="bottom" constant="4" id="FHW-C4-001"/>
+                                <constraint firstItem="FHW-TL-001" firstAttribute="top" secondItem="FHW-HV-001" secondAttribute="top" constant="10" id="FHW-C5-001"/>
+                                <constraint firstItem="FHW-TL-001" firstAttribute="centerX" secondItem="FHW-HV-001" secondAttribute="centerX" id="FHW-C6-001"/>
+                                <constraint firstItem="FHW-TL-001" firstAttribute="centerY" secondItem="FHW-BB-001" secondAttribute="centerY" id="FHW-C7-001"/>
+                                <constraint firstItem="FHW-RB-001" firstAttribute="leading" secondItem="FHW-HV-001" secondAttribute="leading" constant="16" id="FHW-C8-001"/>
+                                <constraint firstItem="FHW-RB-001" firstAttribute="top" secondItem="FHW-HV-001" secondAttribute="top" constant="86" id="FHW-C9-001"/>
+                                <constraint firstItem="FHW-RB-001" firstAttribute="width" constant="120" id="FHW-C10-001"/>
+                                <constraint firstItem="FHW-RB-001" firstAttribute="height" constant="34" id="FHW-C11-001"/>
+                                <constraint firstItem="FHW-SB-001" firstAttribute="trailing" secondItem="FHW-HV-001" secondAttribute="trailing" constant="-16" id="FHW-C12-001"/>
+                                <constraint firstItem="FHW-SB-001" firstAttribute="top" secondItem="FHW-HV-001" secondAttribute="top" constant="86" id="FHW-C13-001"/>
+                                <constraint firstItem="FHW-SB-001" firstAttribute="width" constant="120" id="FHW-C14-001"/>
+                                <constraint firstItem="FHW-SB-001" firstAttribute="height" constant="34" id="FHW-C15-001"/>
+                                <constraint firstItem="FHW-CL-001" firstAttribute="centerX" secondItem="FHW-HV-001" secondAttribute="centerX" id="FHW-C16-001"/>
+                                <constraint firstItem="FHW-CL-001" firstAttribute="centerY" secondItem="FHW-RB-001" secondAttribute="centerY" id="FHW-C17-001"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HourlyCell" textLabel="FHW-PL-001" detailTextLabel="FHW-DL-001" style="UITableViewCellStyleSubtitle" rowHeight="54" id="FHW-PC-001">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="54"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FHW-PC-001" id="FHW-PCC-001">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="54"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FHW-PL-001">
+                                            <rect key="frame" x="20" y="6" width="35" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FHW-DL-001">
+                                            <rect key="frame" x="20" y="29" width="44" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FHW-VC-001" id="FHW-DS-001"/>
+                            <outlet property="delegate" destination="FHW-VC-001" id="FHW-DG-001"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="countLabel" destination="FHW-CL-001" id="FHW-OL-001"/>
+                        <outlet property="sendButton" destination="FHW-SB-001" id="FHW-OL-002"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHW-IB-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3700" y="806"/>
         </scene>
         <!--Alarm Controller-->
         <scene sceneID="1q6-3s-rCf">

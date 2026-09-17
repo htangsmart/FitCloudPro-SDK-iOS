@@ -139,52 +139,62 @@
     return names[app] ?: app;
 }
 
+/// 切换单个通知应用开关。
+///
+/// 采用「乐观更新本地缓存」策略：以 `self.enabledApps` 为基准计算新集合
+/// （而不是每次都重新 GET 设备），避免连续快速切换时多次 GET 返回相同的
+/// 旧数据、导致后一次 SET 覆盖前一次的改动（读-改-写竞态）。
+/// 失败时回滚本地状态并恢复开关视觉位置。
 - (void)toggleApp:(FitCloudNotificationApp)app on:(BOOL)on switchView:(UISwitch *)switchView {
     __weak typeof(self) weakSelf = self;
-    [FitCloudKit getEnabledNotificationAppsWithCompletion:^(BOOL succeed,
-                                                            NSSet<FitCloudNotificationApp> *enabled,
-                                                            NSError *error) {
-        if (!succeed) {
-            XLOG_ERROR(@"Failed to get enabled notification apps before updating: %@.", error);
+    // 以本地缓存为基准，计算切换后的新集合。
+    NSMutableSet<FitCloudNotificationApp> *updated = self.enabledApps
+        ? [self.enabledApps mutableCopy]
+        : [NSMutableSet set];
+    if (on) {
+        if ([FitCloudKit isDeviceSupportNotificationApp:app]) {
+            [updated addObject:app];
+        } else {
+            XLOG_WARNING(@"The device does not support notification app: %@.", app);
             dispatch_async(dispatch_get_main_queue(), ^{
-                [switchView setOn:!on animated:YES];
+                [switchView setOn:NO animated:YES];
                 OpResultToastTip(weakSelf.view, false);
             });
             return;
         }
+    } else {
+        [updated removeObject:app];
+    }
 
-        NSMutableSet<FitCloudNotificationApp> *updated = enabled ? [enabled mutableCopy] : [NSMutableSet set];
-        if (on) {
-            if ([FitCloudKit isDeviceSupportNotificationApp:app]) {
-                [updated addObject:app];
-            } else {
-                XLOG_WARNING(@"The device does not support notification app: %@.", app);
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [switchView setOn:NO animated:YES];
-                    OpResultToastTip(weakSelf.view, false);
-                });
-                return;
-            }
+    // 乐观更新本地缓存，使后续的并发切换能看到本次改动。
+    self.enabledApps = [updated copy];
+    [self.tableView reloadData];
+
+    [FitCloudKit setEnabledNotificationApps:updated completion:^(BOOL setSucceed, NSError *setError) {
+        if (!setSucceed) {
+            XLOG_ERROR(@"Failed to set enabled notification apps: %@.", setError);
         } else {
-            [updated removeObject:app];
+            XLOG_INFO(@"Enabled notification apps updated: %@.", updated);
         }
-
-        [FitCloudKit setEnabledNotificationApps:updated completion:^(BOOL setSucceed, NSError *setError) {
-            if (!setSucceed) {
-                XLOG_ERROR(@"Failed to set enabled notification apps: %@.", setError);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (setSucceed) {
+                OpResultToastTip(weakSelf.view, true);
             } else {
-                XLOG_INFO(@"Enabled notification apps updated: %@.", updated);
-            }
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if (setSucceed) {
-                    weakSelf.enabledApps = updated;
-                    OpResultToastTip(weakSelf.view, true);
+                // 回滚：恢复本地缓存并恢复开关视觉位置。
+                NSMutableSet<FitCloudNotificationApp> *reverted = weakSelf.enabledApps
+                    ? [weakSelf.enabledApps mutableCopy]
+                    : [NSMutableSet set];
+                if (on) {
+                    [reverted removeObject:app];
                 } else {
-                    [switchView setOn:!on animated:YES];
-                    OpResultToastTip(weakSelf.view, false);
+                    [reverted addObject:app];
                 }
-            });
-        }];
+                weakSelf.enabledApps = [reverted copy];
+                [switchView setOn:!on animated:YES];
+                [weakSelf.tableView reloadData];
+                OpResultToastTip(weakSelf.view, false);
+            }
+        });
     }];
 }
 
@@ -216,7 +226,7 @@
     cell.textLabel.font = [UIFont fontWithName:@"Menlo-Bold" size:14];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-    BOOL supported = [FitCloudKit isDeviceSupportNotificationApp:app];
+    BOOL supported = YES; //[FitCloudKit isDeviceSupportNotificationApp:app];
     BOOL enabled = self.enabledApps && [self.enabledApps containsObject:app];
     UISwitch *switchView = [UISwitch new];
     switchView.on = enabled;

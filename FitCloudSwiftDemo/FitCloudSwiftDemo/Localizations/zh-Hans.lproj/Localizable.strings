@@ -58,6 +58,8 @@
 "Query Today's Summary Data" = "获取今日运动数据";
 "Manual Sync Data" = "手动同步";
 "Message Reminder" = "消息提醒";
+"All Notification Apps" = "所有通知应用";
+"Toggle switches to control" = "通过开关控制";
 "Alarm" = "闹钟";
 "Sedentary Remind" = "久坐提醒";
 "Drink Remind" = "喝水提醒";
@@ -216,6 +218,14 @@
 "Not Finding" = "未查找";
 
 "Send Hourly Weather (100 Hr)" = "发送未来逐小时天气（100小时）";
+
+"Future Hourly Weather" = "未来逐小时天气";
+"Randomize or tap Send" = "随机生成或点击发送";
+"Randomize" = "随机生成";
+"Send" = "发送";
+"%@ hours" = "%@ 小时";
+"Randomized." = "已随机生成。";
+"Wind %d  UV %d  Vis %@  AQI %d" = "风力 %d  紫外线 %d  能见度 %@  空气质量 %d";
 
 "Upload GPS File (EPO)" = "上传 GPS 文件 (EPO)";
 "GPS Accelerate" = "GPS加速";
