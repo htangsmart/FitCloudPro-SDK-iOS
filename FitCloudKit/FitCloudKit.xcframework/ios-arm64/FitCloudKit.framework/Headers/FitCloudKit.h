@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-09-18  Version:1.3.2-beta.111 Build:20260918001
+//      pcjbird    2026-09-18  Version:1.3.2-beta.112 Build:20260918002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -2204,6 +2204,20 @@ NS_ASSUME_NONNULL_BEGIN
                                        (void (^_Nullable)(BOOL success,
                                                           FitCloudFileDetailsInfoModel *_Nullable fileDetailsInfo,
                                                           NSError *_Nullable error))completion;
+
+/// Clears danmaku (barrage) on the device.
+/// - Parameters:
+///   - mode: The clear mode (all, mine, or friend)
+///   - completion: The completion handler called when the operation completes
++ (void)clearDanmakuWithMode:(FitCloudDanmakuClearMode)mode
+                  completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Sends danmaku (barrage) items to the device.
+/// - Parameters:
+///   - danmakuArray: An array of danmaku models to send
+///   - completion: The completion handler called when the operation completes
++ (void)sendDanmakuArray:(NSArray<FitCloudDanmakuModel *> *_Nonnull)danmakuArray
+              completion:(FitCloudCompletionHandler _Nullable)completion;
 
 @end
 

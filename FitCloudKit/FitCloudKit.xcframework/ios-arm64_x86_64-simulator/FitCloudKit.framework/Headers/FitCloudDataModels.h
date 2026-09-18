@@ -52,6 +52,8 @@
 #import <FitCloudKit/FitCloudFileInfoModel.h>
 #import <FitCloudKit/FitCloudFileDetailsInfoModel.h>
 
+#import <FitCloudKit/FitCloudDanmakuModel.h>
+
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>
 

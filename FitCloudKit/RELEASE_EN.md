@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-09-18 Version:1.3.2-beta.111 Build:20260918001
+## pcjbird 2026-09-18 Version:1.3.2-beta.112 Build:20260918002
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -100,6 +100,7 @@
 - Optimized the OTA transfer process to improve upgrade stability and reliability.
 - Added support for downloading, transferring, and managing offline maps on compatible watches.
 - Fixed an issue where `queryTasksWithCompletion:` returned garbled task data.
+- Added danmaku sending and clearing APIs to send and clear danmaku on the device (Ugreen custom).
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 

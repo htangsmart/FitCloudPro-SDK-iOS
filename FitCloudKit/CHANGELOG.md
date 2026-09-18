@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.112 build20260918002 (2026-09-18)
+
+- Added danmaku sending and clearing APIs for Ugreen-custom devices.
+
 ## V1.3.2-beta.111 build20260918001 (2026-09-18)
 
 - Fixed an issue where queryTasksWithCompletion: returned garbled task data.

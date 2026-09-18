@@ -351,6 +351,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICEFEATURE) {
     FITCLOUDDEVICEFEATURE_BUSINESSCARDQRCODE,
     /// The nucleic acid qrcode
     FITCLOUDDEVICEFEATURE_NUCLEICACIDQRCODE,
+    /// Ugreen danmaku
+    FITCLOUDDEVICEFEATURE_UGREENDANMAKU,
 };
 
 #pragma mark -手表设备能力
@@ -2691,5 +2693,40 @@ typedef NS_ENUM(NSInteger, FitCloudPreferredAISolutionVendor) {
     /// MltCloud AI (骆方案 AI，美乐创) - 眼镜
     FitCloudPreferredAISolutionVendorMltCloudG = 2,
 };
+
+#pragma mark Danmaku
+
+/// Danmaku type
+typedef NS_ENUM(Byte, FitCloudDanmakuType) {
+    /// My danmaku
+    FitCloudDanmakuTypeMine = 1,
+    /// Friend danmaku
+    FitCloudDanmakuTypeFriend = 2,
+};
+
+/// Danmaku clear mode
+typedef NS_ENUM(Byte, FitCloudDanmakuClearMode) {
+    /// Clear all danmaku
+    FitCloudDanmakuClearModeAll = 0,
+    /// Clear my danmaku
+    FitCloudDanmakuClearModeMine = 1,
+    /// Clear friend danmaku
+    FitCloudDanmakuClearModeFriend = 2,
+};
+
+/// Danmaku animation
+typedef NS_ENUM(Byte, FitCloudDanmakuAnimation) {
+    /// No animation
+    FitCloudDanmakuAnimationNone = 0,
+    /// Heart animation
+    FitCloudDanmakuAnimationHeart = 1,
+    /// Birthday animation (1)
+    FitCloudDanmakuAnimationBirthday1 = 2,
+    /// Birthday animation (2)
+    FitCloudDanmakuAnimationBirthday2 = 3,
+};
+
+/// Danmaku random Y coordinate sentinel value (-32768) indicating a random Y position.
+extern const NSInteger FitCloudDanmakuRandomYCoordinate;
 
 #endif /* FitCloudKitDefines_h */
