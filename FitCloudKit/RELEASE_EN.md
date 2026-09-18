@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-09-16 Version:1.3.2-beta.110 Build:20260916002
+## pcjbird 2026-09-18 Version:1.3.2-beta.111 Build:20260918001
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -99,6 +99,7 @@
 - Expanded device capability reporting for advanced watch faces and audio recording, including multiple images, Danmaku, video, rotation, pause/resume, and ASR text requirements.
 - Optimized the OTA transfer process to improve upgrade stability and reliability.
 - Added support for downloading, transferring, and managing offline maps on compatible watches.
+- Fixed an issue where `queryTasksWithCompletion:` returned garbled task data.
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 

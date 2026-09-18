@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.111 build20260918001 (2026-09-18)
+
+- Fixed an issue where queryTasksWithCompletion: returned garbled task data.
+
 ## V1.3.2-beta.110 build20260916002 (2026-09-16)
 
 - Fixed a firmware-side compatibility issue from SDK side.
