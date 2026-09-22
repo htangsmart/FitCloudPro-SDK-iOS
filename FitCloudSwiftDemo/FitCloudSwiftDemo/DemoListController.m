@@ -7,6 +7,7 @@
 //
 
 #import "DemoListController.h"
+#import "CompanionWorkoutDisplayConfigDemoController.h"
 #import "PCMAudioStreamingController.h"
 #import "FitCloudSwiftDemo-Swift.h"
 #define ConsoleResultToastTip(v) [v makeToast:NSLocalizedString(@"View the results in the console.", nil) duration:3.0f position:CSToastPositionTop]
@@ -48,6 +49,11 @@
     else if ([reuseIdentifier isEqualToString:@"PCMAudioStreamingDemoCell"])
     {
         [self openPCMAudioStreamingDemo];
+    }
+    else if ([reuseIdentifier isEqualToString:@"CompanionWorkoutDisplayConfigDemoCell"])
+    {
+        CompanionWorkoutDisplayConfigDemoController *controller = [[CompanionWorkoutDisplayConfigDemoController alloc] init];
+        [self.navigationController pushViewController:controller animated:YES];
     }
     else if(indexPath.row == 0)
     {

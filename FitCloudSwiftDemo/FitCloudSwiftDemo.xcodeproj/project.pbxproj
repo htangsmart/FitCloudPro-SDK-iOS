@@ -99,6 +99,7 @@
 		FCPA00012F8B000000000001 /* PCMAudioStreamingController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCPA00042F8B000000000001 /* PCMAudioStreamingController.m */; };
 		FCPA00022F8B000000000001 /* test_send_16k.pcm in Resources */ = {isa = PBXBuildFile; fileRef = FCPA00052F8B000000000001 /* test_send_16k.pcm */; };
 		FCPA00032F8B000000000001 /* test_send_32k.pcm in Resources */ = {isa = PBXBuildFile; fileRef = FCPA00062F8B000000000001 /* test_send_32k.pcm */; };
+		FCW000012026092200000001 /* CompanionWorkoutDisplayConfigDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCW000032026092200000003 /* CompanionWorkoutDisplayConfigDemoController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,6 +230,8 @@
 		FCPA00052F8B000000000001 /* test_send_16k.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_send_16k.pcm; sourceTree = "<group>"; };
 		FCPA00062F8B000000000001 /* test_send_32k.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_send_32k.pcm; sourceTree = "<group>"; };
 		FCPA00072F8B000000000001 /* PCMAudioStreamingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCMAudioStreamingController.h; sourceTree = "<group>"; };
+		FCW000022026092200000002 /* CompanionWorkoutDisplayConfigDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanionWorkoutDisplayConfigDemoController.h; sourceTree = "<group>"; };
+		FCW000032026092200000003 /* CompanionWorkoutDisplayConfigDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanionWorkoutDisplayConfigDemoController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +316,8 @@
 				89CBFA8A2D6600AE008E7B50 /* DailyGoalSettingController.m */,
 				89CBFA8B2D6600AE008E7B50 /* DemoListController.h */,
 				89CBFA8C2D6600AE008E7B50 /* DemoListController.m */,
+				FCW000022026092200000002 /* CompanionWorkoutDisplayConfigDemoController.h */,
+				FCW000032026092200000003 /* CompanionWorkoutDisplayConfigDemoController.m */,
 				89CBFB032D660608008E7B50 /* DataSyncSwiftDemo.swift */,
 				89CBFA8D2D6600AE008E7B50 /* DeviceBindingController.h */,
 				89CBFA8E2D6600AE008E7B50 /* DeviceBindingController.m */,
@@ -742,6 +747,7 @@
 				8900SB012026091700000001 /* AllNotificationsController.m in Sources */,
 				8900SB042026091700000010 /* FutureHourlyWeatherController.m in Sources */,
 				89CBFA9F2D6600AE008E7B50 /* DemoListController.m in Sources */,
+				FCW000012026092200000001 /* CompanionWorkoutDisplayConfigDemoController.m in Sources */,
 				89CC00552EC05AB30030D405 /* AppNotifcations.swift in Sources */,
 				89CBFAA02D6600AE008E7B50 /* HealthMonitorController.m in Sources */,
 				89CBFAB62D6600BC008E7B50 /* MuslimPrayerParams.m in Sources */,
@@ -792,7 +798,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260917001;
+				CURRENT_PROJECT_VERSION = 20260922001;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -821,7 +827,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudSwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudSwiftDemo.testflight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "FitCloudSwiftDemo/FitCloudSwiftDemo-Bridging-Header.h";
@@ -839,7 +845,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260917001;
+				CURRENT_PROJECT_VERSION = 20260922001;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -868,7 +874,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudSwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudSwiftDemo.testflight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "FitCloudSwiftDemo/FitCloudSwiftDemo-Bridging-Header.h";
