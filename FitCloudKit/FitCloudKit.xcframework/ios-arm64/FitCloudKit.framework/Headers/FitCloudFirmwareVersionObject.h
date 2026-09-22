@@ -446,4 +446,7 @@
 /// Opus 传输协议是否包含控制命令
 @property(nonatomic, readonly) BOOL opusTransportProtocolContainsControlCommands;
 
+/// 是否支持查询互联运动的数据显示项
+@property(nonatomic, readonly) BOOL supportsQueryDisplayConfigForCompanionWorkout;
+
 @end

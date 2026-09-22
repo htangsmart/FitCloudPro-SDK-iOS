@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-09-22  Version:1.3.2-beta.113 Build:20260922001
+//      pcjbird    2026-09-22  Version:1.3.2-beta.114 Build:20260922002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -2345,6 +2345,19 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)queryCompanionWorkoutInfoWithCompletion:
     (void (^_Nullable)(BOOL success,
                        FitCloudCompanionWorkoutInfoModel *_Nullable workoutInfo,
+                       NSError *_Nullable error))completion;
+
+/// Query the display items for a companion workout
+/// - Parameters:
+///   - workoutType: The companion workout type to query
+///   - completion: The completion handler
+///     - success: Indicator whether the operation is successful
+///     - displayItems: Display item values defined by `WORKOUTDATAITEMDISPLAY`, nil if the query failed
+///     - error: Error information if the operation failed
++ (void)queryCompanionWorkoutDisplayConfigForWorkoutType:(FitCloudWorkoutType)workoutType
+                                               completion:
+    (void (^_Nullable)(BOOL success,
+                       NSArray<NSNumber *> *_Nullable displayItems,
                        NSError *_Nullable error))completion;
 
 #pragma mark 开启GSensor

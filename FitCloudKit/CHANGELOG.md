@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.114 build20260922002 (2026-09-22)
+
+- Added an API to query the display items supported by a companion workout type on compatible watches.
+
 ## V1.3.2-beta.113 build20260922001 (2026-09-22)
 
 - Improved BLE command reliability during device disconnection and reconnection, ensuring pending requests complete with the correct error and multi-packet responses remain ordered.
