@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.113 build20260922001 (2026-09-22)
+
+- Improved BLE command reliability during device disconnection and reconnection, ensuring pending requests complete with the correct error and multi-packet responses remain ordered.
+
 ## V1.3.2-beta.112 build20260918002 (2026-09-18)
 
 - Added danmaku sending and clearing APIs for Ugreen-custom devices.
