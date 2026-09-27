@@ -13,10 +13,11 @@ target 'FitCloudSwiftDemo' do
 
   # FitCloudPro SDKs
   # Opt in to the offline maps plugin from the local SDK.
-  pod 'FitCloudKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
-  pod 'FitCloudKit/OfflineMaps', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
-  pod 'FitCloudDFUKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
-  pod 'FitCloudWFKit', git: 'https://github.com/htangsmart/FitCloudPro-SDK-iOS.git'
+  pod 'FitCloudKit', path: '..'
+  pod 'FitCloudKit/OfflineMaps', path: '..'
+  pod 'FitCloudKit/WhatsApp', path: '..'
+  pod 'FitCloudDFUKit', path: '..'
+  pod 'FitCloudWFKit', path: '..'
   
   # LogMate
   

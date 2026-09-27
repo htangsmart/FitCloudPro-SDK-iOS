@@ -1,0 +1,6 @@
+framework module FitCloudWhatsApp {
+  umbrella header "FitCloudWhatsApp.h"
+  export *
+
+  module * { export * }
+}

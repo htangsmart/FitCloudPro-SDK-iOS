@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.115 build20260927001 (2026-09-27)
+
+- Fixed an issue where measurement records delivered through `OnRealTimeHealthMeasuringData:` became empty after the callback returned.
+- Added a WhatsApp companion plugin that enables compatible watches to link an account and send and receive text, image, and voice messages.
+
 ## V1.3.2-beta.114 build20260922002 (2026-09-22)
 
 - Added an API to query the display items supported by a companion workout type on compatible watches.
