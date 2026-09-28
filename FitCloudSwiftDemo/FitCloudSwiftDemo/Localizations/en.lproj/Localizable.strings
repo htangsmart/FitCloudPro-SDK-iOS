@@ -176,3 +176,12 @@
 "Query Failed" = "Query Failed";
 "Unknown Error" = "Unknown Error";
 "No display items returned by the device." = "No display items returned by the device.";
+"Restore Factory Settings" = "Restore Factory Settings";
+"All data and settings on the watch will be erased. Continue?" = "All data and settings on the watch will be erased. Continue?";
+"Restore" = "Restore";
+"Turn Off Watch" = "Turn Off Watch";
+"The watch will turn off and disconnect from the phone. Continue?" = "The watch will turn off and disconnect from the phone. Continue?";
+"Turn Off" = "Turn Off";
+"Reboot Watch" = "Reboot Watch";
+"The watch will restart and temporarily disconnect from the phone. Continue?" = "The watch will restart and temporarily disconnect from the phone. Continue?";
+"Reboot" = "Reboot";

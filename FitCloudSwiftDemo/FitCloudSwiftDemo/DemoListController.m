@@ -11,10 +11,18 @@
 #import "PCMAudioStreamingController.h"
 #import "FitCloudSwiftDemo-Swift.h"
 #define ConsoleResultToastTip(v) [v makeToast:NSLocalizedString(@"View the results in the console.", nil) duration:3.0f position:CSToastPositionTop]
+#define OpResultToastTip(v, success) [v makeToast:success ? NSLocalizedString(@"Op success.", nil) : NSLocalizedString(@"Op failure.", nil) duration:3.0f position:CSToastPositionTop]
 
 @interface DemoListController ()
 
 - (IBAction)OnGoBack:(id)sender;
+- (void)confirmRestoreFactorySettings;
+- (void)confirmTurnOffWatch;
+- (void)confirmRebootWatch;
+- (void)confirmWatchOperationWithTitle:(NSString *)title
+                               message:(NSString *)message
+                          confirmTitle:(NSString *)confirmTitle
+                             operation:(void (^)(FitCloudCompletionHandler completion))operation;
 @end
 
 @implementation DemoListController
@@ -55,6 +63,18 @@
         CompanionWorkoutDisplayConfigDemoController *controller = [[CompanionWorkoutDisplayConfigDemoController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
     }
+    else if ([reuseIdentifier isEqualToString:@"RestoreFactorySettingsDemoCell"])
+    {
+        [self confirmRestoreFactorySettings];
+    }
+    else if ([reuseIdentifier isEqualToString:@"TurnOffWatchDemoCell"])
+    {
+        [self confirmTurnOffWatch];
+    }
+    else if ([reuseIdentifier isEqualToString:@"RebootWatchDemoCell"])
+    {
+        [self confirmRebootWatch];
+    }
     else if(indexPath.row == 0)
     {
         [self fetchSportsDataToday];
@@ -66,6 +86,67 @@
     // row 2 ("Send Hourly Weather (100 Hr)") now segues to
     // FutureHourlyWeatherController in the storyboard; see that controller for
     // randomize + preview + send.
+}
+
+- (void)confirmRestoreFactorySettings
+{
+    [self confirmWatchOperationWithTitle:NSLocalizedString(@"Restore Factory Settings", nil)
+                                 message:NSLocalizedString(@"All data and settings on the watch will be erased. Continue?", nil)
+                            confirmTitle:NSLocalizedString(@"Restore", nil)
+                                operation:^(FitCloudCompletionHandler completion) {
+        [FitCloudKit restoreAsFactorySettingsWithBlock:completion];
+    }];
+}
+
+- (void)confirmTurnOffWatch
+{
+    [self confirmWatchOperationWithTitle:NSLocalizedString(@"Turn Off Watch", nil)
+                                 message:NSLocalizedString(@"The watch will turn off and disconnect from the phone. Continue?", nil)
+                            confirmTitle:NSLocalizedString(@"Turn Off", nil)
+                                operation:^(FitCloudCompletionHandler completion) {
+        [FitCloudKit turnOffWithBlock:completion];
+    }];
+}
+
+- (void)confirmRebootWatch
+{
+    [self confirmWatchOperationWithTitle:NSLocalizedString(@"Reboot Watch", nil)
+                                 message:NSLocalizedString(@"The watch will restart and temporarily disconnect from the phone. Continue?", nil)
+                            confirmTitle:NSLocalizedString(@"Reboot", nil)
+                                operation:^(FitCloudCompletionHandler completion) {
+        [FitCloudKit rebootWithBlock:completion];
+    }];
+}
+
+- (void)confirmWatchOperationWithTitle:(NSString *)title
+                               message:(NSString *)message
+                          confirmTitle:(NSString *)confirmTitle
+                             operation:(void (^)(FitCloudCompletionHandler completion))operation
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil)
+                                              style:UIAlertActionStyleCancel
+                                            handler:nil]];
+
+    __weak typeof(self) weakSelf = self;
+    [alert addAction:[UIAlertAction actionWithTitle:confirmTitle
+                                              style:UIAlertActionStyleDestructive
+                                            handler:^(__unused UIAlertAction *action) {
+        operation(^(BOOL succeed, NSError *error) {
+            XLOG_INFO(@"%@", APP_LOG_STRING(@"%@：%@%@", title,
+                                             succeed ? NSLocalizedString(@"Op success.", nil) : NSLocalizedString(@"Op failure.", nil),
+                                             error ? [NSString stringWithFormat:@" %@", error] : @""));
+            dispatch_async(dispatch_get_main_queue(), ^{
+                __strong typeof(weakSelf) strongSelf = weakSelf;
+                if (strongSelf) {
+                    OpResultToastTip(strongSelf.view, succeed);
+                }
+            });
+        });
+    }]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 

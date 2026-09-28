@@ -392,3 +392,12 @@
 "Query Failed" = "查询失败";
 "Unknown Error" = "未知错误";
 "No display items returned by the device." = "设备未返回展示项。";
+"Restore Factory Settings" = "恢复出厂设置";
+"All data and settings on the watch will be erased. Continue?" = "手表上的所有数据和设置都将被清除，是否继续？";
+"Restore" = "恢复";
+"Turn Off Watch" = "关闭手表";
+"The watch will turn off and disconnect from the phone. Continue?" = "手表将关机并与手机断开连接，是否继续？";
+"Turn Off" = "关机";
+"Reboot Watch" = "重启手表";
+"The watch will restart and temporarily disconnect from the phone. Continue?" = "手表将重启并暂时与手机断开连接，是否继续？";
+"Reboot" = "重启";
