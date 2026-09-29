@@ -2756,4 +2756,38 @@ typedef NS_ENUM(Byte, FitCloudDanmakuAnimation) {
 /// Danmaku random Y coordinate sentinel value (-32768) indicating a random Y position.
 extern const NSInteger FitCloudDanmakuRandomYCoordinate;
 
+#pragma mark - UGREEN Configuration
+
+/// A recording action used by the UGREEN recording-control protocol.
+typedef NS_ENUM(Byte, FitCloudUgreenRecordingAction) {
+    /// Pause recording (protocol value `0`).
+    FitCloudUgreenRecordingActionPause = 0,
+    /// Resume recording (protocol value `1`).
+    FitCloudUgreenRecordingActionResume = 1,
+};
+
+/// The function entered after pressing the device button three times.
+typedef NS_ENUM(Byte, FitCloudUgreenTriplePressFunction) {
+    /// Start on-site recording.
+    FitCloudUgreenTriplePressFunctionOnSiteRecording = 0,
+    /// Start the voice assistant.
+    FitCloudUgreenTriplePressFunctionVoiceAssistant = 1,
+};
+
+/// Device pages that remain always on.
+typedef NS_OPTIONS(Byte, FitCloudUgreenAlwaysOnPage) {
+    FitCloudUgreenAlwaysOnPageNone = 0,
+    FitCloudUgreenAlwaysOnPageMusicControl = 1 << 0,
+    FitCloudUgreenAlwaysOnPageStatus = 1 << 1,
+};
+
+/// Lyrics theme mode.
+typedef NS_ENUM(Byte, FitCloudUgreenLyricsTheme) {
+    FitCloudUgreenLyricsThemeCustom = 0,
+    FitCloudUgreenLyricsThemeDeepSea = 1,
+    FitCloudUgreenLyricsThemeAurora = 2,
+    FitCloudUgreenLyricsThemeStarrySky = 3,
+    FitCloudUgreenLyricsThemeVitality = 4,
+};
+
 #endif /* FitCloudKitDefines_h */

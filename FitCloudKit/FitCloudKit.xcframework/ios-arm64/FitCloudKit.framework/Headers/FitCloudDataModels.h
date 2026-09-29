@@ -53,6 +53,7 @@
 #import <FitCloudKit/FitCloudFileDetailsInfoModel.h>
 
 #import <FitCloudKit/FitCloudDanmakuModel.h>
+#import <FitCloudKit/FitCloudUgreenConfig.h>
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>

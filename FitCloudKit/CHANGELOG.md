@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.116 build20260929001 (2026-09-29)
+
+- Added APIs for UGREEN-compatible devices to coordinate recording pause and resume requests and manage device configuration.
+
 ## V1.3.2-beta.115 build20260927001 (2026-09-27)
 
 - Fixed an issue where measurement records delivered through `OnRealTimeHealthMeasuringData:` became empty after the callback returned.

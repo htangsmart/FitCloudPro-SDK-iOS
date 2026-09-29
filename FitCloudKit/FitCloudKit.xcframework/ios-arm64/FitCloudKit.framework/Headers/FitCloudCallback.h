@@ -827,6 +827,13 @@ typedef void (^FitCloudOtherModulesFirmwareVersionQueryCompletion)(BOOL succeed,
 ///   - findEvent: The event
 - (void)onEarbudsFindStatusChangedWithEvent:(FitCloudEarbudFindEvent)findEvent;
 
+/// The UGREEN device requests a recording action from the App.
+/// This is a request, not a notification that the recording state has already changed.
+/// After handling it, call `performUgreenRecordingAction:milliseconds:completion:`
+/// with the App-side recording position.
+/// - Parameter action: The requested pause or resume action.
+- (void)onUgreenDeviceRequestRecordingAction:(FitCloudUgreenRecordingAction)action;
+
 /// Notifies that the StarBurst AI bridge data has been received
 /// - Parameters:
 ///   - data: The StarBurst AI bridge data

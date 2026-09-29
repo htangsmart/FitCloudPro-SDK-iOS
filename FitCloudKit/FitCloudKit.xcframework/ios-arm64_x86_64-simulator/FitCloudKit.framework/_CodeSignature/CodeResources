@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
-		8CzFAk+XLTTVSKS/5BOjVQ8KZGo=
+		Sf3PEA90GnD2PXesbPT+B6iF8DM=
 		</data>
 		<key>Headers/FitCloudCancellable.h</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>Headers/FitCloudDataModels.h</key>
 		<data>
-		PpKaGQX/gYKDwk+7K5MjVL7rfIQ=
+		QQU8LOe+YdsJMl0laCcFEVig9J4=
 		</data>
 		<key>Headers/FitCloudECard.h</key>
 		<data>
@@ -300,9 +300,13 @@
 		<data>
 		PFQbduc6Mqve+/pMz+OqEpQ9Kb0=
 		</data>
+		<key>Headers/FitCloudKit+UGreen.h</key>
+		<data>
+		41eRXd+razB5WNopDEB6HX7awPE=
+		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		UCoPityuw7i6RplOzauj8pnr0EU=
+		tYLEDWcxFmATrp8dLFam5weFmaE=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -310,7 +314,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		COfXfU8/Nd5YvlbWWX6C5V/G2Ec=
+		Bp3uesmsAAQkJxnz1L6Tv5Ob4TM=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -416,6 +420,10 @@
 		<data>
 		AbMUUijxd5EDFd8DJGrDwLE4KJY=
 		</data>
+		<key>Headers/FitCloudUgreenConfig.h</key>
+		<data>
+		ckjZslm+w+4yXaaJ03LqI7tCClg=
+		</data>
 		<key>Headers/FitCloudUserProfileObject.h</key>
 		<data>
 		QHGswCmKD+3KcSQ5CRUnNHyejeE=
@@ -514,7 +522,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QONGStRzBbBpUw4k3pdJYBwqyB8=
+		USdqE9lP3qifKWZ/OvqJ5sexpGs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -611,7 +619,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4IuajUksZ951h38Kw9CawPUsidqKnw44rHsVOGjZWKE=
+			37gjHFzHRUrncDcQRyl3miZb/eVjkHDrSD4F+pZjkuk=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCancellable.h</key>
@@ -751,7 +759,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VCS6c9jFdywhrAoYkhEKLuGGT/g0k905pPhjN8LYx7k=
+			aYyrLR5xm9asy6p7DzdCr4x8zjNemuJR7mtQdHk/8eI=
 			</data>
 		</dict>
 		<key>Headers/FitCloudECard.h</key>
@@ -1041,11 +1049,18 @@
 			3ehGoYaVNcIaKAwwtFjdIC7SYO79a/L7ArtTeW3uZUg=
 			</data>
 		</dict>
+		<key>Headers/FitCloudKit+UGreen.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			u8u1y+b1E5zH72sJvoT5Us+7Tomiyxn2SSWFqOSdveY=
+			</data>
+		</dict>
 		<key>Headers/FitCloudKit.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QWfNP5OI26Wwd96NuCfguuCX6Wm9Q3wV59gesla46K0=
+			adKBLQuwozncZuiGTRYW/l0hOwRPfGZIvUBCAZe4vLA=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -1059,7 +1074,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ahIqi1xQpSEO+ESc2pVlOgLcjfWgtgMBHfMtPPT5bpU=
+			yGyfAWSf4rNQFhoLFBSols9ZYCsHzE+1OYN5PU49nDA=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
@@ -1242,6 +1257,13 @@
 			<key>hash2</key>
 			<data>
 			gSx5j8p4m3suozMyefxALvyDsjlmNG5/EwYvLjImNRU=
+			</data>
+		</dict>
+		<key>Headers/FitCloudUgreenConfig.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lA2r6Uhrm1/QQm2kjFC0RjEkP/oc4OkoAz2kn6kleac=
 			</data>
 		</dict>
 		<key>Headers/FitCloudUserProfileObject.h</key>
