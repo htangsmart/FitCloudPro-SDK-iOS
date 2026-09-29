@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-09-29  Version:1.3.2-beta.116 Build:20260929001
+//      pcjbird    2026-09-29  Version:1.3.2-beta.117 Build:20260929002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -2291,6 +2291,27 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - block: 调用结果回调
 + (void)requestRealTimeHealthMeasuring:(FitCloudRealTimeHealthMeasuringParam *_Nonnull)rtmParam
                                  block:(FitCloudCompletionHandler _Nullable)block;
+
+#pragma mark V2 ECG measurement
+
+/// Starts V2 ECG measurement.
+///
+/// Measurement updates are delivered through ``FitCloudCallback/onECGMeasurementV2Event:``.
+/// Errors are delivered through ``FitCloudCallback/onECGMeasurementV2Error:``.
+/// Pass 0 for either requested value to let the device choose its default.
+///
+/// - Parameters:
+///   - samplingRate: The requested sampling rate, in hertz.
+///   - durationInSeconds: The requested measurement duration, in seconds.
+///   - completion: Called with the result of starting the measurement.
++ (void)startECGMeasurementV2WithSamplingRate:(UInt16)samplingRate
+                             durationInSeconds:(UInt16)durationInSeconds
+                                    completion:(FitCloudCompletionHandler _Nullable)completion;
+
+/// Stops V2 ECG measurement.
+///
+/// Stopping the measurement explicitly does not produce a completed event.
++ (void)stopECGMeasurementV2WithCompletion:(FitCloudCompletionHandler _Nullable)completion;
 
 #pragma mark 手动同步历史运动健康数据
 

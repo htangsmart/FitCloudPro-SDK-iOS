@@ -449,4 +449,7 @@
 /// 是否支持查询互联运动的数据显示项
 @property(nonatomic, readonly) BOOL supportsQueryDisplayConfigForCompanionWorkout;
 
+/// Whether the device supports V2 ECG measurement.
+@property(nonatomic, readonly) BOOL supportsECGMeasurementV2;
+
 @end

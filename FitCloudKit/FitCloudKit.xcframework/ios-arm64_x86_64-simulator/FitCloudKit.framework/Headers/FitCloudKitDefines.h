@@ -2677,6 +2677,26 @@ typedef NS_ENUM(NSInteger, FitCloudDeviceStorageType) {
     FitCloudDeviceStorageTypeSDCard = 1,
 };
 
+#pragma mark - V2 ECG measurement
+
+/// Events produced during V2 ECG measurement.
+typedef NS_ENUM(NSInteger, FitCloudECGMeasurementV2EventType) {
+    /// The measurement started.
+    FitCloudECGMeasurementV2EventTypeStarted = 0,
+    /// Waveform samples are available.
+    FitCloudECGMeasurementV2EventTypeWaveform,
+    /// The lead-contact state changed.
+    FitCloudECGMeasurementV2EventTypeLeadContact,
+    /// One or more live metrics changed.
+    FitCloudECGMeasurementV2EventTypeMetrics,
+    /// Measurement progress changed.
+    FitCloudECGMeasurementV2EventTypeProgress,
+    /// The measurement completed successfully.
+    FitCloudECGMeasurementV2EventTypeCompleted,
+    /// The measurement failed.
+    FitCloudECGMeasurementV2EventTypeFailed,
+};
+
 #pragma mark - 心电检测
 
 /// 心电检测状态

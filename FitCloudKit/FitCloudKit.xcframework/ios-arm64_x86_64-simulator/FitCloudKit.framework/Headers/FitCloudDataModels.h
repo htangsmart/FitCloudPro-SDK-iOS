@@ -10,6 +10,8 @@
 #define FitCloudModels_h
 
 #import <FitCloudKit/FitCloudWorkoutSlot.h>
+#import <FitCloudKit/FitCloudECGMeasurementV2SummaryObject.h>
+#import <FitCloudKit/FitCloudECGMeasurementV2EventObject.h>
 #import <FitCloudKit/FitCloudAppSidePermissionStatusModel.h>
 #import <FitCloudKit/FitCloudParentControlSettingsModel.h>
 #import <FitCloudKit/FitCloudAppUsageCountStatisticsModel.h>

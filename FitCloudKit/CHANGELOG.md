@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.117 build20260929002 (2026-09-29)
+
+- Added V2 ECG measurement APIs and device capability reporting for compatible watches.
+
 ## V1.3.2-beta.116 build20260929001 (2026-09-29)
 
 - Added APIs for UGREEN-compatible devices to coordinate recording pause and resume requests and manage device configuration.
