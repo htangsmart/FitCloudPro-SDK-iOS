@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.118 build20261014001 (2026-10-14)
+
+- Improved WhatsApp companion image and sticker replies, preserving original media quality and enhancing reconnection reliability on compatible watches.
+
 ## V1.3.2-beta.117 build20260929002 (2026-09-29)
 
 - Added V2 ECG measurement APIs and device capability reporting for compatible watches.
