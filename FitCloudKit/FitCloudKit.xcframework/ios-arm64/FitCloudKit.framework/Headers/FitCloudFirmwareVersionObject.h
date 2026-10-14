@@ -452,4 +452,7 @@
 /// Whether the device supports V2 ECG measurement.
 @property(nonatomic, readonly) BOOL supportsECGMeasurementV2;
 
+/// Whether the device supports WhatsApp features.
+@property(nonatomic, readonly) BOOL supportsWhatsApp;
+
 @end

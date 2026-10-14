@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.2-beta.119 build20261014002 (2026-10-14)
+
+- Added device capability reporting for WhatsApp functionality on compatible watches.
+- Added a hardware capability flag indicating when activity ring data is unavailable on the watch.
+- Added a notification when the watch enters sleep mode.
+
 ## V1.3.2-beta.118 build20261014001 (2026-10-14)
 
 - Improved WhatsApp companion image and sticker replies, preserving original media quality and enhancing reconnection reliability on compatible watches.

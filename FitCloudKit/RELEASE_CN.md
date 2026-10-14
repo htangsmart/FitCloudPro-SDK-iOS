@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2026-10-14 Version:1.3.2-beta.118 Build:20261014001
+## pcjbird 2026-10-14 Version:1.3.2-beta.119 Build:20261014002
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -106,6 +106,8 @@
 - 新增 WhatsApp 配套插件，兼容手表可完成账号绑定，并收发文字、图片和语音消息。
 - 新增 UGREEN 兼容设备的录音暂停与恢复协同控制及设备配置管理 API。
 - 新增 V2 心电测量 API 与设备能力标志，适用于兼容手表。
+- 新增硬件能力标志，用于标识手表端不提供活动三环数据的设备。
+- 新增 `FITCLOUDEVENT_WATCHSIDE_ENTERED_SLEEP_MODE_NOTIFY` 通知，用于通知 App 手表已进入睡眠模式。
 - 增强了 SDK 兼容性，并解决了由固件端代码逻辑问题导致的边缘情况。
 - 进一步提升了 SDK 的稳定性与性能。
 

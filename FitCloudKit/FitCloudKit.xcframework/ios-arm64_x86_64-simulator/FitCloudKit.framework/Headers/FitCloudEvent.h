@@ -222,6 +222,9 @@ extern NSString *const FITCLOUDEVENT_WATCHSIDE_WORKOUT_STARTED_OR_RESUMED_NOTIFY
 /// Notification when watch face is toggled
 extern NSString *const FITCLOUDEVENT_WATCHFACE_TOGGLED_NOTIFY;
 
+/// Notification when the watch enters sleep mode
+extern NSString *const FITCLOUDEVENT_WATCHSIDE_ENTERED_SLEEP_MODE_NOTIFY;
+
 /// Notification of heart rate measurement result
 ///
 /// - Parameter userInfo: Dictionary containing timestamp and heart rate value

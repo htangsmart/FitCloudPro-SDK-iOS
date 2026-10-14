@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-10-14 Version:1.3.2-beta.118 Build:20261014001
+## pcjbird 2026-10-14 Version:1.3.2-beta.119 Build:20261014002
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -107,6 +107,8 @@
 - Added a WhatsApp companion plugin that enables compatible watches to link an account and send and receive text, image, and voice messages.
 - Added APIs for UGREEN-compatible devices to coordinate recording pause and resume control and manage device configuration.
 - Added V2 ECG measurement APIs and a device capability flag for compatible watches.
+- Added a hardware capability flag to identify watches that do not provide activity ring data.
+- Added the `FITCLOUDEVENT_WATCHSIDE_ENTERED_SLEEP_MODE_NOTIFY` notification to notify the app when the watch enters sleep mode.
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 
