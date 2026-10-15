@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.120 build20261015001 (2026-10-15)
+
+- Fixed an issue where device initialization could incorrectly report a timeout after the watch had responded successfully.
+
 ## V1.3.2-beta.119 build20261014002 (2026-10-14)
 
 - Added device capability reporting for WhatsApp functionality on compatible watches.
