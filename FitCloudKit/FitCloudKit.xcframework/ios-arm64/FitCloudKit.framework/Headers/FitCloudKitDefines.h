@@ -387,6 +387,8 @@ typedef NS_ENUM(NSInteger, FITCLOUDDEVICECAPACITY) {
     FITCLOUDDEVICECAPACITY_INCOMINGCALLPHOTOSLOTCOUNT = 0x21,
     /// Maximum number of supported future hourly weather forecast hours
     FITCLOUDDEVICECAPACITY_MAXFUTUREHOURLYWEATHERHOURS = 0x22,
+    /// 支持的最大 V2 日程数量
+    FITCLOUDDEVICECAPACITY_SCHEDULEV2COUNT = 0x31,
 };
 
 /// 非模版文件类型的表盘旋转角度，数值单位为度。

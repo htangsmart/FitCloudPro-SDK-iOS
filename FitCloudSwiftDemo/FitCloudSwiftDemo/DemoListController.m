@@ -63,6 +63,11 @@
         CompanionWorkoutDisplayConfigDemoController *controller = [[CompanionWorkoutDisplayConfigDemoController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
     }
+    else if ([reuseIdentifier isEqualToString:@"ScheduleV2DemoCell"])
+    {
+        ScheduleV2DemoViewController *controller = [[ScheduleV2DemoViewController alloc] init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
     else if ([reuseIdentifier isEqualToString:@"RestoreFactorySettingsDemoCell"])
     {
         [self confirmRestoreFactorySettings];

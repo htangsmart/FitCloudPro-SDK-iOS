@@ -176,6 +176,11 @@ extern NSString *const FITCLOUDEVENT_ALARMLIST_CHANGED_NOTIFY;
 /// - Parameter userInfo: Array of FitCloudScheduleObject instances
 extern NSString *const FITCLOUDEVENT_SCHEDULELIST_CHANGED_NOTIFY;
 
+/// Notification when the V2 schedule list changes
+///
+/// - Parameter object: Array of FitCloudScheduleV2Object instances
+extern NSString *const FITCLOUDEVENT_SCHEDULEV2LIST_CHANGED_NOTIFY;
+
 /// Notification when favorite contacts list changes
 ///
 /// - Parameter userInfo: Array of FitCloudContactObject instances

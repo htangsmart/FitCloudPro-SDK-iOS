@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-10-15  Version:1.3.2-beta.120 Build:20261015001
+//      pcjbird    2026-10-15  Version:1.3.2-beta.121 Build:20261015002
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -244,6 +244,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Watch schedule list
 + (NSArray<FitCloudScheduleObject *> *_Nullable)schedulelist;
 
+/// Watch V2 schedule list
++ (NSArray<FitCloudScheduleV2Object *> *_Nullable)scheduleV2List;
+
 #pragma mark Watch favorite contacts list
 
 /// Watch favorite contacts list
@@ -445,6 +448,23 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - block: The completion handler called with the schedule list
 + (void)getSchedulesWithBlock:(FitCloudSchedulesResultBlock _Nullable)block;
+
+#pragma mark Set V2 Schedules
+
+/// Synchronizes the V2 schedule list from phone to watch.
+/// The device must report a value greater than zero for
+/// `FITCLOUDDEVICECAPACITY_SCHEDULEV2COUNT`.
+/// - Parameters:
+///   - schedules: The V2 schedules. Pass an empty array or nil to clear the list.
+///   - block: The completion handler called when the sync completes.
++ (void)setSchedulesV2:(NSArray<FitCloudScheduleV2Object *> *_Nullable)schedules
+                 block:(FitCloudCompletionHandler _Nullable)block;
+
+#pragma mark Get V2 Schedules
+
+/// Retrieves the V2 schedule list from the watch.
+/// - Parameter block: The completion handler called with the V2 schedule list.
++ (void)getSchedulesV2WithBlock:(FitCloudSchedulesV2ResultBlock _Nullable)block;
 
 #pragma mark Snd Tasks
 

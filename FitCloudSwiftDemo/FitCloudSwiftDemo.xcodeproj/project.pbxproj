@@ -99,6 +99,7 @@
 		FCPA00012F8B000000000001 /* PCMAudioStreamingController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCPA00042F8B000000000001 /* PCMAudioStreamingController.m */; };
 		FCPA00022F8B000000000001 /* test_send_16k.pcm in Resources */ = {isa = PBXBuildFile; fileRef = FCPA00052F8B000000000001 /* test_send_16k.pcm */; };
 		FCPA00032F8B000000000001 /* test_send_32k.pcm in Resources */ = {isa = PBXBuildFile; fileRef = FCPA00062F8B000000000001 /* test_send_32k.pcm */; };
+		FCV200012026101500000001 /* ScheduleV2DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCV200022026101500000002 /* ScheduleV2DemoViewController.swift */; };
 		FCW000012026092200000001 /* CompanionWorkoutDisplayConfigDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCW000032026092200000003 /* CompanionWorkoutDisplayConfigDemoController.m */; };
 /* End PBXBuildFile section */
 
@@ -230,6 +231,7 @@
 		FCPA00052F8B000000000001 /* test_send_16k.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_send_16k.pcm; sourceTree = "<group>"; };
 		FCPA00062F8B000000000001 /* test_send_32k.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_send_32k.pcm; sourceTree = "<group>"; };
 		FCPA00072F8B000000000001 /* PCMAudioStreamingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCMAudioStreamingController.h; sourceTree = "<group>"; };
+		FCV200022026101500000002 /* ScheduleV2DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleV2DemoViewController.swift; sourceTree = "<group>"; };
 		FCW000022026092200000002 /* CompanionWorkoutDisplayConfigDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanionWorkoutDisplayConfigDemoController.h; sourceTree = "<group>"; };
 		FCW000032026092200000003 /* CompanionWorkoutDisplayConfigDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanionWorkoutDisplayConfigDemoController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -316,6 +318,7 @@
 				89CBFA8A2D6600AE008E7B50 /* DailyGoalSettingController.m */,
 				89CBFA8B2D6600AE008E7B50 /* DemoListController.h */,
 				89CBFA8C2D6600AE008E7B50 /* DemoListController.m */,
+				FCV200022026101500000002 /* ScheduleV2DemoViewController.swift */,
 				FCW000022026092200000002 /* CompanionWorkoutDisplayConfigDemoController.h */,
 				FCW000032026092200000003 /* CompanionWorkoutDisplayConfigDemoController.m */,
 				89CBFB032D660608008E7B50 /* DataSyncSwiftDemo.swift */,
@@ -747,6 +750,7 @@
 				8900SB012026091700000001 /* AllNotificationsController.m in Sources */,
 				8900SB042026091700000010 /* FutureHourlyWeatherController.m in Sources */,
 				89CBFA9F2D6600AE008E7B50 /* DemoListController.m in Sources */,
+				FCV200012026101500000001 /* ScheduleV2DemoViewController.swift in Sources */,
 				FCW000012026092200000001 /* CompanionWorkoutDisplayConfigDemoController.m in Sources */,
 				89CC00552EC05AB30030D405 /* AppNotifcations.swift in Sources */,
 				89CBFAA02D6600AE008E7B50 /* HealthMonitorController.m in Sources */,

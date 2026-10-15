@@ -1,6 +1,6 @@
 # 版本更新日志
 
-## pcjbird 2026-10-15 Version:1.3.2-beta.120 Build:20261015001
+## pcjbird 2026-10-15 Version:1.3.2-beta.121 Build:20261015002
 
 - 在连接过程中阻止设备扫描。
 - 新增 `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` 事件，用于通知设备扫描开始时出现错误。
@@ -108,6 +108,7 @@
 - 新增 V2 心电测量 API 与设备能力标志，适用于兼容手表。
 - 新增硬件能力标志，用于标识手表端不提供活动三环数据的设备。
 - 新增 `FITCLOUDEVENT_WATCHSIDE_ENTERED_SLEEP_MODE_NOTIFY` 通知，用于通知 App 手表已进入睡眠模式。
+- 新增 V2 日程设置与查询 API，并支持兼容手表上报最大日程数量。
 - 增强了 SDK 兼容性，并解决了由固件端代码逻辑问题导致的边缘情况。
 - 进一步提升了 SDK 的稳定性与性能。
 

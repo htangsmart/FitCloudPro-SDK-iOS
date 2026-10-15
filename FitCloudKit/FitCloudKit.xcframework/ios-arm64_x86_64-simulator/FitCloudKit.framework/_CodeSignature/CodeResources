@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/FitCloudCallback.h</key>
 		<data>
-		/Ujai6/fuOnc01LTDI3a0ZCuKow=
+		sP3AInzbC348upd+p6JOk/c3/+4=
 		</data>
 		<key>Headers/FitCloudCancellable.h</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>Headers/FitCloudDataModels.h</key>
 		<data>
-		6g31b1ni8KHglcUGp4eoPhZyd1E=
+		cLQeU4Zcv7lvl9bDlry4rr5hLy4=
 		</data>
 		<key>Headers/FitCloudECGMeasurementV2EventObject.h</key>
 		<data>
@@ -174,7 +174,7 @@
 		</data>
 		<key>Headers/FitCloudEvent.h</key>
 		<data>
-		mfmheqFfQJtVIAumlIDtTaSvsiA=
+		5D+v7HfYitr8gVyrqET5L/gRcRo=
 		</data>
 		<key>Headers/FitCloudFestivalWishTimeModel.h</key>
 		<data>
@@ -314,7 +314,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		obPsCmBohAh2cKHA/547drxNRls=
+		xhrORZjDbitmYwtNFBvqbbJraf0=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -322,7 +322,7 @@
 		</data>
 		<key>Headers/FitCloudKitDefines.h</key>
 		<data>
-		GaIZBv4rqxIwpYKj8i48J0iOZ3c=
+		OjACQP5IW4H5A63t60fZHYPUhxs=
 		</data>
 		<key>Headers/FitCloudLSRObject.h</key>
 		<data>
@@ -391,6 +391,10 @@
 		<key>Headers/FitCloudScheduleObject.h</key>
 		<data>
 		Y5cLvrJArcUWWrPtGGcwNS3gAT8=
+		</data>
+		<key>Headers/FitCloudScheduleV2Object.h</key>
+		<data>
+		/WmYCXmuUJ3WVuh1NArmvv2Wi24=
 		</data>
 		<key>Headers/FitCloudScreenResolution.h</key>
 		<data>
@@ -530,7 +534,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EBJ6yrXWwE8HrqhwgKwgxtnCvI8=
+		uyLj8LomTWm8xkTw8MLeOD1OEW0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -627,7 +631,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Aq5owpra2CJJzIffXeK2zlaWuZjIitvMIKU18HUVcfI=
+			KEZTQPGdnkO9657WjB5v9/5C6FTMte/ScyHyNNTKpp4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudCancellable.h</key>
@@ -767,7 +771,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWLI09uHnZHjcYpSvvLVzb6kpmJzKfJdjFGJa6m5b5A=
+			a7MxqvY4unK6ghu10setjBSs65UXy747TKmVfka9JtM=
 			</data>
 		</dict>
 		<key>Headers/FitCloudECGMeasurementV2EventObject.h</key>
@@ -837,7 +841,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m4ntLsNc0T5/MN+PUogv/nuD1qdq60ykvrN/76RelOA=
+			sN+00nbCl4cQCbYL8GLKU2h8elIYpbUnxGLaXZmeTbA=
 			</data>
 		</dict>
 		<key>Headers/FitCloudFestivalWishTimeModel.h</key>
@@ -1082,7 +1086,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pIK6U3ZZw2nKQ7fNpwU98FDnOnojH12exbaQ5tSseco=
+			sHmKLRcw/gpnVcdAmknkXztfcMxMyy4rA8N0F86Yklg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
@@ -1096,7 +1100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SnrC1Py+ybNvkb34SX8CaLSEwtsqcpsdiQmM5Zox+SI=
+			5PBjpPNoDaGwqPhohaH5W/FmeWYfjeK4WBxRZiMtlW4=
 			</data>
 		</dict>
 		<key>Headers/FitCloudLSRObject.h</key>
@@ -1216,6 +1220,13 @@
 			<key>hash2</key>
 			<data>
 			Gb2SCnYp3BDh6a8SYcyhJoPbNjrIvwXK8/yfYcuqvkw=
+			</data>
+		</dict>
+		<key>Headers/FitCloudScheduleV2Object.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uT9tJsMJjwA1w7YbkpB4qzlPF2wiDAD3SQpHUQs9/QU=
 			</data>
 		</dict>
 		<key>Headers/FitCloudScreenResolution.h</key>

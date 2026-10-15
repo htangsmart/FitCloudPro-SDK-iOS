@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-10-15 Version:1.3.2-beta.120 Build:20261015001
+## pcjbird 2026-10-15 Version:1.3.2-beta.121 Build:20261015002
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -109,6 +109,7 @@
 - Added V2 ECG measurement APIs and a device capability flag for compatible watches.
 - Added a hardware capability flag to identify watches that do not provide activity ring data.
 - Added the `FITCLOUDEVENT_WATCHSIDE_ENTERED_SLEEP_MODE_NOTIFY` notification to notify the app when the watch enters sleep mode.
+- Added V2 schedule setting and query APIs, with maximum schedule count reporting on compatible watches.
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 

@@ -37,6 +37,7 @@
 #import <FitCloudKit/FitCloudHandWashRemindObject.h>
 #import <FitCloudKit/FitCloudLockScreenSetting.h>
 #import <FitCloudKit/FitCloudScheduleObject.h>
+#import <FitCloudKit/FitCloudScheduleV2Object.h>
 #import <FitCloudKit/FitCloudGameObject.h>
 #import <FitCloudKit/FitCloudGameSkinObject.h>
 #import <FitCloudKit/FitCloudScreenSetting.h>
@@ -128,6 +129,13 @@ typedef void (^FitCloudAlarmClockFetchCompletion)(BOOL success, NSArray<FitCloud
 ///   - list: 日程列表
 ///   - error: 错误信息
 typedef void (^FitCloudSchedulesResultBlock)(BOOL succeed, NSArray<FitCloudScheduleObject *> *_Nullable list, NSError *_Nullable error);
+
+/// Completion handler for fetching V2 schedules.
+/// - Parameters:
+///   - succeed: Whether the operation succeeded.
+///   - list: The V2 schedule list.
+///   - error: Error information.
+typedef void (^FitCloudSchedulesV2ResultBlock)(BOOL succeed, NSArray<FitCloudScheduleV2Object *> *_Nullable list, NSError *_Nullable error);
 
 /// FitCloud 获取任务列表调用结果回调
 /// - Parameters:

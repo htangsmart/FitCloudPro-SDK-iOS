@@ -43,6 +43,7 @@
 #import <FitCloudKit/FitCloudActivityDataModel.h>
 #import <FitCloudKit/FitCloudHRVDataModel.h>
 #import <FitCloudKit/FitCloudSleepDataModel.h>
+#import <FitCloudKit/FitCloudScheduleV2Object.h>
 
 #import <FitCloudKit/FitCloudVoiceRideHailingConfirmModel.h>
 #import <FitCloudKit/FitCloudVoiceRideHailingAcceptedModel.h>

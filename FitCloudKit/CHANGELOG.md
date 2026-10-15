@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.121 build20261015002 (2026-10-15)
+
+- Added V2 schedule APIs and device capability reporting for compatible watches.
+
 ## V1.3.2-beta.120 build20261015001 (2026-10-15)
 
 - Fixed an issue where device initialization could incorrectly report a timeout after the watch had responded successfully.
