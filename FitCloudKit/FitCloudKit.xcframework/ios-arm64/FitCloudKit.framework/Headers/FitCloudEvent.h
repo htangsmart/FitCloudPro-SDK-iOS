@@ -12,6 +12,10 @@
 
 #pragma mark - FitCloud Event Definitions
 
+/// Exercise/resting heart rate alert. object is a FitCloudHeartRateAlertEvent; userInfo is nil.
+extern NSString *const FITCLOUDEVENT_HEART_RATE_ALERT_NOTIFY;
+
+
 /// Notification when CentralManager state changes
 ///
 /// - Parameter object: CBCentralManager instance

@@ -455,4 +455,7 @@
 /// Whether the device supports WhatsApp features.
 @property(nonatomic, readonly) BOOL supportsWhatsApp;
 
+/// Whether the device supports factory test OTA mode.
+@property(nonatomic, readonly) BOOL supportsFactoryTestOTAMode;
+
 @end

@@ -45,6 +45,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设备产品类型
 @property(nonatomic, readonly) FitCloudDeviceProductType productType;
 
+/// The device's screen shape.
+/// - @0: Rectangle.
+/// - @1: Circle.
+/// - nil: Unknown or not applicable.
+/// A nil value does not indicate that the device has no screen.
+@property(nonatomic, strong, readonly, nullable) NSNumber *screenShape;
+
 /// 主项目号
 @property(nonatomic, strong, nullable) NSString* mainProjNo;
 

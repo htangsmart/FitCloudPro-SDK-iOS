@@ -10,6 +10,7 @@
 #define FitCloudModels_h
 
 #import <FitCloudKit/FitCloudWorkoutSlot.h>
+#import <FitCloudKit/FitCloudHeartRateAlertEvent.h>
 #import <FitCloudKit/FitCloudECGMeasurementV2SummaryObject.h>
 #import <FitCloudKit/FitCloudECGMeasurementV2EventObject.h>
 #import <FitCloudKit/FitCloudAppSidePermissionStatusModel.h>

@@ -260,6 +260,14 @@ typedef NS_ENUM(NSInteger, FitCloudDeviceProductType) {
     FitCloudDeviceProductTypeSpeaker = 6,
     /// the smart earrings product
     FitCloudDeviceProductTypeEarrings = 7,
+    /// A wristband without a screen.
+    FitCloudDeviceProductTypeScreenlessBand = 8,
+    /// A wristband with a screen.
+    FitCloudDeviceProductTypeScreenBand = 9,
+    /// An eye mask.
+    FitCloudDeviceProductTypeEyeMask = 10,
+    /// Over-ear or on-ear headphones.
+    FitCloudDeviceProductTypeHeadphones = 11,
 };
 
 #pragma mark - the watch common features define
@@ -2731,18 +2739,43 @@ typedef NS_ENUM(UInt8, ECGDETCTIONSTARTERRORFLAG) {
     ECGDETCTIONSTARTERRORFLAG_ERROR = 0x01,
 };
 
-#pragma mark - Preferred AI Solution Vendor
+#pragma mark - Heart Rate Alerts
 
-/// Preferred AI Solution Vendor
-typedef NS_ENUM(NSInteger, FitCloudPreferredAISolutionVendor) {
-    /// Unknown
-    FitCloudPreferredAISolutionVendorNone = -1,
-    /// StarBurst AI (星芒 AI，字节跳动)
-    FitCloudPreferredAISolutionVendorStarBurst = 0,
-    /// MltCloud AI (骆方案 AI，美乐创) - 手表
-    FitCloudPreferredAISolutionVendorMltCloudW = 1,
-    /// MltCloud AI (骆方案 AI，美乐创) - 眼镜
-    FitCloudPreferredAISolutionVendorMltCloudG = 2,
+/// Supported heart rate alerts. Exercise means during exercise; resting means at rest.
+typedef NS_OPTIONS(NSUInteger, FitCloudHeartRateAlertCapabilities) {
+    FitCloudHeartRateAlertCapabilitiesNone = 0,
+    FitCloudHeartRateAlertCapabilitiesExerciseLow = 1UL << 0,
+    FitCloudHeartRateAlertCapabilitiesExerciseHigh = 1UL << 1,
+    FitCloudHeartRateAlertCapabilitiesRestingLow = 1UL << 2,
+    FitCloudHeartRateAlertCapabilitiesRestingHigh = 1UL << 3,
+};
+
+/// A single heart rate alert. Values are independent of protocol notification codes.
+typedef NS_ENUM(NSUInteger, FitCloudHeartRateAlertType) {
+    FitCloudHeartRateAlertTypeExerciseHigh,
+    FitCloudHeartRateAlertTypeExerciseLow,
+    FitCloudHeartRateAlertTypeRestingHigh,
+    FitCloudHeartRateAlertTypeRestingLow,
+};
+
+#pragma mark - Supported AI Solution Vendors
+
+/// 设备支持的 AI 解决方案供应商，可通过按位或组合多个供应商。
+typedef NS_OPTIONS(NSUInteger, FitCloudAISolutionVendor) {
+    /// 无支持的供应商
+    FitCloudAISolutionVendorNone = 0,
+    /// 火山（StarBurst，字节跳动）
+    FitCloudAISolutionVendorStarBurst = 1UL << 0,
+    /// 骆方案（美乐创）- 手表
+    FitCloudAISolutionVendorMltCloudWatch = 1UL << 1,
+    /// 骆方案（美乐创）- 眼镜
+    FitCloudAISolutionVendorMltCloudGlasses = 1UL << 2,
+    /// 沃奇
+    FitCloudAISolutionVendorWatchFun = 1UL << 3,
+    /// 岩界
+    FitCloudAISolutionVendorXKSmart = 1UL << 4,
+    /// 自研方案
+    FitCloudAISolutionVendorTopStep = 1UL << 5,
 };
 
 #pragma mark Danmaku

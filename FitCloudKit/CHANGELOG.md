@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## V1.3.2-beta.122 build20261020001 (2026-10-20)
+
+- Replaced preferredAISolutionVendor with supportedAISolutionVendors to report all AI solution vendors supported by a device.
+- Added an API and device capability reporting for enabling or disabling factory test OTA mode.
+- Added exercise and resting heart rate alert capabilities and notifications, with compatible alert settings.
+- Expanded device discovery and product type recognition, and added screen shape reporting for discovered devices.
+
 ## V1.3.2-beta.121 build20261015002 (2026-10-15)
 
 - Added V2 schedule APIs and device capability reporting for compatible watches.

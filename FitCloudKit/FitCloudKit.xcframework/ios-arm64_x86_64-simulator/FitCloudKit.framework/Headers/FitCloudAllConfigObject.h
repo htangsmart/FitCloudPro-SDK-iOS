@@ -104,8 +104,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// 锁屏密码长度
 @property(nonatomic, strong, nullable) NSNumber *lockScreenPasswordLength;
 
-///首选 AI 解决方案供应商
-@property(nonatomic, readonly) FitCloudPreferredAISolutionVendor preferredAISolutionVendor;
+/// 设备支持的 AI 解决方案供应商位掩码，可同时包含多个供应商。
+/// 未上报能力项 0x26 时，功能位 77 开启则默认支持火山，否则返回 None。
+/// 明确上报 0 表示无支持的供应商，不触发默认回退。
+/// 使用 `supportedAISolutionVendors & FitCloudAISolutionVendorStarBurst` 判断是否支持火山。
+@property(nonatomic, readonly) FitCloudAISolutionVendor supportedAISolutionVendors;
+
+/// Supported exercise/resting heart rate alerts.
+/// Capability 0x2A takes precedence, including an explicit zero (no supported alerts).
+/// If absent, falls back to firmware.allowHRAlarm and firmware.withHRLowAlarm.
+@property(nonatomic, readonly) FitCloudHeartRateAlertCapabilities supportedHeartRateAlerts;
 
 /// 表盘扩展能力。
 @property(nonatomic, strong, readonly, nullable) FitCloudWatchfaceCapabilities *watchfaceCapabilities;

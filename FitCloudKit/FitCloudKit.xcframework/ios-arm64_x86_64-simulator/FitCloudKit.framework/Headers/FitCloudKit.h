@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-10-15  Version:1.3.2-beta.121 Build:20261015002
+//      pcjbird    2026-10-20  Version:1.3.2-beta.122 Build:20261020001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -3132,6 +3132,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// New OTA Module
 @interface FitCloudKit (NewOTA)
+
+/// Enables or disables factory test OTA mode (protocol 3.9.170).
+/// Requires firmware.supportsFactoryTestOTAMode. Call before starting a firmware upgrade
+/// and wait for successful completion. When enabled, the device vibrates throughout the upgrade.
+/// - Parameters:
+///   - enabled: YES to use factory test OTA mode; NO to use normal OTA mode.
+///   - completion: Called when the device acknowledges the command or sending fails.
+///     Success confirms command delivery, not completion of a firmware upgrade.
++ (void)setFactoryTestOTAModeEnabled:(BOOL)enabled
+                        completion:(FitCloudCompletionHandler _Nullable)completion;
+
 
 #pragma mark Check the New OTA Environment
 
