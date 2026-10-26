@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.2-beta.123 build20261027001 (2026-10-27)
+
+- Added speech-to-text replies for WhatsApp on compatible watches.
+- Added redelivery of pending WhatsApp messages after the watch reconnects and improved connection recovery.
+- Improved WhatsApp image and sticker compatibility, media captions, and message type support.
+
 ## V1.3.2-beta.122 build20261020001 (2026-10-20)
 
 - Replaced preferredAISolutionVendor with supportedAISolutionVendors to report all AI solution vendors supported by a device.
