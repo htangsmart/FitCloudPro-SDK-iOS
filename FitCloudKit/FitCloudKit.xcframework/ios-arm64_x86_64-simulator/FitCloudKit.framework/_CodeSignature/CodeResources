@@ -134,7 +134,7 @@
 		</data>
 		<key>Headers/FitCloudDataModels.h</key>
 		<data>
-		UbCBnJ4BVvOvpwWOZ9sNFxkDb9k=
+		eKddxmxn8Tzr9QH6WJg1xZqkwps=
 		</data>
 		<key>Headers/FitCloudECGMeasurementV2EventObject.h</key>
 		<data>
@@ -268,6 +268,10 @@
 		<data>
 		TSQz9OYs32BWdUDtGZW+ezfQEWY=
 		</data>
+		<key>Headers/FitCloudHuashengdaVibrationIntensitySetting.h</key>
+		<data>
+		ieTv4oD6erNVJKnpimJSCMLiP0I=
+		</data>
 		<key>Headers/FitCloudIncomingCallPhotoSlotModel.h</key>
 		<data>
 		ENn8QIXkttfw5KVqUO9hYgxG3wQ=
@@ -294,7 +298,7 @@
 		</data>
 		<key>Headers/FitCloudKit+Huashengda.h</key>
 		<data>
-		DGY9Hs9Cv9l/TMuZtmmDaTzJ3tg=
+		r5EjEYsiT0ThIqp5nzxokKb8AD4=
 		</data>
 		<key>Headers/FitCloudKit+SingleDataSync.h</key>
 		<data>
@@ -318,7 +322,7 @@
 		</data>
 		<key>Headers/FitCloudKit.h</key>
 		<data>
-		v//Sl0PzOqqSbpV3Mt200wogEPg=
+		R6dUjjeFwu3ERFaXG5dtHB/la7U=
 		</data>
 		<key>Headers/FitCloudKitConnectRecord.h</key>
 		<data>
@@ -538,7 +542,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VbqW6HXYOiF9BIYxeIrQvWtpTQM=
+		Lo2bhz64ur1y/r9IpbbwLYpkTsQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -775,7 +779,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IT8ShwOOQIKoJw4gb2lmSwyRs9DV51Ml+WBqErY9TKI=
+			9OgJk/Qs98/DNg8F1nh/2hmAHdKE2PkB4dpFpqmRVTg=
 			</data>
 		</dict>
 		<key>Headers/FitCloudECGMeasurementV2EventObject.h</key>
@@ -1009,6 +1013,13 @@
 			ypVZkHT8u7S52fvZLK4x2cB5C4NgKyfywWpk/nijfnQ=
 			</data>
 		</dict>
+		<key>Headers/FitCloudHuashengdaVibrationIntensitySetting.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			c8dipb9B6TEtuer15F1npuJDq+nYWrlC2sFtdCJd7tU=
+			</data>
+		</dict>
 		<key>Headers/FitCloudIncomingCallPhotoSlotModel.h</key>
 		<dict>
 			<key>hash2</key>
@@ -1055,7 +1066,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ExxqU2LePjBk3fPYXubgGTaDjeIUQsjTjoaZXarSioI=
+			2SM+c34tNC1Q5N/jYXAwcu2hKOex7iYxlogbtiQpFlY=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKit+SingleDataSync.h</key>
@@ -1097,7 +1108,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eVUwCJnjbdiQq7dzfsCB4Az09QIFOnaUPO9hqouZ1Uk=
+			DUpwYFiko1QW83Fmf10FxS/nUj0W6MuNhec/0eke+c0=
 			</data>
 		</dict>
 		<key>Headers/FitCloudKitConnectRecord.h</key>

@@ -10,6 +10,7 @@
 #define FitCloudKit_Huashengda_h
 
 #import <Foundation/Foundation.h>
+#import <FitCloudKit/FitCloudHuashengdaVibrationIntensitySetting.h>
 #import <FitCloudKit/FitCloudKit.h>
 
 @interface FitCloudKit (Huashengda)
@@ -34,6 +35,19 @@
 /// > Warning: Please do not invoke when in automatic connecting process, usually invoke before bind
 +(void) queryHuashengdaWatchCurrentUserIdWetherMatch:(NSString* _Nonnull)userId completion:(void(^_Nullable)(BOOL success, BOOL isMatch, NSError* _Nullable error))completion;
 
+
+#pragma mark - Vibration intensity settings
+
+/// Retrieves the vibration intensity settings of a Huashengda watch.
+/// - Parameter completion: Receives the settings on success, or nil and an error on failure.
++ (void)queryHuashengdaVibrationIntensitySettingWithCompletion:(void (^_Nullable)(BOOL success, FitCloudHuashengdaVibrationIntensitySetting *_Nullable setting, NSError *_Nullable error))completion;
+
+/// Updates the vibration intensity settings of a Huashengda watch.
+/// - Parameters:
+///   - setting: The intensity settings to apply. Use 0 to leave an individual level unchanged.
+///   - completion: Called when the operation finishes, with an error if it fails.
++ (void)setHuashengdaVibrationIntensitySetting:(FitCloudHuashengdaVibrationIntensitySetting *_Nonnull)setting
+                                 completion:(void (^_Nullable)(BOOL success, NSError *_Nullable error))completion;
 
 @end
 

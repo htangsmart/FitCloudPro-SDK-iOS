@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-10-27 Version:1.3.2-beta.123 Build:20261027001
+## pcjbird 2026-10-27 Version:1.3.2-beta.124 Build:20261027002
 
 - Block device scanning during the connection process.
 - Added `FITCLOUDEVENT_PERIPHERAL_SCANSTART_ERROR_NOTIFY` event to notify when device scan starts with error.
@@ -115,6 +115,7 @@
 - Added exercise and resting heart rate alert capabilities and event notifications, with support for the corresponding alert settings.
 - Expanded device discovery and product type recognition with screenless bands, bands with screens, eye masks, and headphones, and added screen shape information for discovered devices.
 - Added speech-to-text replies for WhatsApp on compatible watches.
+- Added APIs to query and configure vibration intensity settings on compatible Huashengda watches.
 - Enhanced SDK compatibility and addressed edge cases caused by firmware-side code logic issues.
 - Additional SDK stability improvements and performance optimizations.
 

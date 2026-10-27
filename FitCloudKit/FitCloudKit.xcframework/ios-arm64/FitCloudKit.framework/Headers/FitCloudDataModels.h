@@ -61,5 +61,6 @@
 
 /// Specific client defines
 #import <FitCloudKit/Huashengda.h>
+#import <FitCloudKit/FitCloudHuashengdaVibrationIntensitySetting.h>
 
 #endif /* FitCloudModels_h */

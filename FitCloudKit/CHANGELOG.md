@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.2-beta.124 build20261027002 (2026-10-27)
+
+- Added APIs to query and configure vibration intensity settings on compatible Huashengda watches.
+- Fixed a firmware-side compatibility issue from SDK side.
+
 ## V1.3.2-beta.123 build20261027001 (2026-10-27)
 
 - Added speech-to-text replies for WhatsApp on compatible watches.
