@@ -428,6 +428,12 @@
 /// 是否支持 App 助眠分析
 @property(nonatomic, readonly) BOOL shouldShowSleepAnalysisInApp;
 
+/// AI 问答是否需要手表端确认
+@property(nonatomic, readonly) BOOL requiresAIAskingConfirmationOnDevice;
+
+/// AI 对话是否在设备端显示 AI 对话文本
+@property(nonatomic, readonly) BOOL shouldShowAIChatTextOnDevice;
+
 /// 是否支持外部存储
 @property(nonatomic, readonly) BOOL withExternalStorage;
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2-beta.125 build20261028001 (2026-10-28)
+
+- Added an API to send AI chat text to compatible devices, with capability reporting for on-device text display and AIAsking confirmation requirements.
+
 ## V1.3.2-beta.124 build20261027002 (2026-10-27)
 
 - Added APIs to query and configure vibration intensity settings on compatible Huashengda watches.
