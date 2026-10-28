@@ -2642,11 +2642,11 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - text: The complete text accumulated so far, encoded as UTF-8; do not send only the latest delta.
 ///   - isEnd: `YES` for the final text update, `NO` for an intermediate update.
 ///     This flag does not end the AI chat session.
-///   - resultType: The text type, reusing the AIAsking result types of the shared text command.
+///   - resultType: The AIChat text result type.
 ///   - completion: Called with the send result and an error on failure.
 + (void)sendAIChatText:(NSString *)text
                  isEnd:(BOOL)isEnd
-            resultType:(FitCloudAIAskingResultType)resultType
+            resultType:(FitCloudAIChatResultType)resultType
             completion:(FitCloudCompletionHandler _Nullable)completion;
 
 /// Establishes an AI chat coordination session initiated by the app.
