@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.2 build20261028002 (2026-10-28)
+
+- Released FitCloudKit 1.3.2 as a stable release.
+
 ## V1.3.2-beta.125 build20261028001 (2026-10-28)
 
 - Added an API to send AI chat text to compatible devices, with capability reporting for on-device text display and AIAsking confirmation requirements.
