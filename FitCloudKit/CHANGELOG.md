@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.3-beta.1 build20261111001 (2026-11-11)
+
+- Improved WhatsApp connection recovery, chat identity consistency, message ordering, and duplicate reply handling.
+- Improved WhatsApp image and voice compatibility, added App-language support and optional audio processing, and enhanced background speech-to-text replies.
+- Fixed recording file transfers not completing correctly after a disconnect or receive timeout.
+
 ## V1.3.2 build20261028002 (2026-10-28)
 
 - Released FitCloudKit 1.3.2 as a stable release.

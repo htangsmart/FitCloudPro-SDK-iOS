@@ -10,7 +10,7 @@
 //          FitCloudPro 智能手表 iOS 框架，封装了与手表设备通信等核心功能。
 //
 //  构建版本：
-//      pcjbird    2026-10-28  Version:1.3.2 Build:20261028002
+//      pcjbird    2026-11-11  Version:1.3.3-beta.1 Build:20261111001
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -2148,6 +2148,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Fetches an audio recording file from the device and saves it locally.
 /// After the local file is saved successfully, the corresponding recording is deleted from the device.
+/// A disconnect or receive timeout fails the download and removes the incomplete local file.
+/// Downloads do not resume automatically. If device-side deletion fails after download,
+/// completion returns NO with the completed local file path.
 /// - Parameters:
 ///   - fileName: The file name of the audio recording file to fetch
 ///   - progress: The progress handler called with the download progress (0.0–1.0)
