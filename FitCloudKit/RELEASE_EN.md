@@ -1,10 +1,12 @@
 # RELEASES
 
-## pcjbird 2026-11-14 Version:1.3.3-beta.2 Build:20261114001
+## pcjbird 2026-11-14 Version:1.3.3-beta.3 Build:20261114002
 
 - Improved WhatsApp connection recovery, chat identity consistency, message ordering, and duplicate reply handling.
 - Improved WhatsApp image and voice compatibility, added App-language support and optional audio processing, and enhanced background speech-to-text replies.
 - Fixed recording file transfers not completing correctly after a disconnect or receive timeout.
+- Added device capability reporting for the number of wear days required to establish an HRV baseline, defaulting to 14 days when unspecified.
+- Added network connectivity support for Alipay on compatible watches.
 
 ## pcjbird 2026-10-28 Version:1.3.2 Build:20261028002
 

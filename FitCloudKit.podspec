@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FitCloudKit'
-  s.version          = '1.3.3-beta.2'
+  s.version          = '1.3.3-beta.3'
   s.summary          = '和唐公司智能手表SDK'
   s.description      = <<-DESC
                       FitCloudPro智能手表iOS开发框架，提供与手表设备通信等功能的封装。
@@ -41,6 +41,14 @@ Pod::Spec.new do |s|
     whatsapp.vendored_frameworks = 'FitCloudKit/FitCloudWhatsApp.xcframework', 'FitCloudKit/Whatsappcore.xcframework'
     # The static plugin is discovered at runtime, so its Objective-C classes must be linked.
     whatsapp.user_target_xcconfig = { 'OTHER_LDFLAGS' => '$(inherited) -ObjC' }
+  end
+
+  s.subspec 'NetSockets' do |net_sockets|
+    net_sockets.ios.deployment_target = '15.0'
+    net_sockets.dependency 'FitCloudKit/Core'
+    net_sockets.vendored_frameworks = 'FitCloudKit/FitCloudNetSockets.xcframework'
+    # The static plugin is discovered at runtime, so its Objective-C classes must be linked.
+    net_sockets.user_target_xcconfig = { 'OTHER_LDFLAGS' => '$(inherited) -ObjC' }
   end
 
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }

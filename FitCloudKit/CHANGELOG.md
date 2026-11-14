@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## V1.3.3-beta.3 build20261114002 (2026-11-14)
+
+- Added device capability reporting for the number of wear days required to establish an HRV baseline, defaulting to 14 days when unspecified.
+- Added network connectivity support for Alipay on compatible watches.
+
 ## V1.3.3-beta.2 build20261114001 (2026-11-14)
 
 - Fixed WhatsApp speech-to-text replies not displaying correctly on compatible watches.

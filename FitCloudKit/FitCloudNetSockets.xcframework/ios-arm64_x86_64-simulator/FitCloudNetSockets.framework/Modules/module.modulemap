@@ -1,0 +1,6 @@
+framework module FitCloudNetSockets {
+  umbrella header "FitCloudNetSockets.h"
+  export *
+
+  module * { export * }
+}

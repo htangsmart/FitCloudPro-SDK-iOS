@@ -95,6 +95,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设备能力信息，仅当支持查询设备能力的手表有效
 @property(nonatomic, strong, nullable) NSArray<FitCloudCapacity *> *deviceCapacities;
 
+/// 建立 HRV 基准区间所需的佩戴天数，默认为 14 天。
+@property(nonatomic, readonly) NSInteger hrvBaselineDays;
+
 /// 每分钟运动动态心率的数量
 @property(nonatomic, strong, nullable) NSNumber *exerciseBPMDataPerMinute;
 
