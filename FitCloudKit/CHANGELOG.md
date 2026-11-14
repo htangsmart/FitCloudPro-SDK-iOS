@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V1.3.3-beta.2 build20261114001 (2026-11-14)
+
+- Fixed WhatsApp speech-to-text replies not displaying correctly on compatible watches.
+- Fixed WhatsApp image and sticker decoding compatibility on compatible watches.
+- Improved WhatsApp voice transfer recovery and background speech recognition on older iOS versions, and added a three-minute limit for voice messages sent to watches.
+
 ## V1.3.3-beta.1 build20261111001 (2026-11-11)
 
 - Improved WhatsApp connection recovery, chat identity consistency, message ordering, and duplicate reply handling.

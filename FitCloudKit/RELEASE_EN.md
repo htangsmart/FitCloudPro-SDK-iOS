@@ -1,6 +1,6 @@
 # RELEASES
 
-## pcjbird 2026-11-11 Version:1.3.3-beta.1 Build:20261111001
+## pcjbird 2026-11-14 Version:1.3.3-beta.2 Build:20261114001
 
 - Improved WhatsApp connection recovery, chat identity consistency, message ordering, and duplicate reply handling.
 - Improved WhatsApp image and voice compatibility, added App-language support and optional audio processing, and enhanced background speech-to-text replies.
