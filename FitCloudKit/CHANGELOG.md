@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.3-beta.4 build20261117001 (2026-11-17)
+
+- Improved WhatsApp QR pairing recovery, duplicate direct-message handling, and speech recognition authorization for watch replies.
+
 ## V1.3.3-beta.3 build20261114002 (2026-11-14)
 
 - Added device capability reporting for the number of wear days required to establish an HRV baseline, defaulting to 14 days when unspecified.
