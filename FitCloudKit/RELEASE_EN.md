@@ -1,12 +1,13 @@
 # RELEASES
 
-## pcjbird 2026-11-17 Version:1.3.3-beta.4 Build:20261117001
+## pcjbird 2026-11-18 Version:1.3.3-beta.5 Build:20261118001
 
 - Improved WhatsApp connection recovery, chat identity consistency, message ordering, and duplicate reply handling.
 - Improved WhatsApp image and voice compatibility, added App-language support and optional audio processing, and enhanced background speech-to-text replies.
 - Fixed recording file transfers not completing correctly after a disconnect or receive timeout.
 - Added device capability reporting for the number of wear days required to establish an HRV baseline, defaulting to 14 days when unspecified.
 - Added network connectivity support for Alipay on compatible watches.
+- Improved automatic login timeout recovery: reconnect after three consecutive timeouts; if login times out again after reconnection, keep the connection, stop retrying, and notify the app via FITCLOUDEVENT_PERIPHERAL_REBOOT_RECOMMENDED_NOTIFY to recommend restarting the watch.
 
 ## pcjbird 2026-10-28 Version:1.3.2 Build:20261028002
 

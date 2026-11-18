@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## V1.3.3-beta.5 build20261118001 (2026-11-18)
+
+- Fixed repeated reconnection loops after automatic login timeouts and added a notification recommending a watch reboot when login still times out after reconnection.
+
 ## V1.3.3-beta.4 build20261117001 (2026-11-17)
 
 - Improved WhatsApp QR pairing recovery, duplicate direct-message handling, and speech recognition authorization for watch replies.

@@ -122,6 +122,13 @@ extern NSString *const FITCLOUDEVENT_LOGINUSEROBJECT_BEGIN_NOTIFY;
 ///   - userInfo: Dictionary containing result and error information {@"result":@(YES/NO), @"error" : error}
 extern NSString *const FITCLOUDEVENT_LOGINUSEROBJECT_RESULT_NOTIFY;
 
+/// Recommends restarting the watch after three login timeouts and one more after reconnection.
+/// Keeps the connection; sent once until login succeeds, the device changes or binding is cleared.
+/// - Parameters:
+///   - object: The affected CBPeripheral.
+///   - userInfo: Dictionary containing the login timeout NSError under @"error".
+extern NSString *const FITCLOUDEVENT_PERIPHERAL_REBOOT_RECOMMENDED_NOTIFY;
+
 /// Notification when watch is bound by another phone or unbound
 extern NSString *const FITCLOUDEVENT_PERIPHERAL_ALREADYUNBUND_OR_BIND_BY_OTHERCLIENT_NOTIFY;
 
